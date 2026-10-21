@@ -10,3 +10,5 @@ avsec-edit/node_modules/
 .PREVIEW_*
 work-*/
 list.txt
+.FINAL_*
+*.log
