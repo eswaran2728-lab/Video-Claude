@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Montserrat:wght@600;800;900&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+      body { font-family: "Montserrat", sans-serif; --gold: #f5c542; --gold2: #ffe9a3; --maroon: #5a0f14; }
+      .clip { position: absolute; inset: 0; }
+      #zoom { position: absolute; inset: 0; overflow: hidden; }
+      #main { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform-origin: 50% 32%; }
+      #vig { position: absolute; inset: 0; z-index: 5; pointer-events: none;
+        background: radial-gradient(ellipse 75% 65% at 50% 42%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.55) 100%); }
+      #flash { background: #fff; opacity: 0; z-index: 30; }
+
+      .gold { background: linear-gradient(180deg, var(--gold2) 0%, var(--gold) 45%, #b8811c 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+      /* hook */
+      #hook { display: flex; flex-direction: column; align-items: center; padding-top: 170px; z-index: 20; }
+      #hook .t1 { font-family: "Cinzel", serif; font-weight: 900; font-size: 104px; line-height: 1; letter-spacing: 4px; text-align: center; filter: drop-shadow(0 6px 18px rgba(0,0,0,0.85)); }
+      #hook .t1 span { display: inline-block; }
+      #hook .t2 { margin-top: 22px; font-weight: 800; font-size: 40px; color: #fff; letter-spacing: 6px; text-shadow: 0 4px 16px rgba(0,0,0,0.9); }
+      #hook .bar { margin-top: 18px; width: 420px; height: 5px; background: var(--gold); transform-origin: center; }
+
+      /* brand chip */
+      #brand { inset: auto; left: 60px; top: 150px; z-index: 20; display: flex; align-items: center; gap: 16px; padding: 14px 26px 14px 16px; border-radius: 60px; background: rgba(20,6,8,0.78); border: 2px solid var(--gold); }
+      #brand .dot { width: 46px; height: 46px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, var(--gold2), var(--gold) 55%, #9a6a12); display: flex; align-items: center; justify-content: center; font-family: "Cinzel", serif; font-weight: 900; font-size: 26px; color: var(--maroon); }
+      #brand .nm { font-weight: 800; font-size: 32px; color: #fff; letter-spacing: 2px; }
+
+      /* teaser pip */
+      #pip { inset: auto; left: 56px; top: 640px; width: 330px; height: 587px; border-radius: 26px; object-fit: cover; border: 4px solid var(--gold); box-shadow: 0 20px 60px rgba(0,0,0,0.6); z-index: 18; }
+      
+      #piplbl { inset: auto; left: 56px; top: 580px; z-index: 19; font-weight: 900; font-size: 34px; color: #fff; background: var(--maroon); padding: 8px 18px; border-radius: 10px; letter-spacing: 2px; }
+
+      /* reveal */
+      #reveal { display: flex; justify-content: center; padding-top: 150px; z-index: 20; }
+      #reveal div { font-family: "Cinzel", serif; font-weight: 900; font-size: 92px; letter-spacing: 6px; filter: drop-shadow(0 6px 18px rgba(0,0,0,0.85)); }
+      .ring { inset: auto; width: 200px; height: 200px; left: 400px; top: 520px; border-radius: 50%; border: 6px solid var(--gold); z-index: 19; opacity: 0; }
+
+      /* callouts */
+      .call { inset: auto; right: 150px; z-index: 20; display: flex; align-items: center; gap: 14px; padding: 16px 26px; border-radius: 16px; background: rgba(20,6,8,0.82); border-left: 8px solid var(--gold); font-weight: 800; font-size: 40px; color: #fff; box-shadow: 0 12px 40px rgba(0,0,0,0.5); }
+      .call svg { width: 42px; height: 42px; flex: none; }
+
+      /* CTA */
+      #cta { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 220px; z-index: 22; }
+      #cta .c1 { font-weight: 900; font-size: 72px; color: #fff; text-align: center; line-height: 1.05; text-shadow: 0 6px 24px rgba(0,0,0,0.9); }
+      #cta .c2 { margin-top: 26px; padding: 16px 36px; border-radius: 60px; background: var(--gold); color: var(--maroon); font-weight: 900; font-size: 44px; letter-spacing: 2px; }
+      #ctabg { background: linear-gradient(180deg, rgba(20,4,6,0.75) 0%, rgba(20,4,6,0) 45%); z-index: 21; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="83.6" data-width="1080" data-height="1920">
+      <div id="zoom">
+        <video id="main" class="clip" src="comp.mp4" playsinline data-start="0" data-duration="83.6" data-has-audio="true"></video>
+      </div>
+      <div id="vig"></div>
+      <div id="flash" class="clip" data-start="0" data-duration="83.6" data-track-index="9"></div>
+
+      <!-- HOOK 0–3.97 -->
+      <div id="hook" class="clip" data-start="0" data-duration="3.9" data-track-index="2">
+        <div class="t1 gold"><span>MAYANA</span><br /><span>KAALI AMMAN</span></div>
+        <div class="bar"></div>
+        <div class="t2">CUSTOM STATUE</div>
+      </div>
+
+      <!-- BRAND -->
+      <div id="brand" class="clip" data-start="4.3" data-duration="4.4" data-track-index="3"><div class="dot">E</div><div class="nm">ESHAN CREATIONS</div></div>
+
+      <!-- TEASER PIP -->
+      <div id="piplbl" class="clip" data-start="24.6" data-duration="3.9" data-track-index="4">WAIT FOR IT…</div>
+      <video id="pip" class="clip" src="comp.mp4" muted playsinline data-start="24.6" data-duration="3.9" data-media-start="54.0" data-track-index="4"></video>
+
+      <!-- REVEAL 46.06 -->
+      <div id="ring1" class="clip ring" data-start="46.06" data-duration="1.2" data-track-index="5"></div>
+      <div id="ring2" class="clip ring" data-start="46.2" data-duration="1.2" data-track-index="5"></div>
+      <div id="reveal" class="clip" data-start="46.06" data-duration="2.5" data-track-index="5"><div class="gold">THE FINAL PIECE</div></div>
+
+      <!-- CALLOUTS -->
+      <div id="call1" class="clip call" data-start="49.0" data-duration="3.6" data-track-index="6" style="top:1020px">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#f5c542" stroke-width="2.2"><path d="M4 20l6-6M14 4l6 6-8 8-6-6z"/></svg>Hand-painted details</div>
+      <div id="call2" class="clip call" data-start="53.6" data-duration="3.6" data-track-index="6" style="top:1020px">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#f5c542" stroke-width="2.2"><path d="M12 22V6M6 4v4a6 6 0 0012 0V4M12 2v4"/></svg>Golden Trishul</div>
+      <div id="call3" class="clip call" data-start="66.4" data-duration="3.8" data-track-index="6" style="top:1020px">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#f5c542" stroke-width="2.2"><path d="M12 3l2.6 5.6 6 .6-4.5 4 1.3 6L12 16.3 6.6 19.2l1.3-6-4.5-4 6-.6z"/></svg>Custom designs available</div>
+
+      <!-- CTA -->
+      <div id="ctabg" class="clip" data-start="77.17" data-duration="6.43" data-track-index="7"></div>
+      <div id="cta" class="clip" data-start="77.17" data-duration="6.43" data-track-index="7">
+        <div class="c1">Want your own<br /><span class="gold">custom statue?</span></div>
+        <div class="c2">DM US TO ORDER</div>
+      </div>
+
+      <!-- SFX -->
+      <audio id="s1" class="clip" src="sfx/impact.wav" data-start="0.05" data-duration="0.8" data-volume="0.8"></audio>
+      <audio id="s2" class="clip" src="sfx/shimmer.wav" data-start="0.35" data-duration="1.3" data-volume="0.5"></audio>
+      <audio id="s3" class="clip" src="sfx/riser.wav" data-start="2.75" data-duration="1.25" data-volume="0.5"></audio>
+      <audio id="s4" class="clip" src="sfx/whoosh.wav" data-start="3.85" data-duration="0.7" data-volume="0.8"></audio>
+      <audio id="s5" class="clip" src="sfx/pop.wav" data-start="4.3" data-duration="0.3" data-volume="0.7"></audio>
+      <audio id="s6" class="clip" src="sfx/whoosh.wav" data-start="24.5" data-duration="0.7" data-volume="0.6"></audio>
+      <audio id="s7" class="clip" src="sfx/riser.wav" data-start="44.86" data-duration="1.25" data-volume="0.55"></audio>
+      <audio id="s8" class="clip" src="sfx/impact.wav" data-start="46.06" data-duration="0.8" data-volume="0.9"></audio>
+      <audio id="s9" class="clip" src="sfx/shimmer.wav" data-start="46.2" data-duration="1.3" data-volume="0.55"></audio>
+      <audio id="s10" class="clip" src="sfx/pop.wav" data-start="49.0" data-duration="0.3" data-volume="0.7"></audio>
+      <audio id="s11" class="clip" src="sfx/pop.wav" data-start="53.6" data-duration="0.3" data-volume="0.7"></audio>
+      <audio id="s12" class="clip" src="sfx/pop.wav" data-start="66.4" data-duration="0.3" data-volume="0.7"></audio>
+      <audio id="s13" class="clip" src="sfx/whoosh.wav" data-start="77.1" data-duration="0.7" data-volume="0.7"></audio>
+      <audio id="s14" class="clip" src="sfx/ding.wav" data-start="77.9" data-duration="0.6" data-volume="0.6"></audio>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const Z = "#main";
+      tl.set(Z, { scale: 1 }, 0);
+
+      // HOOK: flash in, slow push, gold title
+      tl.set("#flash", { opacity: 0.9 }, 0);
+      tl.to("#flash", { opacity: 0, duration: 0.35 }, 0);
+      tl.to(Z, { scale: 1.1, duration: 3.97, ease: "none" }, 0);
+      tl.from("#hook .t1 span", { y: 60, opacity: 0, scale: 1.3, duration: 0.45, stagger: 0.18, ease: "back.out(1.6)" }, 0.05);
+      tl.from("#hook .bar", { scaleX: 0, duration: 0.5, ease: "power3.out" }, 0.45);
+      tl.from("#hook .t2", { y: 20, opacity: 0, duration: 0.35 }, 0.65);
+      tl.to("#hook", { opacity: 0, y: -40, duration: 0.25 }, 3.65);
+
+      // cut into talking: flash + punch-in pattern on every jump cut to hide them
+      tl.set("#flash", { opacity: 0.6 }, 3.97);
+      tl.to("#flash", { opacity: 0, duration: 0.25 }, 3.97);
+      const cuts = [3.97, 5.73, 12.62, 18.78, 19.21, 21.22, 24.55, 35.82, 37.8, 42.66, 44.72];
+      cuts.forEach((t, i) => tl.set(Z, { scale: i % 2 ? 1.12 : 1.0 }, t));
+
+      // brand chip
+      tl.from("#brand", { x: -80, opacity: 0, duration: 0.4, ease: "back.out(1.7)" }, 4.3);
+      tl.to("#brand", { opacity: 0, x: -40, duration: 0.3 }, 8.4);
+
+      // teaser pip
+      tl.from("#pip", { scale: 0.6, opacity: 0, duration: 0.4, ease: "back.out(1.6)" }, 24.6);
+      tl.from("#piplbl", { y: 20, opacity: 0, duration: 0.3 }, 24.75);
+      tl.to(["#pip", "#piplbl"], { opacity: 0, scale: 0.85, duration: 0.3 }, 28.2);
+
+      // REVEAL
+      tl.set(Z, { scale: 1.0 }, 46.06);
+      tl.set("#flash", { opacity: 1 }, 46.06);
+      tl.to("#flash", { opacity: 0, duration: 0.5 }, 46.06);
+      tl.fromTo("#ring1", { scale: 0.3, opacity: 1 }, { scale: 4, opacity: 0, duration: 1.1, ease: "power2.out" }, 46.06);
+      tl.fromTo("#ring2", { scale: 0.3, opacity: 1 }, { scale: 4, opacity: 0, duration: 1.1, ease: "power2.out" }, 46.2);
+      tl.from("#reveal div", { scale: 1.6, opacity: 0, duration: 0.4, ease: "power4.out" }, 46.1);
+      tl.to("#reveal", { opacity: 0, duration: 0.3 }, 48.25);
+      // gentle push-ins per reveal segment
+      [[46.06, 48.64], [48.64, 53.26], [53.26, 66.24], [66.24, 73.24], [74.1, 77.17]].forEach(([a, b]) => {
+        tl.set(Z, { scale: 1.0 }, a);
+        tl.to(Z, { scale: 1.06, duration: b - a, ease: "none" }, a);
+      });
+
+      // callouts
+      ["#call1", "#call2", "#call3"].forEach((id) => {
+        const el = document.querySelector(id), st = +el.dataset.start, du = +el.dataset.duration;
+        tl.from(id, { x: 90, opacity: 0, duration: 0.35, ease: "back.out(1.7)" }, st);
+        tl.to(id, { x: 60, opacity: 0, duration: 0.3 }, st + du - 0.3);
+      });
+
+      // CTA
+      tl.set(Z, { scale: 1.0 }, 77.17);
+      tl.from("#ctabg", { opacity: 0, duration: 0.4 }, 77.17);
+      tl.from("#cta .c1", { y: 50, opacity: 0, duration: 0.45, ease: "power3.out" }, 77.25);
+      tl.from("#cta .c2", { scale: 0.5, opacity: 0, duration: 0.4, ease: "back.out(2)" }, 77.9);
+      tl.to("#cta .c2", { scale: 1.06, duration: 0.5, yoyo: true, repeat: 7, ease: "sine.inOut" }, 78.4);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

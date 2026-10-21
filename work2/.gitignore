@@ -12,3 +12,8 @@ work-*/
 **/.hyperframes/
 **/node_modules/
 !**/sfx/*.wav
+*.npy
+list.txt
+masks/
+f2/
+sfx_src/
