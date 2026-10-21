@@ -1,0 +1,12 @@
+*.mp4
+*.wav
+!avsec-edit/sfx/*.wav
+frames/
+seg/
+snaps*/
+sheet*.jpg
+avsec-edit/.hyperframes/
+avsec-edit/node_modules/
+.PREVIEW_*
+work-*/
+list.txt

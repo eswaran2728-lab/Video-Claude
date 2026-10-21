@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800;900&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #000; }
+      body { font-family: "Montserrat", sans-serif; --red: #e3121b; --yel: #ffd400; --hl: #ffd400; }
+      .clip { position: absolute; inset: 0; }
+      #vwrap { overflow: hidden; }
+      #a-roll { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform-origin: 50% 45%; }
+
+      /* captions */
+      .cap { display: flex; align-items: flex-end; justify-content: center; padding-bottom: 92px; pointer-events: none; z-index: 20; }
+      .capbox { background: rgba(10, 12, 20, 0.78); border-radius: 14px; padding: 14px 28px; font-weight: 800; font-size: 50px; line-height: 1.15; color: #fff; max-width: 1400px; text-align: center; letter-spacing: -0.5px; }
+      .cap.raise { padding-bottom: 265px; }
+
+      /* module progress */
+      #prog { display: flex; gap: 8px; position: absolute; top: 28px; left: 50%; transform: translateX(-50%); width: 640px; height: 6px; inset: auto; z-index: 15; }
+      #prog .ps { flex: 1; background: rgba(255,255,255,0.25); border-radius: 3px; overflow: hidden; }
+      #prog .ps i { display: block; height: 100%; background: var(--yel); transform: scaleX(0); transform-origin: left; }
+
+      .modchip { inset: auto; left: 72px; top: 72px; z-index: 16; }
+      .mnum { font-weight: 900; font-size: 30px; color: var(--yel); letter-spacing: 4px; }
+      .mnum span { color: #fff; }
+      .modchip { background: rgba(10,12,20,0.8); padding: 16px 24px; border-radius: 12px; }
+      .mbar { width: 220px; height: 5px; background: var(--red); margin-top: 10px; transform-origin: left; }
+
+      /* hook */
+      #hookq { display: flex; justify-content: center; padding-top: 110px; z-index: 18; }
+      #hookq div { font-weight: 900; font-size: 74px; color: #fff; text-shadow: 0 6px 30px rgba(0,0,0,0.7); letter-spacing: -1px; }
+      #stamp { display: flex; align-items: center; justify-content: center; z-index: 19; }
+      #stamp div { border: 10px solid var(--red); color: var(--red); background: rgba(255,255,255,0.92); font-weight: 900; font-size: 120px; padding: 6px 44px; transform: rotate(-8deg); letter-spacing: 4px; }
+      #flash { background: var(--red); opacity: 0; z-index: 17; mix-blend-mode: multiply; }
+
+      /* callouts */
+      .call { inset: auto; z-index: 18; display: flex; align-items: center; gap: 18px; padding: 18px 30px; border-radius: 14px; font-weight: 900; font-size: 44px; color: #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.45); }
+      .call svg { width: 50px; height: 50px; flex: none; }
+      .good { background: #12a150; }
+      .bad { background: var(--red); }
+      .info { background: #111522; border: 3px solid var(--yel); color: var(--yel); }
+      #pulse { inset: 0; border: 14px solid var(--red); opacity: 0; z-index: 17; }
+
+      #endk { display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 19; }
+      #endk .l1, #endk .l2 { font-weight: 900; font-size: 110px; color: #fff; text-shadow: 0 8px 40px rgba(0,0,0,0.8); letter-spacing: -2px; }
+      #endk .l2 { color: var(--yel); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="133.5" data-width="1920" data-height="1080">
+      <div id="vwrap" style="position:absolute;inset:0;overflow:hidden">
+        <video id="a-roll" class="clip" src="cut.mp4" playsinline data-start="0" data-duration="133.5" data-has-audio="true"></video>
+      </div>
+
+      <!-- HOOK -->
+      <div id="hookq" class="clip" data-start="0.2" data-duration="%%T_tail%%" data-track-index="4"><div>Would you let them through?</div></div>
+      <div id="flash" class="clip" data-start="%%T_tail%%" data-duration="0.5" data-track-index="5"></div>
+      <div id="stamp" class="clip" data-start="%%T_tail%%" data-duration="1.4" data-track-index="5"><div>TAILGATING</div></div>
+
+      <!-- MODULE PROGRESS -->
+      <div id="progwrap" class="clip" data-start="5.4" data-duration="125.1" data-track-index="3" style="inset:0;pointer-events:none">
+        <div id="prog"><div class="ps"><i id="pseg0"></i></div><div class="ps"><i id="pseg1"></i></div><div class="ps"><i id="pseg2"></i></div><div class="ps"><i id="pseg3"></i></div><div class="ps"><i id="pseg4"></i></div></div>
+      </div>
+      
+
+      <!-- CALLOUTS -->
+      <div id="cGate" class="clip call good" data-start="14.0" data-duration="4" data-track-index="6" style="right:80px;top:150px">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg>ONE FACE. ONE ENTRY.</div>
+      <div id="cLock" class="clip call info" data-start="%%T_lock%%" data-duration="3.4" data-track-index="6" style="right:80px;top:150px">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ffd400" stroke-width="2.5"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg>LOCK IT. CARRY IT.</div>
+      <div id="cRep" class="clip call bad" data-start="%%T_report%%" data-duration="3" data-track-index="6" style="right:80px;top:150px">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.5"/></svg>KEEP DISTANCE · REPORT</div>
+      <div id="pulse" class="clip" data-start="%%T_fail%%" data-duration="1.6" data-track-index="5"></div>
+      <div id="cEsc" class="clip call good" data-start="%%T_escort%%" data-duration="3.5" data-track-index="6" style="right:80px;top:150px">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg>MEET · ESCORT · SIGN OUT</div>
+
+      <!-- CLOSER -->
+      <div id="endk" class="clip" data-start="%%T_see%%" data-duration="3.6" data-track-index="7"><div class="l1">SEE SOMETHING.</div><div class="l2">SAY SOMETHING.</div></div>
+
+      %%CAPS%%
+      %%SFX%%
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      // hook: slow push-in, question, stamp
+      tl.set("#a-roll", { scale: 1 }, 0);
+      tl.to("#a-roll", { scale: 1.12, duration: %%T_tail%%, ease: "none" }, 0);
+      tl.to("#a-roll", { scale: 1.0, duration: 0.25, ease: "power3.out" }, %%T_tail%%);
+      tl.from("#hookq div", { y: -40, opacity: 0, duration: 0.45, ease: "power3.out" }, 0.2);
+      tl.to("#flash", { opacity: 0.55, duration: 0.06 }, %%T_tail%%);
+      tl.to("#flash", { opacity: 0, duration: 0.4 }, %%T_tail%% + 0.06);
+      tl.from("#stamp div", { scale: 2.4, opacity: 0, duration: 0.22, ease: "power4.in" }, %%T_tail%%);
+      tl.to("#stamp div", { opacity: 0, duration: 0.25 }, %%T_tail%% + 1.1);
+      // module progress
+      tl.from("#prog", { opacity: 0, duration: 0.4 }, 5.4);
+      %%PROGJS%%
+      
+      // callouts
+      ["#cGate", "#cLock", "#cRep", "#cEsc"].forEach((id) => {
+        const el = document.querySelector(id);
+        const st = parseFloat(el.dataset.start), du = parseFloat(el.dataset.duration);
+        tl.from(id, { x: 80, opacity: 0, duration: 0.35, ease: "back.out(1.7)" }, st);
+        tl.to(id, { x: 60, opacity: 0, duration: 0.3, ease: "power2.in" }, st + du - 0.3);
+      });
+      tl.fromTo("#pulse", { opacity: 0 }, { opacity: 1, duration: 0.2, repeat: 3, yoyo: true }, %%T_fail%%);
+      // emphasis push-ins on key reveals
+      tl.to("#a-roll", { scale: 1.08, duration: 3, ease: "power1.inOut" }, %%T_high%% - 0.4);
+      tl.to("#a-roll", { scale: 1, duration: 0.01 }, 63.6);
+      // closer
+      tl.from("#endk .l1", { y: 60, opacity: 0, duration: 0.35, ease: "power3.out" }, %%T_see%%);
+      tl.from("#endk .l2", { y: 60, opacity: 0, duration: 0.35, ease: "power3.out" }, %%T_see%% + 0.9);
+      tl.to("#endk", { opacity: 0, duration: 0.3 }, %%T_see%% + 3.3);
+      // captions
+      %%CAPJS%%
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
