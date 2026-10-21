@@ -6,9 +6,18 @@ for k,n in enumerate(nf): seg[c:c+n]=k;c+=n
 FT={int(k):v for k,v in json.load(open("facetrack.json")).items()}
 held=lambda i:(i<=119) or (i>=1387)
 EX=np.ones((1280,720),np.float32);EX[370:900,0:140]=0
+_cap=cv2.VideoCapture("cut.mp4");_F={};_pos=[0]
+def FR(i):
+    if i in _F: return _F[i]
+    if i<_pos[0]:
+        _cap.release();_cap.open("cut.mp4");_pos[0]=0;_F.clear()
+    while _pos[0]<=i:
+        ok,f=_cap.read();_F[_pos[0]]=f;_pos[0]+=1
+        if len(_F)>60: del _F[min(_F)]
+    return _F[i]
 def statue(i):
     if not held(i): return np.zeros((1280,720),np.float32)
-    a=cv2.imread(f"masks/{i:05d}.png",0).astype(np.float32)/255
+    a=cv2.imread(f"bmasks/{i:05d}.png",0).astype(np.float32)/255
     b=(a>0.25).astype(np.uint8);n,lab=cv2.connectedComponents(b)
     cx,cy,_=FT[i];keep=np.zeros_like(b)
     # components touching a disk around the statue face, or large components overlapping the statue column
