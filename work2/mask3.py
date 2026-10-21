@@ -24,7 +24,11 @@ def statue(i):
     disk=np.zeros_like(b);cv2.circle(disk,(int(cx),int(cy)),60,1,-1)
     for l in set(np.unique(lab[disk>0]).tolist())-{0}: keep[lab==l]=1
     keep=cv2.dilate(keep,np.ones((5,5),np.uint8))
-    return np.clip((a*keep*EX-0.1)/0.35,0,1)
+    st=np.clip((a*keep*EX-0.1)/0.35,0,1)
+    # shelf statue's silver trident (behind, left): drop low-saturation pixels in that zone; the held trident is gold
+    sat=cv2.cvtColor(FR(i)[340:900,110:235],cv2.COLOR_BGR2HSV)[...,1]
+    z=st[340:900,110:235];z[sat<80]=0
+    return st
 from functools import lru_cache
 @lru_cache(maxsize=40)
 def S_(i): return statue(i)
