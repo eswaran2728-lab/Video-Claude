@@ -18,22 +18,30 @@
 
       .gold { background: linear-gradient(180deg, var(--gold2) 0%, var(--gold) 45%, #b8811c 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
+      /* glass system */
+      .glass { background: linear-gradient(135deg, rgba(255,255,255,0.24) 0%, rgba(255,255,255,0.07) 100%);
+        -webkit-backdrop-filter: blur(18px) saturate(1.5); backdrop-filter: blur(18px) saturate(1.5);
+        border: 1.5px solid rgba(255,255,255,0.45); box-shadow: 0 14px 44px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.65), inset 0 -1px 0 rgba(255,255,255,0.12);
+        overflow: hidden; }
+      .sheen { position: absolute; top: -20%; left: 0; width: 45%; height: 140%; transform: translateX(-160%) skewX(-20deg); pointer-events: none;
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.55) 50%, rgba(255,255,255,0) 100%); }
       /* hook */
-      #hook { display: flex; flex-direction: column; align-items: center; padding-top: 80px; z-index: 20; }
-      #hook .t1 { font-family: "Cinzel", serif; font-weight: 900; font-size: 88px; line-height: 1; letter-spacing: 4px; text-align: center; filter: drop-shadow(0 6px 18px rgba(0,0,0,0.85)); }
+      #hook { display: flex; flex-direction: column; align-items: center; padding-top: 34px; z-index: 20; }
+      #hook .plate { position: relative; display: flex; flex-direction: column; align-items: center; padding: 22px 40px 20px; border-radius: 30px; }
+      #hook .t1 { font-family: "Cinzel", serif; font-weight: 900; font-size: 74px; line-height: 1; letter-spacing: 4px; text-align: center; filter: drop-shadow(0 6px 18px rgba(0,0,0,0.85)); }
       #hook .t1 span { display: inline-block; }
-      #hook .t2 { margin-top: 22px; font-weight: 800; font-size: 40px; color: #fff; letter-spacing: 6px; text-shadow: 0 4px 16px rgba(0,0,0,0.9); }
+      #hook .t2 { margin-top: 14px; font-weight: 800; font-size: 34px; color: #fff; letter-spacing: 6px; text-shadow: 0 4px 16px rgba(0,0,0,0.9); }
       #hook .bar { margin-top: 18px; width: 420px; height: 5px; background: var(--gold); transform-origin: center; }
 
       /* brand chip */
-      #brand { inset: auto; left: 60px; top: 150px; z-index: 20; display: flex; align-items: center; gap: 16px; padding: 14px 26px 14px 16px; border-radius: 60px; background: rgba(20,6,8,0.78); border: 2px solid var(--gold); }
+      #brand { inset: auto; left: 60px; top: 150px; z-index: 20; display: flex; align-items: center; gap: 16px; padding: 14px 26px 14px 16px; border-radius: 60px; }
       #brand .dot { width: 46px; height: 46px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, var(--gold2), var(--gold) 55%, #9a6a12); display: flex; align-items: center; justify-content: center; font-family: "Cinzel", serif; font-weight: 900; font-size: 26px; color: var(--maroon); }
       #brand .nm { font-weight: 800; font-size: 32px; color: #fff; letter-spacing: 2px; }
 
       /* teaser pip */
-      #pip { inset: auto; left: 56px; top: 640px; width: 330px; height: 587px; border-radius: 26px; object-fit: cover; border: 4px solid var(--gold); box-shadow: 0 20px 60px rgba(0,0,0,0.6); z-index: 18; }
+      #pip { inset: auto; left: 56px; top: 640px; width: 330px; height: 587px; border-radius: 26px; object-fit: cover; border: 3px solid rgba(255,255,255,0.7); box-shadow: 0 20px 60px rgba(0,0,0,0.55), 0 0 0 10px rgba(255,255,255,0.12); z-index: 18; }
       
-      #piplbl { inset: auto; left: 56px; top: 580px; z-index: 19; font-weight: 900; font-size: 34px; color: #fff; background: var(--maroon); padding: 8px 18px; border-radius: 10px; letter-spacing: 2px; }
+      #piplbl { inset: auto; left: 56px; top: 580px; z-index: 19; font-weight: 900; font-size: 34px; color: #fff; padding: 8px 20px; border-radius: 14px; letter-spacing: 2px; text-shadow: 0 2px 8px rgba(0,0,0,0.6); }
 
       /* reveal */
       #reveal { display: flex; justify-content: center; padding-top: 150px; z-index: 20; }
@@ -41,80 +49,84 @@
       .ring { inset: auto; width: 200px; height: 200px; left: 400px; top: 520px; border-radius: 50%; border: 6px solid var(--gold); z-index: 19; opacity: 0; }
 
       /* callouts */
-      .call { inset: auto; left: 56px; z-index: 20; display: flex; align-items: center; gap: 14px; padding: 16px 26px; border-radius: 16px; background: rgba(20,6,8,0.82); border-left: 8px solid var(--gold); font-weight: 800; font-size: 40px; color: #fff; box-shadow: 0 12px 40px rgba(0,0,0,0.5); }
+      .call { inset: auto; left: 56px; z-index: 20; display: flex; align-items: center; gap: 14px; padding: 18px 30px; border-radius: 22px; font-weight: 800; font-size: 40px; color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,0.55); }
       .call svg { width: 42px; height: 42px; flex: none; }
 
       /* CTA */
-      #cta { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 220px; z-index: 22; }
+      #cta { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 1130px; z-index: 22; }
+      #cta .card .gold { background: none; color: #ffd23f; -webkit-background-clip: border-box; background-clip: border-box; }
+      #cta .card { position: relative; display: flex; flex-direction: column; align-items: center; padding: 40px 54px 44px; border-radius: 38px; }
       #cta .c1 { font-weight: 900; font-size: 72px; color: #fff; text-align: center; line-height: 1.05; text-shadow: 0 6px 24px rgba(0,0,0,0.9); }
       #cta .c2 { margin-top: 26px; padding: 16px 36px; border-radius: 60px; background: var(--gold); color: var(--maroon); font-weight: 900; font-size: 44px; letter-spacing: 2px; }
-      #ctabg { background: linear-gradient(180deg, rgba(20,4,6,0.75) 0%, rgba(20,4,6,0) 45%); z-index: 21; }
+      #ctabg { background: linear-gradient(0deg, rgba(20,4,6,0.55) 0%, rgba(20,4,6,0) 45%); z-index: 21; }
       .cap { display: flex; align-items: flex-end; justify-content: center; padding-bottom: 430px; z-index: 25; pointer-events: none; }
-      .cb { max-width: 900px; text-align: center; font-weight: 900; font-size: 64px; line-height: 1.12; color: #fff; padding: 10px 26px; border-radius: 16px; background: rgba(0,0,0,0.45);
+      .cb { max-width: 900px; text-align: center; font-weight: 900; font-size: 64px; line-height: 1.12; color: #fff; padding: 12px 30px; border-radius: 22px; position: relative;
         text-shadow: 0 4px 0 #000, 0 0 18px rgba(0,0,0,0.6); }
       .cb .k { color: #ffd23f; }
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0.0" data-duration="83.6" data-width="1080" data-height="1920">
+    <div id="root" data-composition-id="main" data-start="0.0" data-duration="77.5" data-width="1080" data-height="1920">
       <div id="zoom">
-        <video id="main" class="clip" src="comp.mp4" playsinline data-start="0.0" data-duration="83.6" data-has-audio="true"></video>
+        <video id="main" class="clip" src="comp.mp4" playsinline data-start="0.0" data-duration="77.5" data-has-audio="true"></video>
       </div>
       <div id="vig"></div>
-      <div id="flash" class="clip" data-start="0.0" data-duration="83.6" data-track-index="9"></div>
+      <div id="flash" class="clip" data-start="0.0" data-duration="77.5" data-track-index="9"></div>
 
       <!-- HOOK 0–3.97 -->
       <div id="hook" class="clip" data-start="0.0" data-duration="3.9" data-track-index="2">
-        <div class="t1"><span class="gold">MAYANA</span><br /><span class="gold">KAALI AMMAN</span></div>
-        <div class="bar"></div>
-        <div class="t2">CUSTOM STATUE</div>
+        <div class="plate glass"><i class="sheen"></i>
+          <div class="t1"><span class="gold">MAYANA</span><br /><span class="gold">KAALI AMMAN</span></div>
+          <div class="bar"></div>
+          <div class="t2">CUSTOM STATUE</div>
+        </div>
       </div>
 
       <!-- BRAND -->
-      <div id="brand" class="clip" data-start="4.33" data-duration="4.4" data-track-index="3"><div class="dot">E</div><div class="nm">ESHAN CREATIONS</div></div>
+      <div id="brand" class="clip glass" data-start="4.33" data-duration="4.4" data-track-index="3"><i class="sheen"></i><div class="dot">E</div><div class="nm">ESHAN CREATIONS</div></div>
 
       <!-- TEASER PIP -->
-      <div id="piplbl" class="clip" data-start="24.683" data-duration="3.9" data-track-index="4">WAIT FOR IT…</div>
-      <video id="pip" class="clip" src="comp.mp4" muted playsinline data-start="24.683" data-duration="3.9" data-media-start="54.0" data-track-index="4"></video>
+      <div id="piplbl" class="clip glass" data-start="18.517" data-duration="3.9" data-track-index="4">WAIT FOR IT…</div>
+      <video id="pip" class="clip" src="comp.mp4" muted playsinline data-start="18.517" data-duration="3.9" data-media-start="47.833" data-track-index="4"></video>
 
-      <!-- REVEAL 46.233 -->
-      <div id="ring1" class="clip ring" data-start="46.233" data-duration="1.2" data-track-index="5"></div>
-      <div id="ring2" class="clip ring" data-start="46.373" data-duration="1.2" data-track-index="5"></div>
-      <div id="reveal" class="clip" data-start="46.233" data-duration="2.5" data-track-index="5"><div class="gold">THE FINAL PIECE</div></div>
+      <!-- REVEAL 40.066 -->
+      <div id="ring1" class="clip ring" data-start="40.067" data-duration="1.2" data-track-index="5"></div>
+      <div id="ring2" class="clip ring" data-start="40.207" data-duration="1.2" data-track-index="5"></div>
+      <div id="reveal" class="clip" data-start="40.067" data-duration="2.5" data-track-index="5"><div class="gold">THE FINAL PIECE</div></div>
 
       <!-- CALLOUTS -->
-      <div id="call1" class="clip call" data-start="49.193" data-duration="3.6" data-track-index="6" style="top:330px">
+      <div id="call1" class="clip call glass" data-start="43.027" data-duration="3.6" data-track-index="6" style="top:330px"><i class="sheen"></i>
         <svg viewBox="0 0 24 24" fill="none" stroke="#f5c542" stroke-width="2.2"><path d="M4 20l6-6M14 4l6 6-8 8-6-6z"/></svg>Hand-painted details</div>
-      <div id="call2" class="clip call" data-start="53.807" data-duration="3.6" data-track-index="6" style="top:330px">
+      <div id="call2" class="clip call glass" data-start="47.641" data-duration="3.6" data-track-index="6" style="top:330px"><i class="sheen"></i>
         <svg viewBox="0 0 24 24" fill="none" stroke="#f5c542" stroke-width="2.2"><path d="M12 22V6M6 4v4a6 6 0 0012 0V4M12 2v4"/></svg>Golden Trishul</div>
-      <div id="call3" class="clip call" data-start="66.627" data-duration="3.8" data-track-index="6" style="top:330px">
+      <div id="call3" class="clip call glass" data-start="60.461" data-duration="3.8" data-track-index="6" style="top:330px"><i class="sheen"></i>
         <svg viewBox="0 0 24 24" fill="none" stroke="#f5c542" stroke-width="2.2"><path d="M12 3l2.6 5.6 6 .6-4.5 4 1.3 6L12 16.3 6.6 19.2l1.3-6-4.5-4 6-.6z"/></svg>Custom designs available</div>
 
       <!-- CTA -->
-      <div id="ctabg" class="clip" data-start="77.433" data-duration="6.43" data-track-index="7"></div>
-      <div id="cta" class="clip" data-start="77.433" data-duration="6.43" data-track-index="7">
-        <div class="c1">Want your own<br /><span class="gold">custom statue?</span></div>
-        <div class="c2">DM US TO ORDER</div>
+      <div id="ctabg" class="clip" data-start="71.267" data-duration="6.43" data-track-index="7"></div>
+      <div id="cta" class="clip" data-start="71.267" data-duration="6.43" data-track-index="7">
+        <div class="card glass"><i class="sheen"></i>
+          <div class="c1">Want your own<br /><span class="gold">custom statue?</span></div>
+          <div class="c2">DM US TO ORDER</div>
+        </div>
       </div>
 
       <!-- CAPTIONS (Thanglish) -->
-      <div id="cap0" class="clip cap" data-start="0.2" data-duration="1.50" data-track-index="8"><div class="cb"><span class="">Intha</span> <span class="">video-la,</span></div></div>
-      <div id="cap1" class="clip cap" data-start="1.74" data-duration="1.26" data-track-index="8"><div class="cb"><span class="">intha</span> <span class="k">face-a</span></div></div>
-      <div id="cap2" class="clip cap" data-start="3.06" data-duration="0.79" data-track-index="8"><div class="cb"><span class="k">blur</span> <span class="">panren!</span></div></div>
-      <div id="cap3" class="clip cap" data-start="5.767" data-duration="0.55" data-track-index="8"><div class="cb"><span class="">Okay</span> <span class="">guys,</span></div></div>
-      <div id="cap4" class="clip cap" data-start="6.347" data-duration="1.02" data-track-index="8"><div class="cb"><span class="">naan</span> <span class="">oru</span> <span class="">video</span> <span class="">pottu</span></div></div>
-      <div id="cap5" class="clip cap" data-start="7.387" data-duration="0.68" data-track-index="8"><div class="cb"><span class="">neenga</span> <span class="">paathirupeenga,</span></div></div>
-      <div id="cap6" class="clip cap" data-start="8.087" data-duration="0.68" data-track-index="8"><div class="cb"><span class="">naama</span> <span class="">oru</span></div></div>
-      <div id="cap7" class="clip cap" data-start="8.787" data-duration="1.25" data-track-index="8"><div class="cb"><span class="k">Mayana</span> <span class="k">Kaali</span> <span class="k">Amman</span></div></div>
-      <div id="cap8" class="clip cap" data-start="10.067" data-duration="0.92" data-track-index="8"><div class="cb"><span class="k">statue</span> <span class="">senjom,</span></div></div>
-      <div id="cap9" class="clip cap" data-start="11.027" data-duration="1.56" data-track-index="8"><div class="cb"><span class="k">full</span> <span class="k">painted.</span></div></div>
-      <div id="cap10" class="clip cap" data-start="12.747" data-duration="1.90" data-track-index="8"><div class="cb"><span class="k">Mayana</span> <span class="k">Kaali</span> <span class="">video</span></div></div>
-      <div id="cap11" class="clip cap" data-start="14.687" data-duration="0.96" data-track-index="8"><div class="cb"><span class="">senjatha</span> <span class="">neenga</span> <span class="">paathirupeenga.</span></div></div>
-      <div id="cap12" class="clip cap" data-start="19.267" data-duration="1.89" data-track-index="8"><div class="cb"><span class="">Oru</span> <span class="">chinna</span> <span class="k">limitation…</span></div></div>
-      <div id="cap13" class="clip cap" data-start="35.933" data-duration="1.88" data-track-index="8"><div class="cb"><span class="">But</span> <span class="">sila</span> <span class="k">limitation…</span></div></div>
-      <div id="cap14" class="clip cap" data-start="48.833" data-duration="1.31" data-track-index="8"><div class="cb"><span class="">Okay</span> <span class="">guys,</span></div></div>
-      <div id="cap15" class="clip cap" data-start="50.233" data-duration="0.56" data-track-index="8"><div class="cb"><span class="">neenga</span> <span class="k">paakalam.</span></div></div>
-      <div id="cap16" class="clip cap" data-start="50.833" data-duration="0.86" data-track-index="8"><div class="cb"><span class="">Ithu</span> <span class="k">thaan!</span></div></div>
+      <div id="cap0" class="clip cap" data-start="0.2" data-duration="1.50" data-track-index="8"><div class="cb glass"><span class="">Intha</span> <span class="">video-la,</span></div></div>
+      <div id="cap1" class="clip cap" data-start="1.74" data-duration="1.26" data-track-index="8"><div class="cb glass"><span class="">intha</span> <span class="k">face-a</span></div></div>
+      <div id="cap2" class="clip cap" data-start="3.06" data-duration="0.79" data-track-index="8"><div class="cb glass"><span class="k">blur</span> <span class="">panren!</span></div></div>
+      <div id="cap3" class="clip cap" data-start="5.767" data-duration="0.55" data-track-index="8"><div class="cb glass"><span class="">Okay</span> <span class="">guys,</span></div></div>
+      <div id="cap4" class="clip cap" data-start="6.347" data-duration="1.02" data-track-index="8"><div class="cb glass"><span class="">naan</span> <span class="">oru</span> <span class="">video</span> <span class="">pottu</span></div></div>
+      <div id="cap5" class="clip cap" data-start="7.387" data-duration="0.68" data-track-index="8"><div class="cb glass"><span class="">neenga</span> <span class="">paathirupeenga,</span></div></div>
+      <div id="cap6" class="clip cap" data-start="8.087" data-duration="0.68" data-track-index="8"><div class="cb glass"><span class="">naama</span> <span class="">oru</span></div></div>
+      <div id="cap7" class="clip cap" data-start="8.787" data-duration="1.25" data-track-index="8"><div class="cb glass"><span class="k">Mayana</span> <span class="k">Kaali</span> <span class="k">Amman</span></div></div>
+      <div id="cap8" class="clip cap" data-start="10.067" data-duration="0.92" data-track-index="8"><div class="cb glass"><span class="k">statue</span> <span class="">senjom,</span></div></div>
+      <div id="cap9" class="clip cap" data-start="11.027" data-duration="1.56" data-track-index="8"><div class="cb glass"><span class="k">full</span> <span class="k">painted.</span></div></div>
+      <div id="cap12" class="clip cap" data-start="13.101" data-duration="1.89" data-track-index="8"><div class="cb glass"><span class="">Oru</span> <span class="">chinna</span> <span class="k">limitation…</span></div></div>
+      <div id="cap13" class="clip cap" data-start="29.767" data-duration="1.88" data-track-index="8"><div class="cb glass"><span class="">But</span> <span class="">sila</span> <span class="k">limitation…</span></div></div>
+      <div id="cap14" class="clip cap" data-start="42.667" data-duration="1.31" data-track-index="8"><div class="cb glass"><span class="">Okay</span> <span class="">guys,</span></div></div>
+      <div id="cap15" class="clip cap" data-start="44.067" data-duration="0.56" data-track-index="8"><div class="cb glass"><span class="">neenga</span> <span class="k">paakalam.</span></div></div>
+      <div id="cap16" class="clip cap" data-start="44.667" data-duration="0.86" data-track-index="8"><div class="cb glass"><span class="">Ithu</span> <span class="k">thaan!</span></div></div>
 
       <!-- SFX -->
       <audio id="s1" class="clip" src="sfx/impact.wav" data-start="0.05" data-duration="0.8" data-volume="0.8"></audio>
@@ -122,15 +134,15 @@
       <audio id="s3" class="clip" src="sfx/riser.wav" data-start="2.75" data-duration="1.25" data-volume="0.5"></audio>
       <audio id="s4" class="clip" src="sfx/whoosh.wav" data-start="3.85" data-duration="0.7" data-volume="0.8"></audio>
       <audio id="s5" class="clip" src="sfx/pop.wav" data-start="4.33" data-duration="0.3" data-volume="0.7"></audio>
-      <audio id="s6" class="clip" src="sfx/whoosh.wav" data-start="24.58" data-duration="0.7" data-volume="0.6"></audio>
-      <audio id="s7" class="clip" src="sfx/riser.wav" data-start="45.007" data-duration="1.25" data-volume="0.55"></audio>
-      <audio id="s8" class="clip" src="sfx/impact.wav" data-start="46.233" data-duration="0.8" data-volume="0.9"></audio>
-      <audio id="s9" class="clip" src="sfx/shimmer.wav" data-start="46.373" data-duration="1.3" data-volume="0.55"></audio>
-      <audio id="s10" class="clip" src="sfx/pop.wav" data-start="49.193" data-duration="0.3" data-volume="0.7"></audio>
-      <audio id="s11" class="clip" src="sfx/pop.wav" data-start="53.807" data-duration="0.3" data-volume="0.7"></audio>
-      <audio id="s12" class="clip" src="sfx/pop.wav" data-start="66.627" data-duration="0.3" data-volume="0.7"></audio>
-      <audio id="s13" class="clip" src="sfx/whoosh.wav" data-start="77.333" data-duration="0.7" data-volume="0.7"></audio>
-      <audio id="s14" class="clip" src="sfx/ding.wav" data-start="78.163" data-duration="0.6" data-volume="0.6"></audio>
+      <audio id="s6" class="clip" src="sfx/whoosh.wav" data-start="18.414" data-duration="0.7" data-volume="0.6"></audio>
+      <audio id="s7" class="clip" src="sfx/riser.wav" data-start="38.841" data-duration="1.25" data-volume="0.55"></audio>
+      <audio id="s8" class="clip" src="sfx/impact.wav" data-start="40.067" data-duration="0.8" data-volume="0.9"></audio>
+      <audio id="s9" class="clip" src="sfx/shimmer.wav" data-start="40.207" data-duration="1.3" data-volume="0.55"></audio>
+      <audio id="s10" class="clip" src="sfx/pop.wav" data-start="43.027" data-duration="0.3" data-volume="0.7"></audio>
+      <audio id="s11" class="clip" src="sfx/pop.wav" data-start="47.641" data-duration="0.3" data-volume="0.7"></audio>
+      <audio id="s12" class="clip" src="sfx/pop.wav" data-start="60.461" data-duration="0.3" data-volume="0.7"></audio>
+      <audio id="s13" class="clip" src="sfx/whoosh.wav" data-start="71.167" data-duration="0.7" data-volume="0.7"></audio>
+      <audio id="s14" class="clip" src="sfx/ding.wav" data-start="71.997" data-duration="0.6" data-volume="0.6"></audio>
     </div>
 
     <script>
@@ -151,7 +163,7 @@
       // cut into talking: flash + punch-in pattern on every jump cut to hide them
       tl.set("#flash", { opacity: 0.6 }, 4.0);
       tl.to("#flash", { opacity: 0, duration: 0.25 }, 4.0);
-      const cuts = [4.0, 5.767, 12.667, 18.833, 19.267, 21.3, 24.633, 35.933, 37.933, 42.8, 44.867];
+      const cuts = [4.0, 5.767, 12.667, 13.101, 15.134, 18.467, 29.767, 31.767, 36.634, 38.701];
       cuts.forEach((t, i) => tl.set(Z, { scale: i % 2 ? 1.12 : 1.0 }, t));
 
       // brand chip
@@ -159,20 +171,20 @@
       tl.to("#brand", { opacity: 0, x: -40, duration: 0.3 }, 8.437);
 
       // teaser pip
-      tl.from("#pip", { scale: 0.6, opacity: 0, duration: 0.4, ease: "back.out(1.6)" }, 24.683);
-      tl.from("#piplbl", { y: 20, opacity: 0, duration: 0.3 }, 24.833);
-      tl.to(["#pip", "#piplbl"], { opacity: 0, scale: 0.85, duration: 0.3 }, 28.283);
+      tl.from("#pip", { scale: 0.6, opacity: 0, duration: 0.4, ease: "back.out(1.6)" }, 18.517);
+      tl.from("#piplbl", { y: 20, opacity: 0, duration: 0.3 }, 18.667);
+      tl.to(["#pip", "#piplbl"], { opacity: 0, scale: 0.85, duration: 0.3 }, 22.117);
 
       // REVEAL
-      tl.set(Z, { scale: 1.0 }, 46.233);
-      tl.set("#flash", { opacity: 1 }, 46.233);
-      tl.to("#flash", { opacity: 0, duration: 0.5 }, 46.233);
-      tl.fromTo("#ring1", { scale: 0.3, opacity: 1 }, { scale: 4, opacity: 0, duration: 1.1, ease: "power2.out" }, 46.233);
-      tl.fromTo("#ring2", { scale: 0.3, opacity: 1 }, { scale: 4, opacity: 0, duration: 1.1, ease: "power2.out" }, 46.373);
-      tl.from("#reveal div", { scale: 1.6, opacity: 0, duration: 0.4, ease: "power4.out" }, 46.273);
-      tl.to("#reveal", { opacity: 0, duration: 0.3 }, 48.423);
+      tl.set(Z, { scale: 1.0 }, 40.067);
+      tl.set("#flash", { opacity: 1 }, 40.067);
+      tl.to("#flash", { opacity: 0, duration: 0.5 }, 40.067);
+      tl.fromTo("#ring1", { scale: 0.3, opacity: 1 }, { scale: 4, opacity: 0, duration: 1.1, ease: "power2.out" }, 40.067);
+      tl.fromTo("#ring2", { scale: 0.3, opacity: 1 }, { scale: 4, opacity: 0, duration: 1.1, ease: "power2.out" }, 40.207);
+      tl.from("#reveal div", { scale: 1.6, opacity: 0, duration: 0.4, ease: "power4.out" }, 40.107);
+      tl.to("#reveal", { opacity: 0, duration: 0.3 }, 42.257);
       // gentle push-ins per reveal segment
-      [[46.233, 48.833], [48.833, 53.467], [53.467, 66.467], [66.467, 73.467], [74.333, 77.433]].forEach(([a, b]) => {
+      [[40.067, 42.667], [42.667, 47.301], [47.301, 60.301], [60.301, 67.301], [68.167, 71.267]].forEach(([a, b]) => {
         tl.set(Z, { scale: 1.0 }, a);
         tl.to(Z, { scale: 1.06, duration: b - a, ease: "none" }, a);
       });
@@ -185,11 +197,11 @@
       });
 
       // CTA
-      tl.set(Z, { scale: 1.0 }, 77.433);
-      tl.from("#ctabg", { opacity: 0, duration: 0.4 }, 77.433);
-      tl.from("#cta .c1", { y: 50, opacity: 0, duration: 0.45, ease: "power3.out" }, 77.513);
-      tl.from("#cta .c2", { scale: 0.5, opacity: 0, duration: 0.4, ease: "back.out(2)" }, 78.163);
-      tl.to("#cta .c2", { scale: 1.06, duration: 0.5, yoyo: true, repeat: 7, ease: "sine.inOut" }, 78.663);
+      tl.set(Z, { scale: 1.0 }, 71.267);
+      tl.from("#ctabg", { opacity: 0, duration: 0.4 }, 71.267);
+      tl.from("#cta .c1", { y: 50, opacity: 0, duration: 0.45, ease: "power3.out" }, 71.347);
+      tl.from("#cta .c2", { scale: 0.5, opacity: 0, duration: 0.4, ease: "back.out(2)" }, 71.997);
+      tl.to("#cta .c2", { scale: 1.06, duration: 0.5, yoyo: true, repeat: 7, ease: "sine.inOut" }, 72.497);
 
       // captions
       tl.from("#cap0 .cb", { y: 26, opacity: 0, scale: 0.92, duration: 0.16, ease: "back.out(2)" }, 0.2);
@@ -202,13 +214,19 @@
       tl.from("#cap7 .cb", { y: 26, opacity: 0, scale: 0.92, duration: 0.16, ease: "back.out(2)" }, 8.787);
       tl.from("#cap8 .cb", { y: 26, opacity: 0, scale: 0.92, duration: 0.16, ease: "back.out(2)" }, 10.067);
       tl.from("#cap9 .cb", { y: 26, opacity: 0, scale: 0.92, duration: 0.16, ease: "back.out(2)" }, 11.027);
-      tl.from("#cap10 .cb", { y: 26, opacity: 0, scale: 0.92, duration: 0.16, ease: "back.out(2)" }, 12.747);
-      tl.from("#cap11 .cb", { y: 26, opacity: 0, scale: 0.92, duration: 0.16, ease: "back.out(2)" }, 14.687);
-      tl.from("#cap12 .cb", { y: 26, opacity: 0, scale: 0.92, duration: 0.16, ease: "back.out(2)" }, 19.267);
-      tl.from("#cap13 .cb", { y: 26, opacity: 0, scale: 0.92, duration: 0.16, ease: "back.out(2)" }, 35.933);
-      tl.from("#cap14 .cb", { y: 26, opacity: 0, scale: 0.92, duration: 0.16, ease: "back.out(2)" }, 48.833);
-      tl.from("#cap15 .cb", { y: 26, opacity: 0, scale: 0.92, duration: 0.16, ease: "back.out(2)" }, 50.233);
-      tl.from("#cap16 .cb", { y: 26, opacity: 0, scale: 0.92, duration: 0.16, ease: "back.out(2)" }, 50.833);
+      tl.from("#cap12 .cb", { y: 26, opacity: 0, scale: 0.92, duration: 0.16, ease: "back.out(2)" }, 13.101);
+      tl.from("#cap13 .cb", { y: 26, opacity: 0, scale: 0.92, duration: 0.16, ease: "back.out(2)" }, 29.767);
+      tl.from("#cap14 .cb", { y: 26, opacity: 0, scale: 0.92, duration: 0.16, ease: "back.out(2)" }, 42.667);
+      tl.from("#cap15 .cb", { y: 26, opacity: 0, scale: 0.92, duration: 0.16, ease: "back.out(2)" }, 44.067);
+      tl.from("#cap16 .cb", { y: 26, opacity: 0, scale: 0.92, duration: 0.16, ease: "back.out(2)" }, 44.667);
+      // glass sheen sweeps
+      const sweep = (sel, t) => tl.fromTo(sel, { xPercent: -160, skewX: -20 }, { xPercent: 320, skewX: -20, duration: 0.9, ease: "power2.inOut", immediateRender: false }, t);
+      sweep("#hook .sheen", 0.6);
+      sweep("#brand .sheen", 4.6);
+      ["#call1", "#call2", "#call3"].forEach((id) => { const el = document.querySelector(id); sweep(id + " .sheen", +el.dataset.start + 0.35); });
+      sweep("#cta .sheen", +document.querySelector("#cta").dataset.start + 0.9);
+      tl.from("#cta .card", { scale: 0.85, opacity: 0, duration: 0.45, ease: "back.out(1.6)" }, +document.querySelector("#cta").dataset.start);
+      tl.from("#hook .plate", { scale: 0.9, opacity: 0, duration: 0.4, ease: "back.out(1.6)" }, 0);
       window.__timelines["main"] = tl;
     </script>
   </body>
