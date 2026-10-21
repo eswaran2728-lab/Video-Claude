@@ -26,13 +26,18 @@ start=int(sys.argv[1]) if len(sys.argv)>1 else 0;end=int(sys.argv[2]) if len(sys
 cap=cv2.VideoCapture("cut.mp4")
 enc=subprocess.Popen(["ffmpeg","-v","error","-y","-f","rawvideo","-pix_fmt","bgr24","-s",f"{W}x{H}","-r","30","-i","-","-c:v","libx264","-crf","15","-preset","medium","-pix_fmt","yuv420p",outp],stdin=subprocess.PIPE)
 prev=None;i=0;N=2510
+CUTS=set();_c=0
+for _n in [120,53,207,185,13,61,100,339,60,146,62,41,78,139,390,210,26,93,170,17]: CUTS.add(_c);_c+=_n
 while True:
     ok,f=cap.read()
     if not ok or i>end: break
     if i>=start:
-        m=cv2.imread(f"masks2/{i:05d}.png",0).astype(np.float32)/255
+        m=cv2.imread(f"masks3/{i:05d}.png",0).astype(np.float32)/255
+        g=cv2.cvtColor(f,cv2.COLOR_BGR2GRAY).astype(np.float32)/255
+        m=np.clip(cv2.ximgproc.guidedFilter(g,m,6,1e-3),0,1)
+        if i in CUTS: prev=None
         m=cv2.GaussianBlur(m,(0,0),1.2)
-        if prev is not None: m=0.75*m+0.25*prev
+        if prev is not None: m=0.8*m+0.2*prev
         prev=m
         f=hide_face(f,i);f=grade(f)
         z=1.0+0.04*i/N
