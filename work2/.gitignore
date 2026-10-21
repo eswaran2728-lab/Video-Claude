@@ -1,0 +1,14 @@
+*.mp4
+*.wav
+*.jpg
+*.png
+frames/
+seg/
+snaps*/
+*.log
+.FINAL_*
+.PREVIEW_*
+work-*/
+**/.hyperframes/
+**/node_modules/
+!**/sfx/*.wav
