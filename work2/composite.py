@@ -30,10 +30,9 @@ while True:
     ok,f=cap.read()
     if not ok or i>end: break
     if i>=start:
-        m=cv2.imread(f"masks/{i:05d}.png",0).astype(np.float32)/255
-        m=np.clip((m-0.15)/0.7,0,1)
+        m=cv2.imread(f"masks2/{i:05d}.png",0).astype(np.float32)/255
         m=cv2.GaussianBlur(m,(0,0),1.2)
-        if prev is not None: m=0.65*m+0.35*prev
+        if prev is not None: m=0.75*m+0.25*prev
         prev=m
         f=hide_face(f,i);f=grade(f)
         z=1.0+0.04*i/N
