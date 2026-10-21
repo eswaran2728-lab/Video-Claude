@@ -7,6 +7,17 @@ FT={int(k):v for k,v in json.load(open("facetrack.json")).items()}
 held=lambda i:(i<=119) or (i>=1387)
 EX=np.ones((1280,720),np.float32);EX[370:900,0:140]=0
 _cap=cv2.VideoCapture("cut.mp4");_F={};_pos=[0]
+# static background reference for the shelf-statue zone (camera is on a tripod), from talking frames with nothing in that zone
+_rc=cv2.VideoCapture("cut.mp4");_refs=[];_k=0
+while _k<=1385:
+    _ok,_f=_rc.read()
+    if _k>=1300 and _k%5==0: _refs.append(_f[340:900,110:235].astype(np.int16))
+    _k+=1
+REFZ=np.median(np.stack(_refs),0).astype(np.int16);_rc.release()
+_h=cv2.cvtColor(REFZ.astype(np.uint8),cv2.COLOR_BGR2HSV)
+_gold=(_h[...,0]>=10)&(_h[...,0]<=35)&(_h[...,1]>=70)&(_h[...,2]>=90)
+_silver=(_h[...,1]<60)&(_h[...,2]>=120)
+TZ=cv2.dilate((_gold|_silver).astype(np.uint8),np.ones((7,7),np.uint8))
 def FR(i):
     if i in _F: return _F[i]
     if i<_pos[0]:
@@ -28,6 +39,9 @@ def statue(i):
     # shelf statue's silver trident (behind, left): drop low-saturation pixels in that zone; the held trident is gold
     sat=cv2.cvtColor(FR(i)[340:900,110:235],cv2.COLOR_BGR2HSV)[...,1]
     z=st[340:900,110:235];z[sat<80]=0
+    diff=np.abs(FR(i)[340:900,110:235].astype(np.int16)-REFZ).max(-1)
+    z[cv2.erode((diff<22).astype(np.uint8),np.ones((3,3),np.uint8))>0]=0
+    z[(TZ>0)&(diff<45)]=0
     return st
 from functools import lru_cache
 @lru_cache(maxsize=40)
