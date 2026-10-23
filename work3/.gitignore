@@ -1,0 +1,16 @@
+src/
+fr/
+rvm/
+snap*/
+*.mp4
+*.mkv
+*.wav
+*.webm
+*.jpg
+*.png
+*.log
+!liquid/preview.jpg
+edit/node_modules/
+edit/.hyperframes/
+.PREVIEW_*
+work-*/
