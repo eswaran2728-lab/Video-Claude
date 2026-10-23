@@ -146,26 +146,26 @@
       const HO = 3.5;
 
       // jump-cut punch-ins: alternate framing on every cut, plus slow push on emphasis lines
-      tl.set("#tw", { scale: 1.08 }, 0);
+      tl.set("#tw", { scale: 1.0 }, 0);
       tl.fromTo("#studio", { scale: 1.0 }, { scale: 1.1, duration: 62.233, ease: "none" }, 0);
-      tl.set("#tw", { scale: 1.08 }, 3.500);
-      tl.set("#tw", { scale: 1.14 }, 4.367);
-      tl.set("#tw", { scale: 1.08 }, 7.167);
-      tl.set("#tw", { scale: 1.14 }, 9.733);
-      tl.set("#tw", { scale: 1.08 }, 10.367);
-      tl.set("#tw", { scale: 1.14 }, 11.567);
-      tl.set("#tw", { scale: 1.08 }, 15.100);
-      tl.set("#tw", { scale: 1.14 }, 18.067);
-      tl.set("#tw", { scale: 1.08 }, 24.000);
-      tl.set("#tw", { scale: 1.14 }, 27.867);
-      tl.set("#tw", { scale: 1.08 }, 31.833);
-      tl.set("#tw", { scale: 1.14 }, 32.433);
-      tl.set("#tw", { scale: 1.08 }, 34.500);
-      tl.set("#tw", { scale: 1.14 }, 43.167);
-      tl.set("#tw", { scale: 1.08 }, 54.600);
-      tl.set("#tw", { scale: 1.14 }, 59.667);
-      tl.fromTo("#tw", { scale: 1.08 }, { scale: 1.2, duration: 1.2, ease: "power2.out", immediateRender: false }, 24.017);
-      tl.fromTo("#tw", { scale: 1.08 }, { scale: 1.2, duration: 1.2, ease: "power2.out", immediateRender: false }, 43.217);
+      tl.set("#tw", { scale: 1.0 }, 3.500);
+      tl.set("#tw", { scale: 1.05 }, 4.367);
+      tl.set("#tw", { scale: 1.0 }, 7.167);
+      tl.set("#tw", { scale: 1.05 }, 9.733);
+      tl.set("#tw", { scale: 1.0 }, 10.367);
+      tl.set("#tw", { scale: 1.05 }, 11.567);
+      tl.set("#tw", { scale: 1.0 }, 15.100);
+      tl.set("#tw", { scale: 1.05 }, 18.067);
+      tl.set("#tw", { scale: 1.0 }, 24.000);
+      tl.set("#tw", { scale: 1.05 }, 27.867);
+      tl.set("#tw", { scale: 1.0 }, 31.833);
+      tl.set("#tw", { scale: 1.05 }, 32.433);
+      tl.set("#tw", { scale: 1.0 }, 34.500);
+      tl.set("#tw", { scale: 1.05 }, 43.167);
+      tl.set("#tw", { scale: 1.0 }, 54.600);
+      tl.set("#tw", { scale: 1.05 }, 59.667);
+      tl.fromTo("#tw", { scale: 1.0 }, { scale: 1.1, duration: 1.2, ease: "power2.out", immediateRender: false }, 24.017);
+      tl.fromTo("#tw", { scale: 1.0 }, { scale: 1.1, duration: 1.2, ease: "power2.out", immediateRender: false }, 43.217);
 
       // centre the glass chips without a CSS transform on GSAP targets
       gsap.set(".chip, #cta", { xPercent: -50 });
