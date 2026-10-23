@@ -1,11 +1,12 @@
 import cv2,json,numpy as np,subprocess
+from sr import upscale
 edl=json.load(open("edl.json"))
 keep=set();order=[]
 for fa,fb,_ in edl:
     for f in range(fa,fb): order.append(f)
-W,H=720,1280
+W,H=1080,1920
 enc=subprocess.Popen(["ffmpeg","-v","error","-y","-f","rawvideo","-pix_fmt","bgra","-s",f"{W}x{H}","-r","30","-i","-",
-    "-c:v","libvpx-vp9","-pix_fmt","yuva420p","-b:v","0","-crf","18","-row-mt","1","-deadline","good","-cpu-used","4","edit/assets/talent.webm"],stdin=subprocess.PIPE)
+    "-c:v","libvpx-vp9","-pix_fmt","yuva420p","-b:v","0","-crf","14","-row-mt","1","-deadline","good","-cpu-used","4","edit/assets/talent.webm"],stdin=subprocess.PIPE)
 want=set(order);cap=cv2.VideoCapture("main30.mkv");i=0;cache={}
 X=np.linspace(0,1,W)[None,:,None];warmL=np.array([60,185,255],np.float32);coolR=np.array([255,120,150],np.float32)  # BGR gold / violet-blue
 prev=None;starts={fa for fa,_,_ in edl}
@@ -13,14 +14,15 @@ while True:
     ok,f=cap.read()
     if not ok: break
     if i in want:
-        a=cv2.imread(f"rvm/{i:05d}.png",0).astype(np.float32)/255
+        f=upscale(f,W,H)
+        a=cv2.resize(cv2.imread(f"rvm/{i:05d}.png",0),(W,H),interpolation=cv2.INTER_CUBIC).astype(np.float32)/255
         g=cv2.cvtColor(f,cv2.COLOR_BGR2GRAY).astype(np.float32)/255
-        a=np.clip(cv2.ximgproc.guidedFilter(g,a,4,1e-3),0,1)
+        a=np.clip(cv2.ximgproc.guidedFilter(g,a,6,1e-3),0,1)
         if i in starts: prev=None
         if prev is not None: a=0.85*a+0.15*prev
         prev=a
         # rim light: inner edge band of the matte, gold from the left, violet-blue from the right
-        inner=np.clip(a-cv2.GaussianBlur(a,(0,0),9),0,1)*2.2
+        inner=np.clip(a-cv2.GaussianBlur(a,(0,0),13),0,1)*2.2
         rim=np.clip(inner,0,1)[...,None]*a[...,None]
         tint=warmL*(1-X)+coolR*X
         fo=f.astype(np.float32)

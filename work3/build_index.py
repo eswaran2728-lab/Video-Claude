@@ -46,9 +46,9 @@ sfxH="\n".join(f'      <audio id="sx{i}" class="clip" src="assets/sfx/{n}.mp3" d
 cut_js=[]
 for k,(fa,fb,o) in enumerate(edl):
     st=HO+o/F
-    cut_js.append(f'tl.set("#tw", {{ scale: {1.08 if k%2==0 else 1.14} }}, {st:.3f});')
+    cut_js.append(f'tl.set("#tw", {{ scale: {1.0 if k%2==0 else 1.05} }}, {st:.3f});')
 for src in (27.25,55.55):
-    st=M(src);cut_js.append(f'tl.fromTo("#tw", {{ scale: 1.08 }}, {{ scale: 1.2, duration: 1.2, ease: "power2.out", immediateRender: false }}, {st:.3f});')
+    st=M(src);cut_js.append(f'tl.fromTo("#tw", {{ scale: 1.0 }}, {{ scale: 1.1, duration: 1.2, ease: "power2.out", immediateRender: false }}, {st:.3f});')
 CTAS=HO+56.2
 tpl=open("index.tpl.html").read()
 rep=dict(TOTAL=f"{TOTAL}",HO=f"{HO}",BODYDUR=f"{BODY:.3f}",CAPS=capH,CAPJS=capJ,TITLES=titH,SFX=sfxH,

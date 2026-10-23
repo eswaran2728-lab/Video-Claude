@@ -1,5 +1,6 @@
 """Bake B-roll clips with a liquid-metaball reveal/exit (alpha) and a chrome-gold rim on the liquid edge."""
 import cv2,numpy as np,subprocess,sys,json
+from sr import upscale
 def smooth(x,a,b): t=np.clip((x-a)/(b-a),0,1); return t*t*(3-2*t)
 def eo(t): return 1-(1-t)**3
 def field(W,H,t,seed):
@@ -17,15 +18,17 @@ def bake(src,start,dur,out,crop=None,size=None,tin=0.5,tout=0.45,seed=1,radius=0
         ok,f=cap.read()
         if not ok: f=frames[-1]
         frames.append(f)
-    if crop: y0,y1,x0,x1=crop;frames=[f[y0:y1,x0:x1] for f in frames]
-    if size: frames=[cv2.resize(f,size,interpolation=cv2.INTER_CUBIC) for f in frames]
+    frames=[upscale(f,f.shape[1]*2,f.shape[0]*2,sharp=0.5) for f in frames]
+    if crop: y0,y1,x0,x1=[2*c for c in crop];frames=[f[y0:y1,x0:x1] for f in frames]
+    size=size or (1080,1920)
+    frames=[cv2.resize(f,size,interpolation=cv2.INTER_AREA) for f in frames]
     H,W=frames[0].shape[:2]
     rr=np.ones((H,W),np.float32)
     if radius:
         rr=np.zeros((H,W),np.uint8);cv2.rectangle(rr,(radius,0),(W-radius,H),1,-1);cv2.rectangle(rr,(0,radius),(W,H-radius),1,-1)
         for c in [(radius,radius),(W-radius,radius),(radius,H-radius),(W-radius,H-radius)]: cv2.circle(rr,c,radius,1,-1,cv2.LINE_AA)
         rr=cv2.GaussianBlur(rr.astype(np.float32),(0,0),1.2)
-    enc=subprocess.Popen(["ffmpeg","-v","error","-y","-f","rawvideo","-pix_fmt","bgra","-s",f"{W}x{H}","-r","30","-i","-","-c:v","libvpx-vp9","-pix_fmt","yuva420p","-b:v","0","-crf","20","-row-mt","1","-cpu-used","4",out],stdin=subprocess.PIPE)
+    enc=subprocess.Popen(["ffmpeg","-v","error","-y","-f","rawvideo","-pix_fmt","bgra","-s",f"{W}x{H}","-r","30","-i","-","-c:v","libvpx-vp9","-pix_fmt","yuva420p","-b:v","0","-crf","16","-row-mt","1","-cpu-used","4",out],stdin=subprocess.PIPE)
     gold=np.array([90,200,255],np.float32);white=np.array([255,250,245],np.float32)
     for k,f in enumerate(frames):
         t=k/fps

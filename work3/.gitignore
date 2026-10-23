@@ -14,3 +14,4 @@ edit/node_modules/
 edit/.hyperframes/
 .PREVIEW_*
 work-*/
+*.pb
