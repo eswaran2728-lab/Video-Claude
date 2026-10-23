@@ -36,7 +36,8 @@
         // ambient glow of the field so the dark backdrop is never flat
         const glow = clamp(f * .55) * .22;
         const edge = clamp((f - 1) / .06);
-        let r = BG[0] + 120 * glow, g = BG[1] + 70 * glow, bl = BG[2] + 110 * glow;
+        // transparent canvas: only a soft warm haze around the field plus the blobs themselves
+        let r = 255, g = 170, bl = 120, al = glow * 0.55;
         if (edge > 0) {
           const hk = U * .05 / Math.sqrt(Math.max(f - .95, .02));
           let nx = -gx * hk, ny = -gy * hk, nz = 1; const nl = Math.hypot(nx, ny, nz); nx /= nl; ny /= nl; nz /= nl;
@@ -47,11 +48,13 @@
           const rim = Math.pow(1 - nz, 3), spec = Math.pow(clamp(-nx * .5 - ny * .6 + nz * .62), 40), diff = .62 + .38 * nz;
           cr = cr * diff * (1 - rim * .25) + 255 * spec * .95 + 40 * rim; cg = cg * diff * (1 - rim * .25) + 255 * spec * .95 + 30 * rim; cb = cb * diff * (1 - rim * .2) + 255 * spec * .95 + 60 * rim;
           r = lerp(r, clamp(cr, 0, 255), edge); g = lerp(g, clamp(cg, 0, 255), edge); bl = lerp(bl, clamp(cb, 0, 255), edge);
+          al = lerp(al, 0.9, edge);
         }
-        d[o] = r; d[o + 1] = g; d[o + 2] = bl; d[o + 3] = 255;
+        d[o] = r; d[o + 1] = g; d[o + 2] = bl; d[o + 3] = al * 255;
       }
     }
     bx.putImageData(img, 0, 0);
+    ctx.clearRect(0, 0, W, H);
     ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
     ctx.drawImage(buf, 0, 0, bw * SC, bh * SC);
   }

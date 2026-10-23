@@ -10,8 +10,9 @@
       html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0e0710; }
       body { font-family: "Montserrat", sans-serif; --gold: #f5c542; --red: #ff4d5e; --green: #3ddc97; }
       .clip { position: absolute; inset: 0; }
-      #liquid { position: absolute; inset: 0; width: 1080px; height: 1920px; z-index: 0; }
-      #vig { position: absolute; inset: 0; z-index: 1; pointer-events: none;
+      #studio { position: absolute; inset: 0; width: 1080px; height: 1920px; object-fit: cover; z-index: 0; transform-origin: 50% 40%; }
+      #liquid { position: absolute; inset: 0; width: 1080px; height: 1920px; z-index: 1; }
+      #vig { position: absolute; inset: 0; z-index: 2; pointer-events: none;
         background: radial-gradient(ellipse 80% 60% at 50% 45%, rgba(0,0,0,0) 50%, rgba(5,2,8,0.6) 100%); }
       #tw { position: absolute; inset: 0; z-index: 3; transform-origin: 50% 100%; }
       #talent { width: 1080px; height: 1920px; object-fit: cover; }
@@ -50,6 +51,7 @@
   </head>
   <body>
     <div id="root" data-composition-id="main" data-start="0" data-duration="62.233" data-width="1080" data-height="1920">
+      <img id="studio" src="assets/studio_bg.jpg" alt="" />
       <canvas id="liquid"></canvas>
       <div id="vig"></div>
 
@@ -145,6 +147,7 @@
 
       // jump-cut punch-ins: alternate framing on every cut, plus slow push on emphasis lines
       tl.set("#tw", { scale: 1.08 }, 0);
+      tl.fromTo("#studio", { scale: 1.0 }, { scale: 1.1, duration: 62.233, ease: "none" }, 0);
       tl.set("#tw", { scale: 1.08 }, 3.500);
       tl.set("#tw", { scale: 1.14 }, 4.367);
       tl.set("#tw", { scale: 1.08 }, 7.167);
