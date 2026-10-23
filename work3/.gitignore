@@ -16,3 +16,4 @@ edit/.hyperframes/
 work-*/
 *.pb
 __pycache__/
+.FINAL_*
