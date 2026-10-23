@@ -36,7 +36,8 @@ capJ="\n".join(f'      tl.from("#cap{i} .cb", {{ y: 22, opacity: 0, scale: 0.94,
 B1=(HO+3.95,2.4);B2=(HO+21.6,6.75);B3=(HO+33.75,4.85)
 TITLES=[("t1",HO+0.87,2.8,["MANNIPPU","SORRY"]),("t2",HO+8.07,3.5,["MAYANA KAALI?","NOT QUITE"]),
         ("t3",HO+39.67,3.3,["EN THAPPU","MY MISTAKE"]),("t4",HO+51.1,5.0,["NEXT TIME","RESEARCH FIRST"])]
-titH="\n".join(f'      <div id="{n}" class="clip mt" data-start="{s:.3f}" data-duration="{d:.3f}" data-words="{"|".join(w)}"><div class="mtd"><span class="ma"></span><span class="mb"></span></div></div>' for n,s,d,w in TITLES)
+def fs(w): return int(min(100, 800/(max(len(x) for x in w)*0.74)))
+titH="\n".join(f'      <div id="{n}" class="clip mt" data-start="{s:.3f}" data-duration="{d:.3f}" data-words="{"|".join(w)}"><div class="mtd" style="font-size:{fs(w)}px"><span class="ma"></span><span class="mb"></span></div></div>' for n,s,d,w in TITLES)
 SFX=[("impact-bass-1",0.02,0.7),("error",0.35,0.5),("whoosh-cinematic",1.2,0.6),("sparkle",1.35,0.45),("chime",1.9,0.5),("whoosh-cinematic",3.3,0.5),
      ("pop",HO+0.9,0.5),("whoosh-short",B1[0]-0.05,0.6),("sparkle",B1[0]+0.05,0.4),("pop",HO+8.1,0.5),
      ("whoosh-cinematic",B2[0]-0.05,0.6),("sparkle",B2[0]+0.05,0.45),("chime",B2[0]+0.6,0.45),

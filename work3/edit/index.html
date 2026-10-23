@@ -30,9 +30,11 @@
       .chip.good .ic { background: var(--green); color: #07301f; }
 
       /* gooey morph titles (morph-text technique) */
+      #logo { inset: auto; right: 34px; top: 176px; width: 170px; height: auto; z-index: 30; pointer-events: none;
+        filter: drop-shadow(0 4px 14px rgba(0,0,0,0.65)); }
       .mt { z-index: 14; pointer-events: none; }
-      .mtd { position: absolute; left: 0; top: 210px; width: 1080px; height: 150px; filter: drop-shadow(0 8px 30px rgba(0,0,0,0.6)); }
-      .mtd span { position: absolute; width: 100%; text-align: center; font-weight: 900; font-size: 104px; line-height: 1.2; letter-spacing: 3px;
+      .mtd { position: absolute; left: 36px; top: 210px; width: 820px; height: 150px; filter: drop-shadow(0 8px 30px rgba(0,0,0,0.6)); }
+      .mtd span { position: absolute; width: 100%; text-align: center; font-weight: 900; font-size: inherit; line-height: 1.2; letter-spacing: 3px;
         color: var(--gold); }
 
       .cap { display: flex; align-items: flex-end; justify-content: center; padding-bottom: 600px; z-index: 20; pointer-events: none; }
@@ -77,12 +79,15 @@
       <div id="l3" class="clip chip glass" data-start="37.250" data-duration="4.85" data-track-index="5" style="inset:auto;left:50%;width:auto;height:auto;top:270px">CUSTOMER'S CUSTOM ORDER</div>
 
       <!-- TITLES -->
-      <div id="t1" class="clip mt" data-start="4.370" data-duration="2.800" data-words="MANNIPPU|SORRY"><div class="mtd"><span class="ma"></span><span class="mb"></span></div></div>
-      <div id="t2" class="clip mt" data-start="11.570" data-duration="3.500" data-words="MAYANA KAALI?|NOT QUITE"><div class="mtd"><span class="ma"></span><span class="mb"></span></div></div>
-      <div id="t3" class="clip mt" data-start="43.170" data-duration="3.300" data-words="EN THAPPU|MY MISTAKE"><div class="mtd"><span class="ma"></span><span class="mb"></span></div></div>
-      <div id="t4" class="clip mt" data-start="54.600" data-duration="5.000" data-words="NEXT TIME|RESEARCH FIRST"><div class="mtd"><span class="ma"></span><span class="mb"></span></div></div>
+      <div id="t1" class="clip mt" data-start="4.370" data-duration="2.800" data-words="MANNIPPU|SORRY"><div class="mtd" style="font-size:100px"><span class="ma"></span><span class="mb"></span></div></div>
+      <div id="t2" class="clip mt" data-start="11.570" data-duration="3.500" data-words="MAYANA KAALI?|NOT QUITE"><div class="mtd" style="font-size:83px"><span class="ma"></span><span class="mb"></span></div></div>
+      <div id="t3" class="clip mt" data-start="43.170" data-duration="3.300" data-words="EN THAPPU|MY MISTAKE"><div class="mtd" style="font-size:100px"><span class="ma"></span><span class="mb"></span></div></div>
+      <div id="t4" class="clip mt" data-start="54.600" data-duration="5.000" data-words="NEXT TIME|RESEARCH FIRST"><div class="mtd" style="font-size:77px"><span class="ma"></span><span class="mb"></span></div></div>
 
       <div id="cta" class="clip glass" style="inset:auto;left:50%;top:200px;width:auto;height:auto" data-start="59.700" data-duration="2.533" data-track-index="6"><div class="c1">FOLLOW FOR CORRECT INFO</div><div class="c2">ESHAN CREATIONS</div></div>
+
+      <!-- BRAND LOGO (top-right, whole video) -->
+      <img id="logo" class="clip" src="assets/logo.png" alt="Eshan Creations" data-start="0" data-duration="62.233" data-track-index="7" style="inset:auto;right:34px;top:176px;width:170px;height:auto" />
 
       <!-- CAPTIONS (Thanglish) -->
       <div id="cap0" class="clip cap" data-start="3.503" data-duration="0.837"><div class="cb glass"><span class="">Vanakkam</span> <span class="">nanbargale!</span></div></div>

@@ -30,9 +30,11 @@
       .chip.good .ic { background: var(--green); color: #07301f; }
 
       /* gooey morph titles (morph-text technique) */
+      #logo { inset: auto; right: 34px; top: 176px; width: 170px; height: auto; z-index: 30; pointer-events: none;
+        filter: drop-shadow(0 4px 14px rgba(0,0,0,0.65)); }
       .mt { z-index: 14; pointer-events: none; }
-      .mtd { position: absolute; left: 0; top: 210px; width: 1080px; height: 150px; filter: drop-shadow(0 8px 30px rgba(0,0,0,0.6)); }
-      .mtd span { position: absolute; width: 100%; text-align: center; font-weight: 900; font-size: 104px; line-height: 1.2; letter-spacing: 3px;
+      .mtd { position: absolute; left: 36px; top: 210px; width: 820px; height: 150px; filter: drop-shadow(0 8px 30px rgba(0,0,0,0.6)); }
+      .mtd span { position: absolute; width: 100%; text-align: center; font-weight: 900; font-size: inherit; line-height: 1.2; letter-spacing: 3px;
         color: var(--gold); }
 
       .cap { display: flex; align-items: flex-end; justify-content: center; padding-bottom: 600px; z-index: 20; pointer-events: none; }
@@ -80,6 +82,9 @@
 %%TITLES%%
 
       <div id="cta" class="clip glass" style="inset:auto;left:50%;top:200px;width:auto;height:auto" data-start="%%CTAS%%" data-duration="%%CTAD%%" data-track-index="6"><div class="c1">FOLLOW FOR CORRECT INFO</div><div class="c2">ESHAN CREATIONS</div></div>
+
+      <!-- BRAND LOGO (top-right, whole video) -->
+      <img id="logo" class="clip" src="assets/logo.png" alt="Eshan Creations" data-start="0" data-duration="%%TOTAL%%" data-track-index="7" style="inset:auto;right:34px;top:176px;width:170px;height:auto" />
 
       <!-- CAPTIONS (Thanglish) -->
 %%CAPS%%
