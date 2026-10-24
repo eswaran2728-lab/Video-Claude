@@ -38,7 +38,10 @@
       .shine { position: absolute; top: 0; left: 0; width: 140px; height: 100%; pointer-events: none; mix-blend-mode: screen;
         background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,250,220,0.7) 50%, rgba(255,255,255,0) 100%); }
 
-      /* kinetic phrase words (inside the band, lower left) */
+      /* kinetic-type overlays (motion-kinetic-type skill, alpha webm) sit on the lower part of the band */
+      .kt { inset: auto; left: 0; top: 962px; width: 1080px; height: 420px; z-index: 8; pointer-events: none; }
+      #particles { inset: auto; left: 0; top: 572px; width: 1080px; height: 810px; z-index: 12; pointer-events: none; }
+      /* (old css words, unused) */
       .kw { z-index: 8; pointer-events: none; }
       .kw span { position: absolute; left: 44px; top: 1236px; font-family: "Oswald", sans-serif; font-weight: 700; font-size: 104px; letter-spacing: 6px; line-height: 1;
         color: #fff; -webkit-text-stroke: 2px rgba(0,0,0,0.35); text-shadow: 0 6px 0 rgba(184,128,26,0.95), 0 14px 30px rgba(0,0,0,0.7); font-style: italic; }
@@ -47,8 +50,9 @@
       #fin { z-index: 12; display: flex; flex-direction: column; align-items: center; justify-content: center; pointer-events: none; }
       #fin .f1 { margin-top: 160px; font-family: "Oswald", sans-serif; font-weight: 700; font-size: 150px; letter-spacing: 12px; line-height: 1; color: #fff;
         text-shadow: 0 8px 0 rgba(184,128,26,0.95), 0 20px 50px rgba(0,0,0,0.8); }
-      #fin .f2 { margin-top: 26px; font-family: "Noto Sans Tamil", sans-serif; font-weight: 800; font-size: 76px; }
-      #finshade { z-index: 11; background: radial-gradient(ellipse 70% 40% at 50% 55%, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 100%); pointer-events: none; }
+      #fin .f2 { margin-top: 420px; font-family: "Noto Sans Tamil", sans-serif; font-weight: 800; font-size: 76px; }
+      #finshade { inset: auto; left: 0; top: 572px; width: 1080px; height: 810px; z-index: 11; pointer-events: none;
+        background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(6,3,2,0.86) 0%, rgba(6,3,2,0.7) 100%); }
     </style>
   </head>
   <body>
@@ -77,18 +81,18 @@
       </div>
 
       <!-- KINETIC WORDS on each musical phrase -->
-      <div id="kw0" class="clip kw" data-start="0.050" data-duration="1.850" data-track-index="4"><span>SILAMBAM</span></div>
-      <div id="kw1" class="clip kw" data-start="8.055" data-duration="1.700" data-track-index="4"><span>SPEED</span></div>
-      <div id="kw2" class="clip kw" data-start="15.605" data-duration="1.700" data-track-index="4"><span>POWER</span></div>
-      <div id="kw3" class="clip kw" data-start="23.175" data-duration="1.700" data-track-index="4"><span>FOCUS</span></div>
-      <div id="kw4" class="clip kw" data-start="30.725" data-duration="1.700" data-track-index="4"><span>DISCIPLINE</span></div>
-      <div id="kw5" class="clip kw" data-start="38.295" data-duration="1.700" data-track-index="4"><span>TRADITION</span></div>
-      <div id="kw6" class="clip kw" data-start="45.855" data-duration="1.700" data-track-index="4"><span>UNITY</span></div>
+      <video id="kt0" class="clip kt" src="assets/mg/kt_0.webm" muted playsinline data-start="0.000" data-duration="1.850" data-track-index="4"></video>
+      <video id="kt1" class="clip kt" src="assets/mg/kt_1.webm" muted playsinline data-start="8.005" data-duration="1.700" data-track-index="4"></video>
+      <video id="kt2" class="clip kt" src="assets/mg/kt_2.webm" muted playsinline data-start="15.555" data-duration="1.700" data-track-index="4"></video>
+      <video id="kt3" class="clip kt" src="assets/mg/kt_3.webm" muted playsinline data-start="23.125" data-duration="1.700" data-track-index="4"></video>
+      <video id="kt4" class="clip kt" src="assets/mg/kt_4.webm" muted playsinline data-start="30.675" data-duration="1.700" data-track-index="4"></video>
+      <video id="kt5" class="clip kt" src="assets/mg/kt_5.webm" muted playsinline data-start="38.245" data-duration="1.700" data-track-index="4"></video>
+      <video id="kt6" class="clip kt" src="assets/mg/kt_6.webm" muted playsinline data-start="45.805" data-duration="1.700" data-track-index="4"></video>
 
-      <!-- FINALE on the last hit -->
-      <div id="finshade" class="clip" data-start="53.655" data-duration="1.065" data-track-index="7"></div>
+      <!-- FINALE: gold particles (motion-particles skill) gather into SILAMBAM on the last hit -->
+      <video id="particles" class="clip" src="assets/mg/particles.webm" muted playsinline data-start="51.255" data-duration="3.465" data-track-index="8" style="inset:auto;left:0;top:572px;width:1080px;height:810px"></video>
+      <div id="finshade" class="clip" data-start="52.155" data-duration="2.565" data-track-index="7" style="inset:auto;left:0;top:572px;width:1080px;height:810px"></div>
       <div id="fin" class="clip" data-start="53.655" data-duration="1.065" data-track-index="7">
-        <div class="f1">SILAMBAM</div>
         <div class="f2 gold">கலையைக் காப்போம்</div>
       </div>
 
@@ -184,25 +188,10 @@
       tl.fromTo("#streak", { xPercent: -120, skewX: -20, opacity: 0.9 }, { xPercent: 420, skewX: -20, opacity: 0, duration: 0.35, ease: "power1.in", immediateRender: false }, 42.965);
       tl.fromTo("#streak", { xPercent: -120, skewX: -20, opacity: 0.9 }, { xPercent: 420, skewX: -20, opacity: 0, duration: 0.35, ease: "power1.in", immediateRender: false }, 43.915);
       tl.fromTo("#streak", { xPercent: -120, skewX: -20, opacity: 0.9 }, { xPercent: 420, skewX: -20, opacity: 0, duration: 0.35, ease: "power1.in", immediateRender: false }, 44.885);
-      tl.from("#kw0 span", { x: -140, skewX: -18, opacity: 0, duration: 0.28, ease: "power4.out" }, 0.050);
-      tl.to("#kw0 span", { x: 120, opacity: 0, duration: 0.22, ease: "power2.in" }, 1.660);
-      tl.from("#kw1 span", { x: -140, skewX: -18, opacity: 0, duration: 0.28, ease: "power4.out" }, 8.055);
-      tl.to("#kw1 span", { x: 120, opacity: 0, duration: 0.22, ease: "power2.in" }, 9.515);
-      tl.from("#kw2 span", { x: -140, skewX: -18, opacity: 0, duration: 0.28, ease: "power4.out" }, 15.605);
-      tl.to("#kw2 span", { x: 120, opacity: 0, duration: 0.22, ease: "power2.in" }, 17.065);
-      tl.from("#kw3 span", { x: -140, skewX: -18, opacity: 0, duration: 0.28, ease: "power4.out" }, 23.175);
-      tl.to("#kw3 span", { x: 120, opacity: 0, duration: 0.22, ease: "power2.in" }, 24.635);
-      tl.from("#kw4 span", { x: -140, skewX: -18, opacity: 0, duration: 0.28, ease: "power4.out" }, 30.725);
-      tl.to("#kw4 span", { x: 120, opacity: 0, duration: 0.22, ease: "power2.in" }, 32.185);
-      tl.from("#kw5 span", { x: -140, skewX: -18, opacity: 0, duration: 0.28, ease: "power4.out" }, 38.295);
-      tl.to("#kw5 span", { x: 120, opacity: 0, duration: 0.22, ease: "power2.in" }, 39.755);
-      tl.from("#kw6 span", { x: -140, skewX: -18, opacity: 0, duration: 0.28, ease: "power4.out" }, 45.855);
-      tl.to("#kw6 span", { x: 120, opacity: 0, duration: 0.22, ease: "power2.in" }, 47.315);
       // finale
       tl.fromTo("#flash", { opacity: 0.9 }, { opacity: 0, duration: 0.45, ease: "power2.out", immediateRender: false }, 53.655);
-      tl.from("#fin .f1", { scale: 1.8, opacity: 0, duration: 0.3, ease: "power4.out" }, 53.655);
       tl.from("#fin .f2", { y: 40, opacity: 0, duration: 0.4, ease: "back.out(1.8)" }, 53.655 + 0.25);
-      tl.from("#finshade", { opacity: 0, duration: 0.3 }, 53.655);
+      tl.from("#finshade", { opacity: 0, duration: 0.9, ease: "power1.inOut" }, 52.155);
       window.__timelines["main"] = tl;
     </script>
   </body>

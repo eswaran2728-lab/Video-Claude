@@ -38,7 +38,10 @@
       .shine { position: absolute; top: 0; left: 0; width: 140px; height: 100%; pointer-events: none; mix-blend-mode: screen;
         background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,250,220,0.7) 50%, rgba(255,255,255,0) 100%); }
 
-      /* kinetic phrase words (inside the band, lower left) */
+      /* kinetic-type overlays (motion-kinetic-type skill, alpha webm) sit on the lower part of the band */
+      .kt { inset: auto; left: 0; top: 962px; width: 1080px; height: 420px; z-index: 8; pointer-events: none; }
+      #particles { inset: auto; left: 0; top: 572px; width: 1080px; height: 810px; z-index: 12; pointer-events: none; }
+      /* (old css words, unused) */
       .kw { z-index: 8; pointer-events: none; }
       .kw span { position: absolute; left: 44px; top: 1236px; font-family: "Oswald", sans-serif; font-weight: 700; font-size: 104px; letter-spacing: 6px; line-height: 1;
         color: #fff; -webkit-text-stroke: 2px rgba(0,0,0,0.35); text-shadow: 0 6px 0 rgba(184,128,26,0.95), 0 14px 30px rgba(0,0,0,0.7); font-style: italic; }
@@ -47,8 +50,9 @@
       #fin { z-index: 12; display: flex; flex-direction: column; align-items: center; justify-content: center; pointer-events: none; }
       #fin .f1 { margin-top: 160px; font-family: "Oswald", sans-serif; font-weight: 700; font-size: 150px; letter-spacing: 12px; line-height: 1; color: #fff;
         text-shadow: 0 8px 0 rgba(184,128,26,0.95), 0 20px 50px rgba(0,0,0,0.8); }
-      #fin .f2 { margin-top: 26px; font-family: "Noto Sans Tamil", sans-serif; font-weight: 800; font-size: 76px; }
-      #finshade { z-index: 11; background: radial-gradient(ellipse 70% 40% at 50% 55%, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 100%); pointer-events: none; }
+      #fin .f2 { margin-top: 420px; font-family: "Noto Sans Tamil", sans-serif; font-weight: 800; font-size: 76px; }
+      #finshade { inset: auto; left: 0; top: 572px; width: 1080px; height: 810px; z-index: 11; pointer-events: none;
+        background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(6,3,2,0.86) 0%, rgba(6,3,2,0.7) 100%); }
     </style>
   </head>
   <body>
@@ -79,10 +83,10 @@
       <!-- KINETIC WORDS on each musical phrase -->
 %%WORDS%%
 
-      <!-- FINALE on the last hit -->
-      <div id="finshade" class="clip" data-start="%%FINAL%%" data-duration="%%FINALD%%" data-track-index="7"></div>
+      <!-- FINALE: gold particles (motion-particles skill) gather into SILAMBAM on the last hit -->
+      <video id="particles" class="clip" src="assets/mg/particles.webm" muted playsinline data-start="%%PSTART%%" data-duration="%%PDUR%%" data-track-index="8" style="inset:auto;left:0;top:572px;width:1080px;height:810px"></video>
+      <div id="finshade" class="clip" data-start="%%SHADE%%" data-duration="%%SHADED%%" data-track-index="7" style="inset:auto;left:0;top:572px;width:1080px;height:810px"></div>
       <div id="fin" class="clip" data-start="%%FINAL%%" data-duration="%%FINALD%%" data-track-index="7">
-        <div class="f1">SILAMBAM</div>
         <div class="f2 gold">கலையைக் காப்போம்</div>
       </div>
 
@@ -100,9 +104,8 @@
       %%JS%%
       // finale
       tl.fromTo("#flash", { opacity: 0.9 }, { opacity: 0, duration: 0.45, ease: "power2.out", immediateRender: false }, %%FINAL%%);
-      tl.from("#fin .f1", { scale: 1.8, opacity: 0, duration: 0.3, ease: "power4.out" }, %%FINAL%%);
       tl.from("#fin .f2", { y: 40, opacity: 0, duration: 0.4, ease: "back.out(1.8)" }, %%FINAL%% + 0.25);
-      tl.from("#finshade", { opacity: 0, duration: 0.3 }, %%FINAL%%);
+      tl.from("#finshade", { opacity: 0, duration: 0.9, ease: "power1.inOut" }, %%SHADE%%);
       window.__timelines["main"] = tl;
     </script>
   </body>

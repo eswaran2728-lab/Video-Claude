@@ -14,3 +14,5 @@ edit/.hyperframes/
 .PREVIEW_*
 .FINAL_*
 __pycache__/
+!edit/assets/mg/*.webm
+motion/out/
