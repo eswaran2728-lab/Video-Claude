@@ -39,18 +39,18 @@
         background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,250,220,0.7) 50%, rgba(255,255,255,0) 100%); }
 
       /* kinetic-type overlays (motion-kinetic-type skill, alpha webm) sit on the lower part of the band */
-      .kt { inset: auto; left: 0; top: 962px; width: 1080px; height: 420px; z-index: 8; pointer-events: none; }
-      #particles { inset: auto; left: 0; top: 572px; width: 1080px; height: 810px; z-index: 12; pointer-events: none; }
+      .kt { inset: auto; left: 0; top: 1392px; width: 1080px; height: 360px; z-index: 8; pointer-events: none; }
+      #particles { inset: auto; left: 0; top: 1386px; width: 1080px; height: 400px; z-index: 12; pointer-events: none; }
       /* (old css words, unused) */
       .kw { z-index: 8; pointer-events: none; }
       .kw span { position: absolute; left: 44px; top: 1236px; font-family: "Oswald", sans-serif; font-weight: 700; font-size: 104px; letter-spacing: 6px; line-height: 1;
         color: #fff; -webkit-text-stroke: 2px rgba(0,0,0,0.35); text-shadow: 0 6px 0 rgba(184,128,26,0.95), 0 14px 30px rgba(0,0,0,0.7); font-style: italic; }
 
       /* finale */
-      #fin { z-index: 12; display: flex; flex-direction: column; align-items: center; justify-content: center; pointer-events: none; }
+      #fin { inset: auto; left: 0; top: 1716px; width: 1080px; height: 110px; z-index: 12; display: flex; justify-content: center; align-items: center; pointer-events: none; }
       #fin .f1 { margin-top: 160px; font-family: "Oswald", sans-serif; font-weight: 700; font-size: 150px; letter-spacing: 12px; line-height: 1; color: #fff;
         text-shadow: 0 8px 0 rgba(184,128,26,0.95), 0 20px 50px rgba(0,0,0,0.8); }
-      #fin .f2 { margin-top: 420px; font-family: "Noto Sans Tamil", sans-serif; font-weight: 800; font-size: 76px; }
+      #fin .f2 { margin-top: 0; font-family: "Noto Sans Tamil", sans-serif; font-weight: 800; font-size: 76px; }
       #finshade { inset: auto; left: 0; top: 572px; width: 1080px; height: 810px; z-index: 11; pointer-events: none;
         background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(6,3,2,0.86) 0%, rgba(6,3,2,0.7) 100%); }
     </style>
@@ -90,9 +90,8 @@
       <video id="kt6" class="clip kt" src="assets/mg/kt_6.webm" muted playsinline data-start="45.805" data-duration="1.700" data-track-index="4"></video>
 
       <!-- FINALE: gold particles (motion-particles skill) gather into SILAMBAM on the last hit -->
-      <video id="particles" class="clip" src="assets/mg/particles.webm" muted playsinline data-start="51.255" data-duration="3.465" data-track-index="8" style="inset:auto;left:0;top:572px;width:1080px;height:810px"></video>
-      <div id="finshade" class="clip" data-start="52.155" data-duration="2.565" data-track-index="7" style="inset:auto;left:0;top:572px;width:1080px;height:810px"></div>
-      <div id="fin" class="clip" data-start="53.655" data-duration="1.065" data-track-index="7">
+      <video id="particles" class="clip" src="assets/mg/particles.webm" muted playsinline data-start="51.255" data-duration="3.465" data-track-index="8" style="inset:auto;left:0;top:1386px;width:1080px;height:400px"></video>
+      <div id="fin" class="clip" style="inset:auto;left:0;top:1716px;width:1080px;height:110px" data-start="53.655" data-duration="1.065" data-track-index="7">
         <div class="f2 gold">கலையைக் காப்போம்</div>
       </div>
 
@@ -146,22 +145,22 @@
       tl.fromTo("#bw", { scale: 1.07 }, { scale: 1.0, duration: 0.32, ease: "power3.out", immediateRender: false }, 47.695);
       tl.fromTo("#bw", { scale: 1.07 }, { scale: 1.0, duration: 0.32, ease: "power3.out", immediateRender: false }, 49.585);
       tl.fromTo("#bw", { scale: 1.07 }, { scale: 1.0, duration: 0.32, ease: "power3.out", immediateRender: false }, 51.525);
-      tl.fromTo("#flash", { opacity: 0.55 }, { opacity: 0, duration: 0.3, ease: "power2.out", immediateRender: false }, 8.005);
+      tl.fromTo("#flash", { opacity: 0.3 }, { opacity: 0, duration: 0.3, ease: "power2.out", immediateRender: false }, 8.005);
       tl.fromTo("#hdr .shine", { xPercent: -160, skewX: -20 }, { xPercent: 640, skewX: -20, duration: 0.9, ease: "power2.inOut", immediateRender: false }, 8.005);
       tl.fromTo("#logo", { scale: 1.08 }, { scale: 1.0, duration: 0.45, ease: "back.out(2)", immediateRender: false }, 8.005);
-      tl.fromTo("#flash", { opacity: 0.55 }, { opacity: 0, duration: 0.3, ease: "power2.out", immediateRender: false }, 15.555);
+      tl.fromTo("#flash", { opacity: 0.3 }, { opacity: 0, duration: 0.3, ease: "power2.out", immediateRender: false }, 15.555);
       tl.fromTo("#hdr .shine", { xPercent: -160, skewX: -20 }, { xPercent: 640, skewX: -20, duration: 0.9, ease: "power2.inOut", immediateRender: false }, 15.555);
       tl.fromTo("#logo", { scale: 1.08 }, { scale: 1.0, duration: 0.45, ease: "back.out(2)", immediateRender: false }, 15.555);
-      tl.fromTo("#flash", { opacity: 0.55 }, { opacity: 0, duration: 0.3, ease: "power2.out", immediateRender: false }, 23.125);
+      tl.fromTo("#flash", { opacity: 0.3 }, { opacity: 0, duration: 0.3, ease: "power2.out", immediateRender: false }, 23.125);
       tl.fromTo("#hdr .shine", { xPercent: -160, skewX: -20 }, { xPercent: 640, skewX: -20, duration: 0.9, ease: "power2.inOut", immediateRender: false }, 23.125);
       tl.fromTo("#logo", { scale: 1.08 }, { scale: 1.0, duration: 0.45, ease: "back.out(2)", immediateRender: false }, 23.125);
-      tl.fromTo("#flash", { opacity: 0.55 }, { opacity: 0, duration: 0.3, ease: "power2.out", immediateRender: false }, 30.675);
+      tl.fromTo("#flash", { opacity: 0.3 }, { opacity: 0, duration: 0.3, ease: "power2.out", immediateRender: false }, 30.675);
       tl.fromTo("#hdr .shine", { xPercent: -160, skewX: -20 }, { xPercent: 640, skewX: -20, duration: 0.9, ease: "power2.inOut", immediateRender: false }, 30.675);
       tl.fromTo("#logo", { scale: 1.08 }, { scale: 1.0, duration: 0.45, ease: "back.out(2)", immediateRender: false }, 30.675);
-      tl.fromTo("#flash", { opacity: 0.55 }, { opacity: 0, duration: 0.3, ease: "power2.out", immediateRender: false }, 38.245);
+      tl.fromTo("#flash", { opacity: 0.3 }, { opacity: 0, duration: 0.3, ease: "power2.out", immediateRender: false }, 38.245);
       tl.fromTo("#hdr .shine", { xPercent: -160, skewX: -20 }, { xPercent: 640, skewX: -20, duration: 0.9, ease: "power2.inOut", immediateRender: false }, 38.245);
       tl.fromTo("#logo", { scale: 1.08 }, { scale: 1.0, duration: 0.45, ease: "back.out(2)", immediateRender: false }, 38.245);
-      tl.fromTo("#flash", { opacity: 0.55 }, { opacity: 0, duration: 0.3, ease: "power2.out", immediateRender: false }, 45.805);
+      tl.fromTo("#flash", { opacity: 0.3 }, { opacity: 0, duration: 0.3, ease: "power2.out", immediateRender: false }, 45.805);
       tl.fromTo("#hdr .shine", { xPercent: -160, skewX: -20 }, { xPercent: 640, skewX: -20, duration: 0.9, ease: "power2.inOut", immediateRender: false }, 45.805);
       tl.fromTo("#logo", { scale: 1.08 }, { scale: 1.0, duration: 0.45, ease: "back.out(2)", immediateRender: false }, 45.805);
       tl.fromTo("#streak", { xPercent: -120, skewX: -20, opacity: 0.9 }, { xPercent: 420, skewX: -20, opacity: 0, duration: 0.35, ease: "power1.in", immediateRender: false }, 8.005);
@@ -189,9 +188,8 @@
       tl.fromTo("#streak", { xPercent: -120, skewX: -20, opacity: 0.9 }, { xPercent: 420, skewX: -20, opacity: 0, duration: 0.35, ease: "power1.in", immediateRender: false }, 43.915);
       tl.fromTo("#streak", { xPercent: -120, skewX: -20, opacity: 0.9 }, { xPercent: 420, skewX: -20, opacity: 0, duration: 0.35, ease: "power1.in", immediateRender: false }, 44.885);
       // finale
-      tl.fromTo("#flash", { opacity: 0.9 }, { opacity: 0, duration: 0.45, ease: "power2.out", immediateRender: false }, 53.655);
+      tl.fromTo("#flash", { opacity: 0.4 }, { opacity: 0, duration: 0.4, ease: "power2.out", immediateRender: false }, 53.655);
       tl.from("#fin .f2", { y: 40, opacity: 0, duration: 0.4, ease: "back.out(1.8)" }, 53.655 + 0.25);
-      tl.from("#finshade", { opacity: 0, duration: 0.9, ease: "power1.inOut" }, 52.155);
       window.__timelines["main"] = tl;
     </script>
   </body>

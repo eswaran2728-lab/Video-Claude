@@ -11,7 +11,7 @@ js=[]
 for t in cuts[1:]:
     js.append(f'tl.fromTo("#bw", {{ scale: 1.07 }}, {{ scale: 1.0, duration: 0.32, ease: "power3.out", immediateRender: false }}, {t:.3f});')
 for t in phr[1:]:
-    js.append(f'tl.fromTo("#flash", {{ opacity: 0.55 }}, {{ opacity: 0, duration: 0.3, ease: "power2.out", immediateRender: false }}, {t:.3f});')
+    js.append(f'tl.fromTo("#flash", {{ opacity: 0.3 }}, {{ opacity: 0, duration: 0.3, ease: "power2.out", immediateRender: false }}, {t:.3f});')
     js.append(f'tl.fromTo("#hdr .shine", {{ xPercent: -160, skewX: -20 }}, {{ xPercent: 640, skewX: -20, duration: 0.9, ease: "power2.inOut", immediateRender: false }}, {t:.3f});')
     js.append(f'tl.fromTo("#logo", {{ scale: 1.08 }}, {{ scale: 1.0, duration: 0.45, ease: "back.out(2)", immediateRender: false }}, {t:.3f});')
 for t in fast:
