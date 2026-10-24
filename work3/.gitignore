@@ -17,3 +17,4 @@ work-*/
 *.pb
 __pycache__/
 .FINAL_*
+bgm/
