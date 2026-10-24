@@ -16,3 +16,5 @@ edit/.hyperframes/
 __pycache__/
 !edit/assets/mg/*.webm
 motion/out/
+photos/
+fr3/
