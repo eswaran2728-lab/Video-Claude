@@ -1,0 +1,16 @@
+src/
+seg/
+fr/
+snap*/
+*.mp4
+*.wav
+*.m4a
+*.jpg
+*.png
+*.log
+!edit/assets/logo_mahaguru.png
+edit/node_modules/
+edit/.hyperframes/
+.PREVIEW_*
+.FINAL_*
+__pycache__/

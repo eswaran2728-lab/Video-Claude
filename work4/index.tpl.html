@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Noto Sans Tamil"; src: url("assets/fonts/NotoSansTamil.ttf") format("truetype"); font-weight: 100 900; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0b0605; }
+      body { --gold: #f7c948; --gold2: #fff1b8; --gold3: #b8801a; font-family: "Montserrat", sans-serif; }
+      .clip { position: absolute; inset: 0; }
+      #bg { width: 1080px; height: 1920px; object-fit: cover; z-index: 0; }
+      #topshade { position: absolute; inset: 0; z-index: 1; pointer-events: none;
+        background: linear-gradient(180deg, rgba(8,4,2,0.92) 0%, rgba(8,4,2,0.75) 22%, rgba(8,4,2,0.0) 34%, rgba(8,4,2,0) 70%, rgba(8,4,2,0.75) 100%); }
+
+      /* video band */
+      #bw { position: absolute; left: 0; top: 572px; width: 1080px; height: 810px; z-index: 3; transform-origin: 50% 50%; overflow: hidden;
+        box-shadow: 0 30px 80px rgba(0,0,0,0.6); }
+      #band { width: 1080px; height: 810px; object-fit: cover; }
+      .rule { position: absolute; left: 0; width: 1080px; height: 4px; z-index: 4;
+        background: linear-gradient(90deg, rgba(247,201,72,0) 0%, var(--gold) 20%, var(--gold2) 50%, var(--gold) 80%, rgba(247,201,72,0) 100%); }
+      #flash { position: absolute; left: 0; top: 572px; width: 1080px; height: 810px; z-index: 5; background: #fff; opacity: 0; pointer-events: none; }
+      #streak { position: absolute; left: 0; top: 572px; width: 260px; height: 810px; z-index: 5; opacity: 0; pointer-events: none;
+        background: linear-gradient(90deg, rgba(255,240,190,0) 0%, rgba(255,240,190,0.55) 50%, rgba(255,240,190,0) 100%); }
+
+      /* header: logo + title, whole video */
+      #hdr { z-index: 10; pointer-events: none; }
+      #logo { position: absolute; left: 34px; top: 176px; width: 270px; height: auto; filter: drop-shadow(0 8px 20px rgba(0,0,0,0.6)); transform-origin: 50% 50%; }
+      #title { position: absolute; left: 320px; top: 196px; width: 730px; overflow: hidden; }
+      #title .l1 { font-family: "Playfair Display", serif; font-weight: 900; font-size: 66px; line-height: 1.02; letter-spacing: 2px; }
+      #title .l2 { font-family: "Playfair Display", serif; font-weight: 800; font-size: 50px; line-height: 1.08; letter-spacing: 1px; margin-top: 4px; }
+      #title .l3 { font-family: "Oswald", sans-serif; font-weight: 600; font-size: 44px; letter-spacing: 14px; color: #fff; margin-top: 10px;
+        text-shadow: 0 3px 12px rgba(0,0,0,0.7); }
+      .gold { background: linear-gradient(180deg, var(--gold2) 0%, var(--gold) 48%, var(--gold3) 100%); -webkit-background-clip: text; background-clip: text; color: transparent;
+        filter: drop-shadow(0 3px 8px rgba(0,0,0,0.7)); }
+      #title .bar { width: 420px; height: 3px; margin-top: 12px; background: linear-gradient(90deg, var(--gold), rgba(247,201,72,0)); }
+      .shine { position: absolute; top: 0; left: 0; width: 140px; height: 100%; pointer-events: none; mix-blend-mode: screen;
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,250,220,0.7) 50%, rgba(255,255,255,0) 100%); }
+
+      /* kinetic phrase words (inside the band, lower left) */
+      .kw { z-index: 8; pointer-events: none; }
+      .kw span { position: absolute; left: 44px; top: 1236px; font-family: "Oswald", sans-serif; font-weight: 700; font-size: 104px; letter-spacing: 6px; line-height: 1;
+        color: #fff; -webkit-text-stroke: 2px rgba(0,0,0,0.35); text-shadow: 0 6px 0 rgba(184,128,26,0.95), 0 14px 30px rgba(0,0,0,0.7); font-style: italic; }
+
+      /* finale */
+      #fin { z-index: 12; display: flex; flex-direction: column; align-items: center; justify-content: center; pointer-events: none; }
+      #fin .f1 { margin-top: 160px; font-family: "Oswald", sans-serif; font-weight: 700; font-size: 150px; letter-spacing: 12px; line-height: 1; color: #fff;
+        text-shadow: 0 8px 0 rgba(184,128,26,0.95), 0 20px 50px rgba(0,0,0,0.8); }
+      #fin .f2 { margin-top: 26px; font-family: "Noto Sans Tamil", sans-serif; font-weight: 800; font-size: 76px; }
+      #finshade { z-index: 11; background: radial-gradient(ellipse 70% 40% at 50% 55%, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 100%); pointer-events: none; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="%%TOTAL%%" data-width="1080" data-height="1920">
+      <video id="bg" class="clip" src="assets/bg.mp4" muted playsinline data-start="0" data-duration="%%TOTAL%%" data-track-index="0"></video>
+      <div id="topshade"></div>
+
+      <div id="bw">
+        <video data-color-grading="{&quot;preset&quot;:null,&quot;intensity&quot;:1,&quot;adjust&quot;:{&quot;exposure&quot;:0,&quot;contrast&quot;:0.16,&quot;highlights&quot;:-0.14,&quot;shadows&quot;:0.12,&quot;whites&quot;:0,&quot;blacks&quot;:0,&quot;temperature&quot;:0.04,&quot;tint&quot;:0,&quot;vibrance&quot;:0.22,&quot;saturation&quot;:0},&quot;details&quot;:{&quot;vignette&quot;:0,&quot;vignetteMidpoint&quot;:0.5,&quot;vignetteRoundness&quot;:0,&quot;vignetteFeather&quot;:0.65,&quot;grain&quot;:0,&quot;grainSize&quot;:0.25,&quot;grainRoughness&quot;:0.5},&quot;effects&quot;:{&quot;blur&quot;:0,&quot;pixelate&quot;:0,&quot;chromaBleed&quot;:0,&quot;tapeDamage&quot;:0,&quot;tapeTracking&quot;:0,&quot;tapeNoise&quot;:1,&quot;tapeSpeed&quot;:0.5,&quot;filmArtifacts&quot;:0,&quot;halftone&quot;:0,&quot;halftoneSize&quot;:0,&quot;twoInkPrint&quot;:0,&quot;twoInkPrintSize&quot;:0,&quot;ascii&quot;:0,&quot;asciiSize&quot;:0.06578947368421052,&quot;asciiInvert&quot;:0,&quot;asciiStyle&quot;:0,&quot;asciiColor&quot;:1,&quot;asciiRotation&quot;:0,&quot;dither&quot;:0,&quot;ditherSize&quot;:0,&quot;bloom&quot;:0,&quot;bloomRadius&quot;:8,&quot;monoScreen&quot;:0,&quot;monoScreenSize&quot;:0,&quot;monoScreenAngle&quot;:0,&quot;monoScreenSpread&quot;:0,&quot;monoScreenShape&quot;:0,&quot;monoScreenInvert&quot;:0,&quot;scanlines&quot;:0,&quot;scanlineCount&quot;:0,&quot;scanlineSoftness&quot;:0,&quot;chromaticAberration&quot;:0,&quot;chromaticAngle&quot;:0,&quot;crtCurvature&quot;:0,&quot;digitalGlitch&quot;:0,&quot;digitalGlitchColorSplit&quot;:0,&quot;digitalGlitchLineTear&quot;:0,&quot;digitalGlitchPixelate&quot;:0,&quot;digitalGlitchBlockAmount&quot;:0,&quot;digitalGlitchBlockDisplacement&quot;:0,&quot;digitalGlitchBlockOpacity&quot;:0,&quot;digitalGlitchSpeed&quot;:0,&quot;engraving&quot;:0,&quot;engravingSpacing&quot;:0.4117647058823529,&quot;engravingMinThickness&quot;:0.2,&quot;engravingMaxThickness&quot;:0.4571428571428572,&quot;engravingAngle&quot;:0.25,&quot;engravingContrast&quot;:0.4666666666666667,&quot;engravingSharpness&quot;:0.59,&quot;engravingWave&quot;:0.2,&quot;engravingWaveFrequency&quot;:0.2222222222222222,&quot;crosshatch&quot;:0,&quot;crosshatchSpacing&quot;:0.28,&quot;crosshatchThickness&quot;:0.25,&quot;crosshatchAngle&quot;:0.25,&quot;crosshatchContrast&quot;:0.3333333333333333,&quot;crosshatchEdges&quot;:0.5,&quot;crosshatchLineWeight&quot;:0,&quot;crosshatchWave&quot;:0.33,&quot;crosshatchWaveFrequency&quot;:0.2222222222222222,&quot;kuwahara&quot;:0,&quot;kuwaharaRadius&quot;:0.14285714285714285,&quot;kuwaharaSharpness&quot;:0.3125,&quot;kuwaharaSaturation&quot;:0.5},&quot;lut&quot;:null,&quot;colorSpace&quot;:&quot;rec709&quot;}" id="band" class="clip" src="assets/band.mp4" muted playsinline data-start="0" data-duration="%%TOTAL%%" data-track-index="1"></video>
+      </div>
+      <div class="rule" style="top:568px"></div>
+      <div class="rule" style="top:1382px"></div>
+      <div id="flash"></div>
+      <div id="streak"></div>
+
+      <!-- HEADER: logo + title, start to end -->
+      <div id="hdr" class="clip" data-start="0" data-duration="%%TOTAL%%" data-track-index="6">
+        <img id="logo" src="assets/logo_mahaguru.png" alt="Mahaguru Dr. Sri S. Arumugam" />
+        <div id="title">
+          <div class="l1 gold">MAHAGURU</div>
+          <div class="l2 gold">SRI. S. ARUMUGAM</div>
+          <div class="l3">STUDENTS</div>
+          <div class="bar"></div>
+          <i class="shine"></i>
+        </div>
+      </div>
+
+      <!-- KINETIC WORDS on each musical phrase -->
+%%WORDS%%
+
+      <!-- FINALE on the last hit -->
+      <div id="finshade" class="clip" data-start="%%FINAL%%" data-duration="%%FINALD%%" data-track-index="7"></div>
+      <div id="fin" class="clip" data-start="%%FINAL%%" data-duration="%%FINALD%%" data-track-index="7">
+        <div class="f1">SILAMBAM</div>
+        <div class="f2 gold">கலையைக் காப்போம்</div>
+      </div>
+
+      <audio id="music" data-timeline-role="music" class="clip" src="assets/song_ext.wav" data-start="0" data-duration="%%TOTAL%%"></audio>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.set("#bw", { scale: 1.0 }, 0);
+      tl.set("#hdr .shine", { xPercent: -160, skewX: -20 }, 0);
+      tl.set("#streak", { xPercent: -120, skewX: -20, opacity: 0 }, 0);
+      // header entrance (frame 0 already shows the logo and title for the thumbnail)
+      tl.from("#title .l3", { x: 60, opacity: 0.0, duration: 0.6, ease: "power3.out" }, 0.1);
+      tl.from("#title .bar", { scaleX: 0, transformOrigin: "0% 50%", duration: 0.6, ease: "power3.out" }, 0.2);
+      %%JS%%
+      // finale
+      tl.fromTo("#flash", { opacity: 0.9 }, { opacity: 0, duration: 0.45, ease: "power2.out", immediateRender: false }, %%FINAL%%);
+      tl.from("#fin .f1", { scale: 1.8, opacity: 0, duration: 0.3, ease: "power4.out" }, %%FINAL%%);
+      tl.from("#fin .f2", { y: 40, opacity: 0, duration: 0.4, ease: "back.out(1.8)" }, %%FINAL%% + 0.25);
+      tl.from("#finshade", { opacity: 0, duration: 0.3 }, %%FINAL%%);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
