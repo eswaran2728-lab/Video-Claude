@@ -13,3 +13,6 @@ edit/node_modules/
 edit/.hyperframes/
 .PREVIEW_*
 !edit/assets/logo.png
+comic/st_*
+comic/guest*.jpg
+comic/intro_built.html

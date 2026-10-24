@@ -1,0 +1,148 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Comic Book motion template</title>
+<style>html,body{margin:0;background:#111;height:100%}body{display:flex;align-items:center;justify-content:center}
+canvas{display:block;max-width:100vw;max-height:100vh;width:auto;height:auto}body.render canvas{max-width:none;max-height:none}</style>
+</head><body><canvas id="c"></canvas>
+<script>
+if (new URLSearchParams(location.search).has('render')) document.body.classList.add('render');
+// ===== STYLE DEFAULTS (edit or override with URL params) =====
+const DEFAULT_DUR = 6, DEFAULT_TEXT = 'WHOOSH!', DEFAULT_SUB = 'CLAUDE CODE!';
+const DEFAULT_COLORS = { bg: '#fff7e0', c1: '#ffd400', c2: '#ff3b1f', c3: '#2fa8ff' };
+// ---- shared harness (identical in every template) ----
+const P = new URLSearchParams(location.search);
+const W = +(P.get('w') || 1080), H = +(P.get('h') || 1920);
+const DUR = +(P.get('dur') || DEFAULT_DUR);
+const ALPHA = P.get('alpha') === '1';
+const TEXT = P.get('text') ?? DEFAULT_TEXT;
+const SUB = P.get('sub') ?? DEFAULT_SUB;
+const COL = Object.assign({}, DEFAULT_COLORS);
+for (const k in COL) if (P.get(k)) COL[k] = '#' + P.get(k).replace('#', '');
+const cv = document.getElementById('c'); cv.width = W; cv.height = H;
+const ctx = cv.getContext('2d');
+const U = Math.min(W, H), CX = W / 2, CY = H / 2;
+const SANS = '"Inter","Helvetica Neue",Arial,sans-serif';
+const MONO = '"JetBrains Mono","DejaVu Sans Mono",Menlo,Consolas,monospace';
+const SERIF = '"Playfair Display","Didot","Bodoni 72",Georgia,serif';
+let _s = 1;
+const reseed = s => { _s = (s % 2147483646) + 1; };
+const rnd = () => (_s = (_s * 16807) % 2147483647, (_s - 1) / 2147483646);
+const clamp = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x));
+const lerp = (a, b, t) => a + (b - a) * t;
+const prog = (t, a, b) => clamp((t - a) / (b - a));
+const TAU = Math.PI * 2;
+const ease = {
+  out: t => 1 - Math.pow(1 - t, 3),
+  in: t => t * t * t,
+  inOut: t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2,
+  back: t => { const c = 1.9; return 1 + (c + 1) * Math.pow(t - 1, 3) + c * Math.pow(t - 1, 2); },
+  elastic: t => t === 0 || t === 1 ? t : Math.pow(2, -10 * t) * Math.sin((t * 10 - .75) * TAU / 3) + 1,
+};
+function bg(c) { ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over'; ctx.filter = 'none'; ctx.shadowBlur = 0; if (ALPHA) ctx.clearRect(0, 0, W, H); else { ctx.fillStyle = c; ctx.fillRect(0, 0, W, H); } }
+function font(wt, size, fam) { ctx.font = `${wt} ${Math.round(size)}px ${fam || SANS}`; }
+function rrect(x, y, w, h, r) { ctx.beginPath(); ctx.roundRect ? ctx.roundRect(x, y, w, h, r) : ctx.rect(x, y, w, h); }
+function off(w, h) { const c = document.createElement('canvas'); c.width = Math.max(1, w | 0); c.height = Math.max(1, h | 0); return c; }
+function hexA(hex, a) { const n = parseInt(hex.slice(1), 16); return `rgba(${n >> 16 & 255},${n >> 8 & 255},${n & 255},${a})`; }
+function hexRGB(hex) { const n = parseInt(hex.slice(1), 16); return [n >> 16 & 255, n >> 8 & 255, n & 255]; }
+// fit a line of text to a max width
+function fitFont(txt, wt, maxSize, maxW, fam) { let s = maxSize; font(wt, s, fam); const m = ctx.measureText(txt).width; if (m > maxW) s *= maxW / m; font(wt, s, fam); return s; }
+// ---- end harness head ----
+
+// ===== STYLE =====
+// Comic-book intro (motion-comic-book skill): ink header band for the persistent brand, red SFX panel with a burst,
+// blue panel with the guest's event photo and narration caption boxes (no invented speech bubbles).
+const INK = '#141414';
+const FACTS = ['FORMER MAYOR OF CHENNAI (2002–2006)', 'KARATE BLACK BELT', 'FORMER PRESIDENT, KARATE ASSOCIATION OF INDIA'];
+const NAME = 'KARATE R. TIAGARAJAN';
+const COMIC = '"Comic Neue","Comic Sans MS","Arial Black",' + SANS, IMPACT = '"Impact","Anton","Arial Black",' + SANS;
+const photo = new Image(); let ready = false; photo.onload = () => { ready = true; }; photo.src = 'guest.jpg';
+function dots(x, y, w, h, col, step, maxr, ang) {
+  ctx.save(); ctx.beginPath(); ctx.rect(x, y, w, h); ctx.clip(); ctx.fillStyle = col;
+  for (let yy = y; yy < y + h + step; yy += step) for (let xx = x + ((yy / step) % 2 ? step / 2 : 0); xx < x + w + step; xx += step) {
+    const k = clamp(1 - Math.hypot(xx - (x + w * ang[0]), yy - (y + h * ang[1])) / Math.hypot(w, h));
+    ctx.beginPath(); ctx.arc(xx, yy, maxr * k, 0, TAU); ctx.fill();
+  }
+  ctx.restore();
+}
+function panel(x, y, w, h, fill) { ctx.fillStyle = fill; ctx.fillRect(x, y, w, h); ctx.lineWidth = U * .012; ctx.strokeStyle = INK; ctx.strokeRect(x, y, w, h); }
+function burst(x, y, r, n, rot) { ctx.beginPath(); for (let i = 0; i < n * 2; i++) { const a = rot + i / (n * 2) * TAU, rr = i % 2 ? r * .62 : r * (1 + ((i * 37) % 7) / 30); ctx.lineTo(x + Math.cos(a) * rr, y + Math.sin(a) * rr * .8); } ctx.closePath(); }
+function capbox(x, y, w, h, txt, fill, size) {
+  ctx.fillStyle = INK; ctx.fillRect(x + U * .012, y + U * .012, w, h);
+  ctx.fillStyle = fill; ctx.fillRect(x, y, w, h); ctx.lineWidth = U * .008; ctx.strokeStyle = INK; ctx.strokeRect(x, y, w, h);
+  ctx.fillStyle = INK; ctx.textAlign = 'left'; ctx.textBaseline = 'middle'; fitFont(txt, 900, size, w * .9, COMIC); ctx.fillText(txt, x + w * .05, y + h / 2);
+}
+function draw(t) {
+  bg(COL.bg);
+  // ink header band behind the persistent logo + name (HyperFrames layer above)
+  ctx.fillStyle = INK; ctx.fillRect(0, 0, W, 372); dots(0, 0, W, 372, 'rgba(255,212,0,.10)', U * .024, U * .008, [.0, .0]);
+  ctx.fillStyle = COL.c1; ctx.fillRect(0, 366, W, 8);
+  const m = U * .045, pw = W - m * 2, top1 = 410, ph1 = 470, top2 = top1 + ph1 + 36, ph2 = 1820 - top2;
+  const shake = t > .35 && t < .6 ? (Math.sin(t * 120) * U * .01) : 0;
+  // panel 1: SFX burst
+  const p1 = ease.back(prog(t, 0, .35));
+  ctx.save(); ctx.translate(shake, 0);
+  if (p1 > 0) {
+    ctx.save(); ctx.translate(CX, top1 + ph1 / 2); ctx.scale(p1, p1); ctx.translate(-CX, -(top1 + ph1 / 2));
+    panel(m, top1, pw, ph1, COL.c2); dots(m, top1, pw, ph1, 'rgba(255,215,0,.55)', U * .03, U * .014, [.5, .5]);
+    ctx.save(); ctx.beginPath(); ctx.rect(m, top1, pw, ph1); ctx.clip(); ctx.strokeStyle = 'rgba(255,255,255,.7)'; ctx.lineWidth = U * .006; reseed(5);
+    for (let k = 0; k < 40; k++) { const a = rnd() * TAU, r0 = U * (.22 + rnd() * .1), r1 = U; const cx = CX, cy = top1 + ph1 / 2; ctx.beginPath(); ctx.moveTo(cx + Math.cos(a) * r0, cy + Math.sin(a) * r0); ctx.lineTo(cx + Math.cos(a) * r1, cy + Math.sin(a) * r1); ctx.stroke(); }
+    ctx.restore();
+    const wob = Math.sin(t * 9) * .03;
+    burst(CX, top1 + ph1 / 2, Math.min(pw * .42, ph1 * .5), 14, wob); ctx.fillStyle = COL.c1; ctx.fill(); ctx.lineWidth = U * .01; ctx.strokeStyle = INK; ctx.stroke();
+    ctx.save(); ctx.translate(CX, top1 + ph1 / 2); ctx.rotate(-.06 + wob); const s = fitFont(TEXT, 900, U * .14, pw * .66, IMPACT);
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.lineJoin = 'round';
+    ctx.lineWidth = s * .16; ctx.strokeStyle = INK; ctx.strokeText(TEXT, s * .05, s * .06); ctx.fillStyle = INK; ctx.fillText(TEXT, s * .05, s * .06);
+    ctx.strokeText(TEXT, 0, 0); ctx.fillStyle = COL.c2; ctx.fillText(TEXT, 0, 0); ctx.restore();
+    ctx.restore();
+  }
+  // panel 2: guest photo + narration captions
+  const p2 = ease.out(prog(t, .9, 1.25));
+  if (p2 > 0) {
+    ctx.save(); ctx.translate((1 - p2) * W, 0);
+    panel(m, top2, pw, ph2, COL.c3); dots(m, top2, pw, ph2, 'rgba(255,255,255,.35)', U * .026, U * .01, [0, 1]);
+    // name caption (top of panel)
+    const pn = ease.back(prog(t, 1.35, 1.65));
+    if (pn > 0) { ctx.save(); ctx.translate(m + U * .03, top2 + U * .03); ctx.scale(pn, pn); capbox(0, 0, pw - U * .06, 96, NAME, COL.c1, 64); ctx.restore(); }
+    // photo, ink-framed, slight tilt
+    const pp = ease.back(prog(t, 1.25, 1.6));
+    if (pp > 0 && ready) {
+      const ph = 640, pwd = ph * photo.width / photo.height, px = m + U * .05, py = top2 + 150;
+      ctx.save(); ctx.translate(px + pwd / 2, py + ph / 2); ctx.rotate(-.03); ctx.scale(pp, pp);
+      ctx.fillStyle = INK; ctx.fillRect(-pwd / 2 + 12, -ph / 2 + 12, pwd + 16, ph + 16);
+      ctx.fillStyle = '#fff'; ctx.fillRect(-pwd / 2 - 8, -ph / 2 - 8, pwd + 16, ph + 16);
+      ctx.drawImage(photo, -pwd / 2, -ph / 2, pwd, ph);
+      ctx.lineWidth = U * .01; ctx.strokeStyle = INK; ctx.strokeRect(-pwd / 2 - 8, -ph / 2 - 8, pwd + 16, ph + 16);
+      ctx.restore();
+    }
+    // facts as narration boxes, one by one, stacked on the right
+    const fx = m + U * .05 + 640 * ((photo.width / photo.height) || 0.58) + 46, fw = W - m - U * .03 - fx;
+    let yAcc = top2 + 168;
+    FACTS.forEach((f, i) => {
+      const pf = ease.back(prog(t, 2.0 + i * .7, 2.3 + i * .7)); if (pf <= 0) return;
+      const words = f.split(' '), lines = []; let cur = '';
+      font(900, 42, COMIC);
+      for (const w of words) { const tryl = cur ? cur + ' ' + w : w; if (ctx.measureText(tryl).width > fw * .86 && cur) { lines.push(cur); cur = w; } else cur = tryl; }
+      lines.push(cur);
+      const bh = 30 + lines.length * 50, by = yAcc; yAcc += bh + 34;
+      ctx.save(); ctx.translate(fx + fw / 2, by + bh / 2); ctx.scale(pf, pf); ctx.translate(-fw / 2, -bh / 2);
+      ctx.fillStyle = INK; ctx.fillRect(10, 10, fw, bh); ctx.fillStyle = i % 2 ? '#ffffff' : COL.bg; ctx.fillRect(0, 0, fw, bh);
+      ctx.lineWidth = U * .007; ctx.strokeStyle = INK; ctx.strokeRect(0, 0, fw, bh);
+      ctx.fillStyle = INK; ctx.textAlign = 'left'; ctx.textBaseline = 'middle'; font(900, 42, COMIC);
+      lines.forEach((l, j) => ctx.fillText(l, 18, 15 + 25 + j * 50));
+      ctx.restore();
+    });
+    ctx.restore();
+  }
+  ctx.restore();
+}
+// ---- shared harness foot ----
+window.__dur = DUR;
+photo.decode().then(() => { ready = true; window.renderFrame = t => { draw(t); return true; }; });
+window.__dur = DUR;
+if (!P.has('render')) {
+  const t0 = performance.now();
+  const loop = () => { draw(((performance.now() - t0) / 1000) % DUR); requestAnimationFrame(loop); };
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(loop); else loop();
+}
+</script>
+</body></html>
