@@ -1,0 +1,15 @@
+orig/
+work/
+music/
+snap*/
+deco/still*
+*.jpg
+*.png
+*.mp4
+*.wav
+*.webm
+*.log
+edit/node_modules/
+edit/.hyperframes/
+.PREVIEW_*
+!edit/assets/logo.png

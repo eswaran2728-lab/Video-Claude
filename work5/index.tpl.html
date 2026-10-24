@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0d0a07; }
+      body { --ivory: #f6efe0; --gold: #d9b25f; --gold2: #f6e3a8; --gold3: #8a6a2a; font-family: "Montserrat", sans-serif; }
+      .clip { position: absolute; inset: 0; }
+
+      /* photo slides */
+      .slide { overflow: hidden; }
+      .slide .pz { position: absolute; inset: 0; transform-origin: 50% 40%; }
+      .slide .full { position: absolute; inset: 0; width: 1080px; height: 1920px; object-fit: cover; }
+      .slide .bgimg { position: absolute; inset: 0; width: 1080px; height: 1920px; object-fit: cover; }
+      .slide .frame { position: absolute; left: 50px; top: 560px; width: 980px; height: 551px; padding: 10px;
+        background: linear-gradient(135deg, var(--gold2), var(--gold) 45%, var(--gold3));
+        box-shadow: 0 30px 80px rgba(0,0,0,0.55); }
+      .slide .frame img { width: 960px; height: 531px; object-fit: cover; display: block; }
+
+      /* readability scrims (static, outside the photos) */
+      #topscrim { position: absolute; inset: 0; z-index: 20; pointer-events: none;
+        background: linear-gradient(180deg, rgba(10,6,3,0.72) 0%, rgba(10,6,3,0.35) 17%, rgba(10,6,3,0) 24%); }
+      #botscrim { position: absolute; inset: 0; z-index: 20; pointer-events: none;
+        background: linear-gradient(0deg, rgba(10,6,3,0.82) 0%, rgba(10,6,3,0.55) 26%, rgba(10,6,3,0) 42%); }
+
+      /* persistent branding: logo + exact name, top-left, inside the TikTok-safe band */
+      #brand { position: absolute; left: 48px; top: 178px; z-index: 30; display: flex; align-items: center; gap: 20px; pointer-events: none; }
+      #brand img { width: 128px; height: auto; filter: drop-shadow(0 6px 16px rgba(0,0,0,0.6)); }
+      #brand .nm { font-family: "Playfair Display", serif; font-weight: 800; font-size: 31px; line-height: 1.12; letter-spacing: 1.5px; color: var(--ivory);
+        text-shadow: 0 2px 10px rgba(0,0,0,0.75); }
+      #brand .nm b { display: block; font-weight: 800; color: var(--gold2); }
+
+      /* titles (per-word-crossfade technique from the registry) */
+      .ttl { z-index: 25; pointer-events: none; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 590px; text-align: center; }
+      .ttl .l1, .ttl .l2, .ttl .l3 { display: flex; flex-wrap: wrap; justify-content: center; gap: 0 16px; max-width: 960px; }
+      .ttl span { display: inline-block; }
+      .ttl.top { justify-content: flex-start; padding-bottom: 0; padding-top: 356px; }
+      .ttl.top::before { content: ""; position: absolute; left: 0; right: 0; top: 330px; height: 230px; z-index: -1;
+        background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(10,6,3,0.62) 0%, rgba(10,6,3,0.35) 55%, rgba(10,6,3,0) 100%); }
+      .ttl.top .l1 { font-size: 50px; }
+      .ttl.top .l2 { font-size: 36px; margin-top: 10px; }
+      .ttl .l1 { font-family: "Playfair Display", serif; font-weight: 800; font-size: 56px; line-height: 1.12; color: var(--ivory); text-shadow: 0 4px 18px rgba(0,0,0,0.8); }
+      .ttl .l2 { margin-top: 18px; font-family: "Playfair Display", serif; font-style: italic; font-weight: 600; font-size: 44px; line-height: 1.2; color: var(--gold2); text-shadow: 0 3px 14px rgba(0,0,0,0.8); }
+      .ttl .l3 { margin-top: 20px; font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 30px; letter-spacing: 8px; color: var(--ivory); text-shadow: 0 3px 12px rgba(0,0,0,0.8); }
+      .ttl .rule { width: 0; height: 2px; margin: 22px auto 0; background: linear-gradient(90deg, rgba(217,178,95,0), var(--gold2), rgba(217,178,95,0)); }
+
+      /* closing art-deco ornament (motion-art-deco skill, alpha overlay) */
+      #deco { inset: auto; left: 0; top: 1150px; width: 1080px; height: 420px; z-index: 22; pointer-events: none; opacity: 0.75; }
+
+      /* soft light leak (organic-light-leak-overlay registry block), used twice */
+      .leak { z-index: 24; pointer-events: none; overflow: hidden; mix-blend-mode: screen; }
+      .leak i { position: absolute; inset: -20%; }
+      .leak .a { background: radial-gradient(ellipse 52% 110% at 10% 58%, rgb(255 241 197 / 80%), transparent 45%), radial-gradient(ellipse 72% 120% at 24% 54%, rgb(255 140 70 / 60%), transparent 66%); }
+      .leak .g { background: linear-gradient(104deg, transparent 24%, rgb(255 160 80 / 22%) 40%, rgb(255 247 205 / 55%) 51%, rgb(255 130 60 / 18%) 62%, transparent 78%); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="%%TOTAL%%" data-width="1080" data-height="1920">
+%%SLIDES%%
+      <div id="topscrim"></div>
+      <div id="botscrim"></div>
+
+%%LEAKS%%
+
+      <video id="deco" class="clip" src="assets/deco.webm" muted playsinline data-start="%%DECOS%%" data-duration="%%DECOD%%" data-track-index="6" style="inset:auto;left:0;top:1150px;width:1080px;height:420px;opacity:0.75"></video>
+
+%%TITLES%%
+
+      <!-- persistent branding, start to end -->
+      <div id="brand" class="clip" data-start="0" data-duration="%%TOTAL%%" data-track-index="8" style="inset:auto;left:48px;top:178px;width:auto;height:auto">
+        <img src="assets/logo.png" alt="Mahaguru Dr. Sri S. Arumugam" />
+        <div class="nm">MAHAGURU<b>SRI S ARUMUGAM</b>STUDENTS</div>
+      </div>
+
+      <!-- MUSIC: TEMPORARY instrumental (AI-generated placeholder). Replace src with the licensed "Mustafa Mustafa" file. -->
+      <audio id="music" data-timeline-role="music" class="clip" src="assets/music_TEMP.wav" data-start="0" data-duration="%%TOTAL%%"></audio>
+%%SFX%%
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+%%JS%%
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
