@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "MontBlack"; src: url("assets/fonts/Montserrat-Black.ttf") format("truetype"); font-weight: 900; }
+      @font-face { font-family: "MontXB"; src: url("assets/fonts/Montserrat-ExtraBold.ttf") format("truetype"); font-weight: 800; }
+      @font-face { font-family: "MontB"; src: url("assets/fonts/Montserrat-Bold.ttf") format("truetype"); font-weight: 700; }
+      @font-face { font-family: "TamilSans"; src: url("assets/fonts/NotoSansTamil.ttf") format("truetype"); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0c0907; }
+      body { --ivory: #f7f0e1; --gold: #e2b54a; --gold2: #fbe7a4; --gold3: #9a6d1e; --ink: rgba(14,10,7,0.82); --rose: #e9b9a0; }
+      .clip { position: absolute; inset: 0; }
+      .vid { width: 1080px; height: 1920px; object-fit: cover; }
+      .still { overflow: hidden; }
+      .still .pz { position: absolute; inset: 0; transform-origin: 50% 45%; }
+      .still img { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+      .still .fill { position: absolute; inset: 0; width: 1080px; height: 1920px; object-fit: cover; }
+      #pzE { transform-origin: 0 0; }
+      #pzG { transform-origin: 50% 0; }
+
+      /* readability scrims */
+      #botScrim { pointer-events: none; z-index: 4;
+        background: linear-gradient(0deg, rgba(10,7,4,0.0) 0%, rgba(10,7,4,0.0) 30%, rgba(10,7,4,0.62) 36%, rgba(10,7,4,0.35) 46%, rgba(10,7,4,0) 56%); }
+      #topScrim { pointer-events: none; z-index: 4;
+        background: radial-gradient(ellipse 340px 260px at 115px 245px, rgba(10,7,4,0.42) 0%, rgba(10,7,4,0.18) 55%, rgba(10,7,4,0) 100%); }
+
+      /* persistent Eshan Creations logo, top-left */
+      #brand { z-index: 30; pointer-events: none; }
+      #brand img { position: absolute; left: 40px; top: 158px; width: 150px; height: auto; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.65)); }
+
+      .gold { background: linear-gradient(180deg, var(--gold2) 0%, var(--gold) 52%, var(--gold3) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+      /* hook */
+      #hook { z-index: 10; pointer-events: none; }
+      #hookTitle { position: absolute; left: 0; width: 1080px; top: 1004px; text-align: center; transform-origin: 50% 70%; }
+      #hookTitle .t1 { font-family: "MontBlack"; font-size: 100px; line-height: 0.98; letter-spacing: 2px; filter: drop-shadow(0 6px 18px rgba(0,0,0,0.85)); }
+      #hookTitle .ta { margin-top: 10px; font-family: "TamilSans"; font-size: 44px; line-height: 1.3; color: var(--ivory); text-shadow: 0 3px 12px rgba(0,0,0,0.9); }
+      #stamp { position: absolute; left: 340px; top: 276px; width: 400px; height: 86px; border: 5px solid var(--gold2); border-radius: 14px;
+        background: rgba(150,22,22,0.88); color: var(--ivory); font-family: "MontBlack"; font-size: 46px; letter-spacing: 3px;
+        display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(0,0,0,0.55); }
+
+      /* reveal chip */
+      #chipB { position: absolute; left: 250px; top: 300px; width: 580px; white-space: nowrap; height: 84px; z-index: 10; border-radius: 42px;
+        background: var(--ink); border: 3px solid var(--gold); display: flex; align-items: center; justify-content: center; gap: 18px;
+        font-family: "MontXB"; font-size: 40px; color: var(--ivory); letter-spacing: 1px; }
+      #chipB b { color: var(--gold2); font-family: "MontBlack"; font-weight: 900; }
+
+      /* tracked callouts */
+      .callout { z-index: 12; pointer-events: none; }
+      .callout .lead { position: absolute; left: 0; top: 0; }
+      .callout line { stroke: var(--gold2); stroke-width: 4; stroke-dasharray: 600; stroke-linecap: round; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8)); }
+      .callout .dot { position: absolute; left: 0; top: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--gold2);
+        box-shadow: 0 0 0 6px rgba(14,10,7,0.65), 0 0 18px 6px rgba(251,231,164,0.55); }
+      .callout .lab { position: absolute; padding: 14px 22px; border-radius: 16px; background: var(--ink); border-left: 6px solid var(--gold);
+        font-family: "MontXB"; font-size: 36px; line-height: 1.12; color: var(--ivory); letter-spacing: 0.5px; max-width: 300px; }
+
+      /* eeti */
+      #eeti { z-index: 10; pointer-events: none; }
+      #ring { position: absolute; left: 40px; top: 770px; width: 260px; height: 260px; border-radius: 50%; border: 7px solid var(--gold2);
+        box-shadow: 0 0 0 5px rgba(14,10,7,0.45), 0 0 40px 8px rgba(251,231,164,0.45), inset 0 0 30px rgba(251,231,164,0.25); }
+      #eetiTxt { position: absolute; left: 0; width: 1080px; top: 1066px; text-align: center; }
+      #eetiL1 { font-family: "MontBlack"; font-size: 74px; line-height: 1.05; color: var(--ivory); text-shadow: 0 5px 18px rgba(0,0,0,0.9); }
+      #eetiL1 span { color: var(--gold2); }
+      #eetiL2 { display: inline-block; margin-top: 16px; padding: 10px 26px; border-radius: 30px; background: var(--ink); border: 2px solid var(--gold);
+        font-family: "MontB"; font-size: 38px; color: var(--ivory); }
+
+      /* price card (stays to the end) */
+      #price { position: absolute; left: 230px; top: 994px; width: 620px; height: 236px; z-index: 14; border-radius: 26px; overflow: hidden;
+        background: linear-gradient(180deg, rgba(24,17,11,0.92), rgba(12,8,5,0.92)); border: 3px solid var(--gold);
+        box-shadow: 0 18px 50px rgba(0,0,0,0.6); text-align: center; }
+      #price .p1 { margin-top: 20px; white-space: nowrap; font-family: "MontXB"; font-size: 34px; letter-spacing: 4px; color: var(--ivory); }
+      #price .p1 b { color: var(--gold2); font-weight: 800; }
+      #price .p2 { font-family: "MontBlack"; font-size: 120px; line-height: 1.06; }
+      #sheen { position: absolute; top: -40px; left: 0; width: 160px; height: 300px; transform: rotate(18deg);
+        background: linear-gradient(90deg, rgba(255,247,215,0), rgba(255,247,215,0.42), rgba(255,247,215,0)); }
+
+      /* end card */
+      #endDim { z-index: 6; pointer-events: none; background: linear-gradient(0deg, rgba(10,7,4,0.75) 0%, rgba(10,7,4,0.55) 40%, rgba(10,7,4,0.0) 62%); }
+      #endTxt { z-index: 15; pointer-events: none; }
+      #endT1 { position: absolute; left: 0; width: 1080px; top: 870px; text-align: center; font-family: "TamilSans"; font-size: 46px; color: var(--ivory); text-shadow: 0 3px 12px rgba(0,0,0,0.9); }
+      #endT2 { position: absolute; left: 0; width: 1080px; top: 1190px; text-align: center; font-family: "MontB"; font-size: 30px; color: var(--ivory); opacity: 0.92; }
+      #cta { position: absolute; left: 360px; top: 1150px; width: 360px; height: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="16.6" data-width="1080" data-height="1920">
+      <!-- A: hook: push-in to the face -->
+      <video id="mA" class="clip vid src" src="assets/segA.mp4" muted playsinline data-start="0.0" data-duration="1.31" data-track-index="1" data-color-grading="{&quot;preset&quot;:null,&quot;intensity&quot;:1,&quot;adjust&quot;:{&quot;exposure&quot;:0.02,&quot;contrast&quot;:0.1,&quot;highlights&quot;:-0.12,&quot;shadows&quot;:0.04,&quot;whites&quot;:0,&quot;blacks&quot;:-0.03,&quot;temperature&quot;:0.04,&quot;tint&quot;:0,&quot;vibrance&quot;:0.18,&quot;saturation&quot;:0},&quot;details&quot;:{&quot;vignette&quot;:0.15,&quot;vignetteMidpoint&quot;:0.5,&quot;vignetteRoundness&quot;:0,&quot;vignetteFeather&quot;:0.65,&quot;grain&quot;:0,&quot;grainSize&quot;:0.25,&quot;grainRoughness&quot;:0.5},&quot;effects&quot;:{&quot;blur&quot;:0,&quot;pixelate&quot;:0,&quot;chromaBleed&quot;:0,&quot;tapeDamage&quot;:0,&quot;tapeTracking&quot;:0,&quot;tapeNoise&quot;:1,&quot;tapeSpeed&quot;:0.5,&quot;filmArtifacts&quot;:0,&quot;halftone&quot;:0,&quot;halftoneSize&quot;:0,&quot;twoInkPrint&quot;:0,&quot;twoInkPrintSize&quot;:0,&quot;ascii&quot;:0,&quot;asciiSize&quot;:0.06578947368421052,&quot;asciiInvert&quot;:0,&quot;asciiStyle&quot;:0,&quot;asciiColor&quot;:1,&quot;asciiRotation&quot;:0,&quot;dither&quot;:0,&quot;ditherSize&quot;:0,&quot;bloom&quot;:0,&quot;bloomRadius&quot;:8,&quot;monoScreen&quot;:0,&quot;monoScreenSize&quot;:0,&quot;monoScreenAngle&quot;:0,&quot;monoScreenSpread&quot;:0,&quot;monoScreenShape&quot;:0,&quot;monoScreenInvert&quot;:0,&quot;scanlines&quot;:0,&quot;scanlineCount&quot;:0,&quot;scanlineSoftness&quot;:0,&quot;chromaticAberration&quot;:0,&quot;chromaticAngle&quot;:0,&quot;crtCurvature&quot;:0,&quot;digitalGlitch&quot;:0,&quot;digitalGlitchColorSplit&quot;:0,&quot;digitalGlitchLineTear&quot;:0,&quot;digitalGlitchPixelate&quot;:0,&quot;digitalGlitchBlockAmount&quot;:0,&quot;digitalGlitchBlockDisplacement&quot;:0,&quot;digitalGlitchBlockOpacity&quot;:0,&quot;digitalGlitchSpeed&quot;:0,&quot;engraving&quot;:0,&quot;engravingSpacing&quot;:0.4117647058823529,&quot;engravingMinThickness&quot;:0.2,&quot;engravingMaxThickness&quot;:0.4571428571428572,&quot;engravingAngle&quot;:0.25,&quot;engravingContrast&quot;:0.4666666666666667,&quot;engravingSharpness&quot;:0.59,&quot;engravingWave&quot;:0.2,&quot;engravingWaveFrequency&quot;:0.2222222222222222,&quot;crosshatch&quot;:0,&quot;crosshatchSpacing&quot;:0.28,&quot;crosshatchThickness&quot;:0.25,&quot;crosshatchAngle&quot;:0.25,&quot;crosshatchContrast&quot;:0.3333333333333333,&quot;crosshatchEdges&quot;:0.5,&quot;crosshatchLineWeight&quot;:0,&quot;crosshatchWave&quot;:0.33,&quot;crosshatchWaveFrequency&quot;:0.2222222222222222,&quot;kuwahara&quot;:0,&quot;kuwaharaRadius&quot;:0.14285714285714285,&quot;kuwaharaSharpness&quot;:0.3125,&quot;kuwaharaSaturation&quot;:0.5},&quot;lut&quot;:null,&quot;colorSpace&quot;:&quot;rec709&quot;}"></video>
+      <!-- A2: hook freeze on the face, READY STOCK stamp on the beat -->
+      <div id="sA2" class="clip still" data-start="1.31" data-duration="0.94" data-track-index="1"><div class="pz" id="pzA2" data-layout-allow-overflow><img class="src" src="assets/frzA.jpg" alt="" data-color-grading="{&quot;preset&quot;:null,&quot;intensity&quot;:1,&quot;adjust&quot;:{&quot;exposure&quot;:0.02,&quot;contrast&quot;:0.1,&quot;highlights&quot;:-0.12,&quot;shadows&quot;:0.04,&quot;whites&quot;:0,&quot;blacks&quot;:-0.03,&quot;temperature&quot;:0.04,&quot;tint&quot;:0,&quot;vibrance&quot;:0.18,&quot;saturation&quot;:0},&quot;details&quot;:{&quot;vignette&quot;:0.15,&quot;vignetteMidpoint&quot;:0.5,&quot;vignetteRoundness&quot;:0,&quot;vignetteFeather&quot;:0.65,&quot;grain&quot;:0,&quot;grainSize&quot;:0.25,&quot;grainRoughness&quot;:0.5},&quot;effects&quot;:{&quot;blur&quot;:0,&quot;pixelate&quot;:0,&quot;chromaBleed&quot;:0,&quot;tapeDamage&quot;:0,&quot;tapeTracking&quot;:0,&quot;tapeNoise&quot;:1,&quot;tapeSpeed&quot;:0.5,&quot;filmArtifacts&quot;:0,&quot;halftone&quot;:0,&quot;halftoneSize&quot;:0,&quot;twoInkPrint&quot;:0,&quot;twoInkPrintSize&quot;:0,&quot;ascii&quot;:0,&quot;asciiSize&quot;:0.06578947368421052,&quot;asciiInvert&quot;:0,&quot;asciiStyle&quot;:0,&quot;asciiColor&quot;:1,&quot;asciiRotation&quot;:0,&quot;dither&quot;:0,&quot;ditherSize&quot;:0,&quot;bloom&quot;:0,&quot;bloomRadius&quot;:8,&quot;monoScreen&quot;:0,&quot;monoScreenSize&quot;:0,&quot;monoScreenAngle&quot;:0,&quot;monoScreenSpread&quot;:0,&quot;monoScreenShape&quot;:0,&quot;monoScreenInvert&quot;:0,&quot;scanlines&quot;:0,&quot;scanlineCount&quot;:0,&quot;scanlineSoftness&quot;:0,&quot;chromaticAberration&quot;:0,&quot;chromaticAngle&quot;:0,&quot;crtCurvature&quot;:0,&quot;digitalGlitch&quot;:0,&quot;digitalGlitchColorSplit&quot;:0,&quot;digitalGlitchLineTear&quot;:0,&quot;digitalGlitchPixelate&quot;:0,&quot;digitalGlitchBlockAmount&quot;:0,&quot;digitalGlitchBlockDisplacement&quot;:0,&quot;digitalGlitchBlockOpacity&quot;:0,&quot;digitalGlitchSpeed&quot;:0,&quot;engraving&quot;:0,&quot;engravingSpacing&quot;:0.4117647058823529,&quot;engravingMinThickness&quot;:0.2,&quot;engravingMaxThickness&quot;:0.4571428571428572,&quot;engravingAngle&quot;:0.25,&quot;engravingContrast&quot;:0.4666666666666667,&quot;engravingSharpness&quot;:0.59,&quot;engravingWave&quot;:0.2,&quot;engravingWaveFrequency&quot;:0.2222222222222222,&quot;crosshatch&quot;:0,&quot;crosshatchSpacing&quot;:0.28,&quot;crosshatchThickness&quot;:0.25,&quot;crosshatchAngle&quot;:0.25,&quot;crosshatchContrast&quot;:0.3333333333333333,&quot;crosshatchEdges&quot;:0.5,&quot;crosshatchLineWeight&quot;:0,&quot;crosshatchWave&quot;:0.33,&quot;crosshatchWaveFrequency&quot;:0.2222222222222222,&quot;kuwahara&quot;:0,&quot;kuwaharaRadius&quot;:0.14285714285714285,&quot;kuwaharaSharpness&quot;:0.3125,&quot;kuwaharaSaturation&quot;:0.5},&quot;lut&quot;:null,&quot;colorSpace&quot;:&quot;rec709&quot;}" /></div></div>
+      <!-- B: zoom-out reveal: full statue on its base -->
+      <video id="mB" class="clip vid src" src="assets/segB.mp4" muted playsinline data-start="2.25" data-duration="2.66" data-track-index="1" data-color-grading="{&quot;preset&quot;:null,&quot;intensity&quot;:1,&quot;adjust&quot;:{&quot;exposure&quot;:0.02,&quot;contrast&quot;:0.1,&quot;highlights&quot;:-0.12,&quot;shadows&quot;:0.04,&quot;whites&quot;:0,&quot;blacks&quot;:-0.03,&quot;temperature&quot;:0.04,&quot;tint&quot;:0,&quot;vibrance&quot;:0.18,&quot;saturation&quot;:0},&quot;details&quot;:{&quot;vignette&quot;:0.15,&quot;vignetteMidpoint&quot;:0.5,&quot;vignetteRoundness&quot;:0,&quot;vignetteFeather&quot;:0.65,&quot;grain&quot;:0,&quot;grainSize&quot;:0.25,&quot;grainRoughness&quot;:0.5},&quot;effects&quot;:{&quot;blur&quot;:0,&quot;pixelate&quot;:0,&quot;chromaBleed&quot;:0,&quot;tapeDamage&quot;:0,&quot;tapeTracking&quot;:0,&quot;tapeNoise&quot;:1,&quot;tapeSpeed&quot;:0.5,&quot;filmArtifacts&quot;:0,&quot;halftone&quot;:0,&quot;halftoneSize&quot;:0,&quot;twoInkPrint&quot;:0,&quot;twoInkPrintSize&quot;:0,&quot;ascii&quot;:0,&quot;asciiSize&quot;:0.06578947368421052,&quot;asciiInvert&quot;:0,&quot;asciiStyle&quot;:0,&quot;asciiColor&quot;:1,&quot;asciiRotation&quot;:0,&quot;dither&quot;:0,&quot;ditherSize&quot;:0,&quot;bloom&quot;:0,&quot;bloomRadius&quot;:8,&quot;monoScreen&quot;:0,&quot;monoScreenSize&quot;:0,&quot;monoScreenAngle&quot;:0,&quot;monoScreenSpread&quot;:0,&quot;monoScreenShape&quot;:0,&quot;monoScreenInvert&quot;:0,&quot;scanlines&quot;:0,&quot;scanlineCount&quot;:0,&quot;scanlineSoftness&quot;:0,&quot;chromaticAberration&quot;:0,&quot;chromaticAngle&quot;:0,&quot;crtCurvature&quot;:0,&quot;digitalGlitch&quot;:0,&quot;digitalGlitchColorSplit&quot;:0,&quot;digitalGlitchLineTear&quot;:0,&quot;digitalGlitchPixelate&quot;:0,&quot;digitalGlitchBlockAmount&quot;:0,&quot;digitalGlitchBlockDisplacement&quot;:0,&quot;digitalGlitchBlockOpacity&quot;:0,&quot;digitalGlitchSpeed&quot;:0,&quot;engraving&quot;:0,&quot;engravingSpacing&quot;:0.4117647058823529,&quot;engravingMinThickness&quot;:0.2,&quot;engravingMaxThickness&quot;:0.4571428571428572,&quot;engravingAngle&quot;:0.25,&quot;engravingContrast&quot;:0.4666666666666667,&quot;engravingSharpness&quot;:0.59,&quot;engravingWave&quot;:0.2,&quot;engravingWaveFrequency&quot;:0.2222222222222222,&quot;crosshatch&quot;:0,&quot;crosshatchSpacing&quot;:0.28,&quot;crosshatchThickness&quot;:0.25,&quot;crosshatchAngle&quot;:0.25,&quot;crosshatchContrast&quot;:0.3333333333333333,&quot;crosshatchEdges&quot;:0.5,&quot;crosshatchLineWeight&quot;:0,&quot;crosshatchWave&quot;:0.33,&quot;crosshatchWaveFrequency&quot;:0.2222222222222222,&quot;kuwahara&quot;:0,&quot;kuwaharaRadius&quot;:0.14285714285714285,&quot;kuwaharaSharpness&quot;:0.3125,&quot;kuwaharaSaturation&quot;:0.5},&quot;lut&quot;:null,&quot;colorSpace&quot;:&quot;rec709&quot;}"></video>
+      <!-- C: orbit with tracked detail callouts -->
+      <video id="mC" class="clip vid src" src="assets/segC.mp4" muted playsinline data-start="4.91" data-duration="3.24" data-track-index="1" data-color-grading="{&quot;preset&quot;:null,&quot;intensity&quot;:1,&quot;adjust&quot;:{&quot;exposure&quot;:0.02,&quot;contrast&quot;:0.1,&quot;highlights&quot;:-0.12,&quot;shadows&quot;:0.04,&quot;whites&quot;:0,&quot;blacks&quot;:-0.03,&quot;temperature&quot;:0.04,&quot;tint&quot;:0,&quot;vibrance&quot;:0.18,&quot;saturation&quot;:0},&quot;details&quot;:{&quot;vignette&quot;:0.15,&quot;vignetteMidpoint&quot;:0.5,&quot;vignetteRoundness&quot;:0,&quot;vignetteFeather&quot;:0.65,&quot;grain&quot;:0,&quot;grainSize&quot;:0.25,&quot;grainRoughness&quot;:0.5},&quot;effects&quot;:{&quot;blur&quot;:0,&quot;pixelate&quot;:0,&quot;chromaBleed&quot;:0,&quot;tapeDamage&quot;:0,&quot;tapeTracking&quot;:0,&quot;tapeNoise&quot;:1,&quot;tapeSpeed&quot;:0.5,&quot;filmArtifacts&quot;:0,&quot;halftone&quot;:0,&quot;halftoneSize&quot;:0,&quot;twoInkPrint&quot;:0,&quot;twoInkPrintSize&quot;:0,&quot;ascii&quot;:0,&quot;asciiSize&quot;:0.06578947368421052,&quot;asciiInvert&quot;:0,&quot;asciiStyle&quot;:0,&quot;asciiColor&quot;:1,&quot;asciiRotation&quot;:0,&quot;dither&quot;:0,&quot;ditherSize&quot;:0,&quot;bloom&quot;:0,&quot;bloomRadius&quot;:8,&quot;monoScreen&quot;:0,&quot;monoScreenSize&quot;:0,&quot;monoScreenAngle&quot;:0,&quot;monoScreenSpread&quot;:0,&quot;monoScreenShape&quot;:0,&quot;monoScreenInvert&quot;:0,&quot;scanlines&quot;:0,&quot;scanlineCount&quot;:0,&quot;scanlineSoftness&quot;:0,&quot;chromaticAberration&quot;:0,&quot;chromaticAngle&quot;:0,&quot;crtCurvature&quot;:0,&quot;digitalGlitch&quot;:0,&quot;digitalGlitchColorSplit&quot;:0,&quot;digitalGlitchLineTear&quot;:0,&quot;digitalGlitchPixelate&quot;:0,&quot;digitalGlitchBlockAmount&quot;:0,&quot;digitalGlitchBlockDisplacement&quot;:0,&quot;digitalGlitchBlockOpacity&quot;:0,&quot;digitalGlitchSpeed&quot;:0,&quot;engraving&quot;:0,&quot;engravingSpacing&quot;:0.4117647058823529,&quot;engravingMinThickness&quot;:0.2,&quot;engravingMaxThickness&quot;:0.4571428571428572,&quot;engravingAngle&quot;:0.25,&quot;engravingContrast&quot;:0.4666666666666667,&quot;engravingSharpness&quot;:0.59,&quot;engravingWave&quot;:0.2,&quot;engravingWaveFrequency&quot;:0.2222222222222222,&quot;crosshatch&quot;:0,&quot;crosshatchSpacing&quot;:0.28,&quot;crosshatchThickness&quot;:0.25,&quot;crosshatchAngle&quot;:0.25,&quot;crosshatchContrast&quot;:0.3333333333333333,&quot;crosshatchEdges&quot;:0.5,&quot;crosshatchLineWeight&quot;:0,&quot;crosshatchWave&quot;:0.33,&quot;crosshatchWaveFrequency&quot;:0.2222222222222222,&quot;kuwahara&quot;:0,&quot;kuwaharaRadius&quot;:0.14285714285714285,&quot;kuwaharaSharpness&quot;:0.3125,&quot;kuwaharaSaturation&quot;:0.5},&quot;lut&quot;:null,&quot;colorSpace&quot;:&quot;rec709&quot;}"></video>
+      <!-- D: pull back toward the hand -->
+      <video id="mD" class="clip vid src" src="assets/segD.mp4" muted playsinline data-start="8.15" data-duration="1.06" data-track-index="1" data-color-grading="{&quot;preset&quot;:null,&quot;intensity&quot;:1,&quot;adjust&quot;:{&quot;exposure&quot;:0.02,&quot;contrast&quot;:0.1,&quot;highlights&quot;:-0.12,&quot;shadows&quot;:0.04,&quot;whites&quot;:0,&quot;blacks&quot;:-0.03,&quot;temperature&quot;:0.04,&quot;tint&quot;:0,&quot;vibrance&quot;:0.18,&quot;saturation&quot;:0},&quot;details&quot;:{&quot;vignette&quot;:0.15,&quot;vignetteMidpoint&quot;:0.5,&quot;vignetteRoundness&quot;:0,&quot;vignetteFeather&quot;:0.65,&quot;grain&quot;:0,&quot;grainSize&quot;:0.25,&quot;grainRoughness&quot;:0.5},&quot;effects&quot;:{&quot;blur&quot;:0,&quot;pixelate&quot;:0,&quot;chromaBleed&quot;:0,&quot;tapeDamage&quot;:0,&quot;tapeTracking&quot;:0,&quot;tapeNoise&quot;:1,&quot;tapeSpeed&quot;:0.5,&quot;filmArtifacts&quot;:0,&quot;halftone&quot;:0,&quot;halftoneSize&quot;:0,&quot;twoInkPrint&quot;:0,&quot;twoInkPrintSize&quot;:0,&quot;ascii&quot;:0,&quot;asciiSize&quot;:0.06578947368421052,&quot;asciiInvert&quot;:0,&quot;asciiStyle&quot;:0,&quot;asciiColor&quot;:1,&quot;asciiRotation&quot;:0,&quot;dither&quot;:0,&quot;ditherSize&quot;:0,&quot;bloom&quot;:0,&quot;bloomRadius&quot;:8,&quot;monoScreen&quot;:0,&quot;monoScreenSize&quot;:0,&quot;monoScreenAngle&quot;:0,&quot;monoScreenSpread&quot;:0,&quot;monoScreenShape&quot;:0,&quot;monoScreenInvert&quot;:0,&quot;scanlines&quot;:0,&quot;scanlineCount&quot;:0,&quot;scanlineSoftness&quot;:0,&quot;chromaticAberration&quot;:0,&quot;chromaticAngle&quot;:0,&quot;crtCurvature&quot;:0,&quot;digitalGlitch&quot;:0,&quot;digitalGlitchColorSplit&quot;:0,&quot;digitalGlitchLineTear&quot;:0,&quot;digitalGlitchPixelate&quot;:0,&quot;digitalGlitchBlockAmount&quot;:0,&quot;digitalGlitchBlockDisplacement&quot;:0,&quot;digitalGlitchBlockOpacity&quot;:0,&quot;digitalGlitchSpeed&quot;:0,&quot;engraving&quot;:0,&quot;engravingSpacing&quot;:0.4117647058823529,&quot;engravingMinThickness&quot;:0.2,&quot;engravingMaxThickness&quot;:0.4571428571428572,&quot;engravingAngle&quot;:0.25,&quot;engravingContrast&quot;:0.4666666666666667,&quot;engravingSharpness&quot;:0.59,&quot;engravingWave&quot;:0.2,&quot;engravingWaveFrequency&quot;:0.2222222222222222,&quot;crosshatch&quot;:0,&quot;crosshatchSpacing&quot;:0.28,&quot;crosshatchThickness&quot;:0.25,&quot;crosshatchAngle&quot;:0.25,&quot;crosshatchContrast&quot;:0.3333333333333333,&quot;crosshatchEdges&quot;:0.5,&quot;crosshatchLineWeight&quot;:0,&quot;crosshatchWave&quot;:0.33,&quot;crosshatchWaveFrequency&quot;:0.2222222222222222,&quot;kuwahara&quot;:0,&quot;kuwaharaRadius&quot;:0.14285714285714285,&quot;kuwaharaSharpness&quot;:0.3125,&quot;kuwaharaSaturation&quot;:0.5},&quot;lut&quot;:null,&quot;colorSpace&quot;:&quot;rec709&quot;}"></video>
+      <!-- E: freeze + punch-in on the hand: WITH EETI IN HAND -->
+      <div id="sE" class="clip still" data-start="9.21" data-duration="2.13" data-track-index="1"><div class="pz" id="pzE" data-layout-allow-overflow><img class="src" src="assets/frzE.jpg" alt="" data-color-grading="{&quot;preset&quot;:null,&quot;intensity&quot;:1,&quot;adjust&quot;:{&quot;exposure&quot;:0.02,&quot;contrast&quot;:0.1,&quot;highlights&quot;:-0.12,&quot;shadows&quot;:0.04,&quot;whites&quot;:0,&quot;blacks&quot;:-0.03,&quot;temperature&quot;:0.04,&quot;tint&quot;:0,&quot;vibrance&quot;:0.18,&quot;saturation&quot;:0},&quot;details&quot;:{&quot;vignette&quot;:0.15,&quot;vignetteMidpoint&quot;:0.5,&quot;vignetteRoundness&quot;:0,&quot;vignetteFeather&quot;:0.65,&quot;grain&quot;:0,&quot;grainSize&quot;:0.25,&quot;grainRoughness&quot;:0.5},&quot;effects&quot;:{&quot;blur&quot;:0,&quot;pixelate&quot;:0,&quot;chromaBleed&quot;:0,&quot;tapeDamage&quot;:0,&quot;tapeTracking&quot;:0,&quot;tapeNoise&quot;:1,&quot;tapeSpeed&quot;:0.5,&quot;filmArtifacts&quot;:0,&quot;halftone&quot;:0,&quot;halftoneSize&quot;:0,&quot;twoInkPrint&quot;:0,&quot;twoInkPrintSize&quot;:0,&quot;ascii&quot;:0,&quot;asciiSize&quot;:0.06578947368421052,&quot;asciiInvert&quot;:0,&quot;asciiStyle&quot;:0,&quot;asciiColor&quot;:1,&quot;asciiRotation&quot;:0,&quot;dither&quot;:0,&quot;ditherSize&quot;:0,&quot;bloom&quot;:0,&quot;bloomRadius&quot;:8,&quot;monoScreen&quot;:0,&quot;monoScreenSize&quot;:0,&quot;monoScreenAngle&quot;:0,&quot;monoScreenSpread&quot;:0,&quot;monoScreenShape&quot;:0,&quot;monoScreenInvert&quot;:0,&quot;scanlines&quot;:0,&quot;scanlineCount&quot;:0,&quot;scanlineSoftness&quot;:0,&quot;chromaticAberration&quot;:0,&quot;chromaticAngle&quot;:0,&quot;crtCurvature&quot;:0,&quot;digitalGlitch&quot;:0,&quot;digitalGlitchColorSplit&quot;:0,&quot;digitalGlitchLineTear&quot;:0,&quot;digitalGlitchPixelate&quot;:0,&quot;digitalGlitchBlockAmount&quot;:0,&quot;digitalGlitchBlockDisplacement&quot;:0,&quot;digitalGlitchBlockOpacity&quot;:0,&quot;digitalGlitchSpeed&quot;:0,&quot;engraving&quot;:0,&quot;engravingSpacing&quot;:0.4117647058823529,&quot;engravingMinThickness&quot;:0.2,&quot;engravingMaxThickness&quot;:0.4571428571428572,&quot;engravingAngle&quot;:0.25,&quot;engravingContrast&quot;:0.4666666666666667,&quot;engravingSharpness&quot;:0.59,&quot;engravingWave&quot;:0.2,&quot;engravingWaveFrequency&quot;:0.2222222222222222,&quot;crosshatch&quot;:0,&quot;crosshatchSpacing&quot;:0.28,&quot;crosshatchThickness&quot;:0.25,&quot;crosshatchAngle&quot;:0.25,&quot;crosshatchContrast&quot;:0.3333333333333333,&quot;crosshatchEdges&quot;:0.5,&quot;crosshatchLineWeight&quot;:0,&quot;crosshatchWave&quot;:0.33,&quot;crosshatchWaveFrequency&quot;:0.2222222222222222,&quot;kuwahara&quot;:0,&quot;kuwaharaRadius&quot;:0.14285714285714285,&quot;kuwaharaSharpness&quot;:0.3125,&quot;kuwaharaSaturation&quot;:0.5},&quot;lut&quot;:null,&quot;colorSpace&quot;:&quot;rec709&quot;}" /></div></div>
+      <!-- F: pull back to the full statue, price reveal -->
+      <video id="mF" class="clip vid src" src="assets/segF.mp4" muted playsinline data-start="11.34" data-duration="1.77" data-track-index="1" data-color-grading="{&quot;preset&quot;:null,&quot;intensity&quot;:1,&quot;adjust&quot;:{&quot;exposure&quot;:0.02,&quot;contrast&quot;:0.1,&quot;highlights&quot;:-0.12,&quot;shadows&quot;:0.04,&quot;whites&quot;:0,&quot;blacks&quot;:-0.03,&quot;temperature&quot;:0.04,&quot;tint&quot;:0,&quot;vibrance&quot;:0.18,&quot;saturation&quot;:0},&quot;details&quot;:{&quot;vignette&quot;:0.15,&quot;vignetteMidpoint&quot;:0.5,&quot;vignetteRoundness&quot;:0,&quot;vignetteFeather&quot;:0.65,&quot;grain&quot;:0,&quot;grainSize&quot;:0.25,&quot;grainRoughness&quot;:0.5},&quot;effects&quot;:{&quot;blur&quot;:0,&quot;pixelate&quot;:0,&quot;chromaBleed&quot;:0,&quot;tapeDamage&quot;:0,&quot;tapeTracking&quot;:0,&quot;tapeNoise&quot;:1,&quot;tapeSpeed&quot;:0.5,&quot;filmArtifacts&quot;:0,&quot;halftone&quot;:0,&quot;halftoneSize&quot;:0,&quot;twoInkPrint&quot;:0,&quot;twoInkPrintSize&quot;:0,&quot;ascii&quot;:0,&quot;asciiSize&quot;:0.06578947368421052,&quot;asciiInvert&quot;:0,&quot;asciiStyle&quot;:0,&quot;asciiColor&quot;:1,&quot;asciiRotation&quot;:0,&quot;dither&quot;:0,&quot;ditherSize&quot;:0,&quot;bloom&quot;:0,&quot;bloomRadius&quot;:8,&quot;monoScreen&quot;:0,&quot;monoScreenSize&quot;:0,&quot;monoScreenAngle&quot;:0,&quot;monoScreenSpread&quot;:0,&quot;monoScreenShape&quot;:0,&quot;monoScreenInvert&quot;:0,&quot;scanlines&quot;:0,&quot;scanlineCount&quot;:0,&quot;scanlineSoftness&quot;:0,&quot;chromaticAberration&quot;:0,&quot;chromaticAngle&quot;:0,&quot;crtCurvature&quot;:0,&quot;digitalGlitch&quot;:0,&quot;digitalGlitchColorSplit&quot;:0,&quot;digitalGlitchLineTear&quot;:0,&quot;digitalGlitchPixelate&quot;:0,&quot;digitalGlitchBlockAmount&quot;:0,&quot;digitalGlitchBlockDisplacement&quot;:0,&quot;digitalGlitchBlockOpacity&quot;:0,&quot;digitalGlitchSpeed&quot;:0,&quot;engraving&quot;:0,&quot;engravingSpacing&quot;:0.4117647058823529,&quot;engravingMinThickness&quot;:0.2,&quot;engravingMaxThickness&quot;:0.4571428571428572,&quot;engravingAngle&quot;:0.25,&quot;engravingContrast&quot;:0.4666666666666667,&quot;engravingSharpness&quot;:0.59,&quot;engravingWave&quot;:0.2,&quot;engravingWaveFrequency&quot;:0.2222222222222222,&quot;crosshatch&quot;:0,&quot;crosshatchSpacing&quot;:0.28,&quot;crosshatchThickness&quot;:0.25,&quot;crosshatchAngle&quot;:0.25,&quot;crosshatchContrast&quot;:0.3333333333333333,&quot;crosshatchEdges&quot;:0.5,&quot;crosshatchLineWeight&quot;:0,&quot;crosshatchWave&quot;:0.33,&quot;crosshatchWaveFrequency&quot;:0.2222222222222222,&quot;kuwahara&quot;:0,&quot;kuwaharaRadius&quot;:0.14285714285714285,&quot;kuwaharaSharpness&quot;:0.3125,&quot;kuwaharaSaturation&quot;:0.5},&quot;lut&quot;:null,&quot;colorSpace&quot;:&quot;rec709&quot;}"></video>
+      <!-- G: end card on the last frame, song outro -->
+      <div id="sG" class="clip still" data-start="13.11" data-duration="3.49" data-track-index="1"><div class="pz" id="pzG" data-layout-allow-overflow><img class="src" src="assets/frzG.jpg" alt="" data-color-grading="{&quot;preset&quot;:null,&quot;intensity&quot;:1,&quot;adjust&quot;:{&quot;exposure&quot;:0.02,&quot;contrast&quot;:0.1,&quot;highlights&quot;:-0.12,&quot;shadows&quot;:0.04,&quot;whites&quot;:0,&quot;blacks&quot;:-0.03,&quot;temperature&quot;:0.04,&quot;tint&quot;:0,&quot;vibrance&quot;:0.18,&quot;saturation&quot;:0},&quot;details&quot;:{&quot;vignette&quot;:0.15,&quot;vignetteMidpoint&quot;:0.5,&quot;vignetteRoundness&quot;:0,&quot;vignetteFeather&quot;:0.65,&quot;grain&quot;:0,&quot;grainSize&quot;:0.25,&quot;grainRoughness&quot;:0.5},&quot;effects&quot;:{&quot;blur&quot;:0,&quot;pixelate&quot;:0,&quot;chromaBleed&quot;:0,&quot;tapeDamage&quot;:0,&quot;tapeTracking&quot;:0,&quot;tapeNoise&quot;:1,&quot;tapeSpeed&quot;:0.5,&quot;filmArtifacts&quot;:0,&quot;halftone&quot;:0,&quot;halftoneSize&quot;:0,&quot;twoInkPrint&quot;:0,&quot;twoInkPrintSize&quot;:0,&quot;ascii&quot;:0,&quot;asciiSize&quot;:0.06578947368421052,&quot;asciiInvert&quot;:0,&quot;asciiStyle&quot;:0,&quot;asciiColor&quot;:1,&quot;asciiRotation&quot;:0,&quot;dither&quot;:0,&quot;ditherSize&quot;:0,&quot;bloom&quot;:0,&quot;bloomRadius&quot;:8,&quot;monoScreen&quot;:0,&quot;monoScreenSize&quot;:0,&quot;monoScreenAngle&quot;:0,&quot;monoScreenSpread&quot;:0,&quot;monoScreenShape&quot;:0,&quot;monoScreenInvert&quot;:0,&quot;scanlines&quot;:0,&quot;scanlineCount&quot;:0,&quot;scanlineSoftness&quot;:0,&quot;chromaticAberration&quot;:0,&quot;chromaticAngle&quot;:0,&quot;crtCurvature&quot;:0,&quot;digitalGlitch&quot;:0,&quot;digitalGlitchColorSplit&quot;:0,&quot;digitalGlitchLineTear&quot;:0,&quot;digitalGlitchPixelate&quot;:0,&quot;digitalGlitchBlockAmount&quot;:0,&quot;digitalGlitchBlockDisplacement&quot;:0,&quot;digitalGlitchBlockOpacity&quot;:0,&quot;digitalGlitchSpeed&quot;:0,&quot;engraving&quot;:0,&quot;engravingSpacing&quot;:0.4117647058823529,&quot;engravingMinThickness&quot;:0.2,&quot;engravingMaxThickness&quot;:0.4571428571428572,&quot;engravingAngle&quot;:0.25,&quot;engravingContrast&quot;:0.4666666666666667,&quot;engravingSharpness&quot;:0.59,&quot;engravingWave&quot;:0.2,&quot;engravingWaveFrequency&quot;:0.2222222222222222,&quot;crosshatch&quot;:0,&quot;crosshatchSpacing&quot;:0.28,&quot;crosshatchThickness&quot;:0.25,&quot;crosshatchAngle&quot;:0.25,&quot;crosshatchContrast&quot;:0.3333333333333333,&quot;crosshatchEdges&quot;:0.5,&quot;crosshatchLineWeight&quot;:0,&quot;crosshatchWave&quot;:0.33,&quot;crosshatchWaveFrequency&quot;:0.2222222222222222,&quot;kuwahara&quot;:0,&quot;kuwaharaRadius&quot;:0.14285714285714285,&quot;kuwaharaSharpness&quot;:0.3125,&quot;kuwaharaSaturation&quot;:0.5},&quot;lut&quot;:null,&quot;colorSpace&quot;:&quot;rec709&quot;}" /></div></div>
+
+      <div id="topScrim" class="clip" data-start="0" data-duration="16.6" data-track-index="2"></div>
+      <div id="botScrim" class="clip" data-start="0" data-duration="2.25" data-track-index="3"></div>
+      <div id="botScrim2" class="clip" data-start="9.21" data-duration="2.13" data-track-index="3" style="pointer-events:none;z-index:4;background:linear-gradient(0deg, rgba(10,7,4,0) 30%, rgba(10,7,4,0.66) 36%, rgba(10,7,4,0.35) 46%, rgba(10,7,4,0) 56%)"></div>
+      <div id="endDim" class="clip" data-start="13.11" data-duration="3.49" data-track-index="3"></div>
+
+      <!-- HOOK: product name readable from frame 0 -->
+      <div id="hook" class="clip" data-start="0" data-duration="2.25" data-track-index="4">
+        <div id="hookTitle"><div class="t1 gold">SANGILI<br />KARUPPAR</div><div class="ta">சங்கிலி கருப்பர்</div></div>
+        <div id="stamp">READY STOCK</div>
+      </div>
+
+      <div id="chipB" class="clip" data-start="2.25" data-duration="2.66" data-track-index="4" style="inset:auto;left:250px;top:300px;width:580px;height:84px"><span>1 PIECE</span><b>·</b><span>READY STOCK</span></div>
+
+      <div id="co_necklace" class="clip callout" data-start="5.05" data-duration="1.55" data-track-index="5" style="inset:0">
+        <svg class="lead" width="1080" height="1920" viewBox="0 0 1080 1920"><line id="ln_necklace" x1="610" y1="640" x2="610" y2="640" /></svg>
+        <div class="dot" id="dt_necklace"></div>
+        <div class="lab" id="lb_necklace" style="left:610px;top:600px">GOLD-PAINTED<br>ORNAMENTS</div>
+      </div>
+      <div id="co_waist" class="clip callout" data-start="6.6" data-duration="1.52" data-track-index="5" style="inset:0">
+        <svg class="lead" width="1080" height="1920" viewBox="0 0 1080 1920"><line id="ln_waist" x1="620" y1="970" x2="620" y2="970" /></svg>
+        <div class="dot" id="dt_waist"></div>
+        <div class="lab" id="lb_waist" style="left:620px;top:930px">RED &amp; GOLD<br>WAIST CLOTH</div>
+      </div>
+
+      <!-- EETI -->
+      <div id="eeti" class="clip" data-start="9.21" data-duration="2.13" data-track-index="4">
+        <div id="ring"></div>
+        <div id="eetiTxt"><div id="eetiL1">WITH <span>EETI</span> IN HAND</div><div id="eetiL2">Eeti provided separately</div></div>
+      </div>
+
+      <!-- PRICE -->
+      <div id="price" class="clip" data-start="12.05" data-duration="4.55" data-track-index="6" style="inset:auto;left:230px;top:994px;width:620px;height:236px">
+        <div class="p1">SANGILI KARUPPAR</div>
+        <div class="p2 gold">RM450</div>
+        <div id="sheen" data-layout-allow-overflow></div>
+      </div>
+
+      <!-- END CARD -->
+      <div id="endTxt" class="clip" data-start="13.11" data-duration="3.49" data-track-index="7">
+        <div id="endT2">Eeti provided separately</div>
+      </div>
+      <div id="cta" class="clip" data-start="13.69" data-duration="2.91" data-track-index="8" style="inset:auto;left:330px;top:1100px;width:420px;height:76px;border-radius:38px;background:#9a1616;border:3px solid #fbe7a4;display:flex;align-items:center;justify-content:center;font-family:MontBlack;font-size:38px;letter-spacing:2px;color:#f7f0e1;z-index:16;box-shadow:0 10px 30px rgba(0,0,0,0.6)">DM TO ORDER</div>
+
+      <!-- persistent branding, start to end -->
+      <div id="brand" class="clip" data-start="0" data-duration="16.6" data-track-index="9"><img src="assets/logo_eshan.png" alt="Eshan Creations" /></div>
+
+      <!-- music: user-supplied sangili_karupar_song.m4a -->
+      <audio id="music" data-timeline-role="music" class="clip" src="assets/music.wav" data-start="0" data-duration="16.6" data-volume="1"></audio>
+      <audio id="sx0" class="clip" src="assets/sfx/tick.wav" data-start="5.05" data-duration="0.09" data-volume="0.6"></audio>
+      <audio id="sx1" class="clip" src="assets/sfx/tick.wav" data-start="6.6" data-duration="0.09" data-volume="0.6"></audio>
+      <audio id="sx2" class="clip" src="assets/sfx/hook-impact.wav" data-start="0.0" data-duration="1.9" data-volume="0.55"></audio>
+      <audio id="sx3" class="clip" src="assets/sfx/thock.wav" data-start="1.31" data-duration="0.12" data-volume="0.7"></audio>
+      <audio id="sx4" class="clip" src="assets/sfx/zoom-swish.wav" data-start="2.161" data-duration="0.76" data-volume="0.4"></audio>
+      <audio id="sx5" class="clip" src="assets/sfx/ui-pop.wav" data-start="2.53" data-duration="0.2" data-volume="0.35"></audio>
+      <audio id="sx6" class="clip" src="assets/sfx/camera-shutter-light.wav" data-start="9.21" data-duration="0.16" data-volume="0.45"></audio>
+      <audio id="sx7" class="clip" src="assets/sfx/zoom-swish.wav" data-start="9.301" data-duration="0.76" data-volume="0.4"></audio>
+      <audio id="sx8" class="clip" src="assets/sfx/ui-pop.wav" data-start="9.71" data-duration="0.2" data-volume="0.35"></audio>
+      <audio id="sx9" class="clip" src="assets/sfx/metallic-riser.wav" data-start="10.528" data-duration="1.64" data-volume="0.32"></audio>
+      <audio id="sx10" class="clip" src="assets/sfx/sub-impact.wav" data-start="12.05" data-duration="0.64" data-volume="0.7"></audio>
+      <audio id="sx11" class="clip" src="assets/sfx/shimmer.wav" data-start="12.616" data-duration="0.9" data-volume="0.3"></audio>
+      <audio id="sx12" class="clip" src="assets/sfx/ui-pop.wav" data-start="13.7" data-duration="0.2" data-volume="0.35"></audio>
+      <audio id="sx13" class="clip" src="assets/sfx/clean-ding.wav" data-start="13.72" data-duration="0.55" data-volume="0.3"></audio>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#pzA2",{scale:1},{scale:1.05,duration:0.94,ease:"none"},1.31);
+      tl.fromTo("#mB",{scale:1.32},{scale:1,duration:0.45,ease:"expo.out"},2.25);
+      tl.fromTo("#pzE",{scale:1,x:0,y:0},{scale:1.7,x:0,y:-596,duration:0.4,ease:"power3.inOut"},9.24);
+      tl.to("#pzE",{scale:1,x:0,y:0,duration:0.4,ease:"power3.inOut"},10.94);
+      tl.fromTo("#pzG",{scale:1},{scale:1.06,duration:3.49,ease:"none"},13.11);
+      tl.set("#dt_necklace",{x:337.6,y:731.6},5.0667);tl.set("#ln_necklace",{attr:{x2:351.6,y2:745.6}},5.0667);
+      tl.set("#dt_necklace",{x:332.4,y:730.6},5.1000);tl.set("#ln_necklace",{attr:{x2:346.4,y2:744.6}},5.1000);
+      tl.set("#dt_necklace",{x:328.6,y:729.4},5.1333);tl.set("#ln_necklace",{attr:{x2:342.6,y2:743.4}},5.1333);
+      tl.set("#dt_necklace",{x:327.6,y:728.4},5.1667);tl.set("#ln_necklace",{attr:{x2:341.6,y2:742.4}},5.1667);
+      tl.set("#dt_necklace",{x:329.0,y:728.4},5.2000);tl.set("#ln_necklace",{attr:{x2:343.0,y2:742.4}},5.2000);
+      tl.set("#dt_necklace",{x:333.0,y:729.0},5.2333);tl.set("#ln_necklace",{attr:{x2:347.0,y2:743.0}},5.2333);
+      tl.set("#dt_necklace",{x:339.6,y:730.0},5.2667);tl.set("#ln_necklace",{attr:{x2:353.6,y2:744.0}},5.2667);
+      tl.set("#dt_necklace",{x:348.0,y:731.4},5.3000);tl.set("#ln_necklace",{attr:{x2:362.0,y2:745.4}},5.3000);
+      tl.set("#dt_necklace",{x:356.8,y:732.6},5.3333);tl.set("#ln_necklace",{attr:{x2:370.8,y2:746.6}},5.3333);
+      tl.set("#dt_necklace",{x:365.4,y:733.0},5.3667);tl.set("#ln_necklace",{attr:{x2:379.4,y2:747.0}},5.3667);
+      tl.set("#dt_necklace",{x:373.2,y:733.2},5.4000);tl.set("#ln_necklace",{attr:{x2:387.2,y2:747.2}},5.4000);
+      tl.set("#dt_necklace",{x:379.8,y:733.6},5.4333);tl.set("#ln_necklace",{attr:{x2:393.8,y2:747.6}},5.4333);
+      tl.set("#dt_necklace",{x:385.8,y:734.2},5.4667);tl.set("#ln_necklace",{attr:{x2:399.8,y2:748.2}},5.4667);
+      tl.set("#dt_necklace",{x:391.2,y:735.0},5.5000);tl.set("#ln_necklace",{attr:{x2:405.2,y2:749.0}},5.5000);
+      tl.set("#dt_necklace",{x:395.8,y:736.0},5.5333);tl.set("#ln_necklace",{attr:{x2:409.8,y2:750.0}},5.5333);
+      tl.set("#dt_necklace",{x:399.2,y:736.4},5.5667);tl.set("#ln_necklace",{attr:{x2:413.2,y2:750.4}},5.5667);
+      tl.set("#dt_necklace",{x:401.6,y:736.6},5.6000);tl.set("#ln_necklace",{attr:{x2:415.6,y2:750.6}},5.6000);
+      tl.set("#dt_necklace",{x:402.6,y:736.2},5.6333);tl.set("#ln_necklace",{attr:{x2:416.6,y2:750.2}},5.6333);
+      tl.set("#dt_necklace",{x:402.0,y:735.0},5.6667);tl.set("#ln_necklace",{attr:{x2:416.0,y2:749.0}},5.6667);
+      tl.set("#dt_necklace",{x:400.6,y:733.6},5.7000);tl.set("#ln_necklace",{attr:{x2:414.6,y2:747.6}},5.7000);
+      tl.set("#dt_necklace",{x:399.0,y:732.2},5.7333);tl.set("#ln_necklace",{attr:{x2:413.0,y2:746.2}},5.7333);
+      tl.set("#dt_necklace",{x:397.2,y:730.4},5.7667);tl.set("#ln_necklace",{attr:{x2:411.2,y2:744.4}},5.7667);
+      tl.set("#dt_necklace",{x:395.8,y:728.8},5.8000);tl.set("#ln_necklace",{attr:{x2:409.8,y2:742.8}},5.8000);
+      tl.set("#dt_necklace",{x:394.6,y:727.4},5.8333);tl.set("#ln_necklace",{attr:{x2:408.6,y2:741.4}},5.8333);
+      tl.set("#dt_necklace",{x:392.4,y:725.2},5.8667);tl.set("#ln_necklace",{attr:{x2:406.4,y2:739.2}},5.8667);
+      tl.set("#dt_necklace",{x:388.8,y:722.6},5.9000);tl.set("#ln_necklace",{attr:{x2:402.8,y2:736.6}},5.9000);
+      tl.set("#dt_necklace",{x:383.6,y:719.6},5.9333);tl.set("#ln_necklace",{attr:{x2:397.6,y2:733.6}},5.9333);
+      tl.set("#dt_necklace",{x:375.2,y:716.0},5.9667);tl.set("#ln_necklace",{attr:{x2:389.2,y2:730.0}},5.9667);
+      tl.set("#dt_necklace",{x:364.0,y:712.0},6.0000);tl.set("#ln_necklace",{attr:{x2:378.0,y2:726.0}},6.0000);
+      tl.set("#dt_necklace",{x:350.2,y:707.6},6.0333);tl.set("#ln_necklace",{attr:{x2:364.2,y2:721.6}},6.0333);
+      tl.set("#dt_necklace",{x:332.8,y:702.8},6.0667);tl.set("#ln_necklace",{attr:{x2:346.8,y2:716.8}},6.0667);
+      tl.set("#dt_necklace",{x:312.4,y:698.0},6.1000);tl.set("#ln_necklace",{attr:{x2:326.4,y2:712.0}},6.1000);
+      tl.set("#dt_necklace",{x:290.4,y:692.8},6.1333);tl.set("#ln_necklace",{attr:{x2:304.4,y2:706.8}},6.1333);
+      tl.set("#dt_necklace",{x:267.0,y:687.0},6.1667);tl.set("#ln_necklace",{attr:{x2:281.0,y2:701.0}},6.1667);
+      tl.set("#dt_necklace",{x:243.8,y:681.6},6.2000);tl.set("#ln_necklace",{attr:{x2:257.8,y2:695.6}},6.2000);
+      tl.set("#dt_necklace",{x:223.2,y:676.6},6.2333);tl.set("#ln_necklace",{attr:{x2:237.2,y2:690.6}},6.2333);
+      tl.set("#dt_necklace",{x:206.4,y:672.0},6.2667);tl.set("#ln_necklace",{attr:{x2:220.4,y2:686.0}},6.2667);
+      tl.set("#dt_necklace",{x:194.2,y:668.2},6.3000);tl.set("#ln_necklace",{attr:{x2:208.2,y2:682.2}},6.3000);
+      tl.set("#dt_necklace",{x:187.0,y:666.0},6.3333);tl.set("#ln_necklace",{attr:{x2:201.0,y2:680.0}},6.3333);
+      tl.set("#dt_necklace",{x:185.0,y:665.2},6.3667);tl.set("#ln_necklace",{attr:{x2:199.0,y2:679.2}},6.3667);
+      tl.set("#dt_necklace",{x:186.8,y:666.2},6.4000);tl.set("#ln_necklace",{attr:{x2:200.8,y2:680.2}},6.4000);
+      tl.set("#dt_necklace",{x:190.6,y:668.0},6.4333);tl.set("#ln_necklace",{attr:{x2:204.6,y2:682.0}},6.4333);
+      tl.set("#dt_necklace",{x:195.0,y:670.4},6.4667);tl.set("#ln_necklace",{attr:{x2:209.0,y2:684.4}},6.4667);
+      tl.set("#dt_necklace",{x:199.2,y:673.2},6.5000);tl.set("#ln_necklace",{attr:{x2:213.2,y2:687.2}},6.5000);
+      tl.set("#dt_necklace",{x:202.0,y:676.0},6.5333);tl.set("#ln_necklace",{attr:{x2:216.0,y2:690.0}},6.5333);
+      tl.set("#dt_necklace",{x:203.6,y:678.4},6.5667);tl.set("#ln_necklace",{attr:{x2:217.6,y2:692.4}},6.5667);
+      tl.set("#dt_necklace",{x:205.4,y:680.8},6.6000);tl.set("#ln_necklace",{attr:{x2:219.4,y2:694.8}},6.6000);
+      tl.fromTo("#dt_necklace",{scale:0},{scale:1,duration:0.25,ease:"back.out(3)"},5.05);
+      tl.fromTo("#ln_necklace",{strokeDashoffset:600},{strokeDashoffset:0,duration:0.3,ease:"power2.out"},5.1);
+      tl.fromTo("#lb_necklace",{opacity:0,x:-24},{opacity:1,x:0,duration:0.3,ease:"power3.out"},5.17);
+      tl.to("#co_necklace",{opacity:0,duration:0.18},6.42);
+      tl.set("#dt_waist",{x:228.1,y:967.3},6.6000);tl.set("#ln_waist",{attr:{x2:242.1,y2:981.3}},6.6000);
+      tl.set("#dt_waist",{x:229.3,y:970.3},6.6333);tl.set("#ln_waist",{attr:{x2:243.3,y2:984.3}},6.6333);
+      tl.set("#dt_waist",{x:232.0,y:974.6},6.6667);tl.set("#ln_waist",{attr:{x2:246.0,y2:988.6}},6.6667);
+      tl.set("#dt_waist",{x:236.2,y:979.2},6.7000);tl.set("#ln_waist",{attr:{x2:250.2,y2:993.2}},6.7000);
+      tl.set("#dt_waist",{x:242.8,y:984.0},6.7333);tl.set("#ln_waist",{attr:{x2:256.8,y2:998.0}},6.7333);
+      tl.set("#dt_waist",{x:251.7,y:989.7},6.7667);tl.set("#ln_waist",{attr:{x2:265.7,y2:1003.7}},6.7667);
+      tl.set("#dt_waist",{x:262.0,y:994.6},6.8000);tl.set("#ln_waist",{attr:{x2:276.0,y2:1008.6}},6.8000);
+      tl.set("#dt_waist",{x:272.8,y:997.8},6.8333);tl.set("#ln_waist",{attr:{x2:286.8,y2:1011.8}},6.8333);
+      tl.set("#dt_waist",{x:283.3,y:1000.1},6.8667);tl.set("#ln_waist",{attr:{x2:297.3,y2:1014.1}},6.8667);
+      tl.set("#dt_waist",{x:293.0,y:1000.8},6.9000);tl.set("#ln_waist",{attr:{x2:307.0,y2:1014.8}},6.9000);
+      tl.set("#dt_waist",{x:301.4,y:999.6},6.9333);tl.set("#ln_waist",{attr:{x2:315.4,y2:1013.6}},6.9333);
+      tl.set("#dt_waist",{x:309.6,y:998.2},6.9667);tl.set("#ln_waist",{attr:{x2:323.6,y2:1012.2}},6.9667);
+      tl.set("#dt_waist",{x:317.2,y:997.8},7.0000);tl.set("#ln_waist",{attr:{x2:331.2,y2:1011.8}},7.0000);
+      tl.set("#dt_waist",{x:324.9,y:997.7},7.0333);tl.set("#ln_waist",{attr:{x2:338.9,y2:1011.7}},7.0333);
+      tl.set("#dt_waist",{x:332.1,y:998.7},7.0667);tl.set("#ln_waist",{attr:{x2:346.1,y2:1012.7}},7.0667);
+      tl.set("#dt_waist",{x:339.5,y:1000.5},7.1000);tl.set("#ln_waist",{attr:{x2:353.5,y2:1014.5}},7.1000);
+      tl.set("#dt_waist",{x:347.1,y:1002.7},7.1333);tl.set("#ln_waist",{attr:{x2:361.1,y2:1016.7}},7.1333);
+      tl.set("#dt_waist",{x:356.2,y:1004.6},7.1667);tl.set("#ln_waist",{attr:{x2:370.2,y2:1018.6}},7.1667);
+      tl.set("#dt_waist",{x:366.9,y:1006.3},7.2000);tl.set("#ln_waist",{attr:{x2:380.9,y2:1020.3}},7.2000);
+      tl.set("#dt_waist",{x:379.4,y:1007.4},7.2333);tl.set("#ln_waist",{attr:{x2:393.4,y2:1021.4}},7.2333);
+      tl.set("#dt_waist",{x:392.5,y:1007.7},7.2667);tl.set("#ln_waist",{attr:{x2:406.5,y2:1021.7}},7.2667);
+      tl.set("#dt_waist",{x:405.9,y:1006.7},7.3000);tl.set("#ln_waist",{attr:{x2:419.9,y2:1020.7}},7.3000);
+      tl.set("#dt_waist",{x:418.5,y:1004.7},7.3333);tl.set("#ln_waist",{attr:{x2:432.5,y2:1018.7}},7.3333);
+      tl.set("#dt_waist",{x:429.3,y:1002.7},7.3667);tl.set("#ln_waist",{attr:{x2:443.3,y2:1016.7}},7.3667);
+      tl.set("#dt_waist",{x:437.9,y:1000.7},7.4000);tl.set("#ln_waist",{attr:{x2:451.9,y2:1014.7}},7.4000);
+      tl.set("#dt_waist",{x:445.2,y:1000.0},7.4333);tl.set("#ln_waist",{attr:{x2:459.2,y2:1014.0}},7.4333);
+      tl.set("#dt_waist",{x:451.8,y:1000.8},7.4667);tl.set("#ln_waist",{attr:{x2:465.8,y2:1014.8}},7.4667);
+      tl.set("#dt_waist",{x:458.6,y:1002.4},7.5000);tl.set("#ln_waist",{attr:{x2:472.6,y2:1016.4}},7.5000);
+      tl.set("#dt_waist",{x:467.3,y:1004.3},7.5333);tl.set("#ln_waist",{attr:{x2:481.3,y2:1018.3}},7.5333);
+      tl.set("#dt_waist",{x:479.4,y:1007.0},7.5667);tl.set("#ln_waist",{attr:{x2:493.4,y2:1021.0}},7.5667);
+      tl.set("#dt_waist",{x:494.4,y:1008.8},7.6000);tl.set("#ln_waist",{attr:{x2:508.4,y2:1022.8}},7.6000);
+      tl.set("#dt_waist",{x:512.3,y:1010.3},7.6333);tl.set("#ln_waist",{attr:{x2:526.3,y2:1024.3}},7.6333);
+      tl.set("#dt_waist",{x:532.4,y:1012.6},7.6667);tl.set("#ln_waist",{attr:{x2:546.4,y2:1026.6}},7.6667);
+      tl.set("#dt_waist",{x:554.5,y:1015.9},7.7000);tl.set("#ln_waist",{attr:{x2:568.5,y2:1029.9}},7.7000);
+      tl.set("#dt_waist",{x:576.9,y:1019.7},7.7333);tl.set("#ln_waist",{attr:{x2:590.9,y2:1033.7}},7.7333);
+      tl.set("#dt_waist",{x:599.0,y:1024.8},7.7667);tl.set("#ln_waist",{attr:{x2:613.0,y2:1038.8}},7.7667);
+      tl.set("#dt_waist",{x:620.2,y:1029.8},7.8000);tl.set("#ln_waist",{attr:{x2:634.2,y2:1043.8}},7.8000);
+      tl.set("#dt_waist",{x:640.4,y:1035.2},7.8333);tl.set("#ln_waist",{attr:{x2:654.4,y2:1049.2}},7.8333);
+      tl.set("#dt_waist",{x:658.1,y:1039.5},7.8667);tl.set("#ln_waist",{attr:{x2:672.1,y2:1053.5}},7.8667);
+      tl.set("#dt_waist",{x:673.6,y:1043.6},7.9000);tl.set("#ln_waist",{attr:{x2:687.6,y2:1057.6}},7.9000);
+      tl.set("#dt_waist",{x:687.4,y:1047.8},7.9333);tl.set("#ln_waist",{attr:{x2:701.4,y2:1061.8}},7.9333);
+      tl.set("#dt_waist",{x:698.3,y:1051.3},7.9667);tl.set("#ln_waist",{attr:{x2:712.3,y2:1065.3}},7.9667);
+      tl.set("#dt_waist",{x:705.7,y:1053.9},8.0000);tl.set("#ln_waist",{attr:{x2:719.7,y2:1067.9}},8.0000);
+      tl.set("#dt_waist",{x:709.9,y:1056.5},8.0333);tl.set("#ln_waist",{attr:{x2:723.9,y2:1070.5}},8.0333);
+      tl.set("#dt_waist",{x:711.3,y:1058.5},8.0667);tl.set("#ln_waist",{attr:{x2:725.3,y2:1072.5}},8.0667);
+      tl.set("#dt_waist",{x:710.0,y:1059.6},8.1000);tl.set("#ln_waist",{attr:{x2:724.0,y2:1073.6}},8.1000);
+      tl.set("#dt_waist",{x:707.2,y:1060.8},8.1333);tl.set("#ln_waist",{attr:{x2:721.2,y2:1074.8}},8.1333);
+      tl.fromTo("#dt_waist",{scale:0},{scale:1,duration:0.25,ease:"back.out(3)"},6.6);
+      tl.fromTo("#ln_waist",{strokeDashoffset:600},{strokeDashoffset:0,duration:0.3,ease:"power2.out"},6.6499999999999995);
+      tl.fromTo("#lb_waist",{opacity:0,x:-24},{opacity:1,x:0,duration:0.3,ease:"power3.out"},6.72);
+      tl.to("#co_waist",{opacity:0,duration:0.18},7.94);
+      tl.fromTo("#hookTitle",{scale:1.06},{scale:1,duration:0.6,ease:"power3.out"},0);
+      tl.fromTo("#stamp",{scale:2.2,opacity:0,rotation:-14},{scale:1,opacity:1,rotation:-6,duration:0.26,ease:"back.out(2.2)"},1.31);
+      tl.to("#hook",{opacity:0,y:-30,duration:0.18,ease:"power2.in"},2.07);
+      tl.fromTo("#chipB",{opacity:0,y:40},{opacity:1,y:0,duration:0.35,ease:"power3.out"},2.52);
+      tl.to("#chipB",{opacity:0,y:-20,duration:0.2},4.7);
+      tl.fromTo("#ring",{scale:0.3,opacity:0},{scale:1,opacity:1,duration:0.28,ease:"back.out(2)"},9.6);
+      tl.fromTo("#eetiL1",{opacity:0,y:50},{opacity:1,y:0,duration:0.32,ease:"power3.out"},9.7);
+      tl.fromTo("#eetiL2",{opacity:0,y:30},{opacity:1,y:0,duration:0.32,ease:"power3.out"},9.98);
+      tl.to("#ring",{opacity:0,duration:0.15},10.86);
+      tl.to("#eeti",{opacity:0,y:20,duration:0.22,ease:"power2.in"},11.1);
+      tl.fromTo("#price",{scale:0.55,opacity:0,y:-40},{scale:1,opacity:1,y:0,duration:0.4,ease:"back.out(1.8)"},12.05);
+      tl.fromTo("#sheen",{xPercent:-160},{xPercent:260,duration:0.8,ease:"power2.inOut"},12.5);
+      tl.to("#price",{y:-134,duration:0.45,ease:"power3.inOut"},13.11);
+      tl.fromTo("#endDim",{opacity:0},{opacity:1,duration:0.5,ease:"power1.out"},13.11);
+      tl.fromTo("#endT2",{opacity:0,y:30},{opacity:1,y:0,duration:0.4,ease:"power3.out"},14.16);
+      tl.fromTo("#cta",{opacity:0,scale:0.7},{opacity:1,scale:1,duration:0.35,ease:"back.out(2)"},13.69);
+      tl.to("#cta",{scale:1.05,duration:0.36,ease:"sine.inOut",yoyo:true,repeat:3},14.16);
+      tl.set("#sheen",{xPercent:-160},14.8);
+      tl.to("#sheen",{xPercent:260,duration:0.8,ease:"power2.inOut"},14.86);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

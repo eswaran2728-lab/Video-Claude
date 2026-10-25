@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "MontBlack"; src: url("assets/fonts/Montserrat-Black.ttf") format("truetype"); font-weight: 900; }
+      @font-face { font-family: "MontXB"; src: url("assets/fonts/Montserrat-ExtraBold.ttf") format("truetype"); font-weight: 800; }
+      @font-face { font-family: "MontB"; src: url("assets/fonts/Montserrat-Bold.ttf") format("truetype"); font-weight: 700; }
+      @font-face { font-family: "TamilSans"; src: url("assets/fonts/NotoSansTamil.ttf") format("truetype"); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0c0907; }
+      body { --ivory: #f7f0e1; --gold: #e2b54a; --gold2: #fbe7a4; --gold3: #9a6d1e; --ink: rgba(14,10,7,0.82); --rose: #e9b9a0; }
+      .clip { position: absolute; inset: 0; }
+      .vid { width: 1080px; height: 1920px; object-fit: cover; }
+      .still { overflow: hidden; }
+      .still .pz { position: absolute; inset: 0; transform-origin: 50% 45%; }
+      .still img { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+      .still .fill { position: absolute; inset: 0; width: 1080px; height: 1920px; object-fit: cover; }
+      #pzE { transform-origin: 0 0; }
+      #pzG { transform-origin: 50% 0; }
+
+      /* readability scrims */
+      #botScrim { pointer-events: none; z-index: 4;
+        background: linear-gradient(0deg, rgba(10,7,4,0.0) 0%, rgba(10,7,4,0.0) 30%, rgba(10,7,4,0.62) 36%, rgba(10,7,4,0.35) 46%, rgba(10,7,4,0) 56%); }
+      #topScrim { pointer-events: none; z-index: 4;
+        background: radial-gradient(ellipse 340px 260px at 115px 245px, rgba(10,7,4,0.42) 0%, rgba(10,7,4,0.18) 55%, rgba(10,7,4,0) 100%); }
+
+      /* persistent Eshan Creations logo, top-left */
+      #brand { z-index: 30; pointer-events: none; }
+      #brand img { position: absolute; left: 40px; top: 158px; width: 150px; height: auto; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.65)); }
+
+      .gold { background: linear-gradient(180deg, var(--gold2) 0%, var(--gold) 52%, var(--gold3) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+      /* hook */
+      #hook { z-index: 10; pointer-events: none; }
+      #hookTitle { position: absolute; left: 0; width: 1080px; top: 1004px; text-align: center; transform-origin: 50% 70%; }
+      #hookTitle .t1 { font-family: "MontBlack"; font-size: 100px; line-height: 0.98; letter-spacing: 2px; filter: drop-shadow(0 6px 18px rgba(0,0,0,0.85)); }
+      #hookTitle .ta { margin-top: 10px; font-family: "TamilSans"; font-size: 44px; line-height: 1.3; color: var(--ivory); text-shadow: 0 3px 12px rgba(0,0,0,0.9); }
+      #stamp { position: absolute; left: 340px; top: 276px; width: 400px; height: 86px; border: 5px solid var(--gold2); border-radius: 14px;
+        background: rgba(150,22,22,0.88); color: var(--ivory); font-family: "MontBlack"; font-size: 46px; letter-spacing: 3px;
+        display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(0,0,0,0.55); }
+
+      /* reveal chip */
+      #chipB { position: absolute; left: 250px; top: 300px; width: 580px; white-space: nowrap; height: 84px; z-index: 10; border-radius: 42px;
+        background: var(--ink); border: 3px solid var(--gold); display: flex; align-items: center; justify-content: center; gap: 18px;
+        font-family: "MontXB"; font-size: 40px; color: var(--ivory); letter-spacing: 1px; }
+      #chipB b { color: var(--gold2); font-family: "MontBlack"; font-weight: 900; }
+
+      /* tracked callouts */
+      .callout { z-index: 12; pointer-events: none; }
+      .callout .lead { position: absolute; left: 0; top: 0; }
+      .callout line { stroke: var(--gold2); stroke-width: 4; stroke-dasharray: 600; stroke-linecap: round; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8)); }
+      .callout .dot { position: absolute; left: 0; top: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--gold2);
+        box-shadow: 0 0 0 6px rgba(14,10,7,0.65), 0 0 18px 6px rgba(251,231,164,0.55); }
+      .callout .lab { position: absolute; padding: 14px 22px; border-radius: 16px; background: var(--ink); border-left: 6px solid var(--gold);
+        font-family: "MontXB"; font-size: 36px; line-height: 1.12; color: var(--ivory); letter-spacing: 0.5px; max-width: 300px; }
+
+      /* eeti */
+      #eeti { z-index: 10; pointer-events: none; }
+      #ring { position: absolute; left: 40px; top: 770px; width: 260px; height: 260px; border-radius: 50%; border: 7px solid var(--gold2);
+        box-shadow: 0 0 0 5px rgba(14,10,7,0.45), 0 0 40px 8px rgba(251,231,164,0.45), inset 0 0 30px rgba(251,231,164,0.25); }
+      #eetiTxt { position: absolute; left: 0; width: 1080px; top: 1066px; text-align: center; }
+      #eetiL1 { font-family: "MontBlack"; font-size: 74px; line-height: 1.05; color: var(--ivory); text-shadow: 0 5px 18px rgba(0,0,0,0.9); }
+      #eetiL1 span { color: var(--gold2); }
+      #eetiL2 { display: inline-block; margin-top: 16px; padding: 10px 26px; border-radius: 30px; background: var(--ink); border: 2px solid var(--gold);
+        font-family: "MontB"; font-size: 38px; color: var(--ivory); }
+
+      /* price card (stays to the end) */
+      #price { position: absolute; left: 230px; top: 994px; width: 620px; height: 236px; z-index: 14; border-radius: 26px; overflow: hidden;
+        background: linear-gradient(180deg, rgba(24,17,11,0.92), rgba(12,8,5,0.92)); border: 3px solid var(--gold);
+        box-shadow: 0 18px 50px rgba(0,0,0,0.6); text-align: center; }
+      #price .p1 { margin-top: 20px; white-space: nowrap; font-family: "MontXB"; font-size: 34px; letter-spacing: 4px; color: var(--ivory); }
+      #price .p1 b { color: var(--gold2); font-weight: 800; }
+      #price .p2 { font-family: "MontBlack"; font-size: 120px; line-height: 1.06; }
+      #sheen { position: absolute; top: -40px; left: 0; width: 160px; height: 300px; transform: rotate(18deg);
+        background: linear-gradient(90deg, rgba(255,247,215,0), rgba(255,247,215,0.42), rgba(255,247,215,0)); }
+
+      /* end card */
+      #endDim { z-index: 6; pointer-events: none; background: linear-gradient(0deg, rgba(10,7,4,0.75) 0%, rgba(10,7,4,0.55) 40%, rgba(10,7,4,0.0) 62%); }
+      #endTxt { z-index: 15; pointer-events: none; }
+      #endT1 { position: absolute; left: 0; width: 1080px; top: 870px; text-align: center; font-family: "TamilSans"; font-size: 46px; color: var(--ivory); text-shadow: 0 3px 12px rgba(0,0,0,0.9); }
+      #endT2 { position: absolute; left: 0; width: 1080px; top: 1190px; text-align: center; font-family: "MontB"; font-size: 30px; color: var(--ivory); opacity: 0.92; }
+      #cta { position: absolute; left: 360px; top: 1150px; width: 360px; height: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="%%TOTAL%%" data-width="1080" data-height="1920">
+%%SLIDES%%
+
+      <div id="topScrim" class="clip" data-start="0" data-duration="%%TOTAL%%" data-track-index="2"></div>
+      <div id="botScrim" class="clip" data-start="0" data-duration="2.2" data-track-index="3"></div>
+      <div id="botScrim2" class="clip" data-start="11.0" data-duration="2.6" data-track-index="3" style="pointer-events:none;z-index:4;background:linear-gradient(0deg, rgba(10,7,4,0) 30%, rgba(10,7,4,0.66) 36%, rgba(10,7,4,0.35) 46%, rgba(10,7,4,0) 56%)"></div>
+      <div id="endDim" class="clip" data-start="15.6" data-duration="%%ENDD%%" data-track-index="3"></div>
+
+      <!-- HOOK: product name readable from frame 0 -->
+      <div id="hook" class="clip" data-start="0" data-duration="2.2" data-track-index="4">
+        <div id="hookTitle"><div class="t1 gold">SANGILI<br />KARUPPAR</div><div class="ta">சங்கிலி கருப்பர்</div></div>
+        <div id="stamp">READY STOCK</div>
+      </div>
+
+      <div id="chipB" class="clip" data-start="2.2" data-duration="3.4" data-track-index="4" style="inset:auto;left:250px;top:300px;width:580px;height:84px"><span>1 PIECE</span><b>·</b><span>READY STOCK</span></div>
+
+%%CALLOUTS%%
+
+      <!-- EETI -->
+      <div id="eeti" class="clip" data-start="11.0" data-duration="2.6" data-track-index="4">
+        <div id="ring"></div>
+        <div id="eetiTxt"><div id="eetiL1">WITH <span>EETI</span> IN HAND</div><div id="eetiL2">Eeti provided separately</div></div>
+      </div>
+
+      <!-- PRICE -->
+      <div id="price" class="clip" data-start="14.2" data-duration="%%PRICED%%" data-track-index="6" style="inset:auto;left:230px;top:994px;width:620px;height:236px">
+        <div class="p1">SANGILI KARUPPAR</div>
+        <div class="p2 gold">RM450</div>
+        <div id="sheen" data-layout-allow-overflow></div>
+      </div>
+
+      <!-- END CARD -->
+      <div id="endTxt" class="clip" data-start="15.6" data-duration="%%ENDD%%" data-track-index="7">
+        <div id="endT2">Eeti provided separately</div>
+      </div>
+      <div id="cta" class="clip" data-start="16.35" data-duration="%%CTAD%%" data-track-index="8" style="inset:auto;left:330px;top:1100px;width:420px;height:76px;border-radius:38px;background:#9a1616;border:3px solid #fbe7a4;display:flex;align-items:center;justify-content:center;font-family:MontBlack;font-size:38px;letter-spacing:2px;color:#f7f0e1;z-index:16;box-shadow:0 10px 30px rgba(0,0,0,0.6)">DM TO ORDER</div>
+
+      <!-- persistent branding, start to end -->
+      <div id="brand" class="clip" data-start="0" data-duration="%%TOTAL%%" data-track-index="9"><img src="assets/logo_eshan.png" alt="Eshan Creations" /></div>
+
+      <audio id="music" data-timeline-role="music" class="clip" src="assets/music.wav" data-start="0" data-duration="%%TOTAL%%" data-volume="1"></audio>
+%%SFX%%
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+%%JS%%
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+[
+ {
+  "sound": "tick",
+  "t": 5.05,
+  "gain": 0.6
+ },
+ {
+  "sound": "tick",
+  "t": 6.6,
+  "gain": 0.6
+ },
+ {
+  "sound": "hook-impact",
+  "t": 0.0,
+  "gain": 0.55
+ },
+ {
+  "sound": "thock",
+  "t": 1.31,
+  "gain": 0.7
+ },
+ {
+  "sound": "zoom-swish",
+  "t": 2.3,
+  "gain": 0.4
+ },
+ {
+  "sound": "ui-pop",
+  "t": 2.55,
+  "gain": 0.35
+ },
+ {
+  "sound": "camera-shutter-light",
+  "t": 9.21,
+  "gain": 0.45
+ },
+ {
+  "sound": "zoom-swish",
+  "t": 9.44,
+  "gain": 0.4
+ },
+ {
+  "sound": "ui-pop",
+  "t": 9.73,
+  "gain": 0.35
+ },
+ {
+  "sound": "metallic-riser",
+  "t": 12.05,
+  "gain": 0.32
+ },
+ {
+  "sound": "sub-impact",
+  "t": 12.05,
+  "gain": 0.7
+ },
+ {
+  "sound": "shimmer",
+  "t": 12.9,
+  "gain": 0.3
+ },
+ {
+  "sound": "ui-pop",
+  "t": 13.72,
+  "gain": 0.35
+ },
+ {
+  "sound": "clean-ding",
+  "t": 13.72,
+  "gain": 0.3
+ }
+]

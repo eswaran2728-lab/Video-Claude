@@ -1,0 +1,15 @@
+src/
+bgm/
+renders/
+snaps/
+snap*/
+*.jpg
+*.png
+*.mp4
+*.wav
+*.m4a
+*.log
+*.pb
+edit/node_modules/
+edit/.hyperframes/
+!edit/assets/logo_eshan.png
