@@ -1,0 +1,117 @@
+[
+ {
+  "sound": "hook-impact",
+  "t": 0.0,
+  "gain": 0.5
+ },
+ {
+  "sound": "camera-shutter-light",
+  "t": 2.23,
+  "gain": 0.4
+ },
+ {
+  "sound": "ui-pop",
+  "t": 2.57,
+  "gain": 0.3
+ },
+ {
+  "sound": "zoom-swish",
+  "t": 4.59,
+  "gain": 0.4
+ },
+ {
+  "sound": "tick",
+  "t": 4.64,
+  "gain": 0.45
+ },
+ {
+  "sound": "ui-pop",
+  "t": 5.36,
+  "gain": 0.4
+ },
+ {
+  "sound": "ui-pop",
+  "t": 7.03,
+  "gain": 0.4
+ },
+ {
+  "sound": "shimmer",
+  "t": 8.92,
+  "gain": 0.3
+ },
+ {
+  "sound": "ui-pop",
+  "t": 11.36,
+  "gain": 0.35
+ },
+ {
+  "sound": "zoom-swish",
+  "t": 14.47,
+  "gain": 0.35
+ },
+ {
+  "sound": "thock",
+  "t": 15.86,
+  "gain": 0.55
+ },
+ {
+  "sound": "tick",
+  "t": 17.45,
+  "gain": 0.5
+ },
+ {
+  "sound": "tick",
+  "t": 17.79,
+  "gain": 0.5
+ },
+ {
+  "sound": "tick",
+  "t": 18.29,
+  "gain": 0.5
+ },
+ {
+  "sound": "camera-shutter",
+  "t": 18.95,
+  "gain": 0.35
+ },
+ {
+  "sound": "ui-click",
+  "t": 19.78,
+  "gain": 0.45
+ },
+ {
+  "sound": "ui-click",
+  "t": 20.54,
+  "gain": 0.45
+ },
+ {
+  "sound": "thock",
+  "t": 23.08,
+  "gain": 0.6
+ },
+ {
+  "sound": "zoom-swish",
+  "t": 24.91,
+  "gain": 0.4
+ },
+ {
+  "sound": "ui-pop",
+  "t": 26.6,
+  "gain": 0.35
+ },
+ {
+  "sound": "ui-pop",
+  "t": 30.27,
+  "gain": 0.35
+ },
+ {
+  "sound": "zoom-swish",
+  "t": 32.44,
+  "gain": 0.45
+ },
+ {
+  "sound": "clean-ding",
+  "t": 33.07,
+  "gain": 0.35
+ }
+]

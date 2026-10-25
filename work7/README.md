@@ -46,3 +46,16 @@ Render: `cd edit && npx hyperframes@0.8.193 render . --quality draft`, then 2-pa
 ## Final (approved v04)
 `FINAL_AVSEC_Keychains_EshanCreations_1080x1920.mp4` — `hyperframes render --quality high --fps 30`, video stream
 copied, audio 2-pass loudnorm to −14 LUFS / −1.5 dBTP, AAC 256k 48 kHz, faststart. 35.6 s, H.264 1080x1920 30 fps.
+
+## v05 — motion graphics for each spoken line + matching b-roll
+`python3 mk_v05_clips.py && python3 build_v05.py` (template `index_v05.tpl.html`, timing `edit/timing_map_v05.json`,
+cues `edit/cues_v05.json`). v04 (approved final) is untouched: `python3 build.py` rebuilds it.
+- 2.3–4.4 s speaker + "COMPANY ORDER" chip.
+- 4.4–19.1 s graphics panel (top) over relit b-roll panes (bottom, `edit/assets/v5`):
+  50-plane grid counting to 50 + GIVEAWAY badge (b-roll: bunch of keychains in hand) → blueprint: the plane outline
+  draws itself ("I designed"), fills black/red/white ("multi-colour") → the same plane turns isometric and explodes
+  into its three layers, labels on "red", "black", "white" (b-roll: box pour, macro).
+- 19.1–25.8 s checklist, then a box closes ("as soon as possible") and ships ("deliver").
+- 25.8–32.2 s BULK ORDERS, DM button with typing dots.
+The plane icon is a clean vector illustration in the product's colours (red body, black base, white AVSEC print);
+tracing the real keychain from footage was too distorted by perspective.
