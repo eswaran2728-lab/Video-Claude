@@ -3,7 +3,9 @@ import json, os
 HERE = os.path.dirname(os.path.abspath(__file__))
 E = os.path.join(HERE, "edit")
 exec(open(os.path.join(HERE, "edl.py")).read())
-GP = os.path.join(HERE, "grade_attr.txt")
+VERSION = os.environ.get("VERSION", "v02")      # v01: original clips + light grade; v02: relit clips + cinematic grade + light leaks
+AD = "v/" if VERSION == "v01" else "vc/"
+GP = os.path.join(HERE, "grade_attr.txt" if VERSION == "v01" else "grade_cine_attr.txt")
 GRADE = open(GP).read().strip() if os.path.exists(GP) else ""
 g = (lambda: f' data-color-grading="{GRADE}"') if GRADE else (lambda: "")
 FPS = 30
@@ -24,11 +26,11 @@ for vid, layout, clip, a, o0, o1, note in V:
     d = round(o1 - o0, 3)
     vis.append(f"      <!-- {vid} ({layout}): {note} -->")
     if layout == "split":
-        vis.append(f'      <video id="m{vid}" class="clip src" src="assets/v/{vid}.mp4" muted playsinline data-start="{o0}" data-duration="{d}" data-track-index="1" style="inset:auto;left:0;top:0;width:1080px;height:1000px;object-fit:cover;object-position:50% 50%"{g()}></video>')
-        vis.append(f'      <video id="m{vid}f" class="clip src" src="assets/v/{vid}_face.mp4" muted playsinline data-start="{o0}" data-duration="{d}" data-track-index="2" style="inset:auto;left:0;top:960px;width:1080px;height:960px;object-fit:cover;object-position:50% 7%"{g()}></video>')
+        vis.append(f'      <video id="m{vid}" class="clip src" src="assets/{AD}{vid}_top.mp4" muted playsinline data-start="{o0}" data-duration="{d}" data-track-index="1" style="inset:auto;left:0;top:0;width:1080px;height:1000px"{g()}></video>')
+        vis.append(f'      <video id="m{vid}f" class="clip src" src="assets/{AD}{vid}_faceC.mp4" muted playsinline data-start="{o0}" data-duration="{d}" data-track-index="2" style="inset:auto;left:0;top:960px;width:1080px;height:960px"{g()}></video>')
         vis.append(f'      <div id="seam{vid}" class="clip" data-start="{o0}" data-duration="{d}" data-track-index="3" style="inset:auto;left:0;top:900px;width:1080px;height:140px;background:linear-gradient(180deg, rgba(11,11,13,0) 0%, rgba(11,11,13,0.85) 50%, rgba(11,11,13,0) 100%)"></div>')
     else:
-        vis.append(f'      <video id="m{vid}" class="clip vid src" src="assets/v/{vid}.mp4" muted playsinline data-start="{o0}" data-duration="{d}" data-track-index="1"{g()}></video>')
+        vis.append(f'      <video id="m{vid}" class="clip vid src" src="assets/{AD}{vid}.mp4" muted playsinline data-start="{o0}" data-duration="{d}" data-track-index="1"{g()}></video>')
 
 # camera moves, each tied to a beat
 js += [
@@ -109,7 +111,14 @@ json.dump([{"sound": s, "t": round(t, 3), "gain": gn} for s, t, gn in SFX], open
 sfx = [f'      <audio id="sx{n}" class="clip" src="assets/sfx/{s}.wav" data-start="{max(0.0, round(t - PEAK.get(s, 0.0), 3))}" data-duration="{DUR[s]}" data-volume="{gn}"></audio>'
        for n, (s, t, gn) in enumerate(SFX)]
 
-rep = {"%%TOTAL%%": TOTAL, "%%SPEECH_END%%": SPEECH_END, "%%VISUALS%%": "\n".join(vis), "%%CAPTIONS%%": "\n".join(caps),
+# warm light leaks on the two big transitions (v02)
+leaks = []
+if VERSION != "v01":
+    for n, (t0, d) in enumerate(((V[1][4] - 0.25, 0.75), (V[10][4] - 0.1, 1.1))):
+        leaks.append(f'      <div id="leak{n}" class="clip leak" data-start="{round(t0, 3)}" data-duration="{d}" data-track-index="4"><i class="a"></i><i class="g"></i></div>')
+        js.append(f'tl.fromTo("#leak{n}",{{opacity:0,x:-140}},{{opacity:0.85,x:0,duration:{d / 2},ease:"sine.out"}},{round(t0, 3)});')
+        js.append(f'tl.to("#leak{n}",{{opacity:0,x:120,duration:{d / 2},ease:"sine.in"}},{round(t0 + d / 2, 3)});')
+rep = {"%%LEAKS%%": "\n".join(leaks), "%%TOTAL%%": TOTAL, "%%SPEECH_END%%": SPEECH_END, "%%VISUALS%%": "\n".join(vis), "%%CAPTIONS%%": "\n".join(caps),
        "%%SFX%%": "\n".join(sfx), "%%JS%%": "\n".join("      " + l for l in js),
        "%%COUNT_T%%": COUNT_T, "%%COUNT_D%%": round(V[1][5] - COUNT_T, 3),
        "%%COLS_T%%": COLS_T, "%%COLS_D%%": round(V[5][5] - COLS_T, 3),

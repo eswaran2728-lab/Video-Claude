@@ -23,4 +23,9 @@ with open("edit/assets/dlg_list.txt", "w") as f:
 subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", "edit/assets/dlg_list.txt", "-af", "loudnorm=I=-16:TP=-2:LRA=7", "-ar", "48000", "-c:a", "pcm_s16le", "edit/assets/dialogue.wav"], check=True)
 for p in parts: os.remove(p)
 os.remove("edit/assets/dlg_list.txt")
+# split panes are pre-cropped (the colour-grading wrapper does not honour object-position)
+for vid, layout, *_ in V:
+    if layout == "split":
+        subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-i", f"{A}/{vid}.mp4", "-vf", "crop=1080:1000:0:460", "-c:v", "libx264", "-crf", "16", "-pix_fmt", "yuv420p", f"{A}/{vid}_top.mp4"], check=True)
+        subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-i", f"{A}/{vid}_face.mp4", "-vf", "crop=1080:960:0:67", "-c:v", "libx264", "-crf", "16", "-pix_fmt", "yuv420p", f"{A}/{vid}_faceC.mp4"], check=True)
 print("ok", SPEECH_END)

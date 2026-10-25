@@ -16,3 +16,13 @@ Files: `edl.py` (speech + visual EDL), `make_assets.py` (clips + denoised/normal
 (ducked bed), `build.py` -> `edit/index.html` (timing map `edit/timing_map.json`, SFX cues `edit/cues.json`),
 `gen_bgm.py` (local MusicGen-small bed, AI-generated placeholder), `grade_attr.txt`.
 Render: `cd edit && npx hyperframes@0.8.193 render . --quality draft`, then 2-pass loudnorm to -14 LUFS.
+
+## v02 — cinematic colour + lighting
+- `relight.py` (edit/assets/v -> edit/assets/vc): face shots get a CSRT-tracked warm key light on the face, torso and
+  keychain table kept lit, background shelves fall into shadow; product b-roll gets a warm pool of light with darker
+  edges; soft highlight roll-off. Face paths in `edit/assets/vc/face_track.json`.
+- Grade `grade_cine_attr.txt`: contrast +0.14, highlights −0.12, blacks −0.06, teal shadows / amber highlights
+  (wheels), vignette 0.22, grain 0.05. Warm light leaks on the hook→speaker cut and into the end card.
+- Split panes are pre-cropped (`V4_top`, `V4_faceC`): the grading wrapper ignores `object-position`, which had
+  dropped the face out of the lower pane in v01.
+- Build: `python3 build.py` (v02, default) or `VERSION=v01 python3 build.py`.
