@@ -35,3 +35,10 @@ Render: `cd edit && npx hyperframes@0.8.193 render . --quality draft`, then 2-pa
 - Caption "I'll deliver them to you" -> "I'll deliver them" (models disagree: "to you" vs "tomorrow").
 - Build: `VERSION=v03 python3 make_assets.py && VERSION=v03 python3 relight.py && python3 build.py` (v03 default;
   `VERSION=v02` / `VERSION=v01` rebuild earlier versions).
+
+## v04 — lower face light, stronger cinematic grade
+- `relight.py` v04 (`edit/assets/vc4`): face sits slightly below its original brightness (base 0.86, key −0.08,
+  no added warmth); table and torso stay lit.
+- Grade `grade_v04_attr.txt`: filmic master S-curve with a slightly matte black, blue lifted in shadows / pulled in
+  highlights, teal shadows + amber highlights (wheels), saturation −0.06, vignette 0.30, grain 0.06.
+- Build: `VERSION=v04 python3 relight.py && python3 build.py` (v04 default).

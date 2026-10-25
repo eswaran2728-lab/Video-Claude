@@ -3,10 +3,10 @@ import json, os
 HERE = os.path.dirname(os.path.abspath(__file__))
 E = os.path.join(HERE, "edit")
 exec(open(os.path.join(HERE, "edl.py")).read())
-VERSION = os.environ.get("VERSION", "v03")      # v01 light grade; v02 relit + cinematic grade + leaks; v03 = v02 with denoised dialogue + gentler face light
-AD = {"v01": "v/", "v02": "vc/"}.get(VERSION, "vc3/")
+VERSION = os.environ.get("VERSION", "v04")      # v01 light grade; v02 relit + cinematic grade + leaks; v03 denoised + gentler face; v04 lower face light + stronger cinematic grade
+AD = {"v01": "v/", "v02": "vc/", "v03": "vc3/"}.get(VERSION, "vc4/")
 DLG = "dialogue_v03.wav" if VERSION not in ("v01", "v02") else "dialogue.wav"
-GP = os.path.join(HERE, "grade_attr.txt" if VERSION == "v01" else "grade_cine_attr.txt")  # v03 keeps the v02 grade
+GP = os.path.join(HERE, {"v01": "grade_attr.txt", "v02": "grade_cine_attr.txt", "v03": "grade_cine_attr.txt"}.get(VERSION, "grade_v04_attr.txt"))
 GRADE = open(GP).read().strip() if os.path.exists(GP) else ""
 g = (lambda: f' data-color-grading="{GRADE}"') if GRADE else (lambda: "")
 FPS = 30
