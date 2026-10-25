@@ -1,0 +1,11 @@
+proxy/
+*.mp4
+*.wav
+*.png
+*.jpg
+*.log
+snap*/
+renders/
+edit/node_modules/
+edit/.hyperframes/
+!edit/assets/logo_eshan.png
