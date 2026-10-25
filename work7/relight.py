@@ -3,7 +3,9 @@
 # fall off into shadow. Product b-roll: a warm pool of light on the product, darker frame edges.
 # A soft highlight roll-off keeps faces and white packaging from clipping.
 import cv2, numpy as np, subprocess, os, json
-SRC, DST = "edit/assets/v", "edit/assets/vc"
+VERSION = os.environ.get("VERSION", "v03")
+SRC, DST = "edit/assets/v", ("edit/assets/vc" if VERSION == "v02" else "edit/assets/vc3")
+KEY, WARM = (0.36, 0.06) if VERSION == "v02" else (0.10, 0.025)   # v03: much gentler light on the face
 os.makedirs(DST, exist_ok=True)
 W, H = 1080, 1920
 FACE = {"V2": (380, 330, 240, 300), "V4_face": (320, 330, 250, 310), "V10": (400, 290, 250, 310), "V12": (660, 40, 240, 260)}
@@ -17,14 +19,14 @@ def softclip(x, knee=0.82):
 def grade(frame, gain, warm):
     f = frame.astype(np.float32) / 255.0
     f = f * gain[..., None]
-    f[..., 2] *= 1 + 0.06 * warm; f[..., 1] *= 1 + 0.015 * warm; f[..., 0] *= 1 - 0.06 * warm
+    f[..., 2] *= 1 + WARM * warm; f[..., 1] *= 1 + 0.015 * warm; f[..., 0] *= 1 - WARM * warm
     return (softclip(np.clip(f, 0, 1.5)) * 255).clip(0, 255).astype(np.uint8)
 
 def face_gain(cx, cy, fw, fh):
     key = np.exp(-(((xx - cx) / (1.25 * fw)) ** 2 + ((yy - cy) / (1.15 * fh)) ** 2))
     torso = np.exp(-(((xx - cx) / (2.6 * fw)) ** 2 + ((yy - (cy + 1.9 * fh)) / (1.6 * fh)) ** 2))
     table = np.clip((yy - 0.6 * H) / (0.12 * H), 0, 1)
-    g = 0.74 + 0.36 * key + 0.16 * torso + 0.2 * table
+    g = 0.84 + KEY * key + 0.1 * torso + 0.16 * table if VERSION != "v02" else 0.74 + 0.36 * key + 0.16 * torso + 0.2 * table
     return np.minimum(g, 1.12), key
 
 def broll_gain():

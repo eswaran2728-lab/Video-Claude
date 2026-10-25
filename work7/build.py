@@ -3,9 +3,10 @@ import json, os
 HERE = os.path.dirname(os.path.abspath(__file__))
 E = os.path.join(HERE, "edit")
 exec(open(os.path.join(HERE, "edl.py")).read())
-VERSION = os.environ.get("VERSION", "v02")      # v01: original clips + light grade; v02: relit clips + cinematic grade + light leaks
-AD = "v/" if VERSION == "v01" else "vc/"
-GP = os.path.join(HERE, "grade_attr.txt" if VERSION == "v01" else "grade_cine_attr.txt")
+VERSION = os.environ.get("VERSION", "v03")      # v01 light grade; v02 relit + cinematic grade + leaks; v03 = v02 with denoised dialogue + gentler face light
+AD = {"v01": "v/", "v02": "vc/"}.get(VERSION, "vc3/")
+DLG = "dialogue_v03.wav" if VERSION not in ("v01", "v02") else "dialogue.wav"
+GP = os.path.join(HERE, "grade_attr.txt" if VERSION == "v01" else "grade_cine_attr.txt")  # v03 keeps the v02 grade
 GRADE = open(GP).read().strip() if os.path.exists(GP) else ""
 g = (lambda: f' data-color-grading="{GRADE}"') if GRADE else (lambda: "")
 FPS = 30
@@ -86,7 +87,7 @@ CAP = [
     (w(2, 14.88), w(2, 17.90), "As you can see, every keychain here comes in <b>3 colours</b>:"),
     (w(2, 17.98), w(2, 19.90), f"{R}, {K} and {WH}."),
     (w(3, 6.22), w(3, 9.30), "I've done the <b>design</b> and <b>packaging</b>."),
-    (w(3, 9.80), w(3, 12.84), "As soon as possible, I'll deliver them to you."),
+    (w(3, 9.80), w(3, 12.84), "As soon as possible, I'll deliver them." if VERSION not in ("v01", "v02") else "As soon as possible, I'll deliver them to you."),  # v03: "to you"/"tomorrow" unverified
     (w(4, 35.12), w(4, 37.40), "If you want <b>bulk orders</b> like this,"),
     (w(4, 37.54), w(4, 41.30), "contact me or <b>DM</b> me."),
 ]
@@ -118,7 +119,7 @@ if VERSION != "v01":
         leaks.append(f'      <div id="leak{n}" class="clip leak" data-start="{round(t0, 3)}" data-duration="{d}" data-track-index="4"><i class="a"></i><i class="g"></i></div>')
         js.append(f'tl.fromTo("#leak{n}",{{opacity:0,x:-140}},{{opacity:0.85,x:0,duration:{d / 2},ease:"sine.out"}},{round(t0, 3)});')
         js.append(f'tl.to("#leak{n}",{{opacity:0,x:120,duration:{d / 2},ease:"sine.in"}},{round(t0 + d / 2, 3)});')
-rep = {"%%LEAKS%%": "\n".join(leaks), "%%TOTAL%%": TOTAL, "%%SPEECH_END%%": SPEECH_END, "%%VISUALS%%": "\n".join(vis), "%%CAPTIONS%%": "\n".join(caps),
+rep = {"%%DLG%%": DLG, "%%LEAKS%%": "\n".join(leaks), "%%TOTAL%%": TOTAL, "%%SPEECH_END%%": SPEECH_END, "%%VISUALS%%": "\n".join(vis), "%%CAPTIONS%%": "\n".join(caps),
        "%%SFX%%": "\n".join(sfx), "%%JS%%": "\n".join("      " + l for l in js),
        "%%COUNT_T%%": COUNT_T, "%%COUNT_D%%": round(V[1][5] - COUNT_T, 3),
        "%%COLS_T%%": COLS_T, "%%COLS_D%%": round(V[5][5] - COLS_T, 3),

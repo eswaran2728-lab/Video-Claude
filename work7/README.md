@@ -26,3 +26,12 @@ Render: `cd edit && npx hyperframes@0.8.193 render . --quality draft`, then 2-pa
 - Split panes are pre-cropped (`V4_top`, `V4_faceC`): the grading wrapper ignores `object-position`, which had
   dropped the face out of the lower pane in v01.
 - Build: `python3 build.py` (v02, default) or `VERSION=v01 python3 build.py`.
+
+## v03 — background noise removed, gentler face light
+- `denoise.py`: spectral noise reduction per speech clip (noise profile from the quietest 15% of frames, Wiener-style
+  gain with floor + smoothing, pauses lowered further) -> `edit/assets/clean_*.wav`. Dialogue noise floor
+  -33 dB -> -56 dB with speech level unchanged; re-transcription of the cleaned audio is as complete as the original.
+- `relight.py` v03 (`edit/assets/vc3`): face key light 0.36 -> 0.10, warmth 0.06 -> 0.025, background falloff softer.
+- Caption "I'll deliver them to you" -> "I'll deliver them" (models disagree: "to you" vs "tomorrow").
+- Build: `VERSION=v03 python3 make_assets.py && VERSION=v03 python3 relight.py && python3 build.py` (v03 default;
+  `VERSION=v02` / `VERSION=v01` rebuild earlier versions).
