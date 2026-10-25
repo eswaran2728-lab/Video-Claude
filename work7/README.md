@@ -59,3 +59,7 @@ cues `edit/cues_v05.json`). v04 (approved final) is untouched: `python3 build.py
 - 25.8–32.2 s BULK ORDERS, DM button with typing dots.
 The plane icon is a clean vector illustration in the product's colours (red body, black base, white AVSEC print);
 tracing the real keychain from footage was too distorted by perspective.
+
+## Final v05b (approved)
+`FINAL_AVSEC_Keychains_MotionGFX_EshanCreations_1080x1920.mp4` — `python3 build_v05.py`, `hyperframes render --quality high
+--fps 30`, video copied, audio 2-pass loudnorm −14 LUFS / −1.5 dBTP, AAC 256k 48 kHz, faststart. 35.6 s, 1080x1920 30 fps.
