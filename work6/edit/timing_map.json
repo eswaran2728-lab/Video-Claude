@@ -64,19 +64,19 @@
   "kind": "video",
   "asset": "segF",
   "out_start": 11.34,
-  "out_end": 13.11,
+  "out_end": 11.9,
   "source_in": 13.4,
-  "source_out": 15.17,
-  "note": "pull back; statue slides right, price appears beside it"
+  "source_out": 13.93,
+  "note": "pull back to the full statue"
  },
  {
   "id": "G",
   "kind": "img",
   "asset": "frzG",
-  "out_start": 13.11,
+  "out_start": 11.9,
   "out_end": 16.6,
-  "source_in": 15.17,
-  "source_out": 15.17,
-  "note": "end card, song outro"
+  "source_in": 13.93,
+  "source_out": 13.93,
+  "note": "freeze; statue steps right for the price, end card, song outro"
  }
 ]

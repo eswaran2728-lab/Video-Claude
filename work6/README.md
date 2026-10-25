@@ -43,3 +43,12 @@ SFX: FavStash edit-video pack (Apache-2.0, synthesized). Fonts: Montserrat (OFL)
   freeze frames rendered as short plate videos so the light keeps moving, dust motes overlay (`dust.webm`).
 - Grade (`grade_cine_attr.txt`): contrast +0.14, blacks −0.06, highlights −0.1, teal shadows / amber highlights
   split-tone, vignette 0.32, grain 0.12. Build: `python3 build_v3.py`.
+
+## v04 — clean (fixes the glitchy look of v03)
+- `scripts/composite_clean.py bgx/plate_final.jpg edit/assets/v4` (`ONLY=segF,frzG` re-renders selected parts):
+  flow-aligned temporal denoise of the source, matte = neighbour masks warped onto each frame and averaged
+  (no edge boiling) + guided filter + choke + edge colour decontamination (no sky halo), gentler relight with a
+  soft inner backlight, smoothed plate motion, no dust/grain.
+- End card freezes on 13.93 s (last frame where the face is clean; later frames are washed out by the sky and
+  carry tree leaves in the matte), then the statue steps right for the price.
+- Grade `grade_clean_attr.txt` (no grain, vignette 0.28). Build: `python3 build_v4.py`.
