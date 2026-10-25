@@ -1,12 +1,12 @@
 [
  {
   "sound": "tick",
-  "t": 5.05,
+  "t": 4.95,
   "gain": 0.6
  },
  {
   "sound": "tick",
-  "t": 6.6,
+  "t": 6.3,
   "gain": 0.6
  },
  {
@@ -26,7 +26,7 @@
  },
  {
   "sound": "ui-pop",
-  "t": 2.55,
+  "t": 2.57,
   "gain": 0.35
  },
  {
@@ -41,23 +41,23 @@
  },
  {
   "sound": "ui-pop",
-  "t": 9.73,
+  "t": 9.7,
+  "gain": 0.35
+ },
+ {
+  "sound": "zoom-swish",
+  "t": 12.25,
   "gain": 0.35
  },
  {
   "sound": "metallic-riser",
-  "t": 12.05,
-  "gain": 0.32
+  "t": 12.25,
+  "gain": 0.3
  },
  {
   "sound": "sub-impact",
-  "t": 12.05,
+  "t": 12.25,
   "gain": 0.7
- },
- {
-  "sound": "shimmer",
-  "t": 12.9,
-  "gain": 0.3
  },
  {
   "sound": "ui-pop",

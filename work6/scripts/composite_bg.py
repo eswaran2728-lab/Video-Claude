@@ -35,6 +35,15 @@ def mask(fi):
 def alpha_for(fi, lo, hi):
     ms = [mask(j) for j in (fi - 1, fi, fi + 1) if lo <= j <= hi and os.path.exists(f"bgx/masks/{j:05d}.png")]
     m = np.median(np.stack(ms), 0).astype(np.uint8) if len(ms) == 3 else mask(fi)
+    # drop foliage the matte picked up (the statue has no green: it is black, gold, red and white)
+    f = frames.get(fi)
+    if f is not None:
+        b_, g_, r_ = [f[..., i].astype(np.int16) for i in range(3)]
+        rim_zone = (m > 20) & (cv2.erode(m, np.ones((61, 61), np.uint8)) < 128)  # only near the matte edge
+        green = ((g_ - r_ > 10) & (g_ - b_ > 6) & (g_ > 60) & rim_zone).astype(np.uint8)
+        green = cv2.morphologyEx(green, cv2.MORPH_OPEN, np.ones((3, 3), np.uint8))
+        green = cv2.dilate(green, np.ones((5, 5), np.uint8))
+        m = (m.astype(np.float32) * (1 - green)).astype(np.uint8)
     m = cv2.erode(m, np.ones((3, 3), np.uint8))
     m = cv2.GaussianBlur(m, (0, 0), 1.2)
     return m.astype(np.float32) / 255.0

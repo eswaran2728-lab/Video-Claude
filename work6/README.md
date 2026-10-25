@@ -25,3 +25,13 @@ Cut points snap to strong onsets of the song. Full map: `edit/timing_map.json`; 
 5. `cd edit && npx hyperframes@0.8.193 check` then `render . --quality draft` (preview) / `--quality high` (final, after approval).
 
 SFX: FavStash edit-video pack (Apache-2.0, synthesized). Fonts: Montserrat (OFL), Noto Sans Tamil (OFL).
+
+## v02 — temple background, text behind the statue
+- `scripts/mask_fast.py`: BiRefNet-lite mattes on every 2nd frame (+ optical-flow fill), statue + rock only.
+- `scripts/composite_bg.py bgx/plate_final.jpg edit/assets/v2`: per segment a plate layer (`*_bg.mp4`, moves with the
+  original camera via damped feature tracking) and a statue layer (`*_fg.webm`, VP9 alpha, carries its own contact
+  shadow + floor reflection, warm rim light, foliage removed from the matte edge).
+- Plate: AI-generated temple doorway set (Gamma), doorway glow added in code. Not a photo of a real temple.
+- `python3 build_v2.py` → `edit/index.html`. Layer order: plate < titles < statue < pointer dots/pills < logo.
+  `hyperframes check` reports `text_occluded` on the behind-the-statue titles: that is the intended depth effect
+  (verified on snapshots). v01 is rebuilt with `ASSET_DIR= python3 build.py`.

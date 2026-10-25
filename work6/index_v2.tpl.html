@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "MontBlack"; src: url("assets/fonts/Montserrat-Black.ttf") format("truetype"); font-weight: 900; }
+      @font-face { font-family: "MontXB"; src: url("assets/fonts/Montserrat-ExtraBold.ttf") format("truetype"); font-weight: 800; }
+      @font-face { font-family: "MontB"; src: url("assets/fonts/Montserrat-Bold.ttf") format("truetype"); font-weight: 700; }
+      @font-face { font-family: "TamilSans"; src: url("assets/fonts/NotoSansTamil.ttf") format("truetype"); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0c0907; }
+      body { --ivory: #f7f0e1; --gold: #e2b54a; --gold2: #fbe7a4; --gold3: #9a6d1e; --ink: rgba(14,10,7,0.82); }
+      .clip { position: absolute; inset: 0; }
+      /* layer order: temple plate (1) < text behind the statue (3) < statue cut-out (5) < pointers/pills (8) < logo (9) */
+      .bgL { z-index: 1; width: 1080px; height: 1920px; object-fit: cover; }
+      .fgL { z-index: 5; width: 1080px; height: 1920px; object-fit: cover; }
+      .bgL, .fgL { transform-origin: 50% 45%; }
+      #bgE, #fgE { transform-origin: 0 0; }
+      .behind { z-index: 3; pointer-events: none; }
+      .front { z-index: 8; pointer-events: none; }
+
+      .gold { background: linear-gradient(180deg, var(--gold2) 0%, var(--gold) 52%, var(--gold3) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      .shadowed { filter: drop-shadow(0 6px 16px rgba(0,0,0,0.85)); }
+
+      /* hook masthead, sits behind the head */
+      #mast { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; text-align: center; }
+      #mast .ta { position: absolute; left: 0; width: 1080px; top: 284px; font-family: "TamilSans"; font-size: 44px; line-height: 1.2; color: var(--ivory); text-shadow: 0 3px 12px rgba(0,0,0,0.9); }
+      #mast .t1 { position: absolute; left: 0; width: 1080px; top: 336px; font-family: "MontBlack"; font-size: 124px; line-height: 1.0; letter-spacing: 2px; }
+      #stamp { position: absolute; left: 34px; top: 350px; width: 250px; padding: 14px 0; border: 5px solid var(--gold2); border-radius: 16px;
+        background: rgba(150,22,22,0.92); color: var(--ivory); font-family: "MontBlack"; font-size: 54px; line-height: 1.02; letter-spacing: 2px; text-align: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.55); }
+
+      /* reveal */
+      #headB { position: absolute; left: 0; top: 330px; width: 1080px; text-align: center; font-family: "MontBlack"; font-size: 84px; line-height: 1.0; letter-spacing: 1px; }
+      #pieceB { position: absolute; left: 40px; top: 1150px; width: 230px; height: 74px; border-radius: 37px; background: var(--ink); border: 3px solid var(--gold);
+        display: flex; align-items: center; justify-content: center; font-family: "MontBlack"; font-size: 38px; color: var(--gold2); letter-spacing: 1px; }
+
+      /* tracked callouts: label behind the statue, pointer in front */
+      .lab { position: absolute; padding: 12px 18px; border-radius: 14px; background: var(--ink); border-left: 6px solid var(--gold);
+        font-family: "MontXB"; font-size: 30px; line-height: 1.12; color: var(--ivory); letter-spacing: 0.5px; width: 250px; }
+      .lead { position: absolute; left: 0; top: 0; }
+      .lead line { stroke: var(--gold2); stroke-width: 4; stroke-dasharray: 700; stroke-linecap: round; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8)); }
+      .dot { position: absolute; left: 0; top: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--gold2);
+        box-shadow: 0 0 0 6px rgba(14,10,7,0.65), 0 0 18px 6px rgba(251,231,164,0.55); }
+
+      /* eeti */
+      #ring { position: absolute; left: 40px; top: 770px; width: 260px; height: 260px; border-radius: 50%; border: 7px solid var(--gold2);
+        box-shadow: 0 0 0 5px rgba(14,10,7,0.45), 0 0 40px 8px rgba(251,231,164,0.45); }
+      #eetiTxt { position: absolute; left: 72px; top: 318px; width: 600px; }
+      #eetiTxt .w { font-family: "MontBlack"; font-size: 92px; line-height: 1.02; color: var(--ivory); text-shadow: 0 5px 18px rgba(0,0,0,0.9); }
+      #eetiTxt .e { font-family: "MontBlack"; font-size: 150px; line-height: 0.98; }
+      #eetiNote { position: absolute; left: 60px; top: 1092px; width: 440px; height: 64px; border-radius: 32px; background: var(--ink); border: 2px solid var(--gold);
+        display: flex; align-items: center; justify-content: center; font-family: "MontB"; font-size: 32px; color: var(--ivory); }
+
+      /* price + end card */
+      #endShade { z-index: 2; pointer-events: none; background: linear-gradient(90deg, rgba(8,5,3,0.7) 0%, rgba(8,5,3,0.45) 38%, rgba(8,5,3,0) 60%); }
+      #endTitle { position: absolute; left: 0; width: 1080px; top: 340px; text-align: center; }
+      #endTitle .t1 { font-family: "MontBlack"; font-size: 80px; line-height: 1.0; letter-spacing: 2px; }
+      #endTitle .ta { margin-top: 10px; font-family: "TamilSans"; font-size: 42px; line-height: 1.25; color: var(--ivory); text-shadow: 0 3px 12px rgba(0,0,0,0.9); }
+      #priceTxt { position: absolute; left: 60px; top: 640px; width: 520px; }
+      #priceTxt .rs { font-family: "MontXB"; font-size: 34px; letter-spacing: 4px; color: var(--ivory); }
+      #priceTxt .p2 { font-family: "MontBlack"; font-size: 132px; line-height: 1.05; }
+      #priceTxt .rd { margin-top: 6px; font-family: "MontXB"; font-size: 34px; letter-spacing: 3px; color: var(--gold2); }
+      #endNote { position: absolute; left: 60px; top: 1000px; width: 460px; font-family: "MontB"; font-size: 30px; color: var(--ivory); text-shadow: 0 3px 10px rgba(0,0,0,0.9); }
+
+      #brand img { position: absolute; left: 40px; top: 158px; width: 150px; height: auto; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.65)); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="%%TOTAL%%" data-width="1080" data-height="1920">
+%%LAYERS%%
+
+      <!-- ===== text BEHIND the statue ===== -->
+      <div id="mast" data-layout-allow-overlap class="clip behind" data-start="0" data-duration="1.31" data-track-index="3">
+        <div class="ta">சங்கிலி கருப்பர்</div>
+        <div class="t1 gold shadowed">SANGILI<br />KARUPPAR</div>
+      </div>
+      <div id="headB" data-layout-allow-overlap class="clip behind gold shadowed" data-start="2.25" data-duration="2.66" data-track-index="3" style="inset:auto;left:0;top:330px;width:1080px">PAINTED STATUE</div>
+%%LABELS%%
+      <div id="eetiTxt" data-layout-allow-overlap class="clip behind" data-start="9.21" data-duration="2.13" data-track-index="3" style="inset:auto;left:72px;top:318px;width:600px">
+        <div class="w">WITH</div><div class="e gold shadowed">EETI</div><div class="w">IN HAND</div>
+      </div>
+      <div id="endShade" class="clip" data-start="12.05" data-duration="%%PRICED%%" data-track-index="2"></div>
+      <div id="endTitle" data-layout-allow-overlap class="clip behind" data-start="12.05" data-duration="%%PRICED%%" data-track-index="3" style="inset:auto;left:0;top:340px;width:1080px">
+        <div class="t1 gold shadowed">SANGILI KARUPPAR</div><div class="ta">சங்கிலி கருப்பர்</div>
+      </div>
+      <div id="priceTxt" data-layout-allow-overlap class="clip behind" data-start="12.05" data-duration="%%PRICED%%" data-track-index="3" style="inset:auto;left:60px;top:640px;width:520px">
+        <div class="rs">PRICE</div><div class="p2 gold shadowed">RM450</div><div class="rd">READY STOCK</div>
+      </div>
+      <div id="endNote" data-layout-allow-overlap class="clip behind" data-start="13.69" data-duration="%%CTAD%%" data-track-index="3" style="inset:auto;left:60px;top:1000px;width:460px">Eeti provided separately</div>
+
+      <!-- ===== FRONT: pointers, pills, logo ===== -->
+      <div id="stamp" class="clip front" data-start="1.31" data-duration="0.94" data-track-index="7" style="inset:auto;left:34px;top:350px;width:250px">READY<br />STOCK</div>
+      <div id="pieceB" class="clip front" data-start="2.25" data-duration="2.66" data-track-index="7" style="inset:auto;left:40px;top:1150px;width:230px;height:74px">1 PIECE</div>
+%%POINTERS%%
+      <div id="ring" class="clip front" data-start="9.21" data-duration="2.13" data-track-index="7" style="inset:auto;left:40px;top:770px;width:260px;height:260px"></div>
+      <div id="eetiNote" class="clip front" data-start="9.21" data-duration="2.13" data-track-index="7" style="inset:auto;left:60px;top:1092px;width:440px;height:64px">Eeti provided separately</div>
+      <div id="cta" class="clip front" data-start="13.69" data-duration="%%CTAD%%" data-track-index="7" style="inset:auto;left:60px;top:900px;width:380px;height:76px;border-radius:38px;background:#9a1616;border:3px solid #fbe7a4;display:flex;align-items:center;justify-content:center;font-family:MontBlack;font-size:38px;letter-spacing:2px;color:#f7f0e1;box-shadow:0 10px 30px rgba(0,0,0,0.6)">DM TO ORDER</div>
+      <div id="brand" class="clip" data-start="0" data-duration="%%TOTAL%%" data-track-index="9" style="z-index:9"><img src="assets/logo_eshan.png" alt="Eshan Creations" /></div>
+
+      <!-- music: user-supplied sangili_karupar_song.m4a -->
+      <audio id="music" data-timeline-role="music" class="clip" src="assets/music.wav" data-start="0" data-duration="%%TOTAL%%" data-volume="1"></audio>
+%%SFX%%
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+%%JS%%
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
