@@ -35,3 +35,11 @@ SFX: FavStash edit-video pack (Apache-2.0, synthesized). Fonts: Montserrat (OFL)
 - `python3 build_v2.py` → `edit/index.html`. Layer order: plate < titles < statue < pointer dots/pills < logo.
   `hyperframes check` reports `text_occluded` on the behind-the-statue titles: that is the intended depth effect
   (verified on snapshots). v01 is rebuilt with `ASSET_DIR= python3 build.py`.
+
+## v03 — cinematic lighting
+- `scripts/composite_cine.py bgx/plate_final.jpg edit/assets/v3`: statue relight (deeper blacks, gold pop + specular
+  glow, warm key from the left lamp, amber back/rim light from the doorway, shadow falling right), plate light
+  (doorway rays + haze, flickering lamp pools, highlight bloom, darker frame edges) animated on the OUTPUT timeline,
+  freeze frames rendered as short plate videos so the light keeps moving, dust motes overlay (`dust.webm`).
+- Grade (`grade_cine_attr.txt`): contrast +0.14, blacks −0.06, highlights −0.1, teal shadows / amber highlights
+  split-tone, vignette 0.32, grain 0.12. Build: `python3 build_v3.py`.
