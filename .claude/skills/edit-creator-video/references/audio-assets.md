@@ -1,0 +1,9 @@
+# Audio and asset rules
+
+Measure source dialogue before choosing gain. As a starting mix, aim for clear dialogue with peaks below clipping and a final true peak near or below -1 dBTP; use an actual loudness meter to verify. A final programme around -14 to -16 LUFS integrated can be a useful social-video starting point, not a platform guarantee. Music under speech often needs 12–20 dB attenuation relative to its initial level; listen and adjust rather than treating this as an absolute loudness relationship. Duck 100–250 ms before speech and recover over 300–700 ms. Remove music entirely when it competes with a meaningful quiet moment.
+
+Pair small movements with soft clicks, major reveals with one restrained impact, and wipes with short whooshes. Do not add an SFX to every caption. Limit overlap and use headphones for inspection. Avoid abrupt silence at cut points; use short fades without erasing consonants. Preserve natural room tone where possible.
+
+For Tamil music, identify the emotional role first: celebration, respect, friendship, devotional or energetic demonstration. Use the user's supplied licensed file, original music or a track with confirmed permission. A title suggestion is not permission or a bundled audio asset. Record title, source, licence, allowed platforms and attribution. Do not invent beat positions; measure or inspect the actual file. Keep cuts on meaningful moments even when off-beat.
+
+For GIFs, search a connected permitted service only when requested or suitable to the brief. Review relevance, transparency, loop seam and usage terms. Cache the exact permitted asset in the project with provenance. Avoid fake reaction quotes or identifiable people used as implied endorsers. Never include copyrighted song files, paid course downloads, third-party fonts or vendor media in this pack.

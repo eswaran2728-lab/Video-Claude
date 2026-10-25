@@ -1,0 +1,11 @@
+{
+  "version": "2.0",
+  "primary_renderer": "HyperFrames",
+  "agent": "Claude Code",
+  "source_commit": "b6901b21e1ef690f3443556718700d60b38f5c19",
+  "original_effect_recipes": 46,
+  "upstream_effect_recipes": 33,
+  "reel_blueprints": 7,
+  "upstream_skills": 10,
+  "hyperframes_runtime_smoke_render": "not-completed: dependency download failed"
+}

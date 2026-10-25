@@ -1,0 +1,39 @@
+{
+  "name": "replace-with-project-name",
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "preview": {
+    "width": 540,
+    "height": 960
+  },
+  "style": "soft-hours",
+  "caption_preset": "tamil-clear",
+  "language": "ta",
+  "logo": {
+    "path": null,
+    "text": "Mahaguru Sri S Arumugam"
+  },
+  "clips": [
+    {
+      "path": "replace/photo-01.jpg",
+      "duration": 3
+    },
+    {
+      "path": "replace/photo-02.jpg",
+      "duration": 3
+    }
+  ],
+  "music": {
+    "path": null,
+    "gain_db": -16,
+    "licence_status": "not-provided"
+  },
+  "effects": [],
+  "approval": {
+    "preview_approved": false,
+    "publish_authorized": false
+  }
+}

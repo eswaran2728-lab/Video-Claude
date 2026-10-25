@@ -1,0 +1,13 @@
+interface:
+  display_name: Creator Video Studio
+  short_description: Edit reels, photo montages, captions, and carousels
+  default_prompt: Use edit-creator-video to plan and preview my edit.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "chalk-talk",
+    "name": "Chalk Talk",
+    "background": "#111820",
+    "text": "#F4EBDD",
+    "accent": "#F3CB56",
+    "shot_duration_hint": "2\u20134 seconds"
+  },
+  {
+    "id": "fireside",
+    "name": "Fireside",
+    "background": "#231B17",
+    "text": "#F9E8D2",
+    "accent": "#D3A06C",
+    "shot_duration_hint": "5\u20139 seconds"
+  },
+  {
+    "id": "raw-tape",
+    "name": "Raw Tape",
+    "background": "#282727",
+    "text": "#F6E9CB",
+    "accent": "#E8CB55",
+    "shot_duration_hint": "4\u20138 seconds"
+  },
+  {
+    "id": "viral-guy",
+    "name": "Viral Guy",
+    "background": "#15252C",
+    "text": "#F5F5EF",
+    "accent": "#87B7BC",
+    "shot_duration_hint": "2\u20134 seconds"
+  },
+  {
+    "id": "show-and-tell",
+    "name": "Show and Tell",
+    "background": "#F0F2F4",
+    "text": "#17252E",
+    "accent": "#336ED7",
+    "shot_duration_hint": "3\u20136 seconds"
+  },
+  {
+    "id": "soft-hours",
+    "name": "Soft Hours",
+    "background": "#251E1D",
+    "text": "#F5ECDC",
+    "accent": "#CCB29F",
+    "shot_duration_hint": "3\u20136 seconds"
+  },
+  {
+    "id": "glam-cam",
+    "name": "Glam Cam",
+    "background": "#EFE8E5",
+    "text": "#20191D",
+    "accent": "#CF819C",
+    "shot_duration_hint": "1.5\u20133 seconds"
+  },
+  {
+    "id": "color-block",
+    "name": "Color Block",
+    "background": "#F6EEDC",
+    "text": "#202020",
+    "accent": "#D95845",
+    "shot_duration_hint": "2\u20134 seconds"
+  },
+  {
+    "id": "camera-shy",
+    "name": "Camera Shy",
+    "background": "#142026",
+    "text": "#EEEDE7",
+    "accent": "#9CBBAE",
+    "shot_duration_hint": "3\u20135 seconds"
+  }
+]

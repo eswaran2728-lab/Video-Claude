@@ -1,0 +1,142 @@
+[
+  {
+    "id": "clean-bottom",
+    "font_category": "plain sans",
+    "position": "bottom",
+    "treatment": "white text, dark rounded backing",
+    "animation": "phrase fade"
+  },
+  {
+    "id": "gold-keyword",
+    "font_category": "bold sans",
+    "position": "bottom",
+    "treatment": "cream with one gold word",
+    "animation": "active word colour"
+  },
+  {
+    "id": "cream-editorial",
+    "font_category": "serif",
+    "position": "middle-lower",
+    "treatment": "cream on charcoal",
+    "animation": "phrase dissolve"
+  },
+  {
+    "id": "yellow-tape",
+    "font_category": "bold sans",
+    "position": "bottom",
+    "treatment": "yellow with dark outline",
+    "animation": "hard phrase cut"
+  },
+  {
+    "id": "karaoke-mint",
+    "font_category": "sans",
+    "position": "bottom",
+    "treatment": "white, mint active word",
+    "animation": "word highlight"
+  },
+  {
+    "id": "mono-terminal",
+    "font_category": "monospace",
+    "position": "middle-lower",
+    "treatment": "green on dark",
+    "animation": "short line typing"
+  },
+  {
+    "id": "bold-centre",
+    "font_category": "condensed sans",
+    "position": "centre",
+    "treatment": "white and black stroke",
+    "animation": "two-word pop"
+  },
+  {
+    "id": "pill-subtitles",
+    "font_category": "rounded sans",
+    "position": "bottom",
+    "treatment": "dark pill, white text",
+    "animation": "subtle slide"
+  },
+  {
+    "id": "two-tone-lines",
+    "font_category": "sans",
+    "position": "bottom",
+    "treatment": "white top line, accent bottom",
+    "animation": "line reveal"
+  },
+  {
+    "id": "minimal-top",
+    "font_category": "sans",
+    "position": "upper safe area",
+    "treatment": "white shadow",
+    "animation": "phrase fade"
+  },
+  {
+    "id": "tamil-clear",
+    "font_category": "Tamil-capable sans",
+    "position": "bottom",
+    "treatment": "white on near-black",
+    "animation": "whole phrase only"
+  },
+  {
+    "id": "bilingual-stack",
+    "font_category": "Tamil and Latin sans",
+    "position": "bottom",
+    "treatment": "primary white, translation cream",
+    "animation": "synchronised phrase"
+  },
+  {
+    "id": "lecture-box",
+    "font_category": "sans",
+    "position": "middle-lower",
+    "treatment": "dark panel and accent left rule",
+    "animation": "panel reveal"
+  },
+  {
+    "id": "comic-emphasis",
+    "font_category": "heavy sans",
+    "position": "centre",
+    "treatment": "cream with dark outline",
+    "animation": "small elastic entry"
+  },
+  {
+    "id": "product-label",
+    "font_category": "geometric sans",
+    "position": "lower side",
+    "treatment": "white with brand accent",
+    "animation": "horizontal reveal"
+  },
+  {
+    "id": "soft-pastel",
+    "font_category": "rounded sans",
+    "position": "bottom",
+    "treatment": "dark text on blush",
+    "animation": "gentle fade"
+  },
+  {
+    "id": "news-strip",
+    "font_category": "bold sans",
+    "position": "bottom",
+    "treatment": "white text on dark strip",
+    "animation": "line wipe"
+  },
+  {
+    "id": "chapter-serif",
+    "font_category": "serif",
+    "position": "upper safe area",
+    "treatment": "cream with fine rule",
+    "animation": "title dissolve"
+  },
+  {
+    "id": "number-led",
+    "font_category": "bold sans",
+    "position": "middle-lower",
+    "treatment": "large accent number, white phrase",
+    "animation": "number then text"
+  },
+  {
+    "id": "quiet-documentary",
+    "font_category": "sans",
+    "position": "bottom",
+    "treatment": "white with restrained shadow",
+    "animation": "simple phrase cut"
+  }
+]

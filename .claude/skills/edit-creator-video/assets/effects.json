@@ -1,0 +1,278 @@
+[
+  {
+    "id": "orbit",
+    "name": "Orbit",
+    "number": 1,
+    "requirements": "segmentation for real occlusion"
+  },
+  {
+    "id": "frame-break",
+    "name": "Frame Break",
+    "number": 2,
+    "requirements": "subject cutout"
+  },
+  {
+    "id": "type-wall",
+    "name": "Type Wall",
+    "number": 3,
+    "requirements": "segmentation and optional planar tracking"
+  },
+  {
+    "id": "digital-zoom",
+    "name": "Digital Zoom",
+    "number": 4,
+    "requirements": "high enough source resolution"
+  },
+  {
+    "id": "headline-wall",
+    "name": "Headline Wall",
+    "number": 5,
+    "requirements": "planar tracking for moving camera"
+  },
+  {
+    "id": "zoom-through-cut",
+    "name": "Zoom-Through Cut",
+    "number": 6,
+    "requirements": "renderer blur support"
+  },
+  {
+    "id": "clone",
+    "name": "Clone",
+    "number": 7,
+    "requirements": "segmentation and clean plate"
+  },
+  {
+    "id": "couch-wall",
+    "name": "Couch Wall",
+    "number": 8,
+    "requirements": "subject matte and wall perspective"
+  },
+  {
+    "id": "ui-world",
+    "name": "UI World",
+    "number": 9,
+    "requirements": "subject cutout; supplied screen capture"
+  },
+  {
+    "id": "the-stack",
+    "name": "The Stack",
+    "number": 10,
+    "requirements": "verified quantitative data for proportional bars"
+  },
+  {
+    "id": "sticky-text",
+    "name": "Sticky Text",
+    "number": 11,
+    "requirements": "motion tracking"
+  },
+  {
+    "id": "spotlight",
+    "name": "Spotlight",
+    "number": 12,
+    "requirements": "matte for subject-isolated lighting"
+  },
+  {
+    "id": "freeze-and-label",
+    "name": "Freeze and Label",
+    "number": 13,
+    "requirements": "frame extraction and accurate annotations"
+  },
+  {
+    "id": "phone-mockup",
+    "name": "Phone Mockup",
+    "number": 14,
+    "requirements": "screen capture and optional 3D renderer"
+  },
+  {
+    "id": "checklist",
+    "name": "Checklist",
+    "number": 15,
+    "requirements": "text and shape animation"
+  },
+  {
+    "id": "pointer-callout",
+    "name": "Pointer Callout",
+    "number": 16,
+    "requirements": "tracking for moving subjects"
+  },
+  {
+    "id": "odometer",
+    "name": "Odometer",
+    "number": 17,
+    "requirements": "numeric source and text clipping"
+  },
+  {
+    "id": "before-and-after",
+    "name": "Before and After",
+    "number": 18,
+    "requirements": "matched source versions"
+  },
+  {
+    "id": "chart-grow",
+    "name": "Chart Grow",
+    "number": 19,
+    "requirements": "verified data and vector rendering"
+  },
+  {
+    "id": "freeze-sticker",
+    "name": "Freeze Sticker",
+    "number": 20,
+    "requirements": "segmentation"
+  },
+  {
+    "id": "comment-bubble",
+    "name": "Comment Bubble",
+    "number": 21,
+    "requirements": "approved comment text"
+  },
+  {
+    "id": "green-screen",
+    "name": "Green Screen",
+    "number": 22,
+    "requirements": "segmentation or genuine keyed footage"
+  },
+  {
+    "id": "blackout",
+    "name": "Blackout",
+    "number": 23,
+    "requirements": "brightness animation; no repeated flashing"
+  },
+  {
+    "id": "timeline-burn",
+    "name": "Timeline Burn",
+    "number": 24,
+    "requirements": "particle or procedural shader support"
+  },
+  {
+    "id": "pull-back-reveal",
+    "name": "Pull-Back Reveal",
+    "number": 25,
+    "requirements": "nested composition"
+  },
+  {
+    "id": "knockout-tiles",
+    "name": "Knockout Tiles",
+    "number": 26,
+    "requirements": "text layout and keyframes"
+  },
+  {
+    "id": "shatter-3d",
+    "name": "Shatter 3D",
+    "number": 27,
+    "requirements": "3D mesh or fragment renderer"
+  },
+  {
+    "id": "paper-cut",
+    "name": "Paper Cut",
+    "number": 28,
+    "requirements": "masking; optional cutout"
+  },
+  {
+    "id": "doodle-boil",
+    "name": "Doodle Boil",
+    "number": 29,
+    "requirements": "vector paths and optional contour extraction"
+  },
+  {
+    "id": "code-scan",
+    "name": "Code Scan",
+    "number": 30,
+    "requirements": "shader or animated masks"
+  },
+  {
+    "id": "word-pile",
+    "name": "Word Pile",
+    "number": 31,
+    "requirements": "collision simulation for realistic stacking"
+  },
+  {
+    "id": "vertigo",
+    "name": "Vertigo",
+    "number": 32,
+    "requirements": "depth separation or appropriate source camera motion"
+  },
+  {
+    "id": "inside-out",
+    "name": "Inside Out",
+    "number": 33,
+    "requirements": "animated subject mask"
+  },
+  {
+    "id": "scene-text",
+    "name": "Scene Text",
+    "number": 34,
+    "requirements": "planar tracking and occlusion masking"
+  },
+  {
+    "id": "cover-story",
+    "name": "Cover Story",
+    "number": 35,
+    "requirements": "editorial typography and optional cutout"
+  },
+  {
+    "id": "neon-sign",
+    "name": "Neon Sign",
+    "number": 36,
+    "requirements": "blur and additive compositing"
+  },
+  {
+    "id": "spatial-glass",
+    "name": "Spatial Glass",
+    "number": 37,
+    "requirements": "backdrop blur; optional 3D transforms"
+  },
+  {
+    "id": "rack-focus",
+    "name": "Rack Focus",
+    "number": 38,
+    "requirements": "layer-specific blur or depth map"
+  },
+  {
+    "id": "god-rays",
+    "name": "God Rays",
+    "number": 39,
+    "requirements": "segmentation and volumetric-style compositing"
+  },
+  {
+    "id": "glass-type",
+    "name": "Glass Type",
+    "number": 40,
+    "requirements": "3D/refraction for true glass"
+  },
+  {
+    "id": "depth-scatter",
+    "name": "Depth Scatter",
+    "number": 41,
+    "requirements": "layer blur and optional 3D camera"
+  },
+  {
+    "id": "stat-stack",
+    "name": "Stat Stack",
+    "number": 42,
+    "requirements": "verified statistic"
+  },
+  {
+    "id": "dot-counter",
+    "name": "Dot Counter",
+    "number": 43,
+    "requirements": "consistent section count"
+  },
+  {
+    "id": "chip-row",
+    "name": "Chip Row",
+    "number": 44,
+    "requirements": "text measurement and wrapping"
+  },
+  {
+    "id": "prompt-box",
+    "name": "Prompt Box",
+    "number": 45,
+    "requirements": "approved prompt text"
+  },
+  {
+    "id": "serif-flow",
+    "name": "Serif Flow",
+    "number": 46,
+    "requirements": "vector connectors and text layout"
+  }
+]
