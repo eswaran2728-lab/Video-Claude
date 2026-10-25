@@ -1,0 +1,26 @@
+# Cut video-only clips and assemble the cleaned dialogue track from the EDL.
+import subprocess, os
+exec(open("edl.py").read())
+A = "edit/assets/v"
+def cut(name, clip, a, d):
+    subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-ss", f"{a:.3f}", "-i", f"proxy/{clip}.mp4", "-t", f"{d + 0.1:.3f}", "-an",
+                    "-c:v", "libx264", "-crf", "16", "-preset", "medium", "-pix_fmt", "yuv420p", "-g", "10", f"{A}/{name}.mp4"], check=True)
+for vid, layout, clip, a, o0, o1, note in V:
+    cut(vid, clip, a, o1 - o0)
+    if layout == "split":  # the speaker for the lower pane, in sync with the dialogue
+        seg = next(i for i, s in enumerate(OUT) if s[0] <= o0 < s[1])
+        cut(vid + "_face", OUT[seg][2], OUT[seg][3] + (o0 - OUT[seg][0]), o1 - o0)
+# dialogue: each sentence denoised (workshop hum/fans), 20 ms fades, joined on the output timeline
+parts = []
+for i, (o0, o1, clip, a, b) in enumerate(OUT):
+    p = f"edit/assets/dlg_{i}.wav"
+    subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-ss", f"{a:.3f}", "-t", f"{b - a:.3f}", "-i", f"proxy/{clip}.mp4", "-vn",
+                    "-af", f"highpass=f=85,afftdn=nf=-28:nr=10,afade=t=in:d=0.02,afade=t=out:st={b - a - 0.03:.3f}:d=0.03",
+                    "-ar", "48000", "-ac", "2", p], check=True)
+    parts.append(p)
+with open("edit/assets/dlg_list.txt", "w") as f:
+    for p in parts: f.write(f"file '{os.path.basename(p)}'\n")
+subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", "edit/assets/dlg_list.txt", "-af", "loudnorm=I=-16:TP=-2:LRA=7", "-ar", "48000", "-c:a", "pcm_s16le", "edit/assets/dialogue.wav"], check=True)
+for p in parts: os.remove(p)
+os.remove("edit/assets/dlg_list.txt")
+print("ok", SPEECH_END)

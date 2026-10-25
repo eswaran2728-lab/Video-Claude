@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "MontBlack"; src: url("assets/fonts/Montserrat-Black.ttf") format("truetype"); font-weight: 900; }
+      @font-face { font-family: "MontXB"; src: url("assets/fonts/Montserrat-ExtraBold.ttf") format("truetype"); font-weight: 800; }
+      @font-face { font-family: "MontB"; src: url("assets/fonts/Montserrat-Bold.ttf") format("truetype"); font-weight: 700; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0b0b0d; }
+      body { --red: #ff3b3b; --red2: #d61f26; --ink: rgba(12,12,16,0.78); --glass: rgba(18,18,24,0.62); --line: rgba(255,255,255,0.22); --gold: #f3c969; }
+      .clip { position: absolute; inset: 0; }
+      .vid { width: 1080px; height: 1920px; object-fit: cover; }
+      .pz { position: absolute; inset: 0; overflow: hidden; }
+      .pz video { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+
+      /* split layout: proof above, speaker below with a soft blended seam */
+      .splitTop { position: absolute; left: 0; top: 0; width: 1080px; height: 1000px; overflow: hidden; }
+      .splitTop video { position: absolute; left: 0; top: -460px; width: 1080px; height: 1920px; object-fit: cover; }
+      .splitBot { position: absolute; left: 0; top: 960px; width: 1080px; height: 960px; overflow: hidden; }
+      .splitBot video { position: absolute; left: 0; top: -130px; width: 1080px; height: 1920px; object-fit: cover; }
+      .seam { position: absolute; left: 0; top: 900px; width: 1080px; height: 140px; background: linear-gradient(180deg, rgba(11,11,13,0) 0%, rgba(11,11,13,0.85) 50%, rgba(11,11,13,0) 100%); }
+
+      /* captions */
+      .cap { z-index: 20; pointer-events: none; }
+      .cap .box { position: absolute; left: 90px; width: 900px; text-align: center; }
+      .cap .t { display: inline; font-family: "MontXB"; font-size: 54px; line-height: 1.32; color: #fff; padding: 6px 16px; border-radius: 14px;
+        background: rgba(10,10,14,0.62); -webkit-box-decoration-break: clone; box-decoration-break: clone; text-shadow: 0 2px 8px rgba(0,0,0,0.6); }
+      .cap b { font-family: "MontBlack"; font-weight: 900; color: var(--gold); }
+      .sw { display: inline-block; padding: 0 16px; margin: 0 2px; border-radius: 12px; font-family: "MontBlack"; line-height: 1.2; }
+      .sw.r { background: var(--red2); color: #fff; }
+      .sw.k { background: #050505; color: #fff; box-shadow: inset 0 0 0 2px rgba(255,255,255,0.55); }
+      .sw.w { background: #f4f4f4; color: #111; text-shadow: none; }
+
+      /* hook */
+      #hook { z-index: 15; pointer-events: none; }
+      #hook .k1 { position: absolute; left: 0; width: 1080px; top: 330px; text-align: center; font-family: "MontBlack"; font-size: 112px; line-height: 0.98; color: #fff; text-shadow: 0 8px 26px rgba(0,0,0,0.7); }
+      #hook .k1 span { color: #fff; background: var(--red2); padding: 0 18px; border-radius: 18px; text-shadow: none; }
+      #hook .k2 { position: absolute; left: 0; width: 1080px; top: 580px; text-align: center; }
+      #hook .k2 i { font-style: normal; display: inline-block; padding: 10px 26px; border-radius: 40px; background: var(--glass); border: 1px solid var(--line);
+        font-family: "MontB"; font-size: 40px; color: #fff; }
+
+      /* glass cards */
+      .card { position: absolute; border-radius: 30px; background: var(--glass); border: 1px solid var(--line); box-shadow: 0 18px 50px rgba(0,0,0,0.45); }
+      #count { z-index: 15; pointer-events: none; }
+      #count .card { left: 712px; top: 760px; width: 300px; height: 176px; text-align: center; }
+      #count .n { font-family: "MontBlack"; font-size: 104px; line-height: 1.12; color: #fff; }
+      #count .l { margin-top: -6px; font-family: "MontXB"; font-size: 28px; letter-spacing: 6px; color: var(--gold); }
+      #cols { z-index: 15; pointer-events: none; }
+      #cols .h { position: absolute; left: 0; width: 1080px; top: 300px; text-align: center; font-family: "MontBlack"; font-size: 92px; color: #fff; text-shadow: 0 8px 24px rgba(0,0,0,0.7); }
+      #cols .row { position: absolute; left: 0; width: 1080px; top: 420px; display: flex; justify-content: center; gap: 22px; }
+      .chip { display: flex; align-items: center; gap: 14px; padding: 14px 26px 14px 16px; border-radius: 40px; background: var(--ink); border: 1px solid var(--line);
+        font-family: "MontXB"; font-size: 38px; color: #fff; }
+      .chip i { display: block; width: 46px; height: 46px; border-radius: 50%; }
+      #checks { z-index: 15; pointer-events: none; }
+      #checks .card { left: 250px; top: 290px; width: 580px; height: 230px; padding: 30px 40px; }
+      .ck { display: flex; align-items: center; gap: 22px; font-family: "MontBlack"; font-size: 52px; color: #fff; height: 85px; }
+      .ck svg { width: 64px; height: 64px; }
+      .ck svg circle { fill: var(--red2); }
+      .ck svg path { fill: none; stroke: #fff; stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 60; }
+      #stamp { z-index: 15; pointer-events: none; }
+      #stamp .s { position: absolute; left: 190px; top: 560px; width: 700px; padding: 22px 0; border: 7px solid var(--red); border-radius: 22px; text-align: center;
+        font-family: "MontBlack"; font-size: 76px; line-height: 1.0; letter-spacing: 3px; color: #fff; background: rgba(214,31,38,0.82); box-shadow: 0 16px 40px rgba(0,0,0,0.45); }
+      #bulk { z-index: 15; pointer-events: none; }
+      #bulk .h { position: absolute; left: 0; width: 1080px; top: 320px; text-align: center; font-family: "MontBlack"; font-size: 120px; line-height: 1; color: #fff; text-shadow: 0 8px 26px rgba(0,0,0,0.75); }
+      #bulk .h span { color: var(--red); }
+      #dm { z-index: 15; pointer-events: none; }
+      #dm .card { left: 690px; top: 760px; width: 330px; height: 150px; display: flex; align-items: center; justify-content: center; gap: 16px; }
+      #dm .card b { font-family: "MontBlack"; font-size: 64px; color: #fff; }
+      #dm .card svg { width: 62px; height: 62px; }
+
+      /* end card */
+      #endDim { z-index: 12; pointer-events: none; background: radial-gradient(ellipse 80% 55% at 50% 42%, rgba(11,11,13,0.72) 0%, rgba(11,11,13,0.9) 70%); }
+      #end { z-index: 16; pointer-events: none; text-align: center; }
+      #end img { position: absolute; left: 330px; top: 470px; width: 420px; height: auto; }
+      #end .l1 { position: absolute; left: 0; width: 1080px; top: 960px; font-family: "MontBlack"; font-size: 60px; color: #fff; }
+      #end .l2 { position: absolute; left: 0; width: 1080px; top: 1050px; }
+      #end .l2 i { font-style: normal; display: inline-block; padding: 14px 34px; border-radius: 44px; background: var(--red2); font-family: "MontBlack"; font-size: 44px; color: #fff; letter-spacing: 1px; }
+
+      #brand img { position: absolute; left: 40px; top: 158px; width: 150px; height: auto; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.7)); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="%%TOTAL%%" data-width="1080" data-height="1920">
+%%VISUALS%%
+
+      <!-- hook: readable without sound -->
+      <div id="hook" class="clip" data-start="0" data-duration="2.3" data-track-index="5">
+        <div class="k1"><span>50</span> CUSTOM<br />KEYCHAINS</div>
+        <div class="k2"><i>for a company giveaway</i></div>
+      </div>
+      <div id="count" class="clip" data-start="%%COUNT_T%%" data-duration="%%COUNT_D%%" data-track-index="5"><div class="card"><div class="n" id="countN">0</div><div class="l">PIECES</div></div></div>
+      <div id="cols" class="clip" data-start="%%COLS_T%%" data-duration="%%COLS_D%%" data-track-index="5">
+        <div class="h" id="colsH">3 COLOURS</div>
+        <div class="row"><div class="chip" id="c1"><i style="background:#d61f26"></i>RED</div><div class="chip" id="c2"><i style="background:#050505;box-shadow:inset 0 0 0 2px rgba(255,255,255,0.6)"></i>BLACK</div><div class="chip" id="c3"><i style="background:#f4f4f4"></i>WHITE</div></div>
+      </div>
+      <div id="checks" class="clip" data-start="%%CHK_T%%" data-duration="%%CHK_D%%" data-track-index="5"><div class="card">
+        <div class="ck" id="k1"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" /><path id="p1" d="M18 33 L28 43 L47 22" /></svg>DESIGN</div>
+        <div class="ck" id="k2"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" /><path id="p2" d="M18 33 L28 43 L47 22" /></svg>PACKAGING</div>
+      </div></div>
+      <div id="stamp" class="clip" data-start="%%STAMP_T%%" data-duration="%%STAMP_D%%" data-track-index="5"><div class="s">READY TO<br />DELIVER</div></div>
+      <div id="bulk" class="clip" data-start="%%BULK_T%%" data-duration="%%BULK_D%%" data-track-index="5"><div class="h"><span>BULK</span><br />ORDERS</div></div>
+      <div id="dm" class="clip" data-start="%%DM_T%%" data-duration="%%DM_D%%" data-track-index="5"><div class="card">
+        <svg viewBox="0 0 24 24"><path d="M2 21 L23 12 L2 3 L2 10 L17 12 L2 14 Z" fill="#ff3b3b" /></svg><b>DM ME</b></div></div>
+
+%%CAPTIONS%%
+
+      <div id="endDim" class="clip" data-start="%%END_T%%" data-duration="%%END_D%%" data-track-index="6"></div>
+      <div id="end" class="clip" data-start="%%END_T%%" data-duration="%%END_D%%" data-track-index="7">
+        <img src="assets/logo_eshan.png" alt="Eshan Creations" />
+        <div class="l1">Custom keychains · Bulk orders</div>
+        <div class="l2"><i>DM TO ORDER</i></div>
+      </div>
+      <!-- persistent Eshan Creations logo (hidden while the end card shows it large) -->
+      <div id="brand" class="clip" data-start="0" data-duration="%%END_T%%" data-track-index="9" style="z-index:30"><img src="assets/logo_eshan.png" alt="Eshan Creations" /></div>
+
+      <audio id="dialogue" class="clip" src="assets/dialogue.wav" data-start="0" data-duration="%%SPEECH_END%%" data-volume="1"></audio>
+      <audio id="music" data-timeline-role="music" class="clip" src="assets/music_bed.wav" data-start="0" data-duration="%%TOTAL%%" data-volume="1"></audio>
+%%SFX%%
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+%%JS%%
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
