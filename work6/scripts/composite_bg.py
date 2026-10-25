@@ -56,36 +56,44 @@ def place_plate(sc, tx, ty):
     return cv2.warpAffine(plate, M, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
 
 def comp(fg, a, bg):
-    a3 = a[..., None]
-    out = bg.astype(np.float32)
+    """Returns (plate-only background, statue layer RGBA with its shadow + floor reflection)."""
     f = fg.astype(np.float32)
     # warm the overcast-daylight statue toward the lamp-lit plate
-    f[..., 2] *= 1.07; f[..., 1] *= 1.0; f[..., 0] *= 0.88
-    ys, xs = np.where(a > 0.5)
-    if len(ys) and ys.max() < H - 12:
-        yb = int(ys.max()); sel = ys > yb - 60; cx = xs[sel].mean(); w = max(80, (xs[sel].max() - xs[sel].min()) * 0.8)
-        # soft reflection on the polished floor
-        n = min(260, H - yb - 1)
-        if n > 20:
-            rf = f[yb - n:yb][::-1]; ra = a[yb - n:yb][::-1] * np.linspace(0.22, 0, n)[:, None]
-            rf = cv2.GaussianBlur(rf, (0, 0), 3); ra = cv2.GaussianBlur(ra, (0, 0), 3)
-            seg = out[yb:yb + n]; seg[:] = seg * (1 - ra[..., None]) + rf * ra[..., None]
-        # contact shadow
-        sh = np.zeros((H, W), np.float32)
-        cv2.ellipse(sh, (int(cx), int(yb - 4)), (int(w), int(w * 0.14)), 0, 0, 360, 1.0, -1)
-        sh = cv2.GaussianBlur(sh, (0, 0), w * 0.15)
-        out *= (1 - 0.7 * sh)[..., None]
+    f[..., 2] *= 1.07; f[..., 0] *= 0.88
     # warm rim/light-wrap from the glowing doorway on the statue's edge
     edge = np.clip(a - cv2.erode(a, np.ones((9, 9), np.uint8)), 0, 1)[..., None]
     blur_bg = cv2.GaussianBlur(bg, (0, 0), 10).astype(np.float32)
     rim = blur_bg * 0.6 + np.array([60, 140, 230], np.float32) * 0.4
     f = f * (1 - 0.45 * edge) + rim * 0.45 * edge
-    res = f * a3 + out * (1 - a3)
-    return np.clip(res, 0, 255).astype(np.uint8)
+    C = np.zeros((H, W, 3), np.float32); A = np.zeros((H, W), np.float32)
+    def over(cs, as_):
+        nonlocal C, A
+        An = as_ + A * (1 - as_)
+        C = np.where(An[..., None] > 1e-5, (cs * as_[..., None] + C * (A * (1 - as_))[..., None]) / np.maximum(An, 1e-5)[..., None], 0)
+        A = An
+    ys, xs = np.where(a > 0.5)
+    if len(ys) and ys.max() < H - 12:
+        yb = int(ys.max()); sel = ys > yb - 60; cx = xs[sel].mean(); w = max(80, (xs[sel].max() - xs[sel].min()) * 0.8)
+        sh = np.zeros((H, W), np.float32)
+        cv2.ellipse(sh, (int(cx), int(yb - 4)), (int(w), int(w * 0.14)), 0, 0, 360, 1.0, -1)
+        over(np.zeros((H, W, 3), np.float32), cv2.GaussianBlur(sh, (0, 0), w * 0.15) * 0.7)
+        n = min(260, H - yb - 1)
+        if n > 20:
+            rf = np.zeros((H, W, 3), np.float32); ra = np.zeros((H, W), np.float32)
+            rf[yb:yb + n] = cv2.GaussianBlur(f[yb - n:yb][::-1], (0, 0), 3)
+            ra[yb:yb + n] = cv2.GaussianBlur(a[yb - n:yb][::-1] * np.linspace(0.22, 0, n)[:, None], (0, 0), 3)
+            over(rf, ra)
+    over(f, a)
+    rgba = np.dstack([np.clip(C, 0, 255), np.clip(A * 255, 0, 255)]).astype(np.uint8)
+    return bg, rgba
 
 def enc(path):
     return subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "bgr24", "-s", f"{W}x{H}", "-r", "30", "-i", "-",
                              "-c:v", "libx264", "-crf", "14", "-preset", "slow", "-pix_fmt", "yuv420p", "-g", "10", path], stdin=subprocess.PIPE)
+
+def enc_alpha(path):
+    return subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "bgra", "-s", f"{W}x{H}", "-r", "30", "-i", "-",
+                             "-c:v", "libvpx-vp9", "-pix_fmt", "yuva420p", "-crf", "18", "-b:v", "0", "-row-mt", "1", "-cpu-used", "4", "-auto-alt-ref", "0", path], stdin=subprocess.PIPE)
 
 # pass 1: original-background motion per frame
 mot = {}
@@ -95,6 +103,7 @@ for name, (a, b) in SEGS.items():
         mot[fi] = (np.sqrt(abs(np.linalg.det(M[:, :2]))), M[0, 2], M[1, 2])
 # pass 2: accumulate (continuing across source-contiguous segments), fit inside the plate margin
 state = {}
+stats = {}
 for name, (a, b) in [(k, SEGS[k]) for k in ("segA", "segB", "segC", "segD", "segF")]:
     sc, tx, ty = state.get(a - 1, (1.0, 0.0, 0.0))
     path = []
@@ -107,15 +116,23 @@ for name, (a, b) in [(k, SEGS[k]) for k in ("segA", "segB", "segC", "segD", "seg
     k = 1 / max(1, mx, my)
     for fi, sc_, tx_, ty_ in path:
         state[fi] = (max(sc_, 1 / OVER * 1.02), tx_ * k, ty_ * k)
-    e = enc(f"{OUT}/{name}.mp4")
+    e, ea = enc(f"{OUT}/{name}_bg.mp4"), enc_alpha(f"{OUT}/{name}_fg.webm")
     for fi in range(a, b + 1):
         sc_, tx_, ty_ = state[fi]
-        e.stdin.write(comp(frames[fi], alpha_for(fi, a, b), place_plate(sc_, tx_, ty_)).tobytes())
-    e.stdin.close(); e.wait(); print(name, "done k=%.2f" % k, flush=True)
+        al = alpha_for(fi, a, b)
+        bgi, fgi = comp(frames[fi], al, place_plate(sc_, tx_, ty_))
+        e.stdin.write(bgi.tobytes()); ea.stdin.write(fgi.tobytes())
+        ys, xs = np.where(al > 0.5)
+        stats[fi] = [int(xs.min()), int(ys.min()), int(xs.max()), int(ys.max())] if len(ys) else None
+    for p_ in (e, ea): p_.stdin.close(); p_.wait()
+    print(name, "done k=%.2f" % k, flush=True)
 
 for name, fi in STILLS.items():
     sc, tx, ty = state.get(fi, state.get(fi - 1, (1.0, 0.0, 0.0)))
     lo, hi = (fi - 1, fi + 1)
-    img = comp(frames[fi], alpha_for(fi, lo, hi), place_plate(sc, tx, ty))
-    cv2.imwrite(f"{OUT}/{name}.jpg", img, [cv2.IMWRITE_JPEG_QUALITY, 96])
+    bgi, fgi = comp(frames[fi], alpha_for(fi, lo, hi), place_plate(sc, tx, ty))
+    cv2.imwrite(f"{OUT}/{name}_bg.jpg", bgi, [cv2.IMWRITE_JPEG_QUALITY, 96])
+    cv2.imwrite(f"{OUT}/{name}_fg.png", fgi)
+import json
+json.dump(stats, open(f"{OUT}/statue_bbox.json", "w"))
 print("stills done")
