@@ -1,0 +1,201 @@
+{
+ "speech": [
+  {
+   "out_start": 0.0,
+   "out_end": 2.9,
+   "clip": "b5ae",
+   "src_in": 4.82,
+   "src_out": 7.72
+  },
+  {
+   "out_start": 2.9,
+   "out_end": 5.28,
+   "clip": "d67f",
+   "src_in": 0.0,
+   "src_out": 2.38
+  },
+  {
+   "out_start": 5.28,
+   "out_end": 9.66,
+   "clip": "e5dd",
+   "src_in": 0.0,
+   "src_out": 4.38
+  },
+  {
+   "out_start": 9.66,
+   "out_end": 15.19,
+   "clip": "e5dd",
+   "src_in": 5.15,
+   "src_out": 10.68
+  },
+  {
+   "out_start": 15.19,
+   "out_end": 21.19,
+   "clip": "b5ae",
+   "src_in": 7.72,
+   "src_out": 13.72
+  },
+  {
+   "out_start": 21.19,
+   "out_end": 29.62,
+   "clip": "b5ae",
+   "src_in": 25.85,
+   "src_out": 34.28
+  },
+  {
+   "out_start": 29.62,
+   "out_end": 40.95,
+   "clip": "b5ae",
+   "src_in": 39.82,
+   "src_out": 51.15
+  },
+  {
+   "out_start": 40.95,
+   "out_end": 46.42,
+   "clip": "a336",
+   "src_in": 2.25,
+   "src_out": 7.72
+  }
+ ],
+ "spans": [
+  {
+   "id": "pane0",
+   "kind": "pane",
+   "out_start": 0.0,
+   "out_end": 2.9,
+   "src": {
+    "clip": "b5ae",
+    "src_in": 4.8201
+   },
+   "note": "hook: speaker under the notebook sketch"
+  },
+  {
+   "id": "pane1",
+   "kind": "pane",
+   "out_start": 2.9,
+   "out_end": 3.6,
+   "src": {
+    "clip": "d67f",
+    "src_in": 0.00010000000000021103
+   },
+   "note": "pane slides away as the board expands"
+  },
+  {
+   "id": "cam1",
+   "kind": "bubble",
+   "out_start": 3.4,
+   "out_end": 5.28,
+   "src": {
+    "clip": "d67f",
+    "src_in": 0.5001000000000002
+   },
+   "note": "okay guys, a diagram"
+  },
+  {
+   "id": "cam2",
+   "kind": "bubble",
+   "out_start": 5.28,
+   "out_end": 9.66,
+   "src": {
+    "clip": "e5dd",
+    "src_in": 9.999999999976694e-05
+   },
+   "note": "quality, cheap, fast"
+  },
+  {
+   "id": "cam3",
+   "kind": "bubble",
+   "out_start": 12.2,
+   "out_end": 15.19,
+   "src": {
+    "clip": "e5dd",
+    "src_in": 7.690099999999999
+   },
+   "note": "remember these three things"
+  },
+  {
+   "id": "cam4",
+   "kind": "bubble",
+   "out_start": 15.19,
+   "out_end": 21.19,
+   "src": {
+    "clip": "b5ae",
+    "src_in": 7.7200999999999995
+   },
+   "note": "quality + cheap -> not fast"
+  },
+  {
+   "id": "full1",
+   "kind": "full",
+   "out_start": 21.19,
+   "out_end": 23.1,
+   "src": {
+    "clip": "b5ae",
+    "src_in": 25.8501
+   },
+   "note": "use it for every product"
+  },
+  {
+   "id": "cam5",
+   "kind": "bubble",
+   "out_start": 25.4,
+   "out_end": 29.62,
+   "src": {
+    "clip": "b5ae",
+    "src_in": 30.0601
+   },
+   "note": "choose two, drop one"
+  },
+  {
+   "id": "cam6",
+   "kind": "bubble",
+   "out_start": 29.62,
+   "out_end": 40.95,
+   "src": {
+    "clip": "b5ae",
+    "src_in": 39.8201
+   },
+   "note": "the two other pairs"
+  },
+  {
+   "id": "cam7",
+   "kind": "bubble",
+   "out_start": 40.95,
+   "out_end": 43.3,
+   "src": {
+    "clip": "a336",
+    "src_in": 2.2501000000000033
+   },
+   "note": "my ideology"
+  },
+  {
+   "id": "full2",
+   "kind": "full",
+   "out_start": 43.3,
+   "out_end": 46.42,
+   "src": {
+    "clip": "a336",
+    "src_in": 4.600099999999998
+   },
+   "note": "comment below"
+  }
+ ],
+ "broll": [
+  {
+   "id": "br1",
+   "file": "../work7/edit/assets/vc4/V7.mp4",
+   "src_in": 0.15,
+   "out_start": 9.66,
+   "out_end": 12.2,
+   "note": "a packed AVSEC keychain: a product being bought"
+  },
+  {
+   "id": "br2",
+   "file": "../work7/edit/assets/vc4/V1.mp4",
+   "src_in": 0.0,
+   "out_start": 23.1,
+   "out_end": 25.4,
+   "note": "his printer: build plate of keychains slides out (spending money with me)"
+  }
+ ]
+}

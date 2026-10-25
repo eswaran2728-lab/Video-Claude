@@ -1,0 +1,199 @@
+{
+ "b5ae": [
+  {
+   "s": 0.4,
+   "e": 3.8,
+   "ta": "இந்த மூன்றில இரண்டு பண்ண முடியும். Quality-ஆ கிடைக்காது.",
+   "en": "Thank you.",
+   "tr": ""
+  },
+  {
+   "s": 4.0,
+   "e": 7.75,
+   "ta": "அதாவது இந்த மூன்றில இரண்டு தான் நீங்க choose பண்ண முடியும்.",
+   "en": "That means you can choose only 2 out of these 3",
+   "tr": "So you can choose only 2 out of these 3"
+  },
+  {
+   "s": 7.6,
+   "e": 13.0,
+   "ta": "இந்த மூன்றில இரண்டு தான் choose பண்ண முடியும். Quality-ஆ cheap-ஆ கிடைக்காது.",
+   "en": "How? When you get quality and cheap products, you get fast sales.",
+   "tr": "How? When you get quality and cheap You will get fast"
+  },
+  {
+   "s": 13.5,
+   "e": 18.3,
+   "ta": "அதே மாதிரி, fast-ஆ cheap-ஆ கிடைக்கும் பொருள் Quality-ஆ இருக்கும்.",
+   "en": "At the same time, products that are fast and cheap are of high quality.",
+   "tr": "In the same way, products that are fast and cheap are of high quality."
+  },
+  {
+   "s": 18.4,
+   "e": 24.6,
+   "ta": "Another option, Quality-ஆமும் cheap-ஆ இருக்கிற பொருள் fast-ஆ கிடைக்காது.",
+   "en": "and other options quality I won't see Parker a portal",
+   "tr": "Another option is a product that is cheap in quality."
+  },
+  {
+   "s": 24.4,
+   "e": 27.6,
+   "ta": "இந்த மூன்றில இரண்டு தான் choose பண்ண முடியும்.",
+   "en": "You won't get this fast. So, you can use this for everything.",
+   "tr": "You won't get it fast. So you can use this for everything."
+  },
+  {
+   "s": 27.5,
+   "e": 34.3,
+   "ta": "மூன்றில இரண்டு தான் choose பண்ண முடியும்.",
+   "en": "If you are spending with us, you have to choose two out of these three and you have to drop one.",
+   "tr": "If you are spending with us, you have to choose two out of these three and you have to drop one."
+  },
+  {
+   "s": 34.3,
+   "e": 45.6,
+   "ta": "Quality-ஆ fast-ஆ கிடைக்காத பொருள் cheap-ஆ கிடைக்காத பொருள் fast-ஆ கிடைக்காத பொருள்",
+   "en": "So for you, if you want a quality and fast product, the pricing range should be cheap.",
+   "tr": "So if you want a quality and fast product, the pricing range should be cheap."
+  },
+  {
+   "s": 46.3,
+   "e": 50.9,
+   "ta": "அதே மாதிரி உங்களுக்கு fast-ஆ cheap-ஆ இருக்கும்னா, அதைப் பொருள் quality-ஆ இருக்கும்னா நீங்கள் செய்யவேண்டும்.",
+   "en": "In the same way, if you want it to be fast and cheap, then you have to be of the same quality.",
+   "tr": "In the same way, if you want it to be fast, cheap and of good quality,"
+  },
+  {
+   "s": 51.0,
+   "e": 53.6,
+   "ta": "இந்த மூன்றில இரண்டு பண்ண முடியும்.",
+   "en": "because this is the fun factor",
+   "tr": "because this is the fun factor"
+  },
+  {
+   "s": 53.6,
+   "e": 60.0,
+   "ta": "கணக்காலில் பரிமுதியில் பண்ண முடியும்.",
+   "en": "So this is just my opinion, if you want you can ask, if you want you can ask, if you want you can ask, if you want you can ask.",
+   "tr": "So this is just my opinion If you ask me If you ask me, you will get it"
+  }
+ ],
+ "e5dd": [
+  {
+   "s": 0,
+   "e": 3.1,
+   "ta": "Quality-ஆ cheap-ஆ fast-ஆ கிடைக்காது.",
+   "en": "These are quality, cheap and then fast.",
+   "tr": "These are quality, cheap and then fast"
+  },
+  {
+   "s": 3.0,
+   "e": 4.3,
+   "ta": "அப்படியென்றாலும் செய்க்கலாம்.",
+   "en": "I'll see you guys.",
+   "tr": "I don't know what to say."
+  },
+  {
+   "s": 4.1,
+   "e": 6.7,
+   "ta": "இந்த மூன்றில இரண்டு தான் choose பண்ண முடியும்.",
+   "en": "Which is You are going to buy something here",
+   "tr": "which is you are going to buy something here"
+  },
+  {
+   "s": 6.6,
+   "e": 8.8,
+   "ta": "அந்த பொருள் வாங்க வேண்டும் என்றால்",
+   "en": "If you want to buy that item",
+   "tr": "If you want to buy that item"
+  },
+  {
+   "s": 8.7,
+   "e": 10.8,
+   "ta": "இந்த மூன்று விஷயத்தை நீங்கள் ஞாகப்பற்றுக்கொள்ளுங்கள்.",
+   "en": "And remember these three things.",
+   "tr": "Remember these three things"
+  },
+  {
+   "s": 10.7,
+   "e": 14.2,
+   "ta": "இந்த மூன்றில நீங்க வெறு இரண்டு மட்டு தான் use பண்ண முடியும்.",
+   "en": "In these three, you can use only two.",
+   "tr": "In these three, you can use only two."
+  },
+  {
+   "s": 14.0,
+   "e": 14.85,
+   "ta": "அதாவது...",
+   "en": "I doubt it.",
+   "tr": "Adaudi"
+  }
+ ],
+ "d67f": [
+  {
+   "s": 0,
+   "e": 2.5,
+   "ta": "Okay guys, மேல வந்து ஒரு diagram at the end.",
+   "en": "Okay guys, let's do a diagram at the top.",
+   "tr": "Okay guys, let's do a diagram at the top"
+  },
+  {
+   "s": 2.4,
+   "e": 7.7,
+   "ta": "இந்த மூன்றில இரண்டு பண்ண முடியும். Quality-ஆ கிடைக்காது.",
+   "en": "That is our business luxury, the luxury that you are going to buy.",
+   "tr": "That is our business luxury, the luxury that you are going to buy"
+  },
+  {
+   "s": 7.6,
+   "e": 11.8,
+   "ta": "இந்த மூன்றில இரண்டு தான் choose பண்ண முடியும். Quality-ஆ கிடைக்காது.",
+   "en": "or if you want to check the pricing you can use that diagram",
+   "tr": "or if you want to check the pricing you can use that diagram"
+  },
+  {
+   "s": 11.7,
+   "e": 16.9,
+   "ta": "Quality-ஆ கிடைக்கும் பொருள் cheap-ஆ கிடைக்காது.",
+   "en": "For example, quality jama is not cheap.",
+   "tr": "For example, quality jama is not cheap."
+  }
+ ],
+ "a336": [
+  {
+   "s": 0.9,
+   "e": 2.8,
+   "ta": "இந்த மூன்றில இரண்டு பண்ண முடியும். Quality-ஆ கிடைக்காது.",
+   "en": "So you don't need just a",
+   "tr": "So you don't need just the"
+  },
+  {
+   "s": 2.7,
+   "e": 7.7,
+   "ta": "இது என்னுடைய ஐடியாலோஜி. உங்களுக்கு இது பிடித்திருந்தால் கீழே பர்மேண்டும்.",
+   "en": "This is my Ideology, if you like it please comment below",
+   "tr": "This is my ideology, if you like it please comment below"
+  },
+  {
+   "s": 7.6,
+   "e": 11.1,
+   "ta": "உங்களுக்கு சாமில் செல்ல, cheap-ஆவும் Quality-ஆவும் வேண்டும்.",
+   "en": "Suppose your sample cell is cheap and of good quality",
+   "tr": "Suppose you want the quality to be cheap and quality to be available"
+  },
+  {
+   "s": 11.9,
+   "e": 16.3,
+   "ta": "எனக்கு suppose உங்களுக்கு வந்து சாமி சளவேன்னால் நீங்க அந்தத்தை ஏன் பால்லாம் என்னடைக் கண்ணம் அக்காம் பொல்ல பண்ணிச்சுக்கோன்",
+   "en": "If you don't want to pray, you can follow me on Instagram",
+   "tr": "If you don't want to pray, you can follow me on Instagram"
+  },
+  {
+   "s": 16.2,
+   "e": 18.4,
+   "ta": "பார்த்துக்கொள்ளுங்கள்.",
+   "en": "I'll see you guys in the next one, bye!",
+   "tr": "See you in the next video. Bye!"
+  }
+ ]
+}
