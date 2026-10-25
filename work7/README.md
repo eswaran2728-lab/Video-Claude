@@ -42,3 +42,7 @@ Render: `cd edit && npx hyperframes@0.8.193 render . --quality draft`, then 2-pa
 - Grade `grade_v04_attr.txt`: filmic master S-curve with a slightly matte black, blue lifted in shadows / pulled in
   highlights, teal shadows + amber highlights (wheels), saturation −0.06, vignette 0.30, grain 0.06.
 - Build: `VERSION=v04 python3 relight.py && python3 build.py` (v04 default).
+
+## Final (approved v04)
+`FINAL_AVSEC_Keychains_EshanCreations_1080x1920.mp4` — `hyperframes render --quality high --fps 30`, video stream
+copied, audio 2-pass loudnorm to −14 LUFS / −1.5 dBTP, AAC 256k 48 kHz, faststart. 35.6 s, H.264 1080x1920 30 fps.
