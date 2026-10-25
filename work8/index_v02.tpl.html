@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "MontBlack"; src: url("assets/fonts/Montserrat-Black.ttf") format("truetype"); font-weight: 900; }
+      @font-face { font-family: "MontXB"; src: url("assets/fonts/Montserrat-ExtraBold.ttf") format("truetype"); font-weight: 800; }
+      @font-face { font-family: "MontB"; src: url("assets/fonts/Montserrat-Bold.ttf") format("truetype"); font-weight: 700; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #1c1b1a; }
+      body { --paper: #f1ece3; --ink: #1c1b1a; --mute: #b9b1a4; --q: #e4572e; --c: #12936a; --f: #2c5ddb;
+             --qL: #ff8a5c; --cL: #3fd3a0; --fL: #86a6ff; --gold: #f3c969; }
+      .clip { position: absolute; inset: 0; }
+      .vid { width: 1080px; height: 1920px; object-fit: cover; }
+
+      /* ---- board: the diagram ---- */
+      #board { z-index: 4; }
+      #bw { position: absolute; inset: 0; overflow: hidden; }
+      #board .paper { position: absolute; inset: 0; background: var(--paper); }
+      #bc { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      #dg { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: visible; }
+      #dg .loop { fill: rgba(28,27,26,0); stroke: var(--ink); stroke-width: 5; stroke-linejoin: round; stroke-linecap: round; }
+      #dg .sel { fill: none; stroke: var(--ink); stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; }
+      .chip { position: absolute; left: 0; top: 0; height: 92px; padding: 0 30px; border-radius: 46px; background: var(--ink); color: var(--paper);
+        font-family: "MontBlack"; font-size: 52px; letter-spacing: 2px; line-height: 92px; white-space: nowrap; }
+      .chip .x { position: absolute; left: 20px; right: 20px; top: 43px; height: 7px; border-radius: 4px; background: #5f584e; transform-origin: 0 50%; }
+      .tag { position: absolute; left: 0; top: 0; font-family: "MontXB"; font-size: 34px; letter-spacing: 1px; color: var(--ink); white-space: nowrap;
+        padding: 6px 18px; border-radius: 26px; border: 3px solid var(--ink); background: var(--paper); }
+
+      /* speaker pane under the hook board, and the face cam under the full diagram */
+      .pane { inset: auto; left: 0; top: 1010px; width: 1080px; height: 910px; }
+      .pane video { width: 1080px; height: 910px; }
+      .cam { inset: auto; left: 390px; top: 1290px; width: 300px; height: 300px; border-radius: 50%; overflow: hidden;
+        box-shadow: 0 0 0 7px var(--paper), 0 0 0 9px rgba(28,27,26,0.25), 0 16px 34px rgba(40,30,20,0.35); }
+      .cam video { width: 300px; height: 300px; object-fit: cover; }
+
+      /* captions: one or two short lines, bottom-anchored inside the safe band */
+      .cap { z-index: 20; pointer-events: none; }
+      .cap .box { position: absolute; left: 140px; width: 800px; text-align: center; }
+      .cap .t { display: inline; font-family: "MontXB"; font-size: 52px; line-height: 1.34; color: #fff; padding: 6px 18px; border-radius: 14px;
+        background: rgba(28,27,26,0.9); -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+      .cap b { font-family: "MontBlack"; font-weight: 900; }
+      .cap .kq { color: var(--qL); } .cap .kc { color: var(--cL); } .cap .kf { color: var(--fL); } .cap .kg { color: var(--gold); }
+
+      /* brand + end card */
+      #brand { z-index: 30; pointer-events: none; }
+      #brand .disc { position: absolute; left: 44px; top: 150px; width: 124px; height: 124px; border-radius: 50%; background: rgba(28,27,26,0.92);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.3); }
+      #brand img { position: absolute; left: 63px; top: 166px; width: 86px; height: auto; }
+      #end { z-index: 25; background: var(--ink); text-align: center; }
+      #end img { position: absolute; left: 390px; top: 380px; width: 300px; height: auto; }
+      #end .l1 { position: absolute; left: 0; width: 1080px; top: 760px; font-family: "MontBlack"; font-size: 60px; letter-spacing: 2px; color: #fff; }
+      #end .l1 .q { color: var(--qL); } #end .l1 .c { color: var(--cL); } #end .l1 .f { color: var(--fL); }
+      #end .l2 { position: absolute; left: 0; width: 1080px; top: 850px; font-family: "MontXB"; font-size: 50px; color: var(--gold); }
+      #end .l3 { position: absolute; left: 0; width: 1080px; top: 960px; }
+      #end .l3 i { font-style: normal; display: inline-block; padding: 12px 30px; border-radius: 40px; border: 2px solid rgba(255,255,255,0.35);
+        font-family: "MontB"; font-size: 38px; color: #fff; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="%%TOTAL%%" data-width="1080" data-height="1920">
+%%VIDEOS%%
+
+      <!-- board: the diagram (all shapes editable: loops, highlights, chips, tags, dot) -->
+      <div id="board" class="clip" data-start="0" data-duration="%%BOARD_D%%" data-track-index="3"><div id="bw">
+        <div class="paper"></div>
+        <div id="bc">
+          <svg id="dg" viewBox="0 0 1080 1920">
+%%SVG%%
+          </svg>
+%%CHIPS%%
+        </div>
+      </div></div>
+
+%%CAPTIONS%%
+
+      <div id="end" class="clip" data-start="%%END_T%%" data-duration="%%END_D%%" data-track-index="7">
+        <img src="assets/logo_eshan.png" alt="Eshan Creations" />
+        <div class="l1"><span class="q">QUALITY</span> · <span class="c">CHEAP</span> · <span class="f">FAST</span></div>
+        <div class="l2">Choose 2. Drop 1.</div>
+        <div class="l3"><i>Comment below</i></div>
+      </div>
+      <div id="brand" class="clip" data-start="0" data-duration="%%END_T%%" data-track-index="9"><div class="disc"></div><img src="assets/logo_eshan.png" alt="Eshan Creations" /></div>
+
+      <audio id="dialogue" class="clip" src="assets/dialogue.wav" data-start="0" data-duration="%%SPEECH_END%%" data-volume="1"></audio>
+      <audio id="music" data-timeline-role="music" class="clip" src="assets/music_bed.wav" data-start="0" data-duration="%%TOTAL%%" data-volume="1"></audio>
+%%SFX%%
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      // frame-0 state, outside the timeline so it renders at t=0
+%%INIT%%
+      const tl = gsap.timeline({ paused: true });
+%%JS%%
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

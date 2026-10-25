@@ -3,6 +3,17 @@
 Vertical 1080x1920, 30 fps, 48.6 s. HyperFrames 0.8.193 project in `edit/` (built by `build.py`).
 Preview only — the final high-quality export waits for the creator's approval. Nothing is published.
 
+## Versions
+- **v01** (`python3 build.py`, `PREVIEW_quality_cheap_fast_v01.mp4`): notebook photo -> traced -> clean diagram; b-roll from
+  the earlier AVSEC shoot.
+- **v02** (`VERSION=v02 python3 make_assets.py && python3 build_v02.py`, `PREVIEW_quality_cheap_fast_v02.mp4`), on the
+  creator's notes "no need to add my drawing" and "don't use the previous video": no notebook photo and no footage from
+  earlier shoots. The clean diagram builds itself in the hook (labels pop on "of these three", the three pair loops draw
+  on "two"); "you're going to buy a product" (9.66–12.2) and "every product / spending money with me" (21.19–25.4) stay
+  on him full frame with punch-ins. Everything else (cut, captions, pair highlights, sound) is unchanged. He offered
+  product videos: those two beats are where they would go.
+- Both builders write `edit/index.html` (the render entry); run the one for the version you want before rendering.
+
 ## Rebuild
 ```
 ./make_proxies.sh            # stream the 4 Drive originals -> proxy/*.mp4 (1080x1920, 30 fps CFR)
