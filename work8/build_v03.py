@@ -220,6 +220,8 @@ for i, (a, b, html, mode) in enumerate(CAPS):
     if i == 1:   # "okay guys": starts at the hook position and rides down with the opening board, never over his face
         A(f'tl.fromTo("#cap{i} .box",{{y:-255,opacity:0}},{{opacity:1,duration:0.16}},{at(a)});')
         A(f'tl.to("#cap{i} .box",{{y:0,duration:0.5,ease:"power3.inOut"}},{at(a + 0.02)});')
+    elif i == 0:  # the hook line is on screen from frame 0 (the cover frame)
+        pass
     else:
         A(f'tl.fromTo("#cap{i} .box",{{y:14,opacity:0}},{{y:0,opacity:1,duration:0.16,ease:"power2.out"}},{at(a)});')
 

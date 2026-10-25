@@ -1,7 +1,10 @@
 # QUALITY / CHEAP / FAST — explainer reel (Eshan Creations)
 
 Vertical 1080x1920, 30 fps, 48.6 s. HyperFrames 0.8.193 project in `edit/` (built by `build.py`).
-Preview only — the final high-quality export waits for the creator's approval. Nothing is published.
+**Final (approved v03):** `FINAL_Quality_Cheap_Fast_EshanCreations_1080x1920.mp4` — `python3 build_v03.py`, then
+`npx hyperframes@0.8.193 render --quality high --fps 30 -o ../renders/final_raw_v03.mp4` in `edit/`, then
+`./master_final.sh renders/final_raw_v03.mp4 FINAL_….mp4` (video copied, audio 2-pass loudnorm −14 LUFS / −2 dBTP).
+Only change from the v03 preview: the hook caption is on screen from frame 0 (cover frame). Nothing is published.
 
 ## Versions
 - **v01** (`python3 build.py`, `PREVIEW_quality_cheap_fast_v01.mp4`): notebook photo -> traced -> clean diagram; b-roll from
