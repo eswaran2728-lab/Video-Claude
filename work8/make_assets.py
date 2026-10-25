@@ -2,7 +2,7 @@
 #  pane  : speaker under the hook board (1080x910, source y 170..1080), pre-cropped (the grading wrapper ignores object-position)
 #  bubble: round face cam under the full-screen diagram (640x640 face crop -> 320x320)
 #  full  : speaker full frame
-#  broll : v01 only - the creator's footage from the AVSEC keychain shoot (work7); v02 drops it on request
+#  broll : v01 the creator's footage from the AVSEC keychain shoot (work7); v02 none (his request); v03 licensed stock
 import subprocess, os, json, shutil
 exec(open("edl.py").read())
 A = "edit/assets/v"; os.makedirs(A, exist_ok=True)
@@ -28,26 +28,25 @@ SPANS = [
     ("cam7", "bubble", 40.95, 43.3, "my ideology"),
     ("full2", "full", 43.3, 46.42, "comment below"),
 ]
-VERSION = os.environ.get("VERSION", "v02")
-if VERSION != "v01":
+VERSION = os.environ.get("VERSION", "v03")
+# (id, file, src_in, out_start, out_end, note, crop/scale filter)
+BROLL = [("br1", "../work7/edit/assets/vc4/V7.mp4", 0.15, 9.66, 12.2, "a packed AVSEC keychain: a product being bought", "null"),
+         ("br2", "../work7/edit/assets/vc4/V1.mp4", 0.0, 23.1, 25.4, "his printer: build plate of keychains slides out (spending money with me)", "null")]
+if VERSION == "v02":
     # v02: no earlier-shoot b-roll (creator's request) -> he stays on camera for those two lines
     SPANS = [sp for sp in SPANS if sp[0] != "full1"] + [
         ("fullB", "full", 9.66, 12.2, "you're going to buy a product"),
         ("full1", "full", 21.19, 25.4, "use it for every product; if you're spending money with me"),
     ]
-    SPANS[SPANS.index(next(x for x in SPANS if x[0] == "cam3"))] = ("cam3", "bubble", 12.2, 15.19, "remember these three things")
-BROLL = [("br1", "../work7/edit/assets/vc4/V7.mp4", 0.15, 9.66, 12.2, "a packed AVSEC keychain: a product being bought"),
-         ("br2", "../work7/edit/assets/vc4/V1.mp4", 0.0, 23.1, 25.4, "his printer: build plate of keychains slides out (spending money with me)")]
-
-for sid, kind, o0, o1, note in SPANS:
-    clip, s = src_at(o0 + 1e-4); d = o1 - o0 + 0.1
-    if kind == "pane": vf = "crop=1080:910:0:170"
-    elif kind == "bubble": vf = f"crop=640:640:{FACE_X[clip] - 320}:180,scale=320:320:flags=lanczos"
-    else: vf = "null"
-    ff(["-ss", f"{s:.3f}", "-i", f"proxy/{clip}.mp4", "-t", f"{d:.3f}", "-vf", vf] + X264 + [f"{A}/{sid}.mp4"])
-if VERSION != "v01": BROLL = []
-for bid, f, s, o0, o1, note in BROLL:
-    ff(["-ss", f"{s:.3f}", "-i", f, "-t", f"{o1 - o0 + 0.1:.3f}"] + X264 + [f"{A}/{bid}.mp4"])
+    BROLL = []
+elif VERSION == "v03":
+    # v03: same beats as v01, filled with licensed stock (Mixkit Stock Video Free License, commercial use, verified on
+    # each item page; see README). Downloads in stock/ (not committed).
+    BROLL = [("sk1", "stock/mixkit_42123.mp4", 2.5, 9.66, 12.2, "Mixkit #42123 'Checking an item on a sales site on a cell phone' (9:16 crop on the phone)",
+              "crop=608:1080:1040:0,scale=1080:1920:flags=lanczos"),
+             ("sk2", "stock/mixkit_42137.mp4", 0.3, 23.1, 25.4, "Mixkit #42137 'Hands of two people sealing a package with tape'", "scale=1080:1920:flags=lanczos")]
+for bid, f, s, o0, o1, note, vf in BROLL:
+    ff(["-ss", f"{s:.3f}", "-i", f, "-t", f"{o1 - o0 + 0.1:.3f}", "-vf", vf] + X264 + [f"{A}/{bid}.mp4"])
 
 # dialogue: denoised speech (denoise.py), 20/30 ms fades per piece, joined, levelled
 parts = []
@@ -63,6 +62,6 @@ for p in parts: os.remove(p)
 os.remove("edit/assets/dlg_list.txt")
 json.dump({"speech": [dict(zip(["out_start", "out_end", "clip", "src_in", "src_out"], o)) for o in OUT],
            "spans": [dict(id=s[0], kind=s[1], out_start=s[2], out_end=s[3], src=dict(zip(["clip", "src_in"], src_at(s[2] + 1e-4))), note=s[4]) for s in SPANS],
-           "broll": [dict(id=b[0], file=b[1], src_in=b[2], out_start=b[3], out_end=b[4], note=b[5]) for b in BROLL]},
+           "broll": [dict(id=b[0], file=b[1], src_in=b[2], out_start=b[3], out_end=b[4], note=b[5], vf=b[6]) for b in BROLL]},
           open("edit/timing_map.json" if VERSION == "v01" else f"edit/timing_map_{VERSION}.json", "w"), indent=1)
 print("ok", SPEECH_END, TOTAL)

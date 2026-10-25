@@ -12,7 +12,24 @@ Preview only — the final high-quality export waits for the creator's approval.
   on "two"); "you're going to buy a product" (9.66–12.2) and "every product / spending money with me" (21.19–25.4) stay
   on him full frame with punch-ins. Everything else (cut, captions, pair highlights, sound) is unchanged. He offered
   product videos: those two beats are where they would go.
-- Both builders write `edit/index.html` (the render entry); run the one for the version you want before rendering.
+- **v03** (`VERSION=v03 python3 make_assets.py && python3 build_v03.py`, `PREVIEW_quality_cheap_fast_v03.mp4`), after he
+  allowed b-roll from the public web: v02 plus licensed stock on the two beats v01 had b-roll on —
+  9.66–12.2 "you're going to buy a product" and 23.1–25.4 "if you're spending money with me". He is back on camera for
+  "use this for every product" (21.19–23.1).
+- Each builder writes `edit/index.html` (the render entry). Run `make_assets.py` with the same `VERSION` first: the
+  versions share clip names (`full1` differs in length between v02 and v01/v03).
+
+## Stock footage (v03) — source and licence
+Downloaded to `stock/` (not committed). Both items checked on their own Mixkit page on 2026-10-25: "Download this free
+stock video clip for commercial or personal use, under the Mixkit Stock Video Free License." That licence allows social
+media posts, online marketing ads and commercial projects; attribution not required (credit appreciated).
+| id | title | page | used | treatment |
+|---|---|---|---|---|
+| sk1 | Checking an item on a sales site on a cell phone (#42123) | https://mixkit.co/free-stock-video/checking-an-item-on-a-sales-site-on-a-cell-phone-42123/ | src 2.5–5.2 → 9.66–12.2 | 1920x1080 → 608x1080 crop on the phone, scaled to 1080x1920, slow push |
+| sk2 | Hands of two people sealing a package with tape (#42137) | https://mixkit.co/free-stock-video/hands-of-two-people-sealing-a-package-with-tape-42137/ | src 0.3–2.7 → 23.1–25.4 | vertical, slow pull-out |
+Rejected: "Woman pays cashier with credit card in shop" (#15914, Mixkit Restricted License = personal use only, no
+company social media); "Woman exploring an online sales page" (#42136, shows Amazon branding and dollar prices);
+"Man counting a wad of bills" (#18296, US dollars). Pexels/Pixabay were not reachable from this environment.
 
 ## Rebuild
 ```
@@ -98,4 +115,5 @@ its first 30 s are used (the generated tail turns loud and clips), looped with a
 - Captions are English translations (his English words kept). A Tamil/Thanglish caption track needs his exact text.
 - The a336 DM line was left out (unclear words); if he wants a DM call to action, the exact wording is needed.
 - Music is a generated placeholder; replace with a licensed track if preferred.
-- B-roll is from the earlier AVSEC shoot (his real work), not from this media set.
+- v01 b-roll is from the earlier AVSEC shoot; v03 uses licensed Mixkit stock (generic, not his products). His own
+  product clips would be a better fit for both beats when he sends them.

@@ -1,0 +1,258 @@
+{
+ "cues": {
+  "three": 0.6,
+  "two": 1.04,
+  "diagram": 4.58,
+  "Q": 5.76,
+  "C": 6.5,
+  "F": 7.76,
+  "psych": 9.26,
+  "things": 13.58,
+  "qc_q": 17.23,
+  "qc_c": 18.31,
+  "qc_f": 20.17,
+  "every": 21.43,
+  "withme": 23.11,
+  "three2": 26.01,
+  "two2": 26.63,
+  "drop": 27.91,
+  "qf_q": 30.8,
+  "qf_f": 31.66,
+  "qf_c": 35.22,
+  "sim": 36.46,
+  "cf_f": 37.9,
+  "cf_c": 38.5,
+  "cf_q": 39.46,
+  "ideol": 41.35,
+  "comment": 45.69
+ },
+ "captions": [
+  {
+   "start": 0.0,
+   "end": 2.9,
+   "text": "Of these 3, you can only <b class=\"kg\">choose 2</b>"
+  },
+  {
+   "start": 2.9,
+   "end": 5.28,
+   "text": "Okay guys, here's a diagram"
+  },
+  {
+   "start": 5.28,
+   "end": 8.51,
+   "text": "This is <b class=\"kq\">QUALITY</b>, <b class=\"kc\">CHEAP</b> and <b class=\"kf\">FAST</b>"
+  },
+  {
+   "start": 8.51,
+   "end": 9.66,
+   "text": "It's a psychology"
+  },
+  {
+   "start": 9.66,
+   "end": 11.2,
+   "text": "You're going to buy a product"
+  },
+  {
+   "start": 11.2,
+   "end": 13.28,
+   "text": "If you want to buy it,"
+  },
+  {
+   "start": 13.28,
+   "end": 15.19,
+   "text": "remember these <b class=\"kg\">3 things</b>"
+  },
+  {
+   "start": 15.19,
+   "end": 19.82,
+   "text": "How? <b class=\"kq\">QUALITY</b> and <b class=\"kc\">CHEAP</b>"
+  },
+  {
+   "start": 19.82,
+   "end": 21.19,
+   "text": "won't come <b class=\"kf\">FAST</b>"
+  },
+  {
+   "start": 21.19,
+   "end": 23.11,
+   "text": "You can use this for every product"
+  },
+  {
+   "start": 23.11,
+   "end": 25.96,
+   "text": "If you're spending money with me,"
+  },
+  {
+   "start": 25.96,
+   "end": 27.91,
+   "text": "you have to <b class=\"kg\">choose 2 of 3</b>"
+  },
+  {
+   "start": 27.91,
+   "end": 29.62,
+   "text": "and <b class=\"kg\">drop 1</b>"
+  },
+  {
+   "start": 29.62,
+   "end": 33.02,
+   "text": "If you want <b class=\"kq\">QUALITY</b> and <b class=\"kf\">FAST</b>,"
+  },
+  {
+   "start": 33.02,
+   "end": 36.26,
+   "text": "don't expect the price to be <b class=\"kc\">CHEAP</b>"
+  },
+  {
+   "start": 36.26,
+   "end": 39.12,
+   "text": "Same way, if you want <b class=\"kf\">FAST</b> and <b class=\"kc\">CHEAP</b>,"
+  },
+  {
+   "start": 39.12,
+   "end": 40.95,
+   "text": "don't expect <b class=\"kq\">QUALITY</b>"
+  },
+  {
+   "start": 40.95,
+   "end": 44.25,
+   "text": "This is my ideology"
+  },
+  {
+   "start": 44.25,
+   "end": 46.42,
+   "text": "If you like it, comment below"
+  }
+ ],
+ "sfx": [
+  {
+   "t": 0.6,
+   "file": "ui-pop.wav",
+   "gain": 0.45
+  },
+  {
+   "t": 1.04,
+   "file": "tick.wav",
+   "gain": 0.7
+  },
+  {
+   "t": 2.92,
+   "file": "zoom-swish.wav",
+   "gain": 0.4
+  },
+  {
+   "t": 3.4,
+   "file": "ui-pop.wav",
+   "gain": 0.35
+  },
+  {
+   "t": 5.76,
+   "file": "ui-pop.wav",
+   "gain": 0.5
+  },
+  {
+   "t": 6.5,
+   "file": "ui-pop.wav",
+   "gain": 0.5
+  },
+  {
+   "t": 7.76,
+   "file": "ui-pop.wav",
+   "gain": 0.5
+  },
+  {
+   "t": 13.58,
+   "file": "tick.wav",
+   "gain": 0.55
+  },
+  {
+   "t": 13.85,
+   "file": "tick.wav",
+   "gain": 0.55
+  },
+  {
+   "t": 14.12,
+   "file": "tick.wav",
+   "gain": 0.55
+  },
+  {
+   "t": 17.23,
+   "file": "tick.wav",
+   "gain": 0.6
+  },
+  {
+   "t": 18.31,
+   "file": "tick.wav",
+   "gain": 0.6
+  },
+  {
+   "t": 18.43,
+   "file": "latch.wav",
+   "gain": 0.55
+  },
+  {
+   "t": 20.17,
+   "file": "thock.wav",
+   "gain": 0.8
+  },
+  {
+   "t": 26.63,
+   "file": "tick.wav",
+   "gain": 0.45
+  },
+  {
+   "t": 27.25,
+   "file": "tick.wav",
+   "gain": 0.45
+  },
+  {
+   "t": 27.87,
+   "file": "tick.wav",
+   "gain": 0.45
+  },
+  {
+   "t": 30.8,
+   "file": "tick.wav",
+   "gain": 0.6
+  },
+  {
+   "t": 31.66,
+   "file": "tick.wav",
+   "gain": 0.6
+  },
+  {
+   "t": 32.0,
+   "file": "latch.wav",
+   "gain": 0.55
+  },
+  {
+   "t": 35.22,
+   "file": "thock.wav",
+   "gain": 0.8
+  },
+  {
+   "t": 37.9,
+   "file": "tick.wav",
+   "gain": 0.6
+  },
+  {
+   "t": 38.5,
+   "file": "tick.wav",
+   "gain": 0.6
+  },
+  {
+   "t": 38.8,
+   "file": "latch.wav",
+   "gain": 0.55
+  },
+  {
+   "t": 39.46,
+   "file": "thock.wav",
+   "gain": 0.8
+  },
+  {
+   "t": 46.52,
+   "file": "clean-ding.wav",
+   "gain": 0.45
+  }
+ ]
+}
