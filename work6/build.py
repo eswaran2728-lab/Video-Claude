@@ -8,6 +8,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 E = os.path.join(HERE, "edit")
 GP = os.path.join(HERE, "grade_attr.txt")
 GRADE = open(GP).read().strip() if os.path.exists(GP) else ""
+# v01 = original park footage, v02 = temple background composite (assets/v2/)
+AD = os.environ.get("ASSET_DIR", "v2/")
 
 # id, kind, asset, out_start, out_end, source_in, source_out, note
 SEG = [
@@ -38,9 +40,9 @@ slides, js, sfx = [], [], []
 for sid, kind, asset, a, b, si, so, note in SEG:
     d = round(b - a, 4)
     if kind == "video":
-        slides.append(f'      <!-- {sid}: {note} -->\n      <video id="m{sid}" class="clip vid src" src="assets/{asset}" muted playsinline data-start="{a}" data-duration="{d}" data-track-index="1"{g()}></video>')
+        slides.append(f'      <!-- {sid}: {note} -->\n      <video id="m{sid}" class="clip vid src" src="assets/{AD}{asset}" muted playsinline data-start="{a}" data-duration="{d}" data-track-index="1"{g()}></video>')
     else:
-        slides.append(f'      <!-- {sid}: {note} -->\n      <div id="s{sid}" class="clip still" data-start="{a}" data-duration="{d}" data-track-index="1"><div class="pz" id="pz{sid}" data-layout-allow-overflow><img class="src" src="assets/{asset}" alt=""{g()} /></div></div>')
+        slides.append(f'      <!-- {sid}: {note} -->\n      <div id="s{sid}" class="clip still" data-start="{a}" data-duration="{d}" data-track-index="1"><div class="pz" id="pz{sid}" data-layout-allow-overflow><img class="src" src="assets/{AD}{asset}" alt=""{g()} /></div></div>')
 
 # --- camera moves -----------------------------------------------------------
 js += [
