@@ -1,0 +1,102 @@
+{
+ "scenes": {
+  "open": [
+   0,
+   1
+  ],
+  "master1": [
+   1.0,
+   3.0
+  ],
+  "master2": [
+   3.0,
+   5.0
+  ],
+  "master3": [
+   5.0,
+   7.0
+  ],
+  "master4": [
+   7.0,
+   9.0
+  ],
+  "credits": [
+   9,
+   14
+  ],
+  "end": [
+   14,
+   15
+  ]
+ },
+ "wipes_center": [
+  1.0,
+  3.0,
+  5.0,
+  7.0,
+  9.0,
+  14.0
+ ],
+ "sfx": [
+  {
+   "t": 0.8,
+   "file": "zoom-swish.wav",
+   "gain": 0.28
+  },
+  {
+   "t": 2.8,
+   "file": "zoom-swish.wav",
+   "gain": 0.28
+  },
+  {
+   "t": 4.8,
+   "file": "zoom-swish.wav",
+   "gain": 0.28
+  },
+  {
+   "t": 6.8,
+   "file": "zoom-swish.wav",
+   "gain": 0.28
+  },
+  {
+   "t": 8.8,
+   "file": "zoom-swish.wav",
+   "gain": 0.28
+  },
+  {
+   "t": 13.8,
+   "file": "zoom-swish.wav",
+   "gain": 0.28
+  },
+  {
+   "t": 1.4,
+   "file": "thock.wav",
+   "gain": 0.32
+  },
+  {
+   "t": 3.4,
+   "file": "thock.wav",
+   "gain": 0.32
+  },
+  {
+   "t": 5.4,
+   "file": "thock.wav",
+   "gain": 0.32
+  },
+  {
+   "t": 7.4,
+   "file": "thock.wav",
+   "gain": 0.32
+  },
+  {
+   "t": 0.3,
+   "file": "shimmer.wav",
+   "gain": 0.22
+  },
+  {
+   "t": 14.3,
+   "file": "shimmer.wav",
+   "gain": 0.2
+  }
+ ]
+}

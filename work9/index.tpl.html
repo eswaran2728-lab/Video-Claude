@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Osw"; src: url("assets/fonts/Oswald-var.woff2") format("woff2"); font-weight: 200 700; }
+      @font-face { font-family: "InterSB"; src: url("assets/fonts/Inter-SemiBold.otf") format("opentype"); font-weight: 600; }
+      @font-face { font-family: "InterM"; src: url("assets/fonts/Inter-Medium.otf") format("opentype"); font-weight: 500; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #070708; }
+      body { --red: #e3121f; --bright: #ff3a3a; --deep: #7e0a12; --gold: #d8b25a; --ink: #0c0c0e; --char: #151518; }
+      .clip { position: absolute; inset: 0; }
+
+      /* background: charcoal pool, faint diagonal lines, particles, light sweep */
+      #bg { background: radial-gradient(ellipse 80% 55% at 50% 52%, #1d1c20 0%, #101012 55%, #060607 100%); }
+      #bg .lines { position: absolute; inset: 0; opacity: 0.06;
+        background: repeating-linear-gradient(115deg, transparent 0 46px, #ffffff 46px 47px); }
+      #parts i { position: absolute; border-radius: 50%; }
+      #sweep { position: absolute; left: 0; top: -400px; width: 360px; height: 2800px; rotate: 22deg; opacity: 0;
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.07) 50%, rgba(255,255,255,0) 100%); }
+
+      /* persistent header */
+      #hdr { z-index: 6; pointer-events: none; }
+      #hdr .row { position: absolute; left: 0; width: 1080px; top: 196px; display: flex; align-items: center; justify-content: center; gap: 16px; }
+      #hdr img { width: 62px; height: 62px; }
+      #hdr span { font-family: "Osw"; font-weight: 500; font-size: 30px; letter-spacing: 4px; color: #f2f2f2; }
+      #hdr .rule { position: absolute; left: 340px; width: 400px; top: 270px; height: 2px; background: linear-gradient(90deg, transparent, var(--red), transparent); }
+
+      /* opening */
+      #open { z-index: 3; }
+      #osweep { position: absolute; left: -700px; top: -300px; width: 700px; height: 2600px; transform: rotate(24deg);
+        background: linear-gradient(90deg, rgba(227,18,31,0) 0%, rgba(227,18,31,0.55) 50%, rgba(227,18,31,0) 100%); }
+      #ologo { position: absolute; left: 320px; top: 520px; width: 440px; height: 440px; }
+      #ologo img { width: 440px; height: 440px; }
+      .glint { position: absolute; inset: 0; overflow: hidden;
+        -webkit-mask-image: url("assets/logo.png"); mask-image: url("assets/logo.png"); -webkit-mask-size: 100% 100%; mask-size: 100% 100%; }
+      .glint i { position: absolute; left: 0; top: -20%; width: 45%; height: 140%; transform: skewX(-20deg);
+        background: linear-gradient(90deg, rgba(255,244,200,0) 0%, rgba(255,240,190,0.9) 50%, rgba(255,244,200,0) 100%); }
+      #omask { position: absolute; left: 0; width: 1080px; top: 1010px; overflow: hidden; text-align: center; padding: 6px 0; }
+      #oname { font-family: "Osw"; font-weight: 600; font-size: 66px; line-height: 1.12; letter-spacing: 5px; color: #fff; }
+      #oname b { color: var(--bright); font-weight: 600; }
+      #obar { position: absolute; left: 440px; width: 200px; top: 1190px; height: 7px; background: var(--red); transform-origin: 50% 50%; }
+
+      /* master scenes */
+      .scene { z-index: 2; }
+      .sin { position: absolute; inset: 0; }
+      .frames { position: absolute; inset: 0; }
+      .frames svg { width: 1080px; height: 1920px; overflow: visible; }
+      .frames .f { fill: none; stroke-linejoin: miter; }
+      .frames .f1 { stroke: var(--deep); stroke-width: 14; }
+      .frames .f2 { stroke: var(--red); stroke-width: 9; }
+      .frames .f3 { stroke: var(--bright); stroke-width: 5; }
+      .frames .slab { fill: #17171b; stroke: rgba(255,58,58,0.25); stroke-width: 2; }
+      .frames .chev { fill: none; stroke: var(--bright); stroke-width: 6; stroke-linecap: square; opacity: 0.8; }
+      .frames .sq { fill: none; stroke: rgba(255,255,255,0.35); stroke-width: 3; }
+      .frames .s2 { fill: var(--red); stroke: none; }
+      .fig { position: absolute; filter: drop-shadow(0 24px 40px rgba(0,0,0,0.6)); }
+      .nb { position: absolute; top: 318px; width: 900px; }
+      .nb.R { text-align: right; }
+      .idx { font-family: "InterM"; font-size: 28px; letter-spacing: 3px; color: #9c9ca3; margin-bottom: 10px; }
+      .idx b { color: var(--bright); font-weight: 500; }
+      .mask { overflow: hidden; padding: 0 40px 18px 20px; margin: 0 -40px -14px -20px; }
+      .rank { display: inline-flex; align-items: center; gap: 16px; font-family: "Osw"; font-weight: 600; font-size: 60px; line-height: 1.15;
+        letter-spacing: 7px; color: var(--bright); }
+      .rank i { display: inline-block; width: 46px; height: 10px; background: var(--bright); }
+      .nb.R .rank { flex-direction: row-reverse; }
+      .name { display: inline-block; white-space: nowrap; font-family: "Osw"; font-weight: 700; line-height: 1.04; color: #fff; letter-spacing: 1px;
+        text-shadow: 0 6px 24px rgba(0,0,0,0.55); }
+
+      /* credits */
+      #credits { z-index: 3; background: radial-gradient(ellipse 90% 60% at 50% 45%, #141416 0%, #0a0a0b 100%); }
+      #crin { position: absolute; left: 0; top: 330px; width: 1080px; text-align: center; }
+      .ct { font-family: "Osw"; font-weight: 600; font-size: 56px; letter-spacing: 3px; color: #fff; line-height: 1.1; }
+      .cbar { width: 120px; height: 6px; background: var(--red); margin: 16px auto 0; }
+      .cb { margin-top: 50px; }
+      .cb h3 { font-family: "Osw"; font-weight: 600; font-size: 38px; letter-spacing: 6px; color: var(--bright); line-height: 1.3; margin-bottom: 4px; }
+      .cb div { font-family: "Osw"; font-weight: 500; font-size: 50px; line-height: 66px; color: #f4f4f4; letter-spacing: 0.5px; }
+      .cols { display: flex; justify-content: center; gap: 30px; }
+      .cols .cb { width: 470px; }
+      .cols .cb div { font-size: 44px; line-height: 62px; white-space: nowrap; }
+
+      /* ending */
+      #end { z-index: 3; }
+      #ein { position: absolute; inset: 0; transform-origin: 50% 45%; }
+      #elogo { position: absolute; left: 380px; top: 420px; width: 320px; height: 320px; }
+      #elogo img { width: 320px; height: 320px; }
+      .emask { position: absolute; left: 0; width: 1080px; overflow: hidden; text-align: center; padding: 0 30px; }
+      #e1m { top: 800px; } #e2m { top: 950px; }
+      .et { display: inline-block; font-family: "Osw"; font-weight: 700; font-size: 150px; line-height: 1.0; color: #fff; letter-spacing: 2px; }
+      #e2 { color: var(--bright); }
+      #ebar { position: absolute; left: 400px; width: 280px; top: 1128px; height: 8px; background: var(--red); }
+      #ehandle { position: absolute; left: 0; width: 1080px; top: 1180px; text-align: center; font-family: "InterSB"; font-size: 44px; color: #ececee; }
+
+      /* diagonal red wipe with trailing ghosts (motion blur) */
+      #wipe { z-index: 9; pointer-events: none; }
+      #wipe .band { position: absolute; top: -200px; height: 2320px; transform: skewX(-22deg); }
+      #wipe .b0 { left: -200px; width: 1700px; background: var(--red); }
+      #wipe .b1 { left: -330px; width: 120px; background: var(--bright); opacity: 0.85; }
+      #wipe .b2 { left: 1510px; width: 140px; background: var(--deep); }
+      #wipe .g1 { left: -470px; width: 90px; background: var(--red); opacity: 0.45; }
+      #wipe .g2 { left: -580px; width: 60px; background: var(--red); opacity: 0.2; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="%%TOTAL%%" data-width="1080" data-height="1920">
+      <div id="bg" class="clip" data-start="0" data-duration="%%TOTAL%%" data-track-index="0"><div class="lines"></div><div id="parts">%%PARTS%%</div><div id="sweep"></div></div>
+
+      <div id="open" class="clip" data-start="0" data-duration="1.02" data-track-index="1">
+        <div id="osweep"></div>
+        <div id="ologo"><img src="assets/logo.png" alt="Persatuan Silambam logo" /><div class="glint"><i id="glint"></i></div></div>
+        <div id="omask"><div id="oname">%%ASSOC%%</div></div>
+        <div id="obar"></div>
+      </div>
+
+%%MASTERS%%
+
+      <div id="credits" class="clip" data-start="8.98" data-duration="5.04" data-track-index="2"><div id="crin">%%CREDITS%%</div></div>
+
+      <div id="end" class="clip" data-start="13.98" data-duration="1.02" data-track-index="2">
+        <div id="ein">
+          <div id="elogo"><img src="assets/logo.png" alt="Persatuan Silambam logo" /><div class="glint"><i id="eglint"></i></div></div>
+          <div class="emask" id="e1m"><div class="et" id="e1">%%END1%%</div></div>
+          <div class="emask" id="e2m"><div class="et" id="e2">%%END2%%</div></div>
+          <div id="ebar"></div>
+          <div id="ehandle">%%HANDLE%%</div>
+        </div>
+      </div>
+
+      <div id="hdr" class="clip" data-start="0" data-duration="14.02" data-track-index="5"><div class="row"><img src="assets/logo.png" alt="" /><span>%%HEADER%%</span></div><div class="rule"></div></div>
+      <div id="wipe" class="clip" data-start="0" data-duration="%%TOTAL%%" data-track-index="8"><div id="wipeIn" style="position:absolute;inset:0"><div class="band g2"></div><div class="band g1"></div><div class="band b1"></div><div class="band b0"></div><div class="band b2"></div></div></div>
+
+      <audio id="music" data-timeline-role="music" class="clip" src="assets/music.wav" data-start="0" data-duration="%%TOTAL%%" data-volume="1"></audio>
+%%SFX%%
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      // frame-0 state, outside the timeline so it renders at t=0
+%%INIT%%
+      const tl = gsap.timeline({ paused: true });
+%%JS%%
+      tl.set({}, {}, %%TOTAL%%);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

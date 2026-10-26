@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Osw"; src: url("assets/fonts/Oswald-var.woff2") format("woff2"); font-weight: 200 700; }
+      @font-face { font-family: "InterSB"; src: url("assets/fonts/Inter-SemiBold.otf") format("opentype"); font-weight: 600; }
+      @font-face { font-family: "InterM"; src: url("assets/fonts/Inter-Medium.otf") format("opentype"); font-weight: 500; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #070708; }
+      body { --red: #e3121f; --bright: #ff3a3a; --deep: #7e0a12; --gold: #d8b25a; --ink: #0c0c0e; --char: #151518; }
+      .clip { position: absolute; inset: 0; }
+
+      /* background: charcoal pool, faint diagonal lines, particles, light sweep */
+      #bg { background: radial-gradient(ellipse 80% 55% at 50% 52%, #1d1c20 0%, #101012 55%, #060607 100%); }
+      #bg .lines { position: absolute; inset: 0; opacity: 0.06;
+        background: repeating-linear-gradient(115deg, transparent 0 46px, #ffffff 46px 47px); }
+      #parts i { position: absolute; border-radius: 50%; }
+      #sweep { position: absolute; left: 0; top: -400px; width: 360px; height: 2800px; rotate: 22deg; opacity: 0;
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.07) 50%, rgba(255,255,255,0) 100%); }
+
+      /* persistent header */
+      #hdr { z-index: 6; pointer-events: none; }
+      #hdr .row { position: absolute; left: 0; width: 1080px; top: 196px; display: flex; align-items: center; justify-content: center; gap: 16px; }
+      #hdr img { width: 62px; height: 62px; }
+      #hdr span { font-family: "Osw"; font-weight: 500; font-size: 30px; letter-spacing: 4px; color: #f2f2f2; }
+      #hdr .rule { position: absolute; left: 340px; width: 400px; top: 270px; height: 2px; background: linear-gradient(90deg, transparent, var(--red), transparent); }
+
+      /* opening */
+      #open { z-index: 3; }
+      #osweep { position: absolute; left: -700px; top: -300px; width: 700px; height: 2600px; transform: rotate(24deg);
+        background: linear-gradient(90deg, rgba(227,18,31,0) 0%, rgba(227,18,31,0.55) 50%, rgba(227,18,31,0) 100%); }
+      #ologo { position: absolute; left: 320px; top: 520px; width: 440px; height: 440px; }
+      #ologo img { width: 440px; height: 440px; }
+      .glint { position: absolute; inset: 0; overflow: hidden;
+        -webkit-mask-image: url("assets/logo.png"); mask-image: url("assets/logo.png"); -webkit-mask-size: 100% 100%; mask-size: 100% 100%; }
+      .glint i { position: absolute; left: 0; top: -20%; width: 45%; height: 140%; transform: skewX(-20deg);
+        background: linear-gradient(90deg, rgba(255,244,200,0) 0%, rgba(255,240,190,0.9) 50%, rgba(255,244,200,0) 100%); }
+      #omask { position: absolute; left: 0; width: 1080px; top: 1010px; overflow: hidden; text-align: center; padding: 6px 0; }
+      #oname { font-family: "Osw"; font-weight: 600; font-size: 66px; line-height: 1.12; letter-spacing: 5px; color: #fff; }
+      #oname b { color: var(--bright); font-weight: 600; }
+      #obar { position: absolute; left: 440px; width: 200px; top: 1190px; height: 7px; background: var(--red); transform-origin: 50% 50%; }
+
+      /* master scenes */
+      .scene { z-index: 2; }
+      .sin { position: absolute; inset: 0; }
+      .frames { position: absolute; inset: 0; }
+      .frames svg { width: 1080px; height: 1920px; overflow: visible; }
+      .frames .f { fill: none; stroke-linejoin: miter; }
+      .frames .f1 { stroke: var(--deep); stroke-width: 14; }
+      .frames .f2 { stroke: var(--red); stroke-width: 9; }
+      .frames .f3 { stroke: var(--bright); stroke-width: 5; }
+      .frames .slab { fill: #17171b; stroke: rgba(255,58,58,0.25); stroke-width: 2; }
+      .frames .chev { fill: none; stroke: var(--bright); stroke-width: 6; stroke-linecap: square; opacity: 0.8; }
+      .frames .sq { fill: none; stroke: rgba(255,255,255,0.35); stroke-width: 3; }
+      .frames .s2 { fill: var(--red); stroke: none; }
+      .fig { position: absolute; filter: drop-shadow(0 24px 40px rgba(0,0,0,0.6)); }
+      .nb { position: absolute; top: 318px; width: 900px; }
+      .nb.R { text-align: right; }
+      .idx { font-family: "InterM"; font-size: 28px; letter-spacing: 3px; color: #9c9ca3; margin-bottom: 10px; }
+      .idx b { color: var(--bright); font-weight: 500; }
+      .mask { overflow: hidden; padding: 0 40px 18px 20px; margin: 0 -40px -14px -20px; }
+      .rank { display: inline-flex; align-items: center; gap: 16px; font-family: "Osw"; font-weight: 600; font-size: 60px; line-height: 1.15;
+        letter-spacing: 7px; color: var(--bright); }
+      .rank i { display: inline-block; width: 46px; height: 10px; background: var(--bright); }
+      .nb.R .rank { flex-direction: row-reverse; }
+      .name { display: inline-block; white-space: nowrap; font-family: "Osw"; font-weight: 700; line-height: 1.04; color: #fff; letter-spacing: 1px;
+        text-shadow: 0 6px 24px rgba(0,0,0,0.55); }
+
+      /* credits */
+      #credits { z-index: 3; background: radial-gradient(ellipse 90% 60% at 50% 45%, #141416 0%, #0a0a0b 100%); }
+      #crin { position: absolute; left: 0; top: 330px; width: 1080px; text-align: center; }
+      .ct { font-family: "Osw"; font-weight: 600; font-size: 56px; letter-spacing: 3px; color: #fff; line-height: 1.1; }
+      .cbar { width: 120px; height: 6px; background: var(--red); margin: 16px auto 0; }
+      .cb { margin-top: 50px; }
+      .cb h3 { font-family: "Osw"; font-weight: 600; font-size: 38px; letter-spacing: 6px; color: var(--bright); line-height: 1.3; margin-bottom: 4px; }
+      .cb div { font-family: "Osw"; font-weight: 500; font-size: 50px; line-height: 66px; color: #f4f4f4; letter-spacing: 0.5px; }
+      .cols { display: flex; justify-content: center; gap: 30px; }
+      .cols .cb { width: 470px; }
+      .cols .cb div { font-size: 44px; line-height: 62px; white-space: nowrap; }
+
+      /* ending */
+      #end { z-index: 3; }
+      #ein { position: absolute; inset: 0; transform-origin: 50% 45%; }
+      #elogo { position: absolute; left: 380px; top: 420px; width: 320px; height: 320px; }
+      #elogo img { width: 320px; height: 320px; }
+      .emask { position: absolute; left: 0; width: 1080px; overflow: hidden; text-align: center; padding: 0 30px; }
+      #e1m { top: 800px; } #e2m { top: 950px; }
+      .et { display: inline-block; font-family: "Osw"; font-weight: 700; font-size: 150px; line-height: 1.0; color: #fff; letter-spacing: 2px; }
+      #e2 { color: var(--bright); }
+      #ebar { position: absolute; left: 400px; width: 280px; top: 1128px; height: 8px; background: var(--red); }
+      #ehandle { position: absolute; left: 0; width: 1080px; top: 1180px; text-align: center; font-family: "InterSB"; font-size: 44px; color: #ececee; }
+
+      /* diagonal red wipe with trailing ghosts (motion blur) */
+      #wipe { z-index: 9; pointer-events: none; }
+      #wipe .band { position: absolute; top: -200px; height: 2320px; transform: skewX(-22deg); }
+      #wipe .b0 { left: -200px; width: 1700px; background: var(--red); }
+      #wipe .b1 { left: -330px; width: 120px; background: var(--bright); opacity: 0.85; }
+      #wipe .b2 { left: 1510px; width: 140px; background: var(--deep); }
+      #wipe .g1 { left: -470px; width: 90px; background: var(--red); opacity: 0.45; }
+      #wipe .g2 { left: -580px; width: 60px; background: var(--red); opacity: 0.2; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="15.0" data-width="1080" data-height="1920">
+      <div id="bg" class="clip" data-start="0" data-duration="15.0" data-track-index="0"><div class="lines"></div><div id="parts"><i style="left:360px;top:352px;width:3px;height:3px;background:#ff4a4a;opacity:0.3"></i><i style="left:548px;top:147px;width:5px;height:5px;background:#ff4a4a;opacity:0.2"></i><i style="left:607px;top:1785px;width:6px;height:6px;background:#ffffff;opacity:0.31"></i><i style="left:78px;top:1625px;width:4px;height:4px;background:#ff4a4a;opacity:0.3"></i><i style="left:726px;top:266px;width:6px;height:6px;background:#ffffff;opacity:0.24"></i><i style="left:91px;top:451px;width:6px;height:6px;background:#ff4a4a;opacity:0.22"></i><i style="left:336px;top:1510px;width:3px;height:3px;background:#ff4a4a;opacity:0.22"></i><i style="left:488px;top:1176px;width:3px;height:3px;background:#ff4a4a;opacity:0.26"></i><i style="left:529px;top:151px;width:3px;height:3px;background:#ffffff;opacity:0.31"></i><i style="left:739px;top:1150px;width:6px;height:6px;background:#ffffff;opacity:0.14"></i><i style="left:741px;top:197px;width:4px;height:4px;background:#ffffff;opacity:0.45"></i><i style="left:424px;top:1284px;width:3px;height:3px;background:#ffffff;opacity:0.24"></i><i style="left:253px;top:597px;width:3px;height:3px;background:#ff4a4a;opacity:0.42"></i><i style="left:440px;top:580px;width:3px;height:3px;background:#ffffff;opacity:0.41"></i><i style="left:396px;top:1672px;width:3px;height:3px;background:#ff4a4a;opacity:0.18"></i><i style="left:525px;top:1140px;width:4px;height:4px;background:#ff4a4a;opacity:0.17"></i><i style="left:355px;top:306px;width:6px;height:6px;background:#ffffff;opacity:0.34"></i><i style="left:918px;top:1793px;width:6px;height:6px;background:#ff4a4a;opacity:0.25"></i><i style="left:93px;top:201px;width:3px;height:3px;background:#ff4a4a;opacity:0.16"></i><i style="left:608px;top:1046px;width:4px;height:4px;background:#ffffff;opacity:0.14"></i><i style="left:677px;top:1800px;width:6px;height:6px;background:#ff4a4a;opacity:0.16"></i><i style="left:505px;top:951px;width:3px;height:3px;background:#ff4a4a;opacity:0.37"></i><i style="left:736px;top:1009px;width:3px;height:3px;background:#ffffff;opacity:0.29"></i><i style="left:58px;top:1031px;width:3px;height:3px;background:#ffffff;opacity:0.21"></i><i style="left:817px;top:1039px;width:6px;height:6px;background:#ff4a4a;opacity:0.19"></i><i style="left:900px;top:1531px;width:5px;height:5px;background:#ffffff;opacity:0.19"></i><i style="left:60px;top:130px;width:4px;height:4px;background:#ffffff;opacity:0.18"></i><i style="left:855px;top:1382px;width:4px;height:4px;background:#ffffff;opacity:0.24"></i><i style="left:231px;top:448px;width:6px;height:6px;background:#ffffff;opacity:0.32"></i><i style="left:381px;top:1238px;width:3px;height:3px;background:#ffffff;opacity:0.38"></i><i style="left:212px;top:1500px;width:4px;height:4px;background:#ff4a4a;opacity:0.43"></i><i style="left:788px;top:233px;width:3px;height:3px;background:#ff4a4a;opacity:0.16"></i><i style="left:853px;top:343px;width:6px;height:6px;background:#ffffff;opacity:0.34"></i><i style="left:164px;top:106px;width:3px;height:3px;background:#ffffff;opacity:0.43"></i><i style="left:873px;top:460px;width:4px;height:4px;background:#ff4a4a;opacity:0.29"></i><i style="left:585px;top:1582px;width:3px;height:3px;background:#ffffff;opacity:0.24"></i><i style="left:952px;top:837px;width:6px;height:6px;background:#ff4a4a;opacity:0.17"></i><i style="left:822px;top:1175px;width:3px;height:3px;background:#ff4a4a;opacity:0.28"></i><i style="left:363px;top:1013px;width:6px;height:6px;background:#ffffff;opacity:0.38"></i><i style="left:225px;top:156px;width:3px;height:3px;background:#ffffff;opacity:0.31"></i><i style="left:482px;top:1183px;width:6px;height:6px;background:#ffffff;opacity:0.19"></i><i style="left:854px;top:994px;width:3px;height:3px;background:#ffffff;opacity:0.41"></i></div><div id="sweep"></div></div>
+
+      <div id="open" class="clip" data-start="0" data-duration="1.02" data-track-index="1">
+        <div id="osweep"></div>
+        <div id="ologo"><img src="assets/logo.png" alt="Persatuan Silambam logo" /><div class="glint"><i id="glint"></i></div></div>
+        <div id="omask"><div id="oname">PERSATUAN SILAMBAM<br><b>DAERAH SEPANG</b></div></div>
+        <div id="obar"></div>
+      </div>
+
+      <div id="m0" class="clip scene" data-start="0.98" data-duration="2.04" data-track-index="2">
+        <div class="sin" id="m0in">
+          <div class="frames" id="fr0"><svg viewBox="0 0 1080 1920"><path class="slab" d="M568.3,726.1 L191.0,980.5 L222.8,1434.4 L631.7,1633.9 L1009.0,1379.5 L977.2,925.6 Z"/><path class="f f1" pathLength="1" d="M600.0,640.0 L132.3,910.0 L132.3,1450.0 L600.0,1720.0 L1067.7,1450.0 L1067.7,910.0 Z"/><path class="f f2" pathLength="1" d="M534.6,714.6 L164.2,1003.9 L229.6,1469.4 L665.4,1645.4 L1035.8,1356.1 L970.4,890.6 Z"/><path class="f f3" pathLength="1" d="M641.8,782.2 L276.4,944.9 L234.6,1342.7 L558.2,1577.8 L923.6,1415.1 L965.4,1017.3 Z"/><path class="chev" d="M140,1640 l18,16 l-18,16"/><path class="chev" d="M174,1640 l18,16 l-18,16"/><path class="chev" d="M208,1640 l18,16 l-18,16"/><path class="chev" d="M242,1640 l18,16 l-18,16"/><rect class="sq" x="880" y="860" width="46" height="46"/><rect class="sq s2" x="930" y="1420" width="26" height="26"/></svg></div>
+          <img class="fig" id="fig0" src="assets/cut/photo_d.png" alt="MAHAGURU Sri S Arumugam" style="left:246px;top:680px;width:708px;height:1170px" />
+          <div class="nb L" style="left:90px;">
+            <div class="idx"><b>01</b> / 04</div>
+            <div class="mask"><div class="rank" id="rk0"><i></i>MAHAGURU</div></div>
+            <div class="mask"><div class="name" id="nm0" style="font-size:132px">Sri S Arumugam</div></div>
+          </div>
+        </div>
+      </div>
+      <div id="m1" class="clip scene" data-start="2.98" data-duration="2.04" data-track-index="2">
+        <div class="sin" id="m1in">
+          <div class="frames" id="fr1"><svg viewBox="0 0 1080 1920"><path class="slab" d="M511.7,726.1 L102.8,925.6 L71.0,1379.5 L448.3,1633.9 L857.2,1434.4 L889.0,980.5 Z"/><path class="f f1" pathLength="1" d="M480.0,640.0 L12.3,910.0 L12.3,1450.0 L480.0,1720.0 L947.7,1450.0 L947.7,910.0 Z"/><path class="f f2" pathLength="1" d="M545.4,714.6 L109.6,890.6 L44.2,1356.1 L414.6,1645.4 L850.4,1469.4 L915.8,1003.9 Z"/><path class="f f3" pathLength="1" d="M438.2,782.2 L114.6,1017.3 L156.4,1415.1 L521.8,1577.8 L845.4,1342.7 L803.6,944.9 Z"/><path class="chev" d="M860,1640 l18,16 l-18,16"/><path class="chev" d="M894,1640 l18,16 l-18,16"/><path class="chev" d="M928,1640 l18,16 l-18,16"/><path class="chev" d="M962,1640 l18,16 l-18,16"/><rect class="sq" x="120" y="860" width="46" height="46"/><rect class="sq s2" x="170" y="1420" width="26" height="26"/></svg></div>
+          <img class="fig" id="fig1" src="assets/cut/photo_c.png" alt="MAHAGURU Selvaraju" style="left:49px;top:720px;width:863px;height:1000px" />
+          <div class="nb R" style="right:90px;">
+            <div class="idx"><b>02</b> / 04</div>
+            <div class="mask"><div class="rank" id="rk1"><i></i>MAHAGURU</div></div>
+            <div class="mask"><div class="name" id="nm1" style="font-size:150px">Selvaraju</div></div>
+          </div>
+        </div>
+      </div>
+      <div id="m2" class="clip scene" data-start="4.98" data-duration="2.04" data-track-index="2">
+        <div class="sin" id="m2in">
+          <div class="frames" id="fr2"><svg viewBox="0 0 1080 1920"><path class="slab" d="M568.3,726.1 L191.0,980.5 L222.8,1434.4 L631.7,1633.9 L1009.0,1379.5 L977.2,925.6 Z"/><path class="f f1" pathLength="1" d="M600.0,640.0 L132.3,910.0 L132.3,1450.0 L600.0,1720.0 L1067.7,1450.0 L1067.7,910.0 Z"/><path class="f f2" pathLength="1" d="M534.6,714.6 L164.2,1003.9 L229.6,1469.4 L665.4,1645.4 L1035.8,1356.1 L970.4,890.6 Z"/><path class="f f3" pathLength="1" d="M641.8,782.2 L276.4,944.9 L234.6,1342.7 L558.2,1577.8 L923.6,1415.1 L965.4,1017.3 Z"/><path class="chev" d="M140,1640 l18,16 l-18,16"/><path class="chev" d="M174,1640 l18,16 l-18,16"/><path class="chev" d="M208,1640 l18,16 l-18,16"/><path class="chev" d="M242,1640 l18,16 l-18,16"/><rect class="sq" x="880" y="860" width="46" height="46"/><rect class="sq s2" x="930" y="1420" width="26" height="26"/></svg></div>
+          <img class="fig" id="fig2" src="assets/cut/photo_b.png" alt="MAHAGURU DATO A.SIVAKUMAR" style="left:166px;top:650px;width:869px;height:1180px" />
+          <div class="nb L" style="left:90px;">
+            <div class="idx"><b>03</b> / 04</div>
+            <div class="mask"><div class="rank" id="rk2"><i></i>MAHAGURU</div></div>
+            <div class="mask"><div class="name" id="nm2" style="font-size:98px">DATO A.SIVAKUMAR</div></div>
+          </div>
+        </div>
+      </div>
+      <div id="m3" class="clip scene" data-start="6.98" data-duration="2.04" data-track-index="2">
+        <div class="sin" id="m3in">
+          <div class="frames" id="fr3"><svg viewBox="0 0 1080 1920"><path class="slab" d="M511.7,726.1 L102.8,925.6 L71.0,1379.5 L448.3,1633.9 L857.2,1434.4 L889.0,980.5 Z"/><path class="f f1" pathLength="1" d="M480.0,640.0 L12.3,910.0 L12.3,1450.0 L480.0,1720.0 L947.7,1450.0 L947.7,910.0 Z"/><path class="f f2" pathLength="1" d="M545.4,714.6 L109.6,890.6 L44.2,1356.1 L414.6,1645.4 L850.4,1469.4 L915.8,1003.9 Z"/><path class="f f3" pathLength="1" d="M438.2,782.2 L114.6,1017.3 L156.4,1415.1 L521.8,1577.8 L845.4,1342.7 L803.6,944.9 Z"/><path class="chev" d="M860,1640 l18,16 l-18,16"/><path class="chev" d="M894,1640 l18,16 l-18,16"/><path class="chev" d="M928,1640 l18,16 l-18,16"/><path class="chev" d="M962,1640 l18,16 l-18,16"/><rect class="sq" x="120" y="860" width="46" height="46"/><rect class="sq s2" x="170" y="1420" width="26" height="26"/></svg></div>
+          <img class="fig" id="fig3" src="assets/cut/photo_a.png" alt="GRAND MASTER Vijayasegaran" style="left:92px;top:730px;width:777px;height:1150px" />
+          <div class="nb R" style="right:90px;">
+            <div class="idx"><b>04</b> / 04</div>
+            <div class="mask"><div class="rank" id="rk3"><i></i>GRAND MASTER</div></div>
+            <div class="mask"><div class="name" id="nm3" style="font-size:132px">Vijayasegaran</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="credits" class="clip" data-start="8.98" data-duration="5.04" data-track-index="2"><div id="crin"><div class="ct">PERSATUAN SILAMBAM DAERAH SEPANG</div><div class="cbar"></div><div class="cb "><h3>MAHAGURU</h3><div>Mahaguru Sri S Arumugam</div><div>Mahaguru Selvaraju</div><div>Mahaguru DATO Sivakumar</div></div><div class="cb "><h3>GRAND MASTER</h3><div>Master Vijisegaran</div></div><div class="cols"><div class="cb "><h3>SENIOR MASTERS</h3><div>Master Kanesan</div><div>Master Parthiban</div><div>Master Barthiban</div><div>Master Veera</div><div>Master Naren</div><div>Master Viki</div><div>Master Tehn Amuthan</div></div><div class="cb "><h3>BLACK BELT MASTERS</h3><div>Master Sasitharan</div><div>Master Tehn Tamil Maran</div><div>Master Then Cheran</div><div>Master Thangapaandiyan</div><div>Master Sivaraj</div></div></div><div class="cb thanks"><h3>SPECIAL THANKS</h3><div>Junior Black Belt Masters</div><div>and Sepang Students</div></div></div></div>
+
+      <div id="end" class="clip" data-start="13.98" data-duration="1.02" data-track-index="2">
+        <div id="ein">
+          <div id="elogo"><img src="assets/logo.png" alt="Persatuan Silambam logo" /><div class="glint"><i id="eglint"></i></div></div>
+          <div class="emask" id="e1m"><div class="et" id="e1">THANKS FOR</div></div>
+          <div class="emask" id="e2m"><div class="et" id="e2">WATCHING</div></div>
+          <div id="ebar"></div>
+          <div id="ehandle">@silambam_daerah_sepang</div>
+        </div>
+      </div>
+
+      <div id="hdr" class="clip" data-start="0" data-duration="14.02" data-track-index="5"><div class="row"><img src="assets/logo.png" alt="" /><span>MAHAGURU SRI S. ARUMUGAM STUDENTS</span></div><div class="rule"></div></div>
+      <div id="wipe" class="clip" data-start="0" data-duration="15.0" data-track-index="8"><div id="wipeIn" style="position:absolute;inset:0"><div class="band g2"></div><div class="band g1"></div><div class="band b1"></div><div class="band b0"></div><div class="band b2"></div></div></div>
+
+      <audio id="music" data-timeline-role="music" class="clip" src="assets/music.wav" data-start="0" data-duration="15.0" data-volume="1"></audio>
+      <audio id="sx0" class="clip" src="assets/sfx/zoom-swish.wav" data-start="0.8" data-duration="0.9" data-volume="0.28"></audio>
+      <audio id="sx1" class="clip" src="assets/sfx/zoom-swish.wav" data-start="2.8" data-duration="0.9" data-volume="0.28"></audio>
+      <audio id="sx2" class="clip" src="assets/sfx/zoom-swish.wav" data-start="4.8" data-duration="0.9" data-volume="0.28"></audio>
+      <audio id="sx3" class="clip" src="assets/sfx/zoom-swish.wav" data-start="6.8" data-duration="0.9" data-volume="0.28"></audio>
+      <audio id="sx4" class="clip" src="assets/sfx/zoom-swish.wav" data-start="8.8" data-duration="0.9" data-volume="0.28"></audio>
+      <audio id="sx5" class="clip" src="assets/sfx/zoom-swish.wav" data-start="13.8" data-duration="0.9" data-volume="0.28"></audio>
+      <audio id="sx6" class="clip" src="assets/sfx/thock.wav" data-start="1.4" data-duration="0.9" data-volume="0.32"></audio>
+      <audio id="sx7" class="clip" src="assets/sfx/thock.wav" data-start="3.4" data-duration="0.9" data-volume="0.32"></audio>
+      <audio id="sx8" class="clip" src="assets/sfx/thock.wav" data-start="5.4" data-duration="0.9" data-volume="0.32"></audio>
+      <audio id="sx9" class="clip" src="assets/sfx/thock.wav" data-start="7.4" data-duration="0.9" data-volume="0.32"></audio>
+      <audio id="sx10" class="clip" src="assets/sfx/shimmer.wav" data-start="0.3" data-duration="0.9" data-volume="0.22"></audio>
+      <audio id="sx11" class="clip" src="assets/sfx/shimmer.wav" data-start="14.3" data-duration="0.9" data-volume="0.2"></audio>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      // frame-0 state, outside the timeline so it renders at t=0
+      gsap.set("#fr0 .f",{strokeDasharray:1,strokeDashoffset:1});
+      gsap.set("#fr0",{transformPerspective:1400,transformOrigin:"600px 1180px"});
+      gsap.set("#fig0",{transformOrigin:"50% 85%",clipPath:"polygon(0% 0%,100% 0%,100% 0%,0% 0%)"});
+      gsap.set("#rk0",{xPercent:-110,skewX:-9}); gsap.set("#nm0",{yPercent:115,skewX:-9});
+      gsap.set("#fr0 .slab",{opacity:0,scale:0.9,transformOrigin:"600px 1180px"}); gsap.set("#fr0 .chev,#fr0 .sq",{opacity:0});
+      gsap.set("#fr1 .f",{strokeDasharray:1,strokeDashoffset:1});
+      gsap.set("#fr1",{transformPerspective:1400,transformOrigin:"480px 1180px"});
+      gsap.set("#fig1",{transformOrigin:"50% 85%",clipPath:"polygon(0% 0%,100% 0%,100% 0%,0% 0%)"});
+      gsap.set("#rk1",{xPercent:110,skewX:-9}); gsap.set("#nm1",{yPercent:115,skewX:-9});
+      gsap.set("#fr1 .slab",{opacity:0,scale:0.9,transformOrigin:"480px 1180px"}); gsap.set("#fr1 .chev,#fr1 .sq",{opacity:0});
+      gsap.set("#fr2 .f",{strokeDasharray:1,strokeDashoffset:1});
+      gsap.set("#fr2",{transformPerspective:1400,transformOrigin:"600px 1180px"});
+      gsap.set("#fig2",{transformOrigin:"50% 85%",clipPath:"polygon(0% 0%,100% 0%,100% 0%,0% 0%)"});
+      gsap.set("#rk2",{xPercent:-110,skewX:-9}); gsap.set("#nm2",{yPercent:115,skewX:-9});
+      gsap.set("#fr2 .slab",{opacity:0,scale:0.9,transformOrigin:"600px 1180px"}); gsap.set("#fr2 .chev,#fr2 .sq",{opacity:0});
+      gsap.set("#fr3 .f",{strokeDasharray:1,strokeDashoffset:1});
+      gsap.set("#fr3",{transformPerspective:1400,transformOrigin:"480px 1180px"});
+      gsap.set("#fig3",{transformOrigin:"50% 85%",clipPath:"polygon(0% 0%,100% 0%,100% 0%,0% 0%)"});
+      gsap.set("#rk3",{xPercent:110,skewX:-9}); gsap.set("#nm3",{yPercent:115,skewX:-9});
+      gsap.set("#fr3 .slab",{opacity:0,scale:0.9,transformOrigin:"480px 1180px"}); gsap.set("#fr3 .chev,#fr3 .sq",{opacity:0});
+      gsap.set("#wipeIn",{x:-2300});
+      gsap.set("#ologo",{scale:0.78,opacity:0}); gsap.set("#glint",{xPercent:-160}); gsap.set("#oname",{yPercent:110}); gsap.set("#obar",{scaleX:0});
+      gsap.set("#hdr",{opacity:0,y:-16});
+      gsap.set("#crin",{opacity:0,y:30});
+      gsap.set("#elogo",{scale:0.8,opacity:0}); gsap.set("#e1",{yPercent:110,skewX:-9}); gsap.set("#e2",{yPercent:110,skewX:-9}); gsap.set("#ebar",{scaleX:0}); gsap.set("#ehandle",{opacity:0,y:20}); gsap.set("#eglint",{xPercent:-160});
+      const tl = gsap.timeline({ paused: true });
+      tl.to("#fr0 .f1",{strokeDashoffset:0,duration:0.42,ease:"power3.out"},1.02);
+      tl.to("#fr0 .f2",{strokeDashoffset:0,duration:0.42,ease:"power3.out"},1.08);
+      tl.to("#fr0 .f3",{strokeDashoffset:0,duration:0.42,ease:"power3.out"},1.14);
+      tl.to("#fr0 .slab",{opacity:1,scale:1,duration:0.4,ease:"power3.out"},1.08);
+      tl.to("#fr0 .chev,#fr0 .sq",{opacity:1,duration:0.2,stagger:0.03},1.3);
+      tl.fromTo("#fr0",{rotationY:-14,rotation:-3,scale:0.94,x:30},{rotationY:6,rotation:3,scale:1.05,x:-20,duration:1.95,ease:"power1.out"},1.0);
+      tl.to("#fr0 .f2",{rotation:4,svgOrigin:"600 1180",duration:1.9,ease:"none"},1.0);
+      tl.to("#fr0 .f3",{rotation:-6,svgOrigin:"600 1180",duration:1.9,ease:"none"},1.0);
+      tl.to("#fig0",{clipPath:"polygon(0% 0%,100% 0%,100% 160%,0% 130%)",duration:0.45,ease:"power3.out"},1.06);
+      tl.fromTo("#fig0",{y:70,scale:1.0,x:-12},{y:0,duration:0.5,ease:"power3.out"},1.06);
+      tl.to("#fig0",{scale:1.05,x:14,duration:1.45,ease:"none"},1.5);
+      tl.to("#rk0",{xPercent:0,duration:0.32,ease:"power4.out"},1.24);
+      tl.to("#nm0",{yPercent:0,duration:0.36,ease:"power4.out"},1.38);
+      tl.to("#m0in",{x:-90,filter:"blur(6px)",duration:0.16,ease:"power2.in"},2.82);
+      tl.to("#fr1 .f1",{strokeDashoffset:0,duration:0.42,ease:"power3.out"},3.02);
+      tl.to("#fr1 .f2",{strokeDashoffset:0,duration:0.42,ease:"power3.out"},3.08);
+      tl.to("#fr1 .f3",{strokeDashoffset:0,duration:0.42,ease:"power3.out"},3.14);
+      tl.to("#fr1 .slab",{opacity:1,scale:1,duration:0.4,ease:"power3.out"},3.08);
+      tl.to("#fr1 .chev,#fr1 .sq",{opacity:1,duration:0.2,stagger:0.03},3.3);
+      tl.fromTo("#fr1",{rotationY:14,rotation:3,scale:0.94,x:-30},{rotationY:-6,rotation:-3,scale:1.05,x:20,duration:1.95,ease:"power1.out"},3.0);
+      tl.to("#fr1 .f2",{rotation:-4,svgOrigin:"480 1180",duration:1.9,ease:"none"},3.0);
+      tl.to("#fr1 .f3",{rotation:6,svgOrigin:"480 1180",duration:1.9,ease:"none"},3.0);
+      tl.to("#fig1",{clipPath:"polygon(0% 0%,100% 0%,100% 160%,0% 130%)",duration:0.45,ease:"power3.out"},3.06);
+      tl.fromTo("#fig1",{y:70,scale:1.0,x:12},{y:0,duration:0.5,ease:"power3.out"},3.06);
+      tl.to("#fig1",{scale:1.05,x:-14,duration:1.45,ease:"none"},3.5);
+      tl.to("#rk1",{xPercent:0,duration:0.32,ease:"power4.out"},3.24);
+      tl.to("#nm1",{yPercent:0,duration:0.36,ease:"power4.out"},3.38);
+      tl.to("#m1in",{x:90,filter:"blur(6px)",duration:0.16,ease:"power2.in"},4.82);
+      tl.to("#fr2 .f1",{strokeDashoffset:0,duration:0.42,ease:"power3.out"},5.02);
+      tl.to("#fr2 .f2",{strokeDashoffset:0,duration:0.42,ease:"power3.out"},5.08);
+      tl.to("#fr2 .f3",{strokeDashoffset:0,duration:0.42,ease:"power3.out"},5.14);
+      tl.to("#fr2 .slab",{opacity:1,scale:1,duration:0.4,ease:"power3.out"},5.08);
+      tl.to("#fr2 .chev,#fr2 .sq",{opacity:1,duration:0.2,stagger:0.03},5.3);
+      tl.fromTo("#fr2",{rotationY:-14,rotation:-3,scale:0.94,x:30},{rotationY:6,rotation:3,scale:1.05,x:-20,duration:1.95,ease:"power1.out"},5.0);
+      tl.to("#fr2 .f2",{rotation:4,svgOrigin:"600 1180",duration:1.9,ease:"none"},5.0);
+      tl.to("#fr2 .f3",{rotation:-6,svgOrigin:"600 1180",duration:1.9,ease:"none"},5.0);
+      tl.to("#fig2",{clipPath:"polygon(0% 0%,100% 0%,100% 160%,0% 130%)",duration:0.45,ease:"power3.out"},5.06);
+      tl.fromTo("#fig2",{y:70,scale:1.0,x:-12},{y:0,duration:0.5,ease:"power3.out"},5.06);
+      tl.to("#fig2",{scale:1.05,x:14,duration:1.45,ease:"none"},5.5);
+      tl.to("#rk2",{xPercent:0,duration:0.32,ease:"power4.out"},5.24);
+      tl.to("#nm2",{yPercent:0,duration:0.36,ease:"power4.out"},5.38);
+      tl.to("#m2in",{x:-90,filter:"blur(6px)",duration:0.16,ease:"power2.in"},6.82);
+      tl.to("#fr3 .f1",{strokeDashoffset:0,duration:0.42,ease:"power3.out"},7.02);
+      tl.to("#fr3 .f2",{strokeDashoffset:0,duration:0.42,ease:"power3.out"},7.08);
+      tl.to("#fr3 .f3",{strokeDashoffset:0,duration:0.42,ease:"power3.out"},7.14);
+      tl.to("#fr3 .slab",{opacity:1,scale:1,duration:0.4,ease:"power3.out"},7.08);
+      tl.to("#fr3 .chev,#fr3 .sq",{opacity:1,duration:0.2,stagger:0.03},7.3);
+      tl.fromTo("#fr3",{rotationY:14,rotation:3,scale:0.94,x:-30},{rotationY:-6,rotation:-3,scale:1.05,x:20,duration:1.95,ease:"power1.out"},7.0);
+      tl.to("#fr3 .f2",{rotation:-4,svgOrigin:"480 1180",duration:1.9,ease:"none"},7.0);
+      tl.to("#fr3 .f3",{rotation:6,svgOrigin:"480 1180",duration:1.9,ease:"none"},7.0);
+      tl.to("#fig3",{clipPath:"polygon(0% 0%,100% 0%,100% 160%,0% 130%)",duration:0.45,ease:"power3.out"},7.06);
+      tl.fromTo("#fig3",{y:70,scale:1.0,x:12},{y:0,duration:0.5,ease:"power3.out"},7.06);
+      tl.to("#fig3",{scale:1.05,x:-14,duration:1.45,ease:"none"},7.5);
+      tl.to("#rk3",{xPercent:0,duration:0.32,ease:"power4.out"},7.24);
+      tl.to("#nm3",{yPercent:0,duration:0.36,ease:"power4.out"},7.38);
+      tl.to("#m3in",{x:90,filter:"blur(6px)",duration:0.16,ease:"power2.in"},8.82);
+      tl.to("#parts i:nth-child(1)",{y:-152,x:-27,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(2)",{y:-184,x:-26,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(3)",{y:-157,x:29,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(4)",{y:-187,x:4,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(5)",{y:-183,x:-26,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(6)",{y:-190,x:-3,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(7)",{y:-174,x:-9,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(8)",{y:-219,x:-21,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(9)",{y:-239,x:-11,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(10)",{y:-106,x:-14,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(11)",{y:-230,x:-13,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(12)",{y:-194,x:-0,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(13)",{y:-174,x:-20,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(14)",{y:-137,x:-5,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(15)",{y:-129,x:-16,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(16)",{y:-181,x:7,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(17)",{y:-216,x:-3,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(18)",{y:-108,x:8,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(19)",{y:-192,x:-24,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(20)",{y:-125,x:-7,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(21)",{y:-234,x:30,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(22)",{y:-216,x:-1,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(23)",{y:-115,x:3,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(24)",{y:-152,x:-20,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(25)",{y:-228,x:29,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(26)",{y:-178,x:-9,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(27)",{y:-193,x:-9,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(28)",{y:-127,x:-16,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(29)",{y:-90,x:25,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(30)",{y:-218,x:-1,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(31)",{y:-213,x:-2,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(32)",{y:-116,x:24,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(33)",{y:-150,x:3,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(34)",{y:-164,x:22,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(35)",{y:-220,x:-10,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(36)",{y:-168,x:5,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(37)",{y:-177,x:22,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(38)",{y:-213,x:3,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(39)",{y:-240,x:-27,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(40)",{y:-219,x:25,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(41)",{y:-137,x:0,duration:15.0,ease:"none"},0);
+      tl.to("#parts i:nth-child(42)",{y:-250,x:-14,duration:15.0,ease:"none"},0);
+      tl.set("#sweep",{x:-1500,opacity:0},0.05); tl.to("#sweep",{x:1500,opacity:1,duration:1.1,ease:"power1.inOut"},0.051);
+      tl.set("#sweep",{x:-1500,opacity:0},1.35); tl.to("#sweep",{x:1500,opacity:1,duration:1.1,ease:"power1.inOut"},1.351);
+      tl.set("#sweep",{x:-1500,opacity:0},3.35); tl.to("#sweep",{x:1500,opacity:1,duration:1.1,ease:"power1.inOut"},3.351);
+      tl.set("#sweep",{x:-1500,opacity:0},5.35); tl.to("#sweep",{x:1500,opacity:1,duration:1.1,ease:"power1.inOut"},5.351);
+      tl.set("#sweep",{x:-1500,opacity:0},7.35); tl.to("#sweep",{x:1500,opacity:1,duration:1.1,ease:"power1.inOut"},7.351);
+      tl.to("#parts",{opacity:0.25,duration:0.3},9.0); tl.to("#parts",{opacity:1,duration:0.3},14.0);
+      tl.set("#wipeIn",{x:-2300},0.8); tl.to("#wipeIn",{x:2300,duration:0.40,ease:"power2.inOut"},0.801);
+      tl.set("#wipeIn",{x:-2300},2.8); tl.to("#wipeIn",{x:2300,duration:0.40,ease:"power2.inOut"},2.801);
+      tl.set("#wipeIn",{x:-2300},4.8); tl.to("#wipeIn",{x:2300,duration:0.40,ease:"power2.inOut"},4.801);
+      tl.set("#wipeIn",{x:-2300},6.8); tl.to("#wipeIn",{x:2300,duration:0.40,ease:"power2.inOut"},6.801);
+      tl.set("#wipeIn",{x:-2300},8.8); tl.to("#wipeIn",{x:2300,duration:0.40,ease:"power2.inOut"},8.801);
+      tl.set("#wipeIn",{x:-2300},13.8); tl.to("#wipeIn",{x:2300,duration:0.40,ease:"power2.inOut"},13.801);
+      tl.to("#ologo",{scale:1,opacity:1,duration:0.34,ease:"back.out(1.7)"},0.04);
+      tl.to("#glint",{xPercent:160,duration:0.42,ease:"power2.inOut"},0.30);
+      tl.to("#oname",{yPercent:0,duration:0.28,ease:"power4.out"},0.34);
+      tl.to("#obar",{scaleX:1,duration:0.3,ease:"power3.out"},0.42);
+      tl.to("#ologo",{scale:1.04,duration:0.5,ease:"none"},0.38);
+      tl.to("#hdr",{opacity:1,y:0,duration:0.3,ease:"power2.out"},0.62);
+      tl.to("#hdr",{opacity:0,duration:0.15},13.85);
+      tl.to("#crin",{opacity:1,y:0,duration:0.28,ease:"power3.out"},9.02);
+      tl.to("#elogo",{scale:1,opacity:1,duration:0.32,ease:"back.out(1.6)"},14.02);
+      tl.to("#e1",{yPercent:0,duration:0.3,ease:"power4.out"},14.10);
+      tl.to("#e2",{yPercent:0,duration:0.3,ease:"power4.out"},14.18);
+      tl.to("#ebar",{scaleX:1,duration:0.3,ease:"power3.out"},14.26);
+      tl.to("#ehandle",{opacity:1,y:0,duration:0.28,ease:"power2.out"},14.32);
+      tl.to("#eglint",{xPercent:160,duration:0.45,ease:"power2.inOut"},14.35);
+      tl.to("#ein",{scale:1.03,duration:0.85,ease:"none"},14.15);
+      tl.set({}, {}, 15.0);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

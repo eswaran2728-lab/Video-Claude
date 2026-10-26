@@ -1,0 +1,9 @@
+*.mp4
+*.mov
+*.wav
+*.log
+renders/
+snap*/
+sheets/
+edit/node_modules/
+edit/.hyperframes/

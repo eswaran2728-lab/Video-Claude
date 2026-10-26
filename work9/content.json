@@ -1,0 +1,28 @@
+{
+  "_note": "ALL on-screen wording lives here. Edit, then run: python3 build.py. Spelling notes are in _spelling (not shown on screen).",
+  "header": "MAHAGURU SRI S. ARUMUGAM STUDENTS",
+  "association": "PERSATUAN SILAMBAM DAERAH SEPANG",
+  "masters": [
+    { "rank": "MAHAGURU",     "name": "Sri S Arumugam",   "photo": "photo_d", "_photo_src": "uploaded portrait, white hair, Selangor + Malaysia flags (same pose as reference 0.0-1.0 s)" },
+    { "rank": "MAHAGURU",     "name": "Selvaraju",        "photo": "photo_c", "_photo_src": "uploaded outdoor photo (reference 1.0-2.6 s)" },
+    { "rank": "MAHAGURU",     "name": "DATO A.SIVAKUMAR", "photo": "photo_b", "_photo_src": "uploaded blue-studio photo, staff raised (reference 2.6-4.3 s)" },
+    { "rank": "GRAND MASTER", "name": "Vijayasegaran",    "photo": "photo_a", "_photo_src": "uploaded plain-wall photo (reference 4.6-6.5 s)" }
+  ],
+  "credits": [
+    { "heading": "MAHAGURU", "names": ["Mahaguru Sri S Arumugam", "Mahaguru Selvaraju", "Mahaguru DATO Sivakumar"] },
+    { "heading": "GRAND MASTER", "names": ["Master Vijisegaran"] },
+    { "heading": "SENIOR MASTERS", "names": ["Master Kanesan", "Master Parthiban", "Master Barthiban", "Master Veera", "Master Naren", "Master Viki", "Master Tehn Amuthan"] },
+    { "heading": "BLACK BELT MASTERS", "names": ["Master Sasitharan", "Master Tehn Tamil Maran", "Master Then Cheran", "Master Thangapaandiyan", "Master Sivaraj"] },
+    { "heading": "SPECIAL THANKS", "names": ["Junior Black Belt Masters and Sepang Students"] }
+  ],
+  "ending": "THANKS FOR WATCHING",
+  "handle": "@silambam_daerah_sepang",
+  "_spelling": {
+    "Kanesan": "Brief listed Kanasan/Kanesan. Reference credits (clear frame ~8.5 s) read 'Kanesan' -> used.",
+    "Thangapaandiyan": "Brief listed Thangapandiyan/Thangapaandiyan. Reference credits (clear, ~10.4 s) read 'Thangapaandiyan' -> used.",
+    "Vijayasegaran / Vijisegaran": "Reference itself differs: intro card 'Vijayasegaran', credits 'Master Vijisegaran'. Both kept as in the reference -- NEEDS CONFIRMATION.",
+    "Selvaraju / Selavaraju": "Intro card reads 'Selvaraju'; reference credits read 'Mahaguru Selavaraju'. Supplied transcription says 'Selvaraju' -> kept 'Selvaraju' in both -- NEEDS CONFIRMATION.",
+    "DATO Sivakumar": "Intro 'DATO A.SIVAKUMAR', credits 'Mahaguru DATO Sivakumar' -- as in the reference.",
+    "verified as supplied": "Barthiban, Viki, Tehn Amuthan, Sasitharan, Tehn Tamil Maran, Then Cheran, Parthiban, Veera, Naren, Sivaraj match the reference frames."
+  }
+}
