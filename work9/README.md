@@ -1,6 +1,10 @@
 # Silambam masters introduction — HyperFrames, 1080x1920, 30 fps, exactly 15.000 s (450 frames)
 
-Preview only. The final high-resolution export waits for approval. Nothing is published.
+**Final (approved v01):** `FINAL_Silambam_Masters_Intro_1080x1920.mp4` — `python3 build.py`, then in `edit/`
+`npx hyperframes@0.8.193 render --quality high --fps 30 -o ../renders/final_raw_v01.mp4`, then
+`./master_final.sh renders/final_raw_v01.mp4 FINAL_Silambam_Masters_Intro_1080x1920.mp4` (video copied; audio -14 LUFS / -2 dBTP).
+Checked: 1080x1920, 30 fps, 450 frames, 15.000 s video and audio, full decode, -13.9 LUFS, peak -2.3 dBFS.
+Music is still the TEMPORARY reference-audio bed. Nothing is published.
 
 ## Rebuild
 ```
