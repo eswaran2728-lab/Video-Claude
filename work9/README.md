@@ -6,7 +6,9 @@
 Checked: 1080x1920, 30 fps, 450 frames, 15.000 s video and audio, full decode, -13.9 LUFS, peak -2.3 dBFS.
 Music is still the TEMPORARY reference-audio bed. Nothing is published.
 
-**v02 (preview, awaiting approval):** credits revised by the creator — Master Sasitharan moved below Master Sivaraj;
+**Final v02 (approved):** `FINAL_Silambam_Masters_Intro_v02_1080x1920.mp4` — same commands with `final_raw_v02.mp4`;
+checked 450 frames, 15.000 s, full decode, -13.9 LUFS, peak -2.3 dBFS.
+**v02 changes:** credits revised by the creator — Master Sasitharan moved below Master Sivaraj;
 Special Thanks now lists Junior Master P.Eswaran, Junior Master Tibaneswaran, Junior Master Tivyapriya and "And Other
 Junior Masters and Sepang Silambam Students" (typed with a doubled "AND"; shown without it — to confirm). Credit
 spacing tightened so the longer list fits. `PREVIEW_silambam_masters_v02.mp4`; the v01 final is kept
