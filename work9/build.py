@@ -105,9 +105,11 @@ def block(c, cls=""):
     names = "".join(f"<div>{n}</div>" for n in c["names"])
     return f'<div class="cb {cls}"><h3>{c["heading"]}</h3>{names}</div>'
 cols = f'<div class="cols">{block(cr[2])}{block(cr[3])}</div>'
-sp = cr[4]; sp_names = sp["names"][0]
-if len(sp_names) > 30 and " and " in sp_names:                        # wrap the long thanks line at "and"
-    a, b = sp_names.split(" and ", 1); sp = {"heading": sp["heading"], "names": [a, "and " + b]}
+def wrap(n, limit=32):                                               # long credit lines break before the middle "and"
+    if len(n) <= limit or " and " not in n: return [n]
+    cuts = [k for k in range(len(n)) if n.startswith(" and ", k)]
+    k = min(cuts, key=lambda k: abs(k - len(n) / 2)); return [n[:k], n[k + 1:]]
+sp = {"heading": cr[4]["heading"], "names": [l for n in cr[4]["names"] for l in wrap(n)]}
 credits_inner = f'<div class="ct">{C["association"]}</div><div class="cbar"></div>{block(cr[0])}{block(cr[1])}{cols}{block(sp, "thanks")}'
 I('gsap.set("#crin",{opacity:0,y:30});')
 A('tl.to("#crin",{opacity:1,y:0,duration:0.28,ease:"power3.out"},9.02);')
