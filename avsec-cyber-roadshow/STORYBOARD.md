@@ -15,7 +15,7 @@
 
 Not used: the host and organizer URLs (never shown or encoded), and any participant count or statistic.
 
-Logos (supplied by the client during the build): the AVSEC badge is in the video. The AirAsia Allstars "Dare to Dream" logo has a marked slot that fills in once its file is added.
+Logos (supplied by the client during the build): the AVSEC badge and the AirAsia Allstars "Dare to Dream" logo, both in the video.
 
 **Rankings:** shown as the real leaderboards supplied by the client: Spot the Risk (screenshots, rows 01–20) and the Human Firewall video quiz (#1–#19). Both match the games' own data as of 27 Oct 2026.
 

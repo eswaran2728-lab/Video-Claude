@@ -2,7 +2,7 @@
 
 ## Status
 
-**PREVIEW only because of one missing file:** the Allstars "Dare to Dream" logo. It was sent as an image in chat, which doesn't reach the build machine as a file. A marked `[ALLSTARS LOGO]` slot holds its place on the opening and on the end card. Everything else is final.
+**Final.** Both client logos are in: the AVSEC badge and the Allstars "Dare to Dream" logo. Each is shown whole at the top of the opening and in the end-card footer. For each, only the plain background outside the artwork was made transparent; the artwork is untouched.
 
 ## Rankings (changed on request)
 

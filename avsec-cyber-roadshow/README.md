@@ -2,7 +2,7 @@
 
 35-second, 9:16 (1080 × 1920) motion-graphics video for the AirAsia AVSEC booth, built with [HyperFrames](https://hyperframes.heygen.com) (HTML + GSAP rendered to MP4).
 
-- **Video:** `renders/avsec-cyber-roadshow-PREVIEW.mp4`. It's called PREVIEW only because the Allstars logo file hasn't been added yet.
+- **Video (final):** `renders/avsec-cyber-roadshow.mp4`
 - **Storyboard:** `STORYBOARD.md` · **Review notes:** `REVIEW.md` · **Preview stills:** `stills/`
 
 ## The two leaderboards (13–25 s)
@@ -53,9 +53,9 @@ The logos appear in full (never cropped) at the top of the opening and in the en
 | Logo | Status | File |
 | --- | --- | --- |
 | AVSEC badge | **In the video.** Supplied by the client. The only change is that the black area outside the shield was made transparent; the badge artwork is untouched | `assets/logos/avsec.png` |
-| AirAsia Allstars "Dare to Dream" | **File needed.** A dashed `[ALLSTARS LOGO]` slot shows until it's added | `assets/logos/allstars.png` |
+| AirAsia Allstars "Dare to Dream" | **In the video.** Supplied by the client. The only change is that the white area outside the logo was made transparent; the white inside the letters is kept | `assets/logos/allstars.png` |
 
-To add the Allstars logo, save the PNG (a transparent background is best) as `assets/logos/allstars.png`. Then set `allstars: "assets/logos/allstars.png"` and run `npm run render`. Set a logo to `null` to leave it out entirely. The render stops with an error if a logo path points to a missing file.
+To change a logo, replace its PNG (a transparent background is best) and run `npm run render`. Set a logo to `""` to show a placeholder slot, or `null` to leave it out entirely. The render stops with an error if a logo path points to a missing file.
 
 ## Audio and licences
 

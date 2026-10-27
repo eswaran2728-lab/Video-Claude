@@ -57,6 +57,6 @@ window.AVSEC_DATA = {
    *   null                  leave that logo out entirely */
   logos: {
     avsec: "assets/logos/avsec.png",
-    allstars: "", // add assets/logos/allstars.png, then set "assets/logos/allstars.png"
+    allstars: "assets/logos/allstars.png",
   },
 };
