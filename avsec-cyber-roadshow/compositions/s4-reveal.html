@@ -7,7 +7,7 @@
       background: var(--charcoal);
     }
     #s4-stage { position: absolute; inset: 0; }
-    #s4-ground, #s4-flood, #s4-white, #s4-confetti, #s4-burst-wrap { position: absolute; inset: 0; }
+    #s4-ground, #s4-flood, #s4-white, #s4-confetti { position: absolute; inset: 0; }
     #s4-ground {
       background:
         radial-gradient(ellipse 70% 45% at 50% 40%, rgba(255, 45, 63, 0.14), transparent 70%),
@@ -24,216 +24,143 @@
         linear-gradient(90deg, rgba(255, 255, 255, 0.04) 2px, transparent 2px);
       background-size: 60px 60px;
     }
-    #s4-flood { background: var(--red); clip-path: circle(0% at 50% 42%); }
+    #s4-flood { background: var(--red); opacity: 0; }
     #s4-flood-rays {
       position: absolute;
       left: -460px;
       top: -400px;
       width: 2000px;
       height: 2000px;
-      background: repeating-conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0.07) 0deg 7deg, transparent 7deg 18deg);
+      background: repeating-conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0.08) 0deg 7deg, transparent 7deg 18deg);
     }
     #s4-white { background: var(--paper); opacity: 0; }
-    #s4-burst {
+    .s4-bit { position: absolute; left: 0; top: 0; width: 22px; height: 34px; border-radius: 4px; }
+
+    .s4-board { position: absolute; inset: 0; }
+    .s4-title {
+      position: absolute;
+      left: 0;
+      top: 172px;
+      width: 1080px;
+      text-align: center;
+      font-size: 64px;
+      font-weight: 900;
+      letter-spacing: -0.035em;
+      line-height: 1;
+      white-space: nowrap;
+    }
+    .s4-title b {
+      color: var(--red-signal);
+      font-weight: 900;
+      background: #141417;
+      padding: 0 0.14em 0.04em;
+      border-radius: 12px;
+    }
+    .s4-sub {
+      position: absolute;
+      left: 0;
+      top: 250px;
+      width: 1080px;
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      color: rgba(255, 255, 255, 0.8);
+      white-space: nowrap;
+    }
+    .s4-panel {
       position: absolute;
       left: 40px;
       top: 310px;
       width: 1000px;
-      height: 1000px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0) 62%);
-      opacity: 0;
-    }
-    .s4-bit { position: absolute; left: 0; top: 0; width: 22px; height: 34px; border-radius: 4px; }
-
-    #s4-steps {
-      position: absolute;
-      left: 0;
-      top: 190px;
-      width: 1080px;
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-    }
-    #s4-steps i { display: block; width: 90px; height: 10px; border-radius: 5px; background: rgba(255, 255, 255, 0.22); }
-
-    .s4-card {
-      --ground: var(--charcoal);
-      position: absolute;
-      left: 80px;
-      top: 320px;
-      width: 920px;
       height: 990px;
-      padding: 60px 64px;
-      border-radius: 40px;
-      background: #1d1d23;
-      border: 3px solid rgba(255, 255, 255, 0.12);
-      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.55);
+      border-radius: 34px;
       overflow: hidden;
-      color: var(--white);
+      box-shadow: 0 40px 90px rgba(0, 0, 0, 0.6), 0 0 0 4px rgba(255, 45, 63, 0.75);
     }
-    .s4-card::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 14px;
-      height: 100%;
-      background: var(--red);
+    #s4-a-panel { background: #180f12; }
+    #s4-b-panel { background: linear-gradient(160deg, #1a2433, #111823); }
+    #s4-a-img { position: absolute; left: 0; top: 0; width: 1000px; display: block; }
+    #s4-b-list { position: absolute; left: 0; top: 0; width: 1000px; padding: 26px 26px 0; }
+    .s4-q {
+      display: flex;
+      align-items: center;
+      height: 84px;
+      margin-bottom: 12px;
+      padding: 0 34px 0 24px;
+      border-radius: 18px;
+      background: #1b2637;
+      border: 2px solid rgba(255, 255, 255, 0.07);
+      font-weight: 800;
     }
-    #s4-c1 {
-      --ground: var(--red);
-      background: var(--white);
-      color: var(--ink);
-      border-color: rgba(255, 255, 255, 0.9);
-      box-shadow: 0 50px 100px rgba(90, 0, 12, 0.45);
-    }
-    .s4-top { position: relative; display: flex; align-items: flex-start; gap: 36px; height: 270px; }
-    .s4-num {
-      font-size: 268px;
-      font-weight: 900;
-      letter-spacing: -0.06em;
-      line-height: 0.82;
-      color: #1d1d23;
-      -webkit-text-stroke: 5px var(--red-signal);
-      transform-origin: 30% 60%;
-    }
-    #s4-c1 .s4-num { color: var(--red); -webkit-text-stroke: 0; }
-    .s4-meta { padding-top: 26px; }
-    .s4-place {
-      font-family: var(--font-mono);
-      font-size: 44px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      white-space: nowrap;
-    }
-    .s4-event {
-      margin-top: 14px;
-      font-family: var(--font-mono);
-      font-size: 28px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      color: rgba(255, 255, 255, 0.72);
-      white-space: nowrap;
-    }
-    #s4-c1 .s4-event { color: #5b5b63; }
-    #s4-pending {
+    .s4-q.first { background: #2a302f; border-color: #c9a93a; }
+    .s4-q .rk { width: 96px; font-size: 32px; color: #ffd23f; }
+    .s4-q .nm { flex: 1; font-size: 34px; color: #ffffff; white-space: nowrap; overflow: hidden; }
+    .s4-q .sc { font-size: 36px; color: #ffd23f; }
+
+    .s4-bracket { position: absolute; left: 54px; width: 972px; }
+    .s4-bk { position: absolute; width: 56px; height: 56px; border: 0 solid var(--white); }
+    .s4-bk.tl { left: 0; top: 0; border-left-width: 7px; border-top-width: 7px; }
+    .s4-bk.tr { right: 0; top: 0; border-right-width: 7px; border-top-width: 7px; }
+    .s4-bk.bl { left: 0; bottom: 0; border-left-width: 7px; border-bottom-width: 7px; }
+    .s4-bk.br { right: 0; bottom: 0; border-right-width: 7px; border-bottom-width: 7px; }
+    .s4-chip {
       position: absolute;
       left: 50%;
-      top: 238px;
-      padding: 6px 14px;
-      border: 3px dashed var(--red-signal);
-      color: var(--red-signal);
+      margin-left: -76px;
+      width: 152px;
+      text-align: center;
+      top: -26px;
+      padding: 8px 18px;
+      background: var(--white);
+      color: var(--red);
       border-radius: 10px;
       font-family: var(--font-mono);
-      font-size: 28px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      white-space: nowrap;
-    }
-    .s4-perf { position: relative; height: 70px; margin: 0 -64px; }
-    .s4-perf::after {
-      content: "";
-      position: absolute;
-      left: 70px;
-      right: 70px;
-      top: 33px;
-      border-top: 4px dashed rgba(255, 255, 255, 0.22);
-    }
-    #s4-c1 .s4-perf::after { border-top-color: rgba(20, 20, 23, 0.2); }
-    .s4-notch {
-      position: absolute;
-      top: 7px;
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      background: var(--ground);
-    }
-    .s4-notch.l { left: -31px; }
-    .s4-notch.r { right: -31px; }
-    .s4-body { position: relative; }
-    .s4-name {
-      height: 290px;
-      display: flex;
-      align-items: center;
-      font-weight: 900;
-      letter-spacing: -0.035em;
-      line-height: 1;
-      overflow-wrap: anywhere;
-    }
-    .s4-stats { display: flex; gap: 32px; margin-top: 30px; }
-    .s4-stat { flex: 1; min-width: 0; padding: 26px 30px; border-radius: 24px; background: rgba(255, 255, 255, 0.06); }
-    #s4-c1 .s4-stat { background: #f3f0ee; }
-    .s4-k {
-      font-family: var(--font-mono);
       font-size: 30px;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      color: rgba(255, 255, 255, 0.72);
-    }
-    #s4-c1 .s4-k { color: #5b5b63; }
-    .s4-v {
-      margin-top: 8px;
-      height: 110px;
-      display: flex;
-      align-items: center;
-      font-family: var(--font-mono);
       font-weight: 800;
-      letter-spacing: -0.02em;
-      line-height: 1;
+      letter-spacing: 0.14em;
       white-space: nowrap;
-      font-variant-numeric: tabular-nums;
     }
-    .s4-v.pts { color: var(--white); }
-    #s4-c1 .s4-v.pts { color: var(--red); }
-    .s4-scan {
+    .s4-scroll {
       position: absolute;
-      left: -64px;
-      top: 0;
-      width: 920px;
-      height: 8px;
-      background: var(--red-signal);
-      box-shadow: 0 0 22px 6px rgba(255, 45, 63, 0.7);
-      opacity: 0;
+      left: 1048px;
+      top: 330px;
+      width: 8px;
+      height: 950px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.14);
     }
+    .s4-thumb { position: absolute; left: 0; top: 0; width: 8px; border-radius: 4px; background: var(--red-signal); }
   </style>
 
   <div id="root" data-composition-id="s4" data-width="1080" data-height="1920">
     <div id="s4-stage" class="clip" data-start="0" data-duration="12">
       <div id="s4-ground" data-layout-ignore><div id="s4-grid"></div></div>
       <div id="s4-flood" data-layout-ignore><div id="s4-flood-rays"></div></div>
-      <div id="s4-burst-wrap" data-layout-ignore><div id="s4-burst"></div></div>
       <div id="s4-confetti" data-layout-ignore></div>
 
-      <div id="s4-steps" data-layout-ignore><i id="s4-st3"></i><i id="s4-st2"></i><i id="s4-st1"></i></div>
-      <div id="s4-pending">PREVIEW · RESULTS PENDING</div>
+      <!-- Board A: Spot the Security Risk, the real booth screen (stitched screenshots) -->
+      <div id="s4-a" class="s4-board">
+        <div id="s4-a-title" class="s4-title">SPOT THE <b>RISK</b> CHALLENGE</div>
+        <div id="s4-a-sub" class="s4-sub">BOOTH LEADERBOARD</div>
+        <div id="s4-a-panel" class="s4-panel" data-layout-allow-overflow><img id="s4-a-img" src="assets/leaderboard/board.png" alt="" /></div>
+        <div id="s4-a-scroll" class="s4-scroll" data-layout-ignore><i id="s4-a-thumb" class="s4-thumb"></i></div>
+        <div id="s4-a-br" class="s4-bracket" data-layout-allow-overlap>
+          <i class="s4-bk tl"></i><i class="s4-bk tr"></i><i class="s4-bk bl"></i><i class="s4-bk br"></i>
+          <div class="s4-chip">TOP 3</div>
+        </div>
+      </div>
 
-      <!-- One reusable card, mounted three times. Text is filled from data/leaderboard.js. -->
-      <div id="s4-c3" class="s4-card" data-rank="3">
-        <div class="s4-top"><div class="s4-num">03</div><div class="s4-meta"><div class="s4-place"></div><div class="s4-event">AVSEC BOOTH CHALLENGE</div></div></div>
-        <div class="s4-perf"><span class="s4-notch l"></span><span class="s4-notch r"></span></div>
-        <div class="s4-body">
-          <div class="s4-name"></div>
-          <div class="s4-stats"><div class="s4-stat s-pts"><div class="s4-k">POINTS</div><div class="s4-v pts"></div></div><div class="s4-stat s-time"><div class="s4-k">TIME</div><div class="s4-v time"></div></div></div>
-          <div class="s4-scan"></div>
-        </div>
-      </div>
-      <div id="s4-c2" class="s4-card" data-rank="2">
-        <div class="s4-top"><div class="s4-num">02</div><div class="s4-meta"><div class="s4-place"></div><div class="s4-event">AVSEC BOOTH CHALLENGE</div></div></div>
-        <div class="s4-perf"><span class="s4-notch l"></span><span class="s4-notch r"></span></div>
-        <div class="s4-body">
-          <div class="s4-name"></div>
-          <div class="s4-stats"><div class="s4-stat s-pts"><div class="s4-k">POINTS</div><div class="s4-v pts"></div></div><div class="s4-stat s-time"><div class="s4-k">TIME</div><div class="s4-v time"></div></div></div>
-          <div class="s4-scan"></div>
-        </div>
-      </div>
-      <div id="s4-c1" class="s4-card" data-rank="1" data-hold>
-        <div class="s4-top"><div class="s4-num">01</div><div class="s4-meta"><div class="s4-place"></div><div class="s4-event">AVSEC BOOTH CHALLENGE</div></div></div>
-        <div class="s4-perf"><span class="s4-notch l"></span><span class="s4-notch r"></span></div>
-        <div class="s4-body">
-          <div class="s4-name"></div>
-          <div class="s4-stats"><div class="s4-stat s-pts"><div class="s4-k">POINTS</div><div class="s4-v pts"></div></div><div class="s4-stat s-time"><div class="s4-k">TIME</div><div class="s4-v time"></div></div></div>
-          <div class="s4-scan"></div>
+      <!-- Board B: Human Firewall video quiz, typeset from data/leaderboard.js -->
+      <div id="s4-b" class="s4-board">
+        <div id="s4-b-title" class="s4-title">HUMAN <b>FIREWALL</b> QUIZ</div>
+        <div id="s4-b-sub" class="s4-sub">VIDEO QUIZ LEADERBOARD</div>
+        <div id="s4-b-panel" class="s4-panel" data-layout-allow-overflow><div id="s4-b-list"></div></div>
+        <div id="s4-b-scroll" class="s4-scroll" data-layout-ignore><i id="s4-b-thumb" class="s4-thumb"></i></div>
+        <div id="s4-b-br" class="s4-bracket" data-layout-allow-overlap>
+          <i class="s4-bk tl"></i><i class="s4-bk tr"></i><i class="s4-bk bl"></i><i class="s4-bk br"></i>
+          <div class="s4-chip">TOP 3</div>
         </div>
       </div>
 
@@ -244,120 +171,99 @@
   <script>
     (function () {
       const A = window.AVSEC;
-      const NAME_W = 792;
+      const G = window.AVSEC_BOARD; // geometry written by scripts/stitch_board.py
+      const PANEL_TOP = 310, PANEL_H = 990, PANEL_W = 1000, TRACK = 950;
 
-      // Fill one card from the data block.
-      function fill(card) {
-        const r = Number(card.dataset.rank);
-        const e = A.byRank(r);
-        card.querySelector(".s4-place").textContent = A.placeLabel[r];
+      // ---- Board A: stitched screenshots, shown 1000 px wide.
+      const sA = PANEL_W / G.width;
+      const aTotal = G.height * sA;
+      document.querySelector("#s4-a-img").style.height = aTotal + "px";
+      const aRow = (i) => G.rowTops[i] * sA;
+      const aMax = Math.max(0, aTotal - PANEL_H);
+      const aMid = Math.min(aMax, aRow(6) - 24); // from row 07
+      const brA = document.querySelector("#s4-a-br");
+      brA.style.top = (PANEL_TOP + aRow(0) - 14) + "px";
+      brA.style.height = (aRow(2) + G.rowHeight * sA - aRow(0) + 28) + "px";
 
-        const name = String(e.name);
-        const nameEl = card.querySelector(".s4-name");
-        const perChar = /[a-z]/.test(name) ? 0.56 : 0.66;
-        const single = NAME_W / (name.length * perChar);
-        if (single >= 96 || name.indexOf(" ") < 0) {
-          nameEl.style.fontSize = Math.max(64, Math.min(132, Math.floor(single))) + "px";
-          nameEl.style.whiteSpace = "nowrap";
-          nameEl.textContent = name;
-        } else {
-          // Two balanced lines, split at the space nearest the middle.
-          const mid = name.length / 2;
-          let cut = -1;
-          for (let i = 0; i < name.length; i++) if (name[i] === " " && (cut < 0 || Math.abs(i - mid) < Math.abs(cut - mid))) cut = i;
-          const a = name.slice(0, cut), b = name.slice(cut + 1);
-          const longest = Math.max(a.length, b.length);
-          nameEl.style.fontSize = Math.max(60, Math.min(118, Math.floor(NAME_W / (longest * perChar)))) + "px";
-          nameEl.style.whiteSpace = "nowrap";
-          nameEl.innerHTML = "";
-          const wrap = document.createElement("div");
-          wrap.append(a, document.createElement("br"), b);
-          nameEl.append(wrap);
-        }
+      // ---- Board B: video quiz rows from the data block.
+      const list = document.querySelector("#s4-b-list");
+      const rows = (A.data.videoQuiz || []).slice().sort((x, y) => x.rank - y.rank);
+      rows.forEach((r, i) => {
+        const el = document.createElement("div");
+        el.className = "s4-q" + (i === 0 ? " first" : "");
+        const rk = document.createElement("span"); rk.className = "rk"; rk.textContent = "#" + r.rank;
+        const nm = document.createElement("span"); nm.className = "nm"; nm.textContent = r.name;
+        const sc = document.createElement("span"); sc.className = "sc"; sc.textContent = r.score;
+        el.append(rk, nm, sc);
+        list.append(el);
+      });
+      const B_TOP = 26, B_PITCH = 96;
+      const bTotal = B_TOP + rows.length * B_PITCH + 14;
+      const bMax = Math.max(0, bTotal - PANEL_H);
+      const brB = document.querySelector("#s4-b-br");
+      brB.style.top = (PANEL_TOP + B_TOP - 14) + "px";
+      brB.style.height = (3 * B_PITCH - 12 + 28) + "px";
 
-        const pts = A.fmtPoints(e.points);
-        const ptsEl = card.querySelector(".s4-v.pts");
-        const time = A.fmtTime(e.time);
-        const colW = time === null ? 728 : 348;
-        ptsEl.textContent = pts;
-        ptsEl.style.fontSize = A.fitSize(pts, colW, 104, 52, 0.62) + "px";
-        if (time === null) {
-          card.querySelector(".s-time").remove();
-        } else {
-          const tEl = card.querySelector(".s4-v.time");
-          tEl.textContent = time;
-          tEl.style.fontSize = A.fitSize(time, colW, 104, 52, 0.62) + "px";
-        }
-      }
-      ["#s4-c3", "#s4-c2", "#s4-c1"].forEach((s) => fill(document.querySelector(s)));
+      // Scroll indicators.
+      const thumbH = (total) => Math.max(120, TRACK * Math.min(1, PANEL_H / total));
+      document.querySelector("#s4-a-thumb").style.height = thumbH(aTotal) + "px";
+      document.querySelector("#s4-b-thumb").style.height = thumbH(bTotal) + "px";
+      const thumbY = (off, max, total) => (max > 0 ? (TRACK - thumbH(total)) * off / max : 0);
 
-      // Confetti: seeded, launched from behind the first-place card into the margins.
+      // Confetti: seeded, behind the panels, landing in the margins.
       const conf = document.querySelector("#s4-confetti");
       const rnd = A.rng(20261027);
       const bits = [];
-      for (let i = 0; i < 70; i++) {
+      for (let i = 0; i < 60; i++) {
         const el = document.createElement("i");
         el.className = "s4-bit";
         el.style.background = i % 3 === 0 ? "#141417" : "#ffffff";
         conf.append(el);
-        const side = i % 4; // 0 top, 1 bottom, 2 left, 3 right
+        const side = i % 3;
         let tx, ty;
-        if (side === 0) { tx = 60 + rnd() * 960; ty = 40 + rnd() * 190; }
-        else if (side === 1) { tx = 60 + rnd() * 960; ty = 1300 + rnd() * 420; }
-        else if (side === 2) { tx = 4 + rnd() * 50; ty = 300 + rnd() * 1000; }
-        else { tx = 1026 + rnd() * 50; ty = 300 + rnd() * 1000; }
+        if (side === 0) { tx = 40 + rnd() * 1000; ty = 20 + rnd() * 130; }
+        else if (side === 1) { tx = 40 + rnd() * 1000; ty = 1330 + rnd() * 420; }
+        else { tx = rnd() < 0.5 ? 2 + rnd() * 30 : 1050 + rnd() * 24; ty = 320 + rnd() * 960; }
         bits.push({ el, tx, ty, rot: (rnd() - 0.5) * 900, fall: 60 + rnd() * 160, s: 0.6 + rnd() * 0.8 });
       }
 
       const tl = gsap.timeline({ paused: true });
 
-      // A = arrive time, E = exit time, local to this scene (scene starts at 13.0 s).
-      function reveal(sel, Ain, E, opts) {
-        const card = sel + " ";
-        tl.fromTo(sel, { y: 1350, opacity: 0, filter: "blur(16px)", scale: 1 }, { y: 0, opacity: 1, filter: "blur(0px)", duration: 0.5, ease: "expo.out" }, Ain);
-        tl.fromTo(card + ".s4-num", { scale: 1.7, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.34, ease: "expo.out" }, Ain + 0.18);
-        tl.fromTo(card + ".s4-meta", { opacity: 0, x: 30 }, { opacity: 1, x: 0, duration: 0.3, ease: "expo.out" }, Ain + 0.32);
-        // Red scan passes over the body: name first, then the numbers.
-        tl.fromTo(card + ".s4-scan", { y: 0, opacity: 1 }, { y: 520, duration: 0.55, ease: "none" }, Ain + 0.48);
-        tl.to(card + ".s4-scan", { opacity: 0, duration: 0.1 }, Ain + 1.03);
-        tl.fromTo(card + ".s4-name", { clipPath: "inset(0% 0% 100% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.3, ease: "none" }, Ain + 0.48);
-        tl.fromTo(card + ".s4-stats", { clipPath: "inset(0% 0% 100% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.24, ease: "none" }, Ain + 0.79);
-        tl.fromTo(card + ".s4-v", { scale: 1.12 }, { scale: 1, duration: 0.3, ease: "expo.out", transformOrigin: "0% 50%" }, Ain + 0.82);
-        // Exit.
-        if (opts.exit === "whip") {
-          tl.to(sel, { y: -1450, filter: "blur(14px)", duration: 0.3, ease: "power3.in" }, E);
-        } else {
-          tl.to(sel, { scale: 0.55, opacity: 0, filter: "blur(10px)", duration: 0.3, ease: "power3.in" }, E);
-        }
+      // One board: arrive, lock the top 3, scroll, leave. stops = [[time, offset], ...]
+      function board(p, t0, content, stops, max, total, exit) {
+        tl.fromTo(p + "-panel", { y: 1300, opacity: 0, filter: "blur(16px)" }, { y: 0, opacity: 1, filter: "blur(0px)", duration: 0.5, ease: "expo.out" }, t0);
+        tl.fromTo(p + "-title", { opacity: 0, y: -30, filter: "blur(8px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.35, ease: "expo.out" }, t0 + 0.08);
+        tl.fromTo(p + "-sub", { opacity: 0 }, { opacity: 1, duration: 0.3 }, t0 + 0.22);
+        tl.fromTo(p + "-scroll", { opacity: 0 }, { opacity: 1, duration: 0.3 }, t0 + 0.4);
+        tl.fromTo(content, { y: 0 }, { y: 0, duration: 0.01 }, t0);
+        tl.fromTo(p + "-thumb", { y: 0 }, { y: 0, duration: 0.01 }, t0);
+        tl.fromTo(p + "-br", { opacity: 0, scale: 1.12 }, { opacity: 1, scale: 1, duration: 0.32, ease: "back.out(1.8)" }, t0 + 0.6);
+        tl.to(p + "-br", { opacity: 0, duration: 0.2 }, stops[0][0] - 0.15);
+        stops.forEach(([at, off]) => {
+          tl.to(content, { y: -off, duration: 0.45, ease: "power3.inOut" }, at);
+          tl.to(p + "-thumb", { y: thumbY(off, max, total), duration: 0.45, ease: "power3.inOut" }, at);
+        });
+        const els = [p + "-title", p + "-sub", p + "-panel", p + "-scroll"];
+        if (exit === "up") tl.to(els, { y: "-=1400", filter: "blur(14px)", duration: 0.32, ease: "power3.in" }, t0 + 5.62);
+        else tl.to(els, { scale: 0.6, opacity: 0, filter: "blur(10px)", duration: 0.3, ease: "power3.in" }, t0 + 5.68);
       }
 
-      // Progress bars: which rank is on screen.
-      tl.fromTo("#s4-steps i", { scaleX: 0 }, { scaleX: 1, duration: 0.3, ease: "expo.out", stagger: 0.05 }, 0);
-      tl.to("#s4-st3", { backgroundColor: "#ff2d3f", duration: 0.15 }, 0.3);
-      tl.to("#s4-st2", { backgroundColor: "#ff2d3f", duration: 0.15 }, 3.7);
-      tl.to("#s4-st1", { backgroundColor: "#ffffff", duration: 0.15 }, 7.5);
-      tl.to("#s4-steps i", { backgroundColor: "rgba(255,255,255,0.95)", duration: 0.15 }, 7.3);
+      // Board A (13.0–19.0 s): top 3 held 13.6–15.5, rows 07+ from 15.95, the rest from 17.55.
+      board("#s4-a", 0.0, "#s4-a-img", [[2.5, aMid], [4.1, aMax]], aMax, aTotal, "up");
+      // Board B (19.0–25.0 s): top 3 held 19.6–21.5, the rest from 21.95.
+      board("#s4-b", 6.0, "#s4-b-list", [[8.5, bMax]], bMax, bTotal, "shrink");
 
-      const pend = document.querySelector("#s4-pending");
-      if (!A.pending) pend.remove();
-      else {
-        tl.fromTo(pend, { opacity: 0, xPercent: -50 }, { opacity: 1, xPercent: -50, duration: 0.25 }, 0.4);
-        tl.to(pend, { color: "#ffffff", borderColor: "#ffffff", duration: 0.15 }, 7.1);
-      }
-      reveal("#s4-c3", 0.0, 3.4, { exit: "whip" });
-      reveal("#s4-c2", 3.45, 6.95, { exit: "whip" });
-
-      // First place: the ground floods red, then the white card lands.
-      tl.fromTo("#s4-flood", { clipPath: "circle(0% at 50% 42%)" }, { clipPath: "circle(120% at 50% 42%)", duration: 0.45, ease: "power2.inOut" }, 7.05);
-      tl.fromTo("#s4-flood-rays", { rotation: 0 }, { rotation: 40, duration: 4.95, ease: "none" }, 7.05);
-      reveal("#s4-c1", 7.25, 11.68, { exit: "shrink" });
-      tl.fromTo("#s4-burst", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1.15, duration: 0.35, ease: "expo.out" }, 7.55);
-      tl.to("#s4-burst", { opacity: 0.25, scale: 1.3, duration: 1.4, ease: "power2.out" }, 7.9);
-      bits.forEach((b, i) => {
-        tl.fromTo(b.el, { x: 529, y: 790, rotation: 0, scale: 0.2, opacity: 0 }, { x: b.tx, y: b.ty, rotation: b.rot * 0.4, scale: b.s, opacity: 1, duration: 0.9, ease: "expo.out" }, 7.6 + (i % 7) * 0.012);
-        tl.to(b.el, { y: b.ty + b.fall, rotation: b.rot, duration: 3.0, ease: "power1.out" }, 8.5 + (i % 7) * 0.012);
+      // Each top-3 lock: red flood and confetti behind the panel.
+      [[0.6, 2.4], [6.6, 8.4]].forEach(([on, off], k) => {
+        tl.fromTo("#s4-flood", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out", immediateRender: k === 0 }, on);
+        tl.to("#s4-flood", { opacity: 0, duration: 0.45, ease: "power2.inOut" }, off);
+        bits.forEach((b, i) => {
+          if (i % 2 !== k) return;
+          tl.fromTo(b.el, { x: 529, y: 800, rotation: 0, scale: 0.2, opacity: 0 }, { x: b.tx, y: b.ty, rotation: b.rot * 0.4, scale: b.s, opacity: 1, duration: 0.9, ease: "expo.out" }, on + 0.05 + (i % 7) * 0.012);
+          tl.to(b.el, { y: b.ty + b.fall, rotation: b.rot, opacity: 0, duration: 1.4, ease: "power1.in" }, on + 0.95);
+        });
       });
-      tl.to("#s4-confetti", { opacity: 0, duration: 0.3 }, 11.6);
+      tl.fromTo("#s4-flood-rays", { rotation: 0 }, { rotation: 60, duration: 12, ease: "none" }, 0);
 
       // Hand-off to the light scene.
       tl.fromTo("#s4-white", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.inOut" }, 11.7);

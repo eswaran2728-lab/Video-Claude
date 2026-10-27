@@ -3,8 +3,8 @@
 Composed in code for this film, so it is owned outright (no third-party
 licence). 120 BPM, D major, 35 s. Section changes sit on the film's cuts:
 
-  0-5   intro groove        13    payoff (3rd place)     25-29  breakdown
-  5     drop (light switch) 20.5  full energy (1st)      29-33  finale
+  0-5   intro groove        13    payoff (leaderboards)  25-29  breakdown
+  5     drop (light switch) 19    full energy (quiz)     29-33  finale
   10-13 build + drop-out    33-35 IV-V-I resolve, ring-out
 
 Run:  python3 scripts/make_music.py   ->  assets/audio/music.wav
@@ -89,7 +89,7 @@ def section(t):
     if t < 10.0: return "drop"
     if t < 12.6: return "build"
     if t < 13.0: return "gap"
-    if t < 20.5: return "groove"
+    if t < 19.0: return "groove"
     if t < 25.0: return "full"
     if t < 29.0: return "break"
     if t < 33.0: return "finale"
@@ -161,7 +161,7 @@ for k in range(int(DUR / (BEAT / 4)) + 1):
     elif s == "break" and sixteenth in (2,):
         add(hats, t, hat_hit(), 0.35)
 
-for t in (5.0, 13.0, 20.5, 29.0):
+for t in (5.0, 13.0, 19.0, 29.0):
     add(crash, t, crash_hit())
 
 # Snare roll accelerating into the drop-out (10.0 -> 12.6).
@@ -252,7 +252,7 @@ def curve(points):
     return np.interp(t_all, xs, ys)
 
 bright = curve([(0, 0), (1, 0.2), (4.9, 0.35), (5.0, 0.75), (9.9, 0.75), (10.0, 0.3), (12.6, 1.0), (13.0, 0.7),
-                (20.4, 0.75), (20.5, 1.0), (24.9, 1.0), (25.0, 0.35), (28.9, 0.5), (29.0, 1.0), (35, 1.0)])
+                (18.9, 0.75), (19.0, 1.0), (24.9, 1.0), (25.0, 0.35), (28.9, 0.5), (29.0, 1.0), (35, 1.0)])
 pad_gain = curve([(0, 0), (0.6, 0.8), (12.55, 1.0), (12.6, 0.25), (12.95, 0.25), (13.0, 1.0), (24.9, 1.0), (25.0, 1.6), (28.9, 1.6), (29.0, 1.0), (35, 1.0)])
 
 def bright_lp(x):

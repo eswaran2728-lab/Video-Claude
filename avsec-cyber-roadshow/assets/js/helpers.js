@@ -7,40 +7,8 @@
     return v === undefined || v === "" || (typeof v === "string" && PH_RE.test(v));
   }
 
-  function fmtPoints(p) {
-    if (typeof p === "number" && isFinite(p)) return p.toLocaleString("en-US");
-    return String(p);
-  }
-
-  function fmtTime(t) {
-    if (t === null || t === undefined || t === false) return null;
-    return String(t);
-  }
-
-  // Sorted by rank so the edit order of the data block never matters.
-  var board = (D.leaderboard || []).slice().sort(function (a, b) {
-    return a.rank - b.rank;
-  });
-
-  function byRank(r) {
-    for (var i = 0; i < board.length; i++) if (board[i].rank === r) return board[i];
-    return { rank: r, name: "[NAME]", points: "[POINTS]", time: "[TIME]" };
-  }
-
-  var pending = board.some(function (e) {
-    return isPlaceholder(e.name) || isPlaceholder(e.points) || isPlaceholder(e.time);
-  });
-
   var url = D.challengeUrl || "";
   var urlOk = !isPlaceholder(url) && /^https:\/\//.test(url);
-
-  // Font size that keeps a line inside `width` px, from character count only
-  // (no layout measuring, so every frame renders the same).
-  function fitSize(text, width, max, min, perChar) {
-    var n = Math.max(1, String(text).length);
-    var s = Math.floor(width / (n * (perChar || 0.6)));
-    return Math.max(min, Math.min(max, s));
-  }
 
   // Seeded PRNG for confetti and texture positions.
   function rng(seed) {
@@ -92,25 +60,12 @@
     return shown;
   }
 
-  var logoPending = ["avsec", "allstars"].some(function (k) {
-    return D.logos && D.logos[k] === "";
-  });
-
   window.AVSEC = {
-    logoLockup: logoLockup,
-    logoPending: logoPending,
     data: D,
-    board: board,
-    byRank: byRank,
-    pending: pending,
-    isPlaceholder: isPlaceholder,
-    fmtPoints: fmtPoints,
-    fmtTime: fmtTime,
+    logoLockup: logoLockup,
     url: url,
     urlOk: urlOk,
     urlLabel: urlOk ? url.replace(/^https:\/\//, "") : "[PUBLIC SPOT THE RISK LINK]",
-    fitSize: fitSize,
     rng: rng,
-    placeLabel: { 1: "FIRST PLACE", 2: "SECOND PLACE", 3: "THIRD PLACE" },
   };
 })();

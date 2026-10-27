@@ -7,39 +7,10 @@
       background: var(--paper);
     }
     #s5-stage { position: absolute; inset: 0; color: var(--ink); }
-    #s5-names {
-      position: absolute;
-      left: 120px;
-      top: 210px;
-      width: 840px;
-    }
-    .s5-row {
-      display: flex;
-      align-items: center;
-      gap: 26px;
-      height: 104px;
-      padding: 0 30px;
-      margin-bottom: 14px;
-      border-radius: 22px;
-      background: var(--white);
-      box-shadow: 0 12px 30px rgba(20, 20, 23, 0.08);
-    }
-    .s5-rk {
-      font-family: var(--font-mono);
-      font-size: 40px;
-      font-weight: 800;
-      color: var(--red);
-    }
-    .s5-nm {
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      white-space: nowrap;
-      overflow: hidden;
-    }
     #s5-crowd {
       position: absolute;
       left: 90px;
-      top: 590px;
+      top: 470px;
       width: 900px;
       height: 70px;
     }
@@ -53,10 +24,10 @@
     #s5-msg {
       position: absolute;
       left: 0;
-      top: 700px;
+      top: 590px;
       width: 1080px;
       text-align: center;
-      font-size: 96px;
+      font-size: 104px;
       font-weight: 900;
       letter-spacing: -0.045em;
       line-height: 1.04;
@@ -65,10 +36,10 @@
     #s5-safe {
       position: absolute;
       left: 0;
-      top: 1080px;
+      top: 980px;
       width: 1080px;
       text-align: center;
-      font-size: 84px;
+      font-size: 90px;
       font-weight: 900;
       letter-spacing: -0.04em;
       line-height: 1.04;
@@ -79,12 +50,6 @@
 
   <div id="root" data-composition-id="s5" data-width="1080" data-height="1920">
     <div id="s5-stage" class="clip" data-start="0" data-duration="4">
-      <div id="s5-names">
-        <div id="s5-r1" class="s5-row"><span class="s5-rk">01</span><span class="s5-nm"></span></div>
-        <div id="s5-r2" class="s5-row"><span class="s5-rk">02</span><span class="s5-nm"></span></div>
-        <div id="s5-r3" class="s5-row"><span class="s5-rk">03</span><span class="s5-nm"></span></div>
-      </div>
-
       <div id="s5-crowd" data-layout-ignore></div>
 
       <div id="s5-msg">
@@ -97,12 +62,6 @@
   <script>
     (function () {
       const A = window.AVSEC;
-      [1, 2, 3].forEach((r) => {
-        const el = document.querySelector("#s5-r" + r + " .s5-nm");
-        const name = String(A.byRank(r).name);
-        el.textContent = name;
-        el.style.fontSize = A.fitSize(name, 660, 60, 36, /[a-z]/.test(name) ? 0.56 : 0.66) + "px";
-      });
 
       // A loose line of dots: "everyone else who played". Not a count.
       const crowd = document.querySelector("#s5-crowd");
@@ -119,13 +78,11 @@
       }
 
       const tl = gsap.timeline({ paused: true });
-      tl.fromTo(".s5-row", { opacity: 0, y: -60, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: "expo.out", stagger: 0.09 }, 0.05);
-      // Names make room: they shrink a touch and the crowd spreads out from them.
-      tl.to("#s5-names", { scale: 0.9, y: -16, duration: 0.5, ease: "power2.inOut", transformOrigin: "50% 0%" }, 0.5);
-      tl.fromTo(dots, { scale: 0, x: (i) => (450 - (i * 37.5 + 4)) }, { scale: 1, x: 0, duration: 0.6, ease: "expo.out", stagger: { each: 0.015, from: "center" } }, 0.55);
-
-      tl.fromTo("#s5-msg span", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.15, ease: "power2.out", stagger: 0.06 }, 0.6);
-      tl.fromTo("#s5-safe span", { opacity: 0, y: 26 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out", stagger: 0.07 }, 1.6);
+      // Everyone: the crowd spreads out from the centre, then the message lands.
+      tl.fromTo(dots, { scale: 0, x: (i) => (450 - (i * 37.5 + 4)) }, { scale: 1, x: 0, duration: 0.6, ease: "expo.out", stagger: { each: 0.015, from: "center" } }, 0.1);
+      tl.fromTo("#s5-msg span", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.15, ease: "power2.out", stagger: 0.06 }, 0.35);
+      tl.fromTo("#s5-safe span", { opacity: 0, y: 26 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out", stagger: 0.07 }, 1.5);
+      tl.fromTo("#s5-crowd", { y: 0 }, { y: -10, duration: 3.9, ease: "none" }, 0.1);
 
       window.__timelines = window.__timelines || {};
       window.__timelines["s5"] = tl;

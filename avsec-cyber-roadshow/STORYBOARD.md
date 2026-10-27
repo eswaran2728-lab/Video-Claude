@@ -11,20 +11,20 @@
 | Ranking: highest points, then fastest completion time | Leaderboard API order (`score` desc, `durationMs` asc) | API response |
 | Completion time is a real recorded value (`durationMs`) | Leaderboard API | API response |
 | Public link: `https://airasia-avsec-spot-the-risk.vercel.app/play` | Host page script (`origin + '/play'`) and official booth QR | QR decoded with zxing |
-| Human Firewall quiz: separate board, score /10, no recorded time, 11 people tied on 10/10 | Organizer API | API response |
+| Human Firewall video quiz: each name once with best score, shown as % | Organizer page + client screenshots | Screenshots match the quiz data |
 
 Not used: the host and organizer URLs (never shown or encoded), and any participant count or statistic.
 
 Logos (supplied by the client during the build): the AVSEC badge is in the video. The AirAsia Allstars "Dare to Dream" logo has a marked slot that fills in once its file is added.
 
-**Ranking status: not final.** The game was still open when checked, and the board lists every attempt, so the same person may appear twice (e.g. "Ruby Ruslan" and "Ruby" in places 2 and 3). The delivery render uses the placeholders from the brief; `data/live-snapshot-2026-10-27.json` holds the raw top entries for you to confirm.
+**Rankings:** shown as the real leaderboards supplied by the client: Spot the Risk (screenshots, rows 01–20) and the Human Firewall video quiz (#1–#19). Both match the games' own data as of 27 Oct 2026.
 
 ## Look
 
 - Palette: AirAsia-inspired red `#E8112D` / signal red `#FF2D3F` on dark, white `#FFFFFF`, charcoal `#141417`, deep `#0A0A0C`, paper `#F4F2EF`. No yellow, no gradients-as-decoration.
 - Type: Inter 900 for kinetic display (tight −0.045em), Inter 700 for supporting lines, JetBrains Mono for interface micro-labels and all numbers (tabular).
 - Cyber cues: scan line, corner brackets, target reticles, detection tags, faint 60 px grid. Aviation cues: runway centre-line dashes, boarding-pass perforation on the rank cards.
-- Light/dark switches land on the bar line with a hit: dark → **light** (5 s) → dark (10 s) → red flood for 1st (20.2 s) → **light** (25 s) → dark (29 s).
+- Light/dark switches land on the bar line with a hit: dark → **light** (5 s) → dark (10 s) → red floods on each top-3 lock (13.6 s, 19.6 s) → **light** (25 s) → dark (29 s).
 - Text band: every word between y 170 and 1330 px so phone/app UI never covers it.
 
 ## Shots
@@ -65,30 +65,31 @@ Times in seconds. Music is 120 BPM: one beat = 0.5 s, one bar = 2 s.
 | 11.2–12.6 | Two soft spotlight cones sweep across the podium and cross on #1. | riser (peak 12.9) |
 | 12.6–13.0 | Lights dim to near black — the held breath before the payoff. | Drop-out |
 
-### 4 · Top three — 13.0–25.0
+### 4 · The two leaderboards — 13.0–25.0
 
-One reusable card (boarding-pass style): rank numeral, place label, name, POINTS, TIME. Numbers are static from the moment they land until the card leaves.
+Per the client: no one-by-one name reveals. The real boards are shown instead, each opening on its top 3.
 
 | t | Picture | Sound |
 | --- | --- | --- |
-| 13.0–13.4 | **3rd** card rises in from below with motion blur, lands. "03" slams. | impact |
-| 13.5–14.0 | Red scan line passes over the card revealing name, then points and time. | scan tick |
-| 14.0–16.4 | Hold — dead still (2.4 s). | Groove |
-| 16.4–16.7 | Card whips up and out; **2nd** card arrives the same way. | whoosh + impact |
-| 17.4–19.9 | Hold (2.5 s). | Swell begins under it |
-| 20.2 | Colour flood: the whole ground turns red. **1st** card arrives white with charcoal type and red numerals — the strongest reveal. | Big impact + sparkle, full groove |
-| 20.6–21.3 | Name and numbers reveal; red/white confetti bursts from *behind* the card (never over the name). | |
-| 21.3–24.7 | Hold (3.4 s). | |
-| 24.7–25.0 | Card shrinks toward the centre as the ground goes white. | whoosh |
+| 13.0–13.4 | **SPOT THE RISK CHALLENGE** · `BOOTH LEADERBOARD`. The real booth screen (client screenshots, joined into one board, rows 01–20) rises in on a panel and lands. | whoosh + impact |
+| 13.6 | White brackets lock onto rows 01–03 with a `TOP 3` tag; the ground floods red and confetti launches *behind* the panel. | sparkle |
+| 13.6–15.5 | Hold on the header and rows 01–08. | Groove |
+| 15.5 / 17.1 | The board scrolls to rows 07–16, then to rows 11–20 (scroll bar on the right). | soft whooshes |
+| 18.6–19.0 | Board whips up and out. | swell builds |
+| 19.0–19.4 | **HUMAN FIREWALL QUIZ** · `VIDEO QUIZ LEADERBOARD`. The quiz board (19 rows typeset from the client's screenshots, in the quiz's own navy/yellow style) rises in. | Music to full energy + crash |
+| 19.6 | Top 3 locked, red flood and confetti. | pop |
+| 19.6–21.5 | Hold on #1–#10. | |
+| 21.5–24.6 | Scrolls to #10–#19 and holds. | soft whoosh |
+| 24.6–25.0 | Board shrinks away as the ground goes white. | whoosh |
 
 ### 5 · Collective thank you — 25.0–29.0 (light)
 
 | t | Picture | Sound |
 | --- | --- | --- |
-| 25.0 | The three names arrive together as compact rows (01 · 02 · 03) at the top. | Breakdown: warm chords |
-| 26.0 | **To every Allstar who took part: thank you.** — per-word, 84 px; "thank you." in red. A row of small abstract dots (not countable as a statistic) spreads out under the names to say "everyone". | |
-| 27.1 | **Stay alert. Stay cyber safe.** in red, below. | soft click |
-| 27.1–29.0 | Hold. | |
+| 25.1 | A row of small abstract dots spreads out from the centre: everyone who played (not a count). | Breakdown: warm chords |
+| 25.35 | **To every Allstar who took part: thank you.** — per word, 104 px; "thank you." in red. | pop |
+| 26.5 | **Stay alert. Stay cyber safe.** in red, below. | soft click |
+| 26.5–29.0 | Hold. | |
 
 ### 6 · Open invitation — 29.0–35.0 (dark)
 

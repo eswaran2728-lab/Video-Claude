@@ -1,31 +1,46 @@
 /* =====================================================================
- *  AVSEC CYBER ROADSHOW — LEADERBOARD DATA BLOCK  (the only file to edit)
+ *  AVSEC CYBER ROADSHOW — DATA BLOCK  (the only file to edit)
  * =====================================================================
  *
- *  1. Replace each [BRACKETED] value with the confirmed result.
- *  2. Save, then rerender:   npm run render
- *
- *  RULES
- *  - rank      1 = first place. Cards reveal 3 → 2 → 1, so order comes
- *              from this number, not from the order of the lines below.
- *  - name      As the person wants it shown. Up to ~22 characters fits
- *              on one line; longer names wrap to two lines automatically.
- *  - points    A number (1000) or text. Numbers are shown as "1,000".
- *  - time      ONLY a real recorded completion time, e.g. "16.2s".
- *              Set to null to hide the time row for that person.
- *  - Ranking rule used by the Spot the Security Risk board:
- *              highest points first, then the fastest completion time.
- *
- *  While any value is still in [BRACKETS], the video shows a red
- *  "PREVIEW · RESULTS PENDING" tag on the rank cards so it cannot be
- *  mistaken for a final cut.
+ *  Edit the values below, save, then rerender:   npm run render
  * ===================================================================== */
 
 window.AVSEC_DATA = {
-  leaderboard: [
-    { rank: 1, name: "[FIRST PLACE NAME]",  points: "[POINTS]", time: "[TIME]" },
-    { rank: 2, name: "[SECOND PLACE NAME]", points: "[POINTS]", time: "[TIME]" },
-    { rank: 3, name: "[THIRD PLACE NAME]",  points: "[POINTS]", time: "[TIME]" },
+  /* Spot the Security Risk leaderboard, shown as the real booth screen.
+   * List the screenshots top of the board first. They are joined into one
+   * board (assets/leaderboard/board.png) automatically on every render:
+   * the header is taken from the first screenshot, rows that appear in two
+   * screenshots are shown once. Ranking is the board's own: highest
+   * points first, then the fastest completion time. */
+  leaderboardScreenshots: [
+    "assets/leaderboard/screens/1.png", // header + 01–05
+    "assets/leaderboard/screens/2.png", // 04–12
+    "assets/leaderboard/screens/3.png", // 13–20
+  ],
+
+  /* Human Firewall video quiz leaderboard, typeset in the quiz's own style.
+   * Copied from the quiz leaderboard screenshots (27 Oct 2026); order as the
+   * quiz board shows it (each name once, best score, highest first). */
+  videoQuiz: [
+    { rank: 1, name: "Sofian Akasah", score: "100%" },
+    { rank: 2, name: "Helmy", score: "100%" },
+    { rank: 3, name: "Azq", score: "100%" },
+    { rank: 4, name: "Daniel", score: "100%" },
+    { rank: 5, name: "MC", score: "100%" },
+    { rank: 6, name: "Dahri", score: "100%" },
+    { rank: 7, name: "Lilian", score: "100%" },
+    { rank: 8, name: "Tan", score: "100%" },
+    { rank: 9, name: "Hariz roszeli", score: "100%" },
+    { rank: 10, name: "Kethees", score: "100%" },
+    { rank: 11, name: "Harry", score: "100%" },
+    { rank: 12, name: "Rahman", score: "90%" },
+    { rank: 13, name: "Aizulrizwan", score: "90%" },
+    { rank: 14, name: "Hakim", score: "90%" },
+    { rank: 15, name: "Yohanraj", score: "90%" },
+    { rank: 16, name: "Dzaqwan", score: "90%" },
+    { rank: 17, name: "Prunthaasini", score: "90%" },
+    { rank: 18, name: "Afifi Albarr", score: "90%" },
+    { rank: 19, name: "Afiqah Isa", score: "90%" },
   ],
 
   /* Public participant link for the end card and the QR code.

@@ -76,7 +76,8 @@ else:
 stills = root / "stills"
 stills.mkdir(exist_ok=True)
 for name, t in [("01-opening", 3.2), ("02-recap", 6.9), ("03-firewall", 9.0), ("04-buildup", 12.0),
-                ("05-third", 15.5), ("06-second", 19.0), ("07-first", 23.0), ("08-together", 28.5), ("09-endcard-qr", 33.0)]:
+                ("05-spot-the-risk-top3", 14.6), ("06-spot-the-risk-end", 18.2), ("07-video-quiz-top3", 20.6),
+                ("08-video-quiz-end", 23.5), ("09-together", 28.0), ("10-endcard-qr", 33.0)]:
     img = frame(t, stills / f"{name}.png")
     img.convert("RGB").save(stills / f"{name}.jpg", quality=88)
     (stills / f"{name}.png").unlink()

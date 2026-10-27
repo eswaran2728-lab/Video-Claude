@@ -1,7 +1,7 @@
-// One-command render: HyperFrames render -> loudness normalise -> named MP4.
+// One-command render: stitch leaderboard -> HyperFrames render -> loudness normalise -> named MP4.
 //   npm run render
 // Output: renders/avsec-cyber-roadshow.mp4
-//   (renders/avsec-cyber-roadshow-PREVIEW.mp4 while any result is still a [PLACEHOLDER])
+//   (renders/avsec-cyber-roadshow-PREVIEW.mp4 while a logo or the link is still a placeholder)
 import { execFileSync, spawnSync } from "node:child_process";
 import { existsSync, readFileSync, rmSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -10,37 +10,38 @@ import vm from "node:vm";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const run = (cmd, args) => execFileSync(cmd, args, { cwd: root, stdio: "inherit", shell: process.platform === "win32" });
+const fail = (msg) => { console.error(msg); process.exit(1); };
 
 // Read the data block the same way the video does.
 const ctx = { window: {} };
 vm.runInNewContext(readFileSync(join(root, "data/leaderboard.js"), "utf8"), ctx);
 const D = ctx.window.AVSEC_DATA;
 const ph = (v) => v === undefined || v === "" || (typeof v === "string" && /^\s*\[.*\]\s*$/.test(v));
-const pending = D.leaderboard.some((e) => ph(e.name) || ph(e.points) || ph(e.time));
-const logos = D.logos || {};
-const logoGaps = Object.entries(logos).filter(([, v]) => v === "").map(([k]) => k);
-for (const [k, v] of Object.entries(logos)) {
-  if (v && !existsSync(join(root, v))) {
-    console.error(`Logo file for "${k}" not found: ${v}`);
-    process.exit(1);
-  }
-}
-const urlOk = !ph(D.challengeUrl) && /^https:\/\//.test(D.challengeUrl);
-if (/\/host\b|organizer/i.test(D.challengeUrl || "")) {
-  console.error("challengeUrl points at a host/organizer page. Use the public /play link.");
-  process.exit(1);
-}
 
-console.log("\nRanking in the video:");
-[...D.leaderboard].sort((a, b) => a.rank - b.rank).forEach((e) =>
-  console.log(`  #${e.rank}  ${e.name}  |  ${e.points} pts  |  ${e.time === null ? "(time hidden)" : e.time}`));
+const shots = D.leaderboardScreenshots || [];
+if (!shots.length) fail("No leaderboardScreenshots in data/leaderboard.js");
+for (const s of shots) if (!existsSync(join(root, s))) fail(`Screenshot not found: ${s}`);
+const logos = D.logos || {};
+for (const [k, v] of Object.entries(logos)) if (v && !existsSync(join(root, v))) fail(`Logo file for "${k}" not found: ${v}`);
+const logoGaps = Object.entries(logos).filter(([, v]) => v === "").map(([k]) => k);
+const urlOk = !ph(D.challengeUrl) && /^https:\/\//.test(D.challengeUrl);
+if (/\/host\b|organizer/i.test(D.challengeUrl || "")) fail("challengeUrl points at a host/organizer page. Use the public /play link.");
+
+// Join the Spot the Risk screenshots into one board (needs Python 3 + Pillow).
+const py = spawnSync("python3", ["--version"]).status === 0 ? "python3" : "python";
+run(py, ["scripts/stitch_board.py"]);
+
+const quiz = D.videoQuiz || [];
+console.log(`\nSpot the Risk board: ${shots.length} screenshot(s) -> assets/leaderboard/board.png`);
+console.log(`Video quiz board: ${quiz.length} rows${quiz.length ? `, #1 ${quiz[0].name} (${quiz[0].score})` : ""}`);
 console.log(`QR / link: ${urlOk ? D.challengeUrl : "[PUBLIC SPOT THE RISK LINK] (no QR)"}`);
 console.log(`Logos: ${Object.entries(logos).map(([k, v]) => `${k}=${v === null ? "hidden" : v || "[PLACEHOLDER]"}`).join(", ")}`);
-if (pending || logoGaps.length) console.log("Still contains [PLACEHOLDERS] -> rendering a PREVIEW.\n");
+const preview = logoGaps.length > 0 || !urlOk;
+if (preview) console.log("Still contains a [PLACEHOLDER] -> rendering a PREVIEW.\n");
 
 mkdirSync(join(root, "renders"), { recursive: true });
 const raw = "renders/_raw.mp4";
-const out = `renders/avsec-cyber-roadshow${pending || logoGaps.length ? "-PREVIEW" : ""}.mp4`;
+const out = `renders/avsec-cyber-roadshow${preview ? "-PREVIEW" : ""}.mp4`;
 
 run("npx", ["hyperframes", "render", "-q", "delivery", "-o", raw]);
 

@@ -2,25 +2,23 @@
 
 35-second, 9:16 (1080 × 1920) motion-graphics video for the AirAsia AVSEC booth, built with [HyperFrames](https://hyperframes.heygen.com) (HTML + GSAP rendered to MP4).
 
-- **Video:** `renders/avsec-cyber-roadshow-PREVIEW.mp4` — results are still placeholders, so the file and the rank cards say PREVIEW.
+- **Video:** `renders/avsec-cyber-roadshow-PREVIEW.mp4`. It's called PREVIEW only because the Allstars logo file hasn't been added yet.
 - **Storyboard:** `STORYBOARD.md` · **Review notes:** `REVIEW.md` · **Preview stills:** `stills/`
 
-## Replace the leaderboard data (2 steps)
+## The two leaderboards (13–25 s)
 
-1. Open **`data/leaderboard.js`** and replace each `[BRACKETED]` value:
+| Board | Shown as | Source |
+| --- | --- | --- |
+| **Spot the Risk challenge** (13–19 s) | The real booth screen. Your three screenshots are joined into one board that opens on the top 3, then scrolls | `assets/leaderboard/screens/1.png`, `2.png`, `3.png` |
+| **Human Firewall video quiz** (19–25 s) | Typeset in the quiz's own style: the 19 rows from your screenshots, opening on the top 3, then scrolling | `videoQuiz` in `data/leaderboard.js` |
 
-   ```js
-   { rank: 1, name: "Sofian A.",   points: 1000, time: "16.2s" },
-   { rank: 2, name: "Ruby Ruslan", points: 1000, time: "16.3s" },
-   { rank: 3, name: "Fae",         points: 1000, time: "18.8s" },
-   ```
+Both boards keep their own ranking rules. Spot the Risk ranks by highest points, then fastest time. The quiz shows each name once with its best score, highest first.
 
-   *(Example of the format only. Confirm the real results first; see "Ranking" below.)*
+## Update and rerender (2 steps)
 
-   - `rank` sets the order (1 = first place). Reveals always run 3 → 2 → 1.
-   - `name`: long names wrap onto two lines automatically.
-   - `points`: a number, so `1000` is shown as `1,000`.
-   - `time`: only a real recorded completion time. Use `null` to hide the TIME box for that person.
+1. Edit **`data/leaderboard.js`**:
+   - `leaderboardScreenshots`: the Spot the Risk screenshots, top of the board first. To use newer ones, replace the files in `assets/leaderboard/screens/` or list new paths. On every render they're joined automatically: the header comes from the first screenshot, rows that appear twice are shown once, and a row cut off at the edge of a screenshot is completed.
+   - `videoQuiz`: one line per quiz row, `{ rank: 1, name: "Sofian Akasah", score: "100%" }`. Add or remove lines freely; the board scrolls to fit.
    - `challengeUrl`: the public link that is printed and encoded in the QR. Set it to `""` to show the `[PUBLIC SPOT THE RISK LINK]` placeholder and hide the QR.
    - `logos`: see "Logos" below.
 
@@ -31,30 +29,20 @@
    npm run render
    ```
 
-   The script prints the ranking, link and logos it is about to render, renders, normalises the sound to −14 LUFS, and writes `renders/avsec-cyber-roadshow.mp4`. While any result or logo is still a placeholder, the file is called `…-PREVIEW.mp4`, and placeholder results also put a red "PREVIEW · RESULTS PENDING" tag on the rank cards. If the URL points at a host or organizer page, the script stops.
+   The script joins the screenshots, prints what it is about to render, renders, sets the sound to −14 LUFS, and writes `renders/avsec-cyber-roadshow.mp4`. While a logo or the link is still a placeholder, the file is called `…-PREVIEW.mp4`. If the URL points at a host or organizer page, the script stops.
 
-   Optional check: `python3 scripts/verify_render.py renders/avsec-cyber-roadshow.mp4` confirms the size, frame rate and length, and decodes the QR from the finished video to make sure it matches `challengeUrl` for at least 4 seconds (needs `pip install zxing-cpp pillow`).
+   Optional check: `python3 scripts/verify_render.py renders/avsec-cyber-roadshow.mp4` confirms the size, frame rate and length. It also reads the QR code from the finished video and checks that it matches `challengeUrl` for at least 4 seconds (needs `pip install zxing-cpp pillow`).
 
-Requirements: Node 22+, FFmpeg, and Chrome Headless Shell (`npx hyperframes browser ensure`). To look at frames or edit timing visually, run `npm run preview`.
-
-## Ranking (Spot the Security Risk)
-
-The booth's live board ranks by **points (high to low), then fastest completion time**. Times are recorded per attempt (`durationMs`), and the video shows them with one decimal (for example, `16.2s`) so close finishes stay distinct.
-
-Before you fill in the names, check two things:
-
-- **The board lists every attempt** (players can tap "Play again"), so one person can appear more than once under different spellings.
-- **The game was still open** when it was checked (27 Oct 2026, ~08:25 UTC).
-
-`data/live-snapshot-2026-10-27.json` holds the raw top entries from that moment, with the open questions listed. The video does not read that file.
+Requirements: Node 22+, FFmpeg, Python 3 with Pillow (`pip install pillow`), and Chrome Headless Shell (`npx hyperframes browser ensure`). To look at frames or edit timing visually, run `npm run preview`.
 
 ## Verified sources
 
 | Item | Value | How it was verified |
 | --- | --- | --- |
 | Public participant link | `https://airasia-avsec-spot-the-risk.vercel.app/play` | The host page builds it as `origin + '/play'`, and the official booth QR decodes to the same URL |
-| Game title | Spot the Security Risk (shown in the video as "Spot the Risk", per the brief) | Host and play page headers |
-| Scoring | 10 questions × 100 points = 1,000 max | Play page |
+| Game title | Spot the Security Risk (shown as "Spot the Risk", per the brief) | Host and play page headers |
+| Spot the Risk results | Your screenshots of the booth leaderboard | Match the game's live leaderboard data (27 Oct 2026) |
+| Video quiz results | Your screenshots of the quiz leaderboard (#1–#19) | Names, scores and order match the quiz's live data (27 Oct 2026) |
 
 The host and organizer URLs are not shown or encoded anywhere.
 
@@ -79,15 +67,18 @@ To add the Allstars logo, save the PNG (a transparent background is best) as `as
 ## Files
 
 ```
-data/leaderboard.js          ← the only file to edit for results and link
-index.html                   root: scene order, music and sound-effect timing
-compositions/s1-thanks.html  0–5 s   Thank you (scan reveal)
-compositions/s2-recap.html   5–10 s  Challenge recap (risk markers, shield)
-compositions/s3-buildup.html 10–13 s Ranking build-up (podium)
-compositions/s4-reveal.html  13–25 s Top three (reusable rank card)
+data/leaderboard.js           ← the only file to edit: screenshots, quiz rows, link, logos
+index.html                    root: scene order, music and sound-effect timing
+compositions/s1-thanks.html   0–5 s   Thank you (scan reveal, logos)
+compositions/s2-recap.html    5–10 s  Challenge recap (risk markers, shield)
+compositions/s3-buildup.html  10–13 s Ranking build-up (podium)
+compositions/s4-reveal.html   13–25 s The two leaderboards
 compositions/s5-together.html 25–29 s Collective thank you
-compositions/s6-invite.html  29–35 s Invitation (URL + QR, from the data file)
-assets/js/helpers.js         formatting, auto-fit and placeholder detection
-scripts/render.mjs           one-command render + loudness normalisation
-scripts/make_music.py        original music bed
+compositions/s6-invite.html   29–35 s Invitation (URL + QR, logos)
+assets/leaderboard/           screenshots, the joined board.png and its geometry (board.js)
+assets/js/helpers.js          logos, link and placeholder handling
+scripts/stitch_board.py       joins the leaderboard screenshots
+scripts/render.mjs            one-command render + loudness normalisation
+scripts/make_music.py         original music bed
+scripts/verify_render.py      checks the finished MP4 and its QR
 ```
