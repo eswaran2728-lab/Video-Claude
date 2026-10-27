@@ -16,3 +16,4 @@ music/*.mp3
 !music/mixkit_113_house_fest.mp3
 # Real-ESRGAN weights (re-download: github.com/xinntao/Real-ESRGAN releases v0.2.5.0, realesr-general-x4v3 + wdn)
 models/
+__pycache__/
