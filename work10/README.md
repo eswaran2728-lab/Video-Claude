@@ -2,13 +2,34 @@
 
 | version | file | length | status |
 |---|---|---|---|
-| v03 final (current) | `FINAL_Cyber_Roadshow_Recap_v03_1080x1920.mp4` (1080x1920, 30 fps, H.264 ~19 Mb/s, AAC 256k) | 45.0 s, 1350 frames, -14.0 LUFS / -2.0 dBTP | approved, final export |
+| v04 preview (current) | `PREVIEW_cyber_roadshow_recap_v04.mp4` (720x1280) | 45.0 s, 1350 frames, -14.0 LUFS / -2.0 dBTP | waiting for approval |
+| v03 final | `FINAL_Cyber_Roadshow_Recap_v03_1080x1920.mp4` (1080x1920, 30 fps, H.264 ~19 Mb/s, AAC 256k) | 45.0 s, 1350 frames, -14.0 LUFS / -2.0 dBTP | approved, final export |
 | v03 preview | `PREVIEW_cyber_roadshow_recap_v03.mp4` (720x1280) | 45.0 s, 1350 frames, -14.0 LUFS / -2.0 dBTP | approved preview (kept) |
 | v02 final (superseded: GTR still visible in places) | `FINAL_Cyber_Roadshow_Recap_v02_1080x1920.mp4` (1080x1920, 30 fps, H.264 ~19 Mb/s, AAC 256k) | 45.0 s, 1350 frames, -14.0 LUFS / -2.0 dBTP | approved, final export |
 | v02 preview | `PREVIEW_cyber_roadshow_recap_v02.mp4` (720x1280) | 45.0 s, 1350 frames, -14.0 LUFS / -2.0 dBTP | approved preview (kept) |
 | v01 | `PREVIEW_cyber_roadshow_recap_v01.mp4` (720x1280) | 25.4 s | superseded (kept) |
 
 Nothing is published, scheduled or uploaded.
+
+## v04 — creator's note on v03 and what changed
+Note: add four more photos (sent in chat; kept in `src/added/`: hall_handout, booth_visitors, hall_keychain, booth_handover).
+- All four upscaled like the others (`upscale_photos.py`) and used: hall_handout in the crowd section (after the phone
+  clip); booth_visitors, hall_keychain and booth_handover in the people montage, now nine photos on the same 16 song beats
+  (the near-identical pairs 6437/6438 and 6439/6440 play as one-beat bursts; photos with faces high in frame come after
+  the third tip card leaves). The finale wall is now all 20 photos (no video frames). Length, music and sound as v03.
+- GTR: booth_visitors is framed below the GTR logo at its top edge and left of the GTR monitor/banner. In booth_handover
+  no frame can show both people without the GTR banner behind the man, so its two small GTR fragments there (the logo
+  above his head, partial "TH"/"V" letters beside his jaw) are painted out with the plain banner colour
+  (`retouch_added.py`, nothing on the people touched); the other GTR banner and the GTR table card are cropped out.
+  All new windows and tiles pass the `gtr_boxes.py` check.
+
+### Rebuild v04
+```
+python3 retouch_added.py && python3 upscale_photos.py hall_handout booth_visitors hall_keychain booth_handover
+python3 make_assets_v04.py && python3 build_v04.py
+cd edit && npx hyperframes@0.8.193 render --quality draft --fps 30 -o ../renders/draft_v04.mp4
+cd .. && ./master_preview.sh renders/draft_v04.mp4 PREVIEW_cyber_roadshow_recap_v04.mp4 45.0
+```
 
 ## v03 — creator's notes on v02 and what changed
 Notes: upscale all the images; use every image, but leave out the blurry ones; show the AirAsia AVSEC and Allstars logos

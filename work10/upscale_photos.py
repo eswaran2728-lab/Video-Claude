@@ -9,7 +9,12 @@ torch.set_num_threads(4)
 A = "edit/assets"; os.makedirs(f"{A}/p3", exist_ok=True)
 ALL = ["IMG_6426", "IMG_6427", "IMG_6461", "IMG_6436", "2ee1beb9", "38af901c", "912ed0e8", "ACAE9274", "IMG_6433", "IMG_6423",
        "IMG_6429", "IMG_6430", "IMG_6437", "IMG_6438", "IMG_6439", "IMG_6440", "IMG_6435", "IMG_6419", "IMG_6420"]
+# v04: four photos the creator added later (src/added/; booth_handover uses its GTR-retouched copy from retouch_added.py)
+ADDED = {"hall_handout": "hall_handout.jpg", "booth_visitors": "booth_visitors.jpg", "hall_keychain": "hall_keychain.jpg",
+         "booth_handover": "booth_handover_retouched.jpg"}
+ALL += list(ADDED)
 def load(k):
+    if k in ADDED: return Image.open(f"src/added/{ADDED[k]}").convert("RGB")
     if os.path.exists(f"src/dl/{k}.jpg"): return Image.open(f"src/dl/{k}.jpg").convert("RGB")
     raw = subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-i", f"src/dl/{k}.DNG", "-frames:v", "1", "-f", "image2pipe", "-vcodec", "png", "-"],
                          capture_output=True, check=True).stdout
