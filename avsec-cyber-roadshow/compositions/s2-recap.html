@@ -1,0 +1,212 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: var(--paper);
+    }
+    #s2-stage { position: absolute; inset: 0; }
+    #s2-dots {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(20, 20, 23, 0.1) 2.5px, transparent 3px);
+      background-size: 44px 44px;
+    }
+    #s2-l1, #s2-l2 {
+      position: absolute;
+      left: 0;
+      width: 1080px;
+      text-align: center;
+      color: var(--ink);
+      font-weight: 900;
+      letter-spacing: -0.045em;
+      line-height: 1.02;
+    }
+    #s2-l1 { top: 300px; font-size: 128px; }
+    #s2-l2 { top: 800px; font-size: 104px; }
+    #s2-l1 span, #s2-l2 span { display: inline-block; margin: 0 0.1em; }
+    .s2-red { color: var(--red); }
+
+    .s2-tile {
+      position: absolute;
+      width: 230px;
+      height: 230px;
+      border-radius: 34px;
+      background: var(--white);
+      box-shadow: 0 18px 40px rgba(20, 20, 23, 0.1), 0 2px 0 rgba(20, 20, 23, 0.05);
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .s2-tile svg { width: 132px; height: 132px; }
+    .s2-tile svg * {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .s2-tile svg .f { fill: currentColor; stroke: none; }
+    .s2-lock {
+      position: absolute;
+      left: -14px;
+      top: -14px;
+      width: 258px;
+      height: 258px;
+      border: 7px solid var(--red);
+      border-radius: 42px;
+      opacity: 0;
+    }
+    .s2-chip {
+      position: absolute;
+      left: 50%;
+      top: -30px;
+      padding: 6px 16px;
+      background: var(--red);
+      color: var(--white);
+      border-radius: 10px;
+      font-family: var(--font-mono);
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      opacity: 0;
+      white-space: nowrap;
+    }
+    #s2-cursor {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 170px;
+      height: 170px;
+    }
+    #s2-cursor * { fill: none; stroke: var(--red); stroke-width: 7; stroke-linecap: round; }
+    #s2-cursor .dot { fill: var(--red); stroke: none; }
+
+    #s2-shield {
+      position: absolute;
+      left: 350px;
+      top: 270px;
+      width: 380px;
+      height: 440px;
+      overflow: visible;
+    }
+    #s2-shield-path { fill: var(--red); fill-opacity: 0; stroke: var(--red); stroke-width: 14; stroke-linejoin: round; }
+    #s2-check { fill: none; stroke: var(--white); stroke-width: 26; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+
+  <div id="root" data-composition-id="s2" data-width="1080" data-height="1920">
+    <div id="s2-stage" class="clip" data-start="0" data-duration="5">
+      <div id="s2-dots" data-layout-ignore></div>
+
+      <div id="s2-grid">
+        <!-- Row 1 -->
+        <div id="s2-t0" class="s2-tile" style="left:161px;top:700px">
+          <svg viewBox="0 0 120 120"><rect x="22" y="26" width="76" height="52" rx="5"/><path d="M10 88 H110 L102 98 H18 Z"/></svg>
+        </div>
+        <div id="s2-t1" class="s2-tile" style="left:425px;top:700px">
+          <svg viewBox="0 0 120 120"><path d="M44 8 L60 34 L76 8"/><rect x="34" y="34" width="52" height="72" rx="9"/><circle cx="60" cy="60" r="10"/><path d="M46 86 H74"/></svg>
+          <div class="s2-lock"></div><div class="s2-chip">RISK</div>
+        </div>
+        <div id="s2-t2" class="s2-tile" style="left:689px;top:700px">
+          <svg viewBox="0 0 120 120"><rect x="42" y="40" width="36" height="66" rx="9"/><rect x="49" y="14" width="22" height="26"/><path d="M56 22 V30 M64 22 V30"/></svg>
+          <div class="s2-lock"></div><div class="s2-chip">RISK</div>
+        </div>
+        <!-- Row 2 -->
+        <div id="s2-t3" class="s2-tile" style="left:161px;top:964px">
+          <svg viewBox="0 0 120 120"><path d="M20 20 H100 V78 L78 100 H20 Z"/><path d="M78 100 V78 H100"/><path d="M34 42 H86"/><circle class="f" cx="36" cy="64" r="6"/><circle class="f" cx="52" cy="64" r="6"/><circle class="f" cx="68" cy="64" r="6"/><circle class="f" cx="84" cy="64" r="6"/></svg>
+          <div class="s2-lock"></div><div class="s2-chip">RISK</div>
+        </div>
+        <div id="s2-t4" class="s2-tile" style="left:425px;top:964px">
+          <svg viewBox="0 0 120 120"><rect x="32" y="12" width="56" height="98" rx="3"/><circle class="f" cx="76" cy="62" r="5"/><path d="M18 110 H102"/></svg>
+        </div>
+        <div id="s2-t5" class="s2-tile" style="left:689px;top:964px">
+          <svg viewBox="0 0 120 120"><rect x="38" y="10" width="44" height="100" rx="11"/><path d="M53 96 H67"/></svg>
+        </div>
+        <!-- Row 3 -->
+        <div id="s2-t6" class="s2-tile" style="left:161px;top:1228px">
+          <svg viewBox="0 0 120 120"><rect x="16" y="40" width="88" height="62" rx="11"/><path d="M44 40 V27 H76 V40"/><path d="M16 64 H104"/></svg>
+        </div>
+        <div id="s2-t7" class="s2-tile" style="left:425px;top:1228px">
+          <svg viewBox="0 0 120 120"><path d="M26 44 H84 V80 Q84 102 62 102 H48 Q26 102 26 80 Z"/><path d="M84 54 H92 Q104 54 104 66 Q104 78 92 78 H84"/><path d="M44 30 Q38 22 44 14 M62 30 Q56 22 62 14"/></svg>
+        </div>
+        <div id="s2-t8" class="s2-tile" style="left:689px;top:1228px">
+          <svg viewBox="0 0 120 120"><rect x="12" y="18" width="96" height="66" rx="6"/><path d="M60 84 V100 M38 102 H82"/></svg>
+        </div>
+      </div>
+
+      <svg id="s2-cursor" viewBox="0 0 170 170" data-layout-ignore>
+        <circle cx="85" cy="85" r="56"/>
+        <path d="M85 8 V40 M85 130 V162 M8 85 H40 M130 85 H162"/>
+        <circle class="dot" cx="85" cy="85" r="8"/>
+      </svg>
+
+      <div id="s2-l1"><span>You</span><span>spotted</span><br /><span>the</span><span class="s2-red">risks.</span></div>
+
+      <svg id="s2-shield" viewBox="0 0 380 440" data-layout-ignore>
+        <path id="s2-shield-path" d="M190 22 L348 82 V200 C348 312 280 390 190 424 C100 390 32 312 32 200 V82 Z"/>
+        <path id="s2-check" d="M118 222 L170 274 L266 168"/>
+      </svg>
+
+      <div id="s2-l2"><span>You</span><span>strengthened</span><br /><span>the</span><span class="s2-red">human</span><br /><span class="s2-red">firewall.</span></div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const tiles = ["#s2-t4", "#s2-t1", "#s2-t3", "#s2-t5", "#s2-t7", "#s2-t0", "#s2-t2", "#s2-t6", "#s2-t8"];
+      const C = { // tile centres → cursor top-left (cursor is 170px)
+        t3: [276 - 85, 1079 - 85],
+        t2: [804 - 85, 815 - 85],
+        t1: [540 - 85, 815 - 85],
+      };
+
+      // Tiles build out from the centre.
+      tl.fromTo(tiles, { opacity: 0, scale: 0.7, y: 40 }, { opacity: 1, scale: 1, y: 0, duration: 0.55, ease: "expo.out", stagger: 0.035 }, 0.02);
+      tl.fromTo("#s2-dots", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 0);
+
+      // Headline 1, word by word from light grey to ink.
+      tl.fromTo("#s2-l1 span", { opacity: 0, filter: "blur(10px)", scale: 1.08 }, { opacity: 1, filter: "blur(0px)", scale: 1, duration: 0.2, ease: "power3.out", stagger: 0.08 }, 0.55);
+
+      // Cursor flicks between risks and locks each one.
+      tl.fromTo("#s2-cursor", { x: 1100, y: 1500, opacity: 1, scale: 1 }, { x: C.t3[0], y: C.t3[1], duration: 0.36, ease: "power3.out" }, 0.1);
+      const lock = (id, at) => {
+        tl.fromTo("#" + id + " .s2-lock", { opacity: 0, scale: 1.18 }, { opacity: 1, scale: 1, duration: 0.24, ease: "back.out(2)" }, at);
+        tl.fromTo("#" + id + " .s2-chip", { opacity: 0, xPercent: -50, y: 14 }, { opacity: 1, xPercent: -50, y: 0, duration: 0.2, ease: "expo.out" }, at + 0.06);
+        tl.fromTo("#" + id, { color: "#141417" }, { color: "#e8112d", duration: 0.12 }, at);
+        tl.fromTo("#s2-cursor", { scale: 1 }, { scale: 0.82, duration: 0.08, ease: "power2.out", yoyo: true, repeat: 1, immediateRender: false }, at - 0.04);
+      };
+      lock("s2-t3", 0.46);
+      tl.to("#s2-cursor", { x: C.t2[0], y: C.t2[1], duration: 0.32, ease: "power3.inOut" }, 0.66);
+      lock("s2-t2", 0.98);
+      tl.to("#s2-cursor", { x: C.t1[0], y: C.t1[1], duration: 0.3, ease: "power3.inOut" }, 1.18);
+      lock("s2-t1", 1.48);
+      tl.to("#s2-cursor", { opacity: 0, scale: 0.6, duration: 0.2, ease: "power2.in" }, 2.0);
+
+      // Everything collapses into the shield.
+      tl.to("#s2-l1 span", { opacity: 0, filter: "blur(10px)", duration: 0.18, ease: "power2.in", stagger: 0.03 }, 2.1);
+      tl.to(tiles, { x: (i, el) => 540 - (parseFloat(el.style.left) + 115), y: (i, el) => 490 - (parseFloat(el.style.top) + 115), scale: 0.15, opacity: 0, duration: 0.42, ease: "power3.in", stagger: 0.02 }, 2.15);
+
+      const shield = document.querySelector("#s2-shield-path");
+      const len = 1300;
+      tl.fromTo(shield, { strokeDasharray: len, strokeDashoffset: len, fillOpacity: 0 }, { strokeDashoffset: 0, duration: 0.5, ease: "power2.inOut" }, 2.35);
+      tl.fromTo("#s2-shield", { scale: 0.7, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.6, ease: "back.out(1.4)" }, 2.3);
+      tl.to(shield, { fillOpacity: 1, duration: 0.18, ease: "power1.out" }, 2.78);
+      tl.fromTo("#s2-check", { strokeDasharray: 260, strokeDashoffset: 260 }, { strokeDashoffset: 0, duration: 0.28, ease: "power3.out" }, 2.88);
+
+      // Headline 2.
+      tl.fromTo("#s2-l2 span", { opacity: 0, filter: "blur(10px)", y: 20 }, { opacity: 1, filter: "blur(0px)", y: 0, duration: 0.22, ease: "power3.out", stagger: 0.08 }, 2.8);
+
+      // Exit: the shield turns charcoal and becomes the next world.
+      tl.to("#s2-l2 span", { opacity: 0, filter: "blur(10px)", duration: 0.16, ease: "power2.in", stagger: 0.02 }, 4.5);
+      tl.to("#s2-check", { opacity: 0, duration: 0.12 }, 4.5);
+      tl.to(shield, { fill: "#141417", stroke: "#141417", duration: 0.16, ease: "power1.inOut" }, 4.52);
+      tl.to("#s2-shield", { scale: 11, duration: 0.42, ease: "power3.in", transformOrigin: "50% 52%" }, 4.58);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["s2"] = tl;
+    })();
+  </script>
+</template>

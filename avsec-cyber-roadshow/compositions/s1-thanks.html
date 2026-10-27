@@ -1,0 +1,316 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: var(--deep);
+    }
+    #s1-stage, #s1-bg, #s1-hud, #s1-ret, #s1-tagwrap, #s1-scanwrap { position: absolute; inset: 0; }
+    #s1-grid {
+      position: absolute;
+      left: -60px;
+      top: -60px;
+      width: 1200px;
+      height: 2040px;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.045) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.045) 2px, transparent 2px);
+      background-size: 60px 60px;
+    }
+    #s1-vignette {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 55% at 50% 42%, rgba(232, 17, 45, 0.16), transparent 70%);
+    }
+    .s1-corner {
+      position: absolute;
+      width: 72px;
+      height: 72px;
+      border-color: rgba(255, 255, 255, 0.55);
+      border-style: solid;
+      border-width: 0;
+    }
+    #s1-c-tl { left: 56px; top: 176px; border-left-width: 4px; border-top-width: 4px; }
+    #s1-c-tr { right: 56px; top: 176px; border-right-width: 4px; border-top-width: 4px; }
+    #s1-c-bl { left: 56px; top: 1272px; border-left-width: 4px; border-bottom-width: 4px; }
+    #s1-c-br { right: 56px; top: 1272px; border-right-width: 4px; border-bottom-width: 4px; }
+    .s1-micro {
+      position: absolute;
+      font-family: var(--font-mono);
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: rgba(255, 255, 255, 0.72);
+      white-space: nowrap;
+    }
+    #s1-scanpct { right: 96px; top: 1290px; color: var(--red-signal); }
+    #s1-logos {
+      position: absolute;
+      left: 0;
+      top: 196px;
+      width: 1080px;
+      height: 176px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 44px;
+    }
+    #s1-status { left: 96px; top: 1290px; }
+    #s1-status b { color: #3ddc84; font-weight: 700; }
+
+    #s1-head {
+      position: absolute;
+      left: 0;
+      top: 540px;
+      width: 1080px;
+      text-align: center;
+      font-weight: 900;
+      letter-spacing: -0.045em;
+      line-height: 1;
+    }
+    #s1-l1 { font-size: 142px; height: 150px; color: var(--white); }
+    #s1-l2 { font-size: 166px; height: 176px; color: var(--red-signal); margin-top: 6px; }
+
+    #s1-ghost {
+      position: absolute;
+      left: 0;
+      top: 540px;
+      width: 1080px;
+      text-align: center;
+      font-weight: 900;
+      letter-spacing: -0.045em;
+      line-height: 1;
+      color: #0b0b0d;
+      -webkit-text-stroke: 2px rgba(255, 255, 255, 0.28);
+    }
+    #s1-ghost .g2 { -webkit-text-stroke-color: rgba(255, 45, 63, 0.45); }
+    #s1-reticle {
+      position: absolute;
+      left: 44px;
+      top: 684px;
+      width: 992px;
+      height: 214px;
+    }
+    .s1-rt {
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      border: 0 solid var(--white);
+    }
+    #s1-rt-tl { left: 0; top: 0; border-left-width: 5px; border-top-width: 5px; }
+    #s1-rt-tr { right: 0; top: 0; border-right-width: 5px; border-top-width: 5px; }
+    #s1-rt-bl { left: 0; bottom: 0; border-left-width: 5px; border-bottom-width: 5px; }
+    #s1-rt-br { right: 0; bottom: 0; border-right-width: 5px; border-bottom-width: 5px; }
+    #s1-detect {
+      position: absolute;
+      right: 44px;
+      top: 906px;
+      padding: 8px 16px;
+      background: var(--red);
+      color: var(--white);
+      font-family: var(--font-mono);
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      white-space: nowrap;
+    }
+
+    #s1-sub {
+      position: absolute;
+      left: 0;
+      top: 990px;
+      width: 1080px;
+      text-align: center;
+      font-size: 62px;
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      color: rgba(255, 255, 255, 0.92);
+    }
+    #s1-sub span { display: inline-block; margin: 0 0.12em; }
+
+    #s1-tag {
+      position: absolute;
+      left: 50%;
+      top: 1132px;
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      padding: 14px 32px 14px 14px;
+      border: 4px solid var(--red-signal);
+      border-radius: 18px;
+      white-space: nowrap;
+    }
+    #s1-tag-k {
+      padding: 8px 14px;
+      background: var(--red);
+      border-radius: 8px;
+      font-family: var(--font-mono);
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+    }
+    #s1-tag-v {
+      font-size: 66px;
+      font-weight: 900;
+      letter-spacing: -0.035em;
+      line-height: 1;
+    }
+    #s1-runway {
+      position: absolute;
+      left: 0;
+      top: 1252px;
+      width: 1080px;
+      display: flex;
+      justify-content: center;
+      gap: 26px;
+    }
+    #s1-runway i {
+      display: block;
+      width: 44px;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.5);
+      transform-origin: left center;
+    }
+
+    #s1-scan {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1080px;
+      height: 260px;
+    }
+    #s1-scan-trail {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 252px;
+      background: linear-gradient(to bottom, rgba(232, 17, 45, 0), rgba(232, 17, 45, 0.32));
+    }
+    #s1-scan-line {
+      position: absolute;
+      left: 0;
+      top: 250px;
+      width: 100%;
+      height: 8px;
+      background: var(--red-signal);
+      box-shadow: 0 0 24px 6px rgba(255, 45, 63, 0.75);
+    }
+  </style>
+
+  <div id="root" data-composition-id="s1" data-width="1080" data-height="1920">
+    <div id="s1-stage" class="clip" data-start="0" data-duration="5">
+    <div id="s1-bg" data-layout-ignore>
+      <div id="s1-grid"></div>
+      <div id="s1-vignette"></div>
+    </div>
+
+    <div id="s1-hud" data-layout-ignore>
+      <div id="s1-c-tl" class="s1-corner"></div>
+      <div id="s1-c-tr" class="s1-corner"></div>
+      <div id="s1-c-bl" class="s1-corner"></div>
+      <div id="s1-c-br" class="s1-corner"></div>
+      <div id="s1-scanpct" class="s1-micro">SCAN 000%</div>
+      <div id="s1-status" class="s1-micro"><b>●</b> AWARENESS: ON</div>
+    </div>
+
+    <!-- Client logos (data/leaderboard.js → logos), shown whole. -->
+    <div id="s1-logos"></div>
+
+    <div id="s1-ghost" aria-hidden="true" data-layout-allow-overlap>
+      <div id="s1-g1" style="font-size:142px;height:150px">THANK YOU,</div>
+      <div class="g2" style="font-size:166px;height:176px;margin-top:6px">ALLSTARS!</div>
+    </div>
+
+    <div id="s1-head" data-layout-allow-overlap>
+      <div id="s1-l1">THANK YOU,</div>
+      <div id="s1-l2">ALLSTARS!</div>
+    </div>
+
+    <div id="s1-ret" data-layout-allow-overlap data-layout-ignore>
+      <div id="s1-reticle">
+        <div id="s1-rt-tl" class="s1-rt"></div>
+        <div id="s1-rt-tr" class="s1-rt"></div>
+        <div id="s1-rt-bl" class="s1-rt"></div>
+        <div id="s1-rt-br" class="s1-rt"></div>
+      </div>
+      <div id="s1-detect">● ALLSTARS DETECTED</div>
+    </div>
+
+    <div id="s1-sub">
+      <span>For</span><span>joining</span><span>us</span><span>at</span><br /><span>the</span><span>AVSEC</span><span>booth</span>
+    </div>
+
+    <div id="s1-tagwrap">
+      <div id="s1-tag"><span id="s1-tag-k">EVENT</span><span id="s1-tag-v">Cyber Roadshow</span></div>
+      <div id="s1-runway">
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+    </div>
+
+    <div id="s1-scanwrap" data-layout-ignore>
+      <div id="s1-scan"><div id="s1-scan-trail"></div><div id="s1-scan-line"></div></div>
+    </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      window.AVSEC.logoLockup(document.querySelector("#s1-logos"), {
+        heights: { avsec: 176, allstars: 120 },
+        divider: "rgba(255,255,255,0.35)",
+        placeholder: "rgba(255,255,255,0.7)",
+      });
+      const tl = gsap.timeline({ paused: true });
+      // Scan line: line sits 254px down inside #s1-scan, so y = lineY - 254.
+      const L = (lineY) => lineY - 254;
+
+      // Frame 0: the scan line is already on screen at the top edge.
+      tl.fromTo("#s1-scan", { y: L(40) }, { y: L(2300), duration: 1.5, ease: "none" }, 0.05);
+      // Scan crosses the logos (y 196–372) between ~0.15 s and ~0.27 s.
+      tl.fromTo("#s1-logos", { clipPath: "inset(0% 0% 100% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.13, ease: "none" }, 0.15);
+      tl.fromTo("#s1-logos", { filter: "brightness(1.8)" }, { filter: "brightness(1)", duration: 0.5, ease: "power2.out" }, 0.22);
+      // Scan crosses the headline (y 540–890) between ~0.37 s and ~0.6 s.
+      tl.fromTo("#s1-head", { clipPath: "inset(0% 0% 100% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.24, ease: "none" }, 0.38);
+      tl.fromTo("#s1-l1", { color: "#ff2d3f", textShadow: "0 0 40px rgba(255,45,63,0.9)" }, { color: "#ffffff", textShadow: "0 0 0px rgba(255,45,63,0)", duration: 0.5, ease: "power2.out" }, 0.48);
+      tl.fromTo("#s1-l2", { scale: 1.04, textShadow: "0 0 60px rgba(255,45,63,1)" }, { scale: 1, textShadow: "0 0 18px rgba(255,45,63,0.35)", duration: 0.6, ease: "expo.out" }, 0.56);
+
+      // Scan counter follows the line.
+      const pct = { v: 0 };
+      const pctEl = document.querySelector("#s1-scanpct");
+      tl.fromTo(pct, { v: 0 }, {
+        v: 100, duration: 1.2, ease: "none",
+        onUpdate: () => { pctEl.textContent = "SCAN " + String(Math.round(pct.v)).padStart(3, "0") + "%"; },
+      }, 0.05);
+
+      // HUD corners settle in.
+      tl.fromTo("#s1-ghost", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power1.out" }, 0.62);
+      tl.fromTo(".s1-corner", { opacity: 0, scale: 1.3 }, { opacity: 1, scale: 1, duration: 0.5, ease: "expo.out", stagger: 0.05 }, 0);
+      tl.fromTo("#s1-status", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 1.1);
+
+      // Reticle locks onto ALLSTARS!
+      tl.fromTo("#s1-reticle", { opacity: 0, scale: 1.25 }, { opacity: 1, scale: 1, duration: 0.42, ease: "back.out(1.6)" }, 1.2);
+      tl.fromTo("#s1-detect", { opacity: 0, x: 30 }, { opacity: 1, x: 0, duration: 0.3, ease: "expo.out" }, 1.32);
+
+      // Supporting line, word by word.
+      tl.fromTo("#s1-sub span", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.16, ease: "power2.out", stagger: 0.07 }, 1.8);
+
+      // Event tag.
+      tl.fromTo("#s1-tag", { xPercent: -50, opacity: 0, scale: 0.86 }, { xPercent: -50, opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" }, 2.55);
+      tl.fromTo("#s1-runway i", { scaleX: 0 }, { scaleX: 1, duration: 0.22, ease: "power2.out", stagger: 0.03 }, 2.75);
+
+      // World keeps moving under the hold: grid drifts, reticle tag ticks.
+      tl.fromTo("#s1-grid", { y: 0 }, { y: 60, duration: 5, ease: "none" }, 0);
+      tl.fromTo("#s1-vignette", { opacity: 0.6 }, { opacity: 1, duration: 2, ease: "power1.inOut" }, 1);
+
+      // Exit: the scan sweeps back up and wipes the frame clean.
+      tl.fromTo("#s1-scan", { y: L(2300) }, { y: L(-300), duration: 0.42, ease: "power3.in", immediateRender: false }, 4.54);
+      tl.fromTo(["#s1-logos", "#s1-head", "#s1-ret", "#s1-sub", "#s1-tagwrap", "#s1-hud"], { opacity: 1, filter: "blur(0px)" }, { opacity: 0, filter: "blur(10px)", duration: 0.22, ease: "power2.in", stagger: -0.04, immediateRender: false }, 4.68);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["s1"] = tl;
+    })();
+  </script>
+</template>

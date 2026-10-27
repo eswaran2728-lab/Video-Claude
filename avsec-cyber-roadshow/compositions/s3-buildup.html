@@ -1,0 +1,160 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: var(--charcoal);
+    }
+    #s3-stage { position: absolute; inset: 0; }
+    #s3-floor {
+      position: absolute;
+      left: 0;
+      top: 1560px;
+      width: 1080px;
+      height: 360px;
+      background: linear-gradient(to bottom, #1d1d22, var(--deep));
+    }
+    #s3-runway {
+      position: absolute;
+      left: 0;
+      top: 1600px;
+      width: 1080px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+    #s3-runway i { display: block; width: 56px; height: 8px; background: rgba(255, 255, 255, 0.35); }
+
+    #s3-title {
+      position: absolute;
+      left: 0;
+      top: 300px;
+      width: 1080px;
+      text-align: center;
+      font-size: 156px;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      line-height: 0.98;
+      color: var(--white);
+    }
+    #s3-title span { display: inline-block; margin: 0 0.08em; }
+    #s3-sub {
+      position: absolute;
+      left: 0;
+      top: 640px;
+      width: 1080px;
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 44px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      color: var(--red-signal);
+      white-space: nowrap;
+    }
+
+    .s3-block {
+      position: absolute;
+      width: 290px;
+      border-radius: 22px 22px 0 0;
+      background: linear-gradient(to bottom, #2a2a31, #1a1a1f);
+      border: 3px solid rgba(255, 255, 255, 0.14);
+      border-bottom: 0;
+      display: flex;
+      justify-content: center;
+      transform-origin: 50% 100%;
+    }
+    .s3-block b {
+      margin-top: 30px;
+      font-size: 170px;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.05em;
+      color: #24242a;
+      -webkit-text-stroke: 4px rgba(255, 255, 255, 0.7);
+    }
+    #s3-b1 b { -webkit-text-stroke-color: var(--red-signal); }
+    #s3-b2 { left: 80px; top: 1180px; height: 380px; }
+    #s3-b1 { left: 395px; top: 1040px; height: 520px; border-color: rgba(255, 45, 63, 0.55); }
+    #s3-b3 { left: 710px; top: 1260px; height: 300px; }
+
+    .s3-beam {
+      position: absolute;
+      top: -200px;
+      width: 420px;
+      height: 1800px;
+      transform-origin: 50% 0%;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.0) 85%);
+      clip-path: polygon(44% 0, 56% 0, 100% 100%, 0 100%);
+      mix-blend-mode: screen;
+    }
+    #s3-beam-a { left: 40px; }
+    #s3-beam-b { left: 620px; }
+    #s3-dim {
+      position: absolute;
+      inset: 0;
+      background: #000;
+      opacity: 0;
+    }
+    #s3-glow {
+      position: absolute;
+      left: 290px;
+      top: 900px;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 45, 63, 0.45), transparent 65%);
+      opacity: 0;
+    }
+  </style>
+
+  <div id="root" data-composition-id="s3" data-width="1080" data-height="1920">
+    <div id="s3-stage" class="clip" data-start="0" data-duration="3">
+      <div id="s3-floor" data-layout-ignore></div>
+      <div id="s3-runway" data-layout-ignore>
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+      <div id="s3-glow" data-layout-ignore></div>
+
+      <div id="s3-b2" class="s3-block"><b>2</b></div>
+      <div id="s3-b1" class="s3-block"><b>1</b></div>
+      <div id="s3-b3" class="s3-block"><b>3</b></div>
+
+      <div id="s3-beam-a" class="s3-beam" data-layout-ignore></div>
+      <div id="s3-beam-b" class="s3-beam" data-layout-ignore></div>
+
+      <div id="s3-title"><span>OUR</span><span>TOP</span><br /><span>RANKERS</span></div>
+      <div id="s3-sub">AVSEC BOOTH CHALLENGE</div>
+
+      <div id="s3-dim" data-layout-ignore></div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+
+      // Podium rises with a physical overshoot, 2 · 1 · 3.
+      tl.fromTo("#s3-b2", { scaleY: 0 }, { scaleY: 1, duration: 0.6, ease: "back.out(1.3)" }, 0.0);
+      tl.fromTo("#s3-b1", { scaleY: 0 }, { scaleY: 1, duration: 0.7, ease: "back.out(1.3)" }, 0.1);
+      tl.fromTo("#s3-b3", { scaleY: 0 }, { scaleY: 1, duration: 0.55, ease: "back.out(1.3)" }, 0.2);
+      tl.fromTo(".s3-block b", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out", stagger: 0.08 }, 0.45);
+      tl.fromTo("#s3-runway i", { opacity: 0 }, { opacity: 1, duration: 0.2, stagger: 0.025 }, 0.0);
+
+      // Title slams word by word.
+      tl.fromTo("#s3-title span", { opacity: 0, scale: 1.35, filter: "blur(10px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.28, ease: "expo.out", stagger: 0.12 }, 0.3);
+      tl.fromTo("#s3-sub", { opacity: 0, scaleX: 1.25, filter: "blur(8px)" }, { opacity: 1, scaleX: 1, filter: "blur(0px)", duration: 0.5, ease: "expo.out" }, 0.8);
+
+      // Spotlights sweep and cross on first place.
+      tl.fromTo("#s3-beam-a", { rotation: 28, opacity: 0 }, { rotation: -8, opacity: 1, duration: 1.4, ease: "power2.inOut" }, 1.1);
+      tl.fromTo("#s3-beam-b", { rotation: -28, opacity: 0 }, { rotation: 8, opacity: 1, duration: 1.4, ease: "power2.inOut" }, 1.15);
+      tl.fromTo("#s3-glow", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 1.2, ease: "power2.inOut" }, 1.4);
+
+      // The held breath: lights dim before the payoff.
+      tl.fromTo("#s3-dim", { opacity: 0 }, { opacity: 0.88, duration: 0.4, ease: "power2.in" }, 2.6);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["s3"] = tl;
+    })();
+  </script>
+</template>

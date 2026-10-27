@@ -1,0 +1,369 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: var(--charcoal);
+    }
+    #s4-stage { position: absolute; inset: 0; }
+    #s4-ground, #s4-flood, #s4-white, #s4-confetti, #s4-burst-wrap { position: absolute; inset: 0; }
+    #s4-ground {
+      background:
+        radial-gradient(ellipse 70% 45% at 50% 40%, rgba(255, 45, 63, 0.14), transparent 70%),
+        var(--charcoal);
+    }
+    #s4-grid {
+      position: absolute;
+      left: 0;
+      top: -60px;
+      width: 1080px;
+      height: 2040px;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.04) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 2px, transparent 2px);
+      background-size: 60px 60px;
+    }
+    #s4-flood { background: var(--red); clip-path: circle(0% at 50% 42%); }
+    #s4-flood-rays {
+      position: absolute;
+      left: -460px;
+      top: -400px;
+      width: 2000px;
+      height: 2000px;
+      background: repeating-conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0.07) 0deg 7deg, transparent 7deg 18deg);
+    }
+    #s4-white { background: var(--paper); opacity: 0; }
+    #s4-burst {
+      position: absolute;
+      left: 40px;
+      top: 310px;
+      width: 1000px;
+      height: 1000px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0) 62%);
+      opacity: 0;
+    }
+    .s4-bit { position: absolute; left: 0; top: 0; width: 22px; height: 34px; border-radius: 4px; }
+
+    #s4-steps {
+      position: absolute;
+      left: 0;
+      top: 190px;
+      width: 1080px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+    #s4-steps i { display: block; width: 90px; height: 10px; border-radius: 5px; background: rgba(255, 255, 255, 0.22); }
+
+    .s4-card {
+      --ground: var(--charcoal);
+      position: absolute;
+      left: 80px;
+      top: 320px;
+      width: 920px;
+      height: 990px;
+      padding: 60px 64px;
+      border-radius: 40px;
+      background: #1d1d23;
+      border: 3px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.55);
+      overflow: hidden;
+      color: var(--white);
+    }
+    .s4-card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 14px;
+      height: 100%;
+      background: var(--red);
+    }
+    #s4-c1 {
+      --ground: var(--red);
+      background: var(--white);
+      color: var(--ink);
+      border-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 50px 100px rgba(90, 0, 12, 0.45);
+    }
+    .s4-top { position: relative; display: flex; align-items: flex-start; gap: 36px; height: 270px; }
+    .s4-num {
+      font-size: 268px;
+      font-weight: 900;
+      letter-spacing: -0.06em;
+      line-height: 0.82;
+      color: #1d1d23;
+      -webkit-text-stroke: 5px var(--red-signal);
+      transform-origin: 30% 60%;
+    }
+    #s4-c1 .s4-num { color: var(--red); -webkit-text-stroke: 0; }
+    .s4-meta { padding-top: 26px; }
+    .s4-place {
+      font-family: var(--font-mono);
+      font-size: 44px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      white-space: nowrap;
+    }
+    .s4-event {
+      margin-top: 14px;
+      font-family: var(--font-mono);
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: rgba(255, 255, 255, 0.72);
+      white-space: nowrap;
+    }
+    #s4-c1 .s4-event { color: #5b5b63; }
+    #s4-pending {
+      position: absolute;
+      left: 50%;
+      top: 238px;
+      padding: 6px 14px;
+      border: 3px dashed var(--red-signal);
+      color: var(--red-signal);
+      border-radius: 10px;
+      font-family: var(--font-mono);
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+    .s4-perf { position: relative; height: 70px; margin: 0 -64px; }
+    .s4-perf::after {
+      content: "";
+      position: absolute;
+      left: 70px;
+      right: 70px;
+      top: 33px;
+      border-top: 4px dashed rgba(255, 255, 255, 0.22);
+    }
+    #s4-c1 .s4-perf::after { border-top-color: rgba(20, 20, 23, 0.2); }
+    .s4-notch {
+      position: absolute;
+      top: 7px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--ground);
+    }
+    .s4-notch.l { left: -31px; }
+    .s4-notch.r { right: -31px; }
+    .s4-body { position: relative; }
+    .s4-name {
+      height: 290px;
+      display: flex;
+      align-items: center;
+      font-weight: 900;
+      letter-spacing: -0.035em;
+      line-height: 1;
+      overflow-wrap: anywhere;
+    }
+    .s4-stats { display: flex; gap: 32px; margin-top: 30px; }
+    .s4-stat { flex: 1; min-width: 0; padding: 26px 30px; border-radius: 24px; background: rgba(255, 255, 255, 0.06); }
+    #s4-c1 .s4-stat { background: #f3f0ee; }
+    .s4-k {
+      font-family: var(--font-mono);
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      color: rgba(255, 255, 255, 0.72);
+    }
+    #s4-c1 .s4-k { color: #5b5b63; }
+    .s4-v {
+      margin-top: 8px;
+      height: 110px;
+      display: flex;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+    .s4-v.pts { color: var(--white); }
+    #s4-c1 .s4-v.pts { color: var(--red); }
+    .s4-scan {
+      position: absolute;
+      left: -64px;
+      top: 0;
+      width: 920px;
+      height: 8px;
+      background: var(--red-signal);
+      box-shadow: 0 0 22px 6px rgba(255, 45, 63, 0.7);
+      opacity: 0;
+    }
+  </style>
+
+  <div id="root" data-composition-id="s4" data-width="1080" data-height="1920">
+    <div id="s4-stage" class="clip" data-start="0" data-duration="12">
+      <div id="s4-ground" data-layout-ignore><div id="s4-grid"></div></div>
+      <div id="s4-flood" data-layout-ignore><div id="s4-flood-rays"></div></div>
+      <div id="s4-burst-wrap" data-layout-ignore><div id="s4-burst"></div></div>
+      <div id="s4-confetti" data-layout-ignore></div>
+
+      <div id="s4-steps" data-layout-ignore><i id="s4-st3"></i><i id="s4-st2"></i><i id="s4-st1"></i></div>
+      <div id="s4-pending">PREVIEW · RESULTS PENDING</div>
+
+      <!-- One reusable card, mounted three times. Text is filled from data/leaderboard.js. -->
+      <div id="s4-c3" class="s4-card" data-rank="3">
+        <div class="s4-top"><div class="s4-num">03</div><div class="s4-meta"><div class="s4-place"></div><div class="s4-event">AVSEC BOOTH CHALLENGE</div></div></div>
+        <div class="s4-perf"><span class="s4-notch l"></span><span class="s4-notch r"></span></div>
+        <div class="s4-body">
+          <div class="s4-name"></div>
+          <div class="s4-stats"><div class="s4-stat s-pts"><div class="s4-k">POINTS</div><div class="s4-v pts"></div></div><div class="s4-stat s-time"><div class="s4-k">TIME</div><div class="s4-v time"></div></div></div>
+          <div class="s4-scan"></div>
+        </div>
+      </div>
+      <div id="s4-c2" class="s4-card" data-rank="2">
+        <div class="s4-top"><div class="s4-num">02</div><div class="s4-meta"><div class="s4-place"></div><div class="s4-event">AVSEC BOOTH CHALLENGE</div></div></div>
+        <div class="s4-perf"><span class="s4-notch l"></span><span class="s4-notch r"></span></div>
+        <div class="s4-body">
+          <div class="s4-name"></div>
+          <div class="s4-stats"><div class="s4-stat s-pts"><div class="s4-k">POINTS</div><div class="s4-v pts"></div></div><div class="s4-stat s-time"><div class="s4-k">TIME</div><div class="s4-v time"></div></div></div>
+          <div class="s4-scan"></div>
+        </div>
+      </div>
+      <div id="s4-c1" class="s4-card" data-rank="1" data-hold>
+        <div class="s4-top"><div class="s4-num">01</div><div class="s4-meta"><div class="s4-place"></div><div class="s4-event">AVSEC BOOTH CHALLENGE</div></div></div>
+        <div class="s4-perf"><span class="s4-notch l"></span><span class="s4-notch r"></span></div>
+        <div class="s4-body">
+          <div class="s4-name"></div>
+          <div class="s4-stats"><div class="s4-stat s-pts"><div class="s4-k">POINTS</div><div class="s4-v pts"></div></div><div class="s4-stat s-time"><div class="s4-k">TIME</div><div class="s4-v time"></div></div></div>
+          <div class="s4-scan"></div>
+        </div>
+      </div>
+
+      <div id="s4-white" data-layout-ignore></div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const A = window.AVSEC;
+      const NAME_W = 792;
+
+      // Fill one card from the data block.
+      function fill(card) {
+        const r = Number(card.dataset.rank);
+        const e = A.byRank(r);
+        card.querySelector(".s4-place").textContent = A.placeLabel[r];
+
+        const name = String(e.name);
+        const nameEl = card.querySelector(".s4-name");
+        const perChar = /[a-z]/.test(name) ? 0.56 : 0.66;
+        const single = NAME_W / (name.length * perChar);
+        if (single >= 96 || name.indexOf(" ") < 0) {
+          nameEl.style.fontSize = Math.max(64, Math.min(132, Math.floor(single))) + "px";
+          nameEl.style.whiteSpace = "nowrap";
+          nameEl.textContent = name;
+        } else {
+          // Two balanced lines, split at the space nearest the middle.
+          const mid = name.length / 2;
+          let cut = -1;
+          for (let i = 0; i < name.length; i++) if (name[i] === " " && (cut < 0 || Math.abs(i - mid) < Math.abs(cut - mid))) cut = i;
+          const a = name.slice(0, cut), b = name.slice(cut + 1);
+          const longest = Math.max(a.length, b.length);
+          nameEl.style.fontSize = Math.max(60, Math.min(118, Math.floor(NAME_W / (longest * perChar)))) + "px";
+          nameEl.style.whiteSpace = "nowrap";
+          nameEl.innerHTML = "";
+          const wrap = document.createElement("div");
+          wrap.append(a, document.createElement("br"), b);
+          nameEl.append(wrap);
+        }
+
+        const pts = A.fmtPoints(e.points);
+        const ptsEl = card.querySelector(".s4-v.pts");
+        const time = A.fmtTime(e.time);
+        const colW = time === null ? 728 : 348;
+        ptsEl.textContent = pts;
+        ptsEl.style.fontSize = A.fitSize(pts, colW, 104, 52, 0.62) + "px";
+        if (time === null) {
+          card.querySelector(".s-time").remove();
+        } else {
+          const tEl = card.querySelector(".s4-v.time");
+          tEl.textContent = time;
+          tEl.style.fontSize = A.fitSize(time, colW, 104, 52, 0.62) + "px";
+        }
+      }
+      ["#s4-c3", "#s4-c2", "#s4-c1"].forEach((s) => fill(document.querySelector(s)));
+
+      // Confetti: seeded, launched from behind the first-place card into the margins.
+      const conf = document.querySelector("#s4-confetti");
+      const rnd = A.rng(20261027);
+      const bits = [];
+      for (let i = 0; i < 70; i++) {
+        const el = document.createElement("i");
+        el.className = "s4-bit";
+        el.style.background = i % 3 === 0 ? "#141417" : "#ffffff";
+        conf.append(el);
+        const side = i % 4; // 0 top, 1 bottom, 2 left, 3 right
+        let tx, ty;
+        if (side === 0) { tx = 60 + rnd() * 960; ty = 40 + rnd() * 190; }
+        else if (side === 1) { tx = 60 + rnd() * 960; ty = 1300 + rnd() * 420; }
+        else if (side === 2) { tx = 4 + rnd() * 50; ty = 300 + rnd() * 1000; }
+        else { tx = 1026 + rnd() * 50; ty = 300 + rnd() * 1000; }
+        bits.push({ el, tx, ty, rot: (rnd() - 0.5) * 900, fall: 60 + rnd() * 160, s: 0.6 + rnd() * 0.8 });
+      }
+
+      const tl = gsap.timeline({ paused: true });
+
+      // A = arrive time, E = exit time, local to this scene (scene starts at 13.0 s).
+      function reveal(sel, Ain, E, opts) {
+        const card = sel + " ";
+        tl.fromTo(sel, { y: 1350, opacity: 0, filter: "blur(16px)", scale: 1 }, { y: 0, opacity: 1, filter: "blur(0px)", duration: 0.5, ease: "expo.out" }, Ain);
+        tl.fromTo(card + ".s4-num", { scale: 1.7, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.34, ease: "expo.out" }, Ain + 0.18);
+        tl.fromTo(card + ".s4-meta", { opacity: 0, x: 30 }, { opacity: 1, x: 0, duration: 0.3, ease: "expo.out" }, Ain + 0.32);
+        // Red scan passes over the body: name first, then the numbers.
+        tl.fromTo(card + ".s4-scan", { y: 0, opacity: 1 }, { y: 520, duration: 0.55, ease: "none" }, Ain + 0.48);
+        tl.to(card + ".s4-scan", { opacity: 0, duration: 0.1 }, Ain + 1.03);
+        tl.fromTo(card + ".s4-name", { clipPath: "inset(0% 0% 100% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.3, ease: "none" }, Ain + 0.48);
+        tl.fromTo(card + ".s4-stats", { clipPath: "inset(0% 0% 100% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.24, ease: "none" }, Ain + 0.79);
+        tl.fromTo(card + ".s4-v", { scale: 1.12 }, { scale: 1, duration: 0.3, ease: "expo.out", transformOrigin: "0% 50%" }, Ain + 0.82);
+        // Exit.
+        if (opts.exit === "whip") {
+          tl.to(sel, { y: -1450, filter: "blur(14px)", duration: 0.3, ease: "power3.in" }, E);
+        } else {
+          tl.to(sel, { scale: 0.55, opacity: 0, filter: "blur(10px)", duration: 0.3, ease: "power3.in" }, E);
+        }
+      }
+
+      // Progress bars: which rank is on screen.
+      tl.fromTo("#s4-steps i", { scaleX: 0 }, { scaleX: 1, duration: 0.3, ease: "expo.out", stagger: 0.05 }, 0);
+      tl.to("#s4-st3", { backgroundColor: "#ff2d3f", duration: 0.15 }, 0.3);
+      tl.to("#s4-st2", { backgroundColor: "#ff2d3f", duration: 0.15 }, 3.7);
+      tl.to("#s4-st1", { backgroundColor: "#ffffff", duration: 0.15 }, 7.5);
+      tl.to("#s4-steps i", { backgroundColor: "rgba(255,255,255,0.95)", duration: 0.15 }, 7.3);
+
+      const pend = document.querySelector("#s4-pending");
+      if (!A.pending) pend.remove();
+      else {
+        tl.fromTo(pend, { opacity: 0, xPercent: -50 }, { opacity: 1, xPercent: -50, duration: 0.25 }, 0.4);
+        tl.to(pend, { color: "#ffffff", borderColor: "#ffffff", duration: 0.15 }, 7.1);
+      }
+      reveal("#s4-c3", 0.0, 3.4, { exit: "whip" });
+      reveal("#s4-c2", 3.45, 6.95, { exit: "whip" });
+
+      // First place: the ground floods red, then the white card lands.
+      tl.fromTo("#s4-flood", { clipPath: "circle(0% at 50% 42%)" }, { clipPath: "circle(120% at 50% 42%)", duration: 0.45, ease: "power2.inOut" }, 7.05);
+      tl.fromTo("#s4-flood-rays", { rotation: 0 }, { rotation: 40, duration: 4.95, ease: "none" }, 7.05);
+      reveal("#s4-c1", 7.25, 11.68, { exit: "shrink" });
+      tl.fromTo("#s4-burst", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1.15, duration: 0.35, ease: "expo.out" }, 7.55);
+      tl.to("#s4-burst", { opacity: 0.25, scale: 1.3, duration: 1.4, ease: "power2.out" }, 7.9);
+      bits.forEach((b, i) => {
+        tl.fromTo(b.el, { x: 529, y: 790, rotation: 0, scale: 0.2, opacity: 0 }, { x: b.tx, y: b.ty, rotation: b.rot * 0.4, scale: b.s, opacity: 1, duration: 0.9, ease: "expo.out" }, 7.6 + (i % 7) * 0.012);
+        tl.to(b.el, { y: b.ty + b.fall, rotation: b.rot, duration: 3.0, ease: "power1.out" }, 8.5 + (i % 7) * 0.012);
+      });
+      tl.to("#s4-confetti", { opacity: 0, duration: 0.3 }, 11.6);
+
+      // Hand-off to the light scene.
+      tl.fromTo("#s4-white", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.inOut" }, 11.7);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["s4"] = tl;
+    })();
+  </script>
+</template>
