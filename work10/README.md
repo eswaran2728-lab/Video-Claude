@@ -1,6 +1,57 @@
-# Cyber Roadshow 2026 — event recap (AirAsia AVSEC), HyperFrames, 1080x1920, 30 fps, 25.4 s
+# Cyber Roadshow 2026 — event recap (AirAsia AVSEC), HyperFrames, 1080x1920, 30 fps
 
-Preview v01: `PREVIEW_cyber_roadshow_recap_v01.mp4` (720x1280). Final export waits for approval. Nothing is published.
+| version | file | length | status |
+|---|---|---|---|
+| v02 (current) | `PREVIEW_cyber_roadshow_recap_v02.mp4` (720x1280) | 45.0 s, 1350 frames, -14.0 LUFS / -2.0 dBTP | preview, waiting for approval |
+| v01 | `PREVIEW_cyber_roadshow_recap_v01.mp4` (720x1280) | 25.4 s | superseded (kept) |
+
+Final export waits for approval. Nothing is published, scheduled or uploaded.
+
+## v02 — creator's notes on v01 and what changed
+Notes: no GTR content at all; use all the images and videos; cut where needed; make it a visually stunning recap.
+- GTR removed: the STOP. THINK. VERIFY. close is gone, and every crop keeps the GTR banners out of frame. One possible
+  exception: a small GTR mark may show behind the person on the right in IMG_6435 (on screen for two beats).
+- All 4 videos and all 19 photos are used (list below). The low-res phone clips play in a framed card over their own
+  blurred frame rather than being stretched to full screen.
+- Structure: a beat-cut hook with the title, then numbered chapters (01 SET-UP, 02 THE BOOTH, 03 THE CROWD,
+  04 THE STAGE, 05 THE PEOPLE), then a finale wall of every photo that settles into the AIRASIA AVSEC lockup.
+
+### Rebuild v02
+```
+python3 make_assets_v02.py   # booth crop, phone-clip cards, photo plates + 20 tiles, audio_v02.wav (v01 assets kept)
+python3 build_v02.py         # content.json + index_v02.tpl.html -> edit/index.html, edit/timing_map_v02.json
+cd edit && npx hyperframes@0.8.193 check && npx hyperframes@0.8.193 render --quality draft --fps 30 -o ../renders/draft_v02.mp4
+cd .. && ./master_preview.sh renders/draft_v02.mp4 PREVIEW_cyber_roadshow_recap_v02.mp4 45.0
+```
+v01 is rebuilt with `build.py` / `index.tpl.html` (they write the same `edit/index.html`; run the one you need).
+
+### v02 timing map (music at 123 BPM: 1 bar = 1.951 s; stage section on the event song's own beat)
+| out (s) | source | treatment | graphic |
+|---|---|---|---|
+| 0.00–3.90 | IMG_6426, IMG_6436, 2ee1beb9, IMG_6427 | two-beat cuts with a punch-in on each | EVENT RECAP / CYBER / ROADSHOW / 2026 / 27 October |
+| 3.90–7.80 | b048 phone clip 9.0–12.95 s | card over its blurred frame | 01 SET-UP |
+| 7.80–13.66 | IMG_6425 (crop on the AVSEC side, slowed 1.48x) | dimmed as photo cards land on the beat: 912ed0e8, 38af901c, ACAE9274, IMG_6433 | 02 THE BOOTH |
+| 13.66–15.61 | dc95 phone clip 18.0–20.0 s | card over its blurred frame | 03 THE CROWD |
+| 15.61–17.56 | IMG_6461 | pan + punch | |
+| 17.56–31.30 | IMG_6421 2.73–16.47 s (tracked stage crops) with IMG_6429 + IMG_6430 (deepfake talk) at 27.37–29.83 | slide-up entrance on the song | 04 THE STAGE; tips 01–03 on the lyric lines |
+| 31.30–39.20 | IMG_6437, 6438, 6439, 6440, 6435, 6419, 6420, 6423 | two song beats each, pan + push | 05 THE PEOPLE; ring on the phone in IMG_6439 |
+| 39.20–45.00 | all 19 photos + one stage frame | wall slides up, tiles pop in, wall settles 1.55x -> 1.0x | AIRASIA AVSEC / Security Is Everyone's Responsibility / CYBER ROADSHOW 2026; fade to black |
+Exact times: `edit/timing_map_v02.json`.
+
+### v02 audio
+- 0–17.86 s and 38.95–45.0 s: "House Fest" by Alejandro Magaña, Mixkit, Stock Music Free License (covers social posts
+  and online marketing; the Restricted licence was not used). Track sections and offsets: `edit/assets_map_v02.json`.
+- 17.44–39.20 s: the event's own performance song from IMG_6421, kept in sync with the stage footage. Its rights belong
+  to the organiser/performers — confirm before using the recap outside your own channels.
+- SFX (synthesized, Apache-2.0): a thock per booth card, a pop per tip, a swish into the stage and into the finale.
+- Mastered by 2-pass loudnorm to -14 LUFS / -2 dBTP. The music edit points were placed on the beat grid but not auditioned by ear.
+
+### Known soft shots
+The v_walk crop and the dance punch-in (motion blur in the source), and IMG_6420 (a blurry photo, on screen for two beats).
+
+---
+# v01 notes (kept for reference)
+
 
 ## Rebuild
 ```
@@ -10,7 +61,7 @@ python3 track.py         # follow the red stage screen in IMG_6421 -> edit/track
 python3 make_assets.py   # tracked 9:16 crops, photo plates (from the DNGs), audio bed -> edit/assets/
 python3 build.py         # content.json + index.tpl.html -> edit/index.html, edit/timing_map.json
 cd edit && npx hyperframes@0.8.193 check && npx hyperframes@0.8.193 render --quality draft --fps 30 -o ../renders/draft_v01.mp4
-cd .. && ./master_preview.sh renders/draft_v01.mp4 PREVIEW_cyber_roadshow_recap_v01.mp4
+cd .. && ./master_preview.sh renders/draft_v01.mp4 PREVIEW_cyber_roadshow_recap_v01.mp4 25.4
 ```
 All on-screen wording: `content.json` (each line notes where it was verified).
 
