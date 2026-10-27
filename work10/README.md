@@ -2,8 +2,9 @@
 
 | version | file | length | status |
 |---|---|---|---|
-| v03 preview (current) | `PREVIEW_cyber_roadshow_recap_v03.mp4` (720x1280) | 45.0 s, 1350 frames, -14.0 LUFS / -2.0 dBTP | waiting for approval |
-| v02 final | `FINAL_Cyber_Roadshow_Recap_v02_1080x1920.mp4` (1080x1920, 30 fps, H.264 ~19 Mb/s, AAC 256k) | 45.0 s, 1350 frames, -14.0 LUFS / -2.0 dBTP | approved, final export |
+| v03 final (current) | `FINAL_Cyber_Roadshow_Recap_v03_1080x1920.mp4` (1080x1920, 30 fps, H.264 ~19 Mb/s, AAC 256k) | 45.0 s, 1350 frames, -14.0 LUFS / -2.0 dBTP | approved, final export |
+| v03 preview | `PREVIEW_cyber_roadshow_recap_v03.mp4` (720x1280) | 45.0 s, 1350 frames, -14.0 LUFS / -2.0 dBTP | approved preview (kept) |
+| v02 final (superseded: GTR still visible in places) | `FINAL_Cyber_Roadshow_Recap_v02_1080x1920.mp4` (1080x1920, 30 fps, H.264 ~19 Mb/s, AAC 256k) | 45.0 s, 1350 frames, -14.0 LUFS / -2.0 dBTP | approved, final export |
 | v02 preview | `PREVIEW_cyber_roadshow_recap_v02.mp4` (720x1280) | 45.0 s, 1350 frames, -14.0 LUFS / -2.0 dBTP | approved preview (kept) |
 | v01 | `PREVIEW_cyber_roadshow_recap_v01.mp4` (720x1280) | 25.4 s | superseded (kept) |
 
@@ -35,6 +36,8 @@ python3 make_assets_v03.py   # booth cards + photo-wall tiles, GTR-checked
 python3 build_v03.py         # -> edit/index.html (GTR-checks every photo window)
 cd edit && npx hyperframes@0.8.193 render --quality draft --fps 30 -o ../renders/draft_v03.mp4
 cd .. && ./master_preview.sh renders/draft_v03.mp4 PREVIEW_cyber_roadshow_recap_v03.mp4 45.0
+# final (after approval): render --quality high -o ../renders/final_v03.mp4, then
+./master_final.sh renders/final_v03.mp4 FINAL_Cyber_Roadshow_Recap_v03_1080x1920.mp4 45.0
 ```
 
 ## v02 — creator's notes on v01 and what changed
