@@ -2,10 +2,11 @@
 
 | version | file | length | status |
 |---|---|---|---|
-| v02 (current) | `PREVIEW_cyber_roadshow_recap_v02.mp4` (720x1280) | 45.0 s, 1350 frames, -14.0 LUFS / -2.0 dBTP | preview, waiting for approval |
+| v02 final | `FINAL_Cyber_Roadshow_Recap_v02_1080x1920.mp4` (1080x1920, 30 fps, H.264 ~19 Mb/s, AAC 256k) | 45.0 s, 1350 frames, -14.0 LUFS / -2.0 dBTP | approved, final export |
+| v02 preview | `PREVIEW_cyber_roadshow_recap_v02.mp4` (720x1280) | 45.0 s, 1350 frames, -14.0 LUFS / -2.0 dBTP | approved preview (kept) |
 | v01 | `PREVIEW_cyber_roadshow_recap_v01.mp4` (720x1280) | 25.4 s | superseded (kept) |
 
-Final export waits for approval. Nothing is published, scheduled or uploaded.
+Nothing is published, scheduled or uploaded.
 
 ## v02 — creator's notes on v01 and what changed
 Notes: no GTR content at all; use all the images and videos; cut where needed; make it a visually stunning recap.
@@ -22,6 +23,8 @@ python3 make_assets_v02.py   # booth crop, phone-clip cards, photo plates + 20 t
 python3 build_v02.py         # content.json + index_v02.tpl.html -> edit/index.html, edit/timing_map_v02.json
 cd edit && npx hyperframes@0.8.193 check && npx hyperframes@0.8.193 render --quality draft --fps 30 -o ../renders/draft_v02.mp4
 cd .. && ./master_preview.sh renders/draft_v02.mp4 PREVIEW_cyber_roadshow_recap_v02.mp4 45.0
+# final (after approval): render --quality high -o ../renders/final_v02.mp4, then
+./master_final.sh renders/final_v02.mp4 FINAL_Cyber_Roadshow_Recap_v02_1080x1920.mp4 45.0   # video copied as rendered, audio -14 LUFS
 ```
 v01 is rebuilt with `build.py` / `index.tpl.html` (they write the same `edit/index.html`; run the one you need).
 
