@@ -152,7 +152,9 @@ SFX = [(MB(20 + 2 * k), "thock.wav", 0.28) for k in range(4)] + [(S(3.715), "ui-
        (S(2.733) - 0.38, "zoom-swish.wav", 0.24), (F0 - 0.38, "zoom-swish.wav", 0.24)]
 sfx = "\n".join(f'      <audio id="sx{k}" class="clip" src="assets/sfx/{f}" data-start="{at(t)}" data-duration="0.8" data-volume="{v}"></audio>' for k, (t, f, v) in enumerate(SFX))
 
-html = open("index_v02.tpl.html").read()
+L.append(f'''      <div id="logos" class="clip logos" data-start="0" data-duration="{TOTAL}" data-track-index="9" style="z-index:95">
+        <div class="lbar"><img class="av" src="assets/logos/avsec_badge.png" alt="AirAsia AVSEC" /><div class="sep"></div><img class="as" src="assets/logos/allstars.png" alt="Allstars - Dare to Dream" /></div></div>''')
+html = open("index_v03.tpl.html").read()
 for k, v in {"%%TOTAL%%": str(TOTAL), "%%LAYERS%%": "\n".join(L), "%%SFX%%": sfx, "%%INIT%%": "\n".join("      " + x for x in INIT), "%%JS%%": "\n".join("      " + x for x in JS)}.items():
     html = html.replace(k, v)
 open("edit/index.html", "w").write(html)
