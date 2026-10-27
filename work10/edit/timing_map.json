@@ -1,0 +1,138 @@
+{
+ "duration": 25.4,
+ "beat_grid": "0.280 + n*0.491 s",
+ "timeline": [
+  {
+   "out_start": 2.733,
+   "out_end": 4.205,
+   "source": "IMG_6421.MOV",
+   "src_in": 2.733,
+   "src_out": 4.205,
+   "kind": "video (tracked 9:16 crop)"
+  },
+  {
+   "out_start": 4.205,
+   "out_end": 9.603,
+   "source": "IMG_6421.MOV",
+   "src_in": 4.205,
+   "src_out": 9.603,
+   "kind": "video (tracked 9:16 crop)"
+  },
+  {
+   "out_start": 9.603,
+   "out_end": 12.547,
+   "source": "IMG_6421.MOV",
+   "src_in": 9.603,
+   "src_out": 12.547,
+   "kind": "video (tracked 9:16 crop)"
+  },
+  {
+   "out_start": 15.0,
+   "out_end": 16.472,
+   "source": "IMG_6421.MOV",
+   "src_in": 15.0,
+   "src_out": 16.472,
+   "kind": "video (tracked 9:16 crop)"
+  },
+  {
+   "out_start": 0.0,
+   "out_end": 2.733,
+   "source": "IMG_6426.DNG",
+   "kind": "photo pan/push",
+   "note": "launch on stage: pan along the guests to the button press"
+  },
+  {
+   "out_start": 16.472,
+   "out_end": 18.925,
+   "source": "IMG_6437.DNG",
+   "kind": "photo pan/push",
+   "note": "a visitor plays the booth game on the tablet"
+  },
+  {
+   "out_start": 18.925,
+   "out_end": 20.888,
+   "source": "IMG_6439.DNG",
+   "kind": "photo pan/push",
+   "note": "feedback on her phone + plane keychain, then the AVSEC staff member's thumbs-up"
+  },
+  {
+   "out_start": 20.888,
+   "out_end": 25.4,
+   "source": "IMG_6423.DNG",
+   "kind": "photo pan/push",
+   "note": "booth wide, then the STOP. THINK. VERIFY. banner"
+  },
+  {
+   "out_start": 12.547,
+   "out_end": 15.0,
+   "source": "IMG_6429.DNG",
+   "kind": "photo card",
+   "note": "deepfake talk slide shown whole"
+  }
+ ],
+ "graphics": {
+  "title": [
+   0,
+   2.733
+  ],
+  "tips": [
+   [
+    3.717,
+    6.62
+   ],
+   [
+    10.1,
+    12.42
+   ],
+   [
+    15.0,
+    18.4
+   ]
+  ],
+  "ring_IMG_6439": [
+   19.429,
+   20.65
+  ],
+  "bracket_banner": [
+   21.534,
+   25.4
+  ],
+  "close_words": [
+   22.375,
+   22.866,
+   23.357
+  ],
+  "close_lockup": 23.848
+ },
+ "audio": {
+  "song": "IMG_6421.MOV 0-24.37 s -> 0-24.37 s, fade 23.65-24.37",
+  "room": "IMG_6425.MOV 0-1.65 s -> 23.75-25.4 s"
+ },
+ "sfx": [
+  {
+   "t": 3.717,
+   "file": "ui-pop.wav",
+   "gain": 0.22
+  },
+  {
+   "t": 10.1,
+   "file": "ui-pop.wav",
+   "gain": 0.22
+  },
+  {
+   "t": 15.0,
+   "file": "ui-pop.wav",
+   "gain": 0.22
+  },
+  {
+   "t": 20.888,
+   "file": "zoom-swish.wav",
+   "gain": 0.22
+  },
+  {
+   "t": 23.357,
+   "file": "thock.wav",
+   "gain": 0.35
+  }
+ ]
+}

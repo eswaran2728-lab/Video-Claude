@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "InterBlack"; src: url("assets/fonts/InterDisplay-Black.otf") format("opentype"); font-weight: 900; }
+      @font-face { font-family: "InterSB"; src: url("assets/fonts/Inter-SemiBold.otf") format("opentype"); font-weight: 600; }
+      @font-face { font-family: "InterB"; src: url("assets/fonts/Inter-Bold.otf") format("opentype"); font-weight: 700; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0b0b0c; }
+      body { --red: #e8262f; --yellow: #f2c23a; --ink: #121214; }
+      .clip { position: absolute; inset: 0; }
+      .vid { width: 1080px; height: 1920px; object-fit: cover; }
+
+      /* photos: a 9:16 window over a 3840x2160 plate */
+      .ph { overflow: hidden; }
+      .push, .pan { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .pan img { position: absolute; left: 0; top: 0; width: 3840px; height: 2160px; }
+      .ring { position: absolute; border: 8px solid var(--yellow); border-radius: 28px; box-shadow: 0 0 0 3px rgba(0,0,0,0.35); }
+      .brk { position: absolute; overflow: visible; }
+      .brk path { fill: none; stroke: var(--yellow); stroke-width: 3.2; vector-effect: non-scaling-stroke; stroke-width: 9px; stroke-linecap: square; }
+      .bgblur { position: absolute; left: -1380px; top: -120px; width: 3840px; height: 2160px; filter: blur(28px) brightness(0.45); }
+      .card { position: absolute; left: 12px; top: 650px; width: 1056px; height: 594px; border-radius: 26px; overflow: hidden;
+        box-shadow: 0 30px 70px rgba(0,0,0,0.55), 0 0 0 2px rgba(255,255,255,0.12); }
+      .card img { width: 1056px; height: 594px; display: block; }
+
+      /* opening title */
+      .scrim { position: absolute; left: 0; right: 0; top: 640px; height: 1280px; background: linear-gradient(180deg, rgba(10,10,12,0) 0%, rgba(10,10,12,0.72) 38%, rgba(10,10,12,0.8) 100%); }
+      .tbox { position: absolute; left: 80px; top: 790px; width: 920px; }
+      .chip { display: inline-block; padding: 8px 20px; border-radius: 30px; border: 2px solid rgba(255,255,255,0.6); font-family: "InterSB"; font-size: 30px;
+        letter-spacing: 4px; color: #fff; margin-bottom: 14px; }
+      .tm { overflow: hidden; padding-bottom: 4px; }
+      .tl { font-family: "InterBlack"; font-size: 132px; line-height: 0.98; color: #fff; letter-spacing: -2px; }
+      #tl2 { color: #ff4a4a; text-shadow: 0 4px 18px rgba(0,0,0,0.6); }
+      .tsub { margin-top: 14px; font-family: "InterSB"; font-size: 40px; color: #f1f1f1; letter-spacing: 1px; }
+
+      /* tip cards (clean explainer card) */
+      .tip { z-index: 6; pointer-events: none; }
+      .tcard { position: absolute; left: 90px; top: 300px; width: 900px; padding: 30px 40px 36px; border-radius: 30px; background: rgba(255,255,255,0.97);
+        box-shadow: 0 24px 60px rgba(0,0,0,0.45); }
+      .tlab { display: flex; align-items: center; gap: 14px; font-family: "InterB"; font-size: 28px; letter-spacing: 4px; color: var(--red); margin-bottom: 10px; }
+      .tlab i { font-style: normal; display: inline-flex; align-items: center; justify-content: center; width: 60px; height: 44px; border-radius: 20px;
+        background: var(--red); color: #fff; letter-spacing: 1px; font-size: 28px; }
+      .ttxt { font-family: "InterBlack"; font-size: 72px; line-height: 1.04; color: var(--ink); letter-spacing: -1px; }
+      .ttxt .w { display: inline-block; }
+
+      /* close */
+      .dim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(8,8,10,0.55) 0%, rgba(8,8,10,0.86) 45%, rgba(8,8,10,0.9) 100%); }
+      .cbox { position: absolute; left: 0; width: 1080px; top: 470px; text-align: center; }
+      .cm { overflow: hidden; }
+      .cw { font-family: "InterBlack"; font-size: 168px; line-height: 1.0; letter-spacing: -2px; }
+      .c0 { color: var(--red); } .c1 { color: #fff; } .c2 { color: var(--yellow); }
+      .lock { position: absolute; left: 0; width: 1080px; top: 1050px; text-align: center; }
+      .org { font-family: "InterBlack"; font-size: 64px; letter-spacing: 6px; color: #fff; }
+      .rule { width: 140px; height: 7px; background: var(--red); margin: 18px auto 18px; }
+      .tag { font-family: "InterSB"; font-size: 38px; color: #f0f0f0; }
+      .ev { margin-top: 18px; font-family: "InterB"; font-size: 28px; letter-spacing: 6px; color: #a9a9ae; }
+      .black { position: absolute; inset: 0; background: #000; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="25.4" data-width="1080" data-height="1920">
+      <video id="v_walk" class="clip vid" src="assets/v/v_walk.mp4" muted playsinline data-start="2.733" data-duration="1.472" data-track-index="1"></video>
+      <video id="v_stage1" class="clip vid" src="assets/v/v_stage1.mp4" muted playsinline data-start="4.205" data-duration="5.398" data-track-index="1"></video>
+      <video id="v_stage2" class="clip vid" src="assets/v/v_stage2.mp4" muted playsinline data-start="9.603" data-duration="2.944" data-track-index="1"></video>
+      <video id="v_stage3" class="clip vid" src="assets/v/v_stage3.mp4" muted playsinline data-start="15.0" data-duration="1.472" data-track-index="1"></video>
+      <!-- p1: IMG_6426 — launch on stage: pan along the guests to the button press -->
+      <div id="p1" class="clip ph" data-start="0.0" data-duration="2.733" data-track-index="2"><div class="push" id="p1push"><div class="pan" id="p1pan">
+        <img src="assets/p/IMG_6426.jpg" alt="launch on stage: pan along the guests to the button press" /></div></div></div>
+      <!-- p3: IMG_6437 — a visitor plays the booth game on the tablet -->
+      <div id="p3" class="clip ph" data-start="16.472" data-duration="2.453" data-track-index="2"><div class="push" id="p3push"><div class="pan" id="p3pan">
+        <img src="assets/p/IMG_6437.jpg" alt="a visitor plays the booth game on the tablet" /></div></div></div>
+      <!-- p4: IMG_6439 — feedback on her phone + plane keychain, then the AVSEC staff member's thumbs-up -->
+      <div id="p4" class="clip ph" data-start="18.925" data-duration="1.963" data-track-index="2"><div class="push" id="p4push"><div class="pan" id="p4pan">
+        <img src="assets/p/IMG_6439.jpg" alt="feedback on her phone + plane keychain, then the AVSEC staff member's thumbs-up" /><div class="ring" id="ring4" style="left:1632px;top:929px;width:230px;height:540px"></div></div></div></div>
+      <!-- p5: IMG_6423 — booth wide, then the STOP. THINK. VERIFY. banner -->
+      <div id="p5" class="clip ph" data-start="20.888" data-duration="4.512" data-track-index="2"><div class="push" id="p5push"><div class="pan" id="p5pan">
+        <img src="assets/p/IMG_6423.jpg" alt="booth wide, then the STOP. THINK. VERIFY. banner" /><svg class="brk" id="brk5" style="left:3372px;top:356px;width:449px;height:670px" viewBox="0 0 100 100" preserveAspectRatio="none"><path pathLength="1" d="M18,2 H2 V98 H18 M82,2 H98 V98 H82" /></svg></div></div></div>
+      <!-- p2: IMG_6429 — "Anatomy of a deepfake attack" talk on stage, shown whole -->
+      <div id="p2" class="clip ph" data-start="12.547" data-duration="2.453" data-track-index="2">
+        <img class="bgblur" src="assets/p/IMG_6429.jpg" alt="" />
+        <div class="card" id="p2card"><img id="p2img" src="assets/p/IMG_6429.jpg" alt="Anatomy of a deepfake attack talk" /></div>
+      </div>
+      <div id="title" class="clip" data-start="0" data-duration="2.733" data-track-index="5">
+        <div class="scrim"></div>
+        <div class="tbox"><div class="chip" id="tchip">EVENT RECAP</div><div class="tm"><div class="tl" id="tl0">CYBER</div></div><div class="tm"><div class="tl" id="tl1">ROADSHOW</div></div><div class="tm"><div class="tl" id="tl2">2026</div></div><div class="tsub" id="tsub">27 October</div></div>
+      </div>
+      <div id="tip0" class="clip tip" data-start="3.717" data-duration="2.953" data-track-index="6">
+        <div class="tcard" id="tc0"><div class="tlab"><i>01</i>CYBER-SAFETY TIP</div><div class="ttxt"><span class="w">Use</span> <span class="w">strong</span> <span class="w">&</span> <span class="w">unique</span> <span class="w">passwords</span> </div></div></div>
+      <div id="tip1" class="clip tip" data-start="10.1" data-duration="2.37" data-track-index="6">
+        <div class="tcard" id="tc1"><div class="tlab"><i>02</i>CYBER-SAFETY TIP</div><div class="ttxt"><span class="w">Multi-factor</span> <span class="w">authentication</span> </div></div></div>
+      <div id="tip2" class="clip tip" data-start="15.0" data-duration="3.45" data-track-index="6">
+        <div class="tcard" id="tc2"><div class="tlab"><i>03</i>CYBER-SAFETY TIP</div><div class="ttxt"><span class="w">Report</span> <span class="w">suspected</span> <span class="w">cyber</span> <span class="w">incidents</span> </div></div></div>
+      <div id="close" class="clip" data-start="21.8" data-duration="3.6" data-track-index="7">
+        <div class="dim" id="dim"></div>
+        <div class="cbox"><div class="cm"><div class="cw c0" id="cw0">STOP.</div></div><div class="cm"><div class="cw c1" id="cw1">THINK.</div></div><div class="cm"><div class="cw c2" id="cw2">VERIFY.</div></div></div>
+        <div class="lock" id="lock"><div class="org">AIRASIA AVSEC</div><div class="rule" id="rule"></div><div class="tag">Security Is Everyone's Responsibility</div><div class="ev">CYBER ROADSHOW 2026</div></div>
+        <div class="black" id="black"></div>
+      </div>
+      <audio id="bed" data-timeline-role="music" class="clip" src="assets/audio.wav" data-start="0" data-duration="25.4" data-volume="1"></audio>
+      <audio id="sx0" class="clip" src="assets/sfx/ui-pop.wav" data-start="3.717" data-duration="0.8" data-volume="0.22"></audio>
+      <audio id="sx1" class="clip" src="assets/sfx/ui-pop.wav" data-start="10.1" data-duration="0.8" data-volume="0.22"></audio>
+      <audio id="sx2" class="clip" src="assets/sfx/ui-pop.wav" data-start="15.0" data-duration="0.8" data-volume="0.22"></audio>
+      <audio id="sx3" class="clip" src="assets/sfx/zoom-swish.wav" data-start="20.888" data-duration="0.8" data-volume="0.22"></audio>
+      <audio id="sx4" class="clip" src="assets/sfx/thock.wav" data-start="23.357" data-duration="0.8" data-volume="0.35"></audio>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      // frame-0 state, outside the timeline so it renders at t=0
+      gsap.set("#p1pan",{x:-612}); gsap.set("#p1push",{transformOrigin:"540px 960px"});
+      gsap.set("#p3pan",{x:-881}); gsap.set("#p3push",{transformOrigin:"540px 960px"});
+      gsap.set("#p4pan",{x:-842}); gsap.set("#p4push",{transformOrigin:"540px 960px"});
+      gsap.set("#p5pan",{x:-1572}); gsap.set("#p5push",{transformOrigin:"540px 960px"});
+      gsap.set("#p2card",{scale:0.92,opacity:0}); gsap.set("#p2img",{transformOrigin:"35% 45%"});
+      gsap.set("#ring4",{opacity:0,scale:1.25,transformOrigin:"50% 50%"}); gsap.set("#brk5 path",{strokeDasharray:1,strokeDashoffset:1});
+      gsap.set("#title .tl",{yPercent:110}); gsap.set("#tchip,#tsub",{opacity:0,y:16});
+      gsap.set("#tc0",{opacity:0,y:40,scale:0.94}); gsap.set("#tc0 .w",{opacity:0,y:18});
+      gsap.set("#tc1",{opacity:0,y:40,scale:0.94}); gsap.set("#tc1 .w",{opacity:0,y:18});
+      gsap.set("#tc2",{opacity:0,y:40,scale:0.94}); gsap.set("#tc2 .w",{opacity:0,y:18});
+      gsap.set("#dim",{opacity:0}); gsap.set("#close .cw",{yPercent:110}); gsap.set("#lock",{opacity:0,y:24}); gsap.set("#rule",{scaleX:0}); gsap.set("#black",{opacity:0});
+      const tl = gsap.timeline({ paused: true });
+      tl.to("#p1pan",{x:-996,duration:2.733,ease:"none"},0.0);
+      tl.fromTo("#p1push",{scale:1.0},{scale:1.05,duration:2.733,ease:"none"},0.0);
+      tl.to("#p3pan",{x:-1015,duration:2.453,ease:"none"},16.472);
+      tl.fromTo("#p3push",{scale:1.0},{scale:1.06,duration:2.453,ease:"none"},16.472);
+      tl.to("#p4pan",{x:-1572,duration:1.963,ease:"power1.inOut"},18.925);
+      tl.fromTo("#p4push",{scale:1.0},{scale:1.04,duration:1.963,ease:"none"},18.925);
+      tl.to("#p5pan",{x:-2762,duration:1.25,ease:"power2.inOut"},20.888);
+      tl.fromTo("#p5push",{scale:1.0},{scale:1.03,duration:4.512,ease:"none"},20.888);
+      tl.to("#p2card",{scale:1,opacity:1,duration:0.35,ease:"power3.out"},12.547);
+      tl.fromTo("#p2img",{scale:1.0},{scale:1.12,duration:2.45,ease:"none"},12.547);
+      tl.to("#ring4",{opacity:1,scale:1,duration:0.3,ease:"back.out(1.8)"},19.479);
+      tl.to("#ring4",{opacity:0,duration:0.3},20.35);
+      tl.to("#brk5 path",{strokeDashoffset:0,duration:0.35,ease:"power2.out"},21.534);
+      tl.to("#tchip",{opacity:1,y:0,duration:0.25,ease:"power2.out"},0.05);
+      tl.to("#tl0",{yPercent:0,duration:0.35,ease:"power4.out"},0.28);
+      tl.to("#tl1",{yPercent:0,duration:0.35,ease:"power4.out"},0.771);
+      tl.to("#tl2",{yPercent:0,duration:0.35,ease:"power4.out"},1.262);
+      tl.to("#tsub",{opacity:1,y:0,duration:0.25,ease:"power2.out"},1.753);
+      tl.to("#title .tbox",{y:-40,opacity:0,duration:0.22,ease:"power2.in"},2.5);
+      tl.to("#tc0",{opacity:1,y:0,scale:1,duration:0.38,ease:"back.out(1.6)"},3.717);
+      tl.to("#tc0 .w",{opacity:1,y:0,duration:0.25,stagger:0.07,ease:"power2.out"},3.837);
+      tl.to("#tc0",{opacity:0,y:-24,duration:0.22,ease:"power2.in"},6.42);
+      tl.to("#tc1",{opacity:1,y:0,scale:1,duration:0.38,ease:"back.out(1.6)"},10.1);
+      tl.to("#tc1 .w",{opacity:1,y:0,duration:0.25,stagger:0.07,ease:"power2.out"},10.22);
+      tl.to("#tc1",{opacity:0,y:-24,duration:0.22,ease:"power2.in"},12.22);
+      tl.to("#tc2",{opacity:1,y:0,scale:1,duration:0.38,ease:"back.out(1.6)"},15.0);
+      tl.to("#tc2 .w",{opacity:1,y:0,duration:0.25,stagger:0.07,ease:"power2.out"},15.12);
+      tl.to("#tc2",{opacity:0,y:-24,duration:0.22,ease:"power2.in"},18.2);
+      tl.to("#dim",{opacity:1,duration:0.35,ease:"power1.out"},22.275);
+      tl.to("#cw0",{yPercent:0,duration:0.32,ease:"power4.out"},22.375);
+      tl.to("#cw1",{yPercent:0,duration:0.32,ease:"power4.out"},22.866);
+      tl.to("#cw2",{yPercent:0,duration:0.32,ease:"power4.out"},23.357);
+      tl.to("#lock",{opacity:1,y:0,duration:0.35,ease:"power3.out"},23.848);
+      tl.to("#rule",{scaleX:1,duration:0.35,ease:"power3.out"},23.948);
+      tl.to("#black",{opacity:1,duration:0.35,ease:"power1.in"},25.05);
+      tl.set({}, {}, 25.4);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "_note": "All on-screen wording. Every line is taken from the supplied material (stage screen, booth banners, the event song). Edit, then python3 build.py.",
+  "title": { "chip": "EVENT RECAP", "lines": ["CYBER", "ROADSHOW", "2026"], "sub": "27 October",
+             "_source": "stage screen in IMG_6421 / IMG_6426: 'CYBER ROADSHOW 2026', '27 October'" },
+  "tips": [
+    { "label": "CYBER-SAFETY TIP", "text": "Use strong & unique passwords",      "_lyric": "IMG_6421 song 3.3-6.6 s 'Use strong and unique passwords' (word confidence 0.87-0.99)" },
+    { "label": "CYBER-SAFETY TIP", "text": "Multi-factor authentication",        "_lyric": "IMG_6421 song 10.1-12.2 s '(enable) multi-factor authentication' -- first word uncertain, so only the phrase is shown" },
+    { "label": "CYBER-SAFETY TIP", "text": "Report suspected cyber incidents",   "_lyric": "IMG_6421 song 14.9-18.7 s 'Report any suspected cyber incidents via the phishing button' (0.87-1.00)" }
+  ],
+  "close": { "words": ["STOP.", "THINK.", "VERIFY."], "org": "AIRASIA AVSEC", "tagline": "Security Is Everyone's Responsibility", "event": "CYBER ROADSHOW 2026",
+             "_source": "GTR banner 'STOP. THINK. VERIFY.' and AVSEC banner 'AIRASIA AVSEC / Security Is Everyone's Responsibility' (IMG_6423)" }
+}

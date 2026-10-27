@@ -1,0 +1,55 @@
+{
+ "segments": [
+  {
+   "id": "v_walk",
+   "src": "IMG_6421.MOV",
+   "src_in": 2.733,
+   "src_out": 4.205,
+   "out_start": 2.733,
+   "out_end": 4.205,
+   "crop_w": 1215,
+   "crop_top": 0
+  },
+  {
+   "id": "v_stage1",
+   "src": "IMG_6421.MOV",
+   "src_in": 4.205,
+   "src_out": 9.603,
+   "out_start": 4.205,
+   "out_end": 9.603,
+   "crop_w": 1215,
+   "crop_top": 0
+  },
+  {
+   "id": "v_stage2",
+   "src": "IMG_6421.MOV",
+   "src_in": 9.603,
+   "src_out": 12.547,
+   "out_start": 9.603,
+   "out_end": 12.547,
+   "crop_w": 920,
+   "crop_top": 380
+  },
+  {
+   "id": "v_stage3",
+   "src": "IMG_6421.MOV",
+   "src_in": 15.0,
+   "src_out": 16.472,
+   "out_start": 15.0,
+   "out_end": 16.472,
+   "crop_w": 1215,
+   "crop_top": 0
+  }
+ ],
+ "photos": {
+  "IMG_6426": "src/dl/IMG_6426.DNG",
+  "IMG_6429": "src/dl/IMG_6429.DNG",
+  "IMG_6437": "src/dl/IMG_6437.DNG",
+  "IMG_6439": "src/dl/IMG_6439.DNG",
+  "IMG_6423": "src/dl/IMG_6423.DNG"
+ },
+ "audio": {
+  "song": "IMG_6421.MOV 0-24.37 s -> 0-24.37 s, fade 23.65-24.37",
+  "room": "IMG_6425.MOV 0-1.65 s -> 23.75-25.4 s"
+ }
+}

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "InterBlack"; src: url("assets/fonts/InterDisplay-Black.otf") format("opentype"); font-weight: 900; }
+      @font-face { font-family: "InterSB"; src: url("assets/fonts/Inter-SemiBold.otf") format("opentype"); font-weight: 600; }
+      @font-face { font-family: "InterB"; src: url("assets/fonts/Inter-Bold.otf") format("opentype"); font-weight: 700; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0b0b0c; }
+      body { --red: #e8262f; --yellow: #f2c23a; --ink: #121214; }
+      .clip { position: absolute; inset: 0; }
+      .vid { width: 1080px; height: 1920px; object-fit: cover; }
+
+      /* photos: a 9:16 window over a 3840x2160 plate */
+      .ph { overflow: hidden; }
+      .push, .pan { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .pan img { position: absolute; left: 0; top: 0; width: 3840px; height: 2160px; }
+      .ring { position: absolute; border: 8px solid var(--yellow); border-radius: 28px; box-shadow: 0 0 0 3px rgba(0,0,0,0.35); }
+      .brk { position: absolute; overflow: visible; }
+      .brk path { fill: none; stroke: var(--yellow); stroke-width: 3.2; vector-effect: non-scaling-stroke; stroke-width: 9px; stroke-linecap: square; }
+      .bgblur { position: absolute; left: -1380px; top: -120px; width: 3840px; height: 2160px; filter: blur(28px) brightness(0.45); }
+      .card { position: absolute; left: 12px; top: 650px; width: 1056px; height: 594px; border-radius: 26px; overflow: hidden;
+        box-shadow: 0 30px 70px rgba(0,0,0,0.55), 0 0 0 2px rgba(255,255,255,0.12); }
+      .card img { width: 1056px; height: 594px; display: block; }
+
+      /* opening title */
+      .scrim { position: absolute; left: 0; right: 0; top: 640px; height: 1280px; background: linear-gradient(180deg, rgba(10,10,12,0) 0%, rgba(10,10,12,0.72) 38%, rgba(10,10,12,0.8) 100%); }
+      .tbox { position: absolute; left: 80px; top: 790px; width: 920px; }
+      .chip { display: inline-block; padding: 8px 20px; border-radius: 30px; border: 2px solid rgba(255,255,255,0.6); font-family: "InterSB"; font-size: 30px;
+        letter-spacing: 4px; color: #fff; margin-bottom: 14px; }
+      .tm { overflow: hidden; padding-bottom: 4px; }
+      .tl { font-family: "InterBlack"; font-size: 132px; line-height: 0.98; color: #fff; letter-spacing: -2px; }
+      #tl2 { color: #ff4a4a; text-shadow: 0 4px 18px rgba(0,0,0,0.6); }
+      .tsub { margin-top: 14px; font-family: "InterSB"; font-size: 40px; color: #f1f1f1; letter-spacing: 1px; }
+
+      /* tip cards (clean explainer card) */
+      .tip { z-index: 6; pointer-events: none; }
+      .tcard { position: absolute; left: 90px; top: 300px; width: 900px; padding: 30px 40px 36px; border-radius: 30px; background: rgba(255,255,255,0.97);
+        box-shadow: 0 24px 60px rgba(0,0,0,0.45); }
+      .tlab { display: flex; align-items: center; gap: 14px; font-family: "InterB"; font-size: 28px; letter-spacing: 4px; color: var(--red); margin-bottom: 10px; }
+      .tlab i { font-style: normal; display: inline-flex; align-items: center; justify-content: center; width: 60px; height: 44px; border-radius: 20px;
+        background: var(--red); color: #fff; letter-spacing: 1px; font-size: 28px; }
+      .ttxt { font-family: "InterBlack"; font-size: 72px; line-height: 1.04; color: var(--ink); letter-spacing: -1px; }
+      .ttxt .w { display: inline-block; }
+
+      /* close */
+      .dim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(8,8,10,0.55) 0%, rgba(8,8,10,0.86) 45%, rgba(8,8,10,0.9) 100%); }
+      .cbox { position: absolute; left: 0; width: 1080px; top: 470px; text-align: center; }
+      .cm { overflow: hidden; }
+      .cw { font-family: "InterBlack"; font-size: 168px; line-height: 1.0; letter-spacing: -2px; }
+      .c0 { color: var(--red); } .c1 { color: #fff; } .c2 { color: var(--yellow); }
+      .lock { position: absolute; left: 0; width: 1080px; top: 1050px; text-align: center; }
+      .org { font-family: "InterBlack"; font-size: 64px; letter-spacing: 6px; color: #fff; }
+      .rule { width: 140px; height: 7px; background: var(--red); margin: 18px auto 18px; }
+      .tag { font-family: "InterSB"; font-size: 38px; color: #f0f0f0; }
+      .ev { margin-top: 18px; font-family: "InterB"; font-size: 28px; letter-spacing: 6px; color: #a9a9ae; }
+      .black { position: absolute; inset: 0; background: #000; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="%%TOTAL%%" data-width="1080" data-height="1920">
+%%LAYERS%%
+      <audio id="bed" data-timeline-role="music" class="clip" src="assets/audio.wav" data-start="0" data-duration="%%TOTAL%%" data-volume="1"></audio>
+%%SFX%%
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      // frame-0 state, outside the timeline so it renders at t=0
+%%INIT%%
+      const tl = gsap.timeline({ paused: true });
+%%JS%%
+      tl.set({}, {}, %%TOTAL%%);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

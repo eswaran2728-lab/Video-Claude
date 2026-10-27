@@ -1,0 +1,13 @@
+*.mp4
+*.mov
+*.MOV
+*.wav
+*.log
+*.DNG
+proxy/
+renders/
+snap*/
+sheets/
+src/dl/
+edit/node_modules/
+edit/.hyperframes/

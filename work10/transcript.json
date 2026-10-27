@@ -1,0 +1,102 @@
+{
+ "IMG_6421|auto|transcribe": {
+  "lang": "nn",
+  "p": 0.69,
+  "rms_db": -15.2,
+  "segments": []
+ },
+ "IMG_6421|en|transcribe": {
+  "lang": "en",
+  "p": 1,
+  "rms_db": -15.2,
+  "segments": []
+ },
+ "IMG_6421|ta|translate": {
+  "lang": "ta",
+  "p": 1,
+  "rms_db": -15.2,
+  "segments": []
+ },
+ "IMG_6425|auto|transcribe": {
+  "lang": "en",
+  "p": 0.54,
+  "rms_db": -23.5,
+  "segments": [
+   {
+    "s": 0.0,
+    "e": 3.68,
+    "t": " watching you, because I've been trying to connect with you.",
+    "nsp": 0.73
+   }
+  ]
+ },
+ "IMG_6425|en|transcribe": {
+  "lang": "en",
+  "p": 1,
+  "rms_db": -23.5,
+  "segments": [
+   {
+    "s": 0.0,
+    "e": 3.68,
+    "t": " watching you, because I've been trying to connect with you.",
+    "nsp": 0.73
+   }
+  ]
+ },
+ "IMG_6425|ta|translate": {
+  "lang": "ta",
+  "p": 1,
+  "rms_db": -23.5,
+  "segments": []
+ },
+ "dc95|auto|transcribe": {
+  "lang": "en",
+  "p": 0.29,
+  "rms_db": -23.2,
+  "segments": [
+   {
+    "s": 1.36,
+    "e": 1.46,
+    "t": " Thank you.",
+    "nsp": 0.79
+   }
+  ]
+ },
+ "dc95|en|transcribe": {
+  "lang": "en",
+  "p": 1,
+  "rms_db": -23.2,
+  "segments": [
+   {
+    "s": 1.36,
+    "e": 1.46,
+    "t": " Thank you.",
+    "nsp": 0.79
+   }
+  ]
+ },
+ "dc95|ta|translate": {
+  "lang": "ta",
+  "p": 1,
+  "rms_db": -23.2,
+  "segments": []
+ },
+ "b048|auto|transcribe": {
+  "lang": "nn",
+  "p": 0.69,
+  "rms_db": -32.3,
+  "segments": []
+ },
+ "b048|en|transcribe": {
+  "lang": "en",
+  "p": 1,
+  "rms_db": -32.3,
+  "segments": []
+ },
+ "b048|ta|translate": {
+  "lang": "ta",
+  "p": 1,
+  "rms_db": -32.3,
+  "segments": []
+ }
+}
