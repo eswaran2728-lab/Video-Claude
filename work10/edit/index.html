@@ -38,7 +38,7 @@
 
       /* tip cards (clean explainer card) */
       .tip { z-index: 6; pointer-events: none; }
-      .tcard { position: absolute; left: 90px; top: 300px; width: 900px; padding: 30px 40px 36px; border-radius: 30px; background: rgba(255,255,255,0.97);
+      .tcard { position: absolute; left: 90px; top: 330px; width: 900px; padding: 30px 40px 36px; border-radius: 30px; background: rgba(255,255,255,0.97);
         box-shadow: 0 24px 60px rgba(0,0,0,0.45); }
       .tlab { display: flex; align-items: center; gap: 14px; font-family: "InterB"; font-size: 28px; letter-spacing: 4px; color: var(--red); margin-bottom: 10px; }
       .tlab i { font-style: normal; display: inline-flex; align-items: center; justify-content: center; width: 60px; height: 44px; border-radius: 20px;
@@ -48,11 +48,11 @@
 
       /* section label */
       .lbl { pointer-events: none; }
-      .pill { position: absolute; left: 70px; top: 300px; display: inline-flex; align-items: center; gap: 14px; padding: 12px 26px 12px 14px; border-radius: 40px;
+      .pill { position: absolute; left: 70px; top: 330px; display: inline-flex; align-items: center; gap: 14px; padding: 12px 26px 12px 14px; border-radius: 40px;
         background: rgba(12,12,14,0.78); border: 1px solid rgba(255,255,255,0.18); font-family: "InterB"; font-size: 30px; letter-spacing: 5px; color: #fff; }
       .pill b { display: inline-flex; align-items: center; justify-content: center; min-width: 52px; height: 40px; border-radius: 20px; background: var(--red); font-size: 28px; letter-spacing: 1px; }
       /* phone clip card */
-      .phonev { inset: auto; left: 160px; top: 284px; width: 760px; height: 1352px; object-fit: cover; border-radius: 44px; border: 6px solid rgba(255,255,255,0.9);
+      .phonev { inset: auto; left: 160px; top: 310px; width: 760px; height: 1352px; object-fit: cover; border-radius: 44px; border: 6px solid rgba(255,255,255,0.9);
         box-shadow: 0 40px 90px rgba(0,0,0,0.6); }
       /* booth photo cards */
       .dimfill { position: absolute; inset: 0; background: #0b0b0c; }
@@ -71,18 +71,26 @@
       .tag { font-family: "InterSB"; font-size: 42px; color: #f0f0f0; }
       .ev { margin-top: 22px; font-family: "InterB"; font-size: 30px; letter-spacing: 7px; color: #b8b8bd; }
       .black { position: absolute; inset: 0; background: #000; }
+
+      /* creator's logos, whole video: AirAsia AVSEC badge + Allstars, on one white bar (top-left, inside the app-UI safe area) */
+      .logos { pointer-events: none; }
+      .lbar { position: absolute; left: 60px; top: 176px; height: 124px; display: flex; align-items: center; gap: 22px; padding: 0 26px 0 20px;
+        background: #ffffff; border-radius: 26px; box-shadow: 0 10px 30px rgba(0,0,0,0.35), 0 0 0 1px rgba(0,0,0,0.06); }
+      .lbar .av { height: 100px; width: auto; display: block; }
+      .lbar .sep { width: 2px; height: 72px; background: #d9d9de; }
+      .lbar .as { height: 78px; width: auto; display: block; }
     </style>
   </head>
   <body>
     <div id="root" data-composition-id="main" data-start="0" data-duration="45.0" data-width="1080" data-height="1920">
       <div id="h0" class="clip ph" data-start="0.0" data-duration="0.976" data-track-index="2" style="z-index:11"><div class="push" id="h0push"><div class="pan" id="h0pan">
-        <img src="assets/p/IMG_6426.jpg" alt="IMG_6426" /></div></div></div>
+        <img src="assets/p3/IMG_6426.jpg" alt="IMG_6426" /></div></div></div>
       <div id="h1" class="clip ph" data-start="0.976" data-duration="0.975" data-track-index="2" style="z-index:12"><div class="push" id="h1push"><div class="pan" id="h1pan">
-        <img src="assets/p/IMG_6436.jpg" alt="IMG_6436" /></div></div></div>
+        <img src="assets/p3/IMG_6429.jpg" alt="IMG_6429" /></div></div></div>
       <div id="h2" class="clip ph" data-start="1.951" data-duration="0.976" data-track-index="2" style="z-index:13"><div class="push" id="h2push"><div class="pan" id="h2pan">
-        <img src="assets/p/2ee1beb9.jpg" alt="2ee1beb9" /></div></div></div>
+        <img src="assets/p3/2ee1beb9.jpg" alt="2ee1beb9" /></div></div></div>
       <div id="h3" class="clip ph" data-start="2.927" data-duration="0.975" data-track-index="2" style="z-index:14"><div class="push" id="h3push"><div class="pan" id="h3pan">
-        <img src="assets/p/IMG_6427.jpg" alt="IMG_6427" /></div></div></div>
+        <img src="assets/p3/IMG_6427.jpg" alt="IMG_6427" /></div></div></div>
       <div id="title" class="clip" data-start="0" data-duration="3.902" data-track-index="5" style="z-index:50">
         <div class="scrim"></div>
         <div class="tbox"><div class="chip" id="tchip">EVENT RECAP</div><div class="tm"><div class="tl" id="tl0">CYBER</div></div><div class="tm"><div class="tl" id="tl1">ROADSHOW</div></div><div class="tm"><div class="tl" id="tl2">2026</div></div><div class="tsub" id="tsub">27 October</div></div>
@@ -92,54 +100,50 @@
       <div id="lb1" class="clip lbl" data-start="4.002" data-duration="3.315" data-track-index="7" style="z-index:60"><div class="pill" id="lbp1"><b>01</b>SET-UP</div></div>
       <video id="vbooth" class="clip vid" src="assets/v2/v_booth.mp4" muted playsinline data-start="7.805" data-duration="5.854" data-track-index="1" style="z-index:17"></video>
       <div id="bdim" class="clip" data-start="7.805" data-duration="5.854" data-track-index="3" style="z-index:18"><div class="dimfill" id="bdimf"></div></div>
-      <div id="cd0" class="clip" data-start="9.756" data-duration="3.903" data-track-index="4" style="z-index:19"><div class="pcard" id="pc0"><img src="assets/p/912ed0e8.jpg" alt="912ed0e8" style="object-position:50% 50%" /></div></div>
-      <div id="cd1" class="clip" data-start="10.732" data-duration="2.927" data-track-index="4" style="z-index:20"><div class="pcard" id="pc1"><img src="assets/p/38af901c.jpg" alt="38af901c" style="object-position:40% 50%" /></div></div>
-      <div id="cd2" class="clip" data-start="11.707" data-duration="1.952" data-track-index="4" style="z-index:21"><div class="pcard" id="pc2"><img src="assets/p/ACAE9274.jpg" alt="ACAE9274" style="object-position:35% 50%" /></div></div>
-      <div id="cd3" class="clip" data-start="12.683" data-duration="0.976" data-track-index="4" style="z-index:22"><div class="pcard" id="pc3"><img src="assets/p/IMG_6433.jpg" alt="IMG_6433" style="object-position:33% 50%" /></div></div>
+      <div id="cd0" class="clip" data-start="9.756" data-duration="3.903" data-track-index="4" style="z-index:19"><div class="pcard" id="pc0"><img src="assets/cards3/912ed0e8.jpg" alt="912ed0e8" /></div></div>
+      <div id="cd1" class="clip" data-start="10.732" data-duration="2.927" data-track-index="4" style="z-index:20"><div class="pcard" id="pc1"><img src="assets/cards3/38af901c.jpg" alt="38af901c" /></div></div>
+      <div id="cd2" class="clip" data-start="11.707" data-duration="1.952" data-track-index="4" style="z-index:21"><div class="pcard" id="pc2"><img src="assets/cards3/ACAE9274.jpg" alt="ACAE9274" /></div></div>
+      <div id="cd3" class="clip" data-start="12.683" data-duration="0.976" data-track-index="4" style="z-index:22"><div class="pcard" id="pc3"><img src="assets/cards3/IMG_6433.jpg" alt="IMG_6433" /></div></div>
       <div id="lb2" class="clip lbl" data-start="7.905" data-duration="1.607" data-track-index="7" style="z-index:60"><div class="pill" id="lbp2"><b>02</b>THE BOOTH</div></div>
       <video id="pc95bg" class="clip vid" src="assets/v2/dc95_bg.mp4" muted playsinline data-start="13.659" data-duration="1.951" data-track-index="1" style="z-index:23"></video>
       <video id="pc95card" class="clip phonev" src="assets/v2/dc95_card.mp4" muted playsinline data-start="13.659" data-duration="1.951" data-track-index="3" style="z-index:24"></video>
       <div id="crowd" class="clip ph" data-start="15.61" data-duration="2.351" data-track-index="2" style="z-index:25"><div class="push" id="crowdpush"><div class="pan" id="crowdpan">
-        <img src="assets/p/IMG_6461.jpg" alt="IMG_6461" /></div></div></div>
+        <img src="assets/p3/IMG_6461.jpg" alt="IMG_6461" /></div></div></div>
       <div id="lb3" class="clip lbl" data-start="13.759" data-duration="1.607" data-track-index="7" style="z-index:60"><div class="pill" id="lbp3"><b>03</b>THE CROWD</div></div>
       <video id="s_v_walk" class="clip vid" src="assets/v/v_walk.mp4" muted playsinline data-start="17.179" data-duration="1.852" data-track-index="1" style="z-index:26"></video>
       <video id="s_v_stage1" class="clip vid" src="assets/v/v_stage1.mp4" muted playsinline data-start="19.031" data-duration="5.398" data-track-index="1" style="z-index:27"></video>
       <video id="s_v_stage2" class="clip vid" src="assets/v/v_stage2.mp4" muted playsinline data-start="24.429" data-duration="2.944" data-track-index="1" style="z-index:28"></video>
       <video id="s_v_stage3" class="clip vid" src="assets/v/v_stage3.mp4" muted playsinline data-start="29.826" data-duration="1.472" data-track-index="1" style="z-index:29"></video>
       <div id="lb4" class="clip lbl" data-start="17.609" data-duration="0.817" data-track-index="7" style="z-index:60"><div class="pill" id="lbp4"><b>04</b>THE STAGE</div></div>
-      <div id="tk0" class="clip ph" data-start="27.373" data-duration="1.226" data-track-index="2" style="z-index:30">
-        <img class="bgblur" src="assets/p/IMG_6429.jpg" alt="" /><div class="card" id="tkc0"><img id="tki0" src="assets/p/IMG_6429.jpg" alt="IMG_6429 deepfake talk" /></div></div>
-      <div id="tk1" class="clip ph" data-start="28.599" data-duration="1.227" data-track-index="2" style="z-index:31">
-        <img class="bgblur" src="assets/p/IMG_6430.jpg" alt="" /><div class="card" id="tkc1"><img id="tki1" src="assets/p/IMG_6430.jpg" alt="IMG_6430 deepfake talk" /></div></div>
+      <div id="tk0" class="clip ph" data-start="27.373" data-duration="2.453" data-track-index="2" style="z-index:30">
+        <img class="bgblur" src="assets/p3/IMG_6430.jpg" alt="" /><div class="card" id="tkc0"><img id="tki0" src="assets/p3/IMG_6430.jpg" alt="IMG_6430 deepfake talk" /></div></div>
       <div id="tip0" class="clip tip" data-start="18.541" data-duration="2.955" data-track-index="6" style="z-index:70">
         <div class="tcard" id="tc0"><div class="tlab"><i>01</i>CYBER-SAFETY TIP</div><div class="ttxt"><span class="w">Use</span> <span class="w">strong</span> <span class="w">&</span> <span class="w">unique</span> <span class="w">passwords</span> </div></div></div>
       <div id="tip1" class="clip tip" data-start="24.919" data-duration="2.377" data-track-index="6" style="z-index:70">
         <div class="tcard" id="tc1"><div class="tlab"><i>02</i>CYBER-SAFETY TIP</div><div class="ttxt"><span class="w">Multi-factor</span> <span class="w">authentication</span> </div></div></div>
       <div id="tip2" class="clip tip" data-start="29.826" data-duration="3.45" data-track-index="6" style="z-index:70">
         <div class="tcard" id="tc2"><div class="tlab"><i>03</i>CYBER-SAFETY TIP</div><div class="ttxt"><span class="w">Report</span> <span class="w">suspected</span> <span class="w">cyber</span> <span class="w">incidents</span> </div></div></div>
-      <div id="pp0" class="clip ph" data-start="31.309" data-duration="0.982" data-track-index="2" style="z-index:32"><div class="push" id="pp0push"><div class="pan" id="pp0pan">
-        <img src="assets/p/IMG_6437.jpg" alt="IMG_6437" /></div></div></div>
-      <div id="pp1" class="clip ph" data-start="32.291" data-duration="0.982" data-track-index="2" style="z-index:33"><div class="push" id="pp1push"><div class="pan" id="pp1pan">
-        <img src="assets/p/IMG_6438.jpg" alt="IMG_6438" /></div></div></div>
-      <div id="pp2" class="clip ph" data-start="33.273" data-duration="0.982" data-track-index="2" style="z-index:34"><div class="push" id="pp2push"><div class="pan" id="pp2pan">
-        <img src="assets/p/IMG_6439.jpg" alt="IMG_6439" /><div class="ring" id="ring" style="left:1632px;top:929px;width:230px;height:540px"></div></div></div></div>
-      <div id="pp3" class="clip ph" data-start="34.255" data-duration="0.982" data-track-index="2" style="z-index:35"><div class="push" id="pp3push"><div class="pan" id="pp3pan">
-        <img src="assets/p/IMG_6440.jpg" alt="IMG_6440" /></div></div></div>
-      <div id="pp4" class="clip ph" data-start="35.237" data-duration="0.982" data-track-index="2" style="z-index:36"><div class="push" id="pp4push"><div class="pan" id="pp4pan">
-        <img src="assets/p/IMG_6435.jpg" alt="IMG_6435" /></div></div></div>
-      <div id="pp5" class="clip ph" data-start="36.219" data-duration="0.982" data-track-index="2" style="z-index:37"><div class="push" id="pp5push"><div class="pan" id="pp5pan">
-        <img src="assets/p/IMG_6419.jpg" alt="IMG_6419" /></div></div></div>
-      <div id="pp6" class="clip ph" data-start="37.201" data-duration="0.982" data-track-index="2" style="z-index:38"><div class="push" id="pp6push"><div class="pan" id="pp6pan">
-        <img src="assets/p/IMG_6420.jpg" alt="IMG_6420" /></div></div></div>
-      <div id="pp7" class="clip ph" data-start="38.183" data-duration="1.013" data-track-index="2" style="z-index:39"><div class="push" id="pp7push"><div class="pan" id="pp7pan">
-        <img src="assets/p/IMG_6423.jpg" alt="IMG_6423" /></div></div></div>
+      <div id="pp0" class="clip ph" data-start="31.309" data-duration="0.982" data-track-index="2" style="z-index:31"><div class="push" id="pp0push"><div class="pan" id="pp0pan">
+        <img src="assets/p3/IMG_6437.jpg" alt="IMG_6437" /></div></div></div>
+      <div id="pp1" class="clip ph" data-start="32.291" data-duration="0.982" data-track-index="2" style="z-index:32"><div class="push" id="pp1push"><div class="pan" id="pp1pan">
+        <img src="assets/p3/IMG_6438.jpg" alt="IMG_6438" /></div></div></div>
+      <div id="pp2" class="clip ph" data-start="33.273" data-duration="1.473" data-track-index="2" style="z-index:33"><div class="push" id="pp2push"><div class="pan" id="pp2pan">
+        <img src="assets/p3/IMG_6439.jpg" alt="IMG_6439" /><div class="ring" id="ring" style="left:1632px;top:929px;width:230px;height:540px"></div></div></div></div>
+      <div id="pp3" class="clip ph" data-start="34.746" data-duration="1.473" data-track-index="2" style="z-index:34"><div class="push" id="pp3push"><div class="pan" id="pp3pan">
+        <img src="assets/p3/IMG_6440.jpg" alt="IMG_6440" /></div></div></div>
+      <div id="pp4" class="clip ph" data-start="36.219" data-duration="1.473" data-track-index="2" style="z-index:35"><div class="push" id="pp4push"><div class="pan" id="pp4pan">
+        <img src="assets/p3/IMG_6435.jpg" alt="IMG_6435" /></div></div></div>
+      <div id="pp5" class="clip ph" data-start="37.692" data-duration="1.504" data-track-index="2" style="z-index:36"><div class="push" id="pp5push"><div class="pan" id="pp5pan">
+        <img src="assets/p3/IMG_6423.jpg" alt="IMG_6423" /></div></div></div>
       <div id="lb5" class="clip lbl" data-start="33.373" data-duration="1.864" data-track-index="7" style="z-index:60"><div class="pill" id="lbp5"><b>05</b>THE PEOPLE</div></div>
       <div id="fin" class="clip" data-start="38.816" data-duration="6.184" data-track-index="8" style="z-index:80">
-        <div class="wallwrap" id="wallwrap"><div class="wall" id="wall"><div class="tile" id="tile0" style="left:0px;top:0px"><img src="assets/tiles/IMG_6426.jpg" alt="" /></div><div class="tile" id="tile1" style="left:270px;top:0px"><img src="assets/tiles/IMG_6427.jpg" alt="" /></div><div class="tile" id="tile2" style="left:540px;top:0px"><img src="assets/tiles/IMG_6461.jpg" alt="" /></div><div class="tile" id="tile3" style="left:810px;top:0px"><img src="assets/tiles/IMG_6436.jpg" alt="" /></div><div class="tile" id="tile4" style="left:0px;top:384px"><img src="assets/tiles/2ee1beb9.jpg" alt="" /></div><div class="tile" id="tile5" style="left:270px;top:384px"><img src="assets/tiles/38af901c.jpg" alt="" /></div><div class="tile" id="tile6" style="left:540px;top:384px"><img src="assets/tiles/912ed0e8.jpg" alt="" /></div><div class="tile" id="tile7" style="left:810px;top:384px"><img src="assets/tiles/ACAE9274.jpg" alt="" /></div><div class="tile" id="tile8" style="left:0px;top:768px"><img src="assets/tiles/IMG_6433.jpg" alt="" /></div><div class="tile" id="tile9" style="left:270px;top:768px"><img src="assets/tiles/stage_frame.jpg" alt="" /></div><div class="tile" id="tile10" style="left:540px;top:768px"><img src="assets/tiles/IMG_6429.jpg" alt="" /></div><div class="tile" id="tile11" style="left:810px;top:768px"><img src="assets/tiles/IMG_6430.jpg" alt="" /></div><div class="tile" id="tile12" style="left:0px;top:1152px"><img src="assets/tiles/IMG_6437.jpg" alt="" /></div><div class="tile" id="tile13" style="left:270px;top:1152px"><img src="assets/tiles/IMG_6438.jpg" alt="" /></div><div class="tile" id="tile14" style="left:540px;top:1152px"><img src="assets/tiles/IMG_6439.jpg" alt="" /></div><div class="tile" id="tile15" style="left:810px;top:1152px"><img src="assets/tiles/IMG_6440.jpg" alt="" /></div><div class="tile" id="tile16" style="left:0px;top:1536px"><img src="assets/tiles/IMG_6435.jpg" alt="" /></div><div class="tile" id="tile17" style="left:270px;top:1536px"><img src="assets/tiles/IMG_6419.jpg" alt="" /></div><div class="tile" id="tile18" style="left:540px;top:1536px"><img src="assets/tiles/IMG_6420.jpg" alt="" /></div><div class="tile" id="tile19" style="left:810px;top:1536px"><img src="assets/tiles/IMG_6423.jpg" alt="" /></div></div></div>
+        <div class="wallwrap" id="wallwrap"><div class="wall" id="wall"><div class="tile" id="tile0" style="left:0px;top:0px"><img src="assets/tiles3/IMG_6426.jpg" alt="" /></div><div class="tile" id="tile1" style="left:270px;top:0px"><img src="assets/tiles3/IMG_6427.jpg" alt="" /></div><div class="tile" id="tile2" style="left:540px;top:0px"><img src="assets/tiles3/IMG_6461.jpg" alt="" /></div><div class="tile" id="tile3" style="left:810px;top:0px"><img src="assets/tiles3/stage_b.jpg" alt="" /></div><div class="tile" id="tile4" style="left:0px;top:384px"><img src="assets/tiles3/2ee1beb9.jpg" alt="" /></div><div class="tile" id="tile5" style="left:270px;top:384px"><img src="assets/tiles3/38af901c.jpg" alt="" /></div><div class="tile" id="tile6" style="left:540px;top:384px"><img src="assets/tiles3/912ed0e8.jpg" alt="" /></div><div class="tile" id="tile7" style="left:810px;top:384px"><img src="assets/tiles3/ACAE9274.jpg" alt="" /></div><div class="tile" id="tile8" style="left:0px;top:768px"><img src="assets/tiles3/IMG_6433.jpg" alt="" /></div><div class="tile" id="tile9" style="left:270px;top:768px"><img src="assets/tiles3/stage_a.jpg" alt="" /></div><div class="tile" id="tile10" style="left:540px;top:768px"><img src="assets/tiles3/IMG_6429.jpg" alt="" /></div><div class="tile" id="tile11" style="left:810px;top:768px"><img src="assets/tiles3/IMG_6430.jpg" alt="" /></div><div class="tile" id="tile12" style="left:0px;top:1152px"><img src="assets/tiles3/IMG_6437.jpg" alt="" /></div><div class="tile" id="tile13" style="left:270px;top:1152px"><img src="assets/tiles3/IMG_6438.jpg" alt="" /></div><div class="tile" id="tile14" style="left:540px;top:1152px"><img src="assets/tiles3/IMG_6439.jpg" alt="" /></div><div class="tile" id="tile15" style="left:810px;top:1152px"><img src="assets/tiles3/IMG_6440.jpg" alt="" /></div><div class="tile" id="tile16" style="left:0px;top:1536px"><img src="assets/tiles3/IMG_6435.jpg" alt="" /></div><div class="tile" id="tile17" style="left:270px;top:1536px"><img src="assets/tiles3/booth_v.jpg" alt="" /></div><div class="tile" id="tile18" style="left:540px;top:1536px"><img src="assets/tiles3/stage_c.jpg" alt="" /></div><div class="tile" id="tile19" style="left:810px;top:1536px"><img src="assets/tiles3/IMG_6423.jpg" alt="" /></div></div></div>
         <div class="dim2" id="dim2"></div>
         <div class="lock" id="lock"><div class="org">AIRASIA AVSEC</div><div class="rule" id="rule"></div><div class="tag">Security Is Everyone's Responsibility</div><div class="ev">CYBER ROADSHOW 2026</div></div>
         <div class="black" id="black"></div>
       </div>
+      <div id="logos" class="clip logos" data-start="0" data-duration="45.0" data-track-index="9" style="z-index:95">
+        <div class="lbar"><img class="av" src="assets/logos/avsec_badge.png" alt="AirAsia AVSEC" /><div class="sep"></div><img class="as" src="assets/logos/allstars.png" alt="Allstars - Dare to Dream" /></div></div>
       <audio id="bed" data-timeline-role="music" class="clip" src="assets/audio_v02.wav" data-start="0" data-duration="45.0" data-volume="1"></audio>
       <audio id="sx0" class="clip" src="assets/sfx/thock.wav" data-start="9.756" data-duration="0.8" data-volume="0.28"></audio>
       <audio id="sx1" class="clip" src="assets/sfx/thock.wav" data-start="10.732" data-duration="0.8" data-volume="0.28"></audio>
@@ -154,10 +158,10 @@
     <script>
       window.__timelines = window.__timelines || {};
       // frame-0 state, outside the timeline so it renders at t=0
-      gsap.set("#h0pan",{x:-689}); gsap.set("#h0push",{transformOrigin:"540px 960px"});
-      gsap.set("#h1pan",{x:-535}); gsap.set("#h1push",{transformOrigin:"540px 960px"});
-      gsap.set("#h2pan",{x:-1457}); gsap.set("#h2push",{transformOrigin:"540px 960px"});
-      gsap.set("#h3pan",{x:-1226}); gsap.set("#h3push",{transformOrigin:"540px 960px"});
+      gsap.set("#h0pan",{x:-689,y:0}); gsap.set("#h0push",{transformOrigin:"540px 960px"});
+      gsap.set("#h1pan",{x:-382,y:0}); gsap.set("#h1push",{transformOrigin:"540px 960px"});
+      gsap.set("#h2pan",{x:-1073,y:0}); gsap.set("#h2push",{transformOrigin:"540px 960px"});
+      gsap.set("#h3pan",{x:-1226,y:0}); gsap.set("#h3push",{transformOrigin:"540px 960px"});
       gsap.set("#title .tl",{yPercent:110}); gsap.set("#tchip,#tsub",{opacity:0,y:16});
       gsap.set("#pbcard",{y:120,scale:0.9,opacity:0});
       gsap.set("#lbp1",{x:-60,opacity:0});
@@ -168,36 +172,33 @@
       gsap.set("#pc3",{rotation:13,x:30,y:-70,scale:1.3,opacity:0});
       gsap.set("#lbp2",{x:-60,opacity:0});
       gsap.set("#pc95card",{y:120,scale:0.9,opacity:0});
-      gsap.set("#crowdpan",{x:-727}); gsap.set("#crowdpush",{transformOrigin:"540px 960px"});
+      gsap.set("#crowdpan",{x:-727,y:0}); gsap.set("#crowdpush",{transformOrigin:"540px 960px"});
       gsap.set("#lbp3",{x:-60,opacity:0});
       gsap.set("#s_v_walk",{y:1920});
       gsap.set("#lbp4",{x:-60,opacity:0});
       gsap.set("#tkc0",{scale:0.92,opacity:0}); gsap.set("#tki0",{transformOrigin:"35% 45%"});
-      gsap.set("#tkc1",{scale:1,opacity:1}); gsap.set("#tki1",{transformOrigin:"35% 45%"});
       gsap.set("#tc0",{opacity:0,y:40,scale:0.94}); gsap.set("#tc0 .w",{opacity:0,y:18});
       gsap.set("#tc1",{opacity:0,y:40,scale:0.94}); gsap.set("#tc1 .w",{opacity:0,y:18});
       gsap.set("#tc2",{opacity:0,y:40,scale:0.94}); gsap.set("#tc2 .w",{opacity:0,y:18});
-      gsap.set("#pp0pan",{x:-842}); gsap.set("#pp0push",{transformOrigin:"540px 960px"});
-      gsap.set("#pp1pan",{x:-804}); gsap.set("#pp1push",{transformOrigin:"540px 960px"});
+      gsap.set("#pp0pan",{x:-842,y:0}); gsap.set("#pp0push",{transformOrigin:"540px 960px"});
+      gsap.set("#pp1pan",{x:-804,y:0}); gsap.set("#pp1push",{transformOrigin:"540px 960px"});
       gsap.set("#ring",{opacity:0,scale:1.25,transformOrigin:"50% 50%"});
-      gsap.set("#pp2pan",{x:-804}); gsap.set("#pp2push",{transformOrigin:"540px 960px"});
-      gsap.set("#pp3pan",{x:-996}); gsap.set("#pp3push",{transformOrigin:"540px 960px"});
-      gsap.set("#pp4pan",{x:-1457}); gsap.set("#pp4push",{transformOrigin:"540px 960px"});
-      gsap.set("#pp5pan",{x:-1303}); gsap.set("#pp5push",{transformOrigin:"540px 960px"});
-      gsap.set("#pp6pan",{x:-1303}); gsap.set("#pp6push",{transformOrigin:"540px 960px"});
-      gsap.set("#pp7pan",{x:-1073}); gsap.set("#pp7push",{transformOrigin:"540px 960px"});
+      gsap.set("#pp2pan",{x:-804,y:0}); gsap.set("#pp2push",{transformOrigin:"540px 960px"});
+      gsap.set("#pp3pan",{x:-996,y:0}); gsap.set("#pp3push",{transformOrigin:"540px 960px"});
+      gsap.set("#pp4pan",{x:-1572,y:-293}); gsap.set("#pp4push",{transformOrigin:"540px 960px"});
+      gsap.set("#pp5pan",{x:-1073,y:0}); gsap.set("#pp5push",{transformOrigin:"540px 960px"});
       gsap.set("#lbp5",{x:-60,opacity:0});
       gsap.set("#wallwrap",{y:1920}); gsap.set("#wall",{scale:1.55,transformOrigin:"540px 960px"}); gsap.set("#dim2,#black",{opacity:0}); gsap.set("#lock",{opacity:0,y:26}); gsap.set("#rule",{scaleX:0});
       gsap.set("#wall .tile",{opacity:0,scale:0.6});
       const tl = gsap.timeline({ paused: true });
       tl.to("#h0pan",{x:-919,duration:0.976,ease:"none"},0.0);
-      tl.fromTo("#h0push",{scale:1.09},{scale:1.0,duration:0.32,ease:"power3.out"},0.0); tl.to("#h0push",{scale:1.035,duration:0.656,ease:"none"},0.32);
-      tl.to("#h1pan",{x:-689,duration:0.975,ease:"none"},0.976);
-      tl.fromTo("#h1push",{scale:1.09},{scale:1.0,duration:0.32,ease:"power3.out"},0.976); tl.to("#h1push",{scale:1.035,duration:0.655,ease:"none"},1.296);
-      tl.to("#h2pan",{x:-1610,duration:0.976,ease:"none"},1.951);
-      tl.fromTo("#h2push",{scale:1.09},{scale:1.0,duration:0.32,ease:"power3.out"},1.951); tl.to("#h2push",{scale:1.035,duration:0.656,ease:"none"},2.271);
+      tl.fromTo("#h0push",{scale:1.0900},{scale:1.0,duration:0.32,ease:"power3.out"},0.0); tl.to("#h0push",{scale:1.0350,duration:0.656,ease:"none"},0.32);
+      tl.to("#h1pan",{x:-574,duration:0.975,ease:"none"},0.976);
+      tl.fromTo("#h1push",{scale:1.0900},{scale:1.0,duration:0.32,ease:"power3.out"},0.976); tl.to("#h1push",{scale:1.0350,duration:0.655,ease:"none"},1.296);
+      tl.to("#h2pan",{x:-1226,duration:0.976,ease:"none"},1.951);
+      tl.fromTo("#h2push",{scale:1.0900},{scale:1.0,duration:0.32,ease:"power3.out"},1.951); tl.to("#h2push",{scale:1.0350,duration:0.656,ease:"none"},2.271);
       tl.to("#h3pan",{x:-1457,duration:0.975,ease:"none"},2.927);
-      tl.fromTo("#h3push",{scale:1.09},{scale:1.0,duration:0.32,ease:"power3.out"},2.927); tl.to("#h3push",{scale:1.035,duration:0.655,ease:"none"},3.247);
+      tl.fromTo("#h3push",{scale:1.0900},{scale:1.0,duration:0.32,ease:"power3.out"},2.927); tl.to("#h3push",{scale:1.0350,duration:0.655,ease:"none"},3.247);
       tl.to("#tchip",{opacity:1,y:0,duration:0.25,ease:"power2.out"},0.03);
       tl.to("#tl0",{yPercent:0,duration:0.35,ease:"power4.out"},0.0);
       tl.to("#tl1",{yPercent:0,duration:0.35,ease:"power4.out"},0.488);
@@ -215,33 +216,28 @@
       tl.to("#lbp2",{x:0,opacity:1,duration:0.3,ease:"power3.out"},7.905); tl.to("#lbp2",{x:-40,opacity:0,duration:0.22,ease:"power2.in"},9.292);
       tl.to("#pc95card",{y:0,scale:1,opacity:1,duration:0.42,ease:"power3.out"},13.659);
       tl.to("#crowdpan",{x:-996,duration:2.351,ease:"none"},15.61);
-      tl.fromTo("#crowdpush",{scale:1.09},{scale:1.0,duration:0.32,ease:"power3.out"},15.61); tl.to("#crowdpush",{scale:1.035,duration:2.031,ease:"none"},15.93);
+      tl.fromTo("#crowdpush",{scale:1.0900},{scale:1.0,duration:0.32,ease:"power3.out"},15.61); tl.to("#crowdpush",{scale:1.0350,duration:2.031,ease:"none"},15.93);
       tl.to("#lbp3",{x:0,opacity:1,duration:0.3,ease:"power3.out"},13.759); tl.to("#lbp3",{x:-40,opacity:0,duration:0.22,ease:"power2.in"},15.146);
       tl.to("#s_v_walk",{y:0,duration:0.38,ease:"power3.inOut"},17.179000000000002);
       tl.to("#lbp4",{x:0,opacity:1,duration:0.3,ease:"power3.out"},17.609); tl.to("#lbp4",{x:-40,opacity:0,duration:0.22,ease:"power2.in"},18.206);
       tl.to("#tkc0",{scale:1,opacity:1,duration:0.32,ease:"power3.out"},27.373);
-      tl.fromTo("#tki0",{scale:1.0},{scale:1.06,duration:1.226,ease:"none"},27.373);
-      tl.fromTo("#tki1",{scale:1.06},{scale:1.12,duration:1.227,ease:"none"},28.599);
+      tl.fromTo("#tki0",{scale:1.0},{scale:1.06,duration:2.453,ease:"none"},27.373);
       tl.to("#tc0",{opacity:1,y:0,scale:1,duration:0.38,ease:"back.out(1.6)"},18.541); tl.to("#tc0 .w",{opacity:1,y:0,duration:0.25,stagger:0.07,ease:"power2.out"},18.661); tl.to("#tc0",{opacity:0,y:-24,duration:0.22,ease:"power2.in"},21.246);
       tl.to("#tc1",{opacity:1,y:0,scale:1,duration:0.38,ease:"back.out(1.6)"},24.919); tl.to("#tc1 .w",{opacity:1,y:0,duration:0.25,stagger:0.07,ease:"power2.out"},25.039); tl.to("#tc1",{opacity:0,y:-24,duration:0.22,ease:"power2.in"},27.046);
       tl.to("#tc2",{opacity:1,y:0,scale:1,duration:0.38,ease:"back.out(1.6)"},29.826); tl.to("#tc2 .w",{opacity:1,y:0,duration:0.25,stagger:0.07,ease:"power2.out"},29.946); tl.to("#tc2",{opacity:0,y:-24,duration:0.22,ease:"power2.in"},33.026);
       tl.to("#pp0pan",{x:-958,duration:0.982,ease:"none"},31.309);
-      tl.fromTo("#pp0push",{scale:1.09},{scale:1.0,duration:0.32,ease:"power3.out"},31.309); tl.to("#pp0push",{scale:1.035,duration:0.662,ease:"none"},31.629);
+      tl.fromTo("#pp0push",{scale:1.0900},{scale:1.0,duration:0.32,ease:"power3.out"},31.309); tl.to("#pp0push",{scale:1.0350,duration:0.662,ease:"none"},31.629);
       tl.to("#pp1pan",{x:-919,duration:0.982,ease:"none"},32.291);
-      tl.fromTo("#pp1push",{scale:1.09},{scale:1.0,duration:0.32,ease:"power3.out"},32.291); tl.to("#pp1push",{scale:1.035,duration:0.662,ease:"none"},32.611);
+      tl.fromTo("#pp1push",{scale:1.0900},{scale:1.0,duration:0.32,ease:"power3.out"},32.291); tl.to("#pp1push",{scale:1.0350,duration:0.662,ease:"none"},32.611);
       tl.to("#ring",{opacity:1,scale:1,duration:0.26,ease:"back.out(1.8)"},33.373);
-      tl.to("#pp2pan",{x:-919,duration:0.982,ease:"none"},33.273);
-      tl.fromTo("#pp2push",{scale:1.09},{scale:1.0,duration:0.32,ease:"power3.out"},33.273); tl.to("#pp2push",{scale:1.035,duration:0.662,ease:"none"},33.593);
-      tl.to("#pp3pan",{x:-1226,duration:0.982,ease:"none"},34.255);
-      tl.fromTo("#pp3push",{scale:1.09},{scale:1.0,duration:0.32,ease:"power3.out"},34.255); tl.to("#pp3push",{scale:1.035,duration:0.662,ease:"none"},34.575);
-      tl.to("#pp4pan",{x:-1610,duration:0.982,ease:"none"},35.237);
-      tl.fromTo("#pp4push",{scale:1.09},{scale:1.0,duration:0.32,ease:"power3.out"},35.237); tl.to("#pp4push",{scale:1.035,duration:0.662,ease:"none"},35.557);
-      tl.to("#pp5pan",{x:-1457,duration:0.982,ease:"none"},36.219);
-      tl.fromTo("#pp5push",{scale:1.09},{scale:1.0,duration:0.32,ease:"power3.out"},36.219); tl.to("#pp5push",{scale:1.035,duration:0.662,ease:"none"},36.539);
-      tl.to("#pp6pan",{x:-1457,duration:0.982,ease:"none"},37.201);
-      tl.fromTo("#pp6push",{scale:1.09},{scale:1.0,duration:0.32,ease:"power3.out"},37.201); tl.to("#pp6push",{scale:1.035,duration:0.662,ease:"none"},37.521);
-      tl.to("#pp7pan",{x:-1226,duration:1.013,ease:"none"},38.183);
-      tl.fromTo("#pp7push",{scale:1.09},{scale:1.0,duration:0.32,ease:"power3.out"},38.183); tl.to("#pp7push",{scale:1.035,duration:0.693,ease:"none"},38.503);
+      tl.to("#pp2pan",{x:-919,duration:1.473,ease:"none"},33.273);
+      tl.fromTo("#pp2push",{scale:1.0900},{scale:1.0,duration:0.32,ease:"power3.out"},33.273); tl.to("#pp2push",{scale:1.0350,duration:1.153,ease:"none"},33.593);
+      tl.to("#pp3pan",{x:-1226,duration:1.473,ease:"none"},34.746);
+      tl.fromTo("#pp3push",{scale:1.0900},{scale:1.0,duration:0.32,ease:"power3.out"},34.746); tl.to("#pp3push",{scale:1.0350,duration:1.153,ease:"none"},35.066);
+      tl.to("#pp4pan",{x:-1687,duration:1.473,ease:"none"},36.219);
+      tl.fromTo("#pp4push",{scale:1.2208},{scale:1.12,duration:0.32,ease:"power3.out"},36.219); tl.to("#pp4push",{scale:1.1592,duration:1.153,ease:"none"},36.539);
+      tl.to("#pp5pan",{x:-1226,duration:1.504,ease:"none"},37.692);
+      tl.fromTo("#pp5push",{scale:1.0900},{scale:1.0,duration:0.32,ease:"power3.out"},37.692); tl.to("#pp5push",{scale:1.0350,duration:1.184,ease:"none"},38.012);
       tl.to("#lbp5",{x:0,opacity:1,duration:0.3,ease:"power3.out"},33.373); tl.to("#lbp5",{x:-40,opacity:0,duration:0.22,ease:"power2.in"},35.017);
       tl.to("#wallwrap",{y:0,duration:0.38,ease:"power3.inOut"},38.816);
       tl.to("#tile9",{opacity:1,scale:1,duration:0.3,ease:"back.out(1.5)"},38.896);

@@ -2,11 +2,40 @@
 
 | version | file | length | status |
 |---|---|---|---|
+| v03 preview (current) | `PREVIEW_cyber_roadshow_recap_v03.mp4` (720x1280) | 45.0 s, 1350 frames, -14.0 LUFS / -2.0 dBTP | waiting for approval |
 | v02 final | `FINAL_Cyber_Roadshow_Recap_v02_1080x1920.mp4` (1080x1920, 30 fps, H.264 ~19 Mb/s, AAC 256k) | 45.0 s, 1350 frames, -14.0 LUFS / -2.0 dBTP | approved, final export |
 | v02 preview | `PREVIEW_cyber_roadshow_recap_v02.mp4` (720x1280) | 45.0 s, 1350 frames, -14.0 LUFS / -2.0 dBTP | approved preview (kept) |
 | v01 | `PREVIEW_cyber_roadshow_recap_v01.mp4` (720x1280) | 25.4 s | superseded (kept) |
 
 Nothing is published, scheduled or uploaded.
+
+## v03 — creator's notes on v02 and what changed
+Notes: upscale all the images; use every image, but leave out the blurry ones; show the AirAsia AVSEC and Allstars logos
+for the full length of the video.
+- Upscaled: all 19 photos with Real-ESRGAN realesr-general-x4v3 (BSD-3; weights blended 50/50 with its denoise variant so
+  it cleans rather than invents texture), CPU, `upscale_photos.py` -> `edit/assets/p3/` at 5760x3240 (1.5x the v02 plates,
+  so the zooms stay sharp). Weights are not in git: github.com/xinntao/Real-ESRGAN releases v0.2.5.0 -> `models/`.
+- Clear photos only: IMG_6419, IMG_6420 and IMG_6436 are left out (motion blur; still smeared after upscaling).
+  The other 16 photos and all 4 videos are used.
+- Logos: the creator's AirAsia AVSEC badge and Allstars "Dare to Dream" logo (`src/logos/`) on one white bar, top-left,
+  0-45 s (`make_logos.py`: badge cut out of its black square, Allstars upscaled x4). Tip cards, chapter labels and the
+  phone panel moved down 26-30 px to make room.
+- GTR: v02 still showed GTR branding in places (the 912ed0e8 booth card, 2ee1beb9 in the hook, IMG_6435 and some
+  photo-wall tiles). v03 marks every GTR banner/logo position per photo in `gtr_boxes.py`; `make_assets_v03.py` and
+  `build_v03.py` refuse any card, tile or photo window (at its widest zoom and both ends of its pan) that touches one.
+- Re-cut: hook = IMG_6426, IMG_6429, 2ee1beb9, IMG_6427; the talk section uses IMG_6430 alone; the people montage is six
+  photos over the same 16 song beats (2,2,3,3,3,3); the photo wall is the 16 photos + 3 stage frames (IMG_6421) + 1 booth
+  frame (IMG_6425). Sound, music and timing are otherwise as v02. Exact times: `edit/timing_map_v03.json`.
+
+### Rebuild v03
+```
+python3 upscale_photos.py    # ~75 s per photo on 4 CPU cores
+python3 make_logos.py
+python3 make_assets_v03.py   # booth cards + photo-wall tiles, GTR-checked
+python3 build_v03.py         # -> edit/index.html (GTR-checks every photo window)
+cd edit && npx hyperframes@0.8.193 render --quality draft --fps 30 -o ../renders/draft_v03.mp4
+cd .. && ./master_preview.sh renders/draft_v03.mp4 PREVIEW_cyber_roadshow_recap_v03.mp4 45.0
+```
 
 ## v02 — creator's notes on v01 and what changed
 Notes: no GTR content at all; use all the images and videos; cut where needed; make it a visually stunning recap.
