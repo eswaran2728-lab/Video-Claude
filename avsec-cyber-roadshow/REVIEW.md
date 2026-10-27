@@ -14,7 +14,15 @@ The client asked for the real leaderboards instead of one-by-one name reveals:
 
 ## Measured on the final MP4
 
-__MEASURED__
+| Check | Result |
+| --- | --- |
+| Format | 1080 × 1920, 30 fps, video and audio both exactly 35.000 s, H.264 + AAC |
+| Loudness (after AAC encode) | −14.0 LUFS integrated, −1.2 dB peak |
+| QR destination | Read from the encoded video at 30.4, 30.6, 31.5, 32.5, 33.5, 34.5 and 34.9 s → `https://airasia-avsec-spot-the-risk.vercel.app/play` every time, also at half resolution |
+| QR hold | Readable and static from 30.4 s to the end (4.5 s) |
+| Host/organizer URLs | Not present anywhere in the video or the QR |
+| Leaderboards | Spot the Risk rows 01–20 and quiz #1–#19 all appear, in order, in the encoded frames |
+| `hyperframes check` | Passes: 0 errors, 0 warnings |
 
 ## Looked at (contact sheets and full-size frames)
 
