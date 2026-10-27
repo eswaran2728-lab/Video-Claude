@@ -11,3 +11,6 @@ sheets/
 src/dl/
 edit/node_modules/
 edit/.hyperframes/
+# shortlisted Mixkit tracks not used in the edit (re-downloadable); only the used track is committed
+music/*.mp3
+!music/mixkit_113_house_fest.mp3
