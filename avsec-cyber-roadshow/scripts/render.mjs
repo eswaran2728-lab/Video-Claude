@@ -49,7 +49,9 @@ const target = "I=-14:TP=-1.5:LRA=11";
 // ffmpeg prints the measurement JSON on stderr.
 const probe = spawnSync("ffmpeg", ["-hide_banner", "-nostats", "-i", raw, "-af", `loudnorm=${target}:print_format=json`, "-f", "null", "-"], { cwd: root, encoding: "utf8" }).stderr;
 const m = JSON.parse(probe.slice(probe.lastIndexOf("{"), probe.lastIndexOf("}") + 1));
-run("ffmpeg", ["-hide_banner", "-loglevel", "error", "-y", "-i", raw, "-c:v", "copy",
+// The AAC re-encode pads audio slightly; cut the file to the video's exact length.
+const vdur = spawnSync("ffprobe", ["-v", "error", "-select_streams", "v:0", "-show_entries", "stream=duration", "-of", "csv=p=0", raw], { cwd: root, encoding: "utf8" }).stdout.trim();
+run("ffmpeg", ["-hide_banner", "-loglevel", "error", "-y", "-i", raw, "-t", vdur, "-c:v", "copy",
   "-af", `loudnorm=${target}:measured_I=${m.input_i}:measured_TP=${m.input_tp}:measured_LRA=${m.input_lra}:measured_thresh=${m.input_thresh}:offset=${m.target_offset}:linear=true`,
   "-ar", "48000", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out]);
 rmSync(join(root, raw), { force: true });

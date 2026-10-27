@@ -9,7 +9,15 @@
 
 ## Measured on the final MP4
 
-__MEASURED__
+| Check | Result |
+| --- | --- |
+| Format | 1080 × 1920, 30 fps, 1,050 frames = 35.00 s, H.264 + AAC |
+| Loudness (after AAC encode) | −14.0 LUFS integrated, −1.2 dB peak |
+| QR destination | Decoded from the encoded video at 30.4, 30.6, 31.5, 32.5, 33.5, 34.5 and 34.9 s → `https://airasia-avsec-spot-the-risk.vercel.app/play` every time, also at half resolution |
+| QR hold | Readable and static from 30.4 s to the end (4.5 s) |
+| Host/organizer URLs | Not present anywhere in the video or the QR |
+| `hyperframes check` | Passes: 0 errors, 0 warnings (lint, runtime, layout, contrast, craft) |
+| Copy | Matches the brief word for word (checked against STORYBOARD.md) |
 
 ## Looked at (contact sheets and full-size frames)
 
