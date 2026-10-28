@@ -21,3 +21,4 @@ edit/assets/stem_*.wav
 sheets/test_*.png
 src/mt/
 matte.log
+render_*.log

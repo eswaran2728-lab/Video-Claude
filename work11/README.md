@@ -1,12 +1,41 @@
 # Earbuds (noise cancelling) affiliate reel — HyperFrames, 1080x1920, 30 fps, 32.57 s
 
-**Current: preview v02 (waiting for approval):** `PREVIEW_earbuds_noise_cancel_v02.mp4` (720x1280, -14 LUFS). No final
+**Current: preview v03 (waiting for approval):** `PREVIEW_earbuds_noise_cancel_v03.mp4` (720x1280, -14 LUFS). No final
 export has been rendered and nothing is published.
 
 | version | file | what changed |
 |---|---|---|
+| v03 | `PREVIEW_earbuds_noise_cancel_v03.mp4` | creator's note on v02 "too bright, make it simple, make the background dark, make it cinematic": matte-darkened background, simpler cinematic grade, no face-light; v02's isolated voice kept |
 | v02 | `PREVIEW_earbuds_noise_cancel_v02.mp4` | creator's note "do colour grading, if possible isolate my voice": stronger grade + tracked face-light, DeepFilterNet3 voice isolation |
 | v01 | `PREVIEW_earbuds_noise_cancel_v01.mp4` | first cut (unchanged; rebuild with VERSION unset) |
+
+## v03 — creator's note on v02: "Its too bright make it simple and nee make the background dark make it cinematic"
+Same cut, captions, graphics, music and SFX; audio is v02's isolated-voice mix (`mix_v02.wav`).
+- **Dark background:** a foreground matte separates him and the earbuds case from the room. Everything outside it
+  is darkened to 30% and desaturated by 40% (`VERSION=v03 python3 make_plate.py` → `plate_v03.mp4`).
+  - Matte: `make_matte.py` with rembg's ONNX models (no pickled code). BiRefNet-lite runs at 10 fps and keeps the
+    held case in the foreground. Between its keyframes the union of the neighbouring two is used, so moving hands are
+    never darkened. The edge is pulled in about 2 px with a 1.4 px feather.
+  - u2net_human_seg was also run (`src/matte_u2.mp4`) but is not used. It drops the case, and its loose outline left a
+    light halo around the hair once the wall was dark (`sheets/matte_cmp.jpg`, `sheets/halo_check.jpg` after the fix).
+  - RVM (video matting) was not used: running its code from the old download folder was blocked.
+- **Simpler, less bright:**
+  - the v02 face-light is removed;
+  - the base correction is colour balance + light sharpening only, without v01's midtone lift (`grade_ffmpeg_v03.txt`);
+  - v02's HSL secondaries are dropped.
+- **Cinematic grade** (`grade_v03.json`, applied on `#plate` with `hyperframes media-treatment`):
+  - exposure −0.06, contrast +0.16, highlights −0.22, blacks −0.08, saturation −0.12;
+  - teal in the shadows, warm highlights;
+  - vignette 0.30, film grain 0.035.
+- Rebuild v03 (after v01/v02 steps):
+  ```
+  python3 make_matte.py bir            # ~30 min on this CPU (u2 pass optional)
+  export VERSION=v03 && python3 make_plate.py && python3 build.py
+  cd edit && npx --yes hyperframes@0.8.193 media-treatment --project . --file index.html --selector '#plate' \
+    --grading "$(tr -d '\n' < ../grade_v03.json)" --apply
+  npx --yes hyperframes@0.8.193 render --quality draft --fps 30 -o ../renders/draft_v03.mp4
+  cd .. && ./master_preview.sh renders/draft_v03.mp4 PREVIEW_earbuds_noise_cancel_v03.mp4
+  ```
 
 ## v02 — creator's note on v01: "Do colour grading if possible isolate my voice"
 Same cut, captions, graphics, music and SFX as v01.

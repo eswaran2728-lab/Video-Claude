@@ -7,7 +7,7 @@ import os, json, subprocess, cv2, numpy as np, plan
 VERSION = os.environ.get("VERSION", "v01"); OUT = "edit/assets/v/plate.mp4" if VERSION == "v01" else f"edit/assets/v/plate_{VERSION}.mp4"
 FACE = json.load(open("track_face.json")) if VERSION == "v02" else None
 # v03 (creator: "too bright, make it simple, make the background dark, cinematic"): no face-light, no midtone lift in the
-# base correction (grade_ffmpeg_v03.txt); the background outside the foreground matte (make_matte.py) is darkened to
+# base correction (grade_ffmpeg_v03.txt); the background outside the BiRefNet foreground matte (make_matte.py bir) is darkened to
 # BG_GAIN and partly desaturated, so he and the earbuds case keep their own exposure.
 BG_GAIN, BG_SAT = 0.30, 0.60
 def read_gray(p, w=720, h=1280):
@@ -15,14 +15,17 @@ def read_gray(p, w=720, h=1280):
     return np.frombuffer(raw, np.uint8).reshape(-1, h, w)
 MATTE = None
 if VERSION == "v03":
-    u2, bir = read_gray("src/matte_u2.mp4"), read_gray("src/matte_bir.mp4")
+    # BiRefNet only: u2net's outline bulges past the hair onto the wall (a light halo once the wall is darkened). Between
+    # the 10 fps BiRefNet keyframes take the union of the two neighbours, so a moving hand/case is never darkened.
+    bir = read_gray("src/matte_bir.mp4"); K = np.ones((5, 5), np.uint8)
     def combined(i):
-        k = i // 3; u = (i % 3) / 3; b0 = bir[min(k, len(bir) - 1)].astype(np.float32); b1 = bir[min(k + 1, len(bir) - 1)].astype(np.float32)
-        return np.maximum(u2[min(i, len(u2) - 1)].astype(np.float32), b0 * (1 - u) + b1 * u) / 255
+        k = i // 3; b0 = bir[min(k, len(bir) - 1)]
+        m = b0 if i % 3 == 0 else np.maximum(b0, bir[min(k + 1, len(bir) - 1)])
+        return cv2.erode(m, K).astype(np.float32) / 255                                   # pull the edge in ~2 px
     MATTE = combined
 def dark_bg(img, i):
     a = (MATTE(max(0, i - 1)) + 2 * MATTE(i) + MATTE(min(i + 1, len(F) - 1))) / 4      # light temporal smoothing
-    a = cv2.GaussianBlur(a, (0, 0), 2.2)[..., None]                                     # soft edge (hair, fingers)
+    a = cv2.GaussianBlur(a, (0, 0), 1.4)[..., None]                                     # soft edge (hair, fingers)
     f = img.astype(np.float32); g = f.mean(axis=2, keepdims=True)
     bg = (g + (f - g) * BG_SAT) * BG_GAIN
     return np.clip(f * a + bg * (1 - a), 0, 255).astype(np.uint8)
