@@ -31,6 +31,11 @@ He stays on camera for the hook's first words, "disturbance-aa irukka?", "intha 
 - In the composition each insert is its own `<video>` (track 5) above the plate. v03's `grade_v03.json` is applied to the
   plate and to every insert with `media-treatment`, so they match.
 - Also fixed: a tiny leftover orange dot from the collapsed noise bars (present since v01) now hides fully.
+- v04 preview checked:
+  - full decode, 0 errors; 977 frames / 32.57 s; −13.9 LUFS, −1.5 dBFS;
+  - no black frames; audio aligned within 3 ms;
+  - 1 fps sheet and frames around every insert cut (`sheets/preview_v04_1fps.jpg`, `sheets/preview_v04_cuts.jpg`);
+  - not done: a human listening pass.
 - Rebuild: `python3 make_broll.py && VERSION=v04 python3 build.py`, then apply `grade_v03.json` to `#plate #br232 #br918
   #br239 #br8742` with `media-treatment`, then render and `master_preview.sh` as for v03.
 
