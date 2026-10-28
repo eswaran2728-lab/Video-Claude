@@ -1,13 +1,38 @@
 # Earbuds (noise cancelling) affiliate reel — HyperFrames, 1080x1920, 30 fps, 32.57 s
 
-**Current: preview v03 (waiting for approval):** `PREVIEW_earbuds_noise_cancel_v03.mp4` (720x1280, -14 LUFS). No final
+**Current: preview v04 (waiting for approval):** `PREVIEW_earbuds_noise_cancel_v04.mp4` (720x1280, -14 LUFS). No final
 export has been rendered and nothing is published.
 
 | version | file | what changed |
 |---|---|---|
+| v04 | `PREVIEW_earbuds_noise_cancel_v04.mp4` | creator's note "add broll from web that relavent to wht i talk": four licensed Mixkit inserts on the problem lines, graded to v03 |
 | v03 | `PREVIEW_earbuds_noise_cancel_v03.mp4` | creator's note on v02 "too bright, make it simple, make the background dark, make it cinematic": matte-darkened background, simpler cinematic grade, no face-light; v02's isolated voice kept |
 | v02 | `PREVIEW_earbuds_noise_cancel_v02.mp4` | creator's note "do colour grading, if possible isolate my voice": stronger grade + tracked face-light, DeepFilterNet3 voice isolation |
 | v01 | `PREVIEW_earbuds_noise_cancel_v01.mp4` | first cut (unchanged; rebuild with VERSION unset) |
+
+## v04 — creator's note on v03: "Add broll from web that relavent to wht i talk"
+v03 (dark cinematic plate, isolated voice, same cut/captions/graphics) plus four web b-roll inserts. They are used only where he
+describes the problem; everything about the product, its features and the payoff stays his real footage, so no other
+brand's earbuds or product appear. Pexels and Pixabay returned 403 from this environment; Mixkit was used.
+Each item's own page was checked for **"Mixkit Stock Video Free License"** (commercial and social use, no attribution
+required) on 2026-10-28. Restricted-licence items (personal use only) were rejected, as were clips showing earbuds/earphones.
+| out (s) | his line | clip (Mixkit page) | treatment |
+|---|---|---|---|
+| 1.46–3.32 | noise romba irukkumna | Woman walks through the city speaking on the phone — https://mixkit.co/free-stock-video/woman-walks-through-the-city-speaking-on-the-phone-232/ | src 2.0 s, 9:16 crop of the 4K file; NOISE word + bars stay on top |
+| 4.50–6.43 | okay, namma office-la irunthaalum sari | Busy office space — https://mixkit.co/free-stock-video/busy-office-space-918/ | src 0.5 s; *office* chip on top |
+| 6.43–7.43 | car-la porappa | Woman talking on the phone in a car — https://mixkit.co/free-stock-video/woman-talking-on-the-phone-in-a-car-239/ | src 0.2 s; lifted (low-key original) |
+| 9.45–11.70 | romba call pesurappa, romba noise kidaikkum | Young man upset while talking on the phone — https://mixkit.co/free-stock-video/young-man-upset-while-talking-on-the-phone-8742/ | src 2.4 s; lifted; *call* pill + noise bars on top |
+
+He stays on camera for the hook's first words, "disturbance-aa irukka?", "intha maathiri time-la namma vanthu" and from
+"so, athukkuthaan" to the end.
+- `make_broll.py` streams each 4K file, trims it to the line, crops 9:16 around the person and pre-grades it toward v03.
+  It writes `edit/assets/v/broll_<id>.mp4` and `broll.json` (source, licence, in-points, crops, output windows, also
+  copied into `edit/timing_map_v04.json`).
+- In the composition each insert is its own `<video>` (track 5) above the plate. v03's `grade_v03.json` is applied to the
+  plate and to every insert with `media-treatment`, so they match.
+- Also fixed: a tiny leftover orange dot from the collapsed noise bars (present since v01) now hides fully.
+- Rebuild: `python3 make_broll.py && VERSION=v04 python3 build.py`, then apply `grade_v03.json` to `#plate #br232 #br918
+  #br239 #br8742` with `media-treatment`, then render and `master_preview.sh` as for v03.
 
 ## v03 — creator's note on v02: "Its too bright make it simple and nee make the background dark make it cinematic"
 Same cut, captions, graphics, music and SFX; audio is v02's isolated-voice mix (`mix_v02.wav`).

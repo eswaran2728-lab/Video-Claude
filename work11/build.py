@@ -14,7 +14,10 @@ import os, json, random, html
 # Its creative grade is then persisted on #plate with `hyperframes media-treatment` (grade_v02.json, see README).
 VERSION = os.environ.get("VERSION", "v01"); SUF = "" if VERSION == "v01" else "_" + VERSION
 # v03: dark-background cinematic plate (plate_v03.mp4) + v03 grade (grade_v03.json); audio = the v02 isolated-voice mix
-ASUF = {"v01": "", "v02": "_v02", "v03": "_v02"}[VERSION]
+ASUF = {"v01": "", "v02": "_v02", "v03": "_v02", "v04": "_v02"}[VERSION]
+# v04 = v03 + licensed web b-roll on the problem lines (make_broll.py -> broll.json); plate stays plate_v03.mp4
+PSUF = {"v04": "_v03"}.get(VERSION, SUF)
+BROLL = json.load(open("broll.json")) if VERSION == "v04" else []
 import plan
 from captions import CAPS
 S = plan.s2o
@@ -106,7 +109,7 @@ tw("#nword", T["dist"], 0.25, {"scaleX": 1.07}, "power2.out")
 # reset on "okay": the word and the bars collapse into the centre dot, which then hides
 tw("#nword", T["reset"], 0.28, {"scale": 0.2, "opacity": 0}, "power3.in")
 tw("#nzp", T["reset"], 0.28, {"attr": {"d": bars_d(FLAT)}}, "power3.in")
-tw("#nz", T["reset"], 0.30, {"scaleX": 0.02}, "power3.in")
+tw("#nz", T["reset"], 0.30, {"scaleX": 0.02}, "power3.in"); st("#nz", T["reset"] + 0.30, {"opacity": 0})   # no leftover dot
 I('gsap.set("#dot",{opacity:0,scale:0,x:0,y:0});')
 st("#dot", T["reset"] + 0.22, {"opacity": 1, "scale": 1}); tw("#dot", T["reset"] + 0.30, 0.22, {"scale": 0, "opacity": 0}, "power2.in")
 
@@ -266,8 +269,8 @@ body = f'''<!doctype html>
   </head>
   <body>
     <div id="root" data-composition-id="main" data-width="1080" data-height="1920" data-start="0" data-duration="{TOTAL}">
-      <video id="plate" class="clip vid" src="assets/v/plate{SUF}.mp4" muted playsinline data-start="0" data-duration="{TOTAL}" data-track-index="1" style="z-index:1"></video>
-      <audio id="mix" src="assets/mix{ASUF}.wav" data-start="0" data-duration="{TOTAL}" data-track-index="2" data-volume="1"></audio>
+      <video id="plate" class="clip vid" src="assets/v/plate{PSUF}.mp4" muted playsinline data-start="0" data-duration="{TOTAL}" data-track-index="1" style="z-index:1"></video>
+{"".join(f'      <video id="br{x["id"]}" class="clip vid" src="assets/v/broll_{x["id"]}.mp4" muted playsinline data-start="{x["out_start"]}" data-duration="{R(x["out_end"] - x["out_start"])}" data-track-index="5" style="z-index:2"></video>{chr(10)}' for x in BROLL)}      <audio id="mix" src="assets/mix{ASUF}.wav" data-start="0" data-duration="{TOTAL}" data-track-index="2" data-volume="1"></audio>
       <div id="gfx" class="clip" data-start="0" data-duration="{TOTAL}" data-track-index="3">
         <div id="nz"><svg viewBox="0 0 {BW + 20} 160" width="{BW + 20}" height="160"><path id="nzp" d="{bars_d(FLAT)}" /></svg></div>
         <div id="nword">NOISE</div>
@@ -309,6 +312,7 @@ tm = {"version": VERSION, "total": TOTAL, "fps": 30, "source": "src/source.mp4 (
       "graphics": {k: R(v) for k, v in T.items()},
       "ring_track_window_out": [ring[0][0], ring[-1][0]],
       "sfx": json.load(open("edit/cues.json"))["cues"],
+      "broll": BROLL,
       "music": "Digital Clouds - Alejandro Magana (A. M.), Mixkit #175, Mixkit Stock Music Free License; from 0.0 s, bed under speech"}
 json.dump(tm, open(f"edit/timing_map{SUF}.json", "w"), indent=1, ensure_ascii=False)
 print("built", VERSION, TOTAL, len(js), "timeline entries;", len(ring), "ring keys")
