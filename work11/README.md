@@ -1,11 +1,20 @@
 # Earbuds (noise cancelling) affiliate reel — HyperFrames, 1080x1920, 30 fps, 32.57 s
 
-**Current: preview v05 (waiting for approval):** `PREVIEW_earbuds_noise_cancel_v05.mp4` (720x1280, -14 LUFS). No final
-export has been rendered and nothing is published.
+**Final (approved v05, creator: "Proceed"):** `FINAL_Earbuds_Noise_Cancel_v05_1080x1920.mp4`:
+- 1080x1920, 30 fps, 32.57 s, H.264 about 20 Mb/s, AAC 256k 48 kHz, −14.0 LUFS / −2.1 dBFS;
+- not in git (82 MB); rebuild with the v05 steps, then
+  `cd edit && npx --yes hyperframes@0.8.193 render --quality high --fps 30 -o ../renders/final_v05.mp4`,
+  then `./master_final.sh renders/final_v05.mp4 FINAL_Earbuds_Noise_Cancel_v05_1080x1920.mp4`;
+- checked:
+  - full decode with 0 errors, no black frames;
+  - audio aligned with the dialogue within 3 ms;
+  - frames match the approved v05 preview (mean difference 1.6–2.5 levels at 6 sample times, encode quality only);
+  - first and last frames clean (`sheets/final_first_last.jpg`).
+- Nothing is published, scheduled or uploaded. The five unresolved caption words below are as shown in the preview.
 
 | version | file | what changed |
 |---|---|---|
-| v05 | `PREVIEW_earbuds_noise_cancel_v05.mp4` | creator on v04: "Its good but the colour grading look like artificial": natural light-falloff background, milder grade, b-roll matched |
+| v05 (final) | `PREVIEW_earbuds_noise_cancel_v05.mp4`, `FINAL_Earbuds_Noise_Cancel_v05_1080x1920.mp4` | creator on v04: "Its good but the colour grading look like artificial": natural light-falloff background, milder grade, b-roll matched |
 | v04 | `PREVIEW_earbuds_noise_cancel_v04.mp4` | creator's note "add broll from web that relavent to wht i talk": four licensed Mixkit inserts on the problem lines, graded to v03 |
 | v03 | `PREVIEW_earbuds_noise_cancel_v03.mp4` | creator's note on v02 "too bright, make it simple, make the background dark, make it cinematic": matte-darkened background, simpler cinematic grade, no face-light; v02's isolated voice kept |
 | v02 | `PREVIEW_earbuds_noise_cancel_v02.mp4` | creator's note "do colour grading, if possible isolate my voice": stronger grade + tracked face-light, DeepFilterNet3 voice isolation |
