@@ -1,14 +1,32 @@
 # Earbuds (noise cancelling) affiliate reel — HyperFrames, 1080x1920, 30 fps, 32.57 s
 
-**Current: preview v04 (waiting for approval):** `PREVIEW_earbuds_noise_cancel_v04.mp4` (720x1280, -14 LUFS). No final
+**Current: preview v05 (waiting for approval):** `PREVIEW_earbuds_noise_cancel_v05.mp4` (720x1280, -14 LUFS). No final
 export has been rendered and nothing is published.
 
 | version | file | what changed |
 |---|---|---|
+| v05 | `PREVIEW_earbuds_noise_cancel_v05.mp4` | creator on v04: "Its good but the colour grading look like artificial": natural light-falloff background, milder grade, b-roll matched |
 | v04 | `PREVIEW_earbuds_noise_cancel_v04.mp4` | creator's note "add broll from web that relavent to wht i talk": four licensed Mixkit inserts on the problem lines, graded to v03 |
 | v03 | `PREVIEW_earbuds_noise_cancel_v03.mp4` | creator's note on v02 "too bright, make it simple, make the background dark, make it cinematic": matte-darkened background, simpler cinematic grade, no face-light; v02's isolated voice kept |
 | v02 | `PREVIEW_earbuds_noise_cancel_v02.mp4` | creator's note "do colour grading, if possible isolate my voice": stronger grade + tracked face-light, DeepFilterNet3 voice isolation |
 | v01 | `PREVIEW_earbuds_noise_cancel_v01.mp4` | first cut (unchanged; rebuild with VERSION unset) |
+
+## v05 — creator's note on v04: "Its good but the colour grading look like artificial"
+Same edit, captions, graphics, audio and b-roll choices as v04; only the look changes.
+- **Why v04 looked artificial:** the room was cut down to 30% with a hard matte edge, so he looked pasted onto a dark
+  backdrop. A strong grade (contrast, teal/warm split, heavy vignette) sat on top. A wide-feather version was also tried
+  and rejected: it left a glow around the hair (`sheets/natural_bg_options.jpg`).
+- **Now: light falloff.** The background is 80% bright right beside him and eases (smoothstep over 220 px) to 42% far
+  from him, with saturation easing to 75%. The matte edge stays tight (3×3 erode, 2.5 px feather), so there is no halo and
+  no step at his outline (`sheets/natural_bg_falloff.jpg`, right column; `VERSION=v05 python3 make_plate.py`).
+- **Milder grade** (`grade_v05.json`):
+  - contrast +0.08, highlights −0.18, blacks −0.04, saturation −0.05;
+  - faint teal shadows / warm highlights (0.035 / 0.025);
+  - vignette 0.22, grain 0.015.
+- **B-roll** recut with a natural pre-grade (no pre-darkening): `VERSION=v05 python3 make_broll.py` →
+  `broll_<id>_v05.mp4` and `broll_v05.json`. v04's files are kept.
+- Rebuild: `VERSION=v05 python3 make_plate.py && VERSION=v05 python3 make_broll.py && VERSION=v05 python3 build.py`,
+  then apply `grade_v05.json` to `#plate #br232 #br918 #br239 #br8742` with `media-treatment`, then render and master.
 
 ## v04 — creator's note on v03: "Add broll from web that relavent to wht i talk"
 v03 (dark cinematic plate, isolated voice, same cut/captions/graphics) plus four web b-roll inserts. They are used only where he

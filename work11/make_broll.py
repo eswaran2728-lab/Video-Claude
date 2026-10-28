@@ -3,7 +3,8 @@
 # its own page for "Mixkit Stock Video Free License" (commercial + social use, no attribution required), 2026-10-28.
 # Streamed from the 4K file, trimmed to the line, cropped 9:16 around the person, pre-darkened toward the v03 look
 # (the plate's media-treatment grade is applied to these elements too). -> edit/assets/v/broll_<id>.mp4 (1080x1920, 30 fps)
-import subprocess, json, plan
+import os, subprocess, json, plan
+VERSION = os.environ.get("VERSION", "v04")   # v05: milder, natural pre-grade (no pre-darkening)
 S = plan.s2o
 BROLL = [  # id, page slug, what he says at that moment, src_in (s), crop x in the 3840-wide frame, out window
     (232, "woman-walks-through-the-city-speaking-on-the-phone-232", "noise romba irukkumna (background noise on a call)", 2.0, 1560, S(1.86), S(3.72)),
@@ -13,13 +14,14 @@ BROLL = [  # id, page slug, what he says at that moment, src_in (s), crop x in t
 ]
 LIFT = {239: 0.17, 8742: 0.16}              # low-key originals: lift so faces read after the shared v03 grade
 LOOK = "eq=brightness={b}:contrast=1.08:saturation=0.75,colorbalance=rs=-0.04:bs=0.05:rh=0.03:bh=-0.02,vignette=PI/4.5"
+LOOK_V05 = "eq=brightness={b}:contrast=1.03:saturation=0.9,colorbalance=rs=-0.015:bs=0.015,vignette=PI/6"
 meta = []
 for vid, slug, line, s_in, cx, o0, o1 in BROLL:
-    d = round(o1 - o0, 3); out = f"edit/assets/v/broll_{vid}.mp4"
+    d = round(o1 - o0, 3); out = f"edit/assets/v/broll_{vid}{'_v05' if VERSION == 'v05' else ''}.mp4"   # v04 files kept
     subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-ss", str(s_in), "-i", f"https://assets.mixkit.co/videos/{vid}/{vid}-2160.mp4",
-                    "-t", str(d + 0.1), "-an", "-vf", f"fps=30,crop=1215:2160:{cx}:0,scale=1080:1920:flags=lanczos,{LOOK.format(b=round(-0.05 + LIFT.get(vid, 0), 3))},format=yuv420p",
+                    "-t", str(d + 0.1), "-an", "-vf", f"fps=30,crop=1215:2160:{cx}:0,scale=1080:1920:flags=lanczos,{(LOOK_V05 if VERSION == "v05" else LOOK).format(b=round((0.0 if VERSION == "v05" else -0.05) + LIFT.get(vid, 0) * (0.6 if VERSION == "v05" else 1), 3))},format=yuv420p",
                     "-c:v", "libx264", "-crf", "15", "-preset", "medium", "-g", "15", "-bf", "0", out], check=True)
-    meta.append({"id": vid, "page": f"https://mixkit.co/free-stock-video/{slug}/", "licence": "Mixkit Stock Video Free License",
+    meta.append({"id": vid, "file": out.replace("edit/", ""), "page": f"https://mixkit.co/free-stock-video/{slug}/", "licence": "Mixkit Stock Video Free License",
                  "line": line, "src_in": s_in, "crop": f"1215x2160 at x={cx} of 3840x2160", "out_start": o0, "out_end": o1})
     print(vid, o0, o1, d)
-json.dump(meta, open("broll.json", "w"), indent=1)
+json.dump(meta, open("broll_v05.json" if VERSION == "v05" else "broll.json", "w"), indent=1)

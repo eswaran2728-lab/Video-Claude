@@ -1,0 +1,3 @@
+{"adjust":{"exposure":-0.03,"contrast":0.08,"highlights":-0.18,"shadows":0.0,"whites":-0.02,"blacks":-0.04,"temperature":0.01,"tint":0.0,"vibrance":0.0,"saturation":-0.05},
+ "wheels":{"shadows":{"hue":205,"amount":0.035,"level":0},"midtones":{"hue":0,"amount":0,"level":0},"highlights":{"hue":38,"amount":0.025,"level":0}},
+ "details":{"vignette":0.22,"vignetteMidpoint":0.5,"vignetteFeather":0.8,"grain":0.015}}

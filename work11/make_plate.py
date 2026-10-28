@@ -14,7 +14,11 @@ def read_gray(p, w=720, h=1280):
     raw = subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-i", p, "-f", "rawvideo", "-pix_fmt", "gray", "-"], capture_output=True, check=True).stdout
     return np.frombuffer(raw, np.uint8).reshape(-1, h, w)
 MATTE = None
-if VERSION == "v03":
+# v05 (creator on v04: "the colour grading look like artificial"): the hard 30% darkening read as a cut-out. Now a light
+# falloff: background gain 0.80 right beside him, easing (smoothstep over 220 px) to 0.42 far from him, saturation easing
+# to 0.75; tight matte edge (3x3 erode, 2.5 px feather) so there is no glow/halo around the hair.
+FALL = dict(g_near=0.80, g_far=0.42, D=220, sat=0.75) if VERSION == "v05" else None
+if VERSION in ("v03", "v05"):
     # BiRefNet only: u2net's outline bulges past the hair onto the wall (a light halo once the wall is darkened). Between
     # the 10 fps BiRefNet keyframes take the union of the two neighbours, so a moving hand/case is never darkened.
     bir = read_gray("src/matte_bir.mp4"); K = np.ones((5, 5), np.uint8)
@@ -23,6 +27,14 @@ if VERSION == "v03":
         m = b0 if i % 3 == 0 else np.maximum(b0, bir[min(k + 1, len(bir) - 1)])
         return cv2.erode(m, K).astype(np.float32) / 255                                   # pull the edge in ~2 px
     MATTE = combined
+def falloff_bg(img, i):
+    k = i // 3; m = bir[min(k, len(bir) - 1)] if i % 3 == 0 else np.maximum(bir[min(k, len(bir) - 1)], bir[min(k + 1, len(bir) - 1)])
+    a = cv2.GaussianBlur(cv2.erode(m, np.ones((3, 3), np.uint8)).astype(np.float32) / 255, (0, 0), 2.5)[..., None]
+    d = cv2.distanceTransform((m < 128).astype(np.uint8), cv2.DIST_L2, 5)
+    u = np.clip(d / FALL["D"], 0, 1); u = u * u * (3 - 2 * u)
+    gain = (FALL["g_near"] + (FALL["g_far"] - FALL["g_near"]) * u)[..., None]; sat = (1 - (1 - FALL["sat"]) * u)[..., None]
+    f = img.astype(np.float32); g = f.mean(axis=2, keepdims=True)
+    return np.clip(f * a + (g + (f - g) * sat) * gain * (1 - a), 0, 255).astype(np.uint8)
 def dark_bg(img, i):
     a = (MATTE(max(0, i - 1)) + 2 * MATTE(i) + MATTE(min(i + 1, len(F) - 1))) / 4      # light temporal smoothing
     a = cv2.GaussianBlur(a, (0, 0), 1.4)[..., None]                                     # soft edge (hair, fingers)
@@ -40,7 +52,7 @@ while True:
     ok, f = cap.read()
     if not ok: break
     F.append(f)
-N = round(plan.TOTAL * plan.FPS); G = open("grade_ffmpeg_v03.txt" if VERSION == "v03" else "grade_ffmpeg.txt").read().strip()
+N = round(plan.TOTAL * plan.FPS); G = open("grade_ffmpeg_v03.txt" if VERSION in ("v03", "v05") else "grade_ffmpeg.txt").read().strip()
 enc = subprocess.Popen(["ffmpeg", "-nostdin", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "bgr24", "-s", "1080x1920", "-r", "30",
                         "-i", "-", "-vf", G + ",format=yuv420p", "-c:v", "libx264", "-crf", "12", "-preset", "medium", "-g", "15",
                         "-bf", "0", "-movflags", "+faststart", OUT], stdin=subprocess.PIPE)
@@ -49,7 +61,7 @@ for n in range(N):
     t = n / plan.FPS; s_src = plan.o2s(t); i = min(len(F) - 1, round(s_src * plan.FPS))
     s, fx, fy = plan.framing(t); k = plan.BASE * s
     M = np.float32([[k, 0, fx * (1 - s)], [0, k, fy * (1 - s)]])
-    src = face_light(F[i], i) if FACE else (dark_bg(F[i], i) if MATTE else F[i])
+    src = face_light(F[i], i) if FACE else (falloff_bg(F[i], i) if FALL else dark_bg(F[i], i) if MATTE else F[i])
     enc.stdin.write(cv2.warpAffine(src, M, (1080, 1920), flags=cv2.INTER_LANCZOS4, borderMode=cv2.BORDER_REPLICATE).tobytes())
     if n % 30 == 0: log.append((round(t, 2), i, round(s, 3)))
 enc.stdin.close(); enc.wait()

@@ -14,10 +14,11 @@ import os, json, random, html
 # Its creative grade is then persisted on #plate with `hyperframes media-treatment` (grade_v02.json, see README).
 VERSION = os.environ.get("VERSION", "v01"); SUF = "" if VERSION == "v01" else "_" + VERSION
 # v03: dark-background cinematic plate (plate_v03.mp4) + v03 grade (grade_v03.json); audio = the v02 isolated-voice mix
-ASUF = {"v01": "", "v02": "_v02", "v03": "_v02", "v04": "_v02"}[VERSION]
+ASUF = {"v01": "", "v02": "_v02", "v03": "_v02", "v04": "_v02", "v05": "_v02"}[VERSION]
+# v05 = v04 with the natural-falloff plate (plate_v05.mp4), milder grade (grade_v05.json) and b-roll recut to match
 # v04 = v03 + licensed web b-roll on the problem lines (make_broll.py -> broll.json); plate stays plate_v03.mp4
 PSUF = {"v04": "_v03"}.get(VERSION, SUF)
-BROLL = json.load(open("broll.json")) if VERSION == "v04" else []
+BROLL = json.load(open({"v04": "broll.json", "v05": "broll_v05.json"}[VERSION])) if VERSION in ("v04", "v05") else []
 import plan
 from captions import CAPS
 S = plan.s2o
@@ -270,7 +271,7 @@ body = f'''<!doctype html>
   <body>
     <div id="root" data-composition-id="main" data-width="1080" data-height="1920" data-start="0" data-duration="{TOTAL}">
       <video id="plate" class="clip vid" src="assets/v/plate{PSUF}.mp4" muted playsinline data-start="0" data-duration="{TOTAL}" data-track-index="1" style="z-index:1"></video>
-{"".join(f'      <video id="br{x["id"]}" class="clip vid" src="assets/v/broll_{x["id"]}.mp4" muted playsinline data-start="{x["out_start"]}" data-duration="{R(x["out_end"] - x["out_start"])}" data-track-index="5" style="z-index:2"></video>{chr(10)}' for x in BROLL)}      <audio id="mix" src="assets/mix{ASUF}.wav" data-start="0" data-duration="{TOTAL}" data-track-index="2" data-volume="1"></audio>
+{"".join(f'      <video id="br{x["id"]}" class="clip vid" src="{x.get("file", "assets/v/broll_" + str(x["id"]) + ".mp4")}" muted playsinline data-start="{x["out_start"]}" data-duration="{R(x["out_end"] - x["out_start"])}" data-track-index="5" style="z-index:2"></video>{chr(10)}' for x in BROLL)}      <audio id="mix" src="assets/mix{ASUF}.wav" data-start="0" data-duration="{TOTAL}" data-track-index="2" data-volume="1"></audio>
       <div id="gfx" class="clip" data-start="0" data-duration="{TOTAL}" data-track-index="3">
         <div id="nz"><svg viewBox="0 0 {BW + 20} 160" width="{BW + 20}" height="160"><path id="nzp" d="{bars_d(FLAT)}" /></svg></div>
         <div id="nword">NOISE</div>
