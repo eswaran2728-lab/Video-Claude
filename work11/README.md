@@ -31,7 +31,7 @@ Same cut, captions, graphics, music and SFX as v01.
     - violet in the shadows (ties to the case), warm highlights;
     - HSL secondaries: case purple +18% saturation, bright tan shirt −14% saturation so your face leads;
     - vignette 0.32, light grain.
-  - Before/after: `sheets/grade_v01_vs_v02.jpg`, `sheets/grade_v02_steps.jpg`. The grade was confirmed in the render:
+  - Before/after of the final grade: `sheets/grade_v02_steps.jpg` (v01 | face-light only | v02). `sheets/grade_v01_vs_v02.jpg` shows a first, weaker try that was replaced. The grade was confirmed in the render:
     the wall region differs by about 24 levels from the ungraded plate.
 - Rebuild v02 (after the v01 steps that make `src/dialogue_raw.wav`, `track.json`):
   ```
