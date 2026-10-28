@@ -1,0 +1,10 @@
+src/dialogue_raw.wav en 0.582 97 | Do you feel disturbed because there is a lot of noise in the background while you are talking? Okay, when we go from the office to the car, we are talking a lot
+src/dialogue_raw.wav ta 0.475 42 | கல் பேசும் போது, backgroundтовுடன் noise வந்தால் உங்களுக்கு disturbance ஆயிற்கா போது competitive அப்போதிஸிலந்தே சரி கார்ல போறிரைப்பல இந்த மாதிரி தாமலRednerwechs
+src/voice_df_full.wav en 0.607 110 | When you are talking in a call and there is a lot of noise in the background, do you feel disturbed? Okay, when we are in the office or when we are going in the
+src/voice_df_full.wav ta 0.624 54 | கொள் பேசும்போது eran林லி சாதாதிரம் misleading இருக்கென்றால் zero உங்களுக்கு disturbance ஆ இருக்கா, நம்ம office வந்து ஆனாலும் சரி, carல போறப்ப இந்த மாதிரி timeல ந
+/usr/local/lib/python3.13/dist-packages/numpy/_core/fromnumeric.py:3862: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/usr/local/lib/python3.13/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+src/voice_df_lim24.wav en nan 0 | 
+src/voice_df_lim24.wav ta nan 0 | 

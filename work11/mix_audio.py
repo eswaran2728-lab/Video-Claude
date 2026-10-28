@@ -1,14 +1,15 @@
 # Mix -> edit/assets/mix.wav (stereo 48 kHz): dialogue (about -16 LUFS from make_dialogue.py), music bed ducked under speech
 # (Digital Clouds, Mixkit #175, Mixkit Stock Music Free License), SFX from edit/cues.json with each sound's transient
 # (its peak sample) placed on the cue frame. Final loudness is set by master_preview.sh / master_final.sh.
-import json, subprocess, numpy as np, soundfile as sf, plan
+import os, json, subprocess, numpy as np, soundfile as sf, plan
+VERSION = os.environ.get("VERSION", "v01"); SUF = "" if VERSION == "v01" else "_" + VERSION   # v02: isolated voice
 SR = 48000; N = round(plan.TOTAL * SR)
 def load(p, ss=0.0):
     raw = subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-ss", str(ss), "-i", p, "-ac", "2", "-ar", str(SR), "-f", "f32le", "-"],
                          capture_output=True, check=True).stdout
     return np.frombuffer(raw, np.float32).reshape(-1, 2).astype(np.float64)
 db = lambda g: 10 ** (g / 20)
-voice = load("edit/assets/dialogue.wav")[:N]; voice = np.pad(voice, ((0, N - len(voice)), (0, 0))) * db(0.0)
+voice = load(f"edit/assets/dialogue{SUF}.wav")[:N]; voice = np.pad(voice, ((0, N - len(voice)), (0, 0))) * db(0.0)
 # speech envelope -> duck curve (bed -22 dB under speech, -15 dB in gaps >= 0.3 s and in the end hold)
 h = SR // 50; e = np.sqrt(np.convolve(voice[:, 0] ** 2, np.ones(h) / h, "same"))
 active = 20 * np.log10(e + 1e-9) > -38
@@ -31,9 +32,9 @@ for c in json.load(open("edit/cues.json"))["cues"]:
 mix = voice + music + sfx
 pk = np.abs(mix).max(); print("peak dBFS", round(20 * np.log10(pk), 2))
 if pk > 0.95: mix *= 0.95 / pk
-sf.write("src/mix_prelimit.wav", mix, SR, subtype="FLOAT")
+sf.write(f"src/mix_prelimit{SUF}.wav", mix, SR, subtype="FLOAT")
 # a few consonant peaks (the first "call", 0.05 s) sit 16 dB over the speech level: a -9 dBFS bus limiter keeps the mix
 # crest near 12 dB so the 2-pass loudnorm stays linear (no pumping)
-subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-i", "src/mix_prelimit.wav", "-af",
-                "alimiter=limit=0.355:attack=3:release=60:level=false", "-ar", str(SR), "-c:a", "pcm_s24le", "edit/assets/mix.wav"], check=True)
-sf.write("edit/assets/stem_music.wav", music, SR, subtype="PCM_16"); sf.write("edit/assets/stem_sfx.wav", sfx, SR, subtype="PCM_16")
+subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-i", f"src/mix_prelimit{SUF}.wav", "-af",
+                "alimiter=limit=0.355:attack=3:release=60:level=false", "-ar", str(SR), "-c:a", "pcm_s24le", f"edit/assets/mix{SUF}.wav"], check=True)
+sf.write(f"edit/assets/stem_music{SUF}.wav", music, SR, subtype="PCM_16"); sf.write(f"edit/assets/stem_sfx{SUF}.wav", sfx, SR, subtype="PCM_16")

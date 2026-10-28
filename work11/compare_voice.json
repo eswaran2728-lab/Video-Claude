@@ -1,0 +1,32 @@
+{
+ "src/dialogue_raw.wav|en": {
+  "mean_p": 0.582,
+  "words": 97,
+  "text": "Do you feel disturbed because there is a lot of noise in the background while you are talking? Okay, when we go from the office to the car, we are talking a lot and there will be a lot of noise cancelling. So that's why I purchased these earbuds from TikTok. Because there are two microphones and noise cancelling in these earbuds, your call will be noise cancelled and when you are talking, So if you want someone to be clear, you also want them to speak clearly, then click on the link below and purchase it."
+ },
+ "src/dialogue_raw.wav|ta": {
+  "mean_p": 0.475,
+  "words": 42,
+  "text": "கல் பேசும் போது, backgroundтовுடன் noise வந்தால் உங்களுக்கு disturbance ஆயிற்கா போது competitive அப்போதிஸிலந்தே சரி கார்ல போறிரைப்பல இந்த மாதிரி தாமலRednerwechselலல நம்ம வந்து ரொம்ப கொள் வைத்துரப்பே கொள் வைத்துருக்கழான்SPEAK்ன்னார்க்காம் அதுக்குத்தான் நான் அந்த ór sürாadt்சைச் puisquỏ ஹணர் OAW το கால Reality worries பச்சு perspectives வநுக்கப்பட்டுட்டிokolம் தக்கிள்ளுக்கு. வணக்கம்!"
+ },
+ "src/voice_df_full.wav|en": {
+  "mean_p": 0.607,
+  "words": 110,
+  "text": "When you are talking in a call and there is a lot of noise in the background, do you feel disturbed? Okay, when we are in the office or when we are going in the car, we are talking in a call and there is a lot of noise. So that's why I purchased these earbuds from TikTok. Because there are two microphones in these earbuds, your call is noise-cancelled and when you are talking, some people want it to be clear and some people want it to be clear for you. So I'm going to clean that, and I'll be right back to explain it for you guys."
+ },
+ "src/voice_df_full.wav|ta": {
+  "mean_p": 0.624,
+  "words": 54,
+  "text": "கொள் பேசும்போது eran林லி சாதாதிரம் misleading இருக்கென்றால் zero உங்களுக்கு disturbance ஆ இருக்கா, நம்ம office வந்து ஆனாலும் சரி, carல போறப்ப இந்த மாதிரி timeல நாங்க வந்து ரொம்ப call பேசுற போது, கொம்ம noise cancelன்றங்க இருக்கோ. So அதுக்குத்தான் நான் இந்த earbuds TikTokல வந்து purchase புண்ட earbudsல noise cancelling and then two microphones இருக்கனால வீண்க்கல் உங்களின்widக்கிஸ் நாற்காணி அடுத்துவிடும் பார்த்து போகும்"
+ },
+ "src/voice_df_lim24.wav|en": {
+  "mean_p": NaN,
+  "words": 0,
+  "text": ""
+ },
+ "src/voice_df_lim24.wav|ta": {
+  "mean_p": NaN,
+  "words": 0,
+  "text": ""
+ }
+}

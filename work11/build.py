@@ -9,7 +9,10 @@
 #          "thelivaa vilangum" / "ungalukkum avanga pesurathu"  the line links NEENGA and AVANGA, pulse each way; "clear-aa"
 #   CTA    "keezha link-ku click panni"  the link strip folds into a link pill with a down arrow; pressed on "click"
 # Graphics are explanations (drawn shapes), not product evidence; the product shown is only his real footage.
-import json, random, html
+import os, json, random, html
+# v02 (VERSION=v02): same cut/graphics/captions; face-lit plate (plate_v02.mp4) and the voice-isolated mix (mix_v02.wav).
+# Its creative grade is then persisted on #plate with `hyperframes media-treatment` (grade_v02.json, see README).
+VERSION = os.environ.get("VERSION", "v01"); SUF = "" if VERSION == "v01" else "_" + VERSION
 import plan
 from captions import CAPS
 S = plan.s2o
@@ -261,8 +264,8 @@ body = f'''<!doctype html>
   </head>
   <body>
     <div id="root" data-composition-id="main" data-width="1080" data-height="1920" data-start="0" data-duration="{TOTAL}">
-      <video id="plate" class="clip vid" src="assets/v/plate.mp4" muted playsinline data-start="0" data-duration="{TOTAL}" data-track-index="1" style="z-index:1"></video>
-      <audio id="mix" src="assets/mix.wav" data-start="0" data-duration="{TOTAL}" data-track-index="2" data-volume="1"></audio>
+      <video id="plate" class="clip vid" src="assets/v/plate{SUF}.mp4" muted playsinline data-start="0" data-duration="{TOTAL}" data-track-index="1" style="z-index:1"></video>
+      <audio id="mix" src="assets/mix{SUF}.wav" data-start="0" data-duration="{TOTAL}" data-track-index="2" data-volume="1"></audio>
       <div id="gfx" class="clip" data-start="0" data-duration="{TOTAL}" data-track-index="3">
         <div id="nz"><svg viewBox="0 0 {BW + 20} 160" width="{BW + 20}" height="160"><path id="nzp" d="{bars_d(FLAT)}" /></svg></div>
         <div id="nword">NOISE</div>
@@ -296,7 +299,7 @@ body = f'''<!doctype html>
 open("edit/index.html", "w").write(body)
 
 # ---------------- timing map ----------------
-tm = {"version": "v01", "total": TOTAL, "fps": 30, "source": "src/source.mp4 (Drive 3b5b7d85628e467eaa9b80b3eb762869.mp4, both copies identical)",
+tm = {"version": VERSION, "total": TOTAL, "fps": 30, "source": "src/source.mp4 (Drive 3b5b7d85628e467eaa9b80b3eb762869.mp4, both copies identical)",
       "edl": [{"out_start": a, "out_end": b, "src_in": c, "src_out": d} for a, b, c, d in plan.SEG_OUT],
       "head": "src 0.40-0.50 shown as a hold of src 0.50 (first sharp frame); end hold: last frame frozen %.3f s" % plan.END_HOLD,
       "framing": [{"out": R(a), "scale": b, "focus": [c, d]} for a, b, c, d in plan.FRAMING],
@@ -305,5 +308,5 @@ tm = {"version": "v01", "total": TOTAL, "fps": 30, "source": "src/source.mp4 (Dr
       "ring_track_window_out": [ring[0][0], ring[-1][0]],
       "sfx": json.load(open("edit/cues.json"))["cues"],
       "music": "Digital Clouds - Alejandro Magana (A. M.), Mixkit #175, Mixkit Stock Music Free License; from 0.0 s, bed under speech"}
-json.dump(tm, open("edit/timing_map.json", "w"), indent=1, ensure_ascii=False)
-print("built v01", TOTAL, len(js), "timeline entries;", len(ring), "ring keys")
+json.dump(tm, open(f"edit/timing_map{SUF}.json", "w"), indent=1, ensure_ascii=False)
+print("built", VERSION, TOTAL, len(js), "timeline entries;", len(ring), "ring keys")
