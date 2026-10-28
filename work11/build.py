@@ -13,6 +13,8 @@ import os, json, random, html
 # v02 (VERSION=v02): same cut/graphics/captions; face-lit plate (plate_v02.mp4) and the voice-isolated mix (mix_v02.wav).
 # Its creative grade is then persisted on #plate with `hyperframes media-treatment` (grade_v02.json, see README).
 VERSION = os.environ.get("VERSION", "v01"); SUF = "" if VERSION == "v01" else "_" + VERSION
+# v03: dark-background cinematic plate (plate_v03.mp4) + v03 grade (grade_v03.json); audio = the v02 isolated-voice mix
+ASUF = {"v01": "", "v02": "_v02", "v03": "_v02"}[VERSION]
 import plan
 from captions import CAPS
 S = plan.s2o
@@ -265,7 +267,7 @@ body = f'''<!doctype html>
   <body>
     <div id="root" data-composition-id="main" data-width="1080" data-height="1920" data-start="0" data-duration="{TOTAL}">
       <video id="plate" class="clip vid" src="assets/v/plate{SUF}.mp4" muted playsinline data-start="0" data-duration="{TOTAL}" data-track-index="1" style="z-index:1"></video>
-      <audio id="mix" src="assets/mix{SUF}.wav" data-start="0" data-duration="{TOTAL}" data-track-index="2" data-volume="1"></audio>
+      <audio id="mix" src="assets/mix{ASUF}.wav" data-start="0" data-duration="{TOTAL}" data-track-index="2" data-volume="1"></audio>
       <div id="gfx" class="clip" data-start="0" data-duration="{TOTAL}" data-track-index="3">
         <div id="nz"><svg viewBox="0 0 {BW + 20} 160" width="{BW + 20}" height="160"><path id="nzp" d="{bars_d(FLAT)}" /></svg></div>
         <div id="nword">NOISE</div>

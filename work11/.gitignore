@@ -19,3 +19,4 @@ sheets/snap*/*.png
 src/dialogue_raw.wav
 edit/assets/stem_*.wav
 sheets/test_*.png
+src/mt/
