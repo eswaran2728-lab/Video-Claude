@@ -1,0 +1,99 @@
+{
+ "cues": [
+  {
+   "t": 0.0,
+   "sfx": "hook-impact",
+   "gain_db": -16
+  },
+  {
+   "t": 1.46,
+   "sfx": "thock",
+   "gain_db": -9
+  },
+  {
+   "t": 3.64,
+   "sfx": "tick",
+   "gain_db": -12
+  },
+  {
+   "t": 5.27,
+   "sfx": "ui-pop",
+   "gain_db": -14
+  },
+  {
+   "t": 6.43,
+   "sfx": "ui-pop",
+   "gain_db": -14
+  },
+  {
+   "t": 9.75,
+   "sfx": "ui-click",
+   "gain_db": -15
+  },
+  {
+   "t": 12.65,
+   "sfx": "zoom-swish",
+   "gain_db": -15
+  },
+  {
+   "t": 13.5,
+   "sfx": "ui-pop",
+   "gain_db": -12
+  },
+  {
+   "t": 15.833,
+   "sfx": "camera-shutter-light",
+   "gain_db": -17
+  },
+  {
+   "t": 17.17,
+   "sfx": "ui-pop",
+   "gain_db": -13
+  },
+  {
+   "t": 18.06,
+   "sfx": "latch",
+   "gain_db": -13
+  },
+  {
+   "t": 18.51,
+   "sfx": "ui-pop",
+   "gain_db": -13
+  },
+  {
+   "t": 21.16,
+   "sfx": "ui-pop",
+   "gain_db": -14
+  },
+  {
+   "t": 22.8,
+   "sfx": "latch",
+   "gain_db": -12
+  },
+  {
+   "t": 25.64,
+   "sfx": "tick",
+   "gain_db": -14
+  },
+  {
+   "t": 26.72,
+   "sfx": "tick",
+   "gain_db": -14
+  },
+  {
+   "t": 28.38,
+   "sfx": "clean-ding",
+   "gain_db": -15
+  },
+  {
+   "t": 29.82,
+   "sfx": "ui-pop",
+   "gain_db": -13
+  },
+  {
+   "t": 30.54,
+   "sfx": "ui-click",
+   "gain_db": -11
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1080, height=1920" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>*{margin:0;padding:0}html,body{width:1080px;height:1920px;overflow:hidden;background:#222}.clip{position:absolute;inset:0}
+.vid{width:1080px;height:1920px;object-fit:cover}#t{z-index:5;color:#fff;font:900 90px sans-serif;top:400px;text-align:center}</style></head>
+<body><div id="root" data-composition-id="main" data-width="1080" data-height="1920" data-start="0" data-duration="1.0">
+<video id="v" class="clip vid" src="src.mp4" muted playsinline data-start="0" data-duration="1.0" data-track-index="1"></video>
+<audio id="a" src="src.wav" data-start="0" data-duration="1.0" data-track-index="2" data-volume="1"></audio>
+<div id="t" class="clip" data-start="0" data-duration="1.0" data-track-index="3">SMOKE</div>
+</div>
+<script>window.__timelines=window.__timelines||{};const tl=gsap.timeline({paused:true});gsap.set("#t",{opacity:0});tl.to("#t",{opacity:1,duration:0.5},0);window.__timelines["main"]=tl;</script>
+</body></html>
