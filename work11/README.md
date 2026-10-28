@@ -25,6 +25,11 @@ Same edit, captions, graphics, audio and b-roll choices as v04; only the look ch
   - vignette 0.22, grain 0.015.
 - **B-roll** recut with a natural pre-grade (no pre-darkening): `VERSION=v05 python3 make_broll.py` →
   `broll_<id>_v05.mp4` and `broll_v05.json`. v04's files are kept.
+- v05 preview checked:
+  - full decode, 0 errors; 977 frames / 32.57 s; −13.9 LUFS, −1.5 dBFS;
+  - no black frames; audio aligned within 3 ms;
+  - 1 fps sheet (`sheets/preview_v05_1fps.jpg`): consistent look, no halo.
+  - Not done: a human listening pass.
 - Rebuild: `VERSION=v05 python3 make_plate.py && VERSION=v05 python3 make_broll.py && VERSION=v05 python3 build.py`,
   then apply `grade_v05.json` to `#plate #br232 #br918 #br239 #br8742` with `media-treatment`, then render and master.
 
