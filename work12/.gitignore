@@ -1,0 +1,7 @@
+src/orig/
+proxy/
+music/*.mp3
+renders/
+edit/assets/v/
+*.mp4
+__pycache__/

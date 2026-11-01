@@ -1,0 +1,54 @@
+{
+ "auto": {
+  "lang": "en",
+  "p": 0.22,
+  "segments": [
+   {
+    "s": 0.0,
+    "e": 6.14,
+    "t": " Thank you very much.",
+    "no_speech": 0.59,
+    "avg_logprob": -0.79
+   }
+  ]
+ },
+ "en": {
+  "lang": "en",
+  "p": 1,
+  "segments": [
+   {
+    "s": 0.0,
+    "e": 6.14,
+    "t": " Thank you very much.",
+    "no_speech": 0.59,
+    "avg_logprob": -0.79
+   }
+  ]
+ },
+ "ms": {
+  "lang": "ms",
+  "p": 1,
+  "segments": [
+   {
+    "s": 0.0,
+    "e": 3.4,
+    "t": " Terima kasih kerana menonton!",
+    "no_speech": 0.59,
+    "avg_logprob": -0.3
+   }
+  ]
+ },
+ "ta": {
+  "lang": "ta",
+  "p": 1,
+  "segments": [
+   {
+    "s": 6.0,
+    "e": 9.68,
+    "t": " அஸ்வließen் ஏерш்சிற்ற பிரியங்கள்",
+    "no_speech": 0.59,
+    "avg_logprob": -2.66
+   }
+  ]
+ }
+}
