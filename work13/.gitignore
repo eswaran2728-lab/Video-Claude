@@ -1,0 +1,6 @@
+proxy/
+renders/
+edit/assets/v/
+*.mp4
+*.log
+__pycache__/
