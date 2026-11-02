@@ -73,3 +73,9 @@ python3 build14.py
 cd edit && npx --yes hyperframes@0.8.193 render --quality draft --fps 30 -o ../renders/draft_v01.mp4
 cd .. && ./master_preview.sh renders/draft_v01.mp4 PREVIEW_sangili_karuppar_3dprint_v01.mp4
 ```
+
+## Final v01 (approved preview -> final)
+- `FINAL_Sangili_Karuppar_3DPrint_v01_1080x1920.mp4` (not in git; *.mp4 ignored): HyperFrames `render --quality high --fps 30` of the
+  same composition as PREVIEW v01 -> `renders/final_v01.mp4`, then `./master_final.sh` (video copied, AAC 256k, 2-pass loudnorm).
+- Checks: 1080x1920 H.264, 30 fps, 959 frames, 32.0 s; -14.0 LUFS integrated, -2.2 dBFS peak; 0 decode errors; no black frames;
+  audio vs edit/assets/mix.wav lag 0.0 ms; contact sheet `sheets/final_v01_sheet.jpg` matches the preview.
