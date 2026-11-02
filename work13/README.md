@@ -1,10 +1,41 @@
 # Silambam @ Festival Kesenian & Kebudayaan Malaysia 2026 — Part 1 + Part 2 highlight reels
 
-9:16, 30 fps, HyperFrames 0.8.193. **Previews (waiting for approval):**
+9:16, 30 fps, HyperFrames 0.8.193. **Current: v02 previews (see the v02 section). v01 previews:**
 - `PREVIEW_silambam_part1_v01.mp4` (≈45.7 s)
 - `PREVIEW_silambam_part2_v01.mp4` (≈41.7 s)
 
 Both are 720x1280, −14 LUFS. No final export has been made and nothing is published.
+
+## v02 — creator's note on v01: "make those video cinematic look, make the videos run a bit longer time so can see the shows,
+## at top header add mahaguru sri s arumugam logo that gold on and add mahaguru sri s arumugam students"
+Previews: `PREVIEW_silambam_part1_v02.mp4` (≈67.4 s), `PREVIEW_silambam_part2_v02.mp4` (≈62.6 s). v01 files are kept.
+- **Longer shots** (`plan13_v02.py`):
+  - performance shots held ~3 s (4 beats) instead of 0.7–1.5 s;
+  - self-defence shots get 1.5–2.3 s of lead-in before the slow motion;
+  - the human pyramid plays 10 s of source at 1.4x;
+  - all 29 clips still used.
+- **Team introduction now in Part 1:** v_215647 30.85–33.95, "Mahaguru Sri S Arumugam avargalin maanavargal"
+  (students of Mahaguru Sri S Arumugam). The name was confirmed by the creator; the club name before it stays out
+  (unclear).
+- **Cinematic grade** (`VERSION=v02 python3 render_segments.py`):
+  - gentle filmic S-curve (lifted blacks, softened highlights) and −8 % saturation to tame the stage LEDs;
+  - teal shadows / warm highlights;
+  - then a soft vignette and fine moving grain on the finished frame.
+  - A first, darker try was eased after comparison (`sheets/grade_v01_v02.jpg`).
+- **Gold header** for the whole video: "MAHAGURU SRI S ARUMUGAM" over "— STUDENTS —" in gold, on a soft dark top shade
+  (y≈222–330). Captions moved down to y=420, Part chips to y=430.
+  - **Logo:** the creator sent the Mahaguru medal logo inline, but no image file reached this workspace. `build13.py`
+    places `edit/assets/logo_arumugam.png` beside the wording automatically once it exists. Needs: re-attach the logo
+    as a file.
+- Rebuild:
+  ```
+  ./normalize.sh
+  VERSION=v02 python3 render_segments.py part1 part2
+  VERSION=v02 python3 mix13.py
+  VERSION=v02 python3 build13.py part1
+  VERSION=v02 python3 build13.py part2
+  ```
+  then render `edit/` and `edit_p2/` and master them as in v01.
 
 ## Source
 - Google Drive folder "Claude video editing" (eswaran3561): 25 videos + 12 photos. Google Drive refused downloads to

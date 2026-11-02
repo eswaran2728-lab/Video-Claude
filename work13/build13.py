@@ -6,9 +6,12 @@
 #    repeating marquee type rows -> impact words on the stunts, marquee wipe into each action section.
 # Only text visible in the footage is used for the event (banner: FESTIVAL KESENIAN & KEBUDAYAAN MALAYSIA 2026,
 # 31/10/2026 & 1/11/2026; shirts: SILAMBAM). Every timing comes from the rendered plate (edit/<part>_audio.json).
-import json, sys, html
+import json, sys, os, html, importlib
 part = sys.argv[1] if len(sys.argv) > 1 else "part1"
-A = json.load(open(f"edit/{part}_audio.json")); S = A["seg_starts"]; T = A["total"]; R = lambda v: round(v, 3)
+VERSION = os.environ.get("VERSION", "v01"); SUF = "" if VERSION == "v01" else "_" + VERSION
+P = importlib.import_module("plan13" if VERSION == "v01" else f"plan13_{VERSION}")
+LOGO = "assets/logo_arumugam.png"            # v02: creator's Mahaguru logo (cut out), shown beside the header wording if present
+A = json.load(open(f"edit/{part}_audio{SUF}.json")); S = A["seg_starts"]; T = A["total"]; R = lambda v: round(v, 3)
 RED, GOLD, INK = "#e1124b", "#f2b705", "#0e0b10"
 els, js, init = [], [], []
 E, J, I = els.append, js.append, init.append
@@ -73,7 +76,54 @@ def poster(i, t0, t1, top, head, lines, cta=None, dark=True):
 
 
 imp = {x["seg"]: x["t"] for x in A["impacts"]}
-if part == "part1":
+X = lambda clip, src_in: S[P.idx(part, clip, src_in)] if VERSION != "v01" else None
+
+
+def header():
+    """v02: gold 'MAHAGURU SRI S ARUMUGAM / STUDENTS' lockup at the top for the whole part, logo beside it when supplied"""
+    has_logo = os.path.exists(os.path.join("edit", LOGO))
+    logo = f'<img class="hlogo" src="{LOGO}" alt="" />' if has_logo else ""
+    E(f'<div id="hshade"></div><div id="hdr">{logo}<div class="htext"><div class="hl1">MAHAGURU SRI S ARUMUGAM</div>'
+      f'<div class="hl2"><i></i>STUDENTS<i></i></div></div></div>')
+    I('gsap.set("#hdr",{xPercent:-50});')
+    return has_logo
+
+
+if VERSION != "v01":
+    has_logo = header()
+    if part == "part1":
+        chip(0, "PART 1", 0.0, S[3], y=430)
+        impact_word(0, "SMASH", imp[1], hold=1.2)
+        poster(0, S[3], S[4], "31.10 & 1.11.2026", "SILAMBAM", ["FESTIVAL KESENIAN & KEBUDAYAAN", "MALAYSIA 2026"])
+        caption(9, ["Mahaguru Sri S Arumugam", "avargalin maanavargal"], S[4] + 0.1, S[5], sub="students of Mahaguru Sri S Arumugam")
+        i8 = P.idx(part, "v_215628", 0.6); i9 = P.idx(part, "v_213143", 0.0); i10 = P.idx(part, "v_215603", 26.5)
+        chip(1, "BACKSTAGE", S[5] + 0.2, S[i9])
+        caption(0, ["Thank you. Right after this", "we have the next performance."], S[i8] + 0.7, S[i9])
+        caption(1, ["Vanakkam guru, vanakkam!"], S[i9], S[i10], sub="salute to the master")
+        caption(2, ["Ready?"], S[i10], S[i10] + 0.7)
+        marquee(0, "SILAMBAM", S[i10] + 0.7, 0.8)
+        ib = P.idx(part, "v_215613", 6.5); isl = P.idx(part, "v_215613", 23.95); irp = P.idx(part, "v_225624", 28.3)
+        chip(2, "STICK DEMO", S[i10] + 1.6, S[ib] - 0.1)
+        chip(3, "STUNT", S[ib] + 0.1, S[isl])
+        impact_word(1, "UNBREAKABLE", imp[isl], hold=1.4, size=112)
+        chip(4, "REPLAY", S[irp] + 0.05, S[irp + 1], color=GOLD)
+        poster(1, S[-1], T, "COMING NEXT", "PART 2", ["SELF-DEFENCE · TEAMWORK · FINALE"], cta="WATCH PART 2 →")
+    else:
+        chip(0, "PART 2", 0.0, S[3], y=430)
+        chip(1, "2ND ANGLE", 0.25, S[3], y=510, color=GOLD)
+        impact_word(0, "AGAIN", imp[1], hold=1.2)
+        caption(0, ["ungaludaiya aadharavu", "romba romba mukkiyam"], S[3] + 0.1, S[3] + 2.1, sub="your support is very important")
+        caption(1, ["romba nandri!"], S[3] + 2.1, S[4], sub="thank you very much")
+        caption(2, ["Let's go!"], S[4], S[4] + 1.0)
+        marquee(0, "SELF-DEFENCE", S[5], 0.8)
+        it = P.idx(part, "v_215617", 22.0); ic = P.idx(part, "v_215619", 9.0); ifn = P.idx(part, "v_225626", 0.5)
+        chip(2, "SELF-DEFENCE", S[5] + 0.9, S[it] - 0.1)
+        impact_word(1, "TAKEDOWN", imp[P.idx(part, "v_225545", 7.8)], hold=1.3, size=150)
+        chip(3, "TEAMWORK", S[it] + 0.2, S[ic] - 0.1)
+        chip(4, "THE CROWD", S[ic] + 0.2, S[ifn] - 0.1)
+        chip(5, "FINALE", S[ifn] + 0.2, S[-1] - 0.1)
+        poster(0, S[-1], T, "31.10 & 1.11.2026", "SILAMBAM", ["FESTIVAL KESENIAN & KEBUDAYAAN", "MALAYSIA 2026"], cta="TERIMA KASIH · THANK YOU")
+elif part == "part1":
     chip(0, "PART 1", 0.0, S[3], y=300)
     impact_word(0, "SMASH", imp[1], hold=1.2)
     poster(0, S[3], S[4], "31.10 & 1.11.2026", "SILAMBAM", ["FESTIVAL KESENIAN & KEBUDAYAAN", "MALAYSIA 2026"])
@@ -119,7 +169,16 @@ doc = f'''<!doctype html>
       #gfx {{ z-index: 10; pointer-events: none; }}
       .chip {{ position: absolute; left: 540px; height: 64px; line-height: 64px; padding: 0 28px; border-radius: 8px; color: #fff;
         font-family: "IDB"; font-size: 34px; letter-spacing: 6px; white-space: nowrap; box-shadow: 0 10px 26px rgba(0,0,0,.35); }}
-      .cap {{ position: absolute; left: 140px; width: 800px; top: 290px; text-align: center; }}
+      .cap {{ position: absolute; left: 140px; width: 800px; top: {290 if VERSION == "v01" else 420}px; text-align: center; }}
+      #hshade {{ position: absolute; left: 0; top: 0; width: 1080px; height: 470px; background: linear-gradient(180deg, rgba(8,6,10,.62), rgba(8,6,10,.30) 55%, rgba(8,6,10,0)); }}
+      #hdr {{ position: absolute; left: 540px; top: 222px; display: flex; align-items: center; gap: 18px; }}
+      #hdr .hlogo {{ height: 132px; width: auto; filter: drop-shadow(0 4px 10px rgba(0,0,0,.55)); }}
+      #hdr .htext {{ text-align: center; }}
+      .hl1, .hl2 {{ background: linear-gradient(180deg, #fff4bf 0%, #f6cf55 34%, #c8921a 62%, #ffe28c 84%, #b27c10 100%);
+        -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 3px 5px rgba(0,0,0,.7)); }}
+      .hl1 {{ font-family: "IDB"; font-size: 40px; letter-spacing: 2px; line-height: 1.1; white-space: nowrap; }}
+      .hl2 {{ font-family: "IDB"; font-size: 28px; letter-spacing: 12px; line-height: 1.3; display: flex; align-items: center; justify-content: center; gap: 14px; }}
+      .hl2 i {{ display: block; width: 70px; height: 3px; background: linear-gradient(90deg, #b27c10, #ffe28c); }}
       .cap .t {{ display: inline; font-family: "IDBo"; font-size: 54px; line-height: 1.32; color: #fff; padding: 6px 18px; border-radius: 10px;
         background: rgba(14,11,16,.82); -webkit-box-decoration-break: clone; box-decoration-break: clone; }}
       .cap .sub {{ display: inline-block; margin-top: 12px; font-family: "ISB"; font-size: 32px; color: {GOLD}; padding: 4px 14px; border-radius: 8px;
@@ -144,8 +203,8 @@ doc = f'''<!doctype html>
   </head>
   <body>
     <div id="root" data-composition-id="main" data-width="1080" data-height="1920" data-start="0" data-duration="{T}">
-      <video id="plate" class="clip vid" src="assets/v/{part}_plate.mp4" muted playsinline data-start="0" data-duration="{T}" data-track-index="1" style="z-index:1"></video>
-      <audio id="mix" src="assets/{part}_mix.wav" data-start="0" data-duration="{T}" data-track-index="2" data-volume="1"></audio>
+      <video id="plate" class="clip vid" src="assets/v/{part}_plate{SUF}.mp4" muted playsinline data-start="0" data-duration="{T}" data-track-index="1" style="z-index:1"></video>
+      <audio id="mix" src="assets/{part}_mix{SUF}.wav" data-start="0" data-duration="{T}" data-track-index="2" data-volume="1"></audio>
       <div id="gfx" class="clip" data-start="0" data-duration="{T}" data-track-index="3">
         {(chr(10) + "        ").join(els)}
       </div>

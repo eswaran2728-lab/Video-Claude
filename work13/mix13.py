@@ -6,12 +6,14 @@
 #  - SFX (edit-video pack): zoom-swish into each slow motion, sub-impact + hook-impact on each impact frame
 # -> edit/assets/part{1,2}_mix.wav, edit/part{1,2}_audio.json (impact / line times for the graphics)
 import json, subprocess, numpy as np, soundfile as sf
-import plan13 as P
+import os, importlib
+VERSION = os.environ.get("VERSION", "v01"); SUF = "" if VERSION == "v01" else "_" + VERSION
+P = importlib.import_module("plan13" if VERSION == "v01" else f"plan13_{VERSION}")
 SR = 48000; SFX = "/root/.claude/skills/edit-video/assets/sfx/"
 db = lambda g: 10 ** (g / 20)
-SEG = json.load(open("segments.json"))
+SEG = json.load(open(f"segments{SUF}.json"))
 # speech lines kept loud: (clip, src_in, src_out)
-LINES = [("v_215628", 0.6, 4.6), ("v_213143", 0.0, 2.0), ("v_213120", 1.0, 4.7), ("v_215631", 0.0, 1.5)]
+LINES = [("v_215647", 30.85, 33.95), ("v_215628", 0.6, 4.6), ("v_213143", 0.0, 2.0), ("v_213120", 1.0, 4.7), ("v_215631", 0.0, 1.5)]
 IMPACTS = {"part1": [("v_215609", 33.95, "SMASH"), ("v_215613", 24.0, "UNBREAKABLE"), ("v_225624", 28.6, None), ("v_225554", 20.5, None)],
            "part2": [("v_225618", 19.45, "AGAIN"), ("v_225545", 8.5, "TAKEDOWN"), ("v_225554", 20.5, None)]}
 
@@ -69,11 +71,11 @@ def mix(part):
     g = np.where(speech, db(-11), 1.0); k = int(0.12 * SR); g = np.convolve(g, np.ones(k) / k, "same")
     out = voice + amb * db(-15) + music * db(-6) * g[:, None] + fx
     pk = np.abs(out).max(); out *= min(1.0, 0.89 / pk) if pk > 0 else 1
-    sf.write(f"src/{part}_premix.wav", out, SR, subtype="FLOAT")
-    subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-i", f"src/{part}_premix.wav", "-af", "alimiter=limit=0.5:attack=3:release=80:level=false",
-                    "-ar", str(SR), "-c:a", "pcm_s16le", f"edit/assets/{part}_mix.wav"], check=True)
+    sf.write(f"src/{part}_premix{SUF}.wav", out, SR, subtype="FLOAT")
+    subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-i", f"src/{part}_premix{SUF}.wav", "-af", "alimiter=limit=0.5:attack=3:release=80:level=false",
+                    "-ar", str(SR), "-c:a", "pcm_s16le", f"edit/assets/{part}_mix{SUF}.wav"], check=True)
     info.update(music={"track": track, "start_out": round(m_start, 3), "track_in": round(m0, 3)})
-    json.dump(info, open(f"edit/{part}_audio.json", "w"), indent=1)
+    json.dump(info, open(f"edit/{part}_audio{SUF}.json", "w"), indent=1)
     print(part, "T", round(T, 2), "impacts", info["impacts"], "lines", info["lines"], "music", info["music"])
 
 

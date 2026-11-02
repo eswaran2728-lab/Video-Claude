@@ -7,9 +7,17 @@
 # Light festival grade on everything (contrast +6 %, saturation +8 %, gentle unsharp). Audio is built in mix13.py.
 # -> edit/assets/v/part{1,2}_plate.mp4 (+ segments.json with each piece's crop/center for the timing map)
 import json, os, subprocess, sys, numpy as np, cv2
-import plan13 as P
+import importlib
+VERSION = os.environ.get("VERSION", "v01"); SUF = "" if VERSION == "v01" else "_" + VERSION
+P = importlib.import_module("plan13" if VERSION == "v01" else f"plan13_{VERSION}")
 os.makedirs("edit/assets/v", exist_ok=True); os.makedirs("renders/seg", exist_ok=True)
 GRADE = "eq=contrast=1.06:saturation=1.08,unsharp=5:5:0.4"
+# v02 cinematic look: filmic S-curve (lifted blacks, rolled-off highlights), LED colours tamed (-10 % saturation), teal shadows /
+# warm highlights, then on the finished frame a soft vignette and fine moving grain.
+if VERSION != "v01":
+    GRADE = ("eq=contrast=1.05:saturation=0.92,curves=master='0/0.03 0.25/0.235 0.5/0.515 0.78/0.80 1/0.96',"
+             "colorbalance=rs=-0.05:gs=-0.005:bs=0.055:rm=0.015:bm=-0.015:rh=0.05:gh=0.015:bh=-0.045,unsharp=5:5:0.3")
+FINISH = "" if VERSION == "v01" else ",vignette=PI/5.5,noise=alls=5:allf=t"
 BAND = {576: 1180, 464: 1080, 368: 980}             # band height by source height (2.0x / 2.3x / 2.7x zoom)
 CENTER = {("v_215631", 0.0): 0.60}                    # manual crop centre where motion picks the wrong subject (MCs at right)
 
@@ -41,15 +49,15 @@ def seg_filter(seg, w, h):
     pre = f"[0:v]setpts=PTS-STARTPTS{slow}{fast},{GRADE},split=2[s1][s2];"
     cover = f"[s1]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920"
     if seg["kind"] == "p":
-        return pre + cover + "[o];[s2]nullsink", None
+        return pre + cover + f"{FINISH}[o];[s2]nullsink", None
     bg = cover + ",boxblur=28:2,eq=brightness=-0.16:saturation=0.75[bg];"
     if seg["kind"] == "lt":
-        return pre + cover + ",boxblur=22:2,eq=brightness=-0.28:saturation=0.8[o];[s2]nullsink", None
+        return pre + cover + f",boxblur=22:2,eq=brightness=-0.28:saturation=0.8{FINISH}[o];[s2]nullsink", None
     bh = BAND.get(h, 1100); sw = round(w * bh / h)
     cx = CENTER.get((seg["clip"], seg["src_in"])) or action_center(seg["clip"], seg["src_in"], seg["src_out"])
     x0 = int(min(max(cx * sw - 540, 0), sw - 1080))
     fg = f"[s2]scale={sw}:{bh}:flags=lanczos,crop=1080:{bh}:{x0}:0[fg];"
-    return pre + bg + fg + f"[bg][fg]overlay=0:{960 - bh // 2}[o]", dict(center=round(cx, 3), band=bh, crop_x=x0, zoom=round(bh / h, 2))
+    return pre + bg + fg + f"[bg][fg]overlay=0:{960 - bh // 2}{FINISH}[o]" if FINISH else pre + bg + fg + f"[bg][fg]overlay=0:{960 - bh // 2}[o]", dict(center=round(cx, 3), band=bh, crop_x=x0, zoom=round(bh / h, 2))
 
 
 def render_part(name, segs):
@@ -65,13 +73,13 @@ def render_part(name, segs):
         pieces.append(out); meta.append({**s, **(info or {}), "frames": n}); print(name, i, s["clip"], s["speed"], d, n, info, flush=True)
     lst = f"renders/seg/{name}.txt"; open(lst, "w").write("".join(f"file '{os.path.basename(p)}'\n" for p in pieces))
     subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", lst, "-c", "copy",
-                    f"edit/assets/v/{name}_plate.mp4"], check=True)
+                    f"edit/assets/v/{name}_plate{SUF}.mp4"], check=True)
     return meta, total
 
 
 if __name__ == "__main__":
     which = sys.argv[1:] or ["part1", "part2"]
-    out = json.load(open("segments.json")) if os.path.exists("segments.json") else {}
+    out = json.load(open(f"segments{SUF}.json")) if os.path.exists(f"segments{SUF}.json") else {}
     for nm in which:
         meta, total = render_part(nm, P.PART1 if nm == "part1" else P.PART2); out[nm] = {"total": total, "segments": meta}
-    json.dump(out, open("segments.json", "w"), indent=1)
+    json.dump(out, open(f"segments{SUF}.json", "w"), indent=1)
