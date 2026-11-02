@@ -17,6 +17,17 @@ Both are 720x1280, −14 LUFS. No final export has been made and nothing is publ
 - Not in git (size). Made as previewed: the gold header wording without the logo; no logo file was received (it came
   only as an inline image). Nothing is published.
 
+**Finals with logo (approved v03, creator: "Proceed final"):**
+- `FINAL_Silambam_Part1_v03_logo_1080x1920.mp4`: 67.4 s, −14.7 LUFS / −1.8 dBFS.
+- `FINAL_Silambam_Part2_v03_logo_1080x1920.mp4`: 62.6 s, −14.3 LUFS / −1.6 dBFS.
+- Both are 1080x1920, 30 fps, rendered with `--quality high` and mastered with `master_final.sh`.
+- Checked:
+  - full decode, 0 errors, no black frames;
+  - frames match the approved v03 previews (mean difference 1.6–2.5 levels);
+  - logo crisp in the header (`sheets/final_logo_check.png`).
+- The v02 finals without the logo are kept. To free disk space for this render, the regenerable proxy folders of
+  work7 and work8 were emptied (rebuild with their `make_proxies.sh`). Not in git (size). Nothing is published.
+
 ## v03 — logo added (creator: "Add the logo i attach" / "Remove background")
 - The creator's Mahaguru Dr. Sri S. Arumugam PJK medal logo (`src/logo/logo_original.png`, 447x447 on white) has its
   white background removed by `make_logo.py`. A flood fill from the border keeps the whites inside the medal; the edge
