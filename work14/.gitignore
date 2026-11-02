@@ -1,0 +1,12 @@
+proxy/
+src/*.mov
+src/*.wav
+masks/
+renders/
+edit/assets/v/
+edit/assets/*.wav
+edit/.hyperframes/
+music/*.mp3
+*.mp4
+*.log
+__pycache__/
