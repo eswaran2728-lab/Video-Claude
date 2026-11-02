@@ -171,8 +171,8 @@ doc = f'''<!doctype html>
         font-family: "IDB"; font-size: 34px; letter-spacing: 6px; white-space: nowrap; box-shadow: 0 10px 26px rgba(0,0,0,.35); }}
       .cap {{ position: absolute; left: 140px; width: 800px; top: {290 if VERSION == "v01" else 420}px; text-align: center; }}
       #hshade {{ position: absolute; left: 0; top: 0; width: 1080px; height: 470px; background: linear-gradient(180deg, rgba(8,6,10,.62), rgba(8,6,10,.30) 55%, rgba(8,6,10,0)); }}
-      #hdr {{ position: absolute; left: 540px; top: 222px; display: flex; align-items: center; gap: 18px; }}
-      #hdr .hlogo {{ height: 132px; width: auto; filter: drop-shadow(0 4px 10px rgba(0,0,0,.55)); }}
+      #hdr {{ position: absolute; left: 540px; top: 205px; display: flex; align-items: center; gap: 18px; }}
+      #hdr .hlogo {{ height: 150px; width: auto; filter: drop-shadow(0 4px 10px rgba(0,0,0,.55)); }}
       #hdr .htext {{ text-align: center; }}
       .hl1, .hl2 {{ background: linear-gradient(180deg, #fff4bf 0%, #f6cf55 34%, #c8921a 62%, #ffe28c 84%, #b27c10 100%);
         -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 3px 5px rgba(0,0,0,.7)); }}

@@ -17,6 +17,15 @@ Both are 720x1280, −14 LUFS. No final export has been made and nothing is publ
 - Not in git (size). Made as previewed: the gold header wording without the logo; no logo file was received (it came
   only as an inline image). Nothing is published.
 
+## v03 — logo added (creator: "Add the logo i attach" / "Remove background")
+- The creator's Mahaguru Dr. Sri S. Arumugam PJK medal logo (`src/logo/logo_original.png`, 447x447 on white) has its
+  white background removed by `make_logo.py`. A flood fill from the border keeps the whites inside the medal; the edge
+  is soft and de-fringed. Output: `edit/assets/logo_arumugam.png` (407x400) + `LOGO_Mahaguru_Arumugam_transparent.png`
+  for the creator.
+- Placed 150 px high beside the gold "MAHAGURU SRI S ARUMUGAM · STUDENTS" header on both parts. Everything else is v02.
+- Previews: `PREVIEW_silambam_part{1,2}_v03_logo.mp4`. Rebuild: `python3 make_logo.py`, then the v02 steps
+  (`VERSION=v02 python3 build13.py …` picks the logo up automatically).
+
 ## v02 — creator's note on v01: "make those video cinematic look, make the videos run a bit longer time so can see the shows,
 ## at top header add mahaguru sri s arumugam logo that gold on and add mahaguru sri s arumugam students"
 Previews: `PREVIEW_silambam_part1_v02.mp4` (≈67.4 s), `PREVIEW_silambam_part2_v02.mp4` (≈62.6 s). v01 files are kept.
