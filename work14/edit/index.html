@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "IDB"; src: url("assets/fonts/InterDisplay-Black.otf"); font-weight: 900; }
+      @font-face { font-family: "IDBo"; src: url("assets/fonts/InterDisplay-Bold.otf"); font-weight: 700; }
+      @font-face { font-family: "ISB"; src: url("assets/fonts/Inter-SemiBold.otf"); font-weight: 600; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #07090d; }
+      .clip { position: absolute; inset: 0; }
+      .vid { width: 1080px; height: 1920px; object-fit: cover; }
+      #gfx { z-index: 10; pointer-events: none; }
+      .cap { position: absolute; left: 60px; width: 960px; top: 272px; text-align: center; }
+      .cap .t { display: inline; font-family: "IDBo"; font-size: 46px; line-height: 1.3; color: #fff; padding: 6px 18px; border-radius: 12px;
+        background: rgba(7,9,13,.78); -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+      .cap .en { display: inline-block; margin-top: 10px; font-family: "ISB"; font-size: 31px; color: #36d6ff; padding: 4px 14px; border-radius: 8px; background: rgba(7,9,13,.7); }
+      .ref { position: absolute; left: 0; top: 0; width: 560px; padding: 16px 16px 64px; background: #f4f4f2; border-radius: 6px; box-shadow: 0 30px 70px rgba(0,0,0,.6); }
+      .ref img { display: block; width: 528px; height: auto; border-radius: 2px; }
+      .reftag { position: absolute; left: 0; right: 0; bottom: 12px; text-align: center; font-family: "IDB"; font-size: 30px; letter-spacing: 4px; color: #111; }
+      .hud { position: absolute; left: 80px; top: 500px; height: 64px; padding: 0 22px; border-radius: 12px; display: flex; align-items: center; gap: 14px;
+        background: rgba(7,9,13,.75); border: 1.5px solid rgba(54,214,255,.55); font-family: "IDB"; font-size: 30px; letter-spacing: 3px; color: #fff; }
+      .hud .dot { width: 14px; height: 14px; border-radius: 50%; background: #36d6ff; box-shadow: 0 0 12px #36d6ff; display: block; }
+      .hud b { color: #36d6ff; min-width: 74px; text-align: right; }
+      .ruler { position: absolute; left: 905px; top: 500px; width: 120px; height: 1060px; }
+      .rl { position: absolute; left: 0; top: 0; width: 4px; height: 1060px; background: #36d6ff; box-shadow: 0 0 10px #36d6ff; transform-origin: 50% 100%; }
+      .tk { position: absolute; left: 0; width: 26px; height: 3px; background: #36d6ff; }
+      .tk span { position: absolute; left: 34px; top: -18px; font-family: "IDBo"; font-size: 28px; color: #d9dde3; }
+      .rlab { position: absolute; left: -150px; top: -86px; width: 260px; text-align: right; font-family: "IDB"; font-size: 46px; color: #36d6ff; letter-spacing: 1px; }
+      .chip { position: absolute; left: 80px; height: 66px; padding: 0 22px 0 14px; border-radius: 12px; display: flex; align-items: center; gap: 12px;
+        background: rgba(7,9,13,.8); border: 1.5px solid rgba(217,221,227,.45); font-family: "IDB"; font-size: 30px; letter-spacing: 3px; color: #fff; white-space: nowrap; }
+      .chip.mid { left: 540px; transform: translateX(-50%); padding: 0 26px; }
+      .chip.big { height: 80px; font-size: 38px; border-color: #36d6ff; color: #36d6ff; }
+      .ic { width: 40px; height: 40px; fill: none; stroke: #36d6ff; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+      .arrow { position: absolute; left: 0; width: 1080px; top: 846px; text-align: center; font-family: "IDB"; font-size: 40px; color: #36d6ff; text-shadow: 0 0 14px #36d6ff; }
+      .sw { position: absolute; width: 160px; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+      .sw.l { left: 60px; } .sw.r { left: 860px; }
+      .sw i { display: block; width: 110px; height: 110px; border-radius: 50%; border: 4px solid rgba(255,255,255,.85); box-shadow: 0 10px 26px rgba(0,0,0,.5); }
+      .sw span { font-family: "IDB"; font-size: 24px; letter-spacing: 3px; color: #d9dde3; background: rgba(7,9,13,.7); padding: 2px 10px; border-radius: 6px; }
+      .want { position: absolute; left: 0; width: 1080px; top: 470px; overflow: hidden; text-align: center; }
+      .wi { font-family: "IDB"; font-size: 112px; letter-spacing: -2px; color: #fff; text-shadow: 0 10px 30px rgba(0,0,0,.6); }
+      .pill { position: absolute; top: 1610px; height: 64px; line-height: 64px; padding: 0 24px; border-radius: 32px; background: #36d6ff; color: #07090d;
+        font-family: "IDB"; font-size: 30px; letter-spacing: 2px; box-shadow: 0 10px 24px rgba(0,0,0,.45); }
+      .endc { position: absolute; left: 0; width: 1080px; top: 1130px; text-align: center; }
+      .e1 { overflow: hidden; } .e1 span { display: inline-block; font-family: "IDB"; font-size: 84px; color: #fff; letter-spacing: -1px; }
+      .e2 { margin-top: 8px; font-family: "IDBo"; font-size: 34px; color: #d9dde3; letter-spacing: 2px; }
+      .cta { display: inline-block; margin-top: 26px; background: #36d6ff; color: #07090d; font-family: "IDB"; font-size: 40px; letter-spacing: 3px; padding: 18px 36px; border-radius: 14px;
+        box-shadow: 0 0 30px rgba(54,214,255,.45); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-width="1080" data-height="1920" data-start="0" data-duration="31.9667">
+      <video id="plate" class="clip vid" src="assets/v/plate.mp4" muted playsinline data-start="0" data-duration="31.9667" data-track-index="1" style="z-index:1"></video>
+      <audio id="mix" src="assets/mix.wav" data-start="0" data-duration="31.9667" data-track-index="2" data-volume="1"></audio>
+      <div id="gfx" class="clip" data-start="0" data-duration="31.9667" data-track-index="3">
+        <div id="c0" class="cap"><span class="t">Oru customer enakku request panni</span><br><span class="en">A customer asked me</span></div>
+        <div id="c1" class="cap"><span class="t">intha picture-la irunthu</span><br><span class="en">from this picture</span></div>
+        <div id="c2" class="cap"><span class="t">intha Sangili Karuppar, oru 6 inches-la</span><br><span class="en">this Sangili Karuppar, 6 inches</span></div>
+        <div id="c3" class="cap"><span class="t">venum nu kettu irunthaanga</span><br><span class="en">is what they asked for</span></div>
+        <div id="c4" class="cap"><span class="t">So athukkaaga, avanga ketta photo-la ulla maathiri</span><br><span class="en">so, just like the photo they sent</span></div>
+        <div id="c5" class="cap"><span class="t">naan design panni eduthathu</span><br><span class="en">I designed and made it</span></div>
+        <div id="c6" class="cap"><span class="t">So neenga paakkalaam, avanga kudutha athe colour tone-la</span><br><span class="en">you can see: the same colour tone they gave</span></div>
+        <div id="c7" class="cap"><span class="t">Ungalukkum intha picture venum appadinna</span><br><span class="en">if you want this too</span></div>
+        <div id="c8" class="cap"><span class="t">intha Sangili Karuppar venum appadinna, neenga thaaraalamaa…</span><br><span class="en">if you want this Sangili Karuppar, feel free…</span></div>
+        <div id="c9" class="cap"><br><span class="en">contact me (details in my bio)</span></div>
+        <div id="c10" class="cap"><span class="t">Vanakkam!</span></div>
+        <div id="ref" class="ref"><img src="assets/reference.jpg" alt=""><div class="reftag" id="reftag">CUSTOMER'S PICTURE</div></div>
+        <div id="hud" class="hud"><i class="dot"></i><span id="hudt">3D PRINTING</span><b id="pct">0%</b></div>
+        <div id="ruler" class="ruler"><div class="rl" id="rl"></div><div class="tk" style="top:1060px"><span>0</span></div><div class="tk" style="top:883px"><span>1</span></div><div class="tk" style="top:707px"><span>2</span></div><div class="tk" style="top:530px"><span>3</span></div><div class="tk" style="top:353px"><span>4</span></div><div class="tk" style="top:177px"><span>5</span></div><div class="tk" style="top:0px"><span>6</span></div><div class="rlab" id="rlab">6 INCH</div></div>
+        <div id="k1" class="chip" style="top:1215px"><svg viewBox="0 0 40 40" class="ic"><circle cx="20" cy="20" r="15"/><circle cx="20" cy="20" r="5"/><path d="M20 5v10M20 25v10M5 20h10M25 20h10"/></svg>PETG FILAMENT</div>
+        <div id="k2" class="chip" style="top:1300px"><svg viewBox="0 0 40 40" class="ic"><path d="M10 6h20v10H10zM14 16h12l-4 10h-4zM20 26v8"/><path d="M8 36h24"/></svg>3D PRINTED</div>
+        <div id="arrow" class="arrow">▼</div>
+        <div id="realtag" class="chip mid" style="top:1690px">REAL · 3D PRINTED IN PETG</div>
+        <div id="s1" class="sw l" style="top:760px"><i style="background:#262625"></i><span>PICTURE</span></div><div id="s2" class="sw l" style="top:930px"><i style="background:#f0edea"></i><span>PICTURE</span></div><div id="s3" class="sw r" style="top:760px"><i style="background:#16151a"></i><span>PRINT</span></div><div id="s4" class="sw r" style="top:930px"><i style="background:#dbd6d3"></i><span>PRINT</span></div>
+        <div id="tone" class="chip mid big" style="top:1110px">✓ SAME COLOUR TONE</div>
+        <div id="want" class="want"><div class="wi" id="wi">WANT ONE?</div></div>
+        <div id="w0" class="pill" style="left:150px">6 INCH</div>
+        <div id="w1" class="pill" style="left:445px">PETG</div>
+        <div id="w2" class="pill" style="left:680px">3D PRINTED</div>
+        <div id="end" class="endc"><div class="e1"><span id="e1">SANGILI KARUPPAR</span></div><div class="e2" id="e2">3D PRINTED STATUE · PETG · 6 INCH</div><div class="cta" id="cta">CONTACT · LINK IN BIO</div></div>
+      </div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      gsap.set("#c0",{opacity:1});
+      gsap.set("#c1",{opacity:0});
+      gsap.set("#c2",{opacity:0});
+      gsap.set("#c3",{opacity:0});
+      gsap.set("#c4",{opacity:0});
+      gsap.set("#c5",{opacity:0});
+      gsap.set("#c6",{opacity:0});
+      gsap.set("#c7",{opacity:0});
+      gsap.set("#c8",{opacity:0});
+      gsap.set("#c9",{opacity:0});
+      gsap.set("#c10",{opacity:0});
+      gsap.set("#ref",{xPercent:-50,yPercent:-50,x:540,y:1000,rotation:-2.5,scale:1});
+      gsap.set("#hud",{opacity:0,y:14});
+      gsap.set("#pct",{innerText:0});
+      gsap.set("#rl",{scaleY:0}); gsap.set("#ruler .tk",{opacity:0}); gsap.set("#rlab",{opacity:0,y:10});
+      gsap.set("#k1",{opacity:0,y:14});
+      gsap.set("#k2",{opacity:0,y:14});
+      gsap.set("#arrow",{opacity:0,y:14});
+      gsap.set("#realtag",{opacity:0,y:14});
+      gsap.set("#s1",{opacity:0,x:-40});
+      gsap.set("#s3",{opacity:0,x:40});
+      gsap.set("#s2",{opacity:0,x:-40});
+      gsap.set("#s4",{opacity:0,x:40});
+      gsap.set("#tone",{opacity:0,y:14});
+      gsap.set("#wi",{yPercent:110,opacity:0});
+      gsap.set("#w0",{opacity:0,y:14});
+      gsap.set("#w1",{opacity:0,y:14});
+      gsap.set("#w2",{opacity:0,y:14});
+      gsap.set("#e1",{yPercent:110}); gsap.set("#e2",{opacity:0,y:12}); gsap.set("#cta",{opacity:0,scale:0.85});
+      const tl = gsap.timeline({ paused: true });
+      tl.set("#c0",{opacity:0},1.95);
+      tl.set("#c1",{opacity:1},1.95);
+      tl.set("#c1",{opacity:0},4.15);
+      tl.set("#c2",{opacity:1},4.15);
+      tl.set("#c2",{opacity:0},7.62);
+      tl.set("#c3",{opacity:1},7.62);
+      tl.set("#c3",{opacity:0},10.3);
+      tl.set("#c4",{opacity:1},10.3);
+      tl.set("#c4",{opacity:0},13.35);
+      tl.set("#c5",{opacity:1},13.35);
+      tl.set("#c5",{opacity:0},16.7);
+      tl.set("#c6",{opacity:1},16.7);
+      tl.set("#c6",{opacity:0},21.11);
+      tl.set("#c7",{opacity:1},21.11);
+      tl.set("#c7",{opacity:0},23.65);
+      tl.set("#c8",{opacity:1},23.65);
+      tl.set("#c8",{opacity:0},27.6);
+      tl.set("#c9",{opacity:1},27.6);
+      tl.set("#c9",{opacity:0},30.3);
+      tl.set("#c10",{opacity:1},30.3);
+      tl.to("#ref",{scale:1.04,duration:3.0,ease:"none"},0.0);
+      tl.to("#ref",{x:168,y:900,scale:0.3,rotation:-4,duration:0.55,ease:"power3.inOut"},3.06);
+      tl.set("#reftag",{innerText:"REF"},3.41);
+      tl.to("#ref",{x:540,y:645,scale:0.45,rotation:0,duration:0.6,ease:"power3.inOut"},10.3);
+      tl.set("#reftag",{innerText:"CUSTOMER'S PICTURE"},10.6);
+      tl.to("#ref",{opacity:0,scale:0.3,duration:0.35,ease:"power2.in"},16.6);
+      tl.to("#hud",{opacity:1,y:0,duration:0.3,ease:"power3.out"},3.26);
+      tl.to("#hud",{opacity:0,duration:0.22,ease:"power2.in"},10.08);
+      tl.to("#pct",{innerText:100,duration:3.24,ease:"power3.out",snap:{innerText:1},modifiers:{innerText:v=>Math.round(v)+"%"}},3.36);
+      tl.set("#hudt",{innerText:"PRINTED"},6.65);
+      tl.set("#pct",{innerText:"\u2713"},6.65);
+      tl.to(".hud .dot",{opacity:0.25,duration:0.4,ease:"sine.inOut"},3.36);
+      tl.to(".hud .dot",{opacity:1,duration:0.4,ease:"sine.inOut"},3.76);
+      tl.to(".hud .dot",{opacity:0.25,duration:0.4,ease:"sine.inOut"},4.16);
+      tl.to(".hud .dot",{opacity:1,duration:0.4,ease:"sine.inOut"},4.56);
+      tl.to(".hud .dot",{opacity:0.25,duration:0.4,ease:"sine.inOut"},4.96);
+      tl.to(".hud .dot",{opacity:1,duration:0.4,ease:"sine.inOut"},5.36);
+      tl.to(".hud .dot",{opacity:0.25,duration:0.4,ease:"sine.inOut"},5.76);
+      tl.to(".hud .dot",{opacity:1,duration:0.4,ease:"sine.inOut"},6.16);
+      tl.set("#ruler",{opacity:1},0);
+      tl.to("#rl",{scaleY:1,duration:0.7,ease:"power3.out"},6.47);
+      tl.to("#ruler .tk:nth-of-type(2)",{opacity:1,duration:0.15,ease:"power3.out"},6.47);
+      tl.to("#ruler .tk:nth-of-type(3)",{opacity:1,duration:0.15,ease:"power3.out"},6.57);
+      tl.to("#ruler .tk:nth-of-type(4)",{opacity:1,duration:0.15,ease:"power3.out"},6.67);
+      tl.to("#ruler .tk:nth-of-type(5)",{opacity:1,duration:0.15,ease:"power3.out"},6.77);
+      tl.to("#ruler .tk:nth-of-type(6)",{opacity:1,duration:0.15,ease:"power3.out"},6.87);
+      tl.to("#ruler .tk:nth-of-type(7)",{opacity:1,duration:0.15,ease:"power3.out"},6.97);
+      tl.to("#ruler .tk:nth-of-type(8)",{opacity:1,duration:0.15,ease:"power3.out"},7.07);
+      tl.to("#rlab",{opacity:1,y:0,duration:0.3,ease:"power3.out"},7.17);
+      tl.to("#ruler",{opacity:0,duration:0.25,ease:"power2.in"},10.05);
+      tl.to("#k1",{opacity:1,y:0,duration:0.3,ease:"power3.out"},7.72);
+      tl.to("#k1",{opacity:0,duration:0.22,ease:"power2.in"},10.08);
+      tl.to("#k2",{opacity:1,y:0,duration:0.3,ease:"power3.out"},8.22);
+      tl.to("#k2",{opacity:0,duration:0.22,ease:"power2.in"},10.08);
+      tl.to("#arrow",{opacity:1,y:0,duration:0.3,ease:"power3.out"},10.8);
+      tl.to("#arrow",{opacity:0,duration:0.22,ease:"power2.in"},16.48);
+      tl.to("#realtag",{opacity:1,y:0,duration:0.3,ease:"power3.out"},13.65);
+      tl.to("#realtag",{opacity:0,duration:0.22,ease:"power2.in"},16.48);
+      tl.to("#s1",{opacity:1,x:0,duration:0.35,ease:"power3.out"},17.65);
+      tl.to("#s1",{opacity:0,duration:0.25,ease:"power2.in"},20.86);
+      tl.to("#s3",{opacity:1,x:0,duration:0.35,ease:"power3.out"},17.8);
+      tl.to("#s3",{opacity:0,duration:0.25,ease:"power2.in"},20.86);
+      tl.to("#s2",{opacity:1,x:0,duration:0.35,ease:"power3.out"},17.95);
+      tl.to("#s2",{opacity:0,duration:0.25,ease:"power2.in"},20.86);
+      tl.to("#s4",{opacity:1,x:0,duration:0.35,ease:"power3.out"},18.1);
+      tl.to("#s4",{opacity:0,duration:0.25,ease:"power2.in"},20.86);
+      tl.to("#tone",{opacity:1,y:0,duration:0.3,ease:"power3.out"},18.95);
+      tl.to("#tone",{opacity:0,duration:0.22,ease:"power2.in"},20.89);
+      tl.set("#wi",{opacity:1},21.21);
+      tl.to("#wi",{yPercent:0,duration:0.5,ease:"power4.out"},21.26);
+      tl.to("#wi",{yPercent:-110,duration:0.3,ease:"power3.in"},27.3);
+      tl.to("#w0",{opacity:1,y:0,duration:0.3,ease:"power3.out"},22.31);
+      tl.to("#w0",{opacity:0,duration:0.22,ease:"power2.in"},27.38);
+      tl.to("#w1",{opacity:1,y:0,duration:0.3,ease:"power3.out"},22.61);
+      tl.to("#w1",{opacity:0,duration:0.22,ease:"power2.in"},27.38);
+      tl.to("#w2",{opacity:1,y:0,duration:0.3,ease:"power3.out"},22.91);
+      tl.to("#w2",{opacity:0,duration:0.22,ease:"power2.in"},27.38);
+      tl.to("#e1",{yPercent:0,duration:0.5,ease:"power4.out"},27.8);
+      tl.to("#e2",{opacity:1,y:0,duration:0.35,ease:"power3.out"},28.1);
+      tl.to("#cta",{opacity:1,scale:1,duration:0.35,ease:"back.out(1.8)"},28.45);
+      tl.set({}, {}, 31.9667);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,224 @@
+{
+ "cues": [
+  {
+   "t": 0.0,
+   "sfx": "curated/hook-impact.wav",
+   "gain_db": -12
+  },
+  {
+   "t": 3.36,
+   "sfx": "curated/zoom-swish.wav",
+   "gain_db": -14
+  },
+  {
+   "t": 6.6,
+   "sfx": "thock.wav",
+   "gain_db": -8
+  },
+  {
+   "t": 6.67,
+   "sfx": "ratchet.wav",
+   "gain_db": -14
+  },
+  {
+   "t": 7.72,
+   "sfx": "curated/ui-pop.wav",
+   "gain_db": -12
+  },
+  {
+   "t": 8.22,
+   "sfx": "curated/ui-pop.wav",
+   "gain_db": -12
+  },
+  {
+   "t": 10.3,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -14
+  },
+  {
+   "t": 13.65,
+   "sfx": "curated/ui-pop.wav",
+   "gain_db": -13
+  },
+  {
+   "t": 18.95,
+   "sfx": "clean-ding.wav",
+   "gain_db": -12
+  },
+  {
+   "t": 21.21,
+   "sfx": "curated/zoom-swish.wav",
+   "gain_db": -14
+  },
+  {
+   "t": 22.31,
+   "sfx": "curated/ui-pop.wav",
+   "gain_db": -13
+  },
+  {
+   "t": 22.61,
+   "sfx": "curated/ui-pop.wav",
+   "gain_db": -13
+  },
+  {
+   "t": 22.91,
+   "sfx": "curated/ui-pop.wav",
+   "gain_db": -13
+  },
+  {
+   "t": 27.8,
+   "sfx": "sub-impact.wav",
+   "gain_db": -10
+  },
+  {
+   "t": 28.5,
+   "sfx": "curated/ui-click.wav",
+   "gain_db": -12
+  },
+  {
+   "t": 3.46,
+   "sfx": "typing-tick.wav",
+   "gain_db": -22
+  },
+  {
+   "t": 3.57,
+   "sfx": "typing-tick.wav",
+   "gain_db": -22
+  },
+  {
+   "t": 3.68,
+   "sfx": "typing-tick.wav",
+   "gain_db": -22
+  },
+  {
+   "t": 3.79,
+   "sfx": "typing-tick.wav",
+   "gain_db": -22
+  },
+  {
+   "t": 3.9,
+   "sfx": "typing-tick.wav",
+   "gain_db": -22
+  },
+  {
+   "t": 4.01,
+   "sfx": "typing-tick.wav",
+   "gain_db": -22
+  },
+  {
+   "t": 4.12,
+   "sfx": "typing-tick.wav",
+   "gain_db": -22
+  },
+  {
+   "t": 4.23,
+   "sfx": "typing-tick.wav",
+   "gain_db": -22
+  },
+  {
+   "t": 4.34,
+   "sfx": "typing-tick.wav",
+   "gain_db": -22
+  },
+  {
+   "t": 4.45,
+   "sfx": "typing-tick.wav",
+   "gain_db": -22
+  },
+  {
+   "t": 4.56,
+   "sfx": "typing-tick.wav",
+   "gain_db": -22
+  },
+  {
+   "t": 4.67,
+   "sfx": "typing-tick.wav",
+   "gain_db": -22
+  },
+  {
+   "t": 4.78,
+   "sfx": "typing-tick.wav",
+   "gain_db": -22
+  },
+  {
+   "t": 4.89,
+   "sfx": "typing-tick.wav",
+   "gain_db": -22
+  },
+  {
+   "t": 5.0,
+   "sfx": "typing-tick.wav",
+   "gain_db": -22
+  },
+  {
+   "t": 5.11,
+   "sfx": "typing-tick.wav",
+   "gain_db": -22
+  },
+  {
+   "t": 5.22,
+   "sfx": "typing-tick.wav",
+   "gain_db": -22
+  },
+  {
+   "t": 5.33,
+   "sfx": "typing-tick.wav",
+   "gain_db": -22
+  },
+  {
+   "t": 5.44,
+   "sfx": "typing-tick.wav",
+   "gain_db": -22
+  },
+  {
+   "t": 5.55,
+   "sfx": "typing-tick.wav",
+   "gain_db": -22
+  },
+  {
+   "t": 5.66,
+   "sfx": "typing-tick.wav",
+   "gain_db": -22
+  },
+  {
+   "t": 5.77,
+   "sfx": "typing-tick.wav",
+   "gain_db": -22
+  },
+  {
+   "t": 5.88,
+   "sfx": "typing-tick.wav",
+   "gain_db": -22
+  },
+  {
+   "t": 5.99,
+   "sfx": "typing-tick.wav",
+   "gain_db": -22
+  },
+  {
+   "t": 6.1,
+   "sfx": "typing-tick.wav",
+   "gain_db": -22
+  },
+  {
+   "t": 6.21,
+   "sfx": "typing-tick.wav",
+   "gain_db": -22
+  },
+  {
+   "t": 6.32,
+   "sfx": "typing-tick.wav",
+   "gain_db": -22
+  },
+  {
+   "t": 6.43,
+   "sfx": "typing-tick.wav",
+   "gain_db": -22
+  },
+  {
+   "t": 6.54,
+   "sfx": "typing-tick.wav",
+   "gain_db": -22
+  }
+ ]
+}
