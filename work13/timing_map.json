@@ -1,0 +1,666 @@
+{
+ "part1": {
+  "segments": [
+   {
+    "i": 0,
+    "out_start": 0,
+    "out_end": 0.67,
+    "clip": "v_215609",
+    "src_in": 33.2,
+    "src_out": 33.85,
+    "speed": 1.0,
+    "layout": "p"
+   },
+   {
+    "i": 1,
+    "out_start": 0.67,
+    "out_end": 2.67,
+    "clip": "v_215609",
+    "src_in": 33.85,
+    "src_out": 34.35,
+    "speed": 0.25,
+    "layout": "p"
+   },
+   {
+    "i": 2,
+    "out_start": 2.67,
+    "out_end": 3.27,
+    "clip": "v_215609",
+    "src_in": 34.35,
+    "src_out": 34.95,
+    "speed": 1.0,
+    "layout": "p"
+   },
+   {
+    "i": 3,
+    "out_start": 3.27,
+    "out_end": 6.27,
+    "clip": "v_215647",
+    "src_in": 1.0,
+    "src_out": 4.0,
+    "speed": 1.0,
+    "layout": "lt"
+   },
+   {
+    "i": 4,
+    "out_start": 6.27,
+    "out_end": 7.87,
+    "clip": "v_215627",
+    "src_in": 3.0,
+    "src_out": 4.6,
+    "speed": 1.0,
+    "layout": "p"
+   },
+   {
+    "i": 5,
+    "out_start": 7.87,
+    "out_end": 9.37,
+    "clip": "v_215630",
+    "src_in": 0.3,
+    "src_out": 1.8,
+    "speed": 1.0,
+    "layout": "p"
+   },
+   {
+    "i": 6,
+    "out_start": 9.37,
+    "out_end": 10.67,
+    "clip": "v_215629",
+    "src_in": 0.0,
+    "src_out": 1.3,
+    "speed": 1.0,
+    "layout": "p"
+   },
+   {
+    "i": 7,
+    "out_start": 10.67,
+    "out_end": 14.67,
+    "clip": "v_215628",
+    "src_in": 0.6,
+    "src_out": 4.6,
+    "speed": 1.0,
+    "layout": "p"
+   },
+   {
+    "i": 8,
+    "out_start": 14.67,
+    "out_end": 16.67,
+    "clip": "v_213143",
+    "src_in": 0.0,
+    "src_out": 2.0,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 9,
+    "out_start": 16.67,
+    "out_end": 17.43,
+    "clip": "v_215603",
+    "src_in": 26.5,
+    "src_out": 27.243,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 10,
+    "out_start": 17.43,
+    "out_end": 18.93,
+    "clip": "v_214108",
+    "src_in": 30.5,
+    "src_out": 31.986,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 11,
+    "out_start": 18.93,
+    "out_end": 19.7,
+    "clip": "v_215535",
+    "src_in": 21.0,
+    "src_out": 21.743,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 12,
+    "out_start": 19.7,
+    "out_end": 21.2,
+    "clip": "v_215638",
+    "src_in": 4.0,
+    "src_out": 5.486,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 13,
+    "out_start": 21.2,
+    "out_end": 21.97,
+    "clip": "v_220303",
+    "src_in": 12.0,
+    "src_out": 12.743,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 14,
+    "out_start": 21.97,
+    "out_end": 23.47,
+    "clip": "v_215535",
+    "src_in": 38.0,
+    "src_out": 39.486,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 15,
+    "out_start": 23.47,
+    "out_end": 24.23,
+    "clip": "v_225612",
+    "src_in": 4.0,
+    "src_out": 4.743,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 16,
+    "out_start": 24.23,
+    "out_end": 25.73,
+    "clip": "v_215638",
+    "src_in": 33.0,
+    "src_out": 34.486,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 17,
+    "out_start": 25.73,
+    "out_end": 26.5,
+    "clip": "v_220311",
+    "src_in": 7.0,
+    "src_out": 7.743,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 18,
+    "out_start": 26.5,
+    "out_end": 28.0,
+    "clip": "v_225535",
+    "src_in": 13.0,
+    "src_out": 14.486,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 19,
+    "out_start": 28.0,
+    "out_end": 28.77,
+    "clip": "v_214108",
+    "src_in": 44.0,
+    "src_out": 44.743,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 20,
+    "out_start": 28.77,
+    "out_end": 29.53,
+    "clip": "v_215604",
+    "src_in": 0.0,
+    "src_out": 0.743,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 21,
+    "out_start": 29.53,
+    "out_end": 31.03,
+    "clip": "v_215638",
+    "src_in": 39.5,
+    "src_out": 40.986,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 22,
+    "out_start": 31.03,
+    "out_end": 31.8,
+    "clip": "v_220303",
+    "src_in": 40.0,
+    "src_out": 40.743,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 23,
+    "out_start": 31.8,
+    "out_end": 33.3,
+    "clip": "v_225612",
+    "src_in": 15.0,
+    "src_out": 16.486,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 24,
+    "out_start": 33.3,
+    "out_end": 35.3,
+    "clip": "v_215613",
+    "src_in": 6.5,
+    "src_out": 8.5,
+    "speed": 1.0,
+    "layout": "p"
+   },
+   {
+    "i": 25,
+    "out_start": 35.3,
+    "out_end": 36.67,
+    "clip": "v_215613",
+    "src_in": 22.6,
+    "src_out": 23.95,
+    "speed": 1.0,
+    "layout": "p"
+   },
+   {
+    "i": 26,
+    "out_start": 36.67,
+    "out_end": 38.67,
+    "clip": "v_215613",
+    "src_in": 23.95,
+    "src_out": 24.45,
+    "speed": 0.25,
+    "layout": "p"
+   },
+   {
+    "i": 27,
+    "out_start": 38.67,
+    "out_end": 40.5,
+    "clip": "v_225624",
+    "src_in": 28.3,
+    "src_out": 28.9,
+    "speed": 0.33,
+    "layout": "l"
+   },
+   {
+    "i": 28,
+    "out_start": 40.5,
+    "out_end": 42.07,
+    "clip": "v_215613",
+    "src_in": 24.45,
+    "src_out": 26.0,
+    "speed": 1.0,
+    "layout": "p"
+   },
+   {
+    "i": 29,
+    "out_start": 42.07,
+    "out_end": 43.27,
+    "clip": "v_225554",
+    "src_in": 20.0,
+    "src_out": 20.6,
+    "speed": 0.5,
+    "layout": "l"
+   },
+   {
+    "i": 30,
+    "out_start": 43.27,
+    "out_end": 45.67,
+    "clip": "v_215617",
+    "src_in": 30.0,
+    "src_out": 32.4,
+    "speed": 1.0,
+    "layout": "p"
+   }
+  ],
+  "audio": {
+   "total": 45.667,
+   "seg_starts": [
+    0.0,
+    0.667,
+    2.667,
+    3.267,
+    6.267,
+    7.867,
+    9.367,
+    10.667,
+    14.667,
+    16.667,
+    17.433,
+    18.933,
+    19.7,
+    21.2,
+    21.967,
+    23.467,
+    24.233,
+    25.733,
+    26.5,
+    28.0,
+    28.767,
+    29.533,
+    31.033,
+    31.8,
+    33.3,
+    35.3,
+    36.667,
+    38.667,
+    40.5,
+    42.067,
+    43.267
+   ],
+   "impacts": [
+    {
+     "clip": "v_215609",
+     "t": 1.067,
+     "word": "SMASH",
+     "seg": 1
+    },
+    {
+     "clip": "v_215613",
+     "t": 36.867,
+     "word": "UNBREAKABLE",
+     "seg": 26
+    },
+    {
+     "clip": "v_225624",
+     "t": 39.576,
+     "word": null,
+     "seg": 27
+    },
+    {
+     "clip": "v_225554",
+     "t": 43.067,
+     "word": null,
+     "seg": 29
+    }
+   ],
+   "lines": [
+    {
+     "clip": "v_215628",
+     "start": 10.667,
+     "end": 14.667
+    },
+    {
+     "clip": "v_213143",
+     "start": 14.667,
+     "end": 16.667
+    },
+    {
+     "clip": "v_215603",
+     "start": 16.667,
+     "end": 17.067
+    }
+   ],
+   "music": {
+    "track": "music/mixkit_677_epical_drums_02.mp3",
+    "start_out": 3.267,
+    "track_in": 24.4
+   }
+  }
+ },
+ "part2": {
+  "segments": [
+   {
+    "i": 0,
+    "out_start": 0,
+    "out_end": 0.87,
+    "clip": "v_225618",
+    "src_in": 18.6,
+    "src_out": 19.45,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 1,
+    "out_start": 0.87,
+    "out_end": 2.87,
+    "clip": "v_225618",
+    "src_in": 19.45,
+    "src_out": 19.95,
+    "speed": 0.25,
+    "layout": "l"
+   },
+   {
+    "i": 2,
+    "out_start": 2.87,
+    "out_end": 3.53,
+    "clip": "v_225618",
+    "src_in": 19.95,
+    "src_out": 20.6,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 3,
+    "out_start": 3.53,
+    "out_end": 7.23,
+    "clip": "v_213120",
+    "src_in": 1.0,
+    "src_out": 4.7,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 4,
+    "out_start": 7.23,
+    "out_end": 8.73,
+    "clip": "v_215631",
+    "src_in": 0.0,
+    "src_out": 1.5,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 5,
+    "out_start": 8.73,
+    "out_end": 9.93,
+    "clip": "v_225545",
+    "src_in": 6.6,
+    "src_out": 7.8,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 6,
+    "out_start": 9.93,
+    "out_end": 12.93,
+    "clip": "v_225545",
+    "src_in": 7.8,
+    "src_out": 9.0,
+    "speed": 0.4,
+    "layout": "l"
+   },
+   {
+    "i": 7,
+    "out_start": 12.93,
+    "out_end": 14.43,
+    "clip": "v_225539",
+    "src_in": 10.0,
+    "src_out": 11.486,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 8,
+    "out_start": 14.43,
+    "out_end": 15.93,
+    "clip": "v_225605",
+    "src_in": 12.0,
+    "src_out": 13.486,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 9,
+    "out_start": 15.93,
+    "out_end": 16.93,
+    "clip": "v_225554",
+    "src_in": 18.8,
+    "src_out": 19.8,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 10,
+    "out_start": 16.93,
+    "out_end": 19.93,
+    "clip": "v_225554",
+    "src_in": 19.8,
+    "src_out": 21.0,
+    "speed": 0.4,
+    "layout": "l"
+   },
+   {
+    "i": 11,
+    "out_start": 19.93,
+    "out_end": 20.73,
+    "clip": "v_225554",
+    "src_in": 21.0,
+    "src_out": 21.8,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 12,
+    "out_start": 20.73,
+    "out_end": 22.23,
+    "clip": "v_225605",
+    "src_in": 27.0,
+    "src_out": 28.486,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 13,
+    "out_start": 22.23,
+    "out_end": 23.73,
+    "clip": "v_225535",
+    "src_in": 47.0,
+    "src_out": 48.486,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 14,
+    "out_start": 23.73,
+    "out_end": 25.23,
+    "clip": "v_220303",
+    "src_in": 30.0,
+    "src_out": 31.486,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 15,
+    "out_start": 25.23,
+    "out_end": 30.23,
+    "clip": "v_215617",
+    "src_in": 25.0,
+    "src_out": 33.0,
+    "speed": 1.6,
+    "layout": "p"
+   },
+   {
+    "i": 16,
+    "out_start": 30.23,
+    "out_end": 33.23,
+    "clip": "v_215619",
+    "src_in": 9.5,
+    "src_out": 12.5,
+    "speed": 1.0,
+    "layout": "p"
+   },
+   {
+    "i": 17,
+    "out_start": 33.23,
+    "out_end": 36.23,
+    "clip": "v_225626",
+    "src_in": 1.0,
+    "src_out": 4.0,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 18,
+    "out_start": 36.23,
+    "out_end": 38.73,
+    "clip": "v_225628",
+    "src_in": 3.0,
+    "src_out": 5.5,
+    "speed": 1.0,
+    "layout": "l"
+   },
+   {
+    "i": 19,
+    "out_start": 38.73,
+    "out_end": 41.73,
+    "clip": "v_215627",
+    "src_in": 22.0,
+    "src_out": 25.0,
+    "speed": 1.0,
+    "layout": "p"
+   }
+  ],
+  "audio": {
+   "total": 41.733,
+   "seg_starts": [
+    0.0,
+    0.867,
+    2.867,
+    3.533,
+    7.233,
+    8.733,
+    9.933,
+    12.933,
+    14.433,
+    15.933,
+    16.933,
+    19.933,
+    20.733,
+    22.233,
+    23.733,
+    25.233,
+    30.233,
+    33.233,
+    36.233,
+    38.733
+   ],
+   "impacts": [
+    {
+     "clip": "v_225618",
+     "t": 0.867,
+     "word": "AGAIN",
+     "seg": 1
+    },
+    {
+     "clip": "v_225545",
+     "t": 11.683,
+     "word": "TAKEDOWN",
+     "seg": 6
+    },
+    {
+     "clip": "v_225554",
+     "t": 18.683,
+     "word": null,
+     "seg": 10
+    }
+   ],
+   "lines": [
+    {
+     "clip": "v_213120",
+     "start": 3.533,
+     "end": 7.233
+    },
+    {
+     "clip": "v_215631",
+     "start": 7.233,
+     "end": 8.733
+    }
+   ],
+   "music": {
+    "track": "music/mixkit_676_epical_drums_01.mp3",
+    "start_out": 3.533,
+    "track_in": 2.0
+   }
+  }
+ }
+}

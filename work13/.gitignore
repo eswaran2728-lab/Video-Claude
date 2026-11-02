@@ -1,6 +1,11 @@
 proxy/
 renders/
+src/
 edit/assets/v/
+edit/assets/*.wav
+edit/.hyperframes/
+edit_p2/.hyperframes/
+music/*.mp3
 *.mp4
 *.log
 __pycache__/

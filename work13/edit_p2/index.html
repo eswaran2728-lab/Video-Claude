@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "IDB"; src: url("assets/fonts/InterDisplay-Black.otf"); font-weight: 900; }
+      @font-face { font-family: "IDBo"; src: url("assets/fonts/InterDisplay-Bold.otf"); font-weight: 700; }
+      @font-face { font-family: "ISB"; src: url("assets/fonts/Inter-SemiBold.otf"); font-weight: 600; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0e0b10; }
+      .clip { position: absolute; inset: 0; }
+      .vid { width: 1080px; height: 1920px; object-fit: cover; }
+      #gfx { z-index: 10; pointer-events: none; }
+      .chip { position: absolute; left: 540px; height: 64px; line-height: 64px; padding: 0 28px; border-radius: 8px; color: #fff;
+        font-family: "IDB"; font-size: 34px; letter-spacing: 6px; white-space: nowrap; box-shadow: 0 10px 26px rgba(0,0,0,.35); }
+      .cap { position: absolute; left: 140px; width: 800px; top: 290px; text-align: center; }
+      .cap .t { display: inline; font-family: "IDBo"; font-size: 54px; line-height: 1.32; color: #fff; padding: 6px 18px; border-radius: 10px;
+        background: rgba(14,11,16,.82); -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+      .cap .sub { display: inline-block; margin-top: 12px; font-family: "ISB"; font-size: 32px; color: #f2b705; padding: 4px 14px; border-radius: 8px;
+        background: rgba(14,11,16,.7); }
+      .kw { position: absolute; left: 540px; top: 640px; font-family: "IDB"; color: #fff; letter-spacing: -3px; line-height: 1; white-space: nowrap;
+        text-shadow: 0 0 0 #e1124b, 6px 6px 0 #e1124b, 0 18px 40px rgba(0,0,0,.55); }
+      .kw .dot { color: #f2b705; }
+      .flash { position: absolute; inset: 0; background: #fff; }
+      .mq { position: absolute; inset: 0; background: rgba(14,11,16,.35); }
+      .mrow { position: absolute; left: 0; white-space: nowrap; font-family: "IDB"; font-size: 210px; letter-spacing: -4px; line-height: 1; opacity: .92; }
+      .poster { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; padding-top: 520px; }
+      .poster.dark { background: linear-gradient(180deg, rgba(14,11,16,.15), rgba(14,11,16,.55) 40%, rgba(14,11,16,.55) 70%, rgba(14,11,16,.2)); }
+      .pbar { width: 700px; transform-origin: 50% 50%; position: relative; text-align: center; }
+      .pbar i { display: block; height: 9px; } .pbar i:nth-child(1) { background: #e1124b; } .pbar i:nth-child(2) { background: #f2b705; }
+      .pbar span { display: block; background: #fff; color: #0e0b10; font-family: "IDB"; font-size: 40px; letter-spacing: 4px; line-height: 70px; }
+      .ph { overflow: hidden; margin-top: 26px; }
+      .phi { font-family: "IDB"; font-size: 178px; color: #fff; letter-spacing: -5px; line-height: 1.02; text-shadow: 0 14px 40px rgba(0,0,0,.45); }
+      .pl { overflow: hidden; margin-top: 6px; }
+      .pli { font-family: "IDBo"; font-size: 44px; color: #fff; letter-spacing: 1px; text-align: center; text-shadow: 0 6px 20px rgba(0,0,0,.6); }
+      .pcta { margin-top: 40px; background: #e1124b; color: #fff; font-family: "IDB"; font-size: 40px; letter-spacing: 3px; padding: 18px 34px; border-radius: 12px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-width="1080" data-height="1920" data-start="0" data-duration="41.733">
+      <video id="plate" class="clip vid" src="assets/v/part2_plate.mp4" muted playsinline data-start="0" data-duration="41.733" data-track-index="1" style="z-index:1"></video>
+      <audio id="mix" src="assets/part2_mix.wav" data-start="0" data-duration="41.733" data-track-index="2" data-volume="1"></audio>
+      <div id="gfx" class="clip" data-start="0" data-duration="41.733" data-track-index="3">
+        <div id="chip0" class="chip" style="top:300px;background:#e1124b">PART 2</div>
+        <div id="chip1" class="chip" style="top:380px;background:#f2b705">2ND ANGLE</div>
+        <div id="kw0" class="kw" style="font-size:200px">AGAIN<span class="dot">.</span></div>
+        <div id="fl0" class="flash"></div>
+        <div id="cap0" class="cap"><span class="t">ungaludaiya aadharavu</span><br><span class="t">romba romba mukkiyam</span><br><span class="sub">your support is very important</span></div>
+        <div id="cap1" class="cap"><span class="t">romba nandri!</span><br><span class="sub">thank you very much</span></div>
+        <div id="cap2" class="cap"><span class="t">Let&#x27;s go!</span></div>
+        <div id="mq0" class="mq"><div class="mrow" id="mq0r0" style="top:560px;color:#ffffff">SELF-DEFENCE · SELF-DEFENCE · SELF-DEFENCE · SELF-DEFENCE · SELF-DEFENCE · SELF-DEFENCE · SELF-DEFENCE · SELF-DEFENCE · </div><div class="mrow" id="mq0r1" style="top:840px;color:#e1124b">SELF-DEFENCE · SELF-DEFENCE · SELF-DEFENCE · SELF-DEFENCE · SELF-DEFENCE · SELF-DEFENCE · SELF-DEFENCE · SELF-DEFENCE · </div><div class="mrow" id="mq0r2" style="top:1120px;color:#ffffff">SELF-DEFENCE · SELF-DEFENCE · SELF-DEFENCE · SELF-DEFENCE · SELF-DEFENCE · SELF-DEFENCE · SELF-DEFENCE · SELF-DEFENCE · </div></div>
+        <div id="chip2" class="chip" style="top:1150px;background:#e1124b">SELF-DEFENCE</div>
+        <div id="kw1" class="kw" style="font-size:150px">TAKEDOWN<span class="dot">.</span></div>
+        <div id="fl1" class="flash"></div>
+        <div id="chip3" class="chip" style="top:1150px;background:#e1124b">TEAMWORK</div>
+        <div id="chip4" class="chip" style="top:1150px;background:#e1124b">THE CROWD</div>
+        <div id="chip5" class="chip" style="top:1150px;background:#e1124b">FINALE</div>
+        <div id="p0" class="poster dark"><div class="pbar" id="p0b"><i></i><i></i><span>31.10 &amp; 1.11.2026</span></div><div class="ph"><div class="phi" id="p0h">SILAMBAM</div></div><div class="pl"><div class="pli" id="p0l0">FESTIVAL KESENIAN &amp; KEBUDAYAAN</div></div><div class="pl"><div class="pli" id="p0l1">MALAYSIA 2026</div></div><div class="pcta" id="p0c">TERIMA KASIH · THANK YOU</div></div>
+      </div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      gsap.set("#chip0",{xPercent:-50,opacity:0,y:16});
+      gsap.set("#chip1",{xPercent:-50,opacity:0,y:16});
+      gsap.set("#kw0",{xPercent:-50,yPercent:-50,opacity:0,scale:1.45}); gsap.set("#fl0",{opacity:0});
+      gsap.set("#cap0",{opacity:0,y:12});
+      gsap.set("#cap1",{opacity:0,y:12});
+      gsap.set("#cap2",{opacity:0,y:12});
+      gsap.set("#mq0",{opacity:0});
+      gsap.set("#mq0r0",{x:-900});
+      gsap.set("#mq0r1",{x:-200});
+      gsap.set("#mq0r2",{x:-900});
+      gsap.set("#chip2",{xPercent:-50,opacity:0,y:16});
+      gsap.set("#kw1",{xPercent:-50,yPercent:-50,opacity:0,scale:1.45}); gsap.set("#fl1",{opacity:0});
+      gsap.set("#chip3",{xPercent:-50,opacity:0,y:16});
+      gsap.set("#chip4",{xPercent:-50,opacity:0,y:16});
+      gsap.set("#chip5",{xPercent:-50,opacity:0,y:16});
+      gsap.set("#p0",{opacity:0}); gsap.set("#p0b",{scaleX:0}); gsap.set("#p0h",{yPercent:110});
+      gsap.set("#p0l0",{yPercent:110});
+      gsap.set("#p0l1",{yPercent:110});
+      gsap.set("#p0c",{opacity:0,y:20});
+      const tl = gsap.timeline({ paused: true });
+      tl.to("#chip0",{opacity:1,y:0,duration:0.3,ease:"power3.out"},0.0);
+      tl.to("#chip0",{opacity:0,y:-10,duration:0.25,ease:"power2.in"},3.283);
+      tl.to("#chip1",{opacity:1,y:0,duration:0.3,ease:"power3.out"},0.25);
+      tl.to("#chip1",{opacity:0,y:-10,duration:0.25,ease:"power2.in"},3.283);
+      tl.set("#fl0",{opacity:0.75},0.867);
+      tl.to("#fl0",{opacity:0,duration:0.22,ease:"power2.out"},0.887);
+      tl.set("#kw0",{opacity:1},0.867);
+      tl.to("#kw0",{scale:1,duration:0.2,ease:"expo.out"},0.867);
+      tl.to("#kw0",{opacity:0,scale:0.92,duration:0.22,ease:"power2.in"},2.067);
+      tl.to("#cap0",{opacity:1,y:0,duration:0.18,ease:"power2.out"},3.633);
+      tl.set("#cap0",{opacity:0},5.633);
+      tl.to("#cap1",{opacity:1,y:0,duration:0.18,ease:"power2.out"},5.633);
+      tl.set("#cap1",{opacity:0},7.233);
+      tl.to("#cap2",{opacity:1,y:0,duration:0.18,ease:"power2.out"},7.233);
+      tl.set("#cap2",{opacity:0},8.233);
+      tl.to("#mq0r0",{x:-200,duration:0.9,ease:"none"},8.733);
+      tl.to("#mq0r1",{x:-900,duration:0.9,ease:"none"},8.733);
+      tl.to("#mq0r2",{x:-200,duration:0.9,ease:"none"},8.733);
+      tl.set("#mq0",{opacity:1},8.733);
+      tl.to("#mq0",{opacity:0,duration:0.2,ease:"power2.in"},9.433);
+      tl.to("#chip2",{opacity:1,y:0,duration:0.3,ease:"power3.out"},9.633);
+      tl.to("#chip2",{opacity:0,y:-10,duration:0.25,ease:"power2.in"},24.883);
+      tl.set("#fl1",{opacity:0.75},11.683);
+      tl.to("#fl1",{opacity:0,duration:0.22,ease:"power2.out"},11.703);
+      tl.set("#kw1",{opacity:1},11.683);
+      tl.to("#kw1",{scale:1,duration:0.2,ease:"expo.out"},11.683);
+      tl.to("#kw1",{opacity:0,scale:0.92,duration:0.22,ease:"power2.in"},12.983);
+      tl.to("#chip3",{opacity:1,y:0,duration:0.3,ease:"power3.out"},25.433);
+      tl.to("#chip3",{opacity:0,y:-10,duration:0.25,ease:"power2.in"},29.883);
+      tl.to("#chip4",{opacity:1,y:0,duration:0.3,ease:"power3.out"},30.433);
+      tl.to("#chip4",{opacity:0,y:-10,duration:0.25,ease:"power2.in"},32.883);
+      tl.to("#chip5",{opacity:1,y:0,duration:0.3,ease:"power3.out"},33.433);
+      tl.to("#chip5",{opacity:0,y:-10,duration:0.25,ease:"power2.in"},38.383);
+      tl.set("#p0",{opacity:1},38.733);
+      tl.to("#p0b",{scaleX:1,duration:0.35,ease:"power3.inOut"},38.733);
+      tl.to("#p0h",{yPercent:0,duration:0.45,ease:"power4.out"},38.883);
+      tl.to("#p0l0",{yPercent:0,duration:0.4,ease:"power3.out"},39.083);
+      tl.to("#p0l1",{yPercent:0,duration:0.4,ease:"power3.out"},39.203);
+      tl.to("#p0c",{opacity:1,y:0,duration:0.35,ease:"power3.out"},39.433);
+      tl.set({}, {}, 41.733);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

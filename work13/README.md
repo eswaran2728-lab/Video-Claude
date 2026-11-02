@@ -1,0 +1,110 @@
+# Silambam @ Festival Kesenian & Kebudayaan Malaysia 2026 — Part 1 + Part 2 highlight reels
+
+9:16, 30 fps, HyperFrames 0.8.193. **Previews (waiting for approval):**
+- `PREVIEW_silambam_part1_v01.mp4` (≈45.7 s)
+- `PREVIEW_silambam_part2_v01.mp4` (≈41.7 s)
+
+Both are 720x1280, −14 LUFS. No final export has been made and nothing is published.
+
+## Source
+- Google Drive folder "Claude video editing" (eswaran3561): 25 videos + 12 photos. Google Drive refused downloads to
+  this workspace ("quota exceeded", also for a fresh zip and with Google's own virus-scan confirmation). A chunked
+  workaround was stopped as circumvention.
+- Used instead: the creator's WeTransfer zip "WhatsApp Unknown 2026-11-02 at 10.24.52 AM.zip" (167 MB): 29 videos + 9
+  photos, **WhatsApp-compressed** (576x1024 portrait, 1024x576 / 832x464 / 640x368 landscape).
+  - It holds every Drive video, matched by duration (the 4K ProRes IMG_6684/6685/6688 arrive as 640x368), plus 4
+    extra clips.
+  - Unzipped to `src/wa/` with renamed files `v_HHMMSS.mp4` / `p_HHMMSS.jpeg` (WhatsApp timestamps). `normalize.sh` →
+    `src/norm/` (30 fps CFR working copies, regenerable; deleted after the plates were rendered, for disk space).
+
+## What is in the footage (all 29 clips reviewed: `sheets/r8/`, frame strips per clip)
+- **Stunts:**
+  - watermelon smashed with a blade on a man lying on a bed of spikes: portrait v_215609 (impact 33.95 s) + landscape
+    v_225618 (impact 19.45 s);
+  - concrete block on a man's head broken with a hammer: portrait v_215613 (impact 24.0 s) + landscape v_225624
+    (≈28.6 s);
+  - self-defence takedowns and throws: v_225545 (≈8.5 s), v_225554 (≈20.5 s);
+  - a human-pyramid pose: v_215617.
+- **Stage:** stick sparring (most landscape clips), team line-up, the MCs, the crowd, the final group pose.
+- **Backstage:** huddle, hands-in cheers, line-up with sticks.
+- **Speech** (Whisper large-v3, `transcripts.json`, word timings `lines.json`); only these are used:
+  - v_215628 (MC, English): "Thank you. Right after this we have the next performance."
+  - v_213143 (Tamil): "Vanakkam guru, vanakkam"
+  - v_215603: "Ready?"
+  - v_215631 (MC): "Let's go."
+  - v_213120 (MC, Tamil): "…ungaludaiya aadharavu romba romba mukkiyam … romba nandri" — translation pass: "Your support is
+    very important. Thank you very much."
+- Not used: v_215647 (a team member introduces the team — club and guru names differ between passes, see Unresolved).
+  Everything else is stage music and crowd (Whisper's "Thank you for watching" etc. are hallucinations).
+
+## Edit (plan13.py; full table `timing_table.md`, machine-readable `timing_map.json`)
+All 29 videos are used at least once (`plan13.check_coverage()` → none missing).
+
+**Part 1 (45.7 s):**
+- **Hook:** the watermelon smash, real speed into 0.25x interpolated slow motion through the impact; SMASH. on the hit.
+- **Title card:** festival-poster style; date bar 31.10 & 1.11.2026, SILAMBAM, festival name.
+- **Backstage** (huddle, hands-in, line-up) under the MC's "Right after this we have the next performance."
+- **"Vanakkam guru, vanakkam" salute.**
+- **"Ready?"** → SILAMBAM marquee wipe.
+- **Fast stick demo:** 15 cuts of 1–2 beats on the music's 0.743 s beat.
+- **Brick stunt:** set-up, hammer raise during the music's drop, impact in 0.25x slow motion on the next drum hit with
+  UNBREAKABLE., then a REPLAY from the second angle (0.33x).
+- **Throw teaser and "COMING NEXT · PART 2" card.**
+
+**Part 2 (41.7 s):**
+- **Hook:** the watermelon from the second angle (2ND ANGLE, 0.25x slow motion, AGAIN.).
+- **MC speech** ("…your support is very important… thank you") and "Let's go!"
+- **SELF-DEFENCE marquee and takedowns/throws:** two in 0.4x slow motion, TAKEDOWN.
+- **TEAMWORK:** the human pyramid at 1.6x.
+- **The crowd and FINALE:** final poses.
+- **End card** over the backstage huddle (SILAMBAM, festival, dates, TERIMA KASIH · THANK YOU).
+
+**Layout:**
+- Portrait clips fill the frame.
+- Landscape clips sit in a zoomed band (2.0–2.7x, cropped around the action's motion centroid) over a blurred, darker
+  copy of themselves, keeping more of the WhatsApp resolution than a full 9:16 crop. The landscape clips are softer at
+  phone size.
+- Slow motion: ffmpeg `minterpolate` (mci/aobmc) frame interpolation.
+
+## Motion graphics — Prompt Motion references, adapted
+1. **Festival lineup promo reel** — https://prompt-motion.com/gonzalomacagno-2de1a9
+   - Vertical festival poster: colour bars over a date strip, one huge headline, stacked lines rising out of a mask.
+   - Used for the title card, the Part 2 teaser and the end card.
+2. **Bold kinetic type showreel** — https://prompt-motion.com/shneural-2abdfa
+   - One giant word punching in on the hit, and repeating marquee rows.
+   - Used for SMASH. / UNBREAKABLE. / AGAIN. / TAKEDOWN. on the impact frames (with a white flash), and the SILAMBAM /
+     SELF-DEFENCE marquee wipes.
+
+Section chips (BACKSTAGE, STICK DEMO, STUNT, REPLAY, SELF-DEFENCE, TEAMWORK, THE CROWD, FINALE) and captions sit
+inside the safe area. Type: Inter Display Black/Bold + Inter SemiBold; palette red #e1124b, gold #f2b705 (the yellow
+belts), white on a dark ink.
+
+## Sound (mix13.py)
+- **Clip sound:** spoken lines at full level, the stage sound low underneath. Slow motion is silent apart from a swish
+  into it and sub-impact + hook-impact on the impact frame (edit-video SFX pack, Apache-2.0).
+- **Music** — both Mixkit Stock Music Free License, checked on the tag page:
+  - Part 1: "Epical Drums 02" (Grigoriy Nuzhny, Mixkit #677); its drop (56.5–57.8 s) sits on the hammer raise, and the
+    next hit (58.0 s) on the brick impact.
+  - Part 2: "Epical Drums 01" (Mixkit #676).
+- Music ducked 11 dB under speech; master −14 LUFS.
+
+## Unresolved
+- **Team name, guru name, club.** v_215647 says roughly "we are the students of Maha Guru … (Arumugam / S.R. Mohan?)". The
+  passes disagree, so nothing is shown. Please give the exact names if you want them on the title or end card.
+- **Quality.** The edit uses the WhatsApp copies. For a sharper final, send the original Drive files another way (e.g.
+  Dropbox/WeTransfer of the originals); the same plan re-renders from them.
+- **Music.** Not auditioned by ear; stage music in the clips is kept low and may belong to its performers.
+- Photos (9 in the zip, 12 on Drive) are not used in v01. Videos were asked for; photos can be added as quick stills.
+
+## Rebuild
+```
+./normalize.sh                                  # src/wa -> src/norm (30 fps working copies) + sheets
+python3 transcribe.py; python3 transcribe_lines.py; python3 score.py
+python3 render_segments.py part1 part2          # -> edit/assets/v/part{1,2}_plate.mp4, segments.json
+python3 mix13.py                                # -> edit/assets/part{1,2}_mix.wav, edit/part{1,2}_audio.json
+python3 build13.py part1 && python3 build13.py part2      # -> edit/index.html, edit_p2/index.html
+(cd edit && npx --yes hyperframes@0.8.193 render --quality draft --fps 30 -o ../renders/draft_part1.mp4)
+(cd edit_p2 && npx --yes hyperframes@0.8.193 render --quality draft --fps 30 -o ../renders/draft_part2.mp4)
+./master_preview.sh renders/draft_part1.mp4 PREVIEW_silambam_part1_v01.mp4 45.667
+./master_preview.sh renders/draft_part2.mp4 PREVIEW_silambam_part2_v01.mp4 41.733
+```
