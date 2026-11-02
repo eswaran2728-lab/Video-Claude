@@ -6,6 +6,17 @@
 
 Both are 720x1280, −14 LUFS. No final export has been made and nothing is published.
 
+**Finals (approved v02, creator: "Proceed final"):**
+- `FINAL_Silambam_Part1_v02_1080x1920.mp4`: 67.4 s, −14.7 LUFS / −1.8 dBFS.
+- `FINAL_Silambam_Part2_v02_1080x1920.mp4`: 62.6 s, −14.3 LUFS / −1.6 dBFS.
+- Both are 1080x1920, 30 fps, H.264 ≈22 Mb/s, AAC 256k, rendered with `--quality high` and mastered with `master_final.sh`.
+- Checked:
+  - full decode, 0 errors, no black frames;
+  - audio aligned within 3 ms;
+  - frames match the approved previews (mean difference 1.6–2.5 levels at 5 sample times).
+- Not in git (size). Made as previewed: the gold header wording without the logo; no logo file was received (it came
+  only as an inline image). Nothing is published.
+
 ## v02 — creator's note on v01: "make those video cinematic look, make the videos run a bit longer time so can see the shows,
 ## at top header add mahaguru sri s arumugam logo that gold on and add mahaguru sri s arumugam students"
 Previews: `PREVIEW_silambam_part1_v02.mp4` (≈67.4 s), `PREVIEW_silambam_part2_v02.mp4` (≈62.6 s). v01 files are kept.
