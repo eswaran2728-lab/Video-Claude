@@ -109,3 +109,6 @@ Built with `VERSION=v02` (`plan15_v02.py`); outputs carry `_v02`.
   v02; cues are identical).
 - **Final:** `render --quality high --sdr` → `./master_final.sh` → `FINAL_Sepang_Silambam_Recap_v03_1080x1920.mp4`.
   It is not in git (size). Nothing is published.
+- **Final checks:** 1080x1920 H.264, 30 fps, 2869 frames, 95.6 s; −14.0 LUFS, −3.8 dBFS peak.
+  - Full decode with 0 errors; no black frames; audio vs `mix_v03.wav` lag 0 ms at three points.
+  - Contact sheet `sheets/final_v03_sheet.jpg` matches the v02 preview, apart from the logo.
