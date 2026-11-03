@@ -1,0 +1,90 @@
+[
+ {
+  "id": "hook_bout",
+  "clip": "IMG_5215",
+  "src_in": 22.55,
+  "t0": 0.0,
+  "t1": 1.81,
+  "speed": 1.0,
+  "kind": "p",
+  "frames": 54,
+  "src_out": 24.35
+ },
+ {
+  "id": "hook_bg",
+  "clip": "IMG_5221",
+  "src_in": 2.0,
+  "t0": 3.62,
+  "t1": 5.67,
+  "speed": 1.0,
+  "kind": "bg",
+  "frames": 61,
+  "src_out": 4.033
+ },
+ {
+  "id": "arena",
+  "clip": "IMG_5233",
+  "src_in": 0.2,
+  "t0": 15.34,
+  "t1": 17.15,
+  "speed": 1.0,
+  "kind": "p",
+  "frames": 54,
+  "src_out": 2.0
+ },
+ {
+  "id": "athletes",
+  "clip": "IMG_5206",
+  "src_in": 2.0,
+  "t0": 17.15,
+  "t1": 18.96,
+  "speed": 1.0,
+  "kind": "p",
+  "frames": 55,
+  "src_out": 3.833
+ },
+ {
+  "id": "march",
+  "clip": "IMG_5212",
+  "src_in": 2.9,
+  "t0": 18.96,
+  "t1": 20.17,
+  "speed": 1.0,
+  "kind": "p",
+  "frames": 36,
+  "src_out": 4.1
+ },
+ {
+  "id": "bout",
+  "clip": "IMG_5215",
+  "src_in": 8.0,
+  "t0": 20.17,
+  "t1": 22.58,
+  "speed": 1.0,
+  "kind": "p",
+  "frames": 72,
+  "src_out": 10.4
+ },
+ {
+  "id": "bout_slow",
+  "clip": "IMG_5215",
+  "src_in": 12.15,
+  "t0": 22.58,
+  "t1": 25.0,
+  "speed": 0.5,
+  "kind": "p",
+  "frames": 73,
+  "src_out": 13.367
+ },
+ {
+  "id": "results_bg",
+  "clip": "IMG_5221",
+  "src_in": 0.0,
+  "t0": 25.0,
+  "t1": 49.16,
+  "speed": 0.93,
+  "kind": "bg",
+  "frames": 725,
+  "src_out": 22.475
+ }
+]
