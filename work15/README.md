@@ -64,7 +64,15 @@ card, where the logos are shown large.
 ```
 ./download.sh && ./make_proxies.sh && python3 convert_photos.py && python3 make_logos.py && python3 make_poster_pieces.py
 python3 render15.py && python3 build15.py && python3 mix15.py
-cd edit && npx --yes hyperframes@0.8.193 render --quality draft --fps 30 -o ../renders/draft_v01.mp4
+cd edit && npx --yes hyperframes@0.8.193 render --quality draft --fps 30 --sdr -o ../renders/draft_v01.mp4   # --sdr: some photos carry HDR metadata
 cd .. && ./master_preview.sh renders/draft_v01.mp4 PREVIEW_sepang_silambam_recap_v01.mp4
 ```
-Final (only after approval): `render --quality high` → `./master_final.sh renders/final_v01.mp4 FINAL_….mp4`.
+Final (only after approval): `render --quality high --sdr` → `./master_final.sh renders/final_v01.mp4 FINAL_….mp4`.
+
+## Checks (v01 preview)
+- 720x1280, 2400 frames, 80.0 s; −14.0 LUFS, −1.6 dBFS peak.
+- Full decode with 0 errors; no black frames; audio vs `edit/assets/mix.wav` lag 0 ms at three points.
+- `hyperframes check`: 0 errors. Remaining warnings are the rolling counter digits (they are meant to pass quickly) and
+  the file size. Heavy overlays were reduced (pre-blurred photos, linear gradients) after a black-capture risk warning.
+- Snapshots at phone size: `sheets/snap1`–`snap3`, `sheets/preview_v01_sheet.jpg`.
+- I could not listen to the audio; music placement and SFX levels were checked by measurement only.
