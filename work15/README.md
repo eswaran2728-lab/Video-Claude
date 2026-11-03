@@ -96,3 +96,16 @@ Built with `VERSION=v02` (`plan15_v02.py`); outputs carry `_v02`.
   - Its picture is untouched (576x1024 scaled to 1080x1920, so it is softer than the rest).
   - Its own song is removed; the supplied song plays under it and fades out over the last 2.5 s.
   - The gold header is hidden there because the clip has its own.
+
+## v03: logo fix → FINAL (creator: "Its good but silambam logo that white is like cut and stick. Change it give final")
+- **New logo source:** the creator sent the Persatuan Silambam Malaysia logo as a screenshot of a transparent PNG
+  (`src/logos/silambam_malaysia_screenshot.png`; the checkerboard is part of the pixels).
+  - BiRefNet-lite separates the logo from the checkerboard and keeps the white uniforms (`make_logos.py`, v03 block).
+  - The edge is pulled in 1 px and un-mixed from the light grey → `edit/assets/logos/silambam_malaysia_t.png`
+    (1135x834, sharper than the first file).
+- **Placement:** the logo sits directly on the header and end card, with no white disc or card (the end card's white
+  logo card is removed for all three logos).
+- **Unchanged from the approved v02:** everything else, including timing, song, plate and mix (`plan15_v03.py` imports
+  v02; cues are identical).
+- **Final:** `render --quality high --sdr` → `./master_final.sh` → `FINAL_Sepang_Silambam_Recap_v03_1080x1920.mp4`.
+  It is not in git (size). Nothing is published.

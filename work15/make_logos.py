@@ -45,3 +45,21 @@ for nm in ("mahaguru", "silambam_malaysia", "silambam_selangor"):
     for bgn, bg in (("dark", (14, 11, 16)), ("red", (150, 20, 40)), ("white", (245, 245, 245))):
         c = Image.new("RGBA", o.size, bg + (255,)); c.alpha_composite(o); c.convert("RGB").save(f"sheets/logo_{nm}_on_{bgn}.png")
 print("ok", s.size, g.size)
+
+# v03: the creator re-sent the Persatuan Silambam Malaysia logo as a screenshot of a transparent PNG (checkerboard baked into
+# the pixels, src/logos/silambam_malaysia_screenshot.png). BiRefNet separates the logo from the checkerboard cleanly - the
+# white uniforms stay - so the logo no longer needs a white disc/card ("that white is like cut and stick").
+im = cv2.imread("src/logos/silambam_malaysia_screenshot.png"); Pn = im[774:2094]
+x = cv2.cvtColor(cv2.resize(Pn, (1024, 1024), interpolation=cv2.INTER_AREA), cv2.COLOR_BGR2RGB).astype(np.float32) / 255
+x = ((x - MEAN) / STD).transpose(2, 0, 1)[None].astype(np.float32)
+p = 1 / (1 + np.exp(-S.run(None, {'input_image': x})[0][0, 0])); p = (p - p.min()) / (p.max() - p.min() + 1e-6)
+al = cv2.resize((p * 255).astype(np.uint8), (Pn.shape[1], Pn.shape[0]), interpolation=cv2.INTER_LINEAR)
+al = cv2.GaussianBlur(cv2.erode(al, np.ones((3, 3), np.uint8)), (3, 3), 0)          # pull the edge in 1 px: no checker fringe
+al = np.where(al > 235, 255, np.where(al < 20, 0, al)).astype(np.uint8)
+rgb = cv2.cvtColor(Pn, cv2.COLOR_BGR2RGB).astype(float); a = al[..., None] / 255; fr = (al > 0) & (al < 255)
+rgb[fr] = np.clip((rgb[fr] - 225 * (1 - a[fr])) / np.maximum(a[fr], 0.25), 0, 255)   # unmix the light checker grey from edges
+t = trim_save(rgb, al, "silambam_malaysia_t.png", h=500)
+shutil.copy(OUT + "silambam_malaysia_t.png", OUT + "silambam_malaysia_t_end.png")
+for bgn, bg in (("dark", (14, 11, 16)), ("red", (150, 20, 40))):
+    c = Image.new("RGBA", t.size, bg + (255,)); c.alpha_composite(t); c.convert("RGB").save(f"sheets/logo_silambam_malaysia_t_on_{bgn}.png")
+print("silambam transparent", t.size)

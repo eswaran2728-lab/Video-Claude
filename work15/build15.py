@@ -89,7 +89,8 @@ def chip(cid, text, t0, t1, y=440, color=RED):
 
 # ---------- header: the creator's three logos + gold MAHAGURU SRI S ARUMUGAM / STUDENTS ----------
 E('<div id="hshade"></div><div id="hdr"><div class="hlogos">'
-  '<div class="hwhite"><img src="assets/logos/silambam_malaysia_onwhite.jpg" alt=""></div>'
+  + ('<img class="hsm" src="assets/logos/silambam_malaysia_t.png" alt="">' if getattr(P, "SILAMBAM_TRANSPARENT", False) else
+     '<div class="hwhite"><img src="assets/logos/silambam_malaysia_onwhite.jpg" alt=""></div>') +
   '<img class="hm" src="assets/logos/mahaguru.png" alt="">'
   '<img class="hs" src="assets/logos/silambam_selangor.png" alt=""></div>'
   '<div class="hl1">MAHAGURU SRI S ARUMUGAM</div><div class="hl2"><i></i>STUDENTS<i></i></div></div>')
@@ -298,8 +299,8 @@ cue(c0 + 0.3, "sparkle.wav", -13)
 
 # ---------- 7 END CARD ----------
 e0 = P.SEC["end"][0]
-E('<div id="end"><div id="endglow"></div><div id="logocard" class="lc">'
-  '<img src="assets/logos/silambam_malaysia_onwhite_end.jpg" alt=""><img src="assets/logos/mahaguru_end.png" alt=""><img src="assets/logos/silambam_selangor_end.png" alt=""></div>'
+E('<div id="end"><div id="endglow"></div><div id="logocard" class="lc' + (' clear' if getattr(P, "SILAMBAM_TRANSPARENT", False) else '') + '">' +
+  ('<img class="lsm" src="assets/logos/silambam_malaysia_t_end.png" alt="">' if getattr(P, "SILAMBAM_TRANSPARENT", False) else '<img src="assets/logos/silambam_malaysia_onwhite_end.jpg" alt="">') + '<img src="assets/logos/mahaguru_end.png" alt=""><img src="assets/logos/silambam_selangor_end.png" alt=""></div>'
   '<div class="e1" id="e1">PERSATUAN SILAMBAM MALAYSIA</div><div class="e2" id="e2">DAERAH SEPANG</div>'
   '<div class="e3" id="e3"><div class="hl1">MAHAGURU SRI S ARUMUGAM</div><div class="hl2"><i></i>STUDENTS<i></i></div></div>'
   '<img id="etamil" src="assets/poster/tamil_end.png" alt=""><div class="e4" id="e4">KEJOHANAN SILAMBAM 2026 · 31.10.2026</div></div>')
@@ -413,6 +414,9 @@ html, body {{ width: 1080px; height: 1920px; overflow: hidden; background: {INK}
 #endglow {{ display: none; }}
 .lc {{ position: absolute; left: 540px; top: 470px; display: flex; align-items: center; gap: 40px; padding: 28px 46px; border-radius: 32px; background: #fff; box-shadow: 0 30px 70px rgba(0,0,0,.55); }}
 .lc img {{ height: 220px; width: auto; }}
+.lc.clear {{ background: none; box-shadow: none; gap: 34px; padding: 0; }}
+.lc.clear img {{ filter: drop-shadow(0 8px 18px rgba(0,0,0,.6)); }} .lc.clear .lsm {{ height: 200px; }}
+.hsm {{ height: 96px; filter: drop-shadow(0 4px 10px rgba(0,0,0,.6)); }}
 .e1, .e2, .e3, .e4, #etamil {{ position: absolute; left: 540px; text-align: center; white-space: nowrap; }}
 .e1 {{ top: 830px; font-family: "IDB"; font-size: 56px; color: #fff; letter-spacing: 1px; }}
 .e2 {{ top: 900px; font-family: "IDB"; font-size: 76px; color: {GOLD}; letter-spacing: 6px; }}

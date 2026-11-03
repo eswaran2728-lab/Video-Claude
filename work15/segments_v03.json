@@ -1,0 +1,123 @@
+[
+ {
+  "id": "hook_bout",
+  "clip": "IMG_5215",
+  "src_in": 22.55,
+  "t0": 0.0,
+  "t1": 1.92,
+  "speed": 1.0,
+  "kind": "p",
+  "frames": 58,
+  "src_out": 24.483
+ },
+ {
+  "id": "hook_bg",
+  "clip": "IMG_5221",
+  "src_in": 2.0,
+  "t0": 3.84,
+  "t1": 5.761,
+  "speed": 1.0,
+  "kind": "bg",
+  "frames": 58,
+  "src_out": 3.933
+ },
+ {
+  "id": "arena",
+  "clip": "IMG_5233",
+  "src_in": 0.2,
+  "t0": 15.362,
+  "t1": 17.282,
+  "speed": 1.0,
+  "kind": "p",
+  "frames": 57,
+  "src_out": 2.1
+ },
+ {
+  "id": "athletes",
+  "clip": "IMG_5206",
+  "src_in": 2.0,
+  "t0": 17.282,
+  "t1": 19.202,
+  "speed": 1.0,
+  "kind": "p",
+  "frames": 58,
+  "src_out": 3.933
+ },
+ {
+  "id": "march",
+  "clip": "IMG_5212",
+  "src_in": 2.9,
+  "t0": 19.202,
+  "t1": 21.122,
+  "speed": 1.0,
+  "kind": "p",
+  "frames": 58,
+  "src_out": 4.833
+ },
+ {
+  "id": "honour",
+  "clip": "IMG_5213",
+  "src_in": 4.4,
+  "t0": 21.122,
+  "t1": 23.042,
+  "speed": 1.0,
+  "kind": "p",
+  "frames": 57,
+  "src_out": 6.3
+ },
+ {
+  "id": "bout",
+  "clip": "IMG_5215",
+  "src_in": 8.0,
+  "t0": 23.042,
+  "t1": 25.923,
+  "speed": 1.0,
+  "kind": "p",
+  "frames": 87,
+  "src_out": 10.9
+ },
+ {
+  "id": "bout_slow",
+  "clip": "IMG_5215",
+  "src_in": 12.15,
+  "t0": 25.923,
+  "t1": 28.803,
+  "speed": 0.5,
+  "kind": "p",
+  "frames": 86,
+  "src_out": 13.583
+ },
+ {
+  "id": "bout2",
+  "clip": "IMG_5215",
+  "src_in": 18.6,
+  "t0": 28.803,
+  "t1": 30.723,
+  "speed": 1.0,
+  "kind": "p",
+  "frames": 58,
+  "src_out": 20.533
+ },
+ {
+  "id": "results_bg",
+  "clip": "IMG_5221",
+  "src_in": 0.0,
+  "t0": 30.723,
+  "t1": 55.686,
+  "speed": 0.9,
+  "kind": "bg",
+  "frames": 749,
+  "src_out": 22.47
+ },
+ {
+  "id": "credits",
+  "clip": "VID-20261102-WA01232",
+  "src_in": 0.0,
+  "t0": 80.648,
+  "t1": 95.6333,
+  "speed": 1.0,
+  "kind": "raw",
+  "frames": 450,
+  "src_out": 15.0
+ }
+]
