@@ -8,7 +8,9 @@
 #    headline, school rows rising out of a mask line, a counter footer.
 # Every name and number comes from the creator's results brief (plan15.ZONES / OVERALL) or the poster.
 import json, html, math, random
-import plan15 as P
+import os, importlib
+VERSION = os.environ.get("VERSION", "v01"); SUF = "" if VERSION == "v01" else "_" + VERSION
+P = importlib.import_module("plan15" if VERSION == "v01" else f"plan15_{VERSION}")
 T = P.TOTAL; R = lambda v: round(v, 3); BEAT = P.BEAT
 GOLD, RED, INK, SILVER, BRONZE = "#f2b705", "#d7192d", "#0e0b10", "#d9dde2", "#cd7f32"
 els, js, init, cues = [], [], [], []
@@ -132,7 +134,8 @@ E(f'<div id="pst_bg"></div><div id="pst_stage"><div id="card" style="left:{CX0}p
 FINAL = {"kejohanan": (540, 520, 1.22), "silambam": (540, 690, 1.27), "peringkat": (540, 868, 1.22), "y2026": (540, 1000, 1.08),
          "date": (205, 1180, 1.25), "time": (543, 1180, 1.25), "venue": (877, 1180, 1.25), "tamil": (540, 1362, 1.22),
          "anjuran": (540, 1530, 0.82)}
-LIFT = {"kejohanan": (p0 + 2 * BEAT, -3), "silambam": (p0 + 3 * BEAT, 2), "peringkat": (p0 + 4 * BEAT, -2), "y2026": (p0 + 5 * BEAT, 3)}
+LB = getattr(P, "POSTER_LIFT_BEATS", (2, 3, 4, 5))
+LIFT = {"kejohanan": (p0 + LB[0] * BEAT, -3), "silambam": (p0 + LB[1] * BEAT, 2), "peringkat": (p0 + LB[2] * BEAT, -2), "y2026": (p0 + LB[3] * BEAT, 3)}
 for n, (fx, fy, fs) in FINAL.items():
     b = PM["pieces"][n]; x0, y0, x1, y1 = b["box"]; pad = b["pad"]
     w = b["png"][0] / PM["scale"] * k; h = b["png"][1] / PM["scale"] * k
@@ -151,8 +154,8 @@ for n, (t, rot) in LIFT.items():                                  # tear out + l
     st(f"#hole_{n}", t, {"opacity": 1})
     tw(f"#pc_{n}", t, 0.45, {"scale": 1.12 if n != "silambam" else 1.3, "rotation": rot, "y": -26, "filter": "drop-shadow(0px 26px 26px rgba(0,0,0,0.65))"}, "back.out(1.4)")
     cue(t, "thock.wav", -9); cue(t - 0.06, "curated/zoom-swish.wav", -19)
-cue(p0 + 5 * BEAT, "sub-impact.wav", -12)
-reg = p0 + 6.5 * BEAT                                            # 9.6: card recedes, pieces regroup into the title stack
+cue(LIFT["y2026"][0], "sub-impact.wav", -12)
+reg = p0 + getattr(P, "POSTER_REGROUP_BEAT", 6.5) * BEAT                                            # 9.6: card recedes, pieces regroup into the title stack
 tw("#card", reg, 0.6, {"scale": 0.9, "opacity": 0.14}, "power2.inOut")
 for j, n in enumerate(["kejohanan", "silambam", "peringkat", "y2026"]):
     dx, dy, sc = FINAL[n]; tw(f"#pc_{n}", reg + 0.06 * j, 0.7, {"x": R(dx), "y": R(dy), "scale": R(sc), "rotation": 0}, "power3.inOut")
@@ -174,7 +177,7 @@ chip("ch_bout", "THE BOUTS", S["bout"]["t0"] + 0.1, S["bout_slow"]["t0"])
 chip("ch_slow", "SLOW-MO", S["bout_slow"]["t0"] + 0.05, S["bout_slow"]["t1"] - 0.1, color="#3a3340")
 E('<div id="flash1" class="flash"></div>'); gs("#flash1", {"opacity": 0})
 st("#flash1", S["bout"]["t0"], {"opacity": 0.6}); tw("#flash1", S["bout"]["t0"] + 0.02, 0.25, {"opacity": 0}, "power2.out")
-for s in ("arena", "athletes", "march", "bout"): cue(S[s]["t0"], "curated/zoom-swish.wav", -18)
+for s in [x for x in ("arena", "athletes", "march", "honour", "bout", "bout2") if x in S]: cue(S[s]["t0"], "curated/zoom-swish.wav", -18)
 cue(S["bout_slow"]["t0"], "curated/metallic-riser.wav", -20)
 
 # ---------- 4 RESULTS by zone ----------
@@ -249,7 +252,7 @@ for j in range(len(ZS)):
     tw(f"#sb{j}", ts0 + 0.12 * j, 0.6, {"scaleX": 1}, "power3.out"); tw(f"#sv{j}", ts0 + 0.12 * j + 0.45, 0.25, {"opacity": 1})
 cue(ts0, "curated/ui-pop.wav", -15)
 # grand total
-gt = P.bar(12)                                                    # 53.99, on a downbeat
+gt = getattr(P, "GT", None) or P.bar(12)                                                    # 53.99, on a downbeat
 o, nd = odometer("gto", 13, 250, "#2a1a00")
 E(f'<div id="gtw"><div id="rays"></div><div id="gtb"><div class="gtd">{o}</div></div>'
   f'<div id="gtl"><div class="g1">GRAND TOTAL</div><div class="g2">13 MEDALS</div></div></div><div id="flash2" class="flash"></div>')
@@ -306,7 +309,9 @@ st("#end", e0, {"opacity": 1}); tw("#logocard", e0 + 0.1, 0.6, {"scale": 1, "opa
 for j, s in enumerate(("#e1", "#e2", "#e3", "#etamil", "#e4")): tw(s, e0 + 0.45 + 0.18 * j, 0.45, {"opacity": 1, "y": 0})
 particles("ep", 540, 640, 24, ["#fff4bf", GOLD, "#ffe28c"], spread=480, t=e0 + 0.2, d=1.8, size=10)
 cue(e0 + 0.1, "curated/zoom-swish.wav", -15); cue(e0 + 0.3, "shimmer.wav", -15)
-tw("#end", T - 0.6, 0.6, {"opacity": 0}, "power1.in")
+if "credits" in P.SEC:                                            # v02: the creator's credits clip follows the end card
+    c0 = P.SEC["credits"][0]; tw("#end", c0 - 0.35, 0.35, {"opacity": 0}, "power1.in"); cue(c0 - 0.3, "curated/zoom-swish.wav", -14)
+else: tw("#end", T - 0.6, 0.6, {"opacity": 0}, "power1.in")
 
 CSS = f'''
 @font-face {{ font-family: "IDB"; src: url("assets/fonts/InterDisplay-Black.otf"); font-weight: 900; }}
@@ -425,8 +430,8 @@ doc = f'''<!doctype html>
   </head>
   <body>
     <div id="root" data-composition-id="main" data-width="1080" data-height="1920" data-start="0" data-duration="{T}">
-      <video id="plate" class="clip vid" src="assets/v/plate.mp4" muted playsinline data-start="0" data-duration="{T}" data-track-index="1" style="z-index:1"></video>
-      <audio id="mix" src="assets/mix.wav" data-start="0" data-duration="{T}" data-track-index="2" data-volume="1"></audio>
+      <video id="plate" class="clip vid" src="assets/v/plate{SUF}.mp4" muted playsinline data-start="0" data-duration="{T}" data-track-index="1" style="z-index:1"></video>
+      <audio id="mix" src="assets/mix{SUF}.wav" data-start="0" data-duration="{T}" data-track-index="2" data-volume="1"></audio>
       <div id="gfx" class="clip" data-start="0" data-duration="{T}" data-track-index="3">
         {(chr(10) + "        ").join(els)}
       </div>
@@ -443,5 +448,5 @@ doc = f'''<!doctype html>
 </html>
 '''
 open("edit/index.html", "w").write(doc)
-json.dump({"cues": [{"t": a, "sfx": b, "gain_db": c} for a, b, c in sorted(cues)]}, open("edit/cues.json", "w"), indent=1)
+json.dump({"cues": [{"t": a, "sfx": b, "gain_db": c} for a, b, c in sorted(cues)]}, open(f"edit/cues{SUF}.json", "w"), indent=1)
 print("built", T, len(js), "tweens", len(cues), "cues")

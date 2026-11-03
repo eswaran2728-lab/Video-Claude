@@ -9,3 +9,4 @@ music/*.mp3
 *.mp4
 *.log
 __pycache__/
+music/*.m4a

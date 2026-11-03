@@ -1,7 +1,8 @@
 # Sepang team recap + congratulations — Kejohanan Silambam Antara Sekolah Tamil Peringkat Negeri Selangor 2026
 
-9:16, 1080x1920, 30 fps, 80 s, HyperFrames 0.8.193. **Current: v01 preview** (`PREVIEW_sepang_silambam_recap_v01.mp4`,
-720x1280). No final export has been made and nothing is published.
+9:16, 1080x1920, 30 fps, 80 s, HyperFrames 0.8.193. **Current: v02 preview** (`PREVIEW_sepang_silambam_recap_v02_song.mp4`, 95.6 s). The v01 preview is kept
+(`PREVIEW_sepang_silambam_recap_v01.mp4`, 80 s, composition in `versions/index_v01.html`). No final export has been made and
+nothing is published.
 
 ## Sources
 - **Drive folder** `1r1MNaLtPCPtHEZbUQF0geENsWPKxnyts`: 97 unique files, uploaded 3.11.2026 (listing: `drive_files.tsv`,
@@ -76,3 +77,22 @@ Final (only after approval): `render --quality high --sdr` → `./master_final.s
   the file size. Heavy overlays were reduced (pre-blurred photos, linear gradients) after a black-capture risk warning.
 - Snapshots at phone size: `sheets/snap1`–`snap3`, `sheets/preview_v01_sheet.jpg`.
 - I could not listen to the audio; music placement and SFX levels were checked by measurement only.
+
+## v02: the creator's song and credits clip ("add this song, add that video at last, remove the song of the video, make sure the song beat and sound sync")
+Built with `VERSION=v02` (`plan15_v02.py`); outputs carry `_v02`.
+- **Music:** the creator-supplied "Nimirndhu Nil" (Shankar Mahadevan, film *Saroja*, 2008),
+  `music/nimirndhu_nil_creator_supplied.m4a`. It is not in git (copyright).
+  - Rights for posting are the creator's call. Platforms may mute or claim a commercial film song; the in-app music
+    library is the safe route.
+- **Beat sync:** beat grid fitted on the song itself (spectral-flux onsets): 0.48005 s per beat (125 bpm), anchored at its
+  drop after the break (song 45.645 s = output 0.0).
+  - Checked in 8 s windows over the whole 96 s: the grid sits within 5 ms of the song's beats in every window.
+  - Every cut, poster tear, zone card, badge reveal, photo change and the grand total (beat 124 = 59.53 s) are placed
+    on that grid (to the nearest frame).
+- **Length:** the day montage gains two shots (guests honoured at the banner, IMG_5213; a second bout exchange) so the
+  results start on beat 64. Congratulations photos now change every 3 beats.
+- **Credits clip:** the creator's `VID-20261102-WA01232.mp4` (15 s: Mahaguru, Mahaguru Selvaraju, Mahaguru Dato
+  Sivakumar, Grand Master Vijayasegaran, the masters list, "Thanks for watching") plays last, from 80.65 s.
+  - Its picture is untouched (576x1024 scaled to 1080x1920, so it is softer than the rest).
+  - Its own song is removed; the supplied song plays under it and fades out over the last 2.5 s.
+  - The gold header is hidden there because the clip has its own.
