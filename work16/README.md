@@ -1,6 +1,7 @@
 # 3D wall frame art → key holder with lamps — Eshan Creations reel (work16)
 
-**Current: preview v01** (`PREVIEW_eshan_3d_wall_frame_keyholder_v01.mp4`, 720x1280, 36.9 s, −14 LUFS).
+**Current: preview v02** (`PREVIEW_eshan_3d_wall_frame_keyholder_v02.mp4`, 720x1280, 36.9 s, −14 LUFS) — v01 plus motion
+graphics. v01 is kept (`versions/index_v01.html`, `versions/cues_v01.json`; rebuild with `VERSION=v01 python3 build16.py`).
 Composition 1080x1920, 30 fps, HyperFrames 0.8.193. **No final export yet; nothing is published.**
 
 ## Sources (Drive folder `1r1MNaLtPCPtHEZbUQF0geENsWPKxnyts`, 2 files, uploaded 8.11.2026; `drive_files.tsv`)
@@ -31,6 +32,24 @@ Composition 1080x1920, 30 fps, HyperFrames 0.8.193. **No final export yet; nothi
 
 Cut: the unclear passage about "home" (M 24.8–34.6), a mid-video "give a like", repeated "quick review", the two
 repeats of the lamp instruction while hands cover lamps 2–3 (L 7.4–19), and the empty wall at the start.
+
+## v02: motion graphics ("Add motion graphics that related to this content")
+Picture, cut, captions, music and voice are unchanged from v01; only graphics and their sounds were added
+(`gfx_v02.py`, imported by `build16.py` when `VERSION>=v02`). Each one illustrates what he is saying and is pinned to
+the real object in the shot:
+| output s | he says | graphic |
+|---|---|---|
+| 5.0–8.4 | "we call it 3D wall frame art" | Callouts drawn onto the real layers, **tracked** with the hand-held frame (`track16.py callouts`): GOLD CUT-OUT (on the mountain peak) and SHIVA &amp; PARVATI (on the crescent on Shiva's hair). |
+| 12.4–17.4 | "a customer messaged me… they wanted a key holder" | Message card (NEW MESSAGE · CUSTOMER) with typing dots; "Request: **KEY HOLDER**" appears on the word; its key becomes a gold badge that flies down and lands on the hooks, then the 1–5 hook tags pop. The card is a summary of the request, not a quote. |
+| 21.8–23.0 | "see this lamp" | Pulsing gold rings **tracked** on both lamps (`track_lamps16.py`). |
+| 23.2–28.3 | "hold the lamp, turn it here… it turns on" | HOLD + TURN card: the arrow turns in quarter-turns while he turns the lamp; on the reveal frame (26.77 s) its bulb lights and the line changes to LAMP ON. |
+| 34.0–34.4 | end card | Recap chips 3D WALL ART · 5 KEY HOOKS · LAMPS, then the name. |
+New sounds (edit-video pack): ticks on callouts and lamp rings, pops on the cards and chips, a click on "KEY HOLDER", a
+latch when the key lands, ratchets on the turning arrow — each on the first frame its element appears
+(`reports/sync-v02/`). 25 cues in total.
+
+v02 checks: `hyperframes check` passes (0 errors); 1105 frames, 0 decode errors, no black frames; audio vs mix 0 ms at
+5/20/30 s; −14.0 LUFS, −1.4 dBFS peak; every graphic checked at phone size (`sheets/v2_*.jpg`, `sheets/preview_v02_sheet.jpg`).
 
 ## Look and sound
 - **Grade:** M +6 % contrast, +10 % saturation, gentle S-curve, light sharpening (tone-mapped HLG looks flat). L: small
@@ -65,9 +84,10 @@ repeats of the lamp instruction while hands cover lamps 2–3 (L 7.4–19), and 
 ```
 ./download.sh && ./make_proxies.sh
 python3 transcribe_fine.py                  # optional; transcripts are committed
-python3 plate16.py draft && python3 track_hooks16.py && python3 mix16.py && python3 build16.py
-cd edit && npx --yes hyperframes@0.8.193 render --quality draft --fps 30 -o ../renders/draft_v01.mp4
-cd .. && ./master_preview.sh renders/draft_v01.mp4 PREVIEW_eshan_3d_wall_frame_keyholder_v01.mp4
+python3 plate16.py draft && python3 track_hooks16.py && python3 track_lamps16.py && python3 track16.py
+VERSION=v02 python3 build16.py && python3 mix16.py          # build writes edit/gfx_cues.json, which the mix reads
+cd edit && npx --yes hyperframes@0.8.193 render --quality draft --fps 30 -o ../renders/draft_v02.mp4
+cd .. && ./master_preview.sh renders/draft_v02.mp4 PREVIEW_eshan_3d_wall_frame_keyholder_v02.mp4
 ```
 Final (only after approval): `python3 plate16.py` (slow, high-quality encode) → `render --quality high --fps 30` →
 `./master_final.sh renders/final_v01.mp4 FINAL_….mp4`.

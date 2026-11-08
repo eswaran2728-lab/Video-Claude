@@ -1,8 +1,9 @@
 # HyperFrames composition for v01 → edit/index.html
 # Layers: graded plate (picture) < hook/end gradients < reveal bloom < tracked key-hook tags < captions < titles/end card.
 # Audio: edit/assets/mix.wav (mix16.py). Every time comes from plan16 (output timeline, frame-snapped).
-import json, re, html
+import json, re, html, os
 import plan16 as P
+VERSION = os.environ.get("VERSION", "v02")              # v01 = captions/tags/bloom only; v02 adds gfx_v02 motion graphics
 FPS = P.FPS; TOT = round(P.TOTAL, 4)
 fr = lambda t: round(round(t * FPS) / FPS, 4)
 tags = json.load(open("edit/hook_tags.json"))
@@ -16,6 +17,13 @@ def cap_html(i, text, pos=""):
 
 caps = [(fr(P.out_t(c[0], c[1])), fr(P.out_t(c[0], c[2])), c[3], c[4] if len(c) > 4 else "") for c in P.CAPS]
 CAPS = "\n".join(cap_html(i, txt, pos) for i, (_, _, txt, pos) in enumerate(caps))
+if VERSION >= "v02":
+    import gfx_v02
+    G_CSS, G_HTML, G_JS, G_CUES, END_DELAY = gfx_v02.build(fr, R, END0)
+else:
+    G_CSS, G_HTML, G_JS, END_DELAY = "", "", [], 0.0
+    G_CUES = [(END0 + 0.25, "thock.wav", -12, "end card name lands"), (END0 + 0.75, "curated/ui-pop.wav", -14, "handle pill pops")]
+json.dump([list(c) for c in G_CUES], open("edit/gfx_cues.json", "w"), indent=0)
 TAGS = "\n".join(f'<div id="k{i}" class="ktag"><span>{i + 1}</span></div>' for i in range(5))
 
 js = []
@@ -56,12 +64,13 @@ for j in range(7):
     d = 0.9 + 0.12 * j
     add(f'tl.fromTo("#s{j}",{{opacity:0,x:0,y:0}},{{opacity:1,duration:0.15,ease:"none"}},{R + 0.05 * j:.4f});')
     add(f'tl.to("#s{j}",{{x:{[-60, 40, 90, -20, 130, 20, -90][j]},y:{[-140, -190, -110, -230, -160, -90, -170][j]},opacity:0,duration:{d:.2f},ease:"power1.out"}},{R + 0.05 * j + 0.15:.4f});')
+js.extend(G_JS)
 # --- end card
 add(f'tl.to("#endshade",{{opacity:1,duration:0.5,ease:"sine.inOut"}},{END0});')
-add(f'tl.to("#e1",{{yPercent:0,duration:0.5,ease:"power4.out"}},{END0 + 0.25:.4f});')
-add(f'tl.to("#rule",{{scaleX:1,duration:0.45,ease:"power3.out"}},{END0 + 0.45:.4f});')
-add(f'tl.to("#sub",{{opacity:1,y:0,duration:0.35,ease:"power3.out"}},{END0 + 0.55:.4f});')
-add(f'tl.to("#handle",{{opacity:1,scale:1,duration:0.35,ease:"back.out(1.8)"}},{END0 + 0.75:.4f});')
+add(f'tl.to("#e1",{{yPercent:0,duration:0.5,ease:"power4.out"}},{END0 + END_DELAY + 0.25:.4f});')
+add(f'tl.to("#rule",{{scaleX:1,duration:0.45,ease:"power3.out"}},{END0 + END_DELAY + 0.45:.4f});')
+add(f'tl.to("#sub",{{opacity:1,y:0,duration:0.35,ease:"power3.out"}},{END0 + END_DELAY + 0.55:.4f});')
+add(f'tl.to("#handle",{{opacity:1,scale:1,duration:0.35,ease:"back.out(1.8)"}},{END0 + END_DELAY + 0.75:.4f});')
 add(f'tl.set({{}},{{}},{TOT});')
 add('window.__timelines = window.__timelines || {}; window.__timelines["main"] = tl;')
 JS = "\n      ".join(js)
@@ -121,6 +130,7 @@ doc = f'''<!doctype html>
       #sub {{ font-family: "IDBo"; font-size: 46px; color: var(--gold); letter-spacing: 1px; }}
       #handle {{ display: inline-block; margin-top: 46px; padding: 14px 36px; border-radius: 40px; border: 2px solid rgba(255,244,226,.6);
         font-family: "IDBo"; font-size: 44px; color: var(--cream); background: rgba(255,255,255,.06); }}
+      {G_CSS}
     </style>
   </head>
   <body>
@@ -138,6 +148,7 @@ doc = f'''<!doctype html>
           <div class="chips"><div id="ch1" class="chip">{KEY}KEY HOLDER</div><div id="ch2" class="chip">{BULB}LAMPS</div></div>
         </div>
         <div id="endshade" class="clip"></div>
+        {G_HTML}
         <div id="endcard">
           <span class="m"><span id="e1" class="ln">ESHAN CREATIONS</span></span>
           <div id="rule"></div>

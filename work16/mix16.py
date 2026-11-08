@@ -70,12 +70,11 @@ CUES = [(0.0, "sparkle.wav", -16, "hook title lands"),
         (P.out_t("story", 19.65), "curated/zoom-swish.wav", -15, "push in to the key hooks (peak mid-move)"),
         (P.S["howto"]["o0"], "curated/camera-shutter-light.wav", -14, "cut to the lamp question"),
         (R, "shimmer.wav", -9, "lamp lights up (peak)"),
-        (R, "sub-impact.wav", -15, "lamp lights up"),
-        (P.S["end"]["o0"] + 0.25, "thock.wav", -12, "end card name lands"),
-        (P.S["end"]["o0"] + 0.75, "curated/ui-pop.wav", -14, "handle pill pops")]
+        (R, "sub-impact.wav", -15, "lamp lights up")]
+CUES += [tuple(c) for c in json.load(open("edit/gfx_cues.json"))]   # graphics + end-card cues written by build16.py
 try:
     tags = json.load(open("edit/hook_tags.json"))["pops"]
-    CUES += [(t, "tick.wav", -13, f"key hook tag {i + 1}") for i, t in enumerate(tags)]
+    CUES += [(t + 1 / P.FPS, "tick.wav", -13, f"key hook tag {i + 1}") for i, t in enumerate(tags)]   # tag first shows a frame after its pop starts
 except FileNotFoundError:
     pass
 fx = np.zeros(L); SWELL = {"shimmer.wav", "curated/zoom-swish.wav"}
