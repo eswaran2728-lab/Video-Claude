@@ -2,7 +2,8 @@
 
 **Current: preview v02** (`PREVIEW_eshan_3d_wall_frame_keyholder_v02.mp4`, 720x1280, 36.9 s, −14 LUFS) — v01 plus motion
 graphics. v01 is kept (`versions/index_v01.html`, `versions/cues_v01.json`; rebuild with `VERSION=v01 python3 build16.py`).
-Composition 1080x1920, 30 fps, HyperFrames 0.8.193. **No final export yet; nothing is published.**
+Composition 1080x1920, 30 fps, HyperFrames 0.8.193.
+**FINAL (approved v02):** `FINAL_Eshan_3D_Wall_Frame_KeyHolder_v02_1080x1920.mp4` — not in git (size). Nothing is published.
 
 ## Sources (Drive folder `1r1MNaLtPCPtHEZbUQF0geENsWPKxnyts`, 2 files, uploaded 8.11.2026; `drive_files.tsv`)
 - **M** `IMG_6792.MOV` — iPhone 16 Pro Max, 4K ProRes 422 HLG (HDR), 46.0 s, vertical. The unlit frame held up to the
@@ -91,3 +92,15 @@ cd .. && ./master_preview.sh renders/draft_v02.mp4 PREVIEW_eshan_3d_wall_frame_k
 ```
 Final (only after approval): `python3 plate16.py` (slow, high-quality encode) → `render --quality high --fps 30` →
 `./master_final.sh renders/final_v01.mp4 FINAL_….mp4`.
+
+## Final v02 (creator: "Proceed final")
+- Same composition as the approved v02 preview. `python3 plate16.py` (high-quality plate: CRF 14, preset slow, from the
+  4K tone-mapped copies) → tracking re-run on that plate (hooks within 18 px, lamps 3 px, callouts 2 px of the preview;
+  tags checked on the final frames) → `VERSION=v02 python3 build16.py && python3 mix16.py` →
+  `render --quality high --fps 30` → `./master_final.sh renders/final_v02.mp4 FINAL_….mp4` (video copied, AAC 256k,
+  2-pass loudnorm).
+- Checks: 1080x1920 H.264 High, yuv420p, 30 fps, 1105 frames, 36.9 s, 31.4 Mb/s; AAC 48 kHz stereo; −14.0 LUFS,
+  −2.0 dBFS peak; full decode 0 errors; no black frames; audio vs `edit/assets/mix.wav` 0 ms at 5/20/30 s; contact
+  sheet `sheets/final_v02_sheet.jpg` matches the preview; first frame = hook title, last frame = end card.
+- Still open (not changed for the final): "follow me" wording, the cut "home" passage, caption language. No human
+  listening pass was possible in this session.
