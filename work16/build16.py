@@ -3,7 +3,7 @@
 # Audio: edit/assets/mix.wav (mix16.py). Every time comes from plan16 (output timeline, frame-snapped).
 import json, re, html, os
 import plan16 as P
-VERSION = os.environ.get("VERSION", "v02")              # v01 = captions/tags/bloom only; v02 adds gfx_v02 motion graphics
+VERSION = P.VERSION              # v01 = captions/tags/bloom only; v02 adds gfx_v02 motion graphics
 FPS = P.FPS; TOT = round(P.TOTAL, 4)
 fr = lambda t: round(round(t * FPS) / FPS, 4)
 tags = json.load(open("edit/hook_tags.json"))
@@ -23,6 +23,10 @@ if VERSION >= "v02":
 else:
     G_CSS, G_HTML, G_JS, END_DELAY = "", "", [], 0.0
     G_CUES = [(END0 + 0.25, "thock.wav", -12, "end card name lands"), (END0 + 0.75, "curated/ui-pop.wav", -14, "handle pill pops")]
+G3_CSS, G3_HTML, G3_JS = "", "", []
+if VERSION >= "v03":
+    import gfx_v03
+    G3_CSS, G3_HTML, G3_JS, _ = gfx_v03.build(fr, R, END0)
 json.dump([list(c) for c in G_CUES], open("edit/gfx_cues.json", "w"), indent=0)
 TAGS = "\n".join(f'<div id="k{i}" class="ktag"><span>{i + 1}</span></div>' for i in range(5))
 
@@ -65,6 +69,7 @@ for j in range(7):
     add(f'tl.fromTo("#s{j}",{{opacity:0,x:0,y:0}},{{opacity:1,duration:0.15,ease:"none"}},{R + 0.05 * j:.4f});')
     add(f'tl.to("#s{j}",{{x:{[-60, 40, 90, -20, 130, 20, -90][j]},y:{[-140, -190, -110, -230, -160, -90, -170][j]},opacity:0,duration:{d:.2f},ease:"power1.out"}},{R + 0.05 * j + 0.15:.4f});')
 js.extend(G_JS)
+js.extend(G3_JS)
 # --- end card
 add(f'tl.to("#endshade",{{opacity:1,duration:0.5,ease:"sine.inOut"}},{END0});')
 add(f'tl.to("#e1",{{yPercent:0,duration:0.5,ease:"power4.out"}},{END0 + END_DELAY + 0.25:.4f});')
@@ -131,6 +136,7 @@ doc = f'''<!doctype html>
       #handle {{ display: inline-block; margin-top: 46px; padding: 14px 36px; border-radius: 40px; border: 2px solid rgba(255,244,226,.6);
         font-family: "IDBo"; font-size: 44px; color: var(--cream); background: rgba(255,255,255,.06); }}
       {G_CSS}
+      {G3_CSS}
     </style>
   </head>
   <body>
@@ -141,6 +147,7 @@ doc = f'''<!doctype html>
                 <div id="bloom"></div>
         {SPARKS}
         {TAGS}
+        {G3_HTML}
         {CAPS}
         <div id="hook">
           <div id="hk2">QUICK REVIEW</div>

@@ -3,8 +3,10 @@
 # Sources: M = src/drive/IMG_6792.MOV (iPhone 16 Pro Max, 4K ProRes HLG, 46.0 s, unlit frame + creator's Tamil voice)
 #          L = src/drive/fa799ce5e58a49c29107dcd042ded275.mp4 (720x1280 HEVC, 29.4 s, lamps being switched on + voice)
 # All times are seconds; output times are snapped to 30 fps frames.
+import os
 FPS = 30
 f = lambda t: int(round(t * FPS))
+VERSION = os.environ.get("VERSION", "v03")   # v01/v02 = reviewed versions; v03 = clean voice + cinematic finish
 
 # (name, source, src_in, src_out, speed, voice)  voice: True = the clip's own sound, or (src, in, out) to lay other audio
 SEGS = [
@@ -18,6 +20,8 @@ SEGS = [
     ("end",    "L", 28.70, 29.30, 1.0, False),                # last lit frames, then freeze under the end card
 ]
 END_FREEZE = 2.4
+if VERSION >= "v03":
+    SEGS[4] = ("glow", "L", 25.78, 27.14, 0.7, False)        # slow-motion hold on the lit frame (frame-blended)
 
 OUT = []; t = 0
 for name, src, a, b, sp, vo in SEGS:
@@ -48,6 +52,12 @@ ZOOM = {
     "end":    [(28.70, 1.15, 540, 1075, "hold"), (29.30, 1.16, 540, 1078, "lin")],
 }
 
+if VERSION >= "v03":                                          # cinematic: smooth eased moves instead of hard punch cuts
+    ZOOM["story"] = [(5.70, 1.00, 540, 960, "hold"), (11.30, 1.12, 540, 900, "lin"),   # slow push: "3D wall frame art"
+                     (11.85, 1.00, 540, 960, "io"), (14.70, 1.03, 540, 955, "lin"),    # ease back + drift: "just a frame"
+                     (15.35, 1.26, 540, 960, "io"), (18.40, 1.30, 540, 950, "lin"),    # ease in to the faces: "a customer messaged me"
+                     (19.00, 1.00, 540, 960, "io"), (19.35, 1.00, 540, 960, "hold")] + ZOOM["story"][8:]
+
 # Hook layout: the lit frame as a rounded card (scale HOOK_CARD of the full frame, top-left at HOOK_XY) on a blurred,
 # darkened copy of itself, leaving the top band for the title so no text covers the faces.
 HOOK_CARD, HOOK_XY = 0.67, (178, 636)
@@ -56,6 +66,14 @@ HOOK_CARD, HOOK_XY = 0.67, (178, 636)
 CURVE = "curves=all='0/0.01 0.25/0.235 0.5/0.5 0.75/0.77 1/1'"
 GRADE = {"M": f"eq=contrast=1.06:saturation=1.10,{CURVE},unsharp=5:5:0.30",
          "L": f"colorbalance=rm=0.02:bm=-0.04:rh=0.01:bh=-0.05,eq=contrast=1.05:saturation=1.04,{CURVE},unsharp=5:5:0.25"}
+
+# v03 film look on top (RGB): warm highlights / cool shadows, lifted blacks + soft roll-off, warm halation on the
+# bright parts (lamps, gold), vignette, fine moving grain.
+FILM = ("eq=saturation=0.96,format=gbrp,colorbalance=rs=-0.015:bs=0.025:rh=0.035:gh=0.012:bh=-0.035,"
+        "curves=all='0/0.035 0.15/0.125 0.5/0.5 0.85/0.875 1/0.965',split[a][b];[b]curves=all='0/0 0.62/0 1/1',gblur=sigma=22,"
+        "colorchannelmixer=rr=1:gg=0.78:bb=0.5[g];[a][g]blend=all_mode=screen:all_opacity=0.38,vignette=angle=PI/4.6,noise=alls=6:allf=t")
+if VERSION >= "v03":
+    GRADE = {k: v + "," + FILM for k, v in GRADE.items()}
 
 # Captions: English meaning of the creator's Tamil-English speech (his English words kept). (seg, src_in, src_out, text)
 # *word* = gold emphasis; optional 5th field "top" puts the caption in the top band.

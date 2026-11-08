@@ -1,0 +1,187 @@
+{
+ "fps": 30,
+ "total": 36.833333333333336,
+ "music": {
+  "file": "music/mixkit_37_love_is_eternal.mp3",
+  "start_in_track": 1.5,
+  "beat_on_reveal": 28.267,
+  "reveal_out": 26.766666666666666
+ },
+ "cues": [
+  {
+   "t": 0.0,
+   "frame": 0,
+   "sound": "sparkle.wav",
+   "gain_db": -16,
+   "label": "hook title lands"
+  },
+  {
+   "t": 3.067,
+   "frame": 92,
+   "sound": "thock.wav",
+   "gain_db": -11,
+   "label": "cut from lit flash-forward to the unlit frame"
+  },
+  {
+   "t": 8.7,
+   "frame": 261,
+   "sound": "curated/camera-shutter-light.wav",
+   "gain_db": -14,
+   "label": "punch out to wide: 'just a frame'"
+  },
+  {
+   "t": 12.1,
+   "frame": 363,
+   "sound": "curated/camera-shutter-light.wav",
+   "gain_db": -14,
+   "label": "punch in: initials / customer"
+  },
+  {
+   "t": 17.0,
+   "frame": 510,
+   "sound": "curated/zoom-swish.wav",
+   "gain_db": -15,
+   "label": "push in to the key hooks (peak mid-move)"
+  },
+  {
+   "t": 20.767,
+   "frame": 623,
+   "sound": "curated/camera-shutter-light.wav",
+   "gain_db": -14,
+   "label": "cut to the lamp question"
+  },
+  {
+   "t": 26.767,
+   "frame": 803,
+   "sound": "shimmer.wav",
+   "gain_db": -9,
+   "label": "lamp lights up (peak)"
+  },
+  {
+   "t": 26.767,
+   "frame": 803,
+   "sound": "sub-impact.wav",
+   "gain_db": -15,
+   "label": "lamp lights up"
+  },
+  {
+   "t": 5.067,
+   "frame": 152,
+   "sound": "tick.wav",
+   "gain_db": -15,
+   "label": "callout GOLD CUT-OUT"
+  },
+  {
+   "t": 5.467,
+   "frame": 164,
+   "sound": "tick.wav",
+   "gain_db": -15,
+   "label": "callout SHIVA &amp; PARVATI"
+  },
+  {
+   "t": 12.433,
+   "frame": 373,
+   "sound": "curated/ui-pop.wav",
+   "gain_db": -11,
+   "label": "message card"
+  },
+  {
+   "t": 16.2,
+   "frame": 486,
+   "sound": "curated/ui-click.wav",
+   "gain_db": -11,
+   "label": "KEY HOLDER appears"
+  },
+  {
+   "t": 17.4,
+   "frame": 522,
+   "sound": "latch.wav",
+   "gain_db": -14,
+   "label": "key lands on the hooks"
+  },
+  {
+   "t": 21.833,
+   "frame": 655,
+   "sound": "tick.wav",
+   "gain_db": -13,
+   "label": "lamp rings"
+  },
+  {
+   "t": 23.667,
+   "frame": 710,
+   "sound": "ratchet.wav",
+   "gain_db": -17,
+   "label": "turn arrow"
+  },
+  {
+   "t": 25.467,
+   "frame": 764,
+   "sound": "ratchet.wav",
+   "gain_db": -17,
+   "label": "turn arrow"
+  },
+  {
+   "t": 23.233,
+   "frame": 697,
+   "sound": "curated/ui-pop.wav",
+   "gain_db": -13,
+   "label": "how-to card"
+  },
+  {
+   "t": 34.0,
+   "frame": 1020,
+   "sound": "curated/ui-pop.wav",
+   "gain_db": -14,
+   "label": "recap chips"
+  },
+  {
+   "t": 34.433,
+   "frame": 1033,
+   "sound": "thock.wav",
+   "gain_db": -12,
+   "label": "end card name lands"
+  },
+  {
+   "t": 34.967,
+   "frame": 1049,
+   "sound": "curated/ui-pop.wav",
+   "gain_db": -14,
+   "label": "handle pill pops"
+  },
+  {
+   "t": 18.167,
+   "frame": 545,
+   "sound": "tick.wav",
+   "gain_db": -13,
+   "label": "key hook tag 1"
+  },
+  {
+   "t": 18.433,
+   "frame": 553,
+   "sound": "tick.wav",
+   "gain_db": -13,
+   "label": "key hook tag 2"
+  },
+  {
+   "t": 18.7,
+   "frame": 561,
+   "sound": "tick.wav",
+   "gain_db": -13,
+   "label": "key hook tag 3"
+  },
+  {
+   "t": 18.967,
+   "frame": 569,
+   "sound": "tick.wav",
+   "gain_db": -13,
+   "label": "key hook tag 4"
+  },
+  {
+   "t": 19.233,
+   "frame": 577,
+   "sound": "tick.wav",
+   "gain_db": -13,
+   "label": "key hook tag 5"
+  }
+ ]
+}

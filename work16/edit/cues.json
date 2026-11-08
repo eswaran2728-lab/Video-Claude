@@ -1,10 +1,11 @@
 {
  "fps": 30,
- "total": 36.833333333333336,
+ "total": 37.4,
+ "version": "v03",
  "music": {
-  "file": "music/mixkit_37_love_is_eternal.mp3",
-  "start_in_track": 1.5,
-  "beat_on_reveal": 28.267,
+  "file": "music/mixkit_543_a_new_life.mp3",
+  "start_in_track": -2.148,
+  "beat_on_reveal": 24.619,
   "reveal_out": 26.766666666666666
  },
  "cues": [
@@ -12,57 +13,78 @@
    "t": 0.0,
    "frame": 0,
    "sound": "sparkle.wav",
-   "gain_db": -16,
+   "gain_db": -18,
    "label": "hook title lands"
   },
   {
    "t": 3.067,
    "frame": 92,
    "sound": "thock.wav",
-   "gain_db": -11,
-   "label": "cut from lit flash-forward to the unlit frame"
+   "gain_db": -9,
+   "label": "lights-off dip into the unlit frame"
   },
   {
-   "t": 8.7,
-   "frame": 261,
-   "sound": "curated/camera-shutter-light.wav",
-   "gain_db": -14,
-   "label": "punch out to wide: 'just a frame'"
+   "t": 8.933,
+   "frame": 268,
+   "sound": "curated/zoom-swish.wav",
+   "gain_db": -19,
+   "label": "ease back: 'just a frame' (peak mid-move)"
   },
   {
-   "t": 12.1,
-   "frame": 363,
-   "sound": "curated/camera-shutter-light.wav",
-   "gain_db": -14,
-   "label": "punch in: initials / customer"
+   "t": 12.4,
+   "frame": 372,
+   "sound": "curated/zoom-swish.wav",
+   "gain_db": -19,
+   "label": "ease in to the faces (peak mid-move)"
+  },
+  {
+   "t": 16.067,
+   "frame": 482,
+   "sound": "curated/zoom-swish.wav",
+   "gain_db": -19,
+   "label": "ease out as the frame is lowered"
   },
   {
    "t": 17.0,
    "frame": 510,
    "sound": "curated/zoom-swish.wav",
-   "gain_db": -15,
+   "gain_db": -16,
    "label": "push in to the key hooks (peak mid-move)"
   },
   {
-   "t": 20.767,
-   "frame": 623,
-   "sound": "curated/camera-shutter-light.wav",
-   "gain_db": -14,
-   "label": "cut to the lamp question"
+   "t": 20.9,
+   "frame": 627,
+   "sound": "curated/zoom-swish.wav",
+   "gain_db": -16,
+   "label": "light-leak transition to the lamp question"
+  },
+  {
+   "t": 26.767,
+   "frame": 803,
+   "sound": "curated/metallic-riser.wav",
+   "gain_db": -20,
+   "label": "riser peaks on the reveal"
   },
   {
    "t": 26.767,
    "frame": 803,
    "sound": "shimmer.wav",
-   "gain_db": -9,
+   "gain_db": -12,
    "label": "lamp lights up (peak)"
   },
   {
    "t": 26.767,
    "frame": 803,
    "sound": "sub-impact.wav",
-   "gain_db": -15,
+   "gain_db": -13,
    "label": "lamp lights up"
+  },
+  {
+   "t": 34.4,
+   "frame": 1032,
+   "sound": "curated/hook-impact.wav",
+   "gain_db": -15,
+   "label": "letterbox bars close for the end card"
   },
   {
    "t": 5.067,
@@ -93,8 +115,8 @@
    "label": "KEY HOLDER appears"
   },
   {
-   "t": 17.4,
-   "frame": 522,
+   "t": 17.8,
+   "frame": 534,
    "sound": "latch.wav",
    "gain_db": -14,
    "label": "key lands on the hooks"
@@ -128,22 +150,22 @@
    "label": "how-to card"
   },
   {
-   "t": 34.0,
-   "frame": 1020,
+   "t": 34.567,
+   "frame": 1037,
    "sound": "curated/ui-pop.wav",
    "gain_db": -14,
    "label": "recap chips"
   },
   {
-   "t": 34.433,
-   "frame": 1033,
+   "t": 34.8,
+   "frame": 1044,
    "sound": "thock.wav",
    "gain_db": -12,
    "label": "end card name lands"
   },
   {
-   "t": 34.967,
-   "frame": 1049,
+   "t": 35.333,
+   "frame": 1060,
    "sound": "curated/ui-pop.wav",
    "gain_db": -14,
    "label": "handle pill pops"

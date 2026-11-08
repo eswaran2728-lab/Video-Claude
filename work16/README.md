@@ -3,6 +3,8 @@
 **Current: preview v02** (`PREVIEW_eshan_3d_wall_frame_keyholder_v02.mp4`, 720x1280, 36.9 s, −14 LUFS) — v01 plus motion
 graphics. v01 is kept (`versions/index_v01.html`, `versions/cues_v01.json`; rebuild with `VERSION=v01 python3 build16.py`).
 Composition 1080x1920, 30 fps, HyperFrames 0.8.193.
+**Current preview: v03 — clean voice + cinematic** (`PREVIEW_eshan_3d_wall_frame_keyholder_v03_cinematic.mp4`, 720x1280,
+37.5 s, −14 LUFS). Waiting for approval; the v02 final below is unchanged.
 **FINAL (approved v02):** `FINAL_Eshan_3D_Wall_Frame_KeyHolder_v02_1080x1920.mp4` — not in git (size). Nothing is published.
 
 ## Sources (Drive folder `1r1MNaLtPCPtHEZbUQF0geENsWPKxnyts`, 2 files, uploaded 8.11.2026; `drive_files.tsv`)
@@ -86,7 +88,8 @@ v02 checks: `hyperframes check` passes (0 errors); 1105 frames, 0 decode errors,
 ./download.sh && ./make_proxies.sh
 python3 transcribe_fine.py                  # optional; transcripts are committed
 python3 plate16.py draft && python3 track_hooks16.py && python3 track_lamps16.py && python3 track16.py
-VERSION=v02 python3 build16.py && python3 mix16.py          # build writes edit/gfx_cues.json, which the mix reads
+VERSION=v03 python3 build16.py && VERSION=v03 python3 mix16.py   # build writes edit/gfx_cues.json, which the mix reads
+# v03 voice: <venv>/bin/python -I tools/voice_isolate.py <DeepFilterNet3 dir> analysis/voice/M_raw.wav analysis/voice/M_df.wav (same for L)
 cd edit && npx --yes hyperframes@0.8.193 render --quality draft --fps 30 -o ../renders/draft_v02.mp4
 cd .. && ./master_preview.sh renders/draft_v02.mp4 PREVIEW_eshan_3d_wall_frame_keyholder_v02.mp4
 ```
@@ -104,3 +107,32 @@ Final (only after approval): `python3 plate16.py` (slow, high-quality encode) �
   sheet `sheets/final_v02_sheet.jpg` matches the preview; first frame = hook title, last frame = end card.
 - Still open (not changed for the final): "follow me" wording, the cut "home" passage, caption language. No human
   listening pass was possible in this session.
+
+## v03: clean voice + cinematic ("Remove the background noise make it my voice clear and then make the video cinematic")
+Built with `VERSION=v03` (now the default; `VERSION=v02` / `v01` rebuild the earlier versions; their compositions and
+cues are in `versions/`). Story, captions and v02 graphics are kept.
+- **Voice:** both clips run through **DeepFilterNet3** (`tools/voice_isolate.py`, model from the DeepFilterNet repo,
+  MIT/Apache-2.0; venv with deepfilternet + torch) → `analysis/voice/{M,L}_df.wav` (not in git). Then 80 Hz high-pass,
+  −2.5 dB at 250 Hz (mud), +2.5 dB at 3.5 kHz (presence), +1.5 dB air shelf, de-esser, two-stage compression.
+  - Measured on the full clips: background in pauses −30.5 → −72 dB (M) and −31.4 → −70 dB (L); speech-to-noise
+    13.7 → 51 dB and 16.3 → 54 dB. In the final mix, pauses sit ~31 dB under speech.
+  - A Tamil→English re-transcription of four phrases gives the same meaning before and after (no words lost).
+- **Picture (film look, in the plate):** on top of the v02 correction — warm highlights / slightly cool shadows, lifted
+  blacks with a soft highlight roll-off, warm halation on bright areas (lamps, gold), vignette, fine moving grain
+  (`plan16.FILM`; the glow blend runs in RGB).
+- **Camera:** the hard punch cuts in the story are now smooth eased moves (pull back on "just a frame", ease in to the
+  faces on "a customer messaged me", ease out as the frame is lowered). The lit hold after the reveal is **slow motion
+  0.7x** with frame blending (+0.57 s).
+- **Transitions / finishing (`gfx_v03.py`):** lights-off dip from the lit opening into the unlit frame; warm light-leak
+  sweep into "how to use it?"; anamorphic flare streak across the lamp on the reveal frame; letterbox bars close in for
+  the end card; hook title focus-pull and wider tracking.
+- **Score:** "A New Life", Eugenio Mininni, Mixkit #543, **Mixkit Stock Music Free License** (film score, orchestral
+  hybrid). It builds from near-silence under the whole story; its swell (24.62 s in the track) is placed on the lamp
+  reveal (output 26.77 s), so the music starts at 2.15 s. Level set against the voice: ~13–15 dB under speech, it
+  swells only after his last word "…on", forward on the slow-motion glow and the end card.
+- **Sound design:** riser peaking on the reveal (kept under the voice), sub-impact + shimmer on the reveal, soft
+  whooshes on each eased camera move and the light leak, lights-off thock, impact as the letterbox closes.
+- **Checks (v03 preview):** `hyperframes check` passes; 1122 frames / 37.4 s; 0 decode errors; no black segments
+  (the dip stops just short of black); audio vs mix 0 samples; −14.0 LUFS, −1.4 dBFS peak; voice −19 to −21 dB RMS in
+  every spoken section, music+SFX 13–15 dB under it; SFX strips `reports/sync-v03/`; contact sheet
+  `sheets/draft_v03_sheet.jpg`. **No listening pass** — judged by measurement and transcription only.

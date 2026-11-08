@@ -33,7 +33,7 @@ def build(fr, R, END0):
         padding: 0 30px; background: rgba(20,15,11,.86); border: 2px solid rgba(233,193,107,.75); box-shadow: 0 18px 50px rgba(0,0,0,.55); }
       #msg .av { flex: none; width: 86px; height: 86px; border-radius: 50%; background: var(--gold); display: flex; align-items: center; justify-content: center; }
       #msg .av svg { width: 50px; height: 50px; fill: #1a120b; }
-      #msg .m1 { font-family: "ISB"; font-size: 27px; letter-spacing: 3px; color: var(--gold); }
+      #msg .m1 { font-family: "ISB"; font-size: 28px; letter-spacing: 3px; color: var(--gold); }
       #msg .m2 { position: relative; height: 58px; margin-top: 6px; font-family: "IDBo"; font-size: 42px; color: var(--cream); white-space: nowrap; }
       #msg .m2 b { font-family: "IDB"; color: var(--gold); }
       #dots { position: absolute; left: 0; top: 18px; display: flex; gap: 10px; }
@@ -85,7 +85,7 @@ def build(fr, R, END0):
 
     # 2 — customer message card → "KEY HOLDER" → key flies to the hooks
     t_msg, t_kh = fr(P.out_t("story", 14.98)) + 0.07, fr(P.out_t("story", 18.80))
-    t_fly = fr(P.out_t("story", 19.40))
+    t_fly = fr(P.out_t("story", 19.80 if P.VERSION >= "v03" else 19.40))   # v03: "Request: KEY HOLDER" readable ≥1 s
     html.append('<div id="msg"><div class="av"><svg viewBox="0 0 40 40"><path d="M6 8h28a3 3 0 0 1 3 3v15a3 3 0 0 1-3 3H17l-8 7v-7H6a3 3 0 0 1-3-3V11a3 3 0 0 1 3-3z"/></svg></div>'
                 '<div><div class="m1">NEW MESSAGE · CUSTOMER</div><div class="m2"><span id="dots"><i></i><i></i><i></i></span>'
                 f'<span id="req">Request: <b>KEY HOLDER</b></span><div id="mkey"><svg viewBox="0 0 64 64">{KEY}</svg></div></div></div></div>'
@@ -150,9 +150,10 @@ def build(fr, R, END0):
     add('gsap.set("#recap .chip",{opacity:0,y:18});')
     for i in range(3):
         add(f'tl.to("#recap .chip:nth-child({i + 1})",{{opacity:1,y:0,duration:0.3,ease:"back.out(1.8)"}},{END0 + 0.15 + 0.14 * i:.3f});')
-    cues += [(END0 + 0.15, "curated/ui-pop.wav", -14, "recap chips"), (END0 + 0.6, "thock.wav", -12, "end card name lands"),
-             (END0 + 1.1, "curated/ui-pop.wav", -14, "handle pill pops")]
+    ED = 0.15 if P.VERSION >= "v03" else 0.35                # v03: name + handle sooner so the closing line holds > 2 s
+    cues += [(END0 + 0.15, "curated/ui-pop.wav", -14, "recap chips"), (END0 + ED + 0.25, "thock.wav", -12, "end card name lands"),
+             (END0 + ED + 0.75, "curated/ui-pop.wav", -14, "handle pill pops")]
     # a fade/scale-in first shows on the frame after its tween starts → arrival sounds move one frame later
     ARRIVE = {"tick.wav", "curated/ui-pop.wav", "curated/ui-click.wav"}
     cues = [(t + (1 / FPS if s in ARRIVE else 0), s, g, l) for t, s, g, l in cues]
-    return "".join(css), "\n        ".join(html), js, cues, 0.35          # last: end-card text delay (s) after the chips
+    return "".join(css), "\n        ".join(html), js, cues, ED          # last: end-card text delay (s) after the chips

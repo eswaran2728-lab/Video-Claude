@@ -23,13 +23,20 @@ class reader:
     """Streams decoded frames; get(i) returns frame i (i never decreases), holding only the current frame in memory."""
     def __init__(self, path, ss, n_src, w, h):
         cmd = ["ffmpeg", "-nostdin", "-v", "error", "-ss", f"{ss:.4f}", "-i", path, "-frames:v", str(n_src), "-f", "rawvideo", "-pix_fmt", "bgr24", "-"]
-        self.p = subprocess.Popen(cmd, stdout=subprocess.PIPE); self.w, self.h = w, h; self.i = -1; self.cur = None
+        self.p = subprocess.Popen(cmd, stdout=subprocess.PIPE); self.w, self.h = w, h; self.i = -1; self.cur = None; self.prev = None
     def get(self, i):
         while self.i < i:
             b = self.p.stdout.read(self.w * self.h * 3)
             if len(b) < self.w * self.h * 3: break
+            self.prev = self.cur
             self.cur = np.frombuffer(b, np.uint8).reshape(self.h, self.w, 3); self.i += 1
         return self.cur
+    def blend(self, pos):
+        """Frame at fractional index pos: cross-blend of the two neighbouring frames (smooth slow motion)."""
+        i0 = int(np.floor(pos)); w = pos - i0
+        if w < 1e-3: return self.get(i0)
+        b1 = self.get(i0 + 1); b0 = self.prev if self.prev is not None and self.i == i0 + 1 else b1
+        return cv2.addWeighted(b0, 1 - w, b1, w, 0)
     def close(self): self.p.stdout.close(); self.p.wait()
 
 def probe(path):
@@ -74,7 +81,7 @@ def render_seg(s, draft):
         cx = min(max(cx, hw), W - hw); cy = min(max(cy, hh), H - hh)
         sc = z / k                                       # source → output scale
         M = np.array([[sc, 0, W / 2 - cx * k * sc], [0, sc, H / 2 - cy * k * sc]], np.float64)
-        src = rd.get(fi)
+        src = rd.blend((st - s["a"]) * P.FPS) if (s["speed"] < 1 and P.VERSION >= "v03") else rd.get(fi)
         if sc < 0.75:                                    # pre-shrink with area filter to avoid aliasing on 4K input
             r = sc / 0.9; src = cv2.resize(src, None, fx=r, fy=r, interpolation=cv2.INTER_AREA); M[:, :2] /= r
         img = cv2.warpAffine(src, M, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
@@ -90,7 +97,7 @@ if __name__ == "__main__":
     subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-sseof", "-0.04", "-i", last, "-frames:v", "1", "seg/last.png"], check=True)
     nfz = P.NF - sum(s["n"] for s in P.OUT)
     subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-loop", "1", "-i", "seg/last.png", "-frames:v", str(nfz), "-r", str(P.FPS),
-                    "-vf", "format=yuv420p", "-c:v", "libx264", "-crf", "16", "seg/freeze.mp4"], check=True)
+                    "-vf", ("noise=alls=6:allf=t," if P.VERSION >= "v03" else "") + "format=yuv420p", "-c:v", "libx264", "-crf", "16", "seg/freeze.mp4"], check=True)
     open("seg/list.txt", "w").write("".join(f"file '{os.path.basename(p)}'\n" for p in parts + ["seg/freeze.mp4"]))
     subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", "seg/list.txt", "-c:v", "libx264",
                     "-crf", "16", "-preset", "medium", "-g", "15", "-pix_fmt", "yuv420p", "-r", str(P.FPS), "-movflags", "+faststart",
