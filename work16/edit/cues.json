@@ -1,0 +1,117 @@
+{
+ "fps": 30,
+ "total": 36.833333333333336,
+ "music": {
+  "file": "music/mixkit_37_love_is_eternal.mp3",
+  "start_in_track": 1.5,
+  "beat_on_reveal": 28.267,
+  "reveal_out": 26.766666666666666
+ },
+ "cues": [
+  {
+   "t": 0.0,
+   "frame": 0,
+   "sound": "sparkle.wav",
+   "gain_db": -16,
+   "label": "hook title lands"
+  },
+  {
+   "t": 3.067,
+   "frame": 92,
+   "sound": "thock.wav",
+   "gain_db": -11,
+   "label": "cut from lit flash-forward to the unlit frame"
+  },
+  {
+   "t": 8.7,
+   "frame": 261,
+   "sound": "curated/camera-shutter-light.wav",
+   "gain_db": -14,
+   "label": "punch out to wide: 'just a frame'"
+  },
+  {
+   "t": 12.1,
+   "frame": 363,
+   "sound": "curated/camera-shutter-light.wav",
+   "gain_db": -14,
+   "label": "punch in: initials / customer"
+  },
+  {
+   "t": 17.0,
+   "frame": 510,
+   "sound": "curated/zoom-swish.wav",
+   "gain_db": -15,
+   "label": "push in to the key hooks (peak mid-move)"
+  },
+  {
+   "t": 20.767,
+   "frame": 623,
+   "sound": "curated/camera-shutter-light.wav",
+   "gain_db": -14,
+   "label": "cut to the lamp question"
+  },
+  {
+   "t": 26.767,
+   "frame": 803,
+   "sound": "shimmer.wav",
+   "gain_db": -9,
+   "label": "lamp lights up (peak)"
+  },
+  {
+   "t": 26.767,
+   "frame": 803,
+   "sound": "sub-impact.wav",
+   "gain_db": -15,
+   "label": "lamp lights up"
+  },
+  {
+   "t": 34.1,
+   "frame": 1023,
+   "sound": "thock.wav",
+   "gain_db": -12,
+   "label": "end card name lands"
+  },
+  {
+   "t": 34.6,
+   "frame": 1038,
+   "sound": "curated/ui-pop.wav",
+   "gain_db": -14,
+   "label": "handle pill pops"
+  },
+  {
+   "t": 18.133,
+   "frame": 544,
+   "sound": "tick.wav",
+   "gain_db": -13,
+   "label": "key hook tag 1"
+  },
+  {
+   "t": 18.4,
+   "frame": 552,
+   "sound": "tick.wav",
+   "gain_db": -13,
+   "label": "key hook tag 2"
+  },
+  {
+   "t": 18.667,
+   "frame": 560,
+   "sound": "tick.wav",
+   "gain_db": -13,
+   "label": "key hook tag 3"
+  },
+  {
+   "t": 18.933,
+   "frame": 568,
+   "sound": "tick.wav",
+   "gain_db": -13,
+   "label": "key hook tag 4"
+  },
+  {
+   "t": 19.2,
+   "frame": 576,
+   "sound": "tick.wav",
+   "gain_db": -13,
+   "label": "key hook tag 5"
+  }
+ ]
+}

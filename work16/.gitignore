@@ -1,0 +1,15 @@
+src/drive/
+proxy/
+inter/
+seg/
+renders/
+frames/
+music/*.mp3
+music/*.html
+analysis/*.wav
+edit/assets/v/
+edit/assets/*.wav
+edit/.hyperframes/
+*.mp4
+*.log
+__pycache__/
