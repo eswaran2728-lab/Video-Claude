@@ -3,8 +3,8 @@
 **Current: preview v02** (`PREVIEW_eshan_3d_wall_frame_keyholder_v02.mp4`, 720x1280, 36.9 s, −14 LUFS) — v01 plus motion
 graphics. v01 is kept (`versions/index_v01.html`, `versions/cues_v01.json`; rebuild with `VERSION=v01 python3 build16.py`).
 Composition 1080x1920, 30 fps, HyperFrames 0.8.193.
-**Current preview: v03 — clean voice + cinematic** (`PREVIEW_eshan_3d_wall_frame_keyholder_v03_cinematic.mp4`, 720x1280,
-37.5 s, −14 LUFS). Waiting for approval; the v02 final below is unchanged.
+**FINAL v03 — clean voice + cinematic (approved):** `FINAL_Eshan_3D_Wall_Frame_KeyHolder_v03_cinematic_1080x1920.mp4`
+(not in git, size). The earlier v02 final is unchanged. Nothing is published.
 **FINAL (approved v02):** `FINAL_Eshan_3D_Wall_Frame_KeyHolder_v02_1080x1920.mp4` — not in git (size). Nothing is published.
 
 ## Sources (Drive folder `1r1MNaLtPCPtHEZbUQF0geENsWPKxnyts`, 2 files, uploaded 8.11.2026; `drive_files.tsv`)
@@ -136,3 +136,14 @@ cues are in `versions/`). Story, captions and v02 graphics are kept.
   (the dip stops just short of black); audio vs mix 0 samples; −14.0 LUFS, −1.4 dBFS peak; voice −19 to −21 dB RMS in
   every spoken section, music+SFX 13–15 dB under it; SFX strips `reports/sync-v03/`; contact sheet
   `sheets/draft_v03_sheet.jpg`. **No listening pass** — judged by measurement and transcription only.
+
+## Final v03 (creator: "Proceed final")
+- `VERSION=v03 python3 plate16.py` (high-quality plate, 12 min) → tracking re-run on it (hooks ≤14 px, lamps ≤6 px,
+  callouts ≤3 px from the reviewed preview) → `build16.py` + `mix16.py` → `render --quality high --fps 30`
+  (`renders/final_v03.mp4`, 389 MB / ~83 Mb/s because of the film grain; kept as the archive master, not in git) →
+  `./master_final_reencode.sh renders/final_v03.mp4 FINAL_….mp4` (x264 CRF 17 slow, film tune, capped 30 Mb/s;
+  2-pass loudnorm; AAC 256k).
+- Checks: 1080x1920 H.264 High, yuv420p, 30 fps, 1122 frames, 37.5 s, 29.1 Mb/s, 137 MB; AAC 48 kHz stereo;
+  −14.0 LUFS, −2.0 dBFS peak; full decode 0 errors; no black segments; audio vs `edit/assets/mix.wav` 0 ms at 5/20/30 s;
+  delivery encode vs the high-quality render PSNR 37–47 dB; contact sheet `sheets/final_v03_sheet.jpg` matches the
+  preview. No human listening pass in this session.
