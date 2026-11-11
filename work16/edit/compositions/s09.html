@@ -1,0 +1,89 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; font-family: "Inter", sans-serif; color: #14213d; overflow: hidden; }
+.a { position: absolute; }
+.card { position: absolute; background: #fff; border-radius: 22px; box-shadow: 0 18px 40px rgba(20,33,61,.12); }
+.pill { display: inline-block; padding: 10px 26px; border-radius: 40px; color: #fff; font-weight: 800; letter-spacing: 1.5px; font-size: 30px; }
+.g { background: #1e8a4c; } .r { background: #d6203a; } .n { background: #1b2a4a; } .am { background: #f5a524; }
+.h1 { font-weight: 800; font-size: 64px; line-height: 1.08; letter-spacing: -1px; }
+.h2 { font-weight: 800; font-size: 46px; line-height: 1.12; }
+.h3 { font-weight: 700; font-size: 36px; line-height: 1.2; }
+.t { font-weight: 500; font-size: 30px; line-height: 1.32; color: #5b6577; }
+.num { width: 64px; height: 64px; border-radius: 50%; color: #fff; font-weight: 800; font-size: 32px; display: flex; align-items: center; justify-content: center; }
+.row { display: flex; align-items: center; gap: 22px; }
+.ok { color: #1e8a4c; } .bad { color: #d6203a; }
+.note { position: absolute; border-radius: 18px; padding: 22px 30px; font-size: 32px; font-weight: 700; line-height: 1.25; }
+.note.red { background: #fde8eb; color: #d6203a; border: 3px solid rgba(214,32,58,.35); }
+.note.green { background: #e5f5ec; color: #1e8a4c; border: 3px solid rgba(30,138,76,.35); }
+.note.navy { background: #1b2a4a; color: #fff; }
+.hl { position: absolute; border: 6px solid #f5a524; border-radius: 12px; box-shadow: 0 0 0 9999px rgba(20,33,61,0); }
+.shot { position: absolute; border-radius: 16px; box-shadow: 0 18px 40px rgba(20,33,61,.18); background: #fff; overflow: hidden; }
+.shot img { display: block; width: 100%; height: 100%; }
+.qr { position: absolute; background: #fff; border-radius: 22px; padding: 18px; box-shadow: 0 18px 40px rgba(20,33,61,.15); }
+.qr img { display: block; width: 100%; height: 100%; }
+.x, .v { width: 58px; height: 58px; border-radius: 50%; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 34px; flex: none; }
+.x { background: #d6203a; } .v { background: #1e8a4c; }
+.phone { position: absolute; width: 400px; height: 760px; border-radius: 56px; background: #0f1830; padding: 18px; box-shadow: 0 30px 60px rgba(20,33,61,.3); }
+.screen { position: absolute; left: 18px; top: 18px; right: 18px; bottom: 18px; border-radius: 40px; background: #fff; overflow: hidden; }
+.gf { position: absolute; inset: 0; background: #ede7f6; }
+.gfc { position: absolute; left: 16px; right: 16px; background: #fff; border-radius: 12px; }
+.gfbar { height: 12px; background: #673ab7; border-radius: 12px 12px 0 0; }
+.gft { padding: 16px 18px; font-size: 25px; line-height: 1.25; color: #202124; }
+.arrow { position: absolute; height: 6px; background: #5b6577; border-radius: 3px; transform-origin: 0 50%; }
+.arrow:after { content: ""; position: absolute; right: -4px; top: -9px; border-left: 20px solid #5b6577; border-top: 12px solid transparent; border-bottom: 12px solid transparent; }
+.flow { position: absolute; height: 150px; border-radius: 20px; background: #1b2a4a; color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 18px; }
+.flow b { font-size: 32px; line-height: 1.15; } .flow span { font-size: 28px; opacity: .85; margin-top: 8px; line-height: 1.2; }
+.chk { display: flex; align-items: center; gap: 22px; font-size: 34px; font-weight: 700; }
+.box { width: 50px; height: 50px; border-radius: 10px; border: 4px solid #b7c0cf; display: flex; align-items: center; justify-content: center; flex: none; background: #fff; }
+.tick { color: #fff; font-weight: 900; font-size: 32px; }
+</style>
+  <div id="root" data-composition-id="s09" data-width="1920" data-height="1080">
+    <div id="h" class="a row" style="left:150px;top:120px"><div class="num" style="background:#1b2a4a">7</div><div class="h1">Times are recorded automatically</div></div>
+    <div id="nm" class="note red" style="left:150px;top:260px">No manual time entry</div>
+    <div id="tc0" class="card" style="left:150px;top:400px;width:780px;height:400px;padding:40px"><span class="pill g">CHECK-IN TIME</span><div class="h3" style="margin-top:24px;max-width:600px">Saved when you press Submit on the Check-in form</div><div id="tv0" style="margin-top:28px;font-size:72px;font-weight:800;color:#1e8a4c">8:05 AM</div></div>
+    <div id="tc1" class="card" style="left:980px;top:400px;width:780px;height:400px;padding:40px"><span class="pill r">CHECK-OUT TIME</span><div class="h3" style="margin-top:24px;max-width:600px">Saved when you press Submit on the Check-out form</div><div id="tv1" style="margin-top:28px;font-size:72px;font-weight:800;color:#d6203a">8:10 PM</div></div>
+    <div id="ex" class="note navy" style="left:700px;top:260px">Shift starts 8:00 AM</div>
+    <div id="nf" class="note red" style="left:1100px;top:260px;width:680px"><span style="text-decoration:line-through">Time field</span>: the forms do not have one</div>
+    <div id="sheet" class="shot" style="left:150px;top:420px;width:1620px;height:175.787px"><img src="assets/deck/image-10-1.png" alt=""></div>
+    <div id="hli" class="hl" style="left:205.149px;top:448.723px;width:195.319px;height:91.915px"></div>
+    <div id="hlo" class="hl" style="left:1526.426px;top:448.723px;width:166.596px;height:91.915px"></div>
+    <div id="shl" class="a h2" style="left:150px;top:300px">Timestamps land in the attendance Google Sheet</div>
+    <div id="rule" class="note navy" style="left:150px;top:680px;width:1620px;text-align:center;font-size:44px">Remember: no manual time entry is required.</div>
+  </div>
+  <script>
+    gsap.set("#h",{opacity:0,x:-70});
+    gsap.set("#nm",{opacity:0,scale:0.7});
+    gsap.set("#tc0",{opacity:0,y:40});
+    gsap.set("#tv0",{opacity:0,scale:1.6});
+    gsap.set("#tc1",{opacity:0,y:40});
+    gsap.set("#tv1",{opacity:0,scale:1.6});
+    gsap.set("#ex",{opacity:0,y:40});
+    gsap.set("#nf",{opacity:0,y:40});
+    gsap.set("#sheet",{opacity:0,y:40});
+    gsap.set("#hli",{opacity:0,scale:0.7});
+    gsap.set("#hlo",{opacity:0,scale:0.7});
+    gsap.set("#shl",{opacity:0,y:40});
+    gsap.set("#rule",{opacity:0,scale:0.7});
+    const tl = gsap.timeline({ paused: true });
+    tl.to("#h",{opacity:1,x:0,duration:0.5,ease:"power3.out"},0.3);
+    tl.to("#nm",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},5.691);
+    tl.to("#nm",{opacity:0,duration:0.35,ease:"power2.in"},41.04);
+    tl.to("#tc0",{opacity:1,y:0,duration:0.5,ease:"power3.out"},9.617);
+    tl.to("#tc0",{opacity:0,duration:0.35,ease:"power2.in"},41.04);
+    tl.to("#tv0",{opacity:1,scale:1,duration:0.35,ease:"back.out(2)"},19.587);
+    tl.to("#tc1",{opacity:1,y:0,duration:0.5,ease:"power3.out"},9.917);
+    tl.to("#tc1",{opacity:0,duration:0.35,ease:"power2.in"},41.04);
+    tl.to("#tv1",{opacity:1,scale:1,duration:0.35,ease:"back.out(2)"},27.327);
+    tl.to("#ex",{opacity:1,y:0,duration:0.5,ease:"power3.out"},14.711);
+    tl.to("#ex",{opacity:0,duration:0.35,ease:"power2.in"},24.977);
+    tl.to("#nf",{opacity:1,y:0,duration:0.5,ease:"power3.out"},37.451);
+    tl.to("#nf",{opacity:0,duration:0.35,ease:"power2.in"},41.04);
+    tl.to("#sheet",{opacity:1,y:0,duration:0.5,ease:"power3.out"},41.59);
+    tl.to("#hli",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},42.39);
+    tl.to("#hlo",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},42.99);
+    tl.to("#shl",{opacity:1,y:0,duration:0.5,ease:"power3.out"},41.79);
+    tl.to("#rule",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},55.323);
+    tl.set({}, {}, 58.452);
+    window.__timelines["s09"] = tl;
+  </script>
+</template>

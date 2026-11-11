@@ -1,0 +1,143 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; font-family: "Inter", sans-serif; color: #14213d; overflow: hidden; }
+.a { position: absolute; }
+.card { position: absolute; background: #fff; border-radius: 22px; box-shadow: 0 18px 40px rgba(20,33,61,.12); }
+.pill { display: inline-block; padding: 10px 26px; border-radius: 40px; color: #fff; font-weight: 800; letter-spacing: 1.5px; font-size: 30px; }
+.g { background: #1e8a4c; } .r { background: #d6203a; } .n { background: #1b2a4a; } .am { background: #f5a524; }
+.h1 { font-weight: 800; font-size: 64px; line-height: 1.08; letter-spacing: -1px; }
+.h2 { font-weight: 800; font-size: 46px; line-height: 1.12; }
+.h3 { font-weight: 700; font-size: 36px; line-height: 1.2; }
+.t { font-weight: 500; font-size: 30px; line-height: 1.32; color: #5b6577; }
+.num { width: 64px; height: 64px; border-radius: 50%; color: #fff; font-weight: 800; font-size: 32px; display: flex; align-items: center; justify-content: center; }
+.row { display: flex; align-items: center; gap: 22px; }
+.ok { color: #1e8a4c; } .bad { color: #d6203a; }
+.note { position: absolute; border-radius: 18px; padding: 22px 30px; font-size: 32px; font-weight: 700; line-height: 1.25; }
+.note.red { background: #fde8eb; color: #d6203a; border: 3px solid rgba(214,32,58,.35); }
+.note.green { background: #e5f5ec; color: #1e8a4c; border: 3px solid rgba(30,138,76,.35); }
+.note.navy { background: #1b2a4a; color: #fff; }
+.hl { position: absolute; border: 6px solid #f5a524; border-radius: 12px; box-shadow: 0 0 0 9999px rgba(20,33,61,0); }
+.shot { position: absolute; border-radius: 16px; box-shadow: 0 18px 40px rgba(20,33,61,.18); background: #fff; overflow: hidden; }
+.shot img { display: block; width: 100%; height: 100%; }
+.qr { position: absolute; background: #fff; border-radius: 22px; padding: 18px; box-shadow: 0 18px 40px rgba(20,33,61,.15); }
+.qr img { display: block; width: 100%; height: 100%; }
+.x, .v { width: 58px; height: 58px; border-radius: 50%; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 34px; flex: none; }
+.x { background: #d6203a; } .v { background: #1e8a4c; }
+.phone { position: absolute; width: 400px; height: 760px; border-radius: 56px; background: #0f1830; padding: 18px; box-shadow: 0 30px 60px rgba(20,33,61,.3); }
+.screen { position: absolute; left: 18px; top: 18px; right: 18px; bottom: 18px; border-radius: 40px; background: #fff; overflow: hidden; }
+.gf { position: absolute; inset: 0; background: #ede7f6; }
+.gfc { position: absolute; left: 16px; right: 16px; background: #fff; border-radius: 12px; }
+.gfbar { height: 12px; background: #673ab7; border-radius: 12px 12px 0 0; }
+.gft { padding: 16px 18px; font-size: 25px; line-height: 1.25; color: #202124; }
+.arrow { position: absolute; height: 6px; background: #5b6577; border-radius: 3px; transform-origin: 0 50%; }
+.arrow:after { content: ""; position: absolute; right: -4px; top: -9px; border-left: 20px solid #5b6577; border-top: 12px solid transparent; border-bottom: 12px solid transparent; }
+.flow { position: absolute; height: 150px; border-radius: 20px; background: #1b2a4a; color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 18px; }
+.flow b { font-size: 32px; line-height: 1.15; } .flow span { font-size: 28px; opacity: .85; margin-top: 8px; line-height: 1.2; }
+.chk { display: flex; align-items: center; gap: 22px; font-size: 34px; font-weight: 700; }
+.box { width: 50px; height: 50px; border-radius: 10px; border: 4px solid #b7c0cf; display: flex; align-items: center; justify-content: center; flex: none; background: #fff; }
+.tick { color: #fff; font-weight: 900; font-size: 32px; }
+</style>
+  <div id="root" data-composition-id="s12" data-width="1920" data-height="1080">
+    <div id="h" class="a h1" style="left:150px;top:110px">Quick recap</div>
+    <div id="col0" class="a" style="left:150px;top:230px"><span class="pill g" style="font-size:30px">CHECK-IN: START of shift</span></div>
+    <div id="rc00" class="a row" style="left:150px;top:330px"><div class="num" style="background:#1e8a4c;width:52px;height:52px;font-size:28px">1</div><div style="font-size:31px;font-weight:600;max-width:680px">Scan the green Check-in QR</div></div>
+    <div id="rc01" class="a row" style="left:150px;top:450px"><div class="num" style="background:#1e8a4c;width:52px;height:52px;font-size:28px">2</div><div style="font-size:31px;font-weight:600;max-width:680px">Sign in: official AirAsia Google account</div></div>
+    <div id="rc02" class="a row" style="left:150px;top:570px"><div class="num" style="background:#1e8a4c;width:52px;height:52px;font-size:28px">3</div><div style="font-size:31px;font-weight:600;max-width:680px">Designation, date, team, name, Staff ID</div></div>
+    <div id="rc03" class="a row" style="left:150px;top:690px"><div class="num" style="background:#1e8a4c;width:52px;height:52px;font-size:28px">4</div><div style="font-size:31px;font-weight:600;max-width:680px">Review, Submit once, see “recorded”</div></div>
+    <div id="col1" class="a" style="left:980px;top:230px"><span class="pill r" style="font-size:30px">CHECK-OUT: END of shift</span></div>
+    <div id="rc10" class="a row" style="left:980px;top:330px"><div class="num" style="background:#d6203a;width:52px;height:52px;font-size:28px">1</div><div style="font-size:31px;font-weight:600;max-width:680px">Scan the red Check-out QR</div></div>
+    <div id="rc11" class="a row" style="left:980px;top:450px"><div class="num" style="background:#d6203a;width:52px;height:52px;font-size:28px">2</div><div style="font-size:31px;font-weight:600;max-width:680px">Same official AirAsia Google account</div></div>
+    <div id="rc12" class="a row" style="left:980px;top:570px"><div class="num" style="background:#d6203a;width:52px;height:52px;font-size:28px">3</div><div style="font-size:31px;font-weight:600;max-width:680px">Same Staff ID and start date, correct team</div></div>
+    <div id="rc13" class="a row" style="left:980px;top:690px"><div class="num" style="background:#d6203a;width:52px;height:52px;font-size:28px">4</div><div style="font-size:31px;font-weight:600;max-width:680px">Submit once, wait for confirmation</div></div>
+    <div id="h2" class="a h1" style="left:150px;top:110px">Three rules</div>
+    <div id="rr0" class="a row" style="left:150px;top:240px"><div class="num" style="background:#1b2a4a">1</div><div class="h3" style="max-width:1400px">Always use your official AirAsia Google account</div></div>
+    <div id="rr1" class="a row" style="left:150px;top:360px"><div class="num" style="background:#1b2a4a">2</div><div class="h3" style="max-width:1400px">Never enter or change the attendance time: it is recorded automatically</div></div>
+    <div id="rr2" class="a row" style="left:150px;top:480px"><div class="num" style="background:#1b2a4a">3</div><div class="h3" style="max-width:1400px">Submit each form once per shift and verify the confirmation</div></div>
+    <div id="fw0" class="flow" style="left:150px;top:630px;width:480px;background:#1b2a4a"><b>Staff</b><span>incorrect info submitted</span></div>
+    <div id="fwa0" class="arrow" style="left:642px;top:702px;width:56px"></div>
+    <div id="fw1" class="flow" style="left:720px;top:630px;width:480px;background:#1b2a4a"><b>Respective DSE</b><span>report immediately</span></div>
+    <div id="fwa1" class="arrow" style="left:1212px;top:702px;width:56px"></div>
+    <div id="fw2" class="flow" style="left:1290px;top:630px;width:480px;background:#1b2a4a"><b>Operations Security Manager</b><span>necessary correction</span></div>
+    <div id="pp" class="note green" style="left:150px;top:830px;width:1620px;text-align:center">Accurate  ·  Properly organised  ·  Available for supervisory review</div>
+    <div id="endbg" class="a" style="left:0;top:0;width:1920px;height:1080px;background:#14213d"></div>
+    <div id="ty" class="a" style="left:0;width:1920px;top:330px;text-align:center;color:#fff;font-size:110px;font-weight:800">Thank you</div>
+    <div id="ty2" class="a" style="left:0;width:1920px;top:480px;text-align:center;color:#f5a524;font-size:36px;font-weight:700;letter-spacing:2px">AA/SEC/F/077 Attendance Record briefing</div>
+    <div id="qs" class="a" style="left:0;width:1920px;top:600px;text-align:center;color:#fff;font-size:44px;font-weight:600">Any questions about Check-in or Check-out?</div>
+  </div>
+  <script>
+    gsap.set("#h",{opacity:0,x:-70});
+    gsap.set("#col0",{opacity:0,y:40});
+    gsap.set("#rc00",{opacity:0,x:-70});
+    gsap.set("#rc01",{opacity:0,x:-70});
+    gsap.set("#rc02",{opacity:0,x:-70});
+    gsap.set("#rc03",{opacity:0,x:-70});
+    gsap.set("#col1",{opacity:0,y:40});
+    gsap.set("#rc10",{opacity:0,x:-70});
+    gsap.set("#rc11",{opacity:0,x:-70});
+    gsap.set("#rc12",{opacity:0,x:-70});
+    gsap.set("#rc13",{opacity:0,x:-70});
+    gsap.set("#h2",{opacity:0,x:-70});
+    gsap.set("#rr0",{opacity:0,x:-70});
+    gsap.set("#rr1",{opacity:0,x:-70});
+    gsap.set("#rr2",{opacity:0,x:-70});
+    gsap.set("#fw0",{opacity:0,y:40});
+    gsap.set("#fwa0",{scaleX:0});
+    gsap.set("#fw1",{opacity:0,y:40});
+    gsap.set("#fwa1",{scaleX:0});
+    gsap.set("#fw2",{opacity:0,y:40});
+    gsap.set("#pp",{opacity:0,y:40});
+    gsap.set("#endbg",{opacity:0});
+    gsap.set("#ty",{opacity:0,y:40});
+    gsap.set("#ty2",{opacity:0,y:40});
+    gsap.set("#qs",{opacity:0,y:40});
+    const tl = gsap.timeline({ paused: true });
+    tl.to("#h",{opacity:1,x:0,duration:0.5,ease:"power3.out"},0.3);
+    tl.to("#h",{opacity:0,duration:0.35,ease:"power2.in"},42.909);
+    tl.to("#col0",{opacity:1,y:0,duration:0.5,ease:"power3.out"},6.972);
+    tl.to("#col0",{opacity:0,duration:0.35,ease:"power2.in"},42.909);
+    tl.to("#rc00",{opacity:1,x:0,duration:0.5,ease:"power3.out"},8.618);
+    tl.to("#rc00",{opacity:0,duration:0.35,ease:"power2.in"},42.909);
+    tl.to("#rc01",{opacity:1,x:0,duration:0.5,ease:"power3.out"},10.971);
+    tl.to("#rc01",{opacity:0,duration:0.35,ease:"power2.in"},42.909);
+    tl.to("#rc02",{opacity:1,x:0,duration:0.5,ease:"power3.out"},14.29);
+    tl.to("#rc02",{opacity:0,duration:0.35,ease:"power2.in"},42.909);
+    tl.to("#rc03",{opacity:1,x:0,duration:0.5,ease:"power3.out"},21.773);
+    tl.to("#rc03",{opacity:0,duration:0.35,ease:"power2.in"},42.909);
+    tl.to("#col1",{opacity:1,y:0,duration:0.5,ease:"power3.out"},27.686);
+    tl.to("#col1",{opacity:0,duration:0.35,ease:"power2.in"},42.909);
+    tl.to("#rc10",{opacity:1,x:0,duration:0.5,ease:"power3.out"},29.198);
+    tl.to("#rc10",{opacity:0,duration:0.35,ease:"power2.in"},42.909);
+    tl.to("#rc11",{opacity:1,x:0,duration:0.5,ease:"power3.out"},31.566);
+    tl.to("#rc11",{opacity:0,duration:0.35,ease:"power2.in"},42.909);
+    tl.to("#rc12",{opacity:1,x:0,duration:0.5,ease:"power3.out"},34.593);
+    tl.to("#rc12",{opacity:0,duration:0.35,ease:"power2.in"},42.909);
+    tl.to("#rc13",{opacity:1,x:0,duration:0.5,ease:"power3.out"},39.368);
+    tl.to("#rc13",{opacity:0,duration:0.35,ease:"power2.in"},42.909);
+    tl.to("#h2",{opacity:1,x:0,duration:0.5,ease:"power3.out"},43.459);
+    tl.to("#h2",{opacity:0,duration:0.35,ease:"power2.in"},95.857);
+    tl.to("#rr0",{opacity:1,x:0,duration:0.5,ease:"power3.out"},47.833);
+    tl.to("#rr0",{opacity:0,duration:0.35,ease:"power2.in"},95.857);
+    tl.to("#rr1",{opacity:1,x:0,duration:0.5,ease:"power3.out"},52.09);
+    tl.to("#rr1",{opacity:0,duration:0.35,ease:"power2.in"},95.857);
+    tl.to("#rr2",{opacity:1,x:0,duration:0.5,ease:"power3.out"},58.989);
+    tl.to("#rr2",{opacity:0,duration:0.35,ease:"power2.in"},95.857);
+    tl.to("#fw0",{opacity:1,y:0,duration:0.5,ease:"power3.out"},67.705);
+    tl.to("#fw0",{opacity:0,duration:0.35,ease:"power2.in"},95.857);
+    tl.to("#fwa0",{scaleX:1,duration:0.5,ease:"power3.out"},69.805);
+    tl.to("#fwa0",{opacity:0,duration:0.35,ease:"power2.in"},95.857);
+    tl.to("#fw1",{opacity:1,y:0,duration:0.5,ease:"power3.out"},69.905);
+    tl.to("#fw1",{opacity:0,duration:0.35,ease:"power2.in"},95.857);
+    tl.to("#fwa1",{scaleX:1,duration:0.5,ease:"power3.out"},75.937);
+    tl.to("#fwa1",{opacity:0,duration:0.35,ease:"power2.in"},95.857);
+    tl.to("#fw2",{opacity:1,y:0,duration:0.5,ease:"power3.out"},76.037);
+    tl.to("#fw2",{opacity:0,duration:0.35,ease:"power2.in"},95.857);
+    tl.to("#pp",{opacity:1,y:0,duration:0.5,ease:"power3.out"},81.352);
+    tl.to("#pp",{opacity:0,duration:0.35,ease:"power2.in"},95.857);
+    tl.to("#endbg",{opacity:1,duration:0.5,ease:"power3.out"},96.207);
+    tl.to("#ty",{opacity:1,y:0,duration:0.5,ease:"power3.out"},102.728);
+    tl.to("#ty2",{opacity:1,y:0,duration:0.5,ease:"power3.out"},96.507);
+    tl.to("#qs",{opacity:1,y:0,duration:0.5,ease:"power3.out"},106.942);
+    tl.set({}, {}, 113.085);
+    window.__timelines["s12"] = tl;
+  </script>
+</template>

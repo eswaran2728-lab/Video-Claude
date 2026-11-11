@@ -1,0 +1,112 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; font-family: "Inter", sans-serif; color: #14213d; overflow: hidden; }
+.a { position: absolute; }
+.card { position: absolute; background: #fff; border-radius: 22px; box-shadow: 0 18px 40px rgba(20,33,61,.12); }
+.pill { display: inline-block; padding: 10px 26px; border-radius: 40px; color: #fff; font-weight: 800; letter-spacing: 1.5px; font-size: 30px; }
+.g { background: #1e8a4c; } .r { background: #d6203a; } .n { background: #1b2a4a; } .am { background: #f5a524; }
+.h1 { font-weight: 800; font-size: 64px; line-height: 1.08; letter-spacing: -1px; }
+.h2 { font-weight: 800; font-size: 46px; line-height: 1.12; }
+.h3 { font-weight: 700; font-size: 36px; line-height: 1.2; }
+.t { font-weight: 500; font-size: 30px; line-height: 1.32; color: #5b6577; }
+.num { width: 64px; height: 64px; border-radius: 50%; color: #fff; font-weight: 800; font-size: 32px; display: flex; align-items: center; justify-content: center; }
+.row { display: flex; align-items: center; gap: 22px; }
+.ok { color: #1e8a4c; } .bad { color: #d6203a; }
+.note { position: absolute; border-radius: 18px; padding: 22px 30px; font-size: 32px; font-weight: 700; line-height: 1.25; }
+.note.red { background: #fde8eb; color: #d6203a; border: 3px solid rgba(214,32,58,.35); }
+.note.green { background: #e5f5ec; color: #1e8a4c; border: 3px solid rgba(30,138,76,.35); }
+.note.navy { background: #1b2a4a; color: #fff; }
+.hl { position: absolute; border: 6px solid #f5a524; border-radius: 12px; box-shadow: 0 0 0 9999px rgba(20,33,61,0); }
+.shot { position: absolute; border-radius: 16px; box-shadow: 0 18px 40px rgba(20,33,61,.18); background: #fff; overflow: hidden; }
+.shot img { display: block; width: 100%; height: 100%; }
+.qr { position: absolute; background: #fff; border-radius: 22px; padding: 18px; box-shadow: 0 18px 40px rgba(20,33,61,.15); }
+.qr img { display: block; width: 100%; height: 100%; }
+.x, .v { width: 58px; height: 58px; border-radius: 50%; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 34px; flex: none; }
+.x { background: #d6203a; } .v { background: #1e8a4c; }
+.phone { position: absolute; width: 400px; height: 760px; border-radius: 56px; background: #0f1830; padding: 18px; box-shadow: 0 30px 60px rgba(20,33,61,.3); }
+.screen { position: absolute; left: 18px; top: 18px; right: 18px; bottom: 18px; border-radius: 40px; background: #fff; overflow: hidden; }
+.gf { position: absolute; inset: 0; background: #ede7f6; }
+.gfc { position: absolute; left: 16px; right: 16px; background: #fff; border-radius: 12px; }
+.gfbar { height: 12px; background: #673ab7; border-radius: 12px 12px 0 0; }
+.gft { padding: 16px 18px; font-size: 25px; line-height: 1.25; color: #202124; }
+.arrow { position: absolute; height: 6px; background: #5b6577; border-radius: 3px; transform-origin: 0 50%; }
+.arrow:after { content: ""; position: absolute; right: -4px; top: -9px; border-left: 20px solid #5b6577; border-top: 12px solid transparent; border-bottom: 12px solid transparent; }
+.flow { position: absolute; height: 150px; border-radius: 20px; background: #1b2a4a; color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 18px; }
+.flow b { font-size: 32px; line-height: 1.15; } .flow span { font-size: 28px; opacity: .85; margin-top: 8px; line-height: 1.2; }
+.chk { display: flex; align-items: center; gap: 22px; font-size: 34px; font-weight: 700; }
+.box { width: 50px; height: 50px; border-radius: 10px; border: 4px solid #b7c0cf; display: flex; align-items: center; justify-content: center; flex: none; background: #fff; }
+.tick { color: #fff; font-weight: 900; font-size: 32px; }
+</style>
+  <div id="root" data-composition-id="s01" data-width="1920" data-height="1080">
+    <div id="bg" class="a" style="left:0;top:0;width:1920px;height:1080px;background:#14213d"></div>
+    <div id="k" class="a" style="left:150px;top:250px;font-weight:800;font-size:30px;letter-spacing:3px;color:#f5a524">AA/SEC/F/077 ATTENDANCE RECORD</div>
+    <div id="ttl" class="a h1" style="left:150px;top:310px;color:#fff">How to Check In<br>and Check Out</div>
+    <div id="sub" class="a" style="left:150px;top:500px;color:#fff;font-size:34px;line-height:1.4;font-weight:500">Staff training briefing<br><span style='opacity:.7'>Scan, fill in, submit, recorded</span></div>
+    <div id="qc0" class="card" style="left:1040px;top:210px;width:350px;height:460px"><div style="text-align:center;margin-top:22px"><span class="pill g">CHECK-IN</span></div><img src="assets/deck/image-1-1.png" style="display:block;width:280px;height:280px;margin:22px auto 0" alt=""><div style="text-align:center;font-size:32px;font-weight:700;margin-top:14px;color:#1e8a4c">Start of shift</div></div>
+    <div id="qc1" class="card" style="left:1430px;top:210px;width:350px;height:460px"><div style="text-align:center;margin-top:22px"><span class="pill r">CHECK-OUT</span></div><img src="assets/deck/image-1-2.png" style="display:block;width:280px;height:280px;margin:22px auto 0" alt=""><div style="text-align:center;font-size:32px;font-weight:700;margin-top:14px;color:#d6203a">End of shift</div></div>
+    <div id="jl" class="a" style="left:240px;top:330px;width:1440px;height:10px;background:linear-gradient(90deg,#1e8a4c,#d6203a);border-radius:6px"></div>
+    <div id="j0" class="a" style="left:150px;top:190px;width:300px"><span class="pill g">CHECK-IN</span><div class="t" style="margin-top:12px">Beginning of shift</div></div>
+    <div id="j1" class="a" style="left:1540px;top:190px;width:330px"><span class="pill r">CHECK-OUT</span><div class="t" style="margin-top:12px">Completion of duty</div></div>
+    <div id="jd" class="a" style="left:232px;top:318px;width:34px;height:34px;border-radius:50%;background:#fff;border:6px solid #14213d"></div>
+    <div id="jr" class="a" style="left:0;width:1920px;top:380px;text-align:center;font-weight:800;font-size:38px">Recorded accurately, every shift</div>
+    <div id="nd0" class="card" style="left:240px;top:470px;width:440px;height:330px;text-align:center"><div style="margin-top:46px"><svg width="90" height="90" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5" fill="none" stroke="#14213d" stroke-width="1.8"/><circle cx="12" cy="18.3" r="1" fill="#14213d"/></svg></div><div class="h3" style="margin-top:20px;padding:0 20px">Your mobile phone</div></div>
+    <div id="nd1" class="card" style="left:740px;top:470px;width:440px;height:330px;text-align:center"><div style="margin-top:46px"><svg width="90" height="90" viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4" fill="none" stroke="#14213d" stroke-width="1.8"/><path d="M4 20c1.5-4 4.5-5.5 8-5.5s6.5 1.5 8 5.5" fill="none" stroke="#14213d" stroke-width="1.8"/></svg></div><div class="h3" style="margin-top:20px;padding:0 20px">Official AirAsia Google account</div></div>
+    <div id="nd2" class="card" style="left:1240px;top:470px;width:440px;height:330px;text-align:center"><div style="margin-top:46px"><svg width="90" height="90" viewBox="0 0 24 24" fill="#14213d"><rect x="3" y="3" width="7" height="7" rx="1" fill="none" stroke="#14213d" stroke-width="1.8"/><rect x="14" y="3" width="7" height="7" rx="1" fill="none" stroke="#14213d" stroke-width="1.8"/><rect x="3" y="14" width="7" height="7" rx="1" fill="none" stroke="#14213d" stroke-width="1.8"/><rect x="14" y="14" width="3" height="3"/><rect x="18" y="18" width="3" height="3"/><rect x="18" y="14" width="3" height="2"/><rect x="14" y="19" width="2" height="2"/></svg></div><div class="h3" style="margin-top:20px;padding:0 20px">The correct QR code</div></div>
+    <div id="ag0" class="a row" style="left:330px;top:230px"><div class="num" style="background:#1b2a4a">1</div><div class="h2">Step by step</div></div>
+    <div id="ag1" class="a row" style="left:330px;top:380px"><div class="num" style="background:#f5a524">2</div><div class="h2">Common mistakes to avoid</div></div>
+    <div id="ag2" class="a row" style="left:330px;top:530px"><div class="num" style="background:#d6203a">3</div><div class="h2">If you submit incorrect information</div></div>
+    <div id="goal" class="note green" style="left:330px;top:720px">✓ Complete your attendance independently and correctly</div>
+  </div>
+  <script>
+    gsap.set("#sub",{opacity:0,x:-70});
+    gsap.set("#qc0",{opacity:0,scale:0.7});
+    gsap.set("#qc1",{opacity:0,scale:0.7});
+    gsap.set("#jl",{scaleX:0});
+    gsap.set("#j0",{opacity:0,y:40});
+    gsap.set("#j1",{opacity:0,y:40});
+    gsap.set("#jd",{opacity:0,scale:0.7});
+    gsap.set("#jr",{opacity:0,y:40});
+    gsap.set("#nd0",{opacity:0,y:40});
+    gsap.set("#nd1",{opacity:0,y:40});
+    gsap.set("#nd2",{opacity:0,y:40});
+    gsap.set("#ag0",{opacity:0,x:-70});
+    gsap.set("#ag1",{opacity:0,x:-70});
+    gsap.set("#ag2",{opacity:0,x:-70});
+    gsap.set("#goal",{opacity:0,y:40});
+    const tl = gsap.timeline({ paused: true });
+    tl.to("#bg",{opacity:0,duration:0.35,ease:"power2.in"},15.486);
+    tl.to("#k",{opacity:0,duration:0.35,ease:"power2.in"},15.486);
+    tl.to("#ttl",{opacity:0,duration:0.35,ease:"power2.in"},15.486);
+    tl.to("#sub",{opacity:1,x:0,duration:0.5,ease:"power3.out"},1.1);
+    tl.to("#sub",{opacity:0,duration:0.35,ease:"power2.in"},15.486);
+    tl.to("#qc0",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},1.3);
+    tl.to("#qc0",{opacity:0,duration:0.35,ease:"power2.in"},15.486);
+    tl.to("#qc1",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},1.55);
+    tl.to("#qc1",{opacity:0,duration:0.35,ease:"power2.in"},15.486);
+    tl.to("#k",{scale:1.06,duration:0.22,ease:"power2.out"},4.045);
+    tl.to("#k",{scale:1,duration:0.35,ease:"power2.inOut"},4.265);
+    tl.to("#jl",{scaleX:1,duration:0.5,ease:"power3.out"},15.836);
+    tl.to("#jl",{opacity:0,duration:0.35,ease:"power2.in"},33.924);
+    tl.to("#j0",{opacity:1,y:0,duration:0.5,ease:"power3.out"},16.136);
+    tl.to("#j0",{opacity:0,duration:0.35,ease:"power2.in"},33.924);
+    tl.to("#j1",{opacity:1,y:0,duration:0.5,ease:"power3.out"},16.436);
+    tl.to("#j1",{opacity:0,duration:0.35,ease:"power2.in"},33.924);
+    tl.to("#jd",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},16.436);
+    tl.to("#jd",{opacity:0,duration:0.35,ease:"power2.in"},33.924);
+    tl.to("#jd",{x:1420,duration:3.0,ease:"power1.inOut"},16.736);
+    tl.to("#jr",{opacity:1,y:0,duration:0.5,ease:"power3.out"},17.836);
+    tl.to("#jr",{opacity:0,duration:0.35,ease:"power2.in"},33.924);
+    tl.to("#nd0",{opacity:1,y:0,duration:0.5,ease:"power3.out"},28.603);
+    tl.to("#nd0",{opacity:0,duration:0.35,ease:"power2.in"},33.924);
+    tl.to("#nd1",{opacity:1,y:0,duration:0.5,ease:"power3.out"},29.803);
+    tl.to("#nd1",{opacity:0,duration:0.35,ease:"power2.in"},33.924);
+    tl.to("#nd2",{opacity:1,y:0,duration:0.5,ease:"power3.out"},31.003);
+    tl.to("#nd2",{opacity:0,duration:0.35,ease:"power2.in"},33.924);
+    tl.to("#ag0",{opacity:1,x:0,duration:0.5,ease:"power3.out"},34.774);
+    tl.to("#ag1",{opacity:1,x:0,duration:0.5,ease:"power3.out"},36.374);
+    tl.to("#ag2",{opacity:1,x:0,duration:0.5,ease:"power3.out"},37.974);
+    tl.to("#goal",{opacity:1,y:0,duration:0.5,ease:"power3.out"},44.757);
+    tl.set({}, {}, 51.47);
+    window.__timelines["s01"] = tl;
+  </script>
+</template>

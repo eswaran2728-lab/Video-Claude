@@ -1,0 +1,102 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; font-family: "Inter", sans-serif; color: #14213d; overflow: hidden; }
+.a { position: absolute; }
+.card { position: absolute; background: #fff; border-radius: 22px; box-shadow: 0 18px 40px rgba(20,33,61,.12); }
+.pill { display: inline-block; padding: 10px 26px; border-radius: 40px; color: #fff; font-weight: 800; letter-spacing: 1.5px; font-size: 30px; }
+.g { background: #1e8a4c; } .r { background: #d6203a; } .n { background: #1b2a4a; } .am { background: #f5a524; }
+.h1 { font-weight: 800; font-size: 64px; line-height: 1.08; letter-spacing: -1px; }
+.h2 { font-weight: 800; font-size: 46px; line-height: 1.12; }
+.h3 { font-weight: 700; font-size: 36px; line-height: 1.2; }
+.t { font-weight: 500; font-size: 30px; line-height: 1.32; color: #5b6577; }
+.num { width: 64px; height: 64px; border-radius: 50%; color: #fff; font-weight: 800; font-size: 32px; display: flex; align-items: center; justify-content: center; }
+.row { display: flex; align-items: center; gap: 22px; }
+.ok { color: #1e8a4c; } .bad { color: #d6203a; }
+.note { position: absolute; border-radius: 18px; padding: 22px 30px; font-size: 32px; font-weight: 700; line-height: 1.25; }
+.note.red { background: #fde8eb; color: #d6203a; border: 3px solid rgba(214,32,58,.35); }
+.note.green { background: #e5f5ec; color: #1e8a4c; border: 3px solid rgba(30,138,76,.35); }
+.note.navy { background: #1b2a4a; color: #fff; }
+.hl { position: absolute; border: 6px solid #f5a524; border-radius: 12px; box-shadow: 0 0 0 9999px rgba(20,33,61,0); }
+.shot { position: absolute; border-radius: 16px; box-shadow: 0 18px 40px rgba(20,33,61,.18); background: #fff; overflow: hidden; }
+.shot img { display: block; width: 100%; height: 100%; }
+.qr { position: absolute; background: #fff; border-radius: 22px; padding: 18px; box-shadow: 0 18px 40px rgba(20,33,61,.15); }
+.qr img { display: block; width: 100%; height: 100%; }
+.x, .v { width: 58px; height: 58px; border-radius: 50%; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 34px; flex: none; }
+.x { background: #d6203a; } .v { background: #1e8a4c; }
+.phone { position: absolute; width: 400px; height: 760px; border-radius: 56px; background: #0f1830; padding: 18px; box-shadow: 0 30px 60px rgba(20,33,61,.3); }
+.screen { position: absolute; left: 18px; top: 18px; right: 18px; bottom: 18px; border-radius: 40px; background: #fff; overflow: hidden; }
+.gf { position: absolute; inset: 0; background: #ede7f6; }
+.gfc { position: absolute; left: 16px; right: 16px; background: #fff; border-radius: 12px; }
+.gfbar { height: 12px; background: #673ab7; border-radius: 12px 12px 0 0; }
+.gft { padding: 16px 18px; font-size: 25px; line-height: 1.25; color: #202124; }
+.arrow { position: absolute; height: 6px; background: #5b6577; border-radius: 3px; transform-origin: 0 50%; }
+.arrow:after { content: ""; position: absolute; right: -4px; top: -9px; border-left: 20px solid #5b6577; border-top: 12px solid transparent; border-bottom: 12px solid transparent; }
+.flow { position: absolute; height: 150px; border-radius: 20px; background: #1b2a4a; color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 18px; }
+.flow b { font-size: 32px; line-height: 1.15; } .flow span { font-size: 28px; opacity: .85; margin-top: 8px; line-height: 1.2; }
+.chk { display: flex; align-items: center; gap: 22px; font-size: 34px; font-weight: 700; }
+.box { width: 50px; height: 50px; border-radius: 10px; border: 4px solid #b7c0cf; display: flex; align-items: center; justify-content: center; flex: none; background: #fff; }
+.tick { color: #fff; font-weight: 900; font-size: 32px; }
+</style>
+  <div id="root" data-composition-id="s02" data-width="1920" data-height="1080">
+    <div id="h" class="a h1" style="left:150px;top:130px">Two QR codes. Two moments.</div>
+    <div id="c0" class="card" style="left:150px;top:270px;width:780px;height:480px"><div style="margin:28px 0 0 30px"><span class="pill g">CHECK-IN</span></div><img src="assets/deck/image-1-1.png" style="position:absolute;left:30px;top:110px;width:330px;height:330px" alt=""><div class="h2" style="position:absolute;left:400px;top:150px;color:#1e8a4c">START of shift</div></div>
+    <div id="cw0" class="a" style="left:550px;top:520px;font-size:32px;font-weight:600;color:#5b6577;line-height:1.3">Scan when you start<br>your shift</div>
+    <div id="c1" class="card" style="left:990px;top:270px;width:780px;height:480px"><div style="margin:28px 0 0 30px"><span class="pill r">CHECK-OUT</span></div><img src="assets/deck/image-1-2.png" style="position:absolute;left:30px;top:110px;width:330px;height:330px" alt=""><div class="h2" style="position:absolute;left:400px;top:150px;color:#d6203a">END of shift</div></div>
+    <div id="cw1" class="a" style="left:1390px;top:520px;font-size:32px;font-weight:600;color:#5b6577;line-height:1.3">Scan when you finish<br>your shift</div>
+    <div id="sw" class="note red" style="left:760px;top:770px;width:400px;text-align:center">Never swap them</div>
+    <div id="h2" class="a h1" style="left:150px;top:180px">Four basic steps, for both procedures</div>
+    <div id="st0" class="flow" style="left:150px;top:420px;width:360px;height:180px;background:#1b2a4a"><b style="font-size:40px">1  Scan</b></div>
+    <div id="st1" class="flow" style="left:570px;top:420px;width:360px;height:180px;background:#1b2a4a"><b style="font-size:40px">2  Fill in form</b></div>
+    <div id="sa1" class="arrow" style="left:518px;top:507px;width:30px"></div>
+    <div id="st2" class="flow" style="left:990px;top:420px;width:360px;height:180px;background:#1b2a4a"><b style="font-size:40px">3  Submit</b></div>
+    <div id="sa2" class="arrow" style="left:938px;top:507px;width:30px"></div>
+    <div id="st3" class="flow" style="left:1410px;top:420px;width:360px;height:180px;background:#1e8a4c"><b style="font-size:40px">4  Recorded</b></div>
+    <div id="sa3" class="arrow" style="left:1358px;top:507px;width:30px"></div>
+    <div id="stn" class="a" style="left:150px;top:680px;color:#d6203a;font-size:36px;font-weight:700">Check-in at the start. Check-out at the end.</div>
+  </div>
+  <script>
+    gsap.set("#h",{opacity:0,x:-70});
+    gsap.set("#c0",{opacity:0,scale:0.7});
+    gsap.set("#cw0",{opacity:0,y:40});
+    gsap.set("#c1",{opacity:0,scale:0.7});
+    gsap.set("#cw1",{opacity:0,y:40});
+    gsap.set("#sw",{opacity:0,scale:0.7});
+    gsap.set("#h2",{opacity:0,x:-70});
+    gsap.set("#st0",{opacity:0,y:40});
+    gsap.set("#st1",{opacity:0,y:40});
+    gsap.set("#sa1",{scaleX:0});
+    gsap.set("#st2",{opacity:0,y:40});
+    gsap.set("#sa2",{scaleX:0});
+    gsap.set("#st3",{opacity:0,y:40});
+    gsap.set("#sa3",{scaleX:0});
+    gsap.set("#stn",{opacity:0,y:40});
+    const tl = gsap.timeline({ paused: true });
+    tl.to("#h",{opacity:1,x:0,duration:0.5,ease:"power3.out"},1.0);
+    tl.to("#h",{opacity:0,duration:0.35,ease:"power2.in"},34.458);
+    tl.to("#c0",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},6.965);
+    tl.to("#c0",{opacity:0,duration:0.35,ease:"power2.in"},34.458);
+    tl.to("#cw0",{opacity:1,y:0,duration:0.5,ease:"power3.out"},11.027);
+    tl.to("#cw0",{opacity:0,duration:0.35,ease:"power2.in"},34.458);
+    tl.to("#c0",{scale:1.06,duration:0.22,ease:"power2.out"},29.13);
+    tl.to("#c0",{scale:1,duration:0.35,ease:"power2.inOut"},29.35);
+    tl.to("#c1",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},14.469);
+    tl.to("#c1",{opacity:0,duration:0.35,ease:"power2.in"},34.458);
+    tl.to("#cw1",{opacity:1,y:0,duration:0.5,ease:"power3.out"},18.544);
+    tl.to("#cw1",{opacity:0,duration:0.35,ease:"power2.in"},34.458);
+    tl.to("#c1",{scale:1.06,duration:0.22,ease:"power2.out"},32.031);
+    tl.to("#c1",{scale:1,duration:0.35,ease:"power2.inOut"},32.251);
+    tl.to("#sw",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},22.639);
+    tl.to("#sw",{opacity:0,duration:0.35,ease:"power2.in"},34.458);
+    tl.to("#h2",{opacity:1,x:0,duration:0.5,ease:"power3.out"},35.008);
+    tl.to("#st0",{opacity:1,y:0,duration:0.5,ease:"power3.out"},37.916);
+    tl.to("#st1",{opacity:1,y:0,duration:0.5,ease:"power3.out"},40.387);
+    tl.to("#sa1",{scaleX:1,duration:0.5,ease:"power3.out"},40.287);
+    tl.to("#st2",{opacity:1,y:0,duration:0.5,ease:"power3.out"},43.084);
+    tl.to("#sa2",{scaleX:1,duration:0.5,ease:"power3.out"},42.984);
+    tl.to("#st3",{opacity:1,y:0,duration:0.5,ease:"power3.out"},44.711);
+    tl.to("#sa3",{scaleX:1,duration:0.5,ease:"power3.out"},44.611);
+    tl.to("#stn",{opacity:1,y:0,duration:0.5,ease:"power3.out"},45.711);
+    tl.set({}, {}, 52.272);
+    window.__timelines["s02"] = tl;
+  </script>
+</template>

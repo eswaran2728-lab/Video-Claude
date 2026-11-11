@@ -1,0 +1,146 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; font-family: "Inter", sans-serif; color: #14213d; overflow: hidden; }
+.a { position: absolute; }
+.card { position: absolute; background: #fff; border-radius: 22px; box-shadow: 0 18px 40px rgba(20,33,61,.12); }
+.pill { display: inline-block; padding: 10px 26px; border-radius: 40px; color: #fff; font-weight: 800; letter-spacing: 1.5px; font-size: 30px; }
+.g { background: #1e8a4c; } .r { background: #d6203a; } .n { background: #1b2a4a; } .am { background: #f5a524; }
+.h1 { font-weight: 800; font-size: 64px; line-height: 1.08; letter-spacing: -1px; }
+.h2 { font-weight: 800; font-size: 46px; line-height: 1.12; }
+.h3 { font-weight: 700; font-size: 36px; line-height: 1.2; }
+.t { font-weight: 500; font-size: 30px; line-height: 1.32; color: #5b6577; }
+.num { width: 64px; height: 64px; border-radius: 50%; color: #fff; font-weight: 800; font-size: 32px; display: flex; align-items: center; justify-content: center; }
+.row { display: flex; align-items: center; gap: 22px; }
+.ok { color: #1e8a4c; } .bad { color: #d6203a; }
+.note { position: absolute; border-radius: 18px; padding: 22px 30px; font-size: 32px; font-weight: 700; line-height: 1.25; }
+.note.red { background: #fde8eb; color: #d6203a; border: 3px solid rgba(214,32,58,.35); }
+.note.green { background: #e5f5ec; color: #1e8a4c; border: 3px solid rgba(30,138,76,.35); }
+.note.navy { background: #1b2a4a; color: #fff; }
+.hl { position: absolute; border: 6px solid #f5a524; border-radius: 12px; box-shadow: 0 0 0 9999px rgba(20,33,61,0); }
+.shot { position: absolute; border-radius: 16px; box-shadow: 0 18px 40px rgba(20,33,61,.18); background: #fff; overflow: hidden; }
+.shot img { display: block; width: 100%; height: 100%; }
+.qr { position: absolute; background: #fff; border-radius: 22px; padding: 18px; box-shadow: 0 18px 40px rgba(20,33,61,.15); }
+.qr img { display: block; width: 100%; height: 100%; }
+.x, .v { width: 58px; height: 58px; border-radius: 50%; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 34px; flex: none; }
+.x { background: #d6203a; } .v { background: #1e8a4c; }
+.phone { position: absolute; width: 400px; height: 760px; border-radius: 56px; background: #0f1830; padding: 18px; box-shadow: 0 30px 60px rgba(20,33,61,.3); }
+.screen { position: absolute; left: 18px; top: 18px; right: 18px; bottom: 18px; border-radius: 40px; background: #fff; overflow: hidden; }
+.gf { position: absolute; inset: 0; background: #ede7f6; }
+.gfc { position: absolute; left: 16px; right: 16px; background: #fff; border-radius: 12px; }
+.gfbar { height: 12px; background: #673ab7; border-radius: 12px 12px 0 0; }
+.gft { padding: 16px 18px; font-size: 25px; line-height: 1.25; color: #202124; }
+.arrow { position: absolute; height: 6px; background: #5b6577; border-radius: 3px; transform-origin: 0 50%; }
+.arrow:after { content: ""; position: absolute; right: -4px; top: -9px; border-left: 20px solid #5b6577; border-top: 12px solid transparent; border-bottom: 12px solid transparent; }
+.flow { position: absolute; height: 150px; border-radius: 20px; background: #1b2a4a; color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 18px; }
+.flow b { font-size: 32px; line-height: 1.15; } .flow span { font-size: 28px; opacity: .85; margin-top: 8px; line-height: 1.2; }
+.chk { display: flex; align-items: center; gap: 22px; font-size: 34px; font-weight: 700; }
+.box { width: 50px; height: 50px; border-radius: 10px; border: 4px solid #b7c0cf; display: flex; align-items: center; justify-content: center; flex: none; background: #fff; }
+.tick { color: #fff; font-weight: 900; font-size: 32px; }
+</style>
+  <div id="root" data-composition-id="s05" data-width="1920" data-height="1080">
+    <div id="h" class="a row" style="left:150px;top:120px"><div class="num" style="background:#1e8a4c">3</div><div class="h1">Select your team</div></div>
+    <div id="sh" class="shot" style="left:150px;top:280px;width:560px;height:377.09px"><img src="assets/deck/image-5-1.png" alt=""></div>
+    <div id="hlteam" class="hl" style="left:167.337px;top:449.04px;width:260.062px;height:177.709px"></div>
+    <div id="tm0" class="flow" style="left:820px;top:280px;width:330px;height:140px;background:#1b2a4a"><b style="font-size:44px;letter-spacing:2px">ALPHA</b></div>
+    <div id="tm1" class="flow" style="left:1180px;top:280px;width:330px;height:140px;background:#1b2a4a"><b style="font-size:44px;letter-spacing:2px">BRAVO</b></div>
+    <div id="tm2" class="flow" style="left:820px;top:450px;width:330px;height:140px;background:#1b2a4a"><b style="font-size:44px;letter-spacing:2px">CHARLIE</b></div>
+    <div id="tm3" class="flow" style="left:1180px;top:450px;width:330px;height:140px;background:#1b2a4a"><b style="font-size:44px;letter-spacing:2px">DELTA</b></div>
+    <div id="why" class="note navy" style="left:1560px;top:300px;width:260px">Why does it matter?</div>
+    <div id="tabs" class="a" style="left:820px;top:690px;display:flex;gap:10px;border-bottom:5px solid #c9d1de"><div id="tab0" style="padding:14px 28px;border-radius:14px 14px 0 0;background:#e9edf3;font-weight:700;font-size:30px;color:#5b6577">Alpha</div><div id="tab1" style="padding:14px 28px;border-radius:14px 14px 0 0;background:#e9edf3;font-weight:700;font-size:30px;color:#5b6577">Bravo</div><div id="tab2" style="padding:14px 28px;border-radius:14px 14px 0 0;background:#e9edf3;font-weight:700;font-size:30px;color:#5b6577">Charlie</div><div id="tab3" style="padding:14px 28px;border-radius:14px 14px 0 0;background:#e9edf3;font-weight:700;font-size:30px;color:#5b6577">Delta</div></div>
+    <div id="tabl" class="a" style="left:820px;top:790px;font-size:30px;font-weight:700;color:#14213d">Your team = your tab in the central Google Sheet</div>
+    <div id="you" class="a" style="left:150px;top:687.09px;font-size:34px">You belong to <b style="color:#1e8a4c">BRAVO</b></div>
+    <div id="rec" class="a" style="left:1000px;top:560px;background:#fff;border:3px solid #d6203a;padding:10px 22px;border-radius:12px;font-weight:700;font-size:30px;color:#d6203a">Your record</div>
+    <div id="wr" class="note red" style="left:820px;top:860px">✗ Incorrect attendance record</div>
+    <div id="fb" class="note green" style="left:820px;top:860px">Before Submit? Just correct your selection.</div>
+    <div id="h2" class="a h1" style="left:150px;top:150px">Already submitted with the wrong team?</div>
+    <div id="fw0" class="flow" style="left:150px;top:380px;width:360px;background:#1b2a4a"><b>Staff</b><span>you</span></div>
+    <div id="fwa0" class="arrow" style="left:522px;top:452px;width:46px"></div>
+    <div id="fw1" class="flow" style="left:590px;top:380px;width:360px;background:#1b2a4a"><b>Respective DSE</b><span>inform immediately</span></div>
+    <div id="fwa1" class="arrow" style="left:962px;top:452px;width:46px"></div>
+    <div id="fw2" class="flow" style="left:1030px;top:380px;width:360px;background:#1b2a4a"><b>Operations Security Manager</b><span>DSE reports the error</span></div>
+    <div id="fwa2" class="arrow" style="left:1402px;top:452px;width:46px"></div>
+    <div id="fw3" class="flow" style="left:1470px;top:380px;width:360px;background:#1e8a4c"><b>Attendance correction</b></div>
+    <div id="nr" class="note red" style="left:150px;top:640px;width:1620px">Do not submit another response unless an authorised supervisor tells you to</div>
+    <div id="dc" class="note green" style="left:150px;top:780px;width:1620px">Always double-check your team before pressing Submit</div>
+  </div>
+  <script>
+    gsap.set("#h",{opacity:0,x:-70});
+    gsap.set("#sh",{opacity:0,y:40});
+    gsap.set("#hlteam",{opacity:0,scale:0.7});
+    gsap.set("#tm0",{opacity:0,scale:0.7});
+    gsap.set("#tm1",{opacity:0,scale:0.7});
+    gsap.set("#tm2",{opacity:0,scale:0.7});
+    gsap.set("#tm3",{opacity:0,scale:0.7});
+    gsap.set("#why",{opacity:0,scale:0.7});
+    gsap.set("#tabs",{opacity:0,y:40});
+    gsap.set("#tabl",{opacity:0,y:40});
+    gsap.set("#you",{opacity:0,y:40});
+    gsap.set("#rec",{opacity:0,scale:0.7});
+    gsap.set("#wr",{opacity:0,y:40});
+    gsap.set("#fb",{opacity:0,y:40});
+    gsap.set("#h2",{opacity:0,x:-70});
+    gsap.set("#fw0",{opacity:0,y:40});
+    gsap.set("#fwa0",{scaleX:0});
+    gsap.set("#fw1",{opacity:0,y:40});
+    gsap.set("#fwa1",{scaleX:0});
+    gsap.set("#fw2",{opacity:0,y:40});
+    gsap.set("#fwa2",{scaleX:0});
+    gsap.set("#fw3",{opacity:0,y:40});
+    gsap.set("#nr",{opacity:0,y:40});
+    gsap.set("#dc",{opacity:0,y:40});
+    const tl = gsap.timeline({ paused: true });
+    tl.to("#h",{opacity:1,x:0,duration:0.5,ease:"power3.out"},0.3);
+    tl.to("#h",{opacity:0,duration:0.35,ease:"power2.in"},52.672);
+    tl.to("#sh",{opacity:1,y:0,duration:0.5,ease:"power3.out"},0.5);
+    tl.to("#sh",{opacity:0,duration:0.35,ease:"power2.in"},52.672);
+    tl.to("#hlteam",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},3.645);
+    tl.to("#hlteam",{opacity:0,duration:0.35,ease:"power2.in"},15.977);
+    tl.to("#tm0",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},7.004);
+    tl.to("#tm0",{opacity:0,duration:0.35,ease:"power2.in"},52.672);
+    tl.to("#tm1",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},8.241);
+    tl.to("#tm1",{opacity:0,duration:0.35,ease:"power2.in"},52.672);
+    tl.to("#tm2",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},9.527);
+    tl.to("#tm2",{opacity:0,duration:0.35,ease:"power2.in"},52.672);
+    tl.to("#tm3",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},10.812);
+    tl.to("#tm3",{opacity:0,duration:0.35,ease:"power2.in"},52.672);
+    tl.to("#why",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},16.327);
+    tl.to("#why",{opacity:0,duration:0.35,ease:"power2.in"},29.337);
+    tl.to("#tabs",{opacity:1,y:0,duration:0.5,ease:"power3.out"},19.656);
+    tl.to("#tabs",{opacity:0,duration:0.35,ease:"power2.in"},52.672);
+    tl.to("#tabl",{opacity:1,y:0,duration:0.5,ease:"power3.out"},20.556);
+    tl.to("#tabl",{opacity:0,duration:0.35,ease:"power2.in"},52.672);
+    tl.to("#you",{opacity:1,y:0,duration:0.5,ease:"power3.out"},29.987);
+    tl.to("#you",{opacity:0,duration:0.35,ease:"power2.in"},52.672);
+    tl.set("#tm0",{background:"#d6203a"},32.187);
+    tl.to("#tm0",{scale:1.06,duration:0.22,ease:"power2.out"},32.187);
+    tl.to("#tm0",{scale:1,duration:0.35,ease:"power2.inOut"},32.407);
+    tl.to("#rec",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},35.974);
+    tl.to("#rec",{opacity:0,duration:0.35,ease:"power2.in"},46.91);
+    tl.to("#rec",{x:-175,y:95,scale:0.8,duration:1.0,ease:"power2.inOut"},36.674);
+    tl.set("#tab0",{background:"#fde8eb",color:"#d6203a"},37.674);
+    tl.to("#wr",{opacity:1,y:0,duration:0.5,ease:"power3.out"},41.673);
+    tl.to("#wr",{opacity:0,duration:0.35,ease:"power2.in"},47.11);
+    tl.to("#fb",{opacity:1,y:0,duration:0.5,ease:"power3.out"},47.66);
+    tl.to("#fb",{opacity:0,duration:0.35,ease:"power2.in"},52.672);
+    tl.to("#h2",{opacity:1,x:0,duration:0.5,ease:"power3.out"},53.222);
+    tl.to("#fw0",{opacity:1,y:0,duration:0.5,ease:"power3.out"},54.222);
+    tl.to("#fwa0",{scaleX:1,duration:0.5,ease:"power3.out"},55.922);
+    tl.to("#fw1",{opacity:1,y:0,duration:0.5,ease:"power3.out"},56.022);
+    tl.to("#fwa1",{scaleX:1,duration:0.5,ease:"power3.out"},64.251);
+    tl.to("#fw2",{opacity:1,y:0,duration:0.5,ease:"power3.out"},64.351);
+    tl.to("#fwa2",{scaleX:1,duration:0.5,ease:"power3.out"},66.351);
+    tl.to("#fw3",{opacity:1,y:0,duration:0.5,ease:"power3.out"},66.451);
+    tl.to("#nr",{opacity:1,y:0,duration:0.5,ease:"power3.out"},71.968);
+    tl.to("#fw0",{scale:1.05,duration:0.22,ease:"power2.out"},82.279);
+    tl.to("#fw0",{scale:1,duration:0.35,ease:"power2.inOut"},82.499);
+    tl.to("#fw1",{scale:1.05,duration:0.22,ease:"power2.out"},83.179);
+    tl.to("#fw1",{scale:1,duration:0.35,ease:"power2.inOut"},83.399);
+    tl.to("#fw2",{scale:1.05,duration:0.22,ease:"power2.out"},84.079);
+    tl.to("#fw2",{scale:1,duration:0.35,ease:"power2.inOut"},84.299);
+    tl.to("#fw3",{scale:1.05,duration:0.22,ease:"power2.out"},84.979);
+    tl.to("#fw3",{scale:1,duration:0.35,ease:"power2.inOut"},85.199);
+    tl.to("#dc",{opacity:1,y:0,duration:0.5,ease:"power3.out"},94.865);
+    tl.set({}, {}, 99.934);
+    window.__timelines["s05"] = tl;
+  </script>
+</template>

@@ -1,0 +1,503 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; font-family: "Inter", sans-serif; }
+    .cap { position: absolute; left: 210px; width: 1500px; bottom: 74px; text-align: center; opacity: 0; }
+    .cap span { display: inline; background: rgba(20,33,61,.9); color: #fff; font-size: 36px; font-weight: 600; line-height: 1.5; padding: 6px 18px; border-radius: 10px;
+      -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+  </style>
+  <div id="root" data-composition-id="captions" data-width="1920" data-height="1080">
+    <div id="cg0" class="cap"><span>Good morning, everyone.</span></div>
+    <div id="cg1" class="cap"><span>Today, I&#x27;ll be conducting a short briefing on our AA/SEC/F/077 Attendance Record,</span></div>
+    <div id="cg2" class="cap"><span>specifically on how to properly Check in and Check out using the QR code system.</span></div>
+    <div id="cg3" class="cap"><span>The purpose of this system is to ensure that every personnel&#x27;s attendance is recorded</span></div>
+    <div id="cg4" class="cap"><span>accurately, from the beginning of their shift until the completion of their duty.</span></div>
+    <div id="cg5" class="cap"><span>The process is quite straightforward.</span></div>
+    <div id="cg6" class="cap"><span>All you need is your mobile phone, your official AirAsia Google account, and the correct QR code.</span></div>
+    <div id="cg7" class="cap"><span>Throughout this briefing, I&#x27;ll guide everyone step by step, explain the common mistakes</span></div>
+    <div id="cg8" class="cap"><span>to avoid, and what you should do if you accidentally submit incorrect information.</span></div>
+    <div id="cg9" class="cap"><span>By the end of this briefing, everyone should be able to complete their attendance</span></div>
+    <div id="cg10" class="cap"><span>independently and correctly.</span></div>
+    <div id="cg11" class="cap"><span>First, everyone needs to understand that we are using two separate QR codes for attendance.</span></div>
+    <div id="cg12" class="cap"><span>The first one is the green QR code, which is used for Check-in.</span></div>
+    <div id="cg13" class="cap"><span>This QR code must be scanned when you start your shift.</span></div>
+    <div id="cg14" class="cap"><span>The second one is the red QR code, which is used for Check-out.</span></div>
+    <div id="cg15" class="cap"><span>This QR code must be scanned when you finish your shift.</span></div>
+    <div id="cg16" class="cap"><span>It&#x27;s important not to confuse these two QR codes because each one serves a different purpose.</span></div>
+    <div id="cg17" class="cap"><span>Just remember:</span></div>
+    <div id="cg18" class="cap"><span>Green means Check-in, at the start of your shift.</span></div>
+    <div id="cg19" class="cap"><span>Red means Check-out, at the end of your shift.</span></div>
+    <div id="cg20" class="cap"><span>For both procedures, there are four basic steps:</span></div>
+    <div id="cg21" class="cap"><span>1. Scan the correct QR code.</span></div>
+    <div id="cg22" class="cap"><span>2. Complete the required information.</span></div>
+    <div id="cg23" class="cap"><span>3. Press Submit.</span></div>
+    <div id="cg24" class="cap"><span>4. Verify that your response has been recorded.</span></div>
+    <div id="cg25" class="cap"><span>Now, let&#x27;s go through the Check-in procedure first.</span></div>
+    <div id="cg26" class="cap"><span>When you report for duty, you must first scan the green Check-in QR code.</span></div>
+    <div id="cg27" class="cap"><span>Once you scan it, you will be directed to the Google Form.</span></div>
+    <div id="cg28" class="cap"><span>Before filling in anything, please make sure you are signed in using your official</span></div>
+    <div id="cg29" class="cap"><span>AirAsia Google account.</span></div>
+    <div id="cg30" class="cap"><span>Do not use your personal Gmail account.</span></div>
+    <div id="cg31" class="cap"><span>Next, check the title displayed at the top of the form.</span></div>
+    <div id="cg32" class="cap"><span>The title should be:</span></div>
+    <div id="cg33" class="cap"><span>AA/SEC/F/077 Attendance Record – Check-in</span></div>
+    <div id="cg34" class="cap"><span>If the form shows Check-out instead, it means you have scanned the wrong QR code.</span></div>
+    <div id="cg35" class="cap"><span>In that situation, simply go back and scan the correct green QR code.</span></div>
+    <div id="cg36" class="cap"><span>Always verify the form title before proceeding.</span></div>
+    <div id="cg37" class="cap"><span>Once you have opened the correct Check-in form, you will be required to complete several fields.</span></div>
+    <div id="cg38" class="cap"><span>Let&#x27;s go through them one by one.</span></div>
+    <div id="cg39" class="cap"><span>First: Email</span></div>
+    <div id="cg40" class="cap"><span>At the top of the Google Form, you will see a checkbox to record your email address.</span></div>
+    <div id="cg41" class="cap"><span>Make sure you tick the Record email checkbox.</span></div>
+    <div id="cg42" class="cap"><span>This allows your official company email address to be included with your attendance submission.</span></div>
+    <div id="cg43" class="cap"><span>Second: Designation</span></div>
+    <div id="cg44" class="cap"><span>You will be asked to select your designation.</span></div>
+    <div id="cg45" class="cap"><span>There are three options:</span></div>
+    <div id="cg46" class="cap"><span>Security Executive (DSE)</span></div>
+    <div id="cg47" class="cap"><span>Security Officer (SO)</span></div>
+    <div id="cg48" class="cap"><span>Assistant Security Officer (ASO)</span></div>
+    <div id="cg49" class="cap"><span>Please select your actual designation.</span></div>
+    <div id="cg50" class="cap"><span>For example, if you are an Assistant Security Officer, select ASO.</span></div>
+    <div id="cg51" class="cap"><span>Third: Shift Start Date</span></div>
+    <div id="cg52" class="cap"><span>You must select the date on which your shift begins.</span></div>
+    <div id="cg53" class="cap"><span>Please make sure you enter the correct date because it will be used to match your</span></div>
+    <div id="cg54" class="cap"><span>Check-in and Check-out records.</span></div>
+    <div id="cg55" class="cap"><span>Fourth: Name</span></div>
+    <div id="cg56" class="cap"><span>Enter your name accurately.</span></div>
+    <div id="cg57" class="cap"><span>Fifth: Staff ID</span></div>
+    <div id="cg58" class="cap"><span>Enter your correct Staff ID.</span></div>
+    <div id="cg59" class="cap"><span>This is especially important because your Staff ID is used to identify and match your</span></div>
+    <div id="cg60" class="cap"><span>attendance information.</span></div>
+    <div id="cg61" class="cap"><span>Please check your Staff ID carefully before submitting the form.</span></div>
+    <div id="cg62" class="cap"><span>Next, you need to select your assigned team.</span></div>
+    <div id="cg63" class="cap"><span>As everyone knows, we have four operational teams:</span></div>
+    <div id="cg64" class="cap"><span>Alpha Team</span></div>
+    <div id="cg65" class="cap"><span>Bravo Team</span></div>
+    <div id="cg66" class="cap"><span>Charlie Team</span></div>
+    <div id="cg67" class="cap"><span>Delta Team</span></div>
+    <div id="cg68" class="cap"><span>You must select the team you are assigned to for that particular shift.</span></div>
+    <div id="cg69" class="cap"><span>Now, why is the team selection important?</span></div>
+    <div id="cg70" class="cap"><span>Because once you submit your attendance, the system will automatically organise the</span></div>
+    <div id="cg71" class="cap"><span>record into the corresponding team&#x27;s tab in our central Google Sheet.</span></div>
+    <div id="cg72" class="cap"><span>For example:</span></div>
+    <div id="cg73" class="cap"><span>Let&#x27;s say you belong to Bravo Team, but you accidentally select Alpha Team when completing the form.</span></div>
+    <div id="cg74" class="cap"><span>When you submit your attendance, your record will appear under Alpha Team instead of Bravo Team.</span></div>
+    <div id="cg75" class="cap"><span>This will result in an incorrect attendance record.</span></div>
+    <div id="cg76" class="cap"><span>Now, what should you do if this happens?</span></div>
+    <div id="cg77" class="cap"><span>If you realise that you selected the wrong team before submitting, simply correct your selection.</span></div>
+    <div id="cg78" class="cap"><span>However, if you have already submitted the attendance form with the wrong team, you must</span></div>
+    <div id="cg79" class="cap"><span>immediately inform your respective Duty Security Executive (DSE).</span></div>
+    <div id="cg80" class="cap"><span>The respective DSE shall then report the error to the Operations Security Manager for</span></div>
+    <div id="cg81" class="cap"><span>the necessary correction to the attendance record.</span></div>
+    <div id="cg82" class="cap"><span>Staff must not submit another attendance response to correct the mistake unless</span></div>
+    <div id="cg83" class="cap"><span>instructed by an authorised supervisor.</span></div>
+    <div id="cg84" class="cap"><span>So, the reporting flow is simple:</span></div>
+    <div id="cg85" class="cap"><span>Staff → Respective DSE → Operations Security Manager → Attendance Correction</span></div>
+    <div id="cg86" class="cap"><span>Please remember that attendance corrections must be handled through the proper reporting channel.</span></div>
+    <div id="cg87" class="cap"><span>Therefore, always double-check your team selection before pressing Submit.</span></div>
+    <div id="cg88" class="cap"><span>Once you have completed the form, don&#x27;t immediately press Submit.</span></div>
+    <div id="cg89" class="cap"><span>Take a few seconds to review all the information you have entered.</span></div>
+    <div id="cg90" class="cap"><span>Make sure:</span></div>
+    <div id="cg91" class="cap"><span>Your company email is selected.</span></div>
+    <div id="cg92" class="cap"><span>Your designation is correct.</span></div>
+    <div id="cg93" class="cap"><span>Your shift start date is correct.</span></div>
+    <div id="cg94" class="cap"><span>Your assigned team is correct.</span></div>
+    <div id="cg95" class="cap"><span>Your name is accurate.</span></div>
+    <div id="cg96" class="cap"><span>Your Staff ID is correct.</span></div>
+    <div id="cg97" class="cap"><span>After verifying everything, press the Submit button.</span></div>
+    <div id="cg98" class="cap"><span>You only need to submit your Check-in form once per shift.</span></div>
+    <div id="cg99" class="cap"><span>Once you press Submit, wait for the confirmation screen.</span></div>
+    <div id="cg100" class="cap"><span>You should see the message:</span></div>
+    <div id="cg101" class="cap"><span>&quot;Your response has been recorded.&quot;</span></div>
+    <div id="cg102" class="cap"><span>This confirmation is important because it indicates that your submission has been</span></div>
+    <div id="cg103" class="cap"><span>successfully received.</span></div>
+    <div id="cg104" class="cap"><span>If you see this message, your Check-in is complete.</span></div>
+    <div id="cg105" class="cap"><span>However, if the confirmation screen does not appear, check whether there are any missing</span></div>
+    <div id="cg106" class="cap"><span>fields, form errors, or internet connection issues.</span></div>
+    <div id="cg107" class="cap"><span>If you are unsure whether your attendance has been successfully submitted, inform your</span></div>
+    <div id="cg108" class="cap"><span>supervisor instead of repeatedly submitting the form.</span></div>
+    <div id="cg109" class="cap"><span>Remember, multiple submissions may create duplicate attendance records.</span></div>
+    <div id="cg110" class="cap"><span>Now, let&#x27;s move to the Check-out procedure.</span></div>
+    <div id="cg111" class="cap"><span>Once you have completed your shift, you must record your Check-out.</span></div>
+    <div id="cg112" class="cap"><span>This time, you must scan the red Check-out QR code.</span></div>
+    <div id="cg113" class="cap"><span>Please do not scan the green Check-in QR code again.</span></div>
+    <div id="cg114" class="cap"><span>After scanning, the Google Form will open.</span></div>
+    <div id="cg115" class="cap"><span>Just like the Check-in procedure, make sure you are using your official AirAsia Google account.</span></div>
+    <div id="cg116" class="cap"><span>The form title should display:</span></div>
+    <div id="cg117" class="cap"><span>AA/SEC/F/077 Attendance Record – Check-out</span></div>
+    <div id="cg118" class="cap"><span>Always check the title before proceeding.</span></div>
+    <div id="cg119" class="cap"><span>The Check-out procedure is similar to Check-in, but the form is shorter and requires fewer details.</span></div>
+    <div id="cg120" class="cap"><span>Once the Check-out form opens, you will need to complete the required information.</span></div>
+    <div id="cg121" class="cap"><span>First, tick the Record email checkbox.</span></div>
+    <div id="cg122" class="cap"><span>Next, enter your Staff ID.</span></div>
+    <div id="cg123" class="cap"><span>Please ensure you use the same Staff ID that you entered during Check-in.</span></div>
+    <div id="cg124" class="cap"><span>After that, select your Shift Start Date.</span></div>
+    <div id="cg125" class="cap"><span>Now, I want everyone to pay attention to this part, especially those working overnight shifts.</span></div>
+    <div id="cg126" class="cap"><span>Let&#x27;s look at one example.</span></div>
+    <div id="cg127" class="cap"><span>Suppose your shift starts on 11 November at 8:00 PM and finishes on 12 November at 8:00 AM.</span></div>
+    <div id="cg128" class="cap"><span>When you Check out on 12 November, what date should you select?</span></div>
+    <div id="cg129" class="cap"><span>The correct answer is 11 November, because that is the date your shift originally started.</span></div>
+    <div id="cg130" class="cap"><span>You should not select 12 November simply because you are checking out on that date.</span></div>
+    <div id="cg131" class="cap"><span>The system uses the shift start date to match your attendance correctly.</span></div>
+    <div id="cg132" class="cap"><span>Next, select the same team used during your correct Check-in.</span></div>
+    <div id="cg133" class="cap"><span>For example, if you checked in under Bravo Team, your Check-out should also be under Bravo Team.</span></div>
+    <div id="cg134" class="cap"><span>If you discover that your Check-in contains an incorrect team selection, inform your</span></div>
+    <div id="cg135" class="cap"><span>respective DSE so the error can be reported for correction.</span></div>
+    <div id="cg136" class="cap"><span>You will notice that the Check-out form does not ask for your name or designation.</span></div>
+    <div id="cg137" class="cap"><span>This is normal because those details were already provided during Check-in.</span></div>
+    <div id="cg138" class="cap"><span>Once all required information is completed, press Submit once.</span></div>
+    <div id="cg139" class="cap"><span>Wait for the confirmation message:</span></div>
+    <div id="cg140" class="cap"><span>&quot;Your response has been recorded.&quot;</span></div>
+    <div id="cg141" class="cap"><span>Once this appears, your Check-out submission is complete.</span></div>
+    <div id="cg142" class="cap"><span>Now, there is one important feature I want everyone to understand.</span></div>
+    <div id="cg143" class="cap"><span>You do not need to manually enter your Check-in or Check-out time.</span></div>
+    <div id="cg144" class="cap"><span>The system automatically records the timestamp when you submit the Google Form.</span></div>
+    <div id="cg145" class="cap"><span>For example, let&#x27;s say your shift starts at 8:00 AM.</span></div>
+    <div id="cg146" class="cap"><span>If you submit your Check-in form at 8:05 AM, the system will record the submission timestamp as 8:05 AM.</span></div>
+    <div id="cg147" class="cap"><span>Similarly, if you complete your shift and submit your Check-out at 8:10 PM, the system</span></div>
+    <div id="cg148" class="cap"><span>will record the submission timestamp as 8:10 PM.</span></div>
+    <div id="cg149" class="cap"><span>You don&#x27;t need to type any time manually.</span></div>
+    <div id="cg150" class="cap"><span>In fact, the forms do not provide a field for you to enter your own time.</span></div>
+    <div id="cg151" class="cap"><span>The timestamp is automatically captured and reflected in the attendance Google Sheet.</span></div>
+    <div id="cg152" class="cap"><span>Therefore, please make sure you submit your Check-in when reporting for duty and your</span></div>
+    <div id="cg153" class="cap"><span>Check-out when completing your shift.</span></div>
+    <div id="cg154" class="cap"><span>Remember:</span></div>
+    <div id="cg155" class="cap"><span>No manual time entry is required.</span></div>
+    <div id="cg156" class="cap"><span>Now, some of you might be wondering what happens after you submit the form.</span></div>
+    <div id="cg157" class="cap"><span>Let me explain.</span></div>
+    <div id="cg158" class="cap"><span>Once you press Submit, your attendance response is automatically recorded in our central Google Sheet.</span></div>
+    <div id="cg159" class="cap"><span>The system organises the information according to the team you selected.</span></div>
+    <div id="cg160" class="cap"><span>For example:</span></div>
+    <div id="cg161" class="cap"><span>If you select Alpha Team, your attendance will appear in the Alpha tab.</span></div>
+    <div id="cg162" class="cap"><span>If you select Bravo Team, your attendance will appear in the Bravo tab.</span></div>
+    <div id="cg163" class="cap"><span>The same applies to Charlie and Delta.</span></div>
+    <div id="cg164" class="cap"><span>The Google Sheet contains your attendance information, including the recorded Check-in</span></div>
+    <div id="cg165" class="cap"><span>and Check-out timestamps.</span></div>
+    <div id="cg166" class="cap"><span>These records can be monitored and reviewed by authorised supervisors.</span></div>
+    <div id="cg167" class="cap"><span>As staff, you do not need to access or manually update the Google Sheet.</span></div>
+    <div id="cg168" class="cap"><span>Your responsibility is to use the correct QR codes, complete the forms accurately, and</span></div>
+    <div id="cg169" class="cap"><span>verify that each submission is successful.</span></div>
+    <div id="cg170" class="cap"><span>Before we finish, I want to highlight a few common mistakes that everyone should avoid.</span></div>
+    <div id="cg171" class="cap"><span>Mistake 1: Scanning the wrong QR code</span></div>
+    <div id="cg172" class="cap"><span>Some staff may accidentally scan the Check-out QR code when starting duty.</span></div>
+    <div id="cg173" class="cap"><span>Always remember:</span></div>
+    <div id="cg174" class="cap"><span>Green for Check-in and red for Check-out.</span></div>
+    <div id="cg175" class="cap"><span>Mistake 2: Selecting the wrong team</span></div>
+    <div id="cg176" class="cap"><span>Always verify that you have selected your assigned team.</span></div>
+    <div id="cg177" class="cap"><span>If you accidentally submit attendance under the wrong team, immediately inform your respective DSE.</span></div>
+    <div id="cg178" class="cap"><span>The DSE shall report the issue to the Operations Security Manager for correction.</span></div>
+    <div id="cg179" class="cap"><span>Do not submit another form to try to fix the error yourself unless authorised.</span></div>
+    <div id="cg180" class="cap"><span>Mistake 3: Entering the wrong Shift Start Date</span></div>
+    <div id="cg181" class="cap"><span>This is particularly important for overnight shifts.</span></div>
+    <div id="cg182" class="cap"><span>Remember that the shift start date must remain the same during both Check-in and Check-out.</span></div>
+    <div id="cg183" class="cap"><span>Mistake 4: Using a personal Gmail account</span></div>
+    <div id="cg184" class="cap"><span>Always use your official AirAsia Google account when completing both forms.</span></div>
+    <div id="cg185" class="cap"><span>Mistake 5: Submitting multiple responses</span></div>
+    <div id="cg186" class="cap"><span>You only need one successful Check-in and one successful Check-out for each shift.</span></div>
+    <div id="cg187" class="cap"><span>If you have received the confirmation message, do not submit another response.</span></div>
+    <div id="cg188" class="cap"><span>Mistake 6: Forgetting to Check out</span></div>
+    <div id="cg189" class="cap"><span>Some personnel may complete their Check-in but forget to submit their Check-out.</span></div>
+    <div id="cg190" class="cap"><span>This will result in an incomplete attendance record.</span></div>
+    <div id="cg191" class="cap"><span>Therefore, before leaving duty, always ensure that your Check-out has been properly submitted.</span></div>
+    <div id="cg192" class="cap"><span>If you encounter any issues or realise that you have submitted incorrect information,</span></div>
+    <div id="cg193" class="cap"><span>inform your respective DSE so the matter can be reported through the proper channel.</span></div>
+    <div id="cg194" class="cap"><span>Alright, everyone. Before we end today&#x27;s briefing, let&#x27;s quickly recap the whole procedure.</span></div>
+    <div id="cg195" class="cap"><span>At the beginning of your shift:</span></div>
+    <div id="cg196" class="cap"><span>Scan the green Check-in QR code.</span></div>
+    <div id="cg197" class="cap"><span>Sign in using your official AirAsia Google account.</span></div>
+    <div id="cg198" class="cap"><span>Complete all the required information, including your designation, shift start date,</span></div>
+    <div id="cg199" class="cap"><span>team, name, and Staff ID.</span></div>
+    <div id="cg200" class="cap"><span>Review your details, press Submit once, and verify that your response has been recorded.</span></div>
+    <div id="cg201" class="cap"><span>At the end of your shift:</span></div>
+    <div id="cg202" class="cap"><span>Scan the red Check-out QR code.</span></div>
+    <div id="cg203" class="cap"><span>Use the same official AirAsia Google account.</span></div>
+    <div id="cg204" class="cap"><span>Enter the same Staff ID and shift start date, and select your correct team.</span></div>
+    <div id="cg205" class="cap"><span>Press Submit once and wait for the confirmation message.</span></div>
+    <div id="cg206" class="cap"><span>Now, there are three important rules I want everyone to remember:</span></div>
+    <div id="cg207" class="cap"><span>Rule 1: Always use your official AirAsia Google account.</span></div>
+    <div id="cg208" class="cap"><span>Rule 2: Never enter or change the attendance time manually.</span></div>
+    <div id="cg209" class="cap"><span>The system records it automatically.</span></div>
+    <div id="cg210" class="cap"><span>Rule 3: Submit each form only once per shift and always verify the confirmation message.</span></div>
+    <div id="cg211" class="cap"><span>And one additional reminder:</span></div>
+    <div id="cg212" class="cap"><span>If you accidentally submit incorrect attendance information, immediately report it to your respective DSE.</span></div>
+    <div id="cg213" class="cap"><span>The DSE shall escalate the matter to the Operations Security Manager for the necessary correction.</span></div>
+    <div id="cg214" class="cap"><span>The purpose of this procedure is to ensure that our attendance records remain accurate,</span></div>
+    <div id="cg215" class="cap"><span>properly organised, and available for authorised supervisory review.</span></div>
+    <div id="cg216" class="cap"><span>Everyone is responsible for ensuring that their attendance is recorded correctly.</span></div>
+    <div id="cg217" class="cap"><span>That concludes the briefing on the AA/SEC/F/077 Attendance Record.</span></div>
+    <div id="cg218" class="cap"><span>Thank you, everyone, for your attention and cooperation.</span></div>
+    <div id="cg219" class="cap"><span>Before we finish, does anyone have any questions regarding the Check-in or Check-out procedure?</span></div>
+    <div id="cg220" class="cap"><span>Staff understanding check.</span></div>
+    <div id="cg221" class="cap"><span>Which QR code should you scan at the beginning of your shift?</span></div>
+    <div id="cg222" class="cap"><span>The green Check-in QR code.</span></div>
+    <div id="cg223" class="cap"><span>Which QR code should you scan after completing your shift?</span></div>
+    <div id="cg224" class="cap"><span>The red Check-out QR code.</span></div>
+    <div id="cg225" class="cap"><span>Can you use your personal Gmail account?</span></div>
+    <div id="cg226" class="cap"><span>No. Only the official AirAsia Google account should be used.</span></div>
+    <div id="cg227" class="cap"><span>If your shift starts on 11 November at 8:00 PM and ends on 12 November at 8:00 AM, which</span></div>
+    <div id="cg228" class="cap"><span>date should you select during Check-out?</span></div>
+    <div id="cg229" class="cap"><span>11 November, because that is the shift start date.</span></div>
+    <div id="cg230" class="cap"><span>If you accidentally select Alpha Team instead of Bravo Team and have already submitted</span></div>
+    <div id="cg231" class="cap"><span>the form, what should you do?</span></div>
+    <div id="cg232" class="cap"><span>Immediately inform the respective DSE. The DSE shall report the error to the Operations</span></div>
+    <div id="cg233" class="cap"><span>Security Manager for the necessary attendance correction.</span></div>
+    <div id="cg234" class="cap"><span>Do you need to manually enter your Check-in and Check-out times?</span></div>
+    <div id="cg235" class="cap"><span>No. The system automatically records the time of submission.</span></div>
+    <div id="cg236" class="cap"><span>How do you confirm your attendance was successfully submitted?</span></div>
+    <div id="cg237" class="cap"><span>The Google Form displays &quot;Your response has been recorded.&quot;</span></div>
+    <div id="cg238" class="cap"><span>Can you submit the same Check-in form multiple times?</span></div>
+    <div id="cg239" class="cap"><span>No. Only one successful Check-in submission is required per shift.</span></div>
+    <div id="cg240" class="cap"><span>Who can review the attendance records in the central Google Sheet?</span></div>
+    <div id="cg241" class="cap"><span>Authorised supervisors.</span></div>
+    <div id="cg242" class="cap"><span>What must you do before completing your duty?</span></div>
+    <div id="cg243" class="cap"><span>Scan the red Check-out QR code, complete the form, submit it, and verify the confirmation.</span></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.set("#cg0",{opacity:1},1.0);tl.set("#cg0",{opacity:0},2.405);
+    tl.set("#cg1",{opacity:1},2.845);tl.set("#cg1",{opacity:0},9.15);
+    tl.set("#cg2",{opacity:1},9.17);tl.set("#cg2",{opacity:0},15.396);
+    tl.set("#cg3",{opacity:1},15.836);tl.set("#cg3",{opacity:0},20.666);
+    tl.set("#cg4",{opacity:1},20.686);tl.set("#cg4",{opacity:0},25.287);
+    tl.set("#cg5",{opacity:1},25.727);tl.set("#cg5",{opacity:0},27.563);
+    tl.set("#cg6",{opacity:1},28.003);tl.set("#cg6",{opacity:0},33.834);
+    tl.set("#cg7",{opacity:1},34.274);tl.set("#cg7",{opacity:0},39.28);
+    tl.set("#cg8",{opacity:1},39.3);tl.set("#cg8",{opacity:0},44.017);
+    tl.set("#cg9",{opacity:1},44.457);tl.set("#cg9",{opacity:0},48.757);
+    tl.set("#cg10",{opacity:1},48.777);tl.set("#cg10",{opacity:0},50.25);
+    tl.set("#cg11",{opacity:1},52.47);tl.set("#cg11",{opacity:0},57.995);
+    tl.set("#cg12",{opacity:1},58.435);tl.set("#cg12",{opacity:0},62.057);
+    tl.set("#cg13",{opacity:1},62.497);tl.set("#cg13",{opacity:0},65.499);
+    tl.set("#cg14",{opacity:1},65.939);tl.set("#cg14",{opacity:0},69.574);
+    tl.set("#cg15",{opacity:1},70.014);tl.set("#cg15",{opacity:0},73.069);
+    tl.set("#cg16",{opacity:1},73.509);tl.set("#cg16",{opacity:0},78.942);
+    tl.set("#cg17",{opacity:1},79.382);tl.set("#cg17",{opacity:0},80.28);
+    tl.set("#cg18",{opacity:1},80.6);tl.set("#cg18",{opacity:0},83.061);
+    tl.set("#cg19",{opacity:1},83.501);tl.set("#cg19",{opacity:0},85.838);
+    tl.set("#cg20",{opacity:1},86.278);tl.set("#cg20",{opacity:0},89.066);
+    tl.set("#cg21",{opacity:1},89.386);tl.set("#cg21",{opacity:0},91.417);
+    tl.set("#cg22",{opacity:1},91.857);tl.set("#cg22",{opacity:0},94.114);
+    tl.set("#cg23",{opacity:1},94.554);tl.set("#cg23",{opacity:0},95.741);
+    tl.set("#cg24",{opacity:1},96.181);tl.set("#cg24",{opacity:0},99.153);
+    tl.set("#cg25",{opacity:1},99.923);tl.set("#cg25",{opacity:0},102.522);
+    tl.set("#cg26",{opacity:1},104.742);tl.set("#cg26",{opacity:0},108.887);
+    tl.set("#cg27",{opacity:1},109.327);tl.set("#cg27",{opacity:0},112.377);
+    tl.set("#cg28",{opacity:1},113.147);tl.set("#cg28",{opacity:0},117.563);
+    tl.set("#cg29",{opacity:1},117.583);tl.set("#cg29",{opacity:0},118.807);
+    tl.set("#cg30",{opacity:1},119.247);tl.set("#cg30",{opacity:0},121.523);
+    tl.set("#cg31",{opacity:1},121.963);tl.set("#cg31",{opacity:0},124.878);
+    tl.set("#cg32",{opacity:1},125.318);tl.set("#cg32",{opacity:0},126.447);
+    tl.set("#cg33",{opacity:1},126.767);tl.set("#cg33",{opacity:0},130.983);
+    tl.set("#cg34",{opacity:1},131.423);tl.set("#cg34",{opacity:0},135.952);
+    tl.set("#cg35",{opacity:1},136.392);tl.set("#cg35",{opacity:0},140.74);
+    tl.set("#cg36",{opacity:1},141.18);tl.set("#cg36",{opacity:0},144.038);
+    tl.set("#cg37",{opacity:1},146.258);tl.set("#cg37",{opacity:0},151.114);
+    tl.set("#cg38",{opacity:1},151.554);tl.set("#cg38",{opacity:0},153.195);
+    tl.set("#cg39",{opacity:1},153.965);tl.set("#cg39",{opacity:0},155.032);
+    tl.set("#cg40",{opacity:1},155.472);tl.set("#cg40",{opacity:0},159.915);
+    tl.set("#cg41",{opacity:1},160.355);tl.set("#cg41",{opacity:0},162.647);
+    tl.set("#cg42",{opacity:1},163.087);tl.set("#cg42",{opacity:0},168.404);
+    tl.set("#cg43",{opacity:1},169.174);tl.set("#cg43",{opacity:0},170.547);
+    tl.set("#cg44",{opacity:1},170.987);tl.set("#cg44",{opacity:0},173.184);
+    tl.set("#cg45",{opacity:1},173.624);tl.set("#cg45",{opacity:0},174.844);
+    tl.set("#cg46",{opacity:1},175.164);tl.set("#cg46",{opacity:0},177.25);
+    tl.set("#cg47",{opacity:1},177.69);tl.set("#cg47",{opacity:0},179.33);
+    tl.set("#cg48",{opacity:1},179.77);tl.set("#cg48",{opacity:0},181.996);
+    tl.set("#cg49",{opacity:1},182.436);tl.set("#cg49",{opacity:0},184.508);
+    tl.set("#cg50",{opacity:1},185.278);tl.set("#cg50",{opacity:0},189.461);
+    tl.set("#cg51",{opacity:1},190.231);tl.set("#cg51",{opacity:0},191.639);
+    tl.set("#cg52",{opacity:1},192.079);tl.set("#cg52",{opacity:0},194.617);
+    tl.set("#cg53",{opacity:1},195.057);tl.set("#cg53",{opacity:0},198.87);
+    tl.set("#cg54",{opacity:1},198.89);tl.set("#cg54",{opacity:0},200.337);
+    tl.set("#cg55",{opacity:1},201.107);tl.set("#cg55",{opacity:0},202.046);
+    tl.set("#cg56",{opacity:1},202.486);tl.set("#cg56",{opacity:0},203.833);
+    tl.set("#cg57",{opacity:1},204.603);tl.set("#cg57",{opacity:0},205.944);
+    tl.set("#cg58",{opacity:1},206.384);tl.set("#cg58",{opacity:0},208.064);
+    tl.set("#cg59",{opacity:1},208.504);tl.set("#cg59",{opacity:0},213.756);
+    tl.set("#cg60",{opacity:1},213.776);tl.set("#cg60",{opacity:0},215.182);
+    tl.set("#cg61",{opacity:1},215.622);tl.set("#cg61",{opacity:0},219.244);
+    tl.set("#cg62",{opacity:1},221.464);tl.set("#cg62",{opacity:0},223.669);
+    tl.set("#cg63",{opacity:1},224.109);tl.set("#cg63",{opacity:0},227.148);
+    tl.set("#cg64",{opacity:1},227.468);tl.set("#cg64",{opacity:0},228.265);
+    tl.set("#cg65",{opacity:1},228.705);tl.set("#cg65",{opacity:0},229.551);
+    tl.set("#cg66",{opacity:1},229.991);tl.set("#cg66",{opacity:0},230.836);
+    tl.set("#cg67",{opacity:1},231.276);tl.set("#cg67",{opacity:0},232.123);
+    tl.set("#cg68",{opacity:1},232.563);tl.set("#cg68",{opacity:0},236.021);
+    tl.set("#cg69",{opacity:1},236.791);tl.set("#cg69",{opacity:0},239.18);
+    tl.set("#cg70",{opacity:1},239.62);tl.set("#cg70",{opacity:0},244.317);
+    tl.set("#cg71",{opacity:1},244.337);tl.set("#cg71",{opacity:0},248.238);
+    tl.set("#cg72",{opacity:1},249.008);tl.set("#cg72",{opacity:0},249.831);
+    tl.set("#cg73",{opacity:1},250.151);tl.set("#cg73",{opacity:0},255.998);
+    tl.set("#cg74",{opacity:1},256.438);tl.set("#cg74",{opacity:0},261.497);
+    tl.set("#cg75",{opacity:1},261.937);tl.set("#cg75",{opacity:0},264.648);
+    tl.set("#cg76",{opacity:1},265.418);tl.set("#cg76",{opacity:0},267.284);
+    tl.set("#cg77",{opacity:1},267.724);tl.set("#cg77",{opacity:0},272.716);
+    tl.set("#cg78",{opacity:1},273.486);tl.set("#cg78",{opacity:0},278.878);
+    tl.set("#cg79",{opacity:1},278.898);tl.set("#cg79",{opacity:0},282.875);
+    tl.set("#cg80",{opacity:1},283.315);tl.set("#cg80",{opacity:0},288.582);
+    tl.set("#cg81",{opacity:1},288.602);tl.set("#cg81",{opacity:0},291.692);
+    tl.set("#cg82",{opacity:1},292.132);tl.set("#cg82",{opacity:0},297.321);
+    tl.set("#cg83",{opacity:1},297.341);tl.set("#cg83",{opacity:0},299.893);
+    tl.set("#cg84",{opacity:1},300.663);tl.set("#cg84",{opacity:0},302.423);
+    tl.set("#cg85",{opacity:1},302.743);tl.set("#cg85",{opacity:0},308.7);
+    tl.set("#cg86",{opacity:1},309.14);tl.set("#cg86",{opacity:0},314.259);
+    tl.set("#cg87",{opacity:1},315.029);tl.set("#cg87",{opacity:0},319.179);
+    tl.set("#cg88",{opacity:1},321.398);tl.set("#cg88",{opacity:0},324.709);
+    tl.set("#cg89",{opacity:1},325.149);tl.set("#cg89",{opacity:0},328.488);
+    tl.set("#cg90",{opacity:1},328.928);tl.set("#cg90",{opacity:0},329.577);
+    tl.set("#cg91",{opacity:1},329.897);tl.set("#cg91",{opacity:0},331.574);
+    tl.set("#cg92",{opacity:1},332.014);tl.set("#cg92",{opacity:0},333.592);
+    tl.set("#cg93",{opacity:1},334.032);tl.set("#cg93",{opacity:0},335.758);
+    tl.set("#cg94",{opacity:1},336.198);tl.set("#cg94",{opacity:0},337.671);
+    tl.set("#cg95",{opacity:1},338.111);tl.set("#cg95",{opacity:0},339.383);
+    tl.set("#cg96",{opacity:1},339.823);tl.set("#cg96",{opacity:0},341.287);
+    tl.set("#cg97",{opacity:1},341.727);tl.set("#cg97",{opacity:0},344.626);
+    tl.set("#cg98",{opacity:1},345.066);tl.set("#cg98",{opacity:0},347.945);
+    tl.set("#cg99",{opacity:1},348.385);tl.set("#cg99",{opacity:0},351.367);
+    tl.set("#cg100",{opacity:1},351.807);tl.set("#cg100",{opacity:0},353.025);
+    tl.set("#cg101",{opacity:1},353.345);tl.set("#cg101",{opacity:0},355.06);
+    tl.set("#cg102",{opacity:1},355.5);tl.set("#cg102",{opacity:0},360.125);
+    tl.set("#cg103",{opacity:1},360.145);tl.set("#cg103",{opacity:0},361.387);
+    tl.set("#cg104",{opacity:1},361.827);tl.set("#cg104",{opacity:0},364.479);
+    tl.set("#cg105",{opacity:1},365.249);tl.set("#cg105",{opacity:0},370.2);
+    tl.set("#cg106",{opacity:1},370.22);tl.set("#cg106",{opacity:0},373.081);
+    tl.set("#cg107",{opacity:1},373.521);tl.set("#cg107",{opacity:0},378.206);
+    tl.set("#cg108",{opacity:1},378.226);tl.set("#cg108",{opacity:0},381.105);
+    tl.set("#cg109",{opacity:1},381.545);tl.set("#cg109",{opacity:0},385.535);
+    tl.set("#cg110",{opacity:1},387.755);tl.set("#cg110",{opacity:0},390.056);
+    tl.set("#cg111",{opacity:1},390.496);tl.set("#cg111",{opacity:0},393.664);
+    tl.set("#cg112",{opacity:1},394.104);tl.set("#cg112",{opacity:0},397.064);
+    tl.set("#cg113",{opacity:1},397.504);tl.set("#cg113",{opacity:0},400.394);
+    tl.set("#cg114",{opacity:1},400.834);tl.set("#cg114",{opacity:0},403.228);
+    tl.set("#cg115",{opacity:1},403.668);tl.set("#cg115",{opacity:0},408.596);
+    tl.set("#cg116",{opacity:1},409.036);tl.set("#cg116",{opacity:0},410.599);
+    tl.set("#cg117",{opacity:1},410.919);tl.set("#cg117",{opacity:0},415.207);
+    tl.set("#cg118",{opacity:1},415.647);tl.set("#cg118",{opacity:0},417.729);
+    tl.set("#cg119",{opacity:1},418.169);tl.set("#cg119",{opacity:0},423.93);
+    tl.set("#cg120",{opacity:1},426.15);tl.set("#cg120",{opacity:0},430.544);
+    tl.set("#cg121",{opacity:1},430.984);tl.set("#cg121",{opacity:0},433.267);
+    tl.set("#cg122",{opacity:1},433.707);tl.set("#cg122",{opacity:0},435.346);
+    tl.set("#cg123",{opacity:1},435.786);tl.set("#cg123",{opacity:0},440.071);
+    tl.set("#cg124",{opacity:1},440.511);tl.set("#cg124",{opacity:0},442.663);
+    tl.set("#cg125",{opacity:1},443.433);tl.set("#cg125",{opacity:0},448.932);
+    tl.set("#cg126",{opacity:1},449.372);tl.set("#cg126",{opacity:0},450.694);
+    tl.set("#cg127",{opacity:1},451.134);tl.set("#cg127",{opacity:0},458.069);
+    tl.set("#cg128",{opacity:1},458.509);tl.set("#cg128",{opacity:0},461.917);
+    tl.set("#cg129",{opacity:1},462.357);tl.set("#cg129",{opacity:0},468.018);
+    tl.set("#cg130",{opacity:1},468.458);tl.set("#cg130",{opacity:0},472.964);
+    tl.set("#cg131",{opacity:1},473.404);tl.set("#cg131",{opacity:0},477.154);
+    tl.set("#cg132",{opacity:1},477.594);tl.set("#cg132",{opacity:0},480.922);
+    tl.set("#cg133",{opacity:1},481.692);tl.set("#cg133",{opacity:0},487.217);
+    tl.set("#cg134",{opacity:1},487.657);tl.set("#cg134",{opacity:0},492.829);
+    tl.set("#cg135",{opacity:1},492.849);tl.set("#cg135",{opacity:0},496.476);
+    tl.set("#cg136",{opacity:1},496.916);tl.set("#cg136",{opacity:0},501.365);
+    tl.set("#cg137",{opacity:1},501.805);tl.set("#cg137",{opacity:0},506.028);
+    tl.set("#cg138",{opacity:1},506.468);tl.set("#cg138",{opacity:0},510.142);
+    tl.set("#cg139",{opacity:1},510.582);tl.set("#cg139",{opacity:0},512.274);
+    tl.set("#cg140",{opacity:1},512.594);tl.set("#cg140",{opacity:0},514.309);
+    tl.set("#cg141",{opacity:1},514.749);tl.set("#cg141",{opacity:0},517.763);
+    tl.set("#cg142",{opacity:1},519.983);tl.set("#cg142",{opacity:0},523.934);
+    tl.set("#cg143",{opacity:1},524.374);tl.set("#cg143",{opacity:0},527.76);
+    tl.set("#cg144",{opacity:1},528.2);tl.set("#cg144",{opacity:0},532.624);
+    tl.set("#cg145",{opacity:1},533.394);tl.set("#cg145",{opacity:0},536.13);
+    tl.set("#cg146",{opacity:1},536.57);tl.set("#cg146",{opacity:0},543.87);
+    tl.set("#cg147",{opacity:1},544.31);tl.set("#cg147",{opacity:0},550.137);
+    tl.set("#cg148",{opacity:1},550.157);tl.set("#cg148",{opacity:0},553.4);
+    tl.set("#cg149",{opacity:1},553.84);tl.set("#cg149",{opacity:0},555.694);
+    tl.set("#cg150",{opacity:1},556.134);tl.set("#cg150",{opacity:0},559.933);
+    tl.set("#cg151",{opacity:1},560.373);tl.set("#cg151",{opacity:0},565.552);
+    tl.set("#cg152",{opacity:1},566.322);tl.set("#cg152",{opacity:0},570.771);
+    tl.set("#cg153",{opacity:1},570.791);tl.set("#cg153",{opacity:0},572.717);
+    tl.set("#cg154",{opacity:1},573.157);tl.set("#cg154",{opacity:0},573.786);
+    tl.set("#cg155",{opacity:1},574.106);tl.set("#cg155",{opacity:0},576.215);
+    tl.set("#cg156",{opacity:1},578.435);tl.set("#cg156",{opacity:0},582.195);
+    tl.set("#cg157",{opacity:1},582.635);tl.set("#cg157",{opacity:0},583.59);
+    tl.set("#cg158",{opacity:1},584.03);tl.set("#cg158",{opacity:0},589.878);
+    tl.set("#cg159",{opacity:1},590.318);tl.set("#cg159",{opacity:0},594.471);
+    tl.set("#cg160",{opacity:1},595.241);tl.set("#cg160",{opacity:0},596.064);
+    tl.set("#cg161",{opacity:1},596.384);tl.set("#cg161",{opacity:0},600.225);
+    tl.set("#cg162",{opacity:1},600.665);tl.set("#cg162",{opacity:0},604.78);
+    tl.set("#cg163",{opacity:1},605.22);tl.set("#cg163",{opacity:0},607.149);
+    tl.set("#cg164",{opacity:1},607.589);tl.set("#cg164",{opacity:0},612.438);
+    tl.set("#cg165",{opacity:1},612.458);tl.set("#cg165",{opacity:0},613.854);
+    tl.set("#cg166",{opacity:1},614.294);tl.set("#cg166",{opacity:0},618.264);
+    tl.set("#cg167",{opacity:1},618.704);tl.set("#cg167",{opacity:0},622.685);
+    tl.set("#cg168",{opacity:1},623.125);tl.set("#cg168",{opacity:0},628.425);
+    tl.set("#cg169",{opacity:1},628.445);tl.set("#cg169",{opacity:0},631.023);
+    tl.set("#cg170",{opacity:1},633.243);tl.set("#cg170",{opacity:0},637.939);
+    tl.set("#cg171",{opacity:1},638.709);tl.set("#cg171",{opacity:0},641.436);
+    tl.set("#cg172",{opacity:1},641.876);tl.set("#cg172",{opacity:0},646.216);
+    tl.set("#cg173",{opacity:1},646.656);tl.set("#cg173",{opacity:0},647.662);
+    tl.set("#cg174",{opacity:1},647.982);tl.set("#cg174",{opacity:0},650.265);
+    tl.set("#cg175",{opacity:1},651.035);tl.set("#cg175",{opacity:0},653.341);
+    tl.set("#cg176",{opacity:1},653.781);tl.set("#cg176",{opacity:0},656.807);
+    tl.set("#cg177",{opacity:1},657.247);tl.set("#cg177",{opacity:0},663.318);
+    tl.set("#cg178",{opacity:1},663.758);tl.set("#cg178",{opacity:0},669.034);
+    tl.set("#cg179",{opacity:1},669.474);tl.set("#cg179",{opacity:0},674.2);
+    tl.set("#cg180",{opacity:1},674.97);tl.set("#cg180",{opacity:0},677.834);
+    tl.set("#cg181",{opacity:1},678.274);tl.set("#cg181",{opacity:0},681.004);
+    tl.set("#cg182",{opacity:1},681.444);tl.set("#cg182",{opacity:0},686.318);
+    tl.set("#cg183",{opacity:1},687.088);tl.set("#cg183",{opacity:0},689.981);
+    tl.set("#cg184",{opacity:1},690.421);tl.set("#cg184",{opacity:0},694.726);
+    tl.set("#cg185",{opacity:1},695.496);tl.set("#cg185",{opacity:0},698.331);
+    tl.set("#cg186",{opacity:1},698.771);tl.set("#cg186",{opacity:0},703.349);
+    tl.set("#cg187",{opacity:1},703.789);tl.set("#cg187",{opacity:0},708.071);
+    tl.set("#cg188",{opacity:1},708.841);tl.set("#cg188",{opacity:0},711.079);
+    tl.set("#cg189",{opacity:1},711.519);tl.set("#cg189",{opacity:0},715.59);
+    tl.set("#cg190",{opacity:1},716.03);tl.set("#cg190",{opacity:0},718.79);
+    tl.set("#cg191",{opacity:1},719.56);tl.set("#cg191",{opacity:0},724.877);
+    tl.set("#cg192",{opacity:1},725.317);tl.set("#cg192",{opacity:0},730.5);
+    tl.set("#cg193",{opacity:1},730.52);tl.set("#cg193",{opacity:0},735.642);
+    tl.set("#cg194",{opacity:1},737.862);tl.set("#cg194",{opacity:0},743.064);
+    tl.set("#cg195",{opacity:1},743.834);tl.set("#cg195",{opacity:0},745.16);
+    tl.set("#cg196",{opacity:1},745.48);tl.set("#cg196",{opacity:0},747.393);
+    tl.set("#cg197",{opacity:1},747.833);tl.set("#cg197",{opacity:0},750.712);
+    tl.set("#cg198",{opacity:1},751.152);tl.set("#cg198",{opacity:0},756.575);
+    tl.set("#cg199",{opacity:1},756.595);tl.set("#cg199",{opacity:0},758.195);
+    tl.set("#cg200",{opacity:1},758.635);tl.set("#cg200",{opacity:0},763.778);
+    tl.set("#cg201",{opacity:1},764.548);tl.set("#cg201",{opacity:0},765.74);
+    tl.set("#cg202",{opacity:1},766.06);tl.set("#cg202",{opacity:0},767.988);
+    tl.set("#cg203",{opacity:1},768.428);tl.set("#cg203",{opacity:0},771.015);
+    tl.set("#cg204",{opacity:1},771.455);tl.set("#cg204",{opacity:0},775.79);
+    tl.set("#cg205",{opacity:1},776.23);tl.set("#cg205",{opacity:0},779.351);
+    tl.set("#cg206",{opacity:1},780.121);tl.set("#cg206",{opacity:0},783.925);
+    tl.set("#cg207",{opacity:1},784.695);tl.set("#cg207",{opacity:0},788.182);
+    tl.set("#cg208",{opacity:1},788.952);tl.set("#cg208",{opacity:0},792.751);
+    tl.set("#cg209",{opacity:1},792.771);tl.set("#cg209",{opacity:0},795.081);
+    tl.set("#cg210",{opacity:1},795.851);tl.set("#cg210",{opacity:0},801.661);
+    tl.set("#cg211",{opacity:1},802.431);tl.set("#cg211",{opacity:0},803.947);
+    tl.set("#cg212",{opacity:1},804.267);tl.set("#cg212",{opacity:0},810.959);
+    tl.set("#cg213",{opacity:1},811.399);tl.set("#cg213",{opacity:0},817.474);
+    tl.set("#cg214",{opacity:1},817.914);tl.set("#cg214",{opacity:0},823.159);
+    tl.set("#cg215",{opacity:1},823.179);tl.set("#cg215",{opacity:0},827.275);
+    tl.set("#cg216",{opacity:1},827.715);tl.set("#cg216",{opacity:0},832.629);
+    tl.set("#cg217",{opacity:1},833.069);tl.set("#cg217",{opacity:0},839.15);
+    tl.set("#cg218",{opacity:1},839.59);tl.set("#cg218",{opacity:0},842.734);
+    tl.set("#cg219",{opacity:1},843.504);tl.set("#cg219",{opacity:0},848.727);
+    tl.set("#cg220",{opacity:1},850.947);tl.set("#cg220",{opacity:0},854.059);
+    tl.set("#cg221",{opacity:1},854.499);tl.set("#cg221",{opacity:0},858.514);
+    tl.set("#cg222",{opacity:1},862.034);tl.set("#cg222",{opacity:0},863.681);
+    tl.set("#cg223",{opacity:1},865.101);tl.set("#cg223",{opacity:0},869.304);
+    tl.set("#cg224",{opacity:1},872.824);tl.set("#cg224",{opacity:0},874.51);
+    tl.set("#cg225",{opacity:1},875.93);tl.set("#cg225",{opacity:0},879.142);
+    tl.set("#cg226",{opacity:1},882.662);tl.set("#cg226",{opacity:0},886.093);
+    tl.set("#cg227",{opacity:1},887.513);tl.set("#cg227",{opacity:0},894.477);
+    tl.set("#cg228",{opacity:1},894.497);tl.set("#cg228",{opacity:0},897.652);
+    tl.set("#cg229",{opacity:1},901.172);tl.set("#cg229",{opacity:0},904.322);
+    tl.set("#cg230",{opacity:1},905.742);tl.set("#cg230",{opacity:0},911.447);
+    tl.set("#cg231",{opacity:1},911.467);tl.set("#cg231",{opacity:0},913.377);
+    tl.set("#cg232",{opacity:1},916.897);tl.set("#cg232",{opacity:0},922.87);
+    tl.set("#cg233",{opacity:1},922.89);tl.set("#cg233",{opacity:0},926.797);
+    tl.set("#cg234",{opacity:1},928.217);tl.set("#cg234",{opacity:0},932.259);
+    tl.set("#cg235",{opacity:1},935.779);tl.set("#cg235",{opacity:0},939.205);
+    tl.set("#cg236",{opacity:1},940.625);tl.set("#cg236",{opacity:0},944.766);
+    tl.set("#cg237",{opacity:1},948.286);tl.set("#cg237",{opacity:0},951.678);
+    tl.set("#cg238",{opacity:1},953.098);tl.set("#cg238",{opacity:0},956.981);
+    tl.set("#cg239",{opacity:1},960.501);tl.set("#cg239",{opacity:0},964.732);
+    tl.set("#cg240",{opacity:1},966.152);tl.set("#cg240",{opacity:0},970.663);
+    tl.set("#cg241",{opacity:1},974.183);tl.set("#cg241",{opacity:0},975.588);
+    tl.set("#cg242",{opacity:1},977.008);tl.set("#cg242",{opacity:0},980.161);
+    tl.set("#cg243",{opacity:1},983.681);tl.set("#cg243",{opacity:0},989.456);
+    tl.set({}, {}, 996.076);
+    window.__timelines["captions"] = tl;
+  </script>
+</template>

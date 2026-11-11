@@ -1,0 +1,117 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; font-family: "Inter", sans-serif; color: #14213d; overflow: hidden; }
+.a { position: absolute; }
+.card { position: absolute; background: #fff; border-radius: 22px; box-shadow: 0 18px 40px rgba(20,33,61,.12); }
+.pill { display: inline-block; padding: 10px 26px; border-radius: 40px; color: #fff; font-weight: 800; letter-spacing: 1.5px; font-size: 30px; }
+.g { background: #1e8a4c; } .r { background: #d6203a; } .n { background: #1b2a4a; } .am { background: #f5a524; }
+.h1 { font-weight: 800; font-size: 64px; line-height: 1.08; letter-spacing: -1px; }
+.h2 { font-weight: 800; font-size: 46px; line-height: 1.12; }
+.h3 { font-weight: 700; font-size: 36px; line-height: 1.2; }
+.t { font-weight: 500; font-size: 30px; line-height: 1.32; color: #5b6577; }
+.num { width: 64px; height: 64px; border-radius: 50%; color: #fff; font-weight: 800; font-size: 32px; display: flex; align-items: center; justify-content: center; }
+.row { display: flex; align-items: center; gap: 22px; }
+.ok { color: #1e8a4c; } .bad { color: #d6203a; }
+.note { position: absolute; border-radius: 18px; padding: 22px 30px; font-size: 32px; font-weight: 700; line-height: 1.25; }
+.note.red { background: #fde8eb; color: #d6203a; border: 3px solid rgba(214,32,58,.35); }
+.note.green { background: #e5f5ec; color: #1e8a4c; border: 3px solid rgba(30,138,76,.35); }
+.note.navy { background: #1b2a4a; color: #fff; }
+.hl { position: absolute; border: 6px solid #f5a524; border-radius: 12px; box-shadow: 0 0 0 9999px rgba(20,33,61,0); }
+.shot { position: absolute; border-radius: 16px; box-shadow: 0 18px 40px rgba(20,33,61,.18); background: #fff; overflow: hidden; }
+.shot img { display: block; width: 100%; height: 100%; }
+.qr { position: absolute; background: #fff; border-radius: 22px; padding: 18px; box-shadow: 0 18px 40px rgba(20,33,61,.15); }
+.qr img { display: block; width: 100%; height: 100%; }
+.x, .v { width: 58px; height: 58px; border-radius: 50%; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 34px; flex: none; }
+.x { background: #d6203a; } .v { background: #1e8a4c; }
+.phone { position: absolute; width: 400px; height: 760px; border-radius: 56px; background: #0f1830; padding: 18px; box-shadow: 0 30px 60px rgba(20,33,61,.3); }
+.screen { position: absolute; left: 18px; top: 18px; right: 18px; bottom: 18px; border-radius: 40px; background: #fff; overflow: hidden; }
+.gf { position: absolute; inset: 0; background: #ede7f6; }
+.gfc { position: absolute; left: 16px; right: 16px; background: #fff; border-radius: 12px; }
+.gfbar { height: 12px; background: #673ab7; border-radius: 12px 12px 0 0; }
+.gft { padding: 16px 18px; font-size: 25px; line-height: 1.25; color: #202124; }
+.arrow { position: absolute; height: 6px; background: #5b6577; border-radius: 3px; transform-origin: 0 50%; }
+.arrow:after { content: ""; position: absolute; right: -4px; top: -9px; border-left: 20px solid #5b6577; border-top: 12px solid transparent; border-bottom: 12px solid transparent; }
+.flow { position: absolute; height: 150px; border-radius: 20px; background: #1b2a4a; color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 18px; }
+.flow b { font-size: 32px; line-height: 1.15; } .flow span { font-size: 28px; opacity: .85; margin-top: 8px; line-height: 1.2; }
+.chk { display: flex; align-items: center; gap: 22px; font-size: 34px; font-weight: 700; }
+.box { width: 50px; height: 50px; border-radius: 10px; border: 4px solid #b7c0cf; display: flex; align-items: center; justify-content: center; flex: none; background: #fff; }
+.tick { color: #fff; font-weight: 900; font-size: 32px; }
+</style>
+  <div id="root" data-composition-id="s10" data-width="1920" data-height="1080">
+    <div id="h" class="a h1" style="left:150px;top:120px">Where your attendance goes</div>
+    <div id="fw0" class="flow" style="left:150px;top:250px;width:360px;background:#1b2a4a"><b>Staff scans QR</b><span>Check-in or Check-out</span></div>
+    <div id="fwa0" class="arrow" style="left:522px;top:322px;width:26px"></div>
+    <div id="fw1" class="flow" style="left:570px;top:250px;width:360px;background:#1b2a4a"><b>Submits the form</b><span>Check-in or Check-out form</span></div>
+    <div id="fwa1" class="arrow" style="left:942px;top:322px;width:26px"></div>
+    <div id="fw2" class="flow" style="left:990px;top:250px;width:360px;background:#1b2a4a"><b>Google Sheet records the time</b><span>automatically</span></div>
+    <div id="fwa2" class="arrow" style="left:1362px;top:322px;width:26px"></div>
+    <div id="fw3" class="flow" style="left:1410px;top:250px;width:360px;background:#1e8a4c"><b>Appears under your team</b><span>Alpha, Bravo, Charlie or Delta</span></div>
+    <div id="sheet" class="shot" style="left:150px;top:480px;width:1620px;height:175.787px"><img src="assets/deck/image-10-1.png" alt=""></div>
+    <div id="hlt0" class="hl" style="left:700.34px;top:615.574px;width:86.17px;height:39.064px"></div>
+    <div id="hlt1" class="hl" style="left:792.255px;top:615.574px;width:86.17px;height:39.064px"></div>
+    <div id="hlt2" class="hl" style="left:887.617px;top:615.574px;width:94.213px;height:39.064px"></div>
+    <div id="hlt3" class="hl" style="left:981.83px;top:615.574px;width:94.213px;height:39.064px"></div>
+    <div id="hli" class="hl" style="left:205.149px;top:508.723px;width:195.319px;height:91.915px"></div>
+    <div id="hlo" class="hl" style="left:1526.426px;top:508.723px;width:166.596px;height:91.915px"></div>
+    <div id="sm" class="a" style="left:150px;top:667.787px;font-size:28px;color:#5b6577">Sample view, staff details hidden</div>
+    <div id="sup" class="note navy" style="left:150px;top:720px">Reviewed by authorised supervisors</div>
+    <div id="ns" class="note green" style="left:900px;top:720px">Staff: no need to open or update the Sheet</div>
+    <div id="rs0" class="note green" style="left:150px;top:820px;width:520px;font-size:30px">✓ Use the correct QR codes</div>
+    <div id="rs1" class="note green" style="left:710px;top:820px;width:520px;font-size:30px">✓ Complete the forms accurately</div>
+    <div id="rs2" class="note green" style="left:1270px;top:820px;width:520px;font-size:30px">✓ Verify each submission</div>
+  </div>
+  <script>
+    gsap.set("#h",{opacity:0,x:-70});
+    gsap.set("#fw0",{opacity:0,y:40});
+    gsap.set("#fwa0",{scaleX:0});
+    gsap.set("#fw1",{opacity:0,y:40});
+    gsap.set("#fwa1",{scaleX:0});
+    gsap.set("#fw2",{opacity:0,y:40});
+    gsap.set("#fwa2",{scaleX:0});
+    gsap.set("#fw3",{opacity:0,y:40});
+    gsap.set("#sheet",{opacity:0,y:40});
+    gsap.set("#hlt0",{opacity:0,scale:0.7});
+    gsap.set("#hlt1",{opacity:0,scale:0.7});
+    gsap.set("#hlt2",{opacity:0,scale:0.7});
+    gsap.set("#hlt3",{opacity:0,scale:0.7});
+    gsap.set("#hli",{opacity:0,scale:0.7});
+    gsap.set("#hlo",{opacity:0,scale:0.7});
+    gsap.set("#sm",{opacity:0});
+    gsap.set("#sup",{opacity:0,y:40});
+    gsap.set("#ns",{opacity:0,y:40});
+    gsap.set("#rs0",{opacity:0,y:40});
+    gsap.set("#rs1",{opacity:0,y:40});
+    gsap.set("#rs2",{opacity:0,y:40});
+    const tl = gsap.timeline({ paused: true });
+    tl.to("#h",{opacity:1,x:0,duration:0.5,ease:"power3.out"},0.3);
+    tl.to("#fw0",{opacity:1,y:0,duration:0.5,ease:"power3.out"},6.595);
+    tl.to("#fwa0",{scaleX:1,duration:0.5,ease:"power3.out"},8.095);
+    tl.to("#fw1",{opacity:1,y:0,duration:0.5,ease:"power3.out"},8.195);
+    tl.to("#fwa1",{scaleX:1,duration:0.5,ease:"power3.out"},10.095);
+    tl.to("#fw2",{opacity:1,y:0,duration:0.5,ease:"power3.out"},10.195);
+    tl.to("#fwa2",{scaleX:1,duration:0.5,ease:"power3.out"},13.283);
+    tl.to("#fw3",{opacity:1,y:0,duration:0.5,ease:"power3.out"},13.383);
+    tl.to("#sheet",{opacity:1,y:0,duration:0.5,ease:"power3.out"},14.083);
+    tl.to("#hlt0",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},19.349);
+    tl.to("#hlt0",{opacity:0,duration:0.35,ease:"power2.in"},29.804);
+    tl.to("#hlt1",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},23.63);
+    tl.to("#hlt1",{opacity:0,duration:0.35,ease:"power2.in"},29.804);
+    tl.to("#hlt2",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},28.185);
+    tl.to("#hlt2",{opacity:0,duration:0.35,ease:"power2.in"},29.804);
+    tl.to("#hlt3",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},28.985);
+    tl.to("#hlt3",{opacity:0,duration:0.35,ease:"power2.in"},29.804);
+    tl.to("#hli",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},31.154);
+    tl.to("#hli",{opacity:0,duration:0.35,ease:"power2.in"},45.34);
+    tl.to("#hlo",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},32.154);
+    tl.to("#hlo",{opacity:0,duration:0.35,ease:"power2.in"},45.34);
+    tl.to("#sm",{opacity:1,duration:0.5,ease:"power3.out"},14.383);
+    tl.to("#sup",{opacity:1,y:0,duration:0.5,ease:"power3.out"},37.159);
+    tl.to("#ns",{opacity:1,y:0,duration:0.5,ease:"power3.out"},41.569);
+    tl.to("#ns",{opacity:0,duration:0.35,ease:"power2.in"},45.34);
+    tl.to("#rs0",{opacity:1,y:0,duration:0.5,ease:"power3.out"},46.29);
+    tl.to("#rs1",{opacity:1,y:0,duration:0.5,ease:"power3.out"},47.59);
+    tl.to("#rs2",{opacity:1,y:0,duration:0.5,ease:"power3.out"},48.89);
+    tl.set({}, {}, 54.808);
+    window.__timelines["s10"] = tl;
+  </script>
+</template>

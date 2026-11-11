@@ -1,0 +1,9 @@
+renders/
+vo/lines/
+vo/*.wav
+edit/assets/*.wav
+edit/.hyperframes/
+music/*.mp3
+*.mp4
+*.log
+__pycache__/

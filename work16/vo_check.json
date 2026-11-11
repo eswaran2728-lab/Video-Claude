@@ -1,0 +1,1310 @@
+[
+ {
+  "line": "s01_00",
+  "spoken": "Good morning, everyone.",
+  "heard": "Good morning, everyone.",
+  "match": 1.0
+ },
+ {
+  "line": "s01_01",
+  "spoken": "Today, I'll be conducting a short briefing on our A A, sec, F, zero seven seven Attendance Record, specifically on how to properly Check in and Check out using the Q R code system.",
+  "heard": "Today, I'll be conducting a short briefing on RAA, SEC, F077 Attendance Record, specifically  on how to properly check in and check out using the QR code system.",
+  "match": 0.79
+ },
+ {
+  "line": "s01_02",
+  "spoken": "The purpose of this system is to ensure that every personnel's attendance is recorded accurately, from the beginning of their shift until the completion of their duty.",
+  "heard": "The purpose of this system is to ensure that every personnel's attendance is recorded accurately  from the beginning of their shift until the completion of their duty.",
+  "match": 1.0
+ },
+ {
+  "line": "s01_03",
+  "spoken": "The process is quite straightforward.",
+  "heard": "The process is quite straightforward.",
+  "match": 1.0
+ },
+ {
+  "line": "s01_04",
+  "spoken": "All you need is your mobile phone, your official AirAsia Google account, and the correct Q R code.",
+  "heard": "All you need is your mobile phone, your official AirAsia Google account, and the correct QR code.",
+  "match": 0.89
+ },
+ {
+  "line": "s01_05",
+  "spoken": "Throughout this briefing, I'll guide everyone step by step, explain the common mistakes to avoid, and what you should do if you accidentally submit incorrect information.",
+  "heard": "Throughout this briefing, I'll guide everyone step by step,  explain the common mistakes to avoid,  and what you should do if you accidentally  submit incorrect information.",
+  "match": 1.0
+ },
+ {
+  "line": "s01_06",
+  "spoken": "By the end of this briefing, everyone should be able to complete their attendance independently and correctly.",
+  "heard": "By the end of this briefing, everyone should be able to complete their attendance independently  and correctly.",
+  "match": 1.0
+ },
+ {
+  "line": "s02_00",
+  "spoken": "First, everyone needs to understand that we are using two separate Q R codes for attendance.",
+  "heard": "First, everyone needs to understand  that we are using two separate QR codes for attendance.",
+  "match": 0.88
+ },
+ {
+  "line": "s02_01",
+  "spoken": "The first one is the green Q R code, which is used for Check-in.",
+  "heard": "The first one is the green QR code, which is used for check-in.",
+  "match": 0.86
+ },
+ {
+  "line": "s02_02",
+  "spoken": "This Q R code must be scanned when you start your shift.",
+  "heard": "This QR code must be scanned when you start your shift.",
+  "match": 0.83
+ },
+ {
+  "line": "s02_03",
+  "spoken": "The second one is the red Q R code, which is used for Check-out.",
+  "heard": "The second one is the red QR code, which is used for checkout.",
+  "match": 0.86
+ },
+ {
+  "line": "s02_04",
+  "spoken": "This Q R code must be scanned when you finish your shift.",
+  "heard": "This QR code must be scanned when you finish your shift.",
+  "match": 0.83
+ },
+ {
+  "line": "s02_05",
+  "spoken": "It's important not to confuse these two Q R codes because each one serves a different purpose.",
+  "heard": "It's important not to confuse these two QR codes  because each one serves a different purpose.",
+  "match": 0.89
+ },
+ {
+  "line": "s02_06",
+  "spoken": "Just remember:",
+  "heard": "Just remember.",
+  "match": 1.0
+ },
+ {
+  "line": "s02_07",
+  "spoken": "Green means Check-in, at the start of your shift.",
+  "heard": "Green means check-in at the start of your shift.",
+  "match": 1.0
+ },
+ {
+  "line": "s02_08",
+  "spoken": "Red means Check-out, at the end of your shift.",
+  "heard": "Red means check out at the end of your shift.",
+  "match": 1.0
+ },
+ {
+  "line": "s02_09",
+  "spoken": "For both procedures, there are four basic steps:",
+  "heard": "For both procedures, there are four basic steps.",
+  "match": 1.0
+ },
+ {
+  "line": "s02_10",
+  "spoken": "One. Scan the correct Q R code.",
+  "heard": "1. Scan the correct QR code.",
+  "match": 0.57
+ },
+ {
+  "line": "s02_11",
+  "spoken": "Two. Complete the required information.",
+  "heard": "Two, complete the required information.",
+  "match": 1.0
+ },
+ {
+  "line": "s02_12",
+  "spoken": "Three. Press Submit.",
+  "heard": "Three, press Submit.",
+  "match": 1.0
+ },
+ {
+  "line": "s02_13",
+  "spoken": "Four. Verify that your response has been recorded.",
+  "heard": "Four, verify that your response has been recorded.",
+  "match": 1.0
+ },
+ {
+  "line": "s02_14",
+  "spoken": "Now, let's go through the Check-in procedure first.",
+  "heard": "Now, let's go through the check-in procedure first.",
+  "match": 1.0
+ },
+ {
+  "line": "s03_00",
+  "spoken": "When you report for duty, you must first scan the green Check-in Q R code.",
+  "heard": "When you report for duty, you must first scan the green check-in QR code.",
+  "match": 0.87
+ },
+ {
+  "line": "s03_01",
+  "spoken": "Once you scan it, you will be directed to the Google Form.",
+  "heard": "Once you scan it, you will be directed to the Google Form.",
+  "match": 1.0
+ },
+ {
+  "line": "s03_02",
+  "spoken": "Before filling in anything, please make sure you are signed in using your official AirAsia Google account.",
+  "heard": "Before filling in anything, please make sure you are signed  in using your official AirAsia Google account.",
+  "match": 1.0
+ },
+ {
+  "line": "s03_03",
+  "spoken": "Do not use your personal Gmail account.",
+  "heard": "Do not use your personal Gmail account.",
+  "match": 1.0
+ },
+ {
+  "line": "s03_04",
+  "spoken": "Next, check the title displayed at the top of the form.",
+  "heard": "Next, check the title displayed at the top of the form.",
+  "match": 1.0
+ },
+ {
+  "line": "s03_05",
+  "spoken": "The title should be:",
+  "heard": "the title should be.",
+  "match": 1.0
+ },
+ {
+  "line": "s03_06",
+  "spoken": "A A, sec, F, zero seven seven Attendance Record, Check-in.",
+  "heard": "Aasek F-077 attendance record check-in.",
+  "match": 0.4
+ },
+ {
+  "line": "s03_07",
+  "spoken": "If the form shows Check-out instead, it means you have scanned the wrong Q R code.",
+  "heard": "If the form shows checkout instead,  it means you have scanned the wrong QR code.",
+  "match": 0.88
+ },
+ {
+  "line": "s03_08",
+  "spoken": "In that situation, simply go back and scan the correct green Q R code.",
+  "heard": "In that situation, simply go back and scan the correct green QR code.",
+  "match": 0.86
+ },
+ {
+  "line": "s03_09",
+  "spoken": "Always verify the form title before proceeding.",
+  "heard": "Always verify the form title before proceeding.",
+  "match": 1.0
+ },
+ {
+  "line": "s04_00",
+  "spoken": "Once you have opened the correct Check-in form, you will be required to complete several fields.",
+  "heard": "Once you have opened the correct check-in form,  you will be required to complete several fields.",
+  "match": 1.0
+ },
+ {
+  "line": "s04_01",
+  "spoken": "Let's go through them one by one.",
+  "heard": "Let's go through them one by one.",
+  "match": 1.0
+ },
+ {
+  "line": "s04_02",
+  "spoken": "First. Email.",
+  "heard": "First email.",
+  "match": 1.0
+ },
+ {
+  "line": "s04_03",
+  "spoken": "At the top of the Google Form, you will see a checkbox to record your email address.",
+  "heard": "At the top of the Google form, you will see a checkbox to record your email address.",
+  "match": 1.0
+ },
+ {
+  "line": "s04_04",
+  "spoken": "Make sure you tick the Record email checkbox.",
+  "heard": "Make sure you tick the record email checkbox.",
+  "match": 1.0
+ },
+ {
+  "line": "s04_05",
+  "spoken": "This allows your official company email address to be included with your attendance submission.",
+  "heard": "This allows your official company email address  to be included with your attendance submission.",
+  "match": 1.0
+ },
+ {
+  "line": "s04_06",
+  "spoken": "Second. Designation.",
+  "heard": "Second designation.",
+  "match": 1.0
+ },
+ {
+  "line": "s04_07",
+  "spoken": "You will be asked to select your designation.",
+  "heard": "you will be asked to select your designation.",
+  "match": 1.0
+ },
+ {
+  "line": "s04_08",
+  "spoken": "There are three options:",
+  "heard": "There are three options.",
+  "match": 1.0
+ },
+ {
+  "line": "s04_09",
+  "spoken": "Security Executive, D S E.",
+  "heard": "Security Executive, DSE.",
+  "match": 0.4
+ },
+ {
+  "line": "s04_10",
+  "spoken": "Security Officer, S O.",
+  "heard": "Security Officer, S.O.",
+  "match": 1.0
+ },
+ {
+  "line": "s04_11",
+  "spoken": "Assistant Security Officer, A S O.",
+  "heard": "Assistant Security Officer, a SO.",
+  "match": 0.67
+ },
+ {
+  "line": "s04_12",
+  "spoken": "Please select your actual designation.",
+  "heard": "please select your actual designation.",
+  "match": 1.0
+ },
+ {
+  "line": "s04_13",
+  "spoken": "For example, if you are an Assistant Security Officer, select A S O.",
+  "heard": "For example, if you are an Assistant Security Officer,  select a SO.",
+  "match": 0.85
+ },
+ {
+  "line": "s04_14",
+  "spoken": "Third. Shift Start Date.",
+  "heard": "Third, shift start date.",
+  "match": 1.0
+ },
+ {
+  "line": "s04_15",
+  "spoken": "You must select the date on which your shift begins.",
+  "heard": "You must select the date on which your shift begins.",
+  "match": 1.0
+ },
+ {
+  "line": "s04_16",
+  "spoken": "Please make sure you enter the correct date because it will be used to match your Check-in and Check-out records.",
+  "heard": "Please make sure you enter the correct date because it will be used to match your check-in  and check-out records.",
+  "match": 1.0
+ },
+ {
+  "line": "s04_17",
+  "spoken": "Fourth. Name.",
+  "heard": "Fourth name.",
+  "match": 1.0
+ },
+ {
+  "line": "s04_18",
+  "spoken": "Enter your name accurately.",
+  "heard": "Enter your name accurately.",
+  "match": 1.0
+ },
+ {
+  "line": "s04_19",
+  "spoken": "Fifth. Staff I D.",
+  "heard": "Fifth, Staff ID.",
+  "match": 0.5
+ },
+ {
+  "line": "s04_20",
+  "spoken": "Enter your correct Staff I D.",
+  "heard": "Enter your correct staff ID.",
+  "match": 0.67
+ },
+ {
+  "line": "s04_21",
+  "spoken": "This is especially important because your Staff I D is used to identify and match your attendance information.",
+  "heard": "This is especially important because your staff ID is used to identify and match your attendance information.",
+  "match": 0.89
+ },
+ {
+  "line": "s04_22",
+  "spoken": "Please check your Staff I D carefully before submitting the form.",
+  "heard": "Please check your staff ID carefully before submitting the form.",
+  "match": 0.82
+ },
+ {
+  "line": "s05_00",
+  "spoken": "Next, you need to select your assigned team.",
+  "heard": "Next, you need to select your assigned team.",
+  "match": 1.0
+ },
+ {
+  "line": "s05_01",
+  "spoken": "As everyone knows, we have four operational teams:",
+  "heard": "As everyone knows, we have four operational teams.",
+  "match": 1.0
+ },
+ {
+  "line": "s05_02",
+  "spoken": "Alpha Team",
+  "heard": "Alpha Team.",
+  "match": 1.0
+ },
+ {
+  "line": "s05_03",
+  "spoken": "Bravo Team",
+  "heard": "Bravo team!",
+  "match": 1.0
+ },
+ {
+  "line": "s05_04",
+  "spoken": "Charlie Team",
+  "heard": "Charlie team.",
+  "match": 1.0
+ },
+ {
+  "line": "s05_05",
+  "spoken": "Delta Team",
+  "heard": "Delta Team.",
+  "match": 1.0
+ },
+ {
+  "line": "s05_06",
+  "spoken": "You must select the team you are assigned to for that particular shift.",
+  "heard": "you must select the team you are assigned to  for that particular shift.",
+  "match": 1.0
+ },
+ {
+  "line": "s05_07",
+  "spoken": "Now, why is the team selection important?",
+  "heard": "Now, why is the team selection important?",
+  "match": 1.0
+ },
+ {
+  "line": "s05_08",
+  "spoken": "Because once you submit your attendance, the system will automatically organise the record into the corresponding team's tab in our central Google Sheet.",
+  "heard": "Because once you submit your attendance,  the system will automatically organize the record  into the corresponding Teams tab  in our central Google Sheet.",
+  "match": 0.88
+ },
+ {
+  "line": "s05_09",
+  "spoken": "For example:",
+  "heard": "for example.",
+  "match": 1.0
+ },
+ {
+  "line": "s05_10",
+  "spoken": "Let's say you belong to Bravo Team, but you accidentally select Alpha Team when completing the form.",
+  "heard": "Let's say you belong to Bravo team, but you accidentally select Alpha team when completing  the form.",
+  "match": 1.0
+ },
+ {
+  "line": "s05_11",
+  "spoken": "When you submit your attendance, your record will appear under Alpha Team instead of Bravo Team.",
+  "heard": "When you submit your attendance, your record will appear under Alpha Team instead of Bravo  Team.",
+  "match": 1.0
+ },
+ {
+  "line": "s05_12",
+  "spoken": "This will result in an incorrect attendance record.",
+  "heard": "This will result in an incorrect attendance record.",
+  "match": 1.0
+ },
+ {
+  "line": "s05_13",
+  "spoken": "Now, what should you do if this happens?",
+  "heard": "Now what should you do if this happens?",
+  "match": 1.0
+ },
+ {
+  "line": "s05_14",
+  "spoken": "If you realise that you selected the wrong team before submitting, simply correct your selection.",
+  "heard": "If you realize that you selected the wrong team before submitting, simply correct your selection.",
+  "match": 0.93
+ },
+ {
+  "line": "s05_15",
+  "spoken": "However, if you have already submitted the attendance form with the wrong team, you must immediately inform your respective Duty Security Executive, the D S E.",
+  "heard": "However, if you have already submitted the attendance form  with the wrong team, you must immediately inform  your respective duty security executive, the DSE.",
+  "match": 0.88
+ },
+ {
+  "line": "s05_16",
+  "spoken": "The respective D S E shall then report the error to the Operations Security Manager for the necessary correction to the attendance record.",
+  "heard": "The respective DSE shall then report the error to the Operations Security Manager for the  necessary correction to the attendance record.",
+  "match": 0.87
+ },
+ {
+  "line": "s05_17",
+  "spoken": "Staff must not submit another attendance response to correct the mistake unless instructed by an authorised supervisor.",
+  "heard": "Staff must not submit another attendance response to correct the mistake unless instructed by  an authorized supervisor.",
+  "match": 0.94
+ },
+ {
+  "line": "s05_18",
+  "spoken": "So, the reporting flow is simple:",
+  "heard": "So, the reporting flow is simple.",
+  "match": 1.0
+ },
+ {
+  "line": "s05_19",
+  "spoken": "Staff, to the respective D S E, to the Operations Security Manager, then the attendance correction.",
+  "heard": "Staff to the respective DSE, to the Operations Security Manager, then the Attendance Correction.",
+  "match": 0.81
+ },
+ {
+  "line": "s05_20",
+  "spoken": "Please remember that attendance corrections must be handled through the proper reporting channel.",
+  "heard": "Please remember that attendance corrections must be handled through the proper reporting channel.",
+  "match": 1.0
+ },
+ {
+  "line": "s05_21",
+  "spoken": "Therefore, always double-check your team selection before pressing Submit.",
+  "heard": "Therefore, always double check your team selection before pressing Submit.",
+  "match": 1.0
+ },
+ {
+  "line": "s06_00",
+  "spoken": "Once you have completed the form, don't immediately press Submit.",
+  "heard": "Once you have completed the form, don't immediately press Submit.",
+  "match": 1.0
+ },
+ {
+  "line": "s06_01",
+  "spoken": "Take a few seconds to review all the information you have entered.",
+  "heard": "Take a few seconds to review all the information you have entered.",
+  "match": 1.0
+ },
+ {
+  "line": "s06_02",
+  "spoken": "Make sure:",
+  "heard": "Make sure.",
+  "match": 1.0
+ },
+ {
+  "line": "s06_03",
+  "spoken": "Your company email is selected.",
+  "heard": "Your company email is selected.",
+  "match": 1.0
+ },
+ {
+  "line": "s06_04",
+  "spoken": "Your designation is correct.",
+  "heard": "Your designation is correct.",
+  "match": 1.0
+ },
+ {
+  "line": "s06_05",
+  "spoken": "Your shift start date is correct.",
+  "heard": "Your shift start date is correct.",
+  "match": 1.0
+ },
+ {
+  "line": "s06_06",
+  "spoken": "Your assigned team is correct.",
+  "heard": "Your assigned team is correct.",
+  "match": 1.0
+ },
+ {
+  "line": "s06_07",
+  "spoken": "Your name is accurate.",
+  "heard": "Your name is accurate.",
+  "match": 1.0
+ },
+ {
+  "line": "s06_08",
+  "spoken": "Your Staff I D is correct.",
+  "heard": "Your staff ID is correct.",
+  "match": 0.67
+ },
+ {
+  "line": "s06_09",
+  "spoken": "After verifying everything, press the Submit button.",
+  "heard": "After verifying everything, press the Submit button.",
+  "match": 1.0
+ },
+ {
+  "line": "s06_10",
+  "spoken": "You only need to submit your Check-in form once per shift.",
+  "heard": "You only need to submit your check-in form once per shift.",
+  "match": 1.0
+ },
+ {
+  "line": "s06_11",
+  "spoken": "Once you press Submit, wait for the confirmation screen.",
+  "heard": "Once you press Submit, wait for the confirmation screen.",
+  "match": 1.0
+ },
+ {
+  "line": "s06_12",
+  "spoken": "You should see the message:",
+  "heard": "You should see the message.",
+  "match": 1.0
+ },
+ {
+  "line": "s06_13",
+  "spoken": "Your response has been recorded.",
+  "heard": "Your response has been recorded.",
+  "match": 1.0
+ },
+ {
+  "line": "s06_14",
+  "spoken": "This confirmation is important because it indicates that your submission has been successfully received.",
+  "heard": "This confirmation is important because it indicates  that your submission has been successfully received.",
+  "match": 1.0
+ },
+ {
+  "line": "s06_15",
+  "spoken": "If you see this message, your Check-in is complete.",
+  "heard": "If you see this message, your check-in is complete.",
+  "match": 1.0
+ },
+ {
+  "line": "s06_16",
+  "spoken": "However, if the confirmation screen does not appear, check whether there are any missing fields, form errors, or internet connection issues.",
+  "heard": "However, if the confirmation screen does not appear,  check whether there are any missing fields,  form errors, or internet connection issues.",
+  "match": 1.0
+ },
+ {
+  "line": "s06_17",
+  "spoken": "If you are unsure whether your attendance has been successfully submitted, inform your supervisor instead of repeatedly submitting the form.",
+  "heard": "If you are unsure whether your attendance has been successfully submitted, inform your supervisor  instead of repeatedly submitting the form.",
+  "match": 1.0
+ },
+ {
+  "line": "s06_18",
+  "spoken": "Remember, multiple submissions may create duplicate attendance records.",
+  "heard": "Remember, multiple submissions may create duplicate attendance records.",
+  "match": 1.0
+ },
+ {
+  "line": "s07_00",
+  "spoken": "Now, let's move to the Check-out procedure.",
+  "heard": "Now let's move to the checkout procedure.",
+  "match": 1.0
+ },
+ {
+  "line": "s07_01",
+  "spoken": "Once you have completed your shift, you must record your Check-out.",
+  "heard": "Once you have completed your shift,  you must record your checkout.",
+  "match": 1.0
+ },
+ {
+  "line": "s07_02",
+  "spoken": "This time, you must scan the red Check-out Q R code.",
+  "heard": "This time, you must scan the red checkout QR code.",
+  "match": 0.82
+ },
+ {
+  "line": "s07_03",
+  "spoken": "Please do not scan the green Check-in Q R code again.",
+  "heard": "Please do not scan the green check in QR code again.",
+  "match": 0.82
+ },
+ {
+  "line": "s07_04",
+  "spoken": "After scanning, the Google Form will open.",
+  "heard": "After scanning, the Google Form will open.",
+  "match": 1.0
+ },
+ {
+  "line": "s07_05",
+  "spoken": "Just like the Check-in procedure, make sure you are using your official AirAsia Google account.",
+  "heard": "Just like the check-in procedure, make sure you are using your official AirAsia Google account.",
+  "match": 1.0
+ },
+ {
+  "line": "s07_06",
+  "spoken": "The form title should display:",
+  "heard": "the form title should display.",
+  "match": 1.0
+ },
+ {
+  "line": "s07_07",
+  "spoken": "A A, sec, F, zero seven seven Attendance Record, Check-out.",
+  "heard": "Aasek F-077 attendance record check out.",
+  "match": 0.4
+ },
+ {
+  "line": "s07_08",
+  "spoken": "Always check the title before proceeding.",
+  "heard": "Always check the title before proceeding.",
+  "match": 1.0
+ },
+ {
+  "line": "s07_09",
+  "spoken": "The Check-out procedure is similar to Check-in, but the form is shorter and requires fewer details.",
+  "heard": "The checkout procedure is similar to check-in,  but the form is shorter and requires fewer details.",
+  "match": 1.0
+ },
+ {
+  "line": "s08_00",
+  "spoken": "Once the Check-out form opens, you will need to complete the required information.",
+  "heard": "Once the checkout form opens,  you will need to complete the required information.",
+  "match": 1.0
+ },
+ {
+  "line": "s08_01",
+  "spoken": "First, tick the Record email checkbox.",
+  "heard": "First, tick the record email checkbox.",
+  "match": 1.0
+ },
+ {
+  "line": "s08_02",
+  "spoken": "Next, enter your Staff I D.",
+  "heard": "Next, enter your staff ID.",
+  "match": 0.67
+ },
+ {
+  "line": "s08_03",
+  "spoken": "Please ensure you use the same Staff I D that you entered during Check-in.",
+  "heard": "Please ensure you use the same staff ID that you entered during check-in.",
+  "match": 0.86
+ },
+ {
+  "line": "s08_04",
+  "spoken": "After that, select your Shift Start Date.",
+  "heard": "After that, select your shift start date.",
+  "match": 1.0
+ },
+ {
+  "line": "s08_05",
+  "spoken": "Now, I want everyone to pay attention to this part, especially those working overnight shifts.",
+  "heard": "Now, I want everyone to pay attention to this part,  especially those working overnight shifts.",
+  "match": 1.0
+ },
+ {
+  "line": "s08_06",
+  "spoken": "Let's look at one example.",
+  "heard": "Let's look at one example.",
+  "match": 1.0
+ },
+ {
+  "line": "s08_07",
+  "spoken": "Suppose your shift starts on the eleventh of November at eight P M, and finishes on the twelfth of November at eight A M.",
+  "heard": "Suppose your shift starts on the 11th of November at 8 p.m.  and finishes on the 12th of November at 8 a.m.",
+  "match": 0.83
+ },
+ {
+  "line": "s08_08",
+  "spoken": "When you Check out on the twelfth of November, what date should you select?",
+  "heard": "When you check out on the 12th of November,  what date should you select?",
+  "match": 0.92
+ },
+ {
+  "line": "s08_09",
+  "spoken": "The correct answer is the eleventh of November, because that is the date your shift originally started.",
+  "heard": "The correct answer is the 11th of November,  because that is the date your shift originally started.",
+  "match": 0.94
+ },
+ {
+  "line": "s08_10",
+  "spoken": "You should not select the twelfth of November simply because you are checking out on that date.",
+  "heard": "You should not select the 12th of November simply  because you are checking out on that date.",
+  "match": 0.94
+ },
+ {
+  "line": "s08_11",
+  "spoken": "The system uses the shift start date to match your attendance correctly.",
+  "heard": "The system uses the shift start date to match your attendance correctly.",
+  "match": 1.0
+ },
+ {
+  "line": "s08_12",
+  "spoken": "Next, select the same team used during your correct Check-in.",
+  "heard": "Next, select the same team used during your correct check-in.",
+  "match": 1.0
+ },
+ {
+  "line": "s08_13",
+  "spoken": "For example, if you checked in under Bravo Team, your Check-out should also be under Bravo Team.",
+  "heard": "For example, if you checked in under Bravo Team,  your checkout should also be under Bravo Team.",
+  "match": 1.0
+ },
+ {
+  "line": "s08_14",
+  "spoken": "If you discover that your Check-in contains an incorrect team selection, inform your respective D S E so the error can be reported for correction.",
+  "heard": "If you discover that your check-in contains an incorrect team selection, inform your respective  DSE so the error can be reported for correction.",
+  "match": 0.88
+ },
+ {
+  "line": "s08_15",
+  "spoken": "You will notice that the Check-out form does not ask for your name or designation.",
+  "heard": "You will notice that the checkout form does not ask for your name or designation.",
+  "match": 1.0
+ },
+ {
+  "line": "s08_16",
+  "spoken": "This is normal because those details were already provided during Check-in.",
+  "heard": "This is normal because those details were already provided during check-in.",
+  "match": 1.0
+ },
+ {
+  "line": "s08_17",
+  "spoken": "Once all required information is completed, press Submit once.",
+  "heard": "Once all required information is completed, press Submit once.",
+  "match": 1.0
+ },
+ {
+  "line": "s08_18",
+  "spoken": "Wait for the confirmation message:",
+  "heard": "Wait for the confirmation message.",
+  "match": 1.0
+ },
+ {
+  "line": "s08_19",
+  "spoken": "Your response has been recorded.",
+  "heard": "Your response has been recorded.",
+  "match": 1.0
+ },
+ {
+  "line": "s08_20",
+  "spoken": "Once this appears, your Check-out submission is complete.",
+  "heard": "Once this appears, your checkout submission is complete.",
+  "match": 1.0
+ },
+ {
+  "line": "s09_00",
+  "spoken": "Now, there is one important feature I want everyone to understand.",
+  "heard": "Now there is one important feature I want everyone to understand.",
+  "match": 1.0
+ },
+ {
+  "line": "s09_01",
+  "spoken": "You do not need to manually enter your Check-in or Check-out time.",
+  "heard": "You do not need to manually enter your check-in  or check out time.",
+  "match": 1.0
+ },
+ {
+  "line": "s09_02",
+  "spoken": "The system automatically records the timestamp when you submit the Google Form.",
+  "heard": "The system automatically records the timestamp when you submit the Google form.",
+  "match": 1.0
+ },
+ {
+  "line": "s09_03",
+  "spoken": "For example, let's say your shift starts at eight A M.",
+  "heard": "For example, let's say your shift starts at 8 a.m.",
+  "match": 0.92
+ },
+ {
+  "line": "s09_04",
+  "spoken": "If you submit your Check-in form at eight oh five A M, the system will record the submission timestamp as eight oh five A M.",
+  "heard": "If you submit your check-in form at 805 AM, the system will record the submission timestamp as 805 AM.",
+  "match": 0.6
+ },
+ {
+  "line": "s09_05",
+  "spoken": "Similarly, if you complete your shift and submit your Check-out at eight ten P M, the system will record the submission timestamp as eight ten P M.",
+  "heard": "Similarly, if you complete your shift and submit your checkout at 8.10 p.m., the system will  record the submission time stamp as 8.10 p.m.",
+  "match": 0.81
+ },
+ {
+  "line": "s09_06",
+  "spoken": "You don't need to type any time manually.",
+  "heard": "You don't need to type any time manually.",
+  "match": 1.0
+ },
+ {
+  "line": "s09_07",
+  "spoken": "In fact, the forms do not provide a field for you to enter your own time.",
+  "heard": "In fact, the forms do not provide a field for you to enter your own time.",
+  "match": 1.0
+ },
+ {
+  "line": "s09_08",
+  "spoken": "The timestamp is automatically captured and reflected in the attendance Google Sheet.",
+  "heard": "The timestamp is automatically captured and reflected in the attendance Google Sheet.",
+  "match": 1.0
+ },
+ {
+  "line": "s09_09",
+  "spoken": "Therefore, please make sure you submit your Check-in when reporting for duty and your Check-out when completing your shift.",
+  "heard": "Therefore, please make sure you submit your check-in  when reporting for duty and your check-out  when completing your shift.",
+  "match": 1.0
+ },
+ {
+  "line": "s09_10",
+  "spoken": "Remember:",
+  "heard": "Remember.",
+  "match": 1.0
+ },
+ {
+  "line": "s09_11",
+  "spoken": "No manual time entry is required.",
+  "heard": "No manual time entry is required.",
+  "match": 1.0
+ },
+ {
+  "line": "s10_00",
+  "spoken": "Now, some of you might be wondering what happens after you submit the form.",
+  "heard": "Now some of you might be wondering what happens after you submit the form.",
+  "match": 1.0
+ },
+ {
+  "line": "s10_01",
+  "spoken": "Let me explain.",
+  "heard": "Let me explain.",
+  "match": 1.0
+ },
+ {
+  "line": "s10_02",
+  "spoken": "Once you press Submit, your attendance response is automatically recorded in our central Google Sheet.",
+  "heard": "Once you press Submit, your attendance response  is automatically recorded in our central Google Sheet.",
+  "match": 1.0
+ },
+ {
+  "line": "s10_03",
+  "spoken": "The system organises the information according to the team you selected.",
+  "heard": "The system organizes the information according to the team you selected.",
+  "match": 0.91
+ },
+ {
+  "line": "s10_04",
+  "spoken": "For example:",
+  "heard": "for example.",
+  "match": 1.0
+ },
+ {
+  "line": "s10_05",
+  "spoken": "If you select Alpha Team, your attendance will appear in the Alpha tab.",
+  "heard": "If you select Alpha Team, your attendance will appear in the Alpha tab.",
+  "match": 1.0
+ },
+ {
+  "line": "s10_06",
+  "spoken": "If you select Bravo Team, your attendance will appear in the Bravo tab.",
+  "heard": "If you select Bravo Team, your attendance will appear in the Bravo tab.",
+  "match": 1.0
+ },
+ {
+  "line": "s10_07",
+  "spoken": "The same applies to Charlie and Delta.",
+  "heard": "The same applies to Charlie and Delta.",
+  "match": 1.0
+ },
+ {
+  "line": "s10_08",
+  "spoken": "The Google Sheet contains your attendance information, including the recorded Check-in and Check-out timestamps.",
+  "heard": "The Google Sheet contains your attendance information,  including the recorded check-in and checkout timestamps.",
+  "match": 1.0
+ },
+ {
+  "line": "s10_09",
+  "spoken": "These records can be monitored and reviewed by authorised supervisors.",
+  "heard": "These records can be monitored and reviewed by authorized supervisors.",
+  "match": 0.9
+ },
+ {
+  "line": "s10_10",
+  "spoken": "As staff, you do not need to access or manually update the Google Sheet.",
+  "heard": "As staff, you do not need to access or manually update the Google Sheet.",
+  "match": 1.0
+ },
+ {
+  "line": "s10_11",
+  "spoken": "Your responsibility is to use the correct Q R codes, complete the forms accurately, and verify that each submission is successful.",
+  "heard": "Your responsibility is to use the correct QR codes,  complete the forms accurately,  and verify that each submission is successful.",
+  "match": 0.9
+ },
+ {
+  "line": "s11_00",
+  "spoken": "Before we finish, I want to highlight a few common mistakes that everyone should avoid.",
+  "heard": "Before we finish, I want to highlight a few common mistakes that everyone should avoid.",
+  "match": 1.0
+ },
+ {
+  "line": "s11_01",
+  "spoken": "Mistake one. Scanning the wrong Q R code.",
+  "heard": "Mistake one, scanning the wrong QR code.",
+  "match": 0.75
+ },
+ {
+  "line": "s11_02",
+  "spoken": "Some staff may accidentally scan the Check-out Q R code when starting duty.",
+  "heard": "Some staff may accidentally scan the checkout QR code when starting duty.",
+  "match": 0.85
+ },
+ {
+  "line": "s11_03",
+  "spoken": "Always remember:",
+  "heard": "Always remember.",
+  "match": 1.0
+ },
+ {
+  "line": "s11_04",
+  "spoken": "Green for Check-in and red for Check-out.",
+  "heard": "green for check-in and red for check-out.",
+  "match": 1.0
+ },
+ {
+  "line": "s11_05",
+  "spoken": "Mistake two. Selecting the wrong team.",
+  "heard": "Mistake two, selecting the wrong team.",
+  "match": 1.0
+ },
+ {
+  "line": "s11_06",
+  "spoken": "Always verify that you have selected your assigned team.",
+  "heard": "always verify that you have selected your assigned team.",
+  "match": 1.0
+ },
+ {
+  "line": "s11_07",
+  "spoken": "If you accidentally submit attendance under the wrong team, immediately inform your respective D S E.",
+  "heard": "If you accidentally submit attendance under the wrong team,  immediately inform your respective DSE.",
+  "match": 0.81
+ },
+ {
+  "line": "s11_08",
+  "spoken": "The D S E shall report the issue to the Operations Security Manager for correction.",
+  "heard": "The DSE shall report the issue to the Operations Security Manager for correction.",
+  "match": 0.8
+ },
+ {
+  "line": "s11_09",
+  "spoken": "Do not submit another form to try to fix the error yourself unless authorised.",
+  "heard": "Do not submit another form to try to fix the error yourself unless authorized.",
+  "match": 0.93
+ },
+ {
+  "line": "s11_10",
+  "spoken": "Mistake three. Entering the wrong Shift Start Date.",
+  "heard": "Mistake three, entering the wrong shift start date.",
+  "match": 1.0
+ },
+ {
+  "line": "s11_11",
+  "spoken": "This is particularly important for overnight shifts.",
+  "heard": "This is particularly important for overnight shifts.",
+  "match": 1.0
+ },
+ {
+  "line": "s11_12",
+  "spoken": "Remember that the shift start date must remain the same during both Check-in and Check-out.",
+  "heard": "Remember that the shift start date must remain the same during both check-in and check-out.",
+  "match": 1.0
+ },
+ {
+  "line": "s11_13",
+  "spoken": "Mistake four. Using a personal Gmail account.",
+  "heard": "Mistake 4 Using a Personal Gmail Account",
+  "match": 0.86
+ },
+ {
+  "line": "s11_14",
+  "spoken": "Always use your official AirAsia Google account when completing both forms.",
+  "heard": "Always use your official AirAsia Google account when completing both forms.",
+  "match": 1.0
+ },
+ {
+  "line": "s11_15",
+  "spoken": "Mistake five. Submitting multiple responses.",
+  "heard": "Mistake 5 – Submitting Multiple Responses",
+  "match": 0.8
+ },
+ {
+  "line": "s11_16",
+  "spoken": "You only need one successful Check-in and one successful Check-out for each shift.",
+  "heard": "You only need one successful check-in and one successful check-out for each shift.",
+  "match": 1.0
+ },
+ {
+  "line": "s11_17",
+  "spoken": "If you have received the confirmation message, do not submit another response.",
+  "heard": "If you have received the confirmation message,  do not submit another response.",
+  "match": 1.0
+ },
+ {
+  "line": "s11_18",
+  "spoken": "Mistake six. Forgetting to Check out.",
+  "heard": "Mistake 6 for getting to check out.",
+  "match": 0.6
+ },
+ {
+  "line": "s11_19",
+  "spoken": "Some personnel may complete their Check-in but forget to submit their Check-out.",
+  "heard": "Some personnel may complete their check-in, but forget to submit their check-out.",
+  "match": 1.0
+ },
+ {
+  "line": "s11_20",
+  "spoken": "This will result in an incomplete attendance record.",
+  "heard": "This will result in an incomplete attendance record.",
+  "match": 1.0
+ },
+ {
+  "line": "s11_21",
+  "spoken": "Therefore, before leaving duty, always ensure that your Check-out has been properly submitted.",
+  "heard": "Therefore, before leaving duty,  always ensure that your checkout  has been properly submitted.",
+  "match": 1.0
+ },
+ {
+  "line": "s11_22",
+  "spoken": "If you encounter any issues or realise that you have submitted incorrect information, inform your respective D S E so the matter can be reported through the proper channel.",
+  "heard": "If you encounter any issues or realize that you have submitted incorrect information, inform  your respective DSE so the matter can be reported through the proper channel.",
+  "match": 0.86
+ },
+ {
+  "line": "s12_00",
+  "spoken": "Alright, everyone. Before we end today's briefing, let's quickly recap the whole procedure.",
+  "heard": "All right, everyone, before we end today's briefing,  let's quickly recap the whole procedure.",
+  "match": 0.93
+ },
+ {
+  "line": "s12_01",
+  "spoken": "At the beginning of your shift:",
+  "heard": "at the beginning of your shift.",
+  "match": 1.0
+ },
+ {
+  "line": "s12_02",
+  "spoken": "Scan the green Check-in Q R code.",
+  "heard": "Scan the green check-in QR code.",
+  "match": 0.71
+ },
+ {
+  "line": "s12_03",
+  "spoken": "Sign in using your official AirAsia Google account.",
+  "heard": "Sign in using your official AirAsia Google account.",
+  "match": 1.0
+ },
+ {
+  "line": "s12_04",
+  "spoken": "Complete all the required information, including your designation, shift start date, team, name, and Staff I D.",
+  "heard": "Complete all the required information, including your designation, shift start date, team, name, and staff ID.",
+  "match": 0.88
+ },
+ {
+  "line": "s12_05",
+  "spoken": "Review your details, press Submit once, and verify that your response has been recorded.",
+  "heard": "Review your details, press Submit once, and verify that your response has been recorded.",
+  "match": 1.0
+ },
+ {
+  "line": "s12_06",
+  "spoken": "At the end of your shift:",
+  "heard": "at the end of your shift.",
+  "match": 1.0
+ },
+ {
+  "line": "s12_07",
+  "spoken": "Scan the red Check-out Q R code.",
+  "heard": "Scan the red checkout QR code.",
+  "match": 0.71
+ },
+ {
+  "line": "s12_08",
+  "spoken": "Use the same official AirAsia Google account.",
+  "heard": "use the same official AirAsia Google account.",
+  "match": 1.0
+ },
+ {
+  "line": "s12_09",
+  "spoken": "Enter the same Staff I D and shift start date, and select your correct team.",
+  "heard": "Enter the same staff ID and shift start date and select your correct team.",
+  "match": 0.87
+ },
+ {
+  "line": "s12_10",
+  "spoken": "Press Submit once and wait for the confirmation message.",
+  "heard": "Press Submit once and wait for the confirmation message.",
+  "match": 1.0
+ },
+ {
+  "line": "s12_11",
+  "spoken": "Now, there are three important rules I want everyone to remember:",
+  "heard": "Now there are three important rules I want everyone to remember.",
+  "match": 1.0
+ },
+ {
+  "line": "s12_12",
+  "spoken": "Rule one. Always use your official AirAsia Google account.",
+  "heard": "Rule one, always use your official AirAsia Google account.",
+  "match": 1.0
+ },
+ {
+  "line": "s12_13",
+  "spoken": "Rule two. Never enter or change the attendance time manually. The system records it automatically.",
+  "heard": "Rule two, never enter or change the attendance time manually.  The system records it automatically.",
+  "match": 1.0
+ },
+ {
+  "line": "s12_14",
+  "spoken": "Rule three. Submit each form only once per shift and always verify the confirmation message.",
+  "heard": "Rule 3.  Submit each form only once per shift  and always verify the confirmation message.",
+  "match": 0.93
+ },
+ {
+  "line": "s12_15",
+  "spoken": "And one additional reminder:",
+  "heard": "and one additional reminder.",
+  "match": 1.0
+ },
+ {
+  "line": "s12_16",
+  "spoken": "If you accidentally submit incorrect attendance information, immediately report it to your respective D S E.",
+  "heard": "If you accidentally submit incorrect attendance information,  immediately report it to your respective DSE.",
+  "match": 0.81
+ },
+ {
+  "line": "s12_17",
+  "spoken": "The D S E shall escalate the matter to the Operations Security Manager for the necessary correction.",
+  "heard": "The DSE shall escalate the matter to the Operations Security Manager for the necessary correction.",
+  "match": 0.82
+ },
+ {
+  "line": "s12_18",
+  "spoken": "The purpose of this procedure is to ensure that our attendance records remain accurate, properly organised, and available for authorised supervisory review.",
+  "heard": "The purpose of this procedure is to ensure that our attendance records remain accurate,  properly organized, and available for authorized supervisory review.",
+  "match": 0.91
+ },
+ {
+  "line": "s12_19",
+  "spoken": "Everyone is responsible for ensuring that their attendance is recorded correctly.",
+  "heard": "Everyone is responsible for ensuring that their attendance is recorded correctly.",
+  "match": 1.0
+ },
+ {
+  "line": "s12_20",
+  "spoken": "That concludes the briefing on the A A, sec, F, zero seven seven Attendance Record.",
+  "heard": "That concludes the briefing on the AA, SEC, F077 attendance record.",
+  "match": 0.6
+ },
+ {
+  "line": "s12_21",
+  "spoken": "Thank you, everyone, for your attention and cooperation.",
+  "heard": "Thank you everyone for your attention and cooperation.",
+  "match": 1.0
+ },
+ {
+  "line": "s12_22",
+  "spoken": "Before we finish, does anyone have any questions regarding the Check-in or Check-out procedure?",
+  "heard": "Before we finish, does anyone have any questions regarding the check-in or check-out procedure?",
+  "match": 1.0
+ },
+ {
+  "line": "s13_00",
+  "spoken": "Staff understanding check. Let's see how much you remember.",
+  "heard": "Staff understanding check.  Let's see how much you remember.",
+  "match": 1.0
+ },
+ {
+  "line": "s13_01",
+  "spoken": "Question one. Which Q R code should you scan at the beginning of your shift?",
+  "heard": "Question one, which QR code should you scan at the beginning of your shift?",
+  "match": 0.87
+ },
+ {
+  "line": "s13_02",
+  "spoken": "The green Check-in Q R code.",
+  "heard": "the green check-in QR code.",
+  "match": 0.67
+ },
+ {
+  "line": "s13_03",
+  "spoken": "Question two. Which Q R code should you scan after completing your shift?",
+  "heard": "Question two, which QR code should you scan  after completing your shift?",
+  "match": 0.85
+ },
+ {
+  "line": "s13_04",
+  "spoken": "The red Check-out Q R code.",
+  "heard": "the red checkout QR code.",
+  "match": 0.67
+ },
+ {
+  "line": "s13_05",
+  "spoken": "Question three. Can you use your personal Gmail account?",
+  "heard": "Question three, can you use your personal Gmail account?",
+  "match": 1.0
+ },
+ {
+  "line": "s13_06",
+  "spoken": "No. Only the official AirAsia Google account should be used.",
+  "heard": "No, only the official AirAsia Google account should be used.",
+  "match": 1.0
+ },
+ {
+  "line": "s13_07",
+  "spoken": "Question four. If your shift starts on the eleventh of November at eight P M and ends on the twelfth of November at eight A M, which date should you select during Check-out?",
+  "heard": "Question 4. If your shift starts on the 11th of November at 8 p.m. and ends on the 12th  of November at 8 a.m., which date should you select during checkout?",
+  "match": 0.85
+ },
+ {
+  "line": "s13_08",
+  "spoken": "The eleventh of November, because that is the shift start date.",
+  "heard": "the 11th of November, because that is the shift start date.",
+  "match": 0.91
+ },
+ {
+  "line": "s13_09",
+  "spoken": "Question five. If you accidentally select Alpha Team instead of Bravo Team and have already submitted the form, what should you do?",
+  "heard": "Question five, if you accidentally select alpha team  instead of bravo team and have already submitted the form,  what should you do?",
+  "match": 1.0
+ },
+ {
+  "line": "s13_10",
+  "spoken": "Immediately inform the respective D S E. The D S E shall report the error to the Operations Security Manager for the necessary attendance correction.",
+  "heard": "immediately inform the respective DSE.  The DSE shall report the error  to the Operations Security Manager  for the necessary attendance correction.",
+  "match": 0.76
+ },
+ {
+  "line": "s13_11",
+  "spoken": "Question six. Do you need to manually enter your Check-in and Check-out times?",
+  "heard": "Question 6. Do you need to manually enter your check-in and check-out times?",
+  "match": 0.92
+ },
+ {
+  "line": "s13_12",
+  "spoken": "No. The system automatically records the time of submission.",
+  "heard": "No, the system automatically records the time of submission.",
+  "match": 1.0
+ },
+ {
+  "line": "s13_13",
+  "spoken": "Question seven. How do you confirm your attendance was successfully submitted?",
+  "heard": "Question 7 – How do you confirm your attendance was successfully submitted?",
+  "match": 0.91
+ },
+ {
+  "line": "s13_14",
+  "spoken": "The Google Form displays: Your response has been recorded.",
+  "heard": "The Google Form displays.  Your response has been recorded.",
+  "match": 1.0
+ },
+ {
+  "line": "s13_15",
+  "spoken": "Question eight. Can you submit the same Check-in form multiple times?",
+  "heard": "Question 8 – Can you submit the same check-in form multiple times?",
+  "match": 0.91
+ },
+ {
+  "line": "s13_16",
+  "spoken": "No. Only one successful Check-in submission is required per shift.",
+  "heard": "No, only one successful check-in submission is required per shift.",
+  "match": 1.0
+ },
+ {
+  "line": "s13_17",
+  "spoken": "Question nine. Who can review the attendance records in the central Google Sheet?",
+  "heard": "Question 9 – Who can review the attendance records in the central Google Sheet?",
+  "match": 0.92
+ },
+ {
+  "line": "s13_18",
+  "spoken": "Authorised supervisors.",
+  "heard": "Authorized supervisors.",
+  "match": 0.5
+ },
+ {
+  "line": "s13_19",
+  "spoken": "Question ten. What must you do before completing your duty?",
+  "heard": "Question 10, what must you do before completing your duty?",
+  "match": 0.9
+ },
+ {
+  "line": "s13_20",
+  "spoken": "Scan the red Check-out Q R code, complete the form, submit it, and verify the confirmation.",
+  "heard": "Scan the red checkout QR code, complete the form, submit it, and verify the confirmation.",
+  "match": 0.88
+ }
+]
