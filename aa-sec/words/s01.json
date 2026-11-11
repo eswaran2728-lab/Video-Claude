@@ -1,0 +1,230 @@
+[
+  {
+    "text": "Welcome,",
+    "start": 0.03,
+    "end": 0.65,
+    "id": "w0"
+  },
+  {
+    "text": "this",
+    "start": 0.65,
+    "end": 0.94,
+    "id": "w1"
+  },
+  {
+    "text": "guide",
+    "start": 0.94,
+    "end": 1.29,
+    "id": "w2"
+  },
+  {
+    "text": "shows",
+    "start": 1.29,
+    "end": 1.65,
+    "id": "w3"
+  },
+  {
+    "text": "you",
+    "start": 1.65,
+    "end": 1.88,
+    "id": "w4"
+  },
+  {
+    "text": "how",
+    "start": 1.88,
+    "end": 1.99,
+    "id": "w5"
+  },
+  {
+    "text": "to",
+    "start": 2.11,
+    "end": 2.24,
+    "id": "w6"
+  },
+  {
+    "text": "use",
+    "start": 2.24,
+    "end": 2.46,
+    "id": "w7"
+  },
+  {
+    "text": "the",
+    "start": 2.46,
+    "end": 2.68,
+    "id": "w8"
+  },
+  {
+    "text": "4a,",
+    "start": 2.68,
+    "end": 3.11,
+    "id": "w9"
+  },
+  {
+    "text": "a,",
+    "start": 3.11,
+    "end": 3.3,
+    "id": "w10"
+  },
+  {
+    "text": "sec",
+    "start": 3.36,
+    "end": 3.54,
+    "id": "w11"
+  },
+  {
+    "text": "signing",
+    "start": 3.54,
+    "end": 4.05,
+    "id": "w12"
+  },
+  {
+    "text": "forms",
+    "start": 4.05,
+    "end": 4.41,
+    "id": "w13"
+  },
+  {
+    "text": "on",
+    "start": 4.41,
+    "end": 4.55,
+    "id": "w14"
+  },
+  {
+    "text": "your",
+    "start": 4.55,
+    "end": 4.68,
+    "id": "w15"
+  },
+  {
+    "text": "phone.",
+    "start": 5.28,
+    "end": 5.34,
+    "id": "w16"
+  },
+  {
+    "text": "The",
+    "start": 5.37,
+    "end": 5.52,
+    "id": "w17"
+  },
+  {
+    "text": "basic",
+    "start": 5.59,
+    "end": 6.01,
+    "id": "w18"
+  },
+  {
+    "text": "process",
+    "start": 6.01,
+    "end": 6.6,
+    "id": "w19"
+  },
+  {
+    "text": "is,",
+    "start": 6.6,
+    "end": 6.88,
+    "id": "w20"
+  },
+  {
+    "text": "fill",
+    "start": 6.88,
+    "end": 7.08,
+    "id": "w21"
+  },
+  {
+    "text": "in",
+    "start": 7.08,
+    "end": 7.18,
+    "id": "w22"
+  },
+  {
+    "text": "the",
+    "start": 7.18,
+    "end": 7.33,
+    "id": "w23"
+  },
+  {
+    "text": "details,",
+    "start": 7.45,
+    "end": 7.78,
+    "id": "w24"
+  },
+  {
+    "text": "pass",
+    "start": 7.78,
+    "end": 7.98,
+    "id": "w25"
+  },
+  {
+    "text": "the",
+    "start": 7.98,
+    "end": 8.13,
+    "id": "w26"
+  },
+  {
+    "text": "phone",
+    "start": 8.13,
+    "end": 8.37,
+    "id": "w27"
+  },
+  {
+    "text": "to",
+    "start": 8.37,
+    "end": 8.48,
+    "id": "w28"
+  },
+  {
+    "text": "the",
+    "start": 8.48,
+    "end": 8.54,
+    "id": "w29"
+  },
+  {
+    "text": "signer",
+    "start": 8.64,
+    "end": 8.93,
+    "id": "w30"
+  },
+  {
+    "text": "and",
+    "start": 8.93,
+    "end": 9.08,
+    "id": "w31"
+  },
+  {
+    "text": "let",
+    "start": 9.08,
+    "end": 9.23,
+    "id": "w32"
+  },
+  {
+    "text": "each",
+    "start": 9.23,
+    "end": 9.46,
+    "id": "w33"
+  },
+  {
+    "text": "person",
+    "start": 9.49,
+    "end": 9.89,
+    "id": "w34"
+  },
+  {
+    "text": "sign",
+    "start": 9.89,
+    "end": 10.17,
+    "id": "w35"
+  },
+  {
+    "text": "for",
+    "start": 10.17,
+    "end": 10.38,
+    "id": "w36"
+  },
+  {
+    "text": "themselves.",
+    "start": 10.38,
+    "end": 11.12,
+    "id": "w37"
+  }
+]

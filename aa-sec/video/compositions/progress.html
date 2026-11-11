@@ -1,0 +1,23 @@
+<template>
+  <style>
+    #root { position:absolute; inset:0; pointer-events:none; }
+    #progress-bar { position:absolute; left:0; right:0; bottom:0; height:8px; }
+    #progress-bar .seg { position:absolute; top:0; height:8px; background:rgba(0,0,0,0.12); overflow:hidden; }
+    #progress-bar .fill { position:absolute; inset:0; background:#1A1A1A; transform-origin:left center; }
+  </style>
+  <div id="root" data-composition-id="progress" data-width="1920" data-height="1080">
+    <div id="progress-bar" data-layout-ignore><div class="seg" style="left:0.0px;width:217.0px"><div id="seg0" class="fill"></div></div><div class="seg" style="left:221.0px;width:764.9px"><div id="seg1" class="fill"></div></div><div class="seg" style="left:989.9px;width:219.4px"><div id="seg2" class="fill"></div></div><div class="seg" style="left:1213.3px;width:226.4px"><div id="seg3" class="fill"></div></div><div class="seg" style="left:1443.7px;width:196.6px"><div id="seg4" class="fill"></div></div><div class="seg" style="left:1644.4px;width:271.6px"><div id="seg5" class="fill"></div></div></div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#seg0", {scaleX:0}, {scaleX:1, duration:63.71, ease:"none"}, 0.00);
+      tl.fromTo("#seg1", {scaleX:0}, {scaleX:1, duration:221.65, ease:"none"}, 63.71);
+      tl.fromTo("#seg2", {scaleX:0}, {scaleX:1, duration:64.40, ease:"none"}, 285.36);
+      tl.fromTo("#seg3", {scaleX:0}, {scaleX:1, duration:66.42, ease:"none"}, 349.76);
+      tl.fromTo("#seg4", {scaleX:0}, {scaleX:1, duration:57.84, ease:"none"}, 416.18);
+      tl.fromTo("#seg5", {scaleX:0}, {scaleX:1, duration:79.45, ease:"none"}, 474.02);
+      window.__timelines["progress"] = tl;
+    })();
+  </script>
+</template>

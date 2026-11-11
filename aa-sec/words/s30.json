@@ -1,0 +1,128 @@
+[
+  {
+    "text": "Return",
+    "start": 0.04,
+    "end": 0.49,
+    "id": "w0"
+  },
+  {
+    "text": "to",
+    "start": 0.49,
+    "end": 0.64,
+    "id": "w1"
+  },
+  {
+    "text": "the",
+    "start": 0.65,
+    "end": 0.76,
+    "id": "w2"
+  },
+  {
+    "text": "app",
+    "start": 0.9,
+    "end": 1.13,
+    "id": "w3"
+  },
+  {
+    "text": "home",
+    "start": 1.13,
+    "end": 1.45,
+    "id": "w4"
+  },
+  {
+    "text": "screen",
+    "start": 1.45,
+    "end": 1.86,
+    "id": "w5"
+  },
+  {
+    "text": "and",
+    "start": 1.97,
+    "end": 2.15,
+    "id": "w6"
+  },
+  {
+    "text": "tap",
+    "start": 2.2,
+    "end": 2.41,
+    "id": "w7"
+  },
+  {
+    "text": "no",
+    "start": 2.52,
+    "end": 2.58,
+    "id": "w8"
+  },
+  {
+    "text": "talk",
+    "start": 2.58,
+    "end": 2.9,
+    "id": "w9"
+  },
+  {
+    "text": "firearm.",
+    "start": 2.9,
+    "end": 3.52,
+    "id": "w10"
+  },
+  {
+    "text": "Check",
+    "start": 3.56,
+    "end": 3.78,
+    "id": "w11"
+  },
+  {
+    "text": "that",
+    "start": 3.78,
+    "end": 3.98,
+    "id": "w12"
+  },
+  {
+    "text": "you",
+    "start": 4,
+    "end": 4.13,
+    "id": "w13"
+  },
+  {
+    "text": "opened",
+    "start": 4.13,
+    "end": 4.44,
+    "id": "w14"
+  },
+  {
+    "text": "the",
+    "start": 4.45,
+    "end": 4.6,
+    "id": "w15"
+  },
+  {
+    "text": "correct",
+    "start": 4.6,
+    "end": 4.96,
+    "id": "w16"
+  },
+  {
+    "text": "form",
+    "start": 4.96,
+    "end": 5.2,
+    "id": "w17"
+  },
+  {
+    "text": "before",
+    "start": 5.2,
+    "end": 5.57,
+    "id": "w18"
+  },
+  {
+    "text": "entering",
+    "start": 5.57,
+    "end": 6.07,
+    "id": "w19"
+  },
+  {
+    "text": "details.",
+    "start": 6.07,
+    "end": 6.52,
+    "id": "w20"
+  }
+]

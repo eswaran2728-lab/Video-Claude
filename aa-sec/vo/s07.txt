@@ -1,0 +1,1 @@
+Let us start with FOCA. Security staff complete the checklist. The Airline Representative enters their own name and ID, then signs. The Security Representative enters their own name and ID, signs, and saves the record.

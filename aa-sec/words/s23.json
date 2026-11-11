@@ -1,0 +1,134 @@
+[
+  {
+    "text": "When",
+    "start": 0.04,
+    "end": 0.32,
+    "id": "w0"
+  },
+  {
+    "text": "the",
+    "start": 0.32,
+    "end": 0.56,
+    "id": "w1"
+  },
+  {
+    "text": "form",
+    "start": 0.56,
+    "end": 0.83,
+    "id": "w2"
+  },
+  {
+    "text": "is",
+    "start": 0.87,
+    "end": 1,
+    "id": "w3"
+  },
+  {
+    "text": "ready",
+    "start": 1.06,
+    "end": 1.44,
+    "id": "w4"
+  },
+  {
+    "text": "tap",
+    "start": 1.44,
+    "end": 1.68,
+    "id": "w5"
+  },
+  {
+    "text": "save",
+    "start": 1.68,
+    "end": 1.99,
+    "id": "w6"
+  },
+  {
+    "text": "record",
+    "start": 1.99,
+    "end": 2.35,
+    "id": "w7"
+  },
+  {
+    "text": "once,",
+    "start": 2.84,
+    "end": 2.94,
+    "id": "w8"
+  },
+  {
+    "text": "the",
+    "start": 2.97,
+    "end": 3.05,
+    "id": "w9"
+  },
+  {
+    "text": "button",
+    "start": 3.09,
+    "end": 3.4,
+    "id": "w10"
+  },
+  {
+    "text": "changes",
+    "start": 3.4,
+    "end": 3.76,
+    "id": "w11"
+  },
+  {
+    "text": "to",
+    "start": 3.76,
+    "end": 3.86,
+    "id": "w12"
+  },
+  {
+    "text": "saving",
+    "start": 3.87,
+    "end": 4.17,
+    "id": "w13"
+  },
+  {
+    "text": "while",
+    "start": 4.17,
+    "end": 4.42,
+    "id": "w14"
+  },
+  {
+    "text": "the",
+    "start": 4.42,
+    "end": 4.57,
+    "id": "w15"
+  },
+  {
+    "text": "app",
+    "start": 4.57,
+    "end": 4.69,
+    "id": "w16"
+  },
+  {
+    "text": "works,",
+    "start": 4.8,
+    "end": 5.3,
+    "id": "w17"
+  },
+  {
+    "text": "wait",
+    "start": 5.3,
+    "end": 5.59,
+    "id": "w18"
+  },
+  {
+    "text": "for",
+    "start": 5.62,
+    "end": 5.83,
+    "id": "w19"
+  },
+  {
+    "text": "the",
+    "start": 5.84,
+    "end": 6.07,
+    "id": "w20"
+  },
+  {
+    "text": "result.",
+    "start": 6.07,
+    "end": 6.56,
+    "id": "w21"
+  }
+]

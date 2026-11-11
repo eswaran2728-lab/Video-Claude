@@ -1,0 +1,1 @@
+Enter the departure or arrival station, flight number, date, and aircraft registration. Use the information for the actual flight.

@@ -1,0 +1,164 @@
+[
+  {
+    "text": "Now",
+    "start": 0.04,
+    "end": 0.2,
+    "id": "w0"
+  },
+  {
+    "text": "let",
+    "start": 0.2,
+    "end": 0.4,
+    "id": "w1"
+  },
+  {
+    "text": "us",
+    "start": 0.4,
+    "end": 0.53,
+    "id": "w2"
+  },
+  {
+    "text": "look",
+    "start": 0.53,
+    "end": 0.8,
+    "id": "w3"
+  },
+  {
+    "text": "at",
+    "start": 0.8,
+    "end": 0.93,
+    "id": "w4"
+  },
+  {
+    "text": "acknowledgement",
+    "start": 0.93,
+    "end": 1.96,
+    "id": "w5"
+  },
+  {
+    "text": "of",
+    "start": 1.96,
+    "end": 2.02,
+    "id": "w6"
+  },
+  {
+    "text": "receipt.",
+    "start": 2.12,
+    "end": 2.64,
+    "id": "w7"
+  },
+  {
+    "text": "This",
+    "start": 2.68,
+    "end": 2.96,
+    "id": "w8"
+  },
+  {
+    "text": "form",
+    "start": 2.96,
+    "end": 3.25,
+    "id": "w9"
+  },
+  {
+    "text": "records",
+    "start": 3.3,
+    "end": 3.83,
+    "id": "w10"
+  },
+  {
+    "text": "items",
+    "start": 3.83,
+    "end": 4.21,
+    "id": "w11"
+  },
+  {
+    "text": "being",
+    "start": 4.27,
+    "end": 4.63,
+    "id": "w12"
+  },
+  {
+    "text": "handed",
+    "start": 4.63,
+    "end": 4.8,
+    "id": "w13"
+  },
+  {
+    "text": "over.",
+    "start": 5.31,
+    "end": 5.44,
+    "id": "w14"
+  },
+  {
+    "text": "Security",
+    "start": 5.48,
+    "end": 5.99,
+    "id": "w15"
+  },
+  {
+    "text": "staff",
+    "start": 6.01,
+    "end": 6.37,
+    "id": "w16"
+  },
+  {
+    "text": "enter",
+    "start": 6.44,
+    "end": 6.7,
+    "id": "w17"
+  },
+  {
+    "text": "the",
+    "start": 6.75,
+    "end": 6.94,
+    "id": "w18"
+  },
+  {
+    "text": "details,",
+    "start": 6.95,
+    "end": 7.48,
+    "id": "w19"
+  },
+  {
+    "text": "then",
+    "start": 7.52,
+    "end": 7.73,
+    "id": "w20"
+  },
+  {
+    "text": "each",
+    "start": 7.73,
+    "end": 7.95,
+    "id": "w21"
+  },
+  {
+    "text": "named",
+    "start": 7.98,
+    "end": 8.28,
+    "id": "w22"
+  },
+  {
+    "text": "person",
+    "start": 8.3,
+    "end": 8.68,
+    "id": "w23"
+  },
+  {
+    "text": "signs",
+    "start": 8.68,
+    "end": 9,
+    "id": "w24"
+  },
+  {
+    "text": "for",
+    "start": 9,
+    "end": 9.19,
+    "id": "w25"
+  },
+  {
+    "text": "themselves.",
+    "start": 9.19,
+    "end": 10.06,
+    "id": "w26"
+  }
+]

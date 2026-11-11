@@ -1,0 +1,158 @@
+[
+  {
+    "text": "Enter",
+    "start": 0.03,
+    "end": 0.41,
+    "id": "w0"
+  },
+  {
+    "text": "the",
+    "start": 0.42,
+    "end": 0.65,
+    "id": "w1"
+  },
+  {
+    "text": "security",
+    "start": 0.65,
+    "end": 1.19,
+    "id": "w2"
+  },
+  {
+    "text": "staff",
+    "start": 1.31,
+    "end": 1.72,
+    "id": "w3"
+  },
+  {
+    "text": "details.",
+    "start": 1.72,
+    "end": 2.47,
+    "id": "w4"
+  },
+  {
+    "text": "Select",
+    "start": 2.47,
+    "end": 2.78,
+    "id": "w5"
+  },
+  {
+    "text": "the",
+    "start": 2.78,
+    "end": 2.89,
+    "id": "w6"
+  },
+  {
+    "text": "witness",
+    "start": 2.94,
+    "end": 3.22,
+    "id": "w7"
+  },
+  {
+    "text": "option",
+    "start": 3.31,
+    "end": 3.6,
+    "id": "w8"
+  },
+  {
+    "text": "only",
+    "start": 3.6,
+    "end": 3.8,
+    "id": "w9"
+  },
+  {
+    "text": "if",
+    "start": 3.8,
+    "end": 3.87,
+    "id": "w10"
+  },
+  {
+    "text": "a",
+    "start": 3.87,
+    "end": 3.95,
+    "id": "w11"
+  },
+  {
+    "text": "witness",
+    "start": 3.95,
+    "end": 4.36,
+    "id": "w12"
+  },
+  {
+    "text": "is",
+    "start": 4.36,
+    "end": 4.5,
+    "id": "w13"
+  },
+  {
+    "text": "involved",
+    "start": 4.54,
+    "end": 4.99,
+    "id": "w14"
+  },
+  {
+    "text": "and",
+    "start": 5.11,
+    "end": 5.36,
+    "id": "w15"
+  },
+  {
+    "text": "will",
+    "start": 5.36,
+    "end": 5.75,
+    "id": "w16"
+  },
+  {
+    "text": "sign.",
+    "start": 5.75,
+    "end": 6.44,
+    "id": "w17"
+  },
+  {
+    "text": "Check",
+    "start": 6.44,
+    "end": 6.74,
+    "id": "w18"
+  },
+  {
+    "text": "the",
+    "start": 6.74,
+    "end": 6.92,
+    "id": "w19"
+  },
+  {
+    "text": "form,",
+    "start": 6.92,
+    "end": 7.28,
+    "id": "w20"
+  },
+  {
+    "text": "then",
+    "start": 7.46,
+    "end": 7.52,
+    "id": "w21"
+  },
+  {
+    "text": "tap",
+    "start": 7.52,
+    "end": 7.67,
+    "id": "w22"
+  },
+  {
+    "text": "Continue",
+    "start": 7.81,
+    "end": 8.16,
+    "id": "w23"
+  },
+  {
+    "text": "to",
+    "start": 8.2,
+    "end": 8.3,
+    "id": "w24"
+  },
+  {
+    "text": "signatures.",
+    "start": 8.38,
+    "end": 9.16,
+    "id": "w25"
+  }
+]

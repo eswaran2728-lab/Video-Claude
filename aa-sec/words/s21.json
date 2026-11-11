@@ -1,0 +1,158 @@
+[
+  {
+    "text": "The",
+    "start": 0.05,
+    "end": 0.18,
+    "id": "w0"
+  },
+  {
+    "text": "security",
+    "start": 0.18,
+    "end": 0.66,
+    "id": "w1"
+  },
+  {
+    "text": "representative",
+    "start": 0.66,
+    "end": 1.5,
+    "id": "w2"
+  },
+  {
+    "text": "enters",
+    "start": 1.5,
+    "end": 1.86,
+    "id": "w3"
+  },
+  {
+    "text": "their",
+    "start": 1.86,
+    "end": 2.16,
+    "id": "w4"
+  },
+  {
+    "text": "own",
+    "start": 2.16,
+    "end": 2.34,
+    "id": "w5"
+  },
+  {
+    "text": "name",
+    "start": 2.34,
+    "end": 2.58,
+    "id": "w6"
+  },
+  {
+    "text": "and",
+    "start": 2.61,
+    "end": 3,
+    "id": "w7"
+  },
+  {
+    "text": "ID",
+    "start": 3,
+    "end": 3.21,
+    "id": "w8"
+  },
+  {
+    "text": "or",
+    "start": 3.31,
+    "end": 3.5,
+    "id": "w9"
+  },
+  {
+    "text": "staff",
+    "start": 3.5,
+    "end": 4.05,
+    "id": "w10"
+  },
+  {
+    "text": "number.",
+    "start": 4.05,
+    "end": 4.74,
+    "id": "w11"
+  },
+  {
+    "text": "Check",
+    "start": 4.79,
+    "end": 5.13,
+    "id": "w12"
+  },
+  {
+    "text": "these",
+    "start": 5.13,
+    "end": 5.52,
+    "id": "w13"
+  },
+  {
+    "text": "details",
+    "start": 5.52,
+    "end": 6.06,
+    "id": "w14"
+  },
+  {
+    "text": "carefully.",
+    "start": 6.06,
+    "end": 6.78,
+    "id": "w15"
+  },
+  {
+    "text": "Do",
+    "start": 6.83,
+    "end": 6.9,
+    "id": "w16"
+  },
+  {
+    "text": "not",
+    "start": 6.9,
+    "end": 7.07,
+    "id": "w17"
+  },
+  {
+    "text": "enter",
+    "start": 7.1,
+    "end": 7.39,
+    "id": "w18"
+  },
+  {
+    "text": "the",
+    "start": 7.39,
+    "end": 7.56,
+    "id": "w19"
+  },
+  {
+    "text": "airline",
+    "start": 7.67,
+    "end": 7.97,
+    "id": "w20"
+  },
+  {
+    "text": "representative's",
+    "start": 8.02,
+    "end": 8.98,
+    "id": "w21"
+  },
+  {
+    "text": "details",
+    "start": 8.98,
+    "end": 9.41,
+    "id": "w22"
+  },
+  {
+    "text": "in",
+    "start": 9.41,
+    "end": 9.53,
+    "id": "w23"
+  },
+  {
+    "text": "these",
+    "start": 9.53,
+    "end": 9.84,
+    "id": "w24"
+  },
+  {
+    "text": "boxes.",
+    "start": 9.84,
+    "end": 10.2,
+    "id": "w25"
+  }
+]

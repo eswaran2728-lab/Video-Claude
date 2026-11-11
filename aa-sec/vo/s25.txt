@@ -1,0 +1,1 @@
+After saving, tap "Open the completed PDF." The signed PDF opens in Google Drive.

@@ -1,0 +1,140 @@
+[
+  {
+    "text": "The",
+    "start": 0.03,
+    "end": 0.22,
+    "id": "w0"
+  },
+  {
+    "text": "fourth",
+    "start": 0.22,
+    "end": 0.67,
+    "id": "w1"
+  },
+  {
+    "text": "form",
+    "start": 0.67,
+    "end": 0.97,
+    "id": "w2"
+  },
+  {
+    "text": "is",
+    "start": 0.97,
+    "end": 1.12,
+    "id": "w3"
+  },
+  {
+    "text": "Search",
+    "start": 1.12,
+    "end": 1.5,
+    "id": "w4"
+  },
+  {
+    "text": "List.",
+    "start": 1.88,
+    "end": 2.04,
+    "id": "w5"
+  },
+  {
+    "text": "Security",
+    "start": 2.08,
+    "end": 2.53,
+    "id": "w6"
+  },
+  {
+    "text": "staff",
+    "start": 2.54,
+    "end": 2.85,
+    "id": "w7"
+  },
+  {
+    "text": "enter",
+    "start": 2.85,
+    "end": 3.14,
+    "id": "w8"
+  },
+  {
+    "text": "the",
+    "start": 3.17,
+    "end": 3.31,
+    "id": "w9"
+  },
+  {
+    "text": "search",
+    "start": 3.37,
+    "end": 3.7,
+    "id": "w10"
+  },
+  {
+    "text": "information,",
+    "start": 3.7,
+    "end": 4.44,
+    "id": "w11"
+  },
+  {
+    "text": "each",
+    "start": 4.45,
+    "end": 4.55,
+    "id": "w12"
+  },
+  {
+    "text": "named",
+    "start": 4.61,
+    "end": 4.97,
+    "id": "w13"
+  },
+  {
+    "text": "person",
+    "start": 5.09,
+    "end": 5.4,
+    "id": "w14"
+  },
+  {
+    "text": "signs",
+    "start": 5.43,
+    "end": 5.72,
+    "id": "w15"
+  },
+  {
+    "text": "for",
+    "start": 5.86,
+    "end": 6.04,
+    "id": "w16"
+  },
+  {
+    "text": "themselves.",
+    "start": 6.04,
+    "end": 6.93,
+    "id": "w17"
+  },
+  {
+    "text": "A",
+    "start": 6.93,
+    "end": 7.15,
+    "id": "w18"
+  },
+  {
+    "text": "witness",
+    "start": 7.36,
+    "end": 7.55,
+    "id": "w19"
+  },
+  {
+    "text": "signature",
+    "start": 7.55,
+    "end": 8.07,
+    "id": "w20"
+  },
+  {
+    "text": "is",
+    "start": 8.07,
+    "end": 8.15,
+    "id": "w21"
+  },
+  {
+    "text": "optional.",
+    "start": 8.23,
+    "end": 8.68,
+    "id": "w22"
+  }
+]

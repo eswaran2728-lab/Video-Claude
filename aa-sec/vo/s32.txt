@@ -1,0 +1,1 @@
+Complete one line for each firearm. Enter its serial number, pistol, magazine, and number of rounds. Select Gunlocker or Gunbox as appropriate. Review every line carefully.

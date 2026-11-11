@@ -1,0 +1,1 @@
+Look for the green tick, the word "Saved," and a Record ID. These show that the form was saved. Do not close the page before you see this confirmation. The Record ID shown in this guide is only a test example.

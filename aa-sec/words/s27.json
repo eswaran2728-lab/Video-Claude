@@ -1,0 +1,128 @@
+[
+  {
+    "text": "If",
+    "start": 0.04,
+    "end": 0.17,
+    "id": "w0"
+  },
+  {
+    "text": "an",
+    "start": 0.17,
+    "end": 0.34,
+    "id": "w1"
+  },
+  {
+    "text": "authorised",
+    "start": 0.34,
+    "end": 1.2,
+    "id": "w2"
+  },
+  {
+    "text": "person",
+    "start": 1.2,
+    "end": 1.71,
+    "id": "w3"
+  },
+  {
+    "text": "needs",
+    "start": 1.71,
+    "end": 2.13,
+    "id": "w4"
+  },
+  {
+    "text": "the",
+    "start": 2.13,
+    "end": 2.22,
+    "id": "w5"
+  },
+  {
+    "text": "PDF,",
+    "start": 2.53,
+    "end": 2.83,
+    "id": "w6"
+  },
+  {
+    "text": "tap",
+    "start": 2.83,
+    "end": 3.09,
+    "id": "w7"
+  },
+  {
+    "text": "Share",
+    "start": 3.09,
+    "end": 3.45,
+    "id": "w8"
+  },
+  {
+    "text": "in",
+    "start": 3.52,
+    "end": 3.62,
+    "id": "w9"
+  },
+  {
+    "text": "Google",
+    "start": 3.68,
+    "end": 4.04,
+    "id": "w10"
+  },
+  {
+    "text": "Drive.",
+    "start": 4.04,
+    "end": 4.72,
+    "id": "w11"
+  },
+  {
+    "text": "Take",
+    "start": 4.72,
+    "end": 4.89,
+    "id": "w12"
+  },
+  {
+    "text": "a",
+    "start": 4.89,
+    "end": 4.94,
+    "id": "w13"
+  },
+  {
+    "text": "moment",
+    "start": 4.94,
+    "end": 5.25,
+    "id": "w14"
+  },
+  {
+    "text": "to",
+    "start": 5.25,
+    "end": 5.35,
+    "id": "w15"
+  },
+  {
+    "text": "check",
+    "start": 5.35,
+    "end": 5.61,
+    "id": "w16"
+  },
+  {
+    "text": "who",
+    "start": 5.61,
+    "end": 5.77,
+    "id": "w17"
+  },
+  {
+    "text": "should",
+    "start": 5.77,
+    "end": 6.08,
+    "id": "w18"
+  },
+  {
+    "text": "receive",
+    "start": 6.08,
+    "end": 6.45,
+    "id": "w19"
+  },
+  {
+    "text": "it.",
+    "start": 6.45,
+    "end": 6.6,
+    "id": "w20"
+  }
+]

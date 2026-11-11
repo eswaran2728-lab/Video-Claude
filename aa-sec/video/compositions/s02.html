@@ -1,0 +1,44 @@
+<template>
+  <style>
+    #root { position:absolute; inset:0; overflow:hidden; font-family:'Roboto', 'Inter', sans-serif; }
+    #s02-bg { position:absolute; inset:0; background:#FFFFFF; }
+    #s02-content { position:absolute; inset:0; }
+    #s02-content .el { position:absolute; box-sizing:border-box; }
+    #s02-content p { margin:0; line-height:1.18; }
+    #s02-content .w { display:inline-block; white-space:pre; }
+    #s02-content .tbl { border-collapse:collapse; }
+    #s02-content .tbl td { border:1.5px solid #C9CDD2; padding:4px 10px; vertical-align:middle; }
+  </style>
+  <div id="root" data-composition-id="s02" data-width="1920" data-height="1080">
+    <div id="s02-bg"></div>
+    <div id="s02-content" data-hold>
+      <div id="s02-e0" class="el" style="left:115.2px;top:79.2px;width:1656.0px;height:64.8px;display:flex;flex-direction:column;justify-content:center;padding:0.0px 0.0px 0.0px 0.0px;"><p style="text-align:left;font-size:36px"><span style="font-size:36px;font-weight:700;color:#C8102E;">BEFORE YOU START</span></p></div>
+      <div id="s02-e1" class="el" style="left:115.2px;top:158.4px;width:1684.8px;height:172.8px;display:flex;flex-direction:column;justify-content:flex-start;padding:0.0px 0.0px 0.0px 0.0px;"><p style="text-align:left;font-size:92px"><span style="font-size:92px;font-weight:700;color:#1A1A1A;"><span class="w">3</span> <span class="w">simple</span> <span class="w">rules</span></span></p></div>
+      <div id="s02-e2" class="el" style="left:115.2px;top:374.4px;width:103.7px;height:103.7px;background:#C8102E;border:2.0px solid #C8102E;border-radius:50%;"></div>
+      <div id="s02-e3" class="el" style="left:115.2px;top:374.4px;width:103.7px;height:103.7px;display:flex;flex-direction:column;justify-content:center;padding:0.0px 0.0px 0.0px 0.0px;"><p style="text-align:center;font-size:56px"><span style="font-size:56px;font-weight:700;color:#FFFFFF;">1</span></p></div>
+      <div id="s02-e4" class="el" style="left:259.2px;top:367.2px;width:1540.8px;height:118.1px;display:flex;flex-direction:column;justify-content:center;padding:0.0px 0.0px 0.0px 0.0px;"><p style="text-align:left;font-size:60px"><span style="font-size:60px;font-weight:700;color:#1A1A1A;">Use your AirAsia (@airasia.com) account</span></p></div>
+      <div id="s02-e5" class="el" style="left:259.2px;top:532.8px;width:1540.8px;height:118.1px;display:flex;flex-direction:column;justify-content:center;padding:0.0px 0.0px 0.0px 0.0px;"><p style="text-align:left;font-size:60px"><span style="font-size:60px;font-weight:700;color:#1A1A1A;">Each person signs for themselves. Never sign for anyone else</span></p></div>
+      <div id="s02-e6" class="el" style="left:115.2px;top:540.0px;width:103.7px;height:103.7px;background:#C8102E;border:2.0px solid #C8102E;border-radius:50%;"></div>
+      <div id="s02-e7" class="el" style="left:115.2px;top:540.0px;width:103.7px;height:103.7px;display:flex;flex-direction:column;justify-content:center;padding:0.0px 0.0px 0.0px 0.0px;"><p style="text-align:center;font-size:56px"><span style="font-size:56px;font-weight:700;color:#FFFFFF;">2</span></p></div>
+      <div id="s02-e8" class="el" style="left:259.2px;top:698.4px;width:1540.8px;height:118.1px;display:flex;flex-direction:column;justify-content:center;padding:0.0px 0.0px 0.0px 0.0px;"><p style="text-align:left;font-size:60px"><span style="font-size:60px;font-weight:700;color:#1A1A1A;">One case = one new form. Never reuse an old one</span></p></div>
+      <div id="s02-e9" class="el" style="left:115.2px;top:705.6px;width:103.7px;height:103.7px;background:#C8102E;border:2.0px solid #C8102E;border-radius:50%;"></div>
+      <div id="s02-e10" class="el" style="left:115.2px;top:705.6px;width:103.7px;height:103.7px;display:flex;flex-direction:column;justify-content:center;padding:0.0px 0.0px 0.0px 0.0px;"><p style="text-align:center;font-size:56px"><span style="font-size:56px;font-weight:700;color:#FFFFFF;">3</span></p></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#s02-bg", {clipPath:"circle(0% at 0% 50%)"}, {clipPath:"circle(150% at 0% 50%)", duration:0.6, ease:"power2.inOut"}, 0);
+      tl.fromTo("#s02-e0", {opacity:0, filter:"blur(8px)"}, {opacity:1, filter:"blur(0px)", duration:0.3, ease:"power2.out"}, 0.45);
+      tl.fromTo("#s02-e1 .w", {opacity:0, filter:"blur(8px)"}, {opacity:1, filter:"blur(0px)", duration:0.22, ease:"power2.out", stagger:0.067}, 0.61);
+      tl.fromTo("#s02-e2, #s02-e3", {opacity:0, scale:0.4}, {opacity:1, scale:1, duration:0.45, ease:"back.out(1.7)"}, 2.04);
+      tl.fromTo("#s02-e4", {opacity:0, filter:"blur(8px)"}, {opacity:1, filter:"blur(0px)", duration:0.3, ease:"power2.out"}, 3.37);
+      tl.fromTo("#s02-e5", {opacity:0, filter:"blur(8px)"}, {opacity:1, filter:"blur(0px)", duration:0.3, ease:"power2.out"}, 4.83);
+      tl.fromTo("#s02-e6, #s02-e7", {opacity:0, scale:0.4}, {opacity:1, scale:1, duration:0.45, ease:"back.out(1.7)"}, 6.12);
+      tl.fromTo("#s02-e8", {opacity:0, filter:"blur(8px)"}, {opacity:1, filter:"blur(0px)", duration:0.3, ease:"power2.out"}, 5.61);
+      tl.fromTo("#s02-e9, #s02-e10", {opacity:0, scale:0.4}, {opacity:1, scale:1, duration:0.45, ease:"back.out(1.7)"}, 7.69);
+      tl.to("#s02-content", {opacity:0, filter:"blur(6px)", duration:0.25, ease:"power2.in"}, 9.49);
+      window.__timelines["s02"] = tl;
+    })();
+  </script>
+</template>

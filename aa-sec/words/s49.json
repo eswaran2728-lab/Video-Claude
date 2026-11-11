@@ -1,0 +1,146 @@
+[
+  {
+    "text": "For",
+    "start": 0.1,
+    "end": 0.23,
+    "id": "w0"
+  },
+  {
+    "text": "a",
+    "start": 0.23,
+    "end": 0.3,
+    "id": "w1"
+  },
+  {
+    "text": "new",
+    "start": 0.3,
+    "end": 0.53,
+    "id": "w2"
+  },
+  {
+    "text": "case,",
+    "start": 0.53,
+    "end": 0.98,
+    "id": "w3"
+  },
+  {
+    "text": "start",
+    "start": 0.98,
+    "end": 1.36,
+    "id": "w4"
+  },
+  {
+    "text": "a",
+    "start": 1.36,
+    "end": 1.43,
+    "id": "w5"
+  },
+  {
+    "text": "new",
+    "start": 1.43,
+    "end": 1.6,
+    "id": "w6"
+  },
+  {
+    "text": "form.",
+    "start": 2,
+    "end": 2.19,
+    "id": "w7"
+  },
+  {
+    "text": "Every",
+    "start": 2.19,
+    "end": 2.51,
+    "id": "w8"
+  },
+  {
+    "text": "save",
+    "start": 2.51,
+    "end": 2.74,
+    "id": "w9"
+  },
+  {
+    "text": "creates",
+    "start": 2.76,
+    "end": 3.21,
+    "id": "w10"
+  },
+  {
+    "text": "a",
+    "start": 3.21,
+    "end": 3.24,
+    "id": "w11"
+  },
+  {
+    "text": "separate",
+    "start": 3.34,
+    "end": 3.78,
+    "id": "w12"
+  },
+  {
+    "text": "PDF",
+    "start": 3.78,
+    "end": 3.93,
+    "id": "w13"
+  },
+  {
+    "text": "and",
+    "start": 4.06,
+    "end": 4.16,
+    "id": "w14"
+  },
+  {
+    "text": "record",
+    "start": 4.16,
+    "end": 4.55,
+    "id": "w15"
+  },
+  {
+    "text": "row.",
+    "start": 4.55,
+    "end": 5.44,
+    "id": "w16"
+  },
+  {
+    "text": "Do",
+    "start": 5.44,
+    "end": 5.48,
+    "id": "w17"
+  },
+  {
+    "text": "not",
+    "start": 5.58,
+    "end": 5.68,
+    "id": "w18"
+  },
+  {
+    "text": "reuse",
+    "start": 5.68,
+    "end": 6.02,
+    "id": "w19"
+  },
+  {
+    "text": "a",
+    "start": 6.02,
+    "end": 6.07,
+    "id": "w20"
+  },
+  {
+    "text": "previous",
+    "start": 6.13,
+    "end": 6.64,
+    "id": "w21"
+  },
+  {
+    "text": "case's",
+    "start": 6.64,
+    "end": 7.04,
+    "id": "w22"
+  },
+  {
+    "text": "form.",
+    "start": 7.04,
+    "end": 7.36,
+    "id": "w23"
+  }
+]

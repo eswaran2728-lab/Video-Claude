@@ -1,0 +1,128 @@
+[
+  {
+    "text": "On",
+    "start": 0.04,
+    "end": 0.16,
+    "id": "w0"
+  },
+  {
+    "text": "the",
+    "start": 0.16,
+    "end": 0.4,
+    "id": "w1"
+  },
+  {
+    "text": "home",
+    "start": 0.4,
+    "end": 0.72,
+    "id": "w2"
+  },
+  {
+    "text": "screen,",
+    "start": 0.72,
+    "end": 1.36,
+    "id": "w3"
+  },
+  {
+    "text": "tap",
+    "start": 1.36,
+    "end": 1.58,
+    "id": "w4"
+  },
+  {
+    "text": "FOCA",
+    "start": 1.64,
+    "end": 1.92,
+    "id": "w5"
+  },
+  {
+    "text": "Checklist.",
+    "start": 1.92,
+    "end": 2.81,
+    "id": "w6"
+  },
+  {
+    "text": "Check",
+    "start": 2.81,
+    "end": 3,
+    "id": "w7"
+  },
+  {
+    "text": "the",
+    "start": 3.04,
+    "end": 3.16,
+    "id": "w8"
+  },
+  {
+    "text": "title",
+    "start": 3.16,
+    "end": 3.38,
+    "id": "w9"
+  },
+  {
+    "text": "at",
+    "start": 3.38,
+    "end": 3.42,
+    "id": "w10"
+  },
+  {
+    "text": "the",
+    "start": 3.49,
+    "end": 3.6,
+    "id": "w11"
+  },
+  {
+    "text": "top",
+    "start": 3.6,
+    "end": 3.74,
+    "id": "w12"
+  },
+  {
+    "text": "so",
+    "start": 3.81,
+    "end": 3.85,
+    "id": "w13"
+  },
+  {
+    "text": "you",
+    "start": 3.85,
+    "end": 3.99,
+    "id": "w14"
+  },
+  {
+    "text": "know",
+    "start": 3.99,
+    "end": 4.2,
+    "id": "w15"
+  },
+  {
+    "text": "you",
+    "start": 4.2,
+    "end": 4.4,
+    "id": "w16"
+  },
+  {
+    "text": "opened",
+    "start": 4.4,
+    "end": 4.74,
+    "id": "w17"
+  },
+  {
+    "text": "the",
+    "start": 4.78,
+    "end": 4.94,
+    "id": "w18"
+  },
+  {
+    "text": "right",
+    "start": 4.94,
+    "end": 5.25,
+    "id": "w19"
+  },
+  {
+    "text": "form.",
+    "start": 5.27,
+    "end": 5.56,
+    "id": "w20"
+  }
+]

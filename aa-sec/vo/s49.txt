@@ -1,0 +1,1 @@
+For a new case, start a new form. Every save creates a separate PDF and record row. Do not reuse a previous case's form.

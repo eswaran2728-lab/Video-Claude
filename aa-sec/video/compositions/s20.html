@@ -1,0 +1,42 @@
+<template>
+  <style>
+    #root { position:absolute; inset:0; overflow:hidden; font-family:'Roboto', 'Inter', sans-serif; }
+    #s20-bg { position:absolute; inset:0; background:#FFFFFF; }
+    #s20-content { position:absolute; inset:0; }
+    #s20-content .el { position:absolute; box-sizing:border-box; }
+    #s20-content p { margin:0; line-height:1.18; }
+    #s20-content .w { display:inline-block; white-space:pre; }
+    #s20-content .tbl { border-collapse:collapse; }
+    #s20-content .tbl td { border:1.5px solid #C9CDD2; padding:4px 10px; vertical-align:middle; }
+  </style>
+  <div id="root" data-composition-id="s20" data-width="1920" data-height="1080">
+    <div id="s20-bg"></div>
+    <div id="s20-content" data-hold>
+      <div id="s20-e0" class="el" style="left:115.2px;top:79.2px;width:1656.0px;height:64.8px;display:flex;flex-direction:column;justify-content:center;padding:0.0px 0.0px 0.0px 0.0px;"><p style="text-align:left;font-size:36px"><span style="font-size:36px;font-weight:700;color:#C8102E;">FOCA · STEP 10</span></p></div>
+      <div id="s20-e1" class="el" style="left:115.2px;top:151.2px;width:478.8px;height:72.0px;background:#0B57D0;border:2.0px solid #0B57D0;border-radius:36.0px;"></div>
+      <div id="s20-e2" class="el" style="left:115.2px;top:151.2px;width:478.8px;height:72.0px;display:flex;flex-direction:column;justify-content:center;padding:0.0px 0.0px 0.0px 0.0px;"><p style="text-align:center;font-size:32px"><span style="font-size:32px;font-weight:700;color:#FFFFFF;">SECURITY REPRESENTATIVE</span></p></div>
+      <div id="s20-e3" class="el" style="left:115.2px;top:244.8px;width:1684.8px;height:172.8px;display:flex;flex-direction:column;justify-content:flex-start;padding:0.0px 0.0px 0.0px 0.0px;"><p style="text-align:left;font-size:92px"><span style="font-size:92px;font-weight:700;color:#1A1A1A;"><span class="w">Phone</span> <span class="w">back</span> <span class="w">to</span> <span class="w">Security</span></span></p></div>
+      <div id="s20-e4" class="el" style="left:115.2px;top:446.4px;width:103.7px;height:103.7px;background:#C8102E;border:2.0px solid #C8102E;border-radius:50%;"></div>
+      <div id="s20-e5" class="el" style="left:115.2px;top:446.4px;width:103.7px;height:103.7px;display:flex;flex-direction:column;justify-content:center;padding:0.0px 0.0px 0.0px 0.0px;"><p style="text-align:center;font-size:56px"><span style="font-size:56px;font-weight:700;color:#FFFFFF;">1</span></p></div>
+      <div id="s20-e6" class="el" style="left:259.2px;top:439.2px;width:1540.8px;height:118.1px;display:flex;flex-direction:column;justify-content:center;padding:0.0px 0.0px 0.0px 0.0px;"><p style="text-align:left;font-size:56px"><span style="font-size:56px;font-weight:700;color:#1A1A1A;">Screen says: “Hand the phone back to SECURITY STAFF”</span></p></div>
+      <div id="s20-e7" class="el" style="left:115.2px;top:619.2px;width:103.7px;height:103.7px;background:#C8102E;border:2.0px solid #C8102E;border-radius:50%;"></div>
+      <div id="s20-e8" class="el" style="left:115.2px;top:619.2px;width:103.7px;height:103.7px;display:flex;flex-direction:column;justify-content:center;padding:0.0px 0.0px 0.0px 0.0px;"><p style="text-align:center;font-size:56px"><span style="font-size:56px;font-weight:700;color:#FFFFFF;">2</span></p></div>
+      <div id="s20-e9" class="el" style="left:259.2px;top:612.0px;width:1540.8px;height:118.1px;display:flex;flex-direction:column;justify-content:center;padding:0.0px 0.0px 0.0px 0.0px;"><p style="text-align:left;font-size:56px"><span style="font-size:56px;font-weight:700;color:#1A1A1A;">Tap the blue button: “Security staff has the phone”</span></p></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      
+      tl.fromTo("#s20-e0", {opacity:0, filter:"blur(8px)"}, {opacity:1, filter:"blur(0px)", duration:0.3, ease:"power2.out"}, 0.10);
+      tl.fromTo("#s20-e1, #s20-e2", {opacity:0, scale:0.7}, {opacity:1, scale:1, duration:0.4, ease:"back.out(1.6)"}, 0.26);
+      tl.fromTo("#s20-e3 .w", {opacity:0, filter:"blur(8px)"}, {opacity:1, filter:"blur(0px)", duration:0.22, ease:"power2.out", stagger:0.067}, 0.42);
+      tl.fromTo("#s20-e4, #s20-e5", {opacity:0, scale:0.4}, {opacity:1, scale:1, duration:0.45, ease:"back.out(1.7)"}, 0.68);
+      tl.fromTo("#s20-e6", {opacity:0, filter:"blur(8px)"}, {opacity:1, filter:"blur(0px)", duration:0.3, ease:"power2.out"}, 0.83);
+      tl.fromTo("#s20-e7, #s20-e8", {opacity:0, scale:0.4}, {opacity:1, scale:1, duration:0.45, ease:"back.out(1.7)"}, 1.17);
+      tl.fromTo("#s20-e9", {opacity:0, filter:"blur(8px)"}, {opacity:1, filter:"blur(0px)", duration:0.3, ease:"power2.out"}, 1.51);
+      tl.to("#s20-content", {opacity:0, filter:"blur(6px)", duration:0.25, ease:"power2.in"}, 9.30);
+      window.__timelines["s20"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,254 @@
+[
+  {
+    "text": "Where",
+    "start": 0.04,
+    "end": 0.33,
+    "id": "w0"
+  },
+  {
+    "text": "do",
+    "start": 0.43,
+    "end": 0.59,
+    "id": "w1"
+  },
+  {
+    "text": "the",
+    "start": 0.59,
+    "end": 0.84,
+    "id": "w2"
+  },
+  {
+    "text": "PDFs",
+    "start": 0.84,
+    "end": 1.17,
+    "id": "w3"
+  },
+  {
+    "text": "go?",
+    "start": 1.17,
+    "end": 1.62,
+    "id": "w4"
+  },
+  {
+    "text": "Each",
+    "start": 1.66,
+    "end": 1.89,
+    "id": "w5"
+  },
+  {
+    "text": "completed",
+    "start": 1.89,
+    "end": 2.49,
+    "id": "w6"
+  },
+  {
+    "text": "form",
+    "start": 2.55,
+    "end": 2.78,
+    "id": "w7"
+  },
+  {
+    "text": "becomes",
+    "start": 2.78,
+    "end": 2.82,
+    "id": "w8"
+  },
+  {
+    "text": "its",
+    "start": 3.26,
+    "end": 3.46,
+    "id": "w9"
+  },
+  {
+    "text": "own",
+    "start": 3.46,
+    "end": 3.64,
+    "id": "w10"
+  },
+  {
+    "text": "PDF",
+    "start": 3.66,
+    "end": 3.9,
+    "id": "w11"
+  },
+  {
+    "text": "in",
+    "start": 3.9,
+    "end": 4.13,
+    "id": "w12"
+  },
+  {
+    "text": "Google",
+    "start": 4.13,
+    "end": 4.83,
+    "id": "w13"
+  },
+  {
+    "text": "Drive.",
+    "start": 4.83,
+    "end": 5.46,
+    "id": "w14"
+  },
+  {
+    "text": "The",
+    "start": 5.5,
+    "end": 5.68,
+    "id": "w15"
+  },
+  {
+    "text": "restricted,",
+    "start": 5.68,
+    "end": 6.58,
+    "id": "w16"
+  },
+  {
+    "text": "AA,",
+    "start": 6.58,
+    "end": 6.88,
+    "id": "w17"
+  },
+  {
+    "text": "SEC",
+    "start": 6.88,
+    "end": 7.1,
+    "id": "w18"
+  },
+  {
+    "text": "signed",
+    "start": 7.1,
+    "end": 7.51,
+    "id": "w19"
+  },
+  {
+    "text": "forms,",
+    "start": 7.55,
+    "end": 8.1,
+    "id": "w20"
+  },
+  {
+    "text": "area",
+    "start": 8.12,
+    "end": 8.31,
+    "id": "w21"
+  },
+  {
+    "text": "has",
+    "start": 8.31,
+    "end": 8.45,
+    "id": "w22"
+  },
+  {
+    "text": "separate",
+    "start": 8.46,
+    "end": 8.88,
+    "id": "w23"
+  },
+  {
+    "text": "folders",
+    "start": 8.88,
+    "end": 9.24,
+    "id": "w24"
+  },
+  {
+    "text": "for",
+    "start": 9.37,
+    "end": 9.43,
+    "id": "w25"
+  },
+  {
+    "text": "FOCA,",
+    "start": 9.43,
+    "end": 9.75,
+    "id": "w26"
+  },
+  {
+    "text": "Notoc,",
+    "start": 9.75,
+    "end": 10.13,
+    "id": "w27"
+  },
+  {
+    "text": "Acknowledgement",
+    "start": 10.13,
+    "end": 11.02,
+    "id": "w28"
+  },
+  {
+    "text": "and",
+    "start": 11.06,
+    "end": 11.34,
+    "id": "w29"
+  },
+  {
+    "text": "Search",
+    "start": 11.34,
+    "end": 11.98,
+    "id": "w30"
+  },
+  {
+    "text": "List.",
+    "start": 11.98,
+    "end": 12.42,
+    "id": "w31"
+  },
+  {
+    "text": "Open",
+    "start": 12.46,
+    "end": 12.65,
+    "id": "w32"
+  },
+  {
+    "text": "these",
+    "start": 12.65,
+    "end": 12.94,
+    "id": "w33"
+  },
+  {
+    "text": "folders",
+    "start": 12.94,
+    "end": 13.29,
+    "id": "w34"
+  },
+  {
+    "text": "only",
+    "start": 13.35,
+    "end": 13.58,
+    "id": "w35"
+  },
+  {
+    "text": "if",
+    "start": 13.58,
+    "end": 13.62,
+    "id": "w36"
+  },
+  {
+    "text": "your",
+    "start": 13.62,
+    "end": 14.06,
+    "id": "w37"
+  },
+  {
+    "text": "role",
+    "start": 14.06,
+    "end": 14.15,
+    "id": "w38"
+  },
+  {
+    "text": "gives",
+    "start": 14.15,
+    "end": 14.43,
+    "id": "w39"
+  },
+  {
+    "text": "you",
+    "start": 14.46,
+    "end": 14.6,
+    "id": "w40"
+  },
+  {
+    "text": "access.",
+    "start": 14.64,
+    "end": 15.17,
+    "id": "w41"
+  }
+]

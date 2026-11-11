@@ -1,0 +1,152 @@
+[
+  {
+    "text": "Now",
+    "start": 0.03,
+    "end": 0.27,
+    "id": "w0"
+  },
+  {
+    "text": "review",
+    "start": 0.27,
+    "end": 0.8,
+    "id": "w1"
+  },
+  {
+    "text": "the",
+    "start": 0.8,
+    "end": 1.06,
+    "id": "w2"
+  },
+  {
+    "text": "form.",
+    "start": 1.06,
+    "end": 1.56,
+    "id": "w3"
+  },
+  {
+    "text": "Check",
+    "start": 1.56,
+    "end": 1.76,
+    "id": "w4"
+  },
+  {
+    "text": "the",
+    "start": 1.85,
+    "end": 1.89,
+    "id": "w5"
+  },
+  {
+    "text": "flight",
+    "start": 1.89,
+    "end": 2.14,
+    "id": "w6"
+  },
+  {
+    "text": "information",
+    "start": 2.14,
+    "end": 2.64,
+    "id": "w7"
+  },
+  {
+    "text": "and",
+    "start": 2.64,
+    "end": 2.8,
+    "id": "w8"
+  },
+  {
+    "text": "each",
+    "start": 2.8,
+    "end": 3.02,
+    "id": "w9"
+  },
+  {
+    "text": "checklist",
+    "start": 3.02,
+    "end": 3.49,
+    "id": "w10"
+  },
+  {
+    "text": "answer.",
+    "start": 3.53,
+    "end": 4.4,
+    "id": "w11"
+  },
+  {
+    "text": "If",
+    "start": 4.41,
+    "end": 4.49,
+    "id": "w12"
+  },
+  {
+    "text": "something",
+    "start": 4.5,
+    "end": 4.9,
+    "id": "w13"
+  },
+  {
+    "text": "is",
+    "start": 4.9,
+    "end": 5,
+    "id": "w14"
+  },
+  {
+    "text": "wrong",
+    "start": 5.03,
+    "end": 5.41,
+    "id": "w15"
+  },
+  {
+    "text": "correct",
+    "start": 5.46,
+    "end": 6.05,
+    "id": "w16"
+  },
+  {
+    "text": "it",
+    "start": 6.05,
+    "end": 6.07,
+    "id": "w17"
+  },
+  {
+    "text": "now.",
+    "start": 6.47,
+    "end": 6.76,
+    "id": "w18"
+  },
+  {
+    "text": "When",
+    "start": 6.76,
+    "end": 6.98,
+    "id": "w19"
+  },
+  {
+    "text": "everything",
+    "start": 6.98,
+    "end": 7.55,
+    "id": "w20"
+  },
+  {
+    "text": "is",
+    "start": 7.55,
+    "end": 7.66,
+    "id": "w21"
+  },
+  {
+    "text": "ready",
+    "start": 7.66,
+    "end": 7.93,
+    "id": "w22"
+  },
+  {
+    "text": "tap",
+    "start": 7.95,
+    "end": 8.07,
+    "id": "w23"
+  },
+  {
+    "text": "next.",
+    "start": 8.13,
+    "end": 8.54,
+    "id": "w24"
+  }
+]

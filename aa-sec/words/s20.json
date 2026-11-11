@@ -1,0 +1,158 @@
+[
+  {
+    "text": "When",
+    "start": 0.03,
+    "end": 0.18,
+    "id": "w0"
+  },
+  {
+    "text": "the",
+    "start": 0.26,
+    "end": 0.4,
+    "id": "w1"
+  },
+  {
+    "text": "phone",
+    "start": 0.4,
+    "end": 0.69,
+    "id": "w2"
+  },
+  {
+    "text": "is",
+    "start": 0.69,
+    "end": 0.74,
+    "id": "w3"
+  },
+  {
+    "text": "back",
+    "start": 0.82,
+    "end": 1.03,
+    "id": "w4"
+  },
+  {
+    "text": "with",
+    "start": 1.03,
+    "end": 1.26,
+    "id": "w5"
+  },
+  {
+    "text": "security",
+    "start": 1.26,
+    "end": 1.73,
+    "id": "w6"
+  },
+  {
+    "text": "staff,",
+    "start": 1.73,
+    "end": 2.13,
+    "id": "w7"
+  },
+  {
+    "text": "tap",
+    "start": 2.13,
+    "end": 2.29,
+    "id": "w8"
+  },
+  {
+    "text": "the",
+    "start": 2.3,
+    "end": 2.47,
+    "id": "w9"
+  },
+  {
+    "text": "blue",
+    "start": 2.47,
+    "end": 2.69,
+    "id": "w10"
+  },
+  {
+    "text": "button",
+    "start": 2.69,
+    "end": 3.01,
+    "id": "w11"
+  },
+  {
+    "text": "that",
+    "start": 3.08,
+    "end": 3.28,
+    "id": "w12"
+  },
+  {
+    "text": "says,",
+    "start": 3.28,
+    "end": 3.64,
+    "id": "w13"
+  },
+  {
+    "text": "security",
+    "start": 3.88,
+    "end": 4.29,
+    "id": "w14"
+  },
+  {
+    "text": "staff",
+    "start": 4.31,
+    "end": 4.66,
+    "id": "w15"
+  },
+  {
+    "text": "has",
+    "start": 4.71,
+    "end": 4.97,
+    "id": "w16"
+  },
+  {
+    "text": "the",
+    "start": 4.97,
+    "end": 5.21,
+    "id": "w17"
+  },
+  {
+    "text": "phone.",
+    "start": 5.3,
+    "end": 6.03,
+    "id": "w18"
+  },
+  {
+    "text": "The",
+    "start": 6.07,
+    "end": 6.18,
+    "id": "w19"
+  },
+  {
+    "text": "final",
+    "start": 6.21,
+    "end": 6.5,
+    "id": "w20"
+  },
+  {
+    "text": "focus",
+    "start": 6.73,
+    "end": 6.84,
+    "id": "w21"
+  },
+  {
+    "text": "signature",
+    "start": 6.84,
+    "end": 7.39,
+    "id": "w22"
+  },
+  {
+    "text": "screen",
+    "start": 7.42,
+    "end": 7.76,
+    "id": "w23"
+  },
+  {
+    "text": "will",
+    "start": 7.77,
+    "end": 8.01,
+    "id": "w24"
+  },
+  {
+    "text": "open.",
+    "start": 8.01,
+    "end": 8.32,
+    "id": "w25"
+  }
+]

@@ -1,0 +1,170 @@
+[
+  {
+    "text": "Complete",
+    "start": 0.08,
+    "end": 0.55,
+    "id": "w0"
+  },
+  {
+    "text": "one",
+    "start": 0.55,
+    "end": 0.75,
+    "id": "w1"
+  },
+  {
+    "text": "line",
+    "start": 0.75,
+    "end": 0.93,
+    "id": "w2"
+  },
+  {
+    "text": "for",
+    "start": 1.02,
+    "end": 1.21,
+    "id": "w3"
+  },
+  {
+    "text": "each",
+    "start": 1.28,
+    "end": 1.49,
+    "id": "w4"
+  },
+  {
+    "text": "firearm.",
+    "start": 1.49,
+    "end": 2.44,
+    "id": "w5"
+  },
+  {
+    "text": "Enter",
+    "start": 2.48,
+    "end": 2.71,
+    "id": "w6"
+  },
+  {
+    "text": "its",
+    "start": 2.71,
+    "end": 2.86,
+    "id": "w7"
+  },
+  {
+    "text": "serial",
+    "start": 2.9,
+    "end": 3.19,
+    "id": "w8"
+  },
+  {
+    "text": "number,",
+    "start": 3.19,
+    "end": 3.63,
+    "id": "w9"
+  },
+  {
+    "text": "pistol,",
+    "start": 3.64,
+    "end": 4.12,
+    "id": "w10"
+  },
+  {
+    "text": "magazine",
+    "start": 4.12,
+    "end": 4.36,
+    "id": "w11"
+  },
+  {
+    "text": "and",
+    "start": 4.36,
+    "end": 4.87,
+    "id": "w12"
+  },
+  {
+    "text": "number",
+    "start": 4.87,
+    "end": 5.08,
+    "id": "w13"
+  },
+  {
+    "text": "of",
+    "start": 5.08,
+    "end": 5.3,
+    "id": "w14"
+  },
+  {
+    "text": "rounds.",
+    "start": 5.35,
+    "end": 6.12,
+    "id": "w15"
+  },
+  {
+    "text": "Select",
+    "start": 6.16,
+    "end": 6.51,
+    "id": "w16"
+  },
+  {
+    "text": "gun",
+    "start": 6.58,
+    "end": 6.75,
+    "id": "w17"
+  },
+  {
+    "text": "locker",
+    "start": 6.75,
+    "end": 7.17,
+    "id": "w18"
+  },
+  {
+    "text": "or",
+    "start": 7.17,
+    "end": 7.31,
+    "id": "w19"
+  },
+  {
+    "text": "gun",
+    "start": 7.31,
+    "end": 7.48,
+    "id": "w20"
+  },
+  {
+    "text": "box",
+    "start": 7.56,
+    "end": 7.73,
+    "id": "w21"
+  },
+  {
+    "text": "as",
+    "start": 7.73,
+    "end": 7.87,
+    "id": "w22"
+  },
+  {
+    "text": "appropriate.",
+    "start": 7.87,
+    "end": 8.87,
+    "id": "w23"
+  },
+  {
+    "text": "Review",
+    "start": 8.92,
+    "end": 9.23,
+    "id": "w24"
+  },
+  {
+    "text": "every",
+    "start": 9.23,
+    "end": 9.52,
+    "id": "w25"
+  },
+  {
+    "text": "line",
+    "start": 9.52,
+    "end": 9.75,
+    "id": "w26"
+  },
+  {
+    "text": "carefully.",
+    "start": 9.75,
+    "end": 10.32,
+    "id": "w27"
+  }
+]

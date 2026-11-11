@@ -1,0 +1,146 @@
+[
+  {
+    "text": "When",
+    "start": 0.05,
+    "end": 0.27,
+    "id": "w0"
+  },
+  {
+    "text": "the",
+    "start": 0.27,
+    "end": 0.47,
+    "id": "w1"
+  },
+  {
+    "text": "name,",
+    "start": 0.47,
+    "end": 0.86,
+    "id": "w2"
+  },
+  {
+    "text": "ID",
+    "start": 0.91,
+    "end": 1,
+    "id": "w3"
+  },
+  {
+    "text": "and",
+    "start": 1,
+    "end": 1.2,
+    "id": "w4"
+  },
+  {
+    "text": "signature",
+    "start": 1.2,
+    "end": 1.81,
+    "id": "w5"
+  },
+  {
+    "text": "are",
+    "start": 1.87,
+    "end": 2.01,
+    "id": "w6"
+  },
+  {
+    "text": "correct,",
+    "start": 2.01,
+    "end": 2.68,
+    "id": "w7"
+  },
+  {
+    "text": "the",
+    "start": 2.71,
+    "end": 2.85,
+    "id": "w8"
+  },
+  {
+    "text": "airline",
+    "start": 2.85,
+    "end": 3.25,
+    "id": "w9"
+  },
+  {
+    "text": "representative",
+    "start": 3.25,
+    "end": 4.07,
+    "id": "w10"
+  },
+  {
+    "text": "taps",
+    "start": 4.07,
+    "end": 4.32,
+    "id": "w11"
+  },
+  {
+    "text": "confirm",
+    "start": 4.32,
+    "end": 4.91,
+    "id": "w12"
+  },
+  {
+    "text": "my",
+    "start": 4.91,
+    "end": 5.07,
+    "id": "w13"
+  },
+  {
+    "text": "signature.",
+    "start": 5.13,
+    "end": 6.38,
+    "id": "w14"
+  },
+  {
+    "text": "They",
+    "start": 6.45,
+    "end": 6.62,
+    "id": "w15"
+  },
+  {
+    "text": "then",
+    "start": 6.62,
+    "end": 6.84,
+    "id": "w16"
+  },
+  {
+    "text": "give",
+    "start": 6.84,
+    "end": 7.02,
+    "id": "w17"
+  },
+  {
+    "text": "the",
+    "start": 7.08,
+    "end": 7.22,
+    "id": "w18"
+  },
+  {
+    "text": "phone",
+    "start": 7.22,
+    "end": 7.49,
+    "id": "w19"
+  },
+  {
+    "text": "back",
+    "start": 7.49,
+    "end": 7.67,
+    "id": "w20"
+  },
+  {
+    "text": "to",
+    "start": 7.72,
+    "end": 7.82,
+    "id": "w21"
+  },
+  {
+    "text": "security",
+    "start": 7.82,
+    "end": 8.21,
+    "id": "w22"
+  },
+  {
+    "text": "staff.",
+    "start": 8.27,
+    "end": 8.7,
+    "id": "w23"
+  }
+]

@@ -1,0 +1,212 @@
+[
+  {
+    "text": "Pass",
+    "start": 0.04,
+    "end": 0.31,
+    "id": "w0"
+  },
+  {
+    "text": "the",
+    "start": 0.31,
+    "end": 0.54,
+    "id": "w1"
+  },
+  {
+    "text": "phone",
+    "start": 0.54,
+    "end": 0.93,
+    "id": "w2"
+  },
+  {
+    "text": "to",
+    "start": 0.93,
+    "end": 1.08,
+    "id": "w3"
+  },
+  {
+    "text": "each",
+    "start": 1.08,
+    "end": 1.37,
+    "id": "w4"
+  },
+  {
+    "text": "named",
+    "start": 1.38,
+    "end": 1.74,
+    "id": "w5"
+  },
+  {
+    "text": "signer.",
+    "start": 1.77,
+    "end": 2.4,
+    "id": "w6"
+  },
+  {
+    "text": "Each",
+    "start": 2.48,
+    "end": 2.64,
+    "id": "w7"
+  },
+  {
+    "text": "person",
+    "start": 2.72,
+    "end": 3.11,
+    "id": "w8"
+  },
+  {
+    "text": "signs",
+    "start": 3.11,
+    "end": 3.41,
+    "id": "w9"
+  },
+  {
+    "text": "for",
+    "start": 3.45,
+    "end": 3.64,
+    "id": "w10"
+  },
+  {
+    "text": "themselves.",
+    "start": 3.64,
+    "end": 4.54,
+    "id": "w11"
+  },
+  {
+    "text": "If",
+    "start": 4.58,
+    "end": 4.66,
+    "id": "w12"
+  },
+  {
+    "text": "the",
+    "start": 4.66,
+    "end": 4.85,
+    "id": "w13"
+  },
+  {
+    "text": "witness",
+    "start": 4.85,
+    "end": 5.29,
+    "id": "w14"
+  },
+  {
+    "text": "option",
+    "start": 5.29,
+    "end": 5.67,
+    "id": "w15"
+  },
+  {
+    "text": "was",
+    "start": 5.67,
+    "end": 5.85,
+    "id": "w16"
+  },
+  {
+    "text": "selected",
+    "start": 5.85,
+    "end": 6.28,
+    "id": "w17"
+  },
+  {
+    "text": "the",
+    "start": 6.28,
+    "end": 6.84,
+    "id": "w18"
+  },
+  {
+    "text": "witness",
+    "start": 6.84,
+    "end": 6.95,
+    "id": "w19"
+  },
+  {
+    "text": "signs",
+    "start": 7,
+    "end": 7.29,
+    "id": "w20"
+  },
+  {
+    "text": "too.",
+    "start": 7.33,
+    "end": 7.72,
+    "id": "w21"
+  },
+  {
+    "text": "When",
+    "start": 7.76,
+    "end": 7.92,
+    "id": "w22"
+  },
+  {
+    "text": "all",
+    "start": 8,
+    "end": 8.12,
+    "id": "w23"
+  },
+  {
+    "text": "required",
+    "start": 8.12,
+    "end": 8.56,
+    "id": "w24"
+  },
+  {
+    "text": "signatures",
+    "start": 8.63,
+    "end": 9.16,
+    "id": "w25"
+  },
+  {
+    "text": "are",
+    "start": 9.16,
+    "end": 9.33,
+    "id": "w26"
+  },
+  {
+    "text": "complete,",
+    "start": 9.33,
+    "end": 9.9,
+    "id": "w27"
+  },
+  {
+    "text": "save",
+    "start": 10.02,
+    "end": 10.13,
+    "id": "w28"
+  },
+  {
+    "text": "the",
+    "start": 10.18,
+    "end": 10.23,
+    "id": "w29"
+  },
+  {
+    "text": "form",
+    "start": 10.32,
+    "end": 10.53,
+    "id": "w30"
+  },
+  {
+    "text": "and",
+    "start": 10.53,
+    "end": 10.7,
+    "id": "w31"
+  },
+  {
+    "text": "wait",
+    "start": 10.7,
+    "end": 10.92,
+    "id": "w32"
+  },
+  {
+    "text": "for",
+    "start": 10.92,
+    "end": 11.1,
+    "id": "w33"
+  },
+  {
+    "text": "saved.",
+    "start": 11.1,
+    "end": 11.46,
+    "id": "w34"
+  }
+]

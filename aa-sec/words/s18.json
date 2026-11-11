@@ -1,0 +1,116 @@
+[
+  {
+    "text": "The",
+    "start": 0.05,
+    "end": 0.27,
+    "id": "w0"
+  },
+  {
+    "text": "signature",
+    "start": 0.27,
+    "end": 1.1,
+    "id": "w1"
+  },
+  {
+    "text": "box",
+    "start": 1.1,
+    "end": 1.37,
+    "id": "w2"
+  },
+  {
+    "text": "is",
+    "start": 1.37,
+    "end": 1.49,
+    "id": "w3"
+  },
+  {
+    "text": "now",
+    "start": 1.57,
+    "end": 1.77,
+    "id": "w4"
+  },
+  {
+    "text": "empty.",
+    "start": 2.32,
+    "end": 2.4,
+    "id": "w5"
+  },
+  {
+    "text": "The",
+    "start": 2.4,
+    "end": 2.55,
+    "id": "w6"
+  },
+  {
+    "text": "airline",
+    "start": 2.55,
+    "end": 2.9,
+    "id": "w7"
+  },
+  {
+    "text": "representative",
+    "start": 2.9,
+    "end": 3.57,
+    "id": "w8"
+  },
+  {
+    "text": "draws",
+    "start": 3.68,
+    "end": 3.85,
+    "id": "w9"
+  },
+  {
+    "text": "their",
+    "start": 3.85,
+    "end": 4.1,
+    "id": "w10"
+  },
+  {
+    "text": "signature",
+    "start": 4.1,
+    "end": 4.56,
+    "id": "w11"
+  },
+  {
+    "text": "again",
+    "start": 4.56,
+    "end": 4.84,
+    "id": "w12"
+  },
+  {
+    "text": "and",
+    "start": 4.89,
+    "end": 5.01,
+    "id": "w13"
+  },
+  {
+    "text": "checks",
+    "start": 5.02,
+    "end": 5.37,
+    "id": "w14"
+  },
+  {
+    "text": "that",
+    "start": 5.37,
+    "end": 5.59,
+    "id": "w15"
+  },
+  {
+    "text": "it",
+    "start": 5.67,
+    "end": 5.73,
+    "id": "w16"
+  },
+  {
+    "text": "looks",
+    "start": 5.73,
+    "end": 6.02,
+    "id": "w17"
+  },
+  {
+    "text": "right.",
+    "start": 6.02,
+    "end": 6.34,
+    "id": "w18"
+  }
+]

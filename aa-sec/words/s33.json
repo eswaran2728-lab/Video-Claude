@@ -1,0 +1,140 @@
+[
+  {
+    "text": "complete",
+    "start": 0.07,
+    "end": 0.68,
+    "id": "w0"
+  },
+  {
+    "text": "the",
+    "start": 0.68,
+    "end": 0.87,
+    "id": "w1"
+  },
+  {
+    "text": "loaded",
+    "start": 0.97,
+    "end": 1.44,
+    "id": "w2"
+  },
+  {
+    "text": "by",
+    "start": 1.44,
+    "end": 1.61,
+    "id": "w3"
+  },
+  {
+    "text": "details.",
+    "start": 1.61,
+    "end": 2.39,
+    "id": "w4"
+  },
+  {
+    "text": "Then",
+    "start": 2.39,
+    "end": 2.59,
+    "id": "w5"
+  },
+  {
+    "text": "tap",
+    "start": 2.59,
+    "end": 2.64,
+    "id": "w6"
+  },
+  {
+    "text": "next",
+    "start": 2.74,
+    "end": 2.93,
+    "id": "w7"
+  },
+  {
+    "text": "and",
+    "start": 3.01,
+    "end": 3.09,
+    "id": "w8"
+  },
+  {
+    "text": "give",
+    "start": 3.09,
+    "end": 3.29,
+    "id": "w9"
+  },
+  {
+    "text": "the",
+    "start": 3.29,
+    "end": 3.42,
+    "id": "w10"
+  },
+  {
+    "text": "phone",
+    "start": 3.49,
+    "end": 3.69,
+    "id": "w11"
+  },
+  {
+    "text": "to",
+    "start": 3.69,
+    "end": 3.79,
+    "id": "w12"
+  },
+  {
+    "text": "the",
+    "start": 3.79,
+    "end": 4,
+    "id": "w13"
+  },
+  {
+    "text": "captain.",
+    "start": 4,
+    "end": 5.08,
+    "id": "w14"
+  },
+  {
+    "text": "The",
+    "start": 5.08,
+    "end": 5.2,
+    "id": "w15"
+  },
+  {
+    "text": "captain",
+    "start": 5.2,
+    "end": 5.48,
+    "id": "w16"
+  },
+  {
+    "text": "must",
+    "start": 5.55,
+    "end": 5.64,
+    "id": "w17"
+  },
+  {
+    "text": "review",
+    "start": 5.71,
+    "end": 6.06,
+    "id": "w18"
+  },
+  {
+    "text": "the",
+    "start": 6.06,
+    "end": 6.23,
+    "id": "w19"
+  },
+  {
+    "text": "information",
+    "start": 6.23,
+    "end": 6.85,
+    "id": "w20"
+  },
+  {
+    "text": "before",
+    "start": 6.88,
+    "end": 7.22,
+    "id": "w21"
+  },
+  {
+    "text": "signing.",
+    "start": 7.22,
+    "end": 7.64,
+    "id": "w22"
+  }
+]

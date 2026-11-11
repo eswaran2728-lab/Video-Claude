@@ -1,0 +1,416 @@
+[
+  {
+    "text": "Let",
+    "start": 0.03,
+    "end": 0.3,
+    "id": "w0"
+  },
+  {
+    "text": "us",
+    "start": 0.38,
+    "end": 0.5,
+    "id": "w1"
+  },
+  {
+    "text": "practice.",
+    "start": 0.62,
+    "end": 1.51,
+    "id": "w2"
+  },
+  {
+    "text": "Tell",
+    "start": 1.51,
+    "end": 1.66,
+    "id": "w3"
+  },
+  {
+    "text": "me",
+    "start": 1.66,
+    "end": 1.73,
+    "id": "w4"
+  },
+  {
+    "text": "which",
+    "start": 1.73,
+    "end": 1.85,
+    "id": "w5"
+  },
+  {
+    "text": "form",
+    "start": 1.94,
+    "end": 2.08,
+    "id": "w6"
+  },
+  {
+    "text": "you",
+    "start": 2.08,
+    "end": 2.18,
+    "id": "w7"
+  },
+  {
+    "text": "would",
+    "start": 2.18,
+    "end": 2.36,
+    "id": "w8"
+  },
+  {
+    "text": "use",
+    "start": 2.36,
+    "end": 2.48,
+    "id": "w9"
+  },
+  {
+    "text": "for",
+    "start": 2.48,
+    "end": 2.61,
+    "id": "w10"
+  },
+  {
+    "text": "a",
+    "start": 2.61,
+    "end": 2.64,
+    "id": "w11"
+  },
+  {
+    "text": "flight",
+    "start": 2.75,
+    "end": 2.92,
+    "id": "w12"
+  },
+  {
+    "text": "security",
+    "start": 2.98,
+    "end": 3.45,
+    "id": "w13"
+  },
+  {
+    "text": "checklist,",
+    "start": 3.45,
+    "end": 4.03,
+    "id": "w14"
+  },
+  {
+    "text": "a",
+    "start": 4.18,
+    "end": 4.22,
+    "id": "w15"
+  },
+  {
+    "text": "firearm",
+    "start": 4.32,
+    "end": 4.72,
+    "id": "w16"
+  },
+  {
+    "text": "record,",
+    "start": 4.75,
+    "end": 5.22,
+    "id": "w17"
+  },
+  {
+    "text": "an",
+    "start": 5.34,
+    "end": 5.47,
+    "id": "w18"
+  },
+  {
+    "text": "item",
+    "start": 5.47,
+    "end": 5.62,
+    "id": "w19"
+  },
+  {
+    "text": "handover,",
+    "start": 6.07,
+    "end": 6.52,
+    "id": "w20"
+  },
+  {
+    "text": "and",
+    "start": 6.52,
+    "end": 6.74,
+    "id": "w21"
+  },
+  {
+    "text": "a",
+    "start": 6.74,
+    "end": 6.81,
+    "id": "w22"
+  },
+  {
+    "text": "search.",
+    "start": 6.81,
+    "end": 7.52,
+    "id": "w23"
+  },
+  {
+    "text": "Remember",
+    "start": 7.52,
+    "end": 7.95,
+    "id": "w24"
+  },
+  {
+    "text": "the",
+    "start": 7.95,
+    "end": 8.1,
+    "id": "w25"
+  },
+  {
+    "text": "simple",
+    "start": 8.11,
+    "end": 8.36,
+    "id": "w26"
+  },
+  {
+    "text": "pattern.",
+    "start": 8.44,
+    "end": 8.94,
+    "id": "w27"
+  },
+  {
+    "text": "Choose",
+    "start": 9.05,
+    "end": 9.25,
+    "id": "w28"
+  },
+  {
+    "text": "the",
+    "start": 9.25,
+    "end": 9.37,
+    "id": "w29"
+  },
+  {
+    "text": "correct",
+    "start": 9.37,
+    "end": 9.67,
+    "id": "w30"
+  },
+  {
+    "text": "form,",
+    "start": 9.72,
+    "end": 10.16,
+    "id": "w31"
+  },
+  {
+    "text": "enter",
+    "start": 10.19,
+    "end": 10.45,
+    "id": "w32"
+  },
+  {
+    "text": "accurate",
+    "start": 10.45,
+    "end": 10.91,
+    "id": "w33"
+  },
+  {
+    "text": "details,",
+    "start": 10.91,
+    "end": 11.44,
+    "id": "w34"
+  },
+  {
+    "text": "let",
+    "start": 11.55,
+    "end": 11.61,
+    "id": "w35"
+  },
+  {
+    "text": "each",
+    "start": 11.61,
+    "end": 11.84,
+    "id": "w36"
+  },
+  {
+    "text": "person",
+    "start": 11.84,
+    "end": 12.19,
+    "id": "w37"
+  },
+  {
+    "text": "sign",
+    "start": 12.19,
+    "end": 12.42,
+    "id": "w38"
+  },
+  {
+    "text": "for",
+    "start": 12.42,
+    "end": 12.59,
+    "id": "w39"
+  },
+  {
+    "text": "themselves,",
+    "start": 12.59,
+    "end": 13.28,
+    "id": "w40"
+  },
+  {
+    "text": "wait",
+    "start": 13.3,
+    "end": 13.52,
+    "id": "w41"
+  },
+  {
+    "text": "for",
+    "start": 13.52,
+    "end": 13.69,
+    "id": "w42"
+  },
+  {
+    "text": "saved,",
+    "start": 13.69,
+    "end": 14.09,
+    "id": "w43"
+  },
+  {
+    "text": "and",
+    "start": 14.09,
+    "end": 14.19,
+    "id": "w44"
+  },
+  {
+    "text": "check",
+    "start": 14.34,
+    "end": 14.68,
+    "id": "w45"
+  },
+  {
+    "text": "the",
+    "start": 14.71,
+    "end": 15.18,
+    "id": "w46"
+  },
+  {
+    "text": "PDF.",
+    "start": 15.3,
+    "end": 16.24,
+    "id": "w47"
+  },
+  {
+    "text": "If",
+    "start": 16.24,
+    "end": 16.33,
+    "id": "w48"
+  },
+  {
+    "text": "something",
+    "start": 16.33,
+    "end": 16.74,
+    "id": "w49"
+  },
+  {
+    "text": "looks",
+    "start": 16.74,
+    "end": 16.94,
+    "id": "w50"
+  },
+  {
+    "text": "wrong",
+    "start": 16.97,
+    "end": 17.19,
+    "id": "w51"
+  },
+  {
+    "text": "or",
+    "start": 17.25,
+    "end": 17.29,
+    "id": "w52"
+  },
+  {
+    "text": "the",
+    "start": 17.29,
+    "end": 17.31,
+    "id": "w53"
+  },
+  {
+    "text": "saved",
+    "start": 17.43,
+    "end": 17.6,
+    "id": "w54"
+  },
+  {
+    "text": "screen",
+    "start": 17.66,
+    "end": 17.96,
+    "id": "w55"
+  },
+  {
+    "text": "does",
+    "start": 17.96,
+    "end": 18.2,
+    "id": "w56"
+  },
+  {
+    "text": "not",
+    "start": 18.2,
+    "end": 18.32,
+    "id": "w57"
+  },
+  {
+    "text": "appear,",
+    "start": 18.4,
+    "end": 18.86,
+    "id": "w58"
+  },
+  {
+    "text": "keep",
+    "start": 18.86,
+    "end": 19.1,
+    "id": "w59"
+  },
+  {
+    "text": "the",
+    "start": 19.1,
+    "end": 19.28,
+    "id": "w60"
+  },
+  {
+    "text": "page",
+    "start": 19.28,
+    "end": 19.52,
+    "id": "w61"
+  },
+  {
+    "text": "open",
+    "start": 19.52,
+    "end": 19.8,
+    "id": "w62"
+  },
+  {
+    "text": "and",
+    "start": 19.83,
+    "end": 19.96,
+    "id": "w63"
+  },
+  {
+    "text": "ask",
+    "start": 19.96,
+    "end": 20.1,
+    "id": "w64"
+  },
+  {
+    "text": "your",
+    "start": 20.18,
+    "end": 20.3,
+    "id": "w65"
+  },
+  {
+    "text": "supervisor",
+    "start": 20.42,
+    "end": 20.69,
+    "id": "w66"
+  },
+  {
+    "text": "for",
+    "start": 20.69,
+    "end": 21.03,
+    "id": "w67"
+  },
+  {
+    "text": "help.",
+    "start": 21.19,
+    "end": 21.44,
+    "id": "w68"
+  }
+]

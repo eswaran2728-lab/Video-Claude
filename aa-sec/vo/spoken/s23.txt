@@ -1,0 +1,1 @@
+When the form is ready, tap Save record once. The button changes to "Saving" while the app works. Wait for the result.

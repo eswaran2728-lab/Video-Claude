@@ -1,0 +1,230 @@
+[
+  {
+    "text": "The",
+    "start": 0.05,
+    "end": 0.19,
+    "id": "w0"
+  },
+  {
+    "text": "captain",
+    "start": 0.19,
+    "end": 0.64,
+    "id": "w1"
+  },
+  {
+    "text": "checks",
+    "start": 0.64,
+    "end": 1.03,
+    "id": "w2"
+  },
+  {
+    "text": "the",
+    "start": 1.03,
+    "end": 1.22,
+    "id": "w3"
+  },
+  {
+    "text": "no-talk",
+    "start": 1.22,
+    "end": 1.67,
+    "id": "w4"
+  },
+  {
+    "text": "and",
+    "start": 1.67,
+    "end": 1.86,
+    "id": "w5"
+  },
+  {
+    "text": "signs",
+    "start": 1.86,
+    "end": 2.17,
+    "id": "w6"
+  },
+  {
+    "text": "for",
+    "start": 2.18,
+    "end": 2.37,
+    "id": "w7"
+  },
+  {
+    "text": "themselves.",
+    "start": 2.37,
+    "end": 3.12,
+    "id": "w8"
+  },
+  {
+    "text": "The",
+    "start": 3.16,
+    "end": 3.36,
+    "id": "w9"
+  },
+  {
+    "text": "phone",
+    "start": 3.36,
+    "end": 3.76,
+    "id": "w10"
+  },
+  {
+    "text": "then",
+    "start": 3.76,
+    "end": 4.08,
+    "id": "w11"
+  },
+  {
+    "text": "returns",
+    "start": 4.08,
+    "end": 4.62,
+    "id": "w12"
+  },
+  {
+    "text": "to",
+    "start": 4.67,
+    "end": 4.79,
+    "id": "w13"
+  },
+  {
+    "text": "security",
+    "start": 4.79,
+    "end": 5.42,
+    "id": "w14"
+  },
+  {
+    "text": "staff.",
+    "start": 5.42,
+    "end": 5.82,
+    "id": "w15"
+  },
+  {
+    "text": "Security",
+    "start": 6.13,
+    "end": 6.58,
+    "id": "w16"
+  },
+  {
+    "text": "staff",
+    "start": 6.6,
+    "end": 6.84,
+    "id": "w17"
+  },
+  {
+    "text": "sign,",
+    "start": 6.93,
+    "end": 7.31,
+    "id": "w18"
+  },
+  {
+    "text": "tap",
+    "start": 7.31,
+    "end": 7.47,
+    "id": "w19"
+  },
+  {
+    "text": "save",
+    "start": 7.5,
+    "end": 7.76,
+    "id": "w20"
+  },
+  {
+    "text": "once",
+    "start": 7.76,
+    "end": 7.95,
+    "id": "w21"
+  },
+  {
+    "text": "and",
+    "start": 8.01,
+    "end": 8.21,
+    "id": "w22"
+  },
+  {
+    "text": "wait",
+    "start": 8.21,
+    "end": 8.47,
+    "id": "w23"
+  },
+  {
+    "text": "for",
+    "start": 8.47,
+    "end": 8.63,
+    "id": "w24"
+  },
+  {
+    "text": "the",
+    "start": 8.63,
+    "end": 8.67,
+    "id": "w25"
+  },
+  {
+    "text": "saved",
+    "start": 8.67,
+    "end": 9.2,
+    "id": "w26"
+  },
+  {
+    "text": "screen.",
+    "start": 9.2,
+    "end": 9.79,
+    "id": "w27"
+  },
+  {
+    "text": "If",
+    "start": 9.87,
+    "end": 9.9,
+    "id": "w28"
+  },
+  {
+    "text": "a",
+    "start": 9.95,
+    "end": 10,
+    "id": "w29"
+  },
+  {
+    "text": "signature",
+    "start": 10,
+    "end": 10.55,
+    "id": "w30"
+  },
+  {
+    "text": "is",
+    "start": 10.58,
+    "end": 10.68,
+    "id": "w31"
+  },
+  {
+    "text": "wrong,",
+    "start": 10.68,
+    "end": 11.11,
+    "id": "w32"
+  },
+  {
+    "text": "use",
+    "start": 11.11,
+    "end": 11.29,
+    "id": "w33"
+  },
+  {
+    "text": "clear",
+    "start": 11.29,
+    "end": 11.6,
+    "id": "w34"
+  },
+  {
+    "text": "and",
+    "start": 11.6,
+    "end": 11.78,
+    "id": "w35"
+  },
+  {
+    "text": "sign",
+    "start": 11.78,
+    "end": 12.01,
+    "id": "w36"
+  },
+  {
+    "text": "again.",
+    "start": 12.04,
+    "end": 12.4,
+    "id": "w37"
+  }
+]

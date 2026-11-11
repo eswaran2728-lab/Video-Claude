@@ -1,0 +1,1 @@
+Each saved form also creates a row in its records Google Sheet. There are separate records Sheets for the four forms. Authorised supervisors and staff use these Sheets to review submissions. The example row in this slide is a test record.

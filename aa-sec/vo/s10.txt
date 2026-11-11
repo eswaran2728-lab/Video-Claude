@@ -1,0 +1,1 @@
+Enter the flight number, aircraft registration, destination, date, times, and aircraft bay. Check the information before moving on. Flight number and date must be entered.

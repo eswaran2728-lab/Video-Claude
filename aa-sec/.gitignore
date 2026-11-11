@@ -1,0 +1,7 @@
+deck.pdf
+slides/
+vo/*.wav
+video/renders/
+video/.hyperframes/
+video/render.log
+video/node_modules/

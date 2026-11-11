@@ -1,0 +1,128 @@
+[
+  {
+    "text": "The",
+    "start": 0.03,
+    "end": 0.18,
+    "id": "w0"
+  },
+  {
+    "text": "security",
+    "start": 0.18,
+    "end": 0.68,
+    "id": "w1"
+  },
+  {
+    "text": "representative",
+    "start": 0.68,
+    "end": 1.5,
+    "id": "w2"
+  },
+  {
+    "text": "signs",
+    "start": 1.56,
+    "end": 1.87,
+    "id": "w3"
+  },
+  {
+    "text": "in",
+    "start": 1.89,
+    "end": 2.05,
+    "id": "w4"
+  },
+  {
+    "text": "their",
+    "start": 2.05,
+    "end": 2.48,
+    "id": "w5"
+  },
+  {
+    "text": "signature",
+    "start": 2.48,
+    "end": 3.02,
+    "id": "w6"
+  },
+  {
+    "text": "box.",
+    "start": 3.52,
+    "end": 3.56,
+    "id": "w7"
+  },
+  {
+    "text": "If",
+    "start": 3.61,
+    "end": 3.67,
+    "id": "w8"
+  },
+  {
+    "text": "the",
+    "start": 3.67,
+    "end": 3.83,
+    "id": "w9"
+  },
+  {
+    "text": "signature",
+    "start": 3.85,
+    "end": 4.36,
+    "id": "w10"
+  },
+  {
+    "text": "needs",
+    "start": 4.36,
+    "end": 4.64,
+    "id": "w11"
+  },
+  {
+    "text": "correcting,",
+    "start": 4.64,
+    "end": 5.35,
+    "id": "w12"
+  },
+  {
+    "text": "tap",
+    "start": 5.35,
+    "end": 5.52,
+    "id": "w13"
+  },
+  {
+    "text": "clear",
+    "start": 5.52,
+    "end": 5.92,
+    "id": "w14"
+  },
+  {
+    "text": "and",
+    "start": 5.92,
+    "end": 6.13,
+    "id": "w15"
+  },
+  {
+    "text": "sign",
+    "start": 6.13,
+    "end": 6.35,
+    "id": "w16"
+  },
+  {
+    "text": "again,",
+    "start": 6.45,
+    "end": 6.92,
+    "id": "w17"
+  },
+  {
+    "text": "then",
+    "start": 7.14,
+    "end": 7.2,
+    "id": "w18"
+  },
+  {
+    "text": "redraw",
+    "start": 7.2,
+    "end": 7.61,
+    "id": "w19"
+  },
+  {
+    "text": "it.",
+    "start": 7.61,
+    "end": 7.8,
+    "id": "w20"
+  }
+]

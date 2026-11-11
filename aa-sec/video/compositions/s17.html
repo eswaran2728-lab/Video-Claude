@@ -1,0 +1,46 @@
+<template>
+  <style>
+    #root { position:absolute; inset:0; overflow:hidden; font-family:'Roboto', 'Inter', sans-serif; }
+    #s17-bg { position:absolute; inset:0; background:#FFFFFF; }
+    #s17-content { position:absolute; inset:0; }
+    #s17-content .el { position:absolute; box-sizing:border-box; }
+    #s17-content p { margin:0; line-height:1.18; }
+    #s17-content .w { display:inline-block; white-space:pre; }
+    #s17-content .tbl { border-collapse:collapse; }
+    #s17-content .tbl td { border:1.5px solid #C9CDD2; padding:4px 10px; vertical-align:middle; }
+  </style>
+  <div id="root" data-composition-id="s17" data-width="1920" data-height="1080">
+    <div id="s17-bg"></div>
+    <div id="s17-content" data-hold>
+      <div id="s17-e0" class="el" style="left:109.4px;top:164.7px;width:558.7px;height:750.6px;background:#1F1F24;border:2.0px solid #1F1F24;border-radius:36.0px;"></div>
+      <img id="s17-e1" class="el" src="assets/img/s17-1.jpg" style="left:129.6px;top:202.2px;width:518.4px;height:675.7px;object-fit:fill;" alt="">
+      <div id="s17-e2" class="el" style="left:777.6px;top:86.4px;width:1065.6px;height:64.8px;display:flex;flex-direction:column;justify-content:center;padding:0.0px 0.0px 0.0px 0.0px;"><p style="text-align:left;font-size:36px"><span style="font-size:36px;font-weight:700;color:#C8102E;">MISTAKE IN THE SIGNATURE?</span></p></div>
+      <div id="s17-e3" class="el" style="left:777.6px;top:165.6px;width:459.4px;height:72.0px;background:#B8550D;border:2.0px solid #B8550D;border-radius:36.0px;"></div>
+      <div id="s17-e4" class="el" style="left:777.6px;top:165.6px;width:459.4px;height:72.0px;display:flex;flex-direction:column;justify-content:center;padding:0.0px 0.0px 0.0px 0.0px;"><p style="text-align:center;font-size:32px"><span style="font-size:32px;font-weight:700;color:#FFFFFF;">AIRLINE REPRESENTATIVE</span></p></div>
+      <div id="s17-e5" class="el" style="left:777.6px;top:266.4px;width:1065.6px;height:302.4px;display:flex;flex-direction:column;justify-content:flex-start;padding:0.0px 0.0px 0.0px 0.0px;"><p style="text-align:left;font-size:100px"><span style="font-size:100px;font-weight:700;color:#1A1A1A;"><span class="w">Tap</span> <span class="w">Clear</span> <span class="w">and</span> <span class="w">sign</span> <span class="w">again</span></span></p></div>
+      <div id="s17-e6" class="el" style="left:777.6px;top:540.0px;width:1036.8px;height:151.2px;display:flex;flex-direction:column;justify-content:flex-start;padding:0.0px 0.0px 0.0px 0.0px;"><p style="text-align:left;font-size:44px"><span style="font-size:44px;font-weight:400;color:#5F6368;">Works the same on every signature box.</span></p></div>
+      <div id="s17-e7" class="el" style="left:777.6px;top:698.4px;width:432.0px;height:43.2px;display:flex;flex-direction:column;justify-content:center;padding:0.0px 0.0px 0.0px 0.0px;"><p style="text-align:left;font-size:26px"><span style="font-size:28px;font-weight:700;color:#E31837;">CLOSE-UP</span></p></div>
+      <div id="s17-e8" class="el" style="left:771.8px;top:747.4px;width:875.5px;height:187.8px;background:#FFFFFF;border:6.0px solid #E31837;"></div>
+      <img id="s17-e9" class="el" src="assets/img/s17-9.jpg" style="left:777.6px;top:753.1px;width:864.0px;height:176.3px;object-fit:fill;" alt="">
+      <div id="s17-e10" class="el" style="left:154.8px;top:710.5px;width:468.1px;height:75.5px;border:10.0px solid #E31837;border-radius:17.3px;"></div>
+      <div id="s17-e11" class="el line" data-axis="x" style="left:630.0px;top:742.2px;width:118.79999999999995px;height:12.0px;transform-origin:left center;background:#E31837;border-radius:6.0px;"></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      
+      tl.fromTo("#s17-e0, #s17-e1", {opacity:0, y:70, scale:0.97}, {opacity:1, y:0, scale:1, duration:0.9, ease:"expo.out"}, 0.10);
+      tl.fromTo("#s17-e2", {opacity:0, filter:"blur(8px)"}, {opacity:1, filter:"blur(0px)", duration:0.3, ease:"power2.out"}, 0.25);
+      tl.fromTo("#s17-e3, #s17-e4", {opacity:0, scale:0.7}, {opacity:1, scale:1, duration:0.4, ease:"back.out(1.6)"}, 0.41);
+      tl.fromTo("#s17-e5 .w", {opacity:0, filter:"blur(8px)"}, {opacity:1, filter:"blur(0px)", duration:0.22, ease:"power2.out", stagger:0.067}, 0.57);
+      tl.fromTo("#s17-e6", {opacity:0, filter:"blur(8px)"}, {opacity:1, filter:"blur(0px)", duration:0.3, ease:"power2.out"}, 0.98);
+      tl.fromTo("#s17-e7, #s17-e8, #s17-e9", {opacity:0, y:34, scale:0.96}, {opacity:1, y:0, scale:1, duration:0.7, ease:"expo.out"}, 1.33);
+      tl.fromTo("#s17-e10", {opacity:0, scale:1.18}, {opacity:1, scale:1, duration:0.5, ease:"expo.out"}, 1.33);
+      tl.fromTo("#s17-e10", {boxShadow:"0 0 0 0px rgba(227,24,55,0.55)"}, {boxShadow:"0 0 0 18px rgba(227,24,55,0)", duration:0.9, ease:"power2.out"}, 1.68);
+      tl.fromTo("#s17-e11", {scaleX:0}, {scaleX:1, duration:0.4, ease:"power3.out"}, 1.58);
+      tl.to("#s17-content", {opacity:0, filter:"blur(6px)", duration:0.25, ease:"power2.in"}, 7.81);
+      window.__timelines["s17"] = tl;
+    })();
+  </script>
+</template>

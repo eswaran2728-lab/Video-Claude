@@ -1,0 +1,1 @@
+Read each checklist line. Select Completed or Not Checked. Add a remark when an item needs an explanation. Continue through the additional services section as well.

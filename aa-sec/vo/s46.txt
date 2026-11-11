@@ -1,0 +1,1 @@
+Pass the phone to each named signer. Each person signs for themselves. If the witness option was selected, the witness signs too. When all required signatures are complete, save the form and wait for Saved.

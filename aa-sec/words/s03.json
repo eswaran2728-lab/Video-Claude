@@ -1,0 +1,158 @@
+[
+  {
+    "text": "Get",
+    "start": 0.03,
+    "end": 0.12,
+    "id": "w0"
+  },
+  {
+    "text": "the",
+    "start": 0.2,
+    "end": 0.34,
+    "id": "w1"
+  },
+  {
+    "text": "app",
+    "start": 0.34,
+    "end": 0.41,
+    "id": "w2"
+  },
+  {
+    "text": "link",
+    "start": 0.52,
+    "end": 0.72,
+    "id": "w3"
+  },
+  {
+    "text": "from",
+    "start": 0.81,
+    "end": 0.97,
+    "id": "w4"
+  },
+  {
+    "text": "your",
+    "start": 0.97,
+    "end": 1.2,
+    "id": "w5"
+  },
+  {
+    "text": "supervisor",
+    "start": 1.2,
+    "end": 1.65,
+    "id": "w6"
+  },
+  {
+    "text": "or",
+    "start": 1.92,
+    "end": 2.04,
+    "id": "w7"
+  },
+  {
+    "text": "scan",
+    "start": 2.04,
+    "end": 2.39,
+    "id": "w8"
+  },
+  {
+    "text": "the",
+    "start": 2.45,
+    "end": 2.73,
+    "id": "w9"
+  },
+  {
+    "text": "QR",
+    "start": 2.79,
+    "end": 2.94,
+    "id": "w10"
+  },
+  {
+    "text": "code",
+    "start": 2.94,
+    "end": 3.34,
+    "id": "w11"
+  },
+  {
+    "text": "shown",
+    "start": 3.34,
+    "end": 3.69,
+    "id": "w12"
+  },
+  {
+    "text": "here.",
+    "start": 3.69,
+    "end": 4.31,
+    "id": "w13"
+  },
+  {
+    "text": "Keep",
+    "start": 4.31,
+    "end": 4.4,
+    "id": "w14"
+  },
+  {
+    "text": "the",
+    "start": 4.48,
+    "end": 4.61,
+    "id": "w15"
+  },
+  {
+    "text": "link",
+    "start": 4.61,
+    "end": 4.69,
+    "id": "w16"
+  },
+  {
+    "text": "somewhere",
+    "start": 4.8,
+    "end": 5.24,
+    "id": "w17"
+  },
+  {
+    "text": "you",
+    "start": 5.24,
+    "end": 5.38,
+    "id": "w18"
+  },
+  {
+    "text": "can",
+    "start": 5.38,
+    "end": 5.51,
+    "id": "w19"
+  },
+  {
+    "text": "find",
+    "start": 5.52,
+    "end": 5.71,
+    "id": "w20"
+  },
+  {
+    "text": "it",
+    "start": 5.71,
+    "end": 5.79,
+    "id": "w21"
+  },
+  {
+    "text": "when",
+    "start": 5.79,
+    "end": 5.94,
+    "id": "w22"
+  },
+  {
+    "text": "you",
+    "start": 5.94,
+    "end": 6.2,
+    "id": "w23"
+  },
+  {
+    "text": "need",
+    "start": 6.2,
+    "end": 6.32,
+    "id": "w24"
+  },
+  {
+    "text": "it.",
+    "start": 6.32,
+    "end": 6.56,
+    "id": "w25"
+  }
+]

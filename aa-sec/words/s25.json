@@ -1,0 +1,86 @@
+[
+  {
+    "text": "After",
+    "start": 0.03,
+    "end": 0.46,
+    "id": "w0"
+  },
+  {
+    "text": "saving,",
+    "start": 0.46,
+    "end": 1.2,
+    "id": "w1"
+  },
+  {
+    "text": "tap",
+    "start": 1.2,
+    "end": 1.48,
+    "id": "w2"
+  },
+  {
+    "text": "Open",
+    "start": 1.48,
+    "end": 1.85,
+    "id": "w3"
+  },
+  {
+    "text": "the",
+    "start": 1.85,
+    "end": 2.11,
+    "id": "w4"
+  },
+  {
+    "text": "completed",
+    "start": 2.14,
+    "end": 2.61,
+    "id": "w5"
+  },
+  {
+    "text": "PDF.",
+    "start": 3.28,
+    "end": 3.34,
+    "id": "w6"
+  },
+  {
+    "text": "The",
+    "start": 3.37,
+    "end": 3.58,
+    "id": "w7"
+  },
+  {
+    "text": "signed",
+    "start": 3.58,
+    "end": 4.05,
+    "id": "w8"
+  },
+  {
+    "text": "PDF",
+    "start": 4.05,
+    "end": 4.29,
+    "id": "w9"
+  },
+  {
+    "text": "opens",
+    "start": 4.29,
+    "end": 4.61,
+    "id": "w10"
+  },
+  {
+    "text": "in",
+    "start": 4.68,
+    "end": 4.84,
+    "id": "w11"
+  },
+  {
+    "text": "Google",
+    "start": 4.84,
+    "end": 5.31,
+    "id": "w12"
+  },
+  {
+    "text": "Drive.",
+    "start": 5.31,
+    "end": 5.78,
+    "id": "w13"
+  }
+]

@@ -1,0 +1,116 @@
+[
+  {
+    "text": "Enter",
+    "start": 0.04,
+    "end": 0.36,
+    "id": "w0"
+  },
+  {
+    "text": "the",
+    "start": 0.36,
+    "end": 0.57,
+    "id": "w1"
+  },
+  {
+    "text": "departure",
+    "start": 0.57,
+    "end": 1.22,
+    "id": "w2"
+  },
+  {
+    "text": "or",
+    "start": 1.22,
+    "end": 1.36,
+    "id": "w3"
+  },
+  {
+    "text": "arrival",
+    "start": 1.36,
+    "end": 1.87,
+    "id": "w4"
+  },
+  {
+    "text": "station,",
+    "start": 1.87,
+    "end": 2.52,
+    "id": "w5"
+  },
+  {
+    "text": "flight",
+    "start": 2.52,
+    "end": 2.95,
+    "id": "w6"
+  },
+  {
+    "text": "number,",
+    "start": 2.95,
+    "end": 3.51,
+    "id": "w7"
+  },
+  {
+    "text": "date",
+    "start": 3.51,
+    "end": 3.81,
+    "id": "w8"
+  },
+  {
+    "text": "and",
+    "start": 3.81,
+    "end": 4.02,
+    "id": "w9"
+  },
+  {
+    "text": "aircraft",
+    "start": 4.02,
+    "end": 4.6,
+    "id": "w10"
+  },
+  {
+    "text": "registration.",
+    "start": 4.6,
+    "end": 5.74,
+    "id": "w11"
+  },
+  {
+    "text": "Use",
+    "start": 5.78,
+    "end": 5.9,
+    "id": "w12"
+  },
+  {
+    "text": "the",
+    "start": 5.9,
+    "end": 6.06,
+    "id": "w13"
+  },
+  {
+    "text": "information",
+    "start": 6.06,
+    "end": 6.65,
+    "id": "w14"
+  },
+  {
+    "text": "for",
+    "start": 6.65,
+    "end": 6.81,
+    "id": "w15"
+  },
+  {
+    "text": "the",
+    "start": 6.81,
+    "end": 6.97,
+    "id": "w16"
+  },
+  {
+    "text": "actual",
+    "start": 6.97,
+    "end": 7.23,
+    "id": "w17"
+  },
+  {
+    "text": "flight.",
+    "start": 7.29,
+    "end": 7.64,
+    "id": "w18"
+  }
+]

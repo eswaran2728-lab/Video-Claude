@@ -1,0 +1,92 @@
+[
+  {
+    "text": "From",
+    "start": 0.09,
+    "end": 0.3,
+    "id": "w0"
+  },
+  {
+    "text": "the",
+    "start": 0.3,
+    "end": 0.52,
+    "id": "w1"
+  },
+  {
+    "text": "home",
+    "start": 0.52,
+    "end": 0.82,
+    "id": "w2"
+  },
+  {
+    "text": "screen",
+    "start": 0.82,
+    "end": 1.25,
+    "id": "w3"
+  },
+  {
+    "text": "tap",
+    "start": 1.27,
+    "end": 1.45,
+    "id": "w4"
+  },
+  {
+    "text": "search",
+    "start": 1.5,
+    "end": 1.9,
+    "id": "w5"
+  },
+  {
+    "text": "list,",
+    "start": 2.28,
+    "end": 2.39,
+    "id": "w6"
+  },
+  {
+    "text": "check",
+    "start": 2.39,
+    "end": 2.66,
+    "id": "w7"
+  },
+  {
+    "text": "that",
+    "start": 2.74,
+    "end": 2.83,
+    "id": "w8"
+  },
+  {
+    "text": "the",
+    "start": 2.91,
+    "end": 3.05,
+    "id": "w9"
+  },
+  {
+    "text": "search",
+    "start": 3.05,
+    "end": 3.38,
+    "id": "w10"
+  },
+  {
+    "text": "list",
+    "start": 3.38,
+    "end": 3.6,
+    "id": "w11"
+  },
+  {
+    "text": "form",
+    "start": 3.6,
+    "end": 3.82,
+    "id": "w12"
+  },
+  {
+    "text": "has",
+    "start": 3.82,
+    "end": 3.97,
+    "id": "w13"
+  },
+  {
+    "text": "opened.",
+    "start": 4.04,
+    "end": 4.36,
+    "id": "w14"
+  }
+]

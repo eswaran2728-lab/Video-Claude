@@ -1,0 +1,42 @@
+<template>
+  <style>
+    #root { position:absolute; inset:0; overflow:hidden; font-family:'Roboto', 'Inter', sans-serif; }
+    #s43-bg { position:absolute; inset:0; background:#FFFFFF; }
+    #s43-content { position:absolute; inset:0; }
+    #s43-content .el { position:absolute; box-sizing:border-box; }
+    #s43-content p { margin:0; line-height:1.18; }
+    #s43-content .w { display:inline-block; white-space:pre; }
+    #s43-content .tbl { border-collapse:collapse; }
+    #s43-content .tbl td { border:1.5px solid #C9CDD2; padding:4px 10px; vertical-align:middle; }
+  </style>
+  <div id="root" data-composition-id="s43" data-width="1920" data-height="1080">
+    <div id="s43-bg"></div>
+    <div id="s43-content" data-hold>
+      <div id="s43-e0" class="el" style="left:138.2px;top:55.2px;width:501.1px;height:969.6px;background:#1F1F24;border:2.0px solid #1F1F24;border-radius:36.0px;"></div>
+      <img id="s43-e1" class="el" src="assets/img/s43-1.jpg" style="left:158.4px;top:92.6px;width:460.8px;height:894.8px;object-fit:fill;" alt="">
+      <div id="s43-e2" class="el" style="left:777.6px;top:86.4px;width:1065.6px;height:64.8px;display:flex;flex-direction:column;justify-content:center;padding:0.0px 0.0px 0.0px 0.0px;"><p style="text-align:left;font-size:36px"><span style="font-size:36px;font-weight:700;color:#C8102E;">SEARCH LIST · STEP 2</span></p></div>
+      <div id="s43-e3" class="el" style="left:777.6px;top:165.6px;width:303.8px;height:72.0px;background:#0B57D0;border:2.0px solid #0B57D0;border-radius:36.0px;"></div>
+      <div id="s43-e4" class="el" style="left:777.6px;top:165.6px;width:303.8px;height:72.0px;display:flex;flex-direction:column;justify-content:center;padding:0.0px 0.0px 0.0px 0.0px;"><p style="text-align:center;font-size:32px"><span style="font-size:32px;font-weight:700;color:#FFFFFF;">SECURITY STAFF</span></p></div>
+      <div id="s43-e5" class="el" style="left:777.6px;top:266.4px;width:1065.6px;height:302.4px;display:flex;flex-direction:column;justify-content:flex-start;padding:0.0px 0.0px 0.0px 0.0px;"><p style="text-align:left;font-size:100px"><span style="font-size:100px;font-weight:700;color:#1A1A1A;"><span class="w">Fill</span> <span class="w">the</span> <span class="w">search</span> <span class="w">details</span></span></p></div>
+      <div id="s43-e6" class="el" style="left:777.6px;top:597.6px;width:1036.8px;height:331.2px;display:flex;flex-direction:column;justify-content:flex-start;padding:0.0px 0.0px 0.0px 0.0px;"><p style="text-align:left;font-size:52px"><span style="font-size:52px;font-weight:400;color:#5F6368;">Date, time, place, and what was searched: person, vehicle or locker.</span></p></div>
+      <div id="s43-e7" class="el" style="left:167.3px;top:306.2px;width:442.9px;height:354.5px;border:10.0px solid #E31837;border-radius:17.3px;"></div>
+      <div id="s43-e8" class="el line" data-axis="x" style="left:617.5px;top:477.5px;width:131.29999999999995px;height:12.0px;transform-origin:left center;background:#E31837;border-radius:6.0px;"></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      
+      tl.fromTo("#s43-e0, #s43-e1", {opacity:0, y:70, scale:0.97}, {opacity:1, y:0, scale:1, duration:0.9, ease:"expo.out"}, 0.10);
+      tl.fromTo("#s43-e2", {opacity:0, filter:"blur(8px)"}, {opacity:1, filter:"blur(0px)", duration:0.3, ease:"power2.out"}, 0.25);
+      tl.fromTo("#s43-e3, #s43-e4", {opacity:0, scale:0.7}, {opacity:1, scale:1, duration:0.4, ease:"back.out(1.6)"}, 0.41);
+      tl.fromTo("#s43-e5 .w", {opacity:0, filter:"blur(8px)"}, {opacity:1, filter:"blur(0px)", duration:0.22, ease:"power2.out", stagger:0.067}, 0.57);
+      tl.fromTo("#s43-e6", {opacity:0, filter:"blur(8px)"}, {opacity:1, filter:"blur(0px)", duration:0.3, ease:"power2.out"}, 0.98);
+      tl.fromTo("#s43-e7", {opacity:0, scale:1.18}, {opacity:1, scale:1, duration:0.5, ease:"expo.out"}, 1.28);
+      tl.fromTo("#s43-e7", {boxShadow:"0 0 0 0px rgba(227,24,55,0.55)"}, {boxShadow:"0 0 0 18px rgba(227,24,55,0)", duration:0.9, ease:"power2.out"}, 1.63);
+      tl.fromTo("#s43-e8", {scaleX:0}, {scaleX:1, duration:0.4, ease:"power3.out"}, 1.53);
+      tl.to("#s43-content", {opacity:0, filter:"blur(6px)", duration:0.25, ease:"power2.in"}, 9.13);
+      window.__timelines["s43"] = tl;
+    })();
+  </script>
+</template>
