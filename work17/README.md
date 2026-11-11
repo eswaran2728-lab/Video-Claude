@@ -65,3 +65,12 @@ cd edit && npx --yes hyperframes@0.8.193 render --quality draft --fps 30 --sdr -
 cd .. && ./master_preview.sh renders/draft_v01.mp4 PREVIEW_AA-SEC-F-042_HiLift_Escort_training_v01.mp4
 ```
 Final (only after approval): `render --quality high --sdr --workers 3` → `./master_final.sh renders/final_v01.mp4 FINAL_….mp4`.
+
+## Checks (v01 preview)
+- **Render:** 3 workers.
+- **Output:** 1280x720, 32,939 frames, 1098.0 s; −14.0 LUFS, −1.2 dBFS peak.
+- **Playback:** full decode with 0 errors; no black stretches (the dark title/closing cards are intended); audio lag 0 ms at three points.
+- **`hyperframes check`:** 0 errors.
+- **Snapshots:** one per scene in `sheets/snap1` (after the title-width and slide-37 fixes, `snap2`), and
+  `sheets/preview_v01_sheet.jpg`.
+- **Not verified:** I cannot listen; the voice was checked by speech recognition only.
