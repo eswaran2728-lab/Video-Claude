@@ -74,3 +74,9 @@ Final (only after approval): `render --quality high --sdr --workers 3` → `./ma
 - **Snapshots:** one per scene in `sheets/snap1` (after the title-width and slide-37 fixes, `snap2`), and
   `sheets/preview_v01_sheet.jpg`.
 - **Not verified:** I cannot listen; the voice was checked by speech recognition only.
+
+## Final v01 (creator: "proceed final")
+- **File:** `FINAL_AA-SEC-F-042_HiLift_Escort_Training_v01_1920x1080.mp4` (not in git), rendered with `--quality high --sdr --workers 3`
+  and mastered with `master_final.sh`.
+- **Specs:** 1920x1080 H.264, 30 fps, 32,939 frames, 1098.0 s, 83 MB; −14.0 LUFS, −2.0 dBFS peak.
+- **Checks:** full decode with 0 errors; no black stretches; audio lag 0 ms at three points. Nothing is published.
