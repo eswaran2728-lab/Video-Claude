@@ -66,3 +66,11 @@ cd edit && npx --yes hyperframes@0.8.193 render --quality draft --fps 30 --sdr -
 cd .. && ./master_preview.sh renders/draft_v01.mp4 PREVIEW_AA-SEC-F-077_training_v01.mp4
 ```
 Final (only after approval): `render --quality high --sdr` → `./master_final.sh renders/final_v01.mp4 FINAL_….mp4`.
+
+## Checks (v01 preview)
+- **Render:** 3 workers, about 10 min.
+- **Output:** 1280x720, 29,883 frames, 996.2 s; −14.0 LUFS, −1.3 dBFS peak.
+- **Playback:** full decode with 0 errors; no black stretches (the navy title/end cards are intended); audio vs `edit/assets/mix.wav` lag 0 ms at three points.
+- **`hyperframes check`:** 0 errors. Warnings left: small text inside the mock form UI, and two duplicate-image notices.
+- **Snapshots:** `sheets/snap1`, `snap2` and `sheets/preview_v01_sheet.jpg` (one frame every 25 s).
+- **Not verified:** I cannot listen. The voice was checked by speech recognition (`vo_check.json`), and levels by measurement only.
