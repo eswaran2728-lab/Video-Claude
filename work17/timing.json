@@ -1,0 +1,1740 @@
+{
+ "voice": "af_heart",
+ "speed": 1.0,
+ "scenes": [
+  {
+   "id": "s01",
+   "title": "Introduction",
+   "dur": 32.747,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Welcome to the High-Lift Escort eForm training.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 3.669
+    },
+    {
+     "i": 1,
+     "text": "In this video, we will guide you through the process of completing the AA/SEC/F/042 – Hi-lift Escort Checklist using your mobile phone.",
+     "cue": null,
+     "t0": 4.089,
+     "t1": 13.957
+    },
+    {
+     "i": 2,
+     "text": "We will demonstrate each step, from opening the form and entering flight details to completing the required security inspections, providing security sign-offs, and submitting your report.",
+     "cue": null,
+     "t0": 14.377,
+     "t1": 25.471
+    },
+    {
+     "i": 3,
+     "text": "Please follow the instructions carefully to ensure that every escort duty is recorded accurately.",
+     "cue": null,
+     "t0": 25.892,
+     "t1": 31.547
+    }
+   ],
+   "start": 0
+  },
+  {
+   "id": "s02",
+   "title": "Purpose of the Form",
+   "dur": 36.741,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Before we begin, let us understand the purpose of this form.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 4.209
+    },
+    {
+     "i": 1,
+     "text": "The High-Lift Escort Checklist is used to document each hi-lift escort duty.",
+     "cue": null,
+     "t0": 4.629,
+     "t1": 9.382
+    },
+    {
+     "i": 2,
+     "text": "This includes recording the flight details, performing the required security inspections at the catering facility, verifying the catering truck sealing and locking process, and completing two mandatory security sign-offs.",
+     "cue": null,
+     "t0": 9.802,
+     "t1": 22.764
+    },
+    {
+     "i": 3,
+     "text": "You are required to complete one form for each escort duty.",
+     "cue": null,
+     "t0": 23.184,
+     "t1": 26.386
+    },
+    {
+     "i": 4,
+     "text": "Most importantly, if you identify any abnormality during the inspection, you must report it immediately to the Duty Security Executive.",
+     "cue": null,
+     "t0": 26.986,
+     "t1": 35.541
+    }
+   ],
+   "start": 32.747
+  },
+  {
+   "id": "s03",
+   "title": "Opening the eForm",
+   "dur": 23.913,
+   "lines": [
+    {
+     "i": 0,
+     "text": "First, obtain the High-Lift Escort eForm link from your supervisor.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 5.003
+    },
+    {
+     "i": 1,
+     "text": "You can access the form by tapping the provided link or scanning the QR code displayed on the screen using your mobile phone camera.",
+     "cue": null,
+     "t0": 5.423,
+     "t1": 13.409
+    },
+    {
+     "i": 2,
+     "text": "Once you scan the QR code, the form will open in your phone's web browser.",
+     "cue": null,
+     "t0": 14.009,
+     "t1": 18.359
+    },
+    {
+     "i": 3,
+     "text": "There is no need to download or install any additional application.",
+     "cue": null,
+     "t0": 18.779,
+     "t1": 22.713
+    }
+   ],
+   "start": 69.488
+  },
+  {
+   "id": "s04",
+   "title": "Verifying the Correct Form",
+   "dur": 22.623,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Once the form opens, check the title displayed at the top of your screen.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 4.902
+    },
+    {
+     "i": 1,
+     "text": "Make sure the title reads AA/SEC/F/042 – Hi-lift Escort Checklist.",
+     "cue": null,
+     "t0": 5.322,
+     "t1": 10.906
+    },
+    {
+     "i": 2,
+     "text": "This is important to ensure that you are completing the correct form for your assigned escort duty.",
+     "cue": null,
+     "t0": 11.326,
+     "t1": 16.852
+    },
+    {
+     "i": 3,
+     "text": "If the title does not match, check with your supervisor before proceeding.",
+     "cue": null,
+     "t0": 17.452,
+     "t1": 21.423
+    }
+   ],
+   "start": 93.401
+  },
+  {
+   "id": "s05",
+   "title": "Understanding Mandatory Fields",
+   "dur": 21.254,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Before filling in the form, please take note of the red asterisk symbol.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 4.869
+    },
+    {
+     "i": 1,
+     "text": "Any question marked with a red asterisk is mandatory.",
+     "cue": null,
+     "t0": 5.289,
+     "t1": 8.537
+    },
+    {
+     "i": 2,
+     "text": "This means you must complete that field before moving to the next page.",
+     "cue": null,
+     "t0": 8.957,
+     "t1": 12.902
+    },
+    {
+     "i": 3,
+     "text": "If you leave a required field empty, the form will not allow you to proceed until the missing information is entered.",
+     "cue": null,
+     "t0": 13.502,
+     "t1": 20.054
+    }
+   ],
+   "start": 116.024
+  },
+  {
+   "id": "s06",
+   "title": "Page One: Flight Details",
+   "dur": 23.465,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Now, we will begin with page one of the form.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 3.445
+    },
+    {
+     "i": 1,
+     "text": "This section requires you to enter four important details.",
+     "cue": null,
+     "t0": 3.865,
+     "t1": 7.155
+    },
+    {
+     "i": 2,
+     "text": "These are the escort start time, flight number, Estimated Time of Departure, or ETD, and the flight sector.",
+     "cue": null,
+     "t0": 7.575,
+     "t1": 14.443
+    },
+    {
+     "i": 3,
+     "text": "Scroll down the page to view all four fields.",
+     "cue": null,
+     "t0": 14.863,
+     "t1": 17.479
+    },
+    {
+     "i": 4,
+     "text": "Ensure that the information you enter matches your actual escort assignment.",
+     "cue": null,
+     "t0": 17.899,
+     "t1": 22.265
+    }
+   ],
+   "start": 137.278
+  },
+  {
+   "id": "s07",
+   "title": "Entering the Start Time",
+   "dur": 25.04,
+   "lines": [
+    {
+     "i": 0,
+     "text": "First, locate the field labelled Time Starts.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 3.518
+    },
+    {
+     "i": 1,
+     "text": "Tap the time field and enter the actual time you began your escort duty.",
+     "cue": null,
+     "t0": 3.938,
+     "t1": 8.145
+    },
+    {
+     "i": 2,
+     "text": "Enter the hour first, followed by the minutes.",
+     "cue": null,
+     "t0": 8.565,
+     "t1": 10.934
+    },
+    {
+     "i": 3,
+     "text": "For example, if your escort started at ten o'clock in the morning, enter 10:00 AM.",
+     "cue": null,
+     "t0": 11.534,
+     "t1": 16.252
+    },
+    {
+     "i": 4,
+     "text": "Remember to record the actual start time and check that you have selected the correct AM or PM option.",
+     "cue": null,
+     "t0": 16.852,
+     "t1": 23.84
+    }
+   ],
+   "start": 160.743
+  },
+  {
+   "id": "s08",
+   "title": "Entering the Flight Number",
+   "dur": 23.07,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Next, locate the Flight Number field.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 3.105
+    },
+    {
+     "i": 1,
+     "text": "Tap the box and enter the flight number for your assigned escort duty.",
+     "cue": null,
+     "t0": 3.525,
+     "t1": 7.305
+    },
+    {
+     "i": 2,
+     "text": "In this demonstration, we are using TEST-AK01 as an example.",
+     "cue": null,
+     "t0": 7.725,
+     "t1": 12.324
+    },
+    {
+     "i": 3,
+     "text": "This is sample information for training purposes only.",
+     "cue": null,
+     "t0": 12.744,
+     "t1": 15.847
+    },
+    {
+     "i": 4,
+     "text": "During actual operations, always enter the correct flight number for the flight you are escorting.",
+     "cue": null,
+     "t0": 16.447,
+     "t1": 21.87
+    }
+   ],
+   "start": 185.783
+  },
+  {
+   "id": "s09",
+   "title": "Entering the ETD",
+   "dur": 23.613,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Now, proceed to the ETD field.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 3.166
+    },
+    {
+     "i": 1,
+     "text": "ETD stands for Estimated Time of Departure.",
+     "cue": null,
+     "t0": 3.586,
+     "t1": 6.758
+    },
+    {
+     "i": 2,
+     "text": "Tap the time field and enter the estimated departure time for your assigned flight.",
+     "cue": null,
+     "t0": 7.178,
+     "t1": 12.191
+    },
+    {
+     "i": 3,
+     "text": "Enter the hour first, followed by the minutes.",
+     "cue": null,
+     "t0": 12.611,
+     "t1": 14.98
+    },
+    {
+     "i": 4,
+     "text": "For this demonstration, we are using 11:30 AM.",
+     "cue": null,
+     "t0": 15.4,
+     "t1": 18.87
+    },
+    {
+     "i": 5,
+     "text": "Always verify the departure time before proceeding.",
+     "cue": null,
+     "t0": 19.29,
+     "t1": 22.413
+    }
+   ],
+   "start": 208.853
+  },
+  {
+   "id": "s10",
+   "title": "Selecting AM or PM",
+   "dur": 30.221,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Whenever you enter a time in the eForm, you must verify whether it is AM or PM.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 6.34
+    },
+    {
+     "i": 1,
+     "text": "Tap the AM or PM dropdown menu displayed beside the time field.",
+     "cue": null,
+     "t0": 6.76,
+     "t1": 11.804
+    },
+    {
+     "i": 2,
+     "text": "Select AM for morning times or PM for afternoon and night times.",
+     "cue": null,
+     "t0": 12.224,
+     "t1": 17.168
+    },
+    {
+     "i": 3,
+     "text": "For example, 10:00 in the morning should be recorded as 10:00 AM, while 10:00 at night should be recorded as 10:00 PM.",
+     "cue": null,
+     "t0": 17.768,
+     "t1": 24.917
+    },
+    {
+     "i": 4,
+     "text": "Please remember to check this for every time field throughout the form.",
+     "cue": null,
+     "t0": 25.517,
+     "t1": 29.021
+    }
+   ],
+   "start": 232.466
+  },
+  {
+   "id": "s11",
+   "title": "Entering the Flight Sector",
+   "dur": 20.777,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Next, locate the Sector field.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 2.792
+    },
+    {
+     "i": 1,
+     "text": "Tap the box and enter the flight sector for your escort assignment.",
+     "cue": null,
+     "t0": 3.212,
+     "t1": 6.694
+    },
+    {
+     "i": 2,
+     "text": "In this demonstration, we are using KUL-TEST as sample information.",
+     "cue": null,
+     "t0": 7.114,
+     "t1": 11.685
+    },
+    {
+     "i": 3,
+     "text": "During actual operations, enter the correct sector based on your assigned flight.",
+     "cue": null,
+     "t0": 12.285,
+     "t1": 16.813
+    },
+    {
+     "i": 4,
+     "text": "Double-check the details before continuing.",
+     "cue": null,
+     "t0": 17.233,
+     "t1": 19.577
+    }
+   ],
+   "start": 262.687
+  },
+  {
+   "id": "s12",
+   "title": "Proceeding to the Next Page",
+   "dur": 22.429,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Once you have completed all four flight details, review the information carefully.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 5.509
+    },
+    {
+     "i": 1,
+     "text": "Make sure the start time, flight number, ETD, and sector are correct.",
+     "cue": null,
+     "t0": 5.929,
+     "t1": 10.131
+    },
+    {
+     "i": 2,
+     "text": "After checking, scroll to the bottom of the page and tap Next.",
+     "cue": null,
+     "t0": 10.551,
+     "t1": 14.023
+    },
+    {
+     "i": 3,
+     "text": "You will notice a progress bar showing your current position in the form.",
+     "cue": null,
+     "t0": 14.443,
+     "t1": 18.064
+    },
+    {
+     "i": 4,
+     "text": "This helps you identify which page you are completing.",
+     "cue": null,
+     "t0": 18.484,
+     "t1": 21.229
+    }
+   ],
+   "start": 283.464
+  },
+  {
+   "id": "s13",
+   "title": "Required Question Error",
+   "dur": 21.083,
+   "lines": [
+    {
+     "i": 0,
+     "text": "If you accidentally leave a mandatory field empty, a red error message will appear.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 5.876
+    },
+    {
+     "i": 1,
+     "text": "The message will state, \"This is a required question.\"",
+     "cue": null,
+     "t0": 6.296,
+     "t1": 9.172
+    },
+    {
+     "i": 2,
+     "text": "This simply means that you have missed a mandatory field.",
+     "cue": null,
+     "t0": 9.592,
+     "t1": 12.684
+    },
+    {
+     "i": 3,
+     "text": "Locate the highlighted question and enter the missing information.",
+     "cue": null,
+     "t0": 13.104,
+     "t1": 16.748
+    },
+    {
+     "i": 4,
+     "text": "Once completed, tap Next again to proceed.",
+     "cue": null,
+     "t0": 17.348,
+     "t1": 19.883
+    }
+   ],
+   "start": 305.893
+  },
+  {
+   "id": "s14",
+   "title": "Prohibited-Item Inspection",
+   "dur": 29.467,
+   "lines": [
+    {
+     "i": 0,
+     "text": "We will now move to the prohibited-item inspection section.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 3.998
+    },
+    {
+     "i": 1,
+     "text": "This section requires you to confirm that the catering truck or hi-lift cabin has been inspected for prohibited items.",
+     "cue": null,
+     "t0": 4.418,
+     "t1": 11.388
+    },
+    {
+     "i": 2,
+     "text": "Before answering the question, you must physically carry out the required security inspection.",
+     "cue": null,
+     "t0": 11.988,
+     "t1": 16.848
+    },
+    {
+     "i": 3,
+     "text": "Do not select an answer without completing the actual check.",
+     "cue": null,
+     "t0": 17.268,
+     "t1": 20.669
+    },
+    {
+     "i": 4,
+     "text": "If you identify any prohibited item or abnormality, immediately report it to the Duty Security Executive.",
+     "cue": null,
+     "t0": 21.269,
+     "t1": 28.267
+    }
+   ],
+   "start": 326.976
+  },
+  {
+   "id": "s15",
+   "title": "Confirming the Inspection",
+   "dur": 25.913,
+   "lines": [
+    {
+     "i": 0,
+     "text": "After completing the prohibited-item inspection, select the appropriate answer.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 5.326
+    },
+    {
+     "i": 1,
+     "text": "If you have completed the required inspection, select YES.",
+     "cue": null,
+     "t0": 5.926,
+     "t1": 9.636
+    },
+    {
+     "i": 2,
+     "text": "By selecting YES, you are confirming that the inspection has actually been carried out.",
+     "cue": null,
+     "t0": 10.056,
+     "t1": 15.228
+    },
+    {
+     "i": 3,
+     "text": "Once you have selected your answer, tap Next.",
+     "cue": null,
+     "t0": 15.828,
+     "t1": 18.246
+    },
+    {
+     "i": 4,
+     "text": "Remember, selecting YES does not replace the requirement to physically conduct the inspection.",
+     "cue": null,
+     "t0": 18.846,
+     "t1": 24.713
+    }
+   ],
+   "start": 356.443
+  },
+  {
+   "id": "s16",
+   "title": "If the Inspection Is Not Completed",
+   "dur": 31.746,
+   "lines": [
+    {
+     "i": 0,
+     "text": "If the prohibited-item inspection was not completed, you must select NO.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 5.12
+    },
+    {
+     "i": 1,
+     "text": "The form will automatically direct you to another page requiring an explanation.",
+     "cue": null,
+     "t0": 5.54,
+     "t1": 10.382
+    },
+    {
+     "i": 2,
+     "text": "Tap the text box and clearly enter the reason why the inspection was not completed.",
+     "cue": null,
+     "t0": 10.802,
+     "t1": 15.549
+    },
+    {
+     "i": 3,
+     "text": "This field is mandatory, so you cannot leave it empty.",
+     "cue": null,
+     "t0": 15.969,
+     "t1": 18.954
+    },
+    {
+     "i": 4,
+     "text": "If the situation involves a security concern or abnormality, immediately notify the Duty Security Executive.",
+     "cue": null,
+     "t0": 19.554,
+     "t1": 26.9
+    },
+    {
+     "i": 5,
+     "text": "Once the reason has been entered, tap Next to continue.",
+     "cue": null,
+     "t0": 27.5,
+     "t1": 30.546
+    }
+   ],
+   "start": 382.356
+  },
+  {
+   "id": "s17",
+   "title": "Catering Truck Sealing and Locking",
+   "dur": 24.134,
+   "lines": [
+    {
+     "i": 0,
+     "text": "We will now proceed to the next security checkpoint.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 3.588
+    },
+    {
+     "i": 1,
+     "text": "This section requires you to confirm that the catering truck has been properly sealed and locked before departing for the aircraft or apron.",
+     "cue": null,
+     "t0": 4.008,
+     "t1": 12.153
+    },
+    {
+     "i": 2,
+     "text": "Before answering, verify that the required sealing and locking process has been completed.",
+     "cue": null,
+     "t0": 12.753,
+     "t1": 18.096
+    },
+    {
+     "i": 3,
+     "text": "Ensure that the truck is secured according to the required security procedures.",
+     "cue": null,
+     "t0": 18.516,
+     "t1": 22.934
+    }
+   ],
+   "start": 414.102
+  },
+  {
+   "id": "s18",
+   "title": "Confirming the Sealing Process",
+   "dur": 22.056,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Once you have verified that the catering truck has been properly sealed and locked, select YES.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 6.567
+    },
+    {
+     "i": 1,
+     "text": "This confirms that the required sealing and locking process has been completed.",
+     "cue": null,
+     "t0": 6.987,
+     "t1": 11.463
+    },
+    {
+     "i": 2,
+     "text": "After selecting YES, tap Next to proceed.",
+     "cue": null,
+     "t0": 11.883,
+     "t1": 14.652
+    },
+    {
+     "i": 3,
+     "text": "Remember, only select YES after physically confirming that the truck is properly secured.",
+     "cue": null,
+     "t0": 15.252,
+     "t1": 20.856
+    }
+   ],
+   "start": 438.236
+  },
+  {
+   "id": "s19",
+   "title": "If the Truck Is Not Sealed or Locked",
+   "dur": 29.672,
+   "lines": [
+    {
+     "i": 0,
+     "text": "If the catering truck has not been properly sealed or locked, select NO.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 4.948
+    },
+    {
+     "i": 1,
+     "text": "The form will direct you to another page where you must provide an explanation.",
+     "cue": null,
+     "t0": 5.368,
+     "t1": 9.663
+    },
+    {
+     "i": 2,
+     "text": "Enter the actual reason why the sealing and locking process was not completed.",
+     "cue": null,
+     "t0": 10.083,
+     "t1": 14.61
+    },
+    {
+     "i": 3,
+     "text": "Make sure your explanation is clear and accurate.",
+     "cue": null,
+     "t0": 15.03,
+     "t1": 17.627
+    },
+    {
+     "i": 4,
+     "text": "If you discover any abnormality involving the seal or locking arrangement, report it immediately to the Duty Security Executive.",
+     "cue": null,
+     "t0": 18.227,
+     "t1": 26.182
+    },
+    {
+     "i": 5,
+     "text": "Once completed, tap Next.",
+     "cue": null,
+     "t0": 26.782,
+     "t1": 28.472
+    }
+   ],
+   "start": 460.292
+  },
+  {
+   "id": "s20",
+   "title": "Truck Number, Seal Number and Remarks",
+   "dur": 23.604,
+   "lines": [
+    {
+     "i": 0,
+     "text": "We will now move to page six of the eForm.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 3.304
+    },
+    {
+     "i": 1,
+     "text": "In this section, you are required to record the catering hi-lift truck number, catering truck seal number, and inspection remarks.",
+     "cue": null,
+     "t0": 3.724,
+     "t1": 11.233
+    },
+    {
+     "i": 2,
+     "text": "These details are important because they allow the security records to be traced back to the specific vehicle and seal used during the escort.",
+     "cue": null,
+     "t0": 11.653,
+     "t1": 19.883
+    },
+    {
+     "i": 3,
+     "text": "Let's complete each field one by one.",
+     "cue": null,
+     "t0": 20.303,
+     "t1": 22.404
+    }
+   ],
+   "start": 489.964
+  },
+  {
+   "id": "s21",
+   "title": "Entering the Hi-Lift Truck Number",
+   "dur": 25.544,
+   "lines": [
+    {
+     "i": 0,
+     "text": "First, locate the Catering Hi-Lift Truck or Hi-Lift Number field.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 4.962
+    },
+    {
+     "i": 1,
+     "text": "Tap the box and enter the identification number of the truck assigned to your escort duty.",
+     "cue": null,
+     "t0": 5.382,
+     "t1": 10.582
+    },
+    {
+     "i": 2,
+     "text": "For this demonstration, we are using TEST-HL01.",
+     "cue": null,
+     "t0": 11.002,
+     "t1": 14.683
+    },
+    {
+     "i": 3,
+     "text": "During actual operations, enter the real truck identification number.",
+     "cue": null,
+     "t0": 15.283,
+     "t1": 19.443
+    },
+    {
+     "i": 4,
+     "text": "Always double-check the number to make sure it matches the vehicle being escorted.",
+     "cue": null,
+     "t0": 19.863,
+     "t1": 24.344
+    }
+   ],
+   "start": 513.568
+  },
+  {
+   "id": "s22",
+   "title": "Entering the Catering Truck Seal Number",
+   "dur": 27.573,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Next, locate the Catering Truck Seal Number field.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 3.819
+    },
+    {
+     "i": 1,
+     "text": "Tap the box and enter the seal number shown on the physical catering truck seal.",
+     "cue": null,
+     "t0": 4.239,
+     "t1": 8.634
+    },
+    {
+     "i": 2,
+     "text": "In this demonstration, we are using TEST-0001.",
+     "cue": null,
+     "t0": 9.054,
+     "t1": 13.117
+    },
+    {
+     "i": 3,
+     "text": "This is only sample information.",
+     "cue": null,
+     "t0": 13.537,
+     "t1": 15.336
+    },
+    {
+     "i": 4,
+     "text": "During actual operations, ensure that every letter and number matches the actual seal.",
+     "cue": null,
+     "t0": 15.936,
+     "t1": 21.065
+    },
+    {
+     "i": 5,
+     "text": "An incorrect seal number can affect the accuracy and traceability of your security record.",
+     "cue": null,
+     "t0": 21.485,
+     "t1": 26.373
+    }
+   ],
+   "start": 539.112
+  },
+  {
+   "id": "s23",
+   "title": "Selecting Nil Discrepancy",
+   "dur": 24.734,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Next, we will complete the remarks section.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 3.281
+    },
+    {
+     "i": 1,
+     "text": "If all required checks have been completed and no abnormality or discrepancy has been identified, select Nil Discrepancy.",
+     "cue": null,
+     "t0": 3.881,
+     "t1": 11.543
+    },
+    {
+     "i": 2,
+     "text": "This indicates that no discrepancy was found during the inspection.",
+     "cue": null,
+     "t0": 11.963,
+     "t1": 15.909
+    },
+    {
+     "i": 3,
+     "text": "Only select this option when everything is in order.",
+     "cue": null,
+     "t0": 16.329,
+     "t1": 19.313
+    },
+    {
+     "i": 4,
+     "text": "Once you have selected Nil Discrepancy, tap Next to continue.",
+     "cue": null,
+     "t0": 19.913,
+     "t1": 23.534
+    }
+   ],
+   "start": 566.685
+  },
+  {
+   "id": "s24",
+   "title": "Selecting Discrepancy Identified",
+   "dur": 32.461,
+   "lines": [
+    {
+     "i": 0,
+     "text": "If you identify an actual discrepancy during your escort duty, you must follow the required reporting procedures.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 8.029
+    },
+    {
+     "i": 1,
+     "text": "Immediately report the abnormality to the Duty Security Executive.",
+     "cue": null,
+     "t0": 8.449,
+     "t1": 12.508
+    },
+    {
+     "i": 2,
+     "text": "As stated in the form, Discrepancy Identified must only be selected after the report has been submitted to the Duty Officer and the required notification email has been sent.",
+     "cue": null,
+     "t0": 12.928,
+     "t1": 24.107
+    },
+    {
+     "i": 3,
+     "text": "Once the reporting requirements have been completed, select Discrepancy Identified.",
+     "cue": null,
+     "t0": 24.707,
+     "t1": 29.517
+    },
+    {
+     "i": 4,
+     "text": "Then, tap Next.",
+     "cue": null,
+     "t0": 30.117,
+     "t1": 31.261
+    }
+   ],
+   "start": 591.419
+  },
+  {
+   "id": "s25",
+   "title": "Entering Additional Discrepancy Details",
+   "dur": 26.179,
+   "lines": [
+    {
+     "i": 0,
+     "text": "If you have selected Discrepancy Identified, the form will direct you to the additional details section.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 7.192
+    },
+    {
+     "i": 1,
+     "text": "Here, you may provide further information regarding the discrepancy.",
+     "cue": null,
+     "t0": 7.612,
+     "t1": 11.482
+    },
+    {
+     "i": 2,
+     "text": "This field is optional, so you may leave it empty if no additional information is required.",
+     "cue": null,
+     "t0": 11.902,
+     "t1": 17.183
+    },
+    {
+     "i": 3,
+     "text": "However, if there are relevant details that should be recorded, enter them clearly.",
+     "cue": null,
+     "t0": 17.783,
+     "t1": 22.227
+    },
+    {
+     "i": 4,
+     "text": "Once completed, tap Next to proceed.",
+     "cue": null,
+     "t0": 22.827,
+     "t1": 24.979
+    }
+   ],
+   "start": 623.88
+  },
+  {
+   "id": "s26",
+   "title": "Catering Facility Security Sign-Off",
+   "dur": 22.412,
+   "lines": [
+    {
+     "i": 0,
+     "text": "We will now proceed to the first security sign-off section.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 4.031
+    },
+    {
+     "i": 1,
+     "text": "This section is for the AirAsia or AirAsia X Security personnel who conducted the checks at the catering facility.",
+     "cue": null,
+     "t0": 4.451,
+     "t1": 11.555
+    },
+    {
+     "i": 2,
+     "text": "The sign-off is important because it records who was responsible for the security inspection.",
+     "cue": null,
+     "t0": 11.975,
+     "t1": 17.553
+    },
+    {
+     "i": 3,
+     "text": "The relevant personnel must enter their details accurately.",
+     "cue": null,
+     "t0": 17.973,
+     "t1": 21.212
+    }
+   ],
+   "start": 650.059
+  },
+  {
+   "id": "s27",
+   "title": "Entering the Staff Name",
+   "dur": 22.046,
+   "lines": [
+    {
+     "i": 0,
+     "text": "First, locate the Name field.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 2.722
+    },
+    {
+     "i": 1,
+     "text": "Tap the box and enter the full name of the security personnel who performed the check at the catering facility.",
+     "cue": null,
+     "t0": 3.142,
+     "t1": 9.305
+    },
+    {
+     "i": 2,
+     "text": "In this demonstration, we are using TEST USER as an example.",
+     "cue": null,
+     "t0": 9.725,
+     "t1": 13.199
+    },
+    {
+     "i": 3,
+     "text": "During actual operations, enter the correct full name.",
+     "cue": null,
+     "t0": 13.799,
+     "t1": 16.907
+    },
+    {
+     "i": 4,
+     "text": "Do not use another staff member's name to complete your sign-off.",
+     "cue": null,
+     "t0": 17.327,
+     "t1": 20.846
+    }
+   ],
+   "start": 672.471
+  },
+  {
+   "id": "s28",
+   "title": "Entering the Staff ID",
+   "dur": 27.316,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Next, locate the Staff ID field.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 3.057
+    },
+    {
+     "i": 1,
+     "text": "Tap the box and enter the correct staff identification number.",
+     "cue": null,
+     "t0": 3.477,
+     "t1": 6.833
+    },
+    {
+     "i": 2,
+     "text": "In this demonstration, we are using TEST001.",
+     "cue": null,
+     "t0": 7.253,
+     "t1": 10.891
+    },
+    {
+     "i": 3,
+     "text": "During actual operations, enter the actual staff ID of the personnel performing the sign-off.",
+     "cue": null,
+     "t0": 11.491,
+     "t1": 17.312
+    },
+    {
+     "i": 4,
+     "text": "Double-check the number before continuing.",
+     "cue": null,
+     "t0": 17.732,
+     "t1": 19.944
+    },
+    {
+     "i": 5,
+     "text": "This helps maintain accurate personnel identification and accountability in the security record.",
+     "cue": null,
+     "t0": 20.364,
+     "t1": 26.116
+    }
+   ],
+   "start": 694.517
+  },
+  {
+   "id": "s29",
+   "title": "Recording the End Time",
+   "dur": 22.045,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Next, enter the required end time for the catering facility security check.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 5.696
+    },
+    {
+     "i": 1,
+     "text": "Tap the time field and enter the hour, followed by the minutes.",
+     "cue": null,
+     "t0": 6.116,
+     "t1": 9.5
+    },
+    {
+     "i": 2,
+     "text": "For this demonstration, we are using 10:30 AM.",
+     "cue": null,
+     "t0": 9.92,
+     "t1": 13.11
+    },
+    {
+     "i": 3,
+     "text": "Remember to select the correct AM or PM option.",
+     "cue": null,
+     "t0": 13.71,
+     "t1": 17.324
+    },
+    {
+     "i": 4,
+     "text": "Always record the actual time for the completed check.",
+     "cue": null,
+     "t0": 17.744,
+     "t1": 20.845
+    }
+   ],
+   "start": 721.833
+  },
+  {
+   "id": "s30",
+   "title": "Completing the Signature",
+   "dur": 21.112,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Now, locate the signature field.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 2.932
+    },
+    {
+     "i": 1,
+     "text": "For this eForm, the signature is completed by typing your full name.",
+     "cue": null,
+     "t0": 3.352,
+     "t1": 7.263
+    },
+    {
+     "i": 2,
+     "text": "Tap the designated box and enter your full name correctly.",
+     "cue": null,
+     "t0": 7.683,
+     "t1": 10.984
+    },
+    {
+     "i": 3,
+     "text": "Ensure that the name matches the personnel performing the sign-off.",
+     "cue": null,
+     "t0": 11.404,
+     "t1": 15.148
+    },
+    {
+     "i": 4,
+     "text": "Once all the required information has been entered, tap Next to proceed.",
+     "cue": null,
+     "t0": 15.748,
+     "t1": 19.912
+    }
+   ],
+   "start": 743.878
+  },
+  {
+   "id": "s31",
+   "title": "Aircraft Security Sign-Off",
+   "dur": 22.652,
+   "lines": [
+    {
+     "i": 0,
+     "text": "We will now move to page nine, which is the final security sign-off section.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 5.491
+    },
+    {
+     "i": 1,
+     "text": "This section is used to record the security check performed at the aircraft.",
+     "cue": null,
+     "t0": 5.911,
+     "t1": 10.134
+    },
+    {
+     "i": 2,
+     "text": "Just like the catering facility section, the required personnel details must be entered accurately.",
+     "cue": null,
+     "t0": 10.554,
+     "t1": 16.298
+    },
+    {
+     "i": 3,
+     "text": "There are four fields to complete, following the same process as the previous sign-off.",
+     "cue": null,
+     "t0": 16.718,
+     "t1": 21.452
+    }
+   ],
+   "start": 764.99
+  },
+  {
+   "id": "s32",
+   "title": "Completing the Aircraft Sign-Off Details",
+   "dur": 33.024,
+   "lines": [
+    {
+     "i": 0,
+     "text": "First, enter the full name of the security personnel who performed the aircraft check.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 5.71
+    },
+    {
+     "i": 1,
+     "text": "Next, enter the correct Staff Number.",
+     "cue": null,
+     "t0": 6.13,
+     "t1": 8.011
+    },
+    {
+     "i": 2,
+     "text": "Please note that this section uses the label Staff No. instead of Staff ID.",
+     "cue": null,
+     "t0": 8.431,
+     "t1": 12.961
+    },
+    {
+     "i": 3,
+     "text": "Then, enter the actual escort end time, including the correct AM or PM selection.",
+     "cue": null,
+     "t0": 13.561,
+     "t1": 19.697
+    },
+    {
+     "i": 4,
+     "text": "For this demonstration, we are using TEST USER 2, TEST002, and 10:45 as sample details.",
+     "cue": null,
+     "t0": 20.117,
+     "t1": 27.608
+    },
+    {
+     "i": 5,
+     "text": "Complete any remaining required sign-off fields shown on the form.",
+     "cue": null,
+     "t0": 28.028,
+     "t1": 31.824
+    }
+   ],
+   "start": 787.642
+  },
+  {
+   "id": "s33",
+   "title": "Reviewing the Completed Form",
+   "dur": 28.712,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Before submitting the eForm, please review all the information carefully.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 4.837
+    },
+    {
+     "i": 1,
+     "text": "Check the flight details, inspection answers, truck number, seal number, remarks, and both security sign-offs.",
+     "cue": null,
+     "t0": 5.257,
+     "t1": 11.778
+    },
+    {
+     "i": 2,
+     "text": "If you notice any mistake, tap Back to return to the earlier page.",
+     "cue": null,
+     "t0": 12.378,
+     "t1": 16.17
+    },
+    {
+     "i": 3,
+     "text": "Your previously entered information will remain filled in, allowing you to make the necessary corrections.",
+     "cue": null,
+     "t0": 16.59,
+     "t1": 22.554
+    },
+    {
+     "i": 4,
+     "text": "After correcting the details, tap Next until you return to the final page.",
+     "cue": null,
+     "t0": 22.974,
+     "t1": 27.512
+    }
+   ],
+   "start": 820.666
+  },
+  {
+   "id": "s34",
+   "title": "Submitting the eForm",
+   "dur": 27.176,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Once you have checked all the information and confirmed that everything is correct, you are ready to submit the checklist.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 7.322
+    },
+    {
+     "i": 1,
+     "text": "Scroll to the bottom of the final page.",
+     "cue": null,
+     "t0": 7.742,
+     "t1": 9.947
+    },
+    {
+     "i": 2,
+     "text": "You will see the Submit button.",
+     "cue": null,
+     "t0": 10.367,
+     "t1": 11.862
+    },
+    {
+     "i": 3,
+     "text": "Tap Submit to send your completed High-Lift Escort Checklist.",
+     "cue": null,
+     "t0": 12.282,
+     "t1": 15.593
+    },
+    {
+     "i": 4,
+     "text": "Remember, the Submit button is only available on the final page.",
+     "cue": null,
+     "t0": 16.193,
+     "t1": 19.86
+    },
+    {
+     "i": 5,
+     "text": "Make sure all information is correct before submitting because the submitted response cannot be edited.",
+     "cue": null,
+     "t0": 20.28,
+     "t1": 25.976
+    }
+   ],
+   "start": 849.378
+  },
+  {
+   "id": "s35",
+   "title": "Submission Confirmation",
+   "dur": 28.164,
+   "lines": [
+    {
+     "i": 0,
+     "text": "After tapping Submit, the form will display a confirmation message.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 4.688
+    },
+    {
+     "i": 1,
+     "text": "The message will read, \"Your response has been recorded.\"",
+     "cue": null,
+     "t0": 5.108,
+     "t1": 8.198
+    },
+    {
+     "i": 2,
+     "text": "This confirms that your completed checklist has been successfully submitted.",
+     "cue": null,
+     "t0": 8.618,
+     "t1": 12.761
+    },
+    {
+     "i": 3,
+     "text": "You may also see an option labelled Submit another response.",
+     "cue": null,
+     "t0": 13.181,
+     "t1": 16.56
+    },
+    {
+     "i": 4,
+     "text": "Only select this option when you need to complete a new checklist for another escort duty.",
+     "cue": null,
+     "t0": 16.98,
+     "t1": 21.955
+    },
+    {
+     "i": 5,
+     "text": "Do not submit a duplicate response for the same escort unnecessarily.",
+     "cue": null,
+     "t0": 22.375,
+     "t1": 26.964
+    }
+   ],
+   "start": 876.554
+  },
+  {
+   "id": "s36",
+   "title": "Important Information After Submission",
+   "dur": 25.25,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Please remember that once you have submitted the form, you cannot edit the response.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 5.404
+    },
+    {
+     "i": 1,
+     "text": "The form does not provide an edit link, and a copy of the completed response will not be sent to you.",
+     "cue": null,
+     "t0": 5.824,
+     "t1": 11.425
+    },
+    {
+     "i": 2,
+     "text": "This is why you must check every page carefully before tapping Submit.",
+     "cue": null,
+     "t0": 11.845,
+     "t1": 15.796
+    },
+    {
+     "i": 3,
+     "text": "If you discover an error after submitting, inform your supervisor immediately so the matter can be addressed through the appropriate process.",
+     "cue": null,
+     "t0": 16.396,
+     "t1": 24.05
+    }
+   ],
+   "start": 904.718
+  },
+  {
+   "id": "s37",
+   "title": "Where the Submitted Information Goes",
+   "dur": 25.964,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Now, let us understand what happens after you submit the eForm.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 4.68
+    },
+    {
+     "i": 1,
+     "text": "Every successful submission is automatically recorded in a central Google Sheet.",
+     "cue": null,
+     "t0": 5.1,
+     "t1": 9.899
+    },
+    {
+     "i": 2,
+     "text": "Each submitted checklist creates a new row in the response sheet.",
+     "cue": null,
+     "t0": 10.319,
+     "t1": 13.87
+    },
+    {
+     "i": 3,
+     "text": "For example, the sheet shown on the screen contains a test response created for this training guide.",
+     "cue": null,
+     "t0": 14.47,
+     "t1": 20.191
+    },
+    {
+     "i": 4,
+     "text": "This allows authorized personnel to review the submitted escort records.",
+     "cue": null,
+     "t0": 20.611,
+     "t1": 24.764
+    }
+   ],
+   "start": 929.968
+  },
+  {
+   "id": "s38",
+   "title": "Staff and Supervisor Responsibilities",
+   "dur": 28.295,
+   "lines": [
+    {
+     "i": 0,
+     "text": "The responsibilities are straightforward.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 2.97
+    },
+    {
+     "i": 1,
+     "text": "As AVSEC staff, your responsibility is to perform the required security checks, complete the eForm accurately, and tap Submit.",
+     "cue": null,
+     "t0": 3.39,
+     "t1": 11.381
+    },
+    {
+     "i": 2,
+     "text": "Once submitted, your response is automatically stored in the central Google Sheet.",
+     "cue": null,
+     "t0": 11.981,
+     "t1": 16.676
+    },
+    {
+     "i": 3,
+     "text": "Authorized supervisors are responsible for reviewing and managing these records.",
+     "cue": null,
+     "t0": 17.096,
+     "t1": 22.02
+    },
+    {
+     "i": 4,
+     "text": "Staff members are not required to access or manage the response sheet themselves.",
+     "cue": null,
+     "t0": 22.44,
+     "t1": 27.095
+    }
+   ],
+   "start": 955.932
+  },
+  {
+   "id": "s39",
+   "title": "Troubleshooting, System Issues and Closing",
+   "dur": 113.726,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Before we conclude this training, please take note of the following important instructions.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 5.828
+    },
+    {
+     "i": 1,
+     "text": "If you experience any difficulty accessing the eForm, such as the form not opening, pages failing to load, or submission errors, first check your internet connection and ensure you are using the correct link or QR code.",
+     "cue": null,
+     "t0": 6.428,
+     "t1": 20.075
+    },
+    {
+     "i": 2,
+     "text": "If the problem continues, you must immediately report the issue to your respective supervisor.",
+     "cue": null,
+     "t0": 20.675,
+     "t1": 26.008
+    },
+    {
+     "i": 3,
+     "text": "The issue shall then be escalated to the System Unit for immediate rectification.",
+     "cue": null,
+     "t0": 26.428,
+     "t1": 30.993
+    },
+    {
+     "i": 4,
+     "text": "If the technical issue cannot be resolved immediately or remains unresolved for a certain period, the manual form may be used as a temporary alternative to ensure that security operations and documentation can continue.",
+     "cue": null,
+     "t0": 31.593,
+     "t1": 45.817
+    },
+    {
+     "i": 5,
+     "text": "However, the use of the manual form must first be approved by the Head of Department.",
+     "cue": null,
+     "t0": 46.417,
+     "t1": 51.169
+    },
+    {
+     "i": 6,
+     "text": "Staff are not permitted to switch to manual documentation without the required approval.",
+     "cue": null,
+     "t0": 51.589,
+     "t1": 56.622
+    },
+    {
+     "i": 7,
+     "text": "Once the system has been restored, all staff shall resume using the eForm according to the instructions provided by their supervisor.",
+     "cue": null,
+     "t0": 57.222,
+     "t1": 65.208
+    },
+    {
+     "i": 8,
+     "text": "Please remember that accurate documentation, timely reporting, and compliance with security procedures must be maintained at all times, including during system disruptions.",
+     "cue": null,
+     "t0": 65.808,
+     "t1": 76.709
+    },
+    {
+     "i": 9,
+     "text": "Your responsibility is not only to complete the form, but also to ensure that every required security check is properly conducted and accurately recorded.",
+     "cue": null,
+     "t0": 77.129,
+     "t1": 86.699
+    },
+    {
+     "i": 10,
+     "text": "If you encounter any abnormality during your escort duty, report it immediately to the Duty Security Executive.",
+     "cue": null,
+     "t0": 87.299,
+     "t1": 94.133
+    },
+    {
+     "i": 11,
+     "text": "Thank you for your attention, understanding, and cooperation.",
+     "cue": null,
+     "t0": 94.733,
+     "t1": 98.272
+    },
+    {
+     "i": 12,
+     "text": "Stay alert, follow the required procedures, and always prioritize aviation security.",
+     "cue": null,
+     "t0": 98.872,
+     "t1": 104.48
+    },
+    {
+     "i": 13,
+     "text": "This concludes the AA/SEC/F/042 – High-Lift Escort eForm Staff Training.",
+     "cue": null,
+     "t0": 105.08,
+     "t1": 111.264
+    },
+    {
+     "i": 14,
+     "text": "Thank you.",
+     "cue": null,
+     "t0": 111.864,
+     "t1": 112.526
+    }
+   ],
+   "start": 984.227
+  }
+ ],
+ "total": 1097.953
+}

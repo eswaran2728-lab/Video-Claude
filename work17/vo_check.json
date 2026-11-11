@@ -1,0 +1,1220 @@
+[
+ {
+  "line": "s01_00",
+  "spoken": "Welcome to the High-Lift Escort e-Form training.",
+  "heard": "Welcome to the High Lift Escort E-Form Training.",
+  "match": 1.0
+ },
+ {
+  "line": "s01_01",
+  "spoken": "In this video, we will guide you through the process of completing the A. A. S. E. C. F. zero four two, Hi-lift Escort Checklist using your mobile phone.",
+  "heard": "In this video, we will guide you through the process of completing the A.  ASEC-F042 High Lift Escort Checklist using your mobile phone.",
+  "match": 0.73
+ },
+ {
+  "line": "s01_02",
+  "spoken": "We will demonstrate each step, from opening the form and entering flight details to completing the required security inspections, providing security sign-offs, and submitting your report.",
+  "heard": "we will demonstrate each step,  from opening the form and entering flight details  to completing the required security inspections,  providing security sign-offs, and submitting your report.",
+  "match": 1.0
+ },
+ {
+  "line": "s01_03",
+  "spoken": "Please follow the instructions carefully to ensure that every escort duty is recorded accurately.",
+  "heard": "Please follow the instructions carefully to ensure that every escort duty is recorded accurately.",
+  "match": 1.0
+ },
+ {
+  "line": "s02_00",
+  "spoken": "Before we begin, let us understand the purpose of this form.",
+  "heard": "Before we begin, let us understand the purpose of this form.",
+  "match": 1.0
+ },
+ {
+  "line": "s02_01",
+  "spoken": "The High-Lift Escort Checklist is used to document each hi-lift escort duty.",
+  "heard": "The High Lift Escort Checklist is used to document each High Lift Escort duty.",
+  "match": 0.93
+ },
+ {
+  "line": "s02_02",
+  "spoken": "This includes recording the flight details, performing the required security inspections at the catering facility, verifying the catering truck sealing and locking process, and completing two mandatory security sign-offs.",
+  "heard": "This includes recording the flight details,  performing the required security inspections  at the catering facility,  verifying the catering truck ceiling and locking process,  and completing two mandatory security sign-offs.",
+  "match": 0.97
+ },
+ {
+  "line": "s02_03",
+  "spoken": "You are required to complete one form for each escort duty.",
+  "heard": "You are required to complete one form for each escort duty.",
+  "match": 1.0
+ },
+ {
+  "line": "s02_04",
+  "spoken": "Most importantly, if you identify any abnormality during the inspection, you must report it immediately to the Duty Security Executive.",
+  "heard": "Most importantly, if you identify any abnormality during the inspection, you must report it immediately  to the duty security executive.",
+  "match": 1.0
+ },
+ {
+  "line": "s03_00",
+  "spoken": "First, obtain the High-Lift Escort e-Form link from your supervisor.",
+  "heard": "First, obtain the high-lift escort e-form link from your supervisor.",
+  "match": 1.0
+ },
+ {
+  "line": "s03_01",
+  "spoken": "You can access the form by tapping the provided link or scanning the Q R code displayed on the screen using your mobile phone camera.",
+  "heard": "You can access the form by tapping the provided link  or scanning the QR code displayed on the screen  using your mobile phone camera.",
+  "match": 0.92
+ },
+ {
+  "line": "s03_02",
+  "spoken": "Once you scan the Q R code, the form will open in your phone's web browser.",
+  "heard": "Once you scan the QR code, the form will open in your phone's web browser.",
+  "match": 0.88
+ },
+ {
+  "line": "s03_03",
+  "spoken": "There is no need to download or install any additional application.",
+  "heard": "There is no need to download or install any additional application.",
+  "match": 1.0
+ },
+ {
+  "line": "s04_00",
+  "spoken": "Once the form opens, check the title displayed at the top of your screen.",
+  "heard": "Once the form opens, check the title displayed at the top of your screen.",
+  "match": 1.0
+ },
+ {
+  "line": "s04_01",
+  "spoken": "Make sure the title reads A. A. S. E. C. F. zero four two, Hi-lift Escort Checklist.",
+  "heard": "Make sure the title reads AASEC F042, High Lift Escort Checklist.",
+  "match": 0.44
+ },
+ {
+  "line": "s04_02",
+  "spoken": "This is important to ensure that you are completing the correct form for your assigned escort duty.",
+  "heard": "This is important to ensure that you are completing the correct form for your assigned escort duty.",
+  "match": 1.0
+ },
+ {
+  "line": "s04_03",
+  "spoken": "If the title does not match, check with your supervisor before proceeding.",
+  "heard": "If the title does not match, check with your supervisor before proceeding.",
+  "match": 1.0
+ },
+ {
+  "line": "s05_00",
+  "spoken": "Before filling in the form, please take note of the red asterisk symbol.",
+  "heard": "Before filling in the form, please take note of the red asterisk symbol.",
+  "match": 1.0
+ },
+ {
+  "line": "s05_01",
+  "spoken": "Any question marked with a red asterisk is mandatory.",
+  "heard": "Any question marked with a red asterisk is mandatory.",
+  "match": 1.0
+ },
+ {
+  "line": "s05_02",
+  "spoken": "This means you must complete that field before moving to the next page.",
+  "heard": "This means you must complete that field  before moving to the next page.",
+  "match": 1.0
+ },
+ {
+  "line": "s05_03",
+  "spoken": "If you leave a required field empty, the form will not allow you to proceed until the missing information is entered.",
+  "heard": "If you leave a required field empty, the form will not allow you to proceed until the missing information is entered.",
+  "match": 1.0
+ },
+ {
+  "line": "s06_00",
+  "spoken": "Now, we will begin with page one of the form.",
+  "heard": "Now we will begin with page one of the form.",
+  "match": 1.0
+ },
+ {
+  "line": "s06_01",
+  "spoken": "This section requires you to enter four important details.",
+  "heard": "This section requires you to enter four important details.",
+  "match": 1.0
+ },
+ {
+  "line": "s06_02",
+  "spoken": "These are the escort start time, flight number, Estimated Time of Departure, or E T D, and the flight sector.",
+  "heard": "These are the escort start time, flight number,  estimated time of departure, or ETD, and the flight sector.",
+  "match": 0.85
+ },
+ {
+  "line": "s06_03",
+  "spoken": "Scroll down the page to view all four fields.",
+  "heard": "Scroll down the page to view all four fields.",
+  "match": 1.0
+ },
+ {
+  "line": "s06_04",
+  "spoken": "Ensure that the information you enter matches your actual escort assignment.",
+  "heard": "Ensure that the information you enter matches your actual escort assignment.",
+  "match": 1.0
+ },
+ {
+  "line": "s07_00",
+  "spoken": "First, locate the field labelled Time Starts.",
+  "heard": "First, locate the field labeled Time Starts.",
+  "match": 0.86
+ },
+ {
+  "line": "s07_01",
+  "spoken": "Tap the time field and enter the actual time you began your escort duty.",
+  "heard": "Tap the time field and enter the actual time you began your escort duty.",
+  "match": 1.0
+ },
+ {
+  "line": "s07_02",
+  "spoken": "Enter the hour first, followed by the minutes.",
+  "heard": "Enter the hour first, followed by the minutes.",
+  "match": 1.0
+ },
+ {
+  "line": "s07_03",
+  "spoken": "For example, if your escort started at ten o'clock in the morning, enter ten A M.",
+  "heard": "For example, if your escort started at 10 o'clock in the morning, enter 10 a.m.",
+  "match": 0.88
+ },
+ {
+  "line": "s07_04",
+  "spoken": "Remember to record the actual start time and check that you have selected the correct A M or P M option.",
+  "heard": "Remember to record the actual start time  and check that you have selected the correct M or PM option.",
+  "match": 0.9
+ },
+ {
+  "line": "s08_00",
+  "spoken": "Next, locate the Flight Number field.",
+  "heard": "Next, locate the flight number field.",
+  "match": 1.0
+ },
+ {
+  "line": "s08_01",
+  "spoken": "Tap the box and enter the flight number for your assigned escort duty.",
+  "heard": "Tap the box and enter the flight number for your assigned escort duty.",
+  "match": 1.0
+ },
+ {
+  "line": "s08_02",
+  "spoken": "In this demonstration, we are using test, A K zero one as an example.",
+  "heard": "In this demonstration, we are using test, a K01 as an example.",
+  "match": 0.79
+ },
+ {
+  "line": "s08_03",
+  "spoken": "This is sample information for training purposes only.",
+  "heard": "This is sample information for training purposes only.",
+  "match": 1.0
+ },
+ {
+  "line": "s08_04",
+  "spoken": "During actual operations, always enter the correct flight number for the flight you are escorting.",
+  "heard": "During actual operations, always enter the correct flight number for the flight you are  escorting.",
+  "match": 1.0
+ },
+ {
+  "line": "s09_00",
+  "spoken": "Now, proceed to the E T D field.",
+  "heard": "Now proceed to the ETD field.",
+  "match": 0.62
+ },
+ {
+  "line": "s09_01",
+  "spoken": "E T D stands for Estimated Time of Departure.",
+  "heard": "ETD stands for Estimated Time of Departure.",
+  "match": 0.67
+ },
+ {
+  "line": "s09_02",
+  "spoken": "Tap the time field and enter the estimated departure time for your assigned flight.",
+  "heard": "Tap the time field and enter the estimated departure time for your assigned flight.",
+  "match": 1.0
+ },
+ {
+  "line": "s09_03",
+  "spoken": "Enter the hour first, followed by the minutes.",
+  "heard": "Enter the hour first, followed by the minutes.",
+  "match": 1.0
+ },
+ {
+  "line": "s09_04",
+  "spoken": "For this demonstration, we are using eleven thirty A M.",
+  "heard": "For this demonstration, we are using 11.30 a.m.",
+  "match": 0.8
+ },
+ {
+  "line": "s09_05",
+  "spoken": "Always verify the departure time before proceeding.",
+  "heard": "Always verify the departure time before proceeding.",
+  "match": 1.0
+ },
+ {
+  "line": "s10_00",
+  "spoken": "Whenever you enter a time in the e-Form, you must verify whether it is A M or P M.",
+  "heard": "Whenever you enter a time in the e-form,  you must verify whether it is a M or PM.",
+  "match": 0.95
+ },
+ {
+  "line": "s10_01",
+  "spoken": "Tap the A M or P M dropdown menu displayed beside the time field.",
+  "heard": "Tap the M or PM drop-down menu, displayed beside the time field.",
+  "match": 0.79
+ },
+ {
+  "line": "s10_02",
+  "spoken": "Select A M for morning times or P M for afternoon and night times.",
+  "heard": "Select a M for morning times or PM for afternoon and night times.",
+  "match": 0.93
+ },
+ {
+  "line": "s10_03",
+  "spoken": "For example, ten in the morning should be recorded as ten A M, while ten at night should be recorded as ten P M.",
+  "heard": "For example, 10 in the morning should be recorded as 10am, while 10 at night should be recorded  as 10pm.",
+  "match": 0.67
+ },
+ {
+  "line": "s10_04",
+  "spoken": "Please remember to check this for every time field throughout the form.",
+  "heard": "Please remember to check this for every time field throughout the form.",
+  "match": 1.0
+ },
+ {
+  "line": "s11_00",
+  "spoken": "Next, locate the Sector field.",
+  "heard": "Next, locate the sector field.",
+  "match": 1.0
+ },
+ {
+  "line": "s11_01",
+  "spoken": "Tap the box and enter the flight sector for your escort assignment.",
+  "heard": "Tap the box and enter the flight sector for your escort assignment.",
+  "match": 1.0
+ },
+ {
+  "line": "s11_02",
+  "spoken": "In this demonstration, we are using K U L, test as sample information.",
+  "heard": "In this demonstration, we are using KUL,  test as sample information.",
+  "match": 0.77
+ },
+ {
+  "line": "s11_03",
+  "spoken": "During actual operations, enter the correct sector based on your assigned flight.",
+  "heard": "During actual operations, enter the correct sector based on your assigned flight.",
+  "match": 1.0
+ },
+ {
+  "line": "s11_04",
+  "spoken": "Double-check the details before continuing.",
+  "heard": "Double-check the details before continuing.",
+  "match": 1.0
+ },
+ {
+  "line": "s12_00",
+  "spoken": "Once you have completed all four flight details, review the information carefully.",
+  "heard": "Once you have completed all four flight details,  review the information carefully.",
+  "match": 1.0
+ },
+ {
+  "line": "s12_01",
+  "spoken": "Make sure the start time, flight number, E T D, and sector are correct.",
+  "heard": "Make sure the start time, flight number, E.T.D., and sector are correct.",
+  "match": 1.0
+ },
+ {
+  "line": "s12_02",
+  "spoken": "After checking, scroll to the bottom of the page and tap Next.",
+  "heard": "After checking, scroll to the bottom of the page and tap Next.",
+  "match": 1.0
+ },
+ {
+  "line": "s12_03",
+  "spoken": "You will notice a progress bar showing your current position in the form.",
+  "heard": "You will notice a progress bar showing your current position in the form.",
+  "match": 1.0
+ },
+ {
+  "line": "s12_04",
+  "spoken": "This helps you identify which page you are completing.",
+  "heard": "This helps you identify which page you are completing.",
+  "match": 1.0
+ },
+ {
+  "line": "s13_00",
+  "spoken": "If you accidentally leave a mandatory field empty, a red error message will appear.",
+  "heard": "If you accidentally leave a mandatory field empty,  a red error message will appear.",
+  "match": 1.0
+ },
+ {
+  "line": "s13_01",
+  "spoken": "The message will state, This is a required question.",
+  "heard": "The message will state, this is a required question.",
+  "match": 1.0
+ },
+ {
+  "line": "s13_02",
+  "spoken": "This simply means that you have missed a mandatory field.",
+  "heard": "This simply means that you have missed a mandatory field.",
+  "match": 1.0
+ },
+ {
+  "line": "s13_03",
+  "spoken": "Locate the highlighted question and enter the missing information.",
+  "heard": "Locate the highlighted question and enter the missing information.",
+  "match": 1.0
+ },
+ {
+  "line": "s13_04",
+  "spoken": "Once completed, tap Next again to proceed.",
+  "heard": "Once completed, tap Next again to proceed.",
+  "match": 1.0
+ },
+ {
+  "line": "s14_00",
+  "spoken": "We will now move to the prohibited-item inspection section.",
+  "heard": "we will now move to the prohibited item inspection section.",
+  "match": 1.0
+ },
+ {
+  "line": "s14_01",
+  "spoken": "This section requires you to confirm that the catering truck or hi-lift cabin has been inspected for prohibited items.",
+  "heard": "This section requires you to confirm that the catering truck or high-lift cabin has been  inspected for prohibited items.",
+  "match": 0.95
+ },
+ {
+  "line": "s14_02",
+  "spoken": "Before answering the question, you must physically carry out the required security inspection.",
+  "heard": "Before answering the question, you must physically carry out the required security inspection.",
+  "match": 1.0
+ },
+ {
+  "line": "s14_03",
+  "spoken": "Do not select an answer without completing the actual check.",
+  "heard": "Do not select an answer without completing the actual check.",
+  "match": 1.0
+ },
+ {
+  "line": "s14_04",
+  "spoken": "If you identify any prohibited item or abnormality, immediately report it to the Duty Security Executive.",
+  "heard": "If you identify any prohibited item or abnormality,  immediately report it to the duty security executive.",
+  "match": 1.0
+ },
+ {
+  "line": "s15_00",
+  "spoken": "After completing the prohibited-item inspection, select the appropriate answer.",
+  "heard": "After completing the prohibited item inspection, select the appropriate answer.",
+  "match": 1.0
+ },
+ {
+  "line": "s15_01",
+  "spoken": "If you have completed the required inspection, select YES.",
+  "heard": "If you have completed the required inspection, select YES.",
+  "match": 1.0
+ },
+ {
+  "line": "s15_02",
+  "spoken": "By selecting YES, you are confirming that the inspection has actually been carried out.",
+  "heard": "By selecting YES, you are confirming that the inspection has actually been carried out.",
+  "match": 1.0
+ },
+ {
+  "line": "s15_03",
+  "spoken": "Once you have selected your answer, tap Next.",
+  "heard": "Once you have selected your answer, tap Next.",
+  "match": 1.0
+ },
+ {
+  "line": "s15_04",
+  "spoken": "Remember, selecting YES does not replace the requirement to physically conduct the inspection.",
+  "heard": "Remember, selecting YES does not replace the requirement  to physically conduct the inspection.",
+  "match": 1.0
+ },
+ {
+  "line": "s16_00",
+  "spoken": "If the prohibited-item inspection was not completed, you must select NO.",
+  "heard": "If the prohibited item inspection was not completed, you must select no.",
+  "match": 1.0
+ },
+ {
+  "line": "s16_01",
+  "spoken": "The form will automatically direct you to another page requiring an explanation.",
+  "heard": "the form will automatically direct you to another page requiring an explanation.",
+  "match": 1.0
+ },
+ {
+  "line": "s16_02",
+  "spoken": "Tap the text box and clearly enter the reason why the inspection was not completed.",
+  "heard": "Tap the text box and clearly enter the reason why the inspection was not completed.",
+  "match": 1.0
+ },
+ {
+  "line": "s16_03",
+  "spoken": "This field is mandatory, so you cannot leave it empty.",
+  "heard": "This field is mandatory, so you cannot leave it empty.",
+  "match": 1.0
+ },
+ {
+  "line": "s16_04",
+  "spoken": "If the situation involves a security concern or abnormality, immediately notify the Duty Security Executive.",
+  "heard": "If the situation involves a security concern or abnormality,  immediately notify the duty security executive.",
+  "match": 1.0
+ },
+ {
+  "line": "s16_05",
+  "spoken": "Once the reason has been entered, tap Next to continue.",
+  "heard": "Once the reason has been entered, tap next to continue.",
+  "match": 1.0
+ },
+ {
+  "line": "s17_00",
+  "spoken": "We will now proceed to the next security checkpoint.",
+  "heard": "we will now proceed to the next security checkpoint.",
+  "match": 1.0
+ },
+ {
+  "line": "s17_01",
+  "spoken": "This section requires you to confirm that the catering truck has been properly sealed and locked before departing for the aircraft or apron.",
+  "heard": "This section requires you to confirm that the catering truck has been properly sealed  and locked before departing for the aircraft or apron.",
+  "match": 1.0
+ },
+ {
+  "line": "s17_02",
+  "spoken": "Before answering, verify that the required sealing and locking process has been completed.",
+  "heard": "Before answering, verify that the required sealing and locking process has been completed.",
+  "match": 1.0
+ },
+ {
+  "line": "s17_03",
+  "spoken": "Ensure that the truck is secured according to the required security procedures.",
+  "heard": "Ensure that the truck is secured according to the required security procedures.",
+  "match": 1.0
+ },
+ {
+  "line": "s18_00",
+  "spoken": "Once you have verified that the catering truck has been properly sealed and locked, select YES.",
+  "heard": "Once you have verified that the catering truck has been properly sealed and locked, select  YES.",
+  "match": 1.0
+ },
+ {
+  "line": "s18_01",
+  "spoken": "This confirms that the required sealing and locking process has been completed.",
+  "heard": "This confirms that the required sealing and locking process has been completed.",
+  "match": 1.0
+ },
+ {
+  "line": "s18_02",
+  "spoken": "After selecting YES, tap Next to proceed.",
+  "heard": "After selecting YES, tap Next to proceed.",
+  "match": 1.0
+ },
+ {
+  "line": "s18_03",
+  "spoken": "Remember, only select YES after physically confirming that the truck is properly secured.",
+  "heard": "Remember, only select YES after physically confirming that the truck is properly secured.",
+  "match": 1.0
+ },
+ {
+  "line": "s19_00",
+  "spoken": "If the catering truck has not been properly sealed or locked, select NO.",
+  "heard": "If the catering truck has not been properly sealed or locked, select no.",
+  "match": 1.0
+ },
+ {
+  "line": "s19_01",
+  "spoken": "The form will direct you to another page where you must provide an explanation.",
+  "heard": "The form will direct you to another page, where you must provide an explanation.",
+  "match": 1.0
+ },
+ {
+  "line": "s19_02",
+  "spoken": "Enter the actual reason why the sealing and locking process was not completed.",
+  "heard": "Enter the actual reason why the sealing and locking process was not completed.",
+  "match": 1.0
+ },
+ {
+  "line": "s19_03",
+  "spoken": "Make sure your explanation is clear and accurate.",
+  "heard": "Make sure your explanation is clear and accurate.",
+  "match": 1.0
+ },
+ {
+  "line": "s19_04",
+  "spoken": "If you discover any abnormality involving the seal or locking arrangement, report it immediately to the Duty Security Executive.",
+  "heard": "If you discover any abnormality involving the seal or locking arrangement,  report it immediately to the duty security executive.",
+  "match": 1.0
+ },
+ {
+  "line": "s19_05",
+  "spoken": "Once completed, tap Next.",
+  "heard": "Once completed, tap Next.",
+  "match": 1.0
+ },
+ {
+  "line": "s20_00",
+  "spoken": "We will now move to page six of the e-Form.",
+  "heard": "We will now move to page six of the e-form.",
+  "match": 1.0
+ },
+ {
+  "line": "s20_01",
+  "spoken": "In this section, you are required to record the catering hi-lift truck number, catering truck seal number, and inspection remarks.",
+  "heard": "In this section, you are required to record the catering high-lift truck number, catering  truck seal number, and inspection remarks.",
+  "match": 0.95
+ },
+ {
+  "line": "s20_02",
+  "spoken": "These details are important because they allow the security records to be traced back to the specific vehicle and seal used during the escort.",
+  "heard": "These details are important because they allow the security records to be traced back to the  specific vehicle and seal used during the escort.",
+  "match": 1.0
+ },
+ {
+  "line": "s20_03",
+  "spoken": "Let's complete each field one by one.",
+  "heard": "Let's complete each field one by one.",
+  "match": 1.0
+ },
+ {
+  "line": "s21_00",
+  "spoken": "First, locate the Catering Hi-Lift Truck or Hi-Lift Number field.",
+  "heard": "First, locate the catering high-lift truck or high-lift number field.",
+  "match": 0.83
+ },
+ {
+  "line": "s21_01",
+  "spoken": "Tap the box and enter the identification number of the truck assigned to your escort duty.",
+  "heard": "Tap the box and enter the identification number of the truck assigned to your escort duty.",
+  "match": 1.0
+ },
+ {
+  "line": "s21_02",
+  "spoken": "For this demonstration, we are using test, H L zero one.",
+  "heard": "For this demonstration, we are using test HL01.",
+  "match": 0.64
+ },
+ {
+  "line": "s21_03",
+  "spoken": "During actual operations, enter the real truck identification number.",
+  "heard": "During actual operations, enter the real truck identification number.",
+  "match": 1.0
+ },
+ {
+  "line": "s21_04",
+  "spoken": "Always double-check the number to make sure it matches the vehicle being escorted.",
+  "heard": "Always double check the number to make sure it matches the vehicle being escorted.",
+  "match": 1.0
+ },
+ {
+  "line": "s22_00",
+  "spoken": "Next, locate the Catering Truck Seal Number field.",
+  "heard": "Next, locate the catering truck seal number field.",
+  "match": 1.0
+ },
+ {
+  "line": "s22_01",
+  "spoken": "Tap the box and enter the seal number shown on the physical catering truck seal.",
+  "heard": "Tap the box and enter the seal number shown on the physical catering truck seal.",
+  "match": 1.0
+ },
+ {
+  "line": "s22_02",
+  "spoken": "In this demonstration, we are using test, zero zero zero one.",
+  "heard": "In this demonstration, we are using test 0001.",
+  "match": 0.64
+ },
+ {
+  "line": "s22_03",
+  "spoken": "This is only sample information.",
+  "heard": "This is only sample information.",
+  "match": 1.0
+ },
+ {
+  "line": "s22_04",
+  "spoken": "During actual operations, ensure that every letter and number matches the actual seal.",
+  "heard": "During actual operations, ensure that every letter and number matches the actual seal.",
+  "match": 1.0
+ },
+ {
+  "line": "s22_05",
+  "spoken": "An incorrect seal number can affect the accuracy and traceability of your security record.",
+  "heard": "An incorrect seal number can affect the accuracy and traceability of your security record.",
+  "match": 1.0
+ },
+ {
+  "line": "s23_00",
+  "spoken": "Next, we will complete the remarks section.",
+  "heard": "Next, we will complete the remarks section.",
+  "match": 1.0
+ },
+ {
+  "line": "s23_01",
+  "spoken": "If all required checks have been completed and no abnormality or discrepancy has been identified, select Nil Discrepancy.",
+  "heard": "If all required checks have been completed  and no abnormality or discrepancy has been identified,  select NIL discrepancy.",
+  "match": 1.0
+ },
+ {
+  "line": "s23_02",
+  "spoken": "This indicates that no discrepancy was found during the inspection.",
+  "heard": "This indicates that no discrepancy was found during the inspection.",
+  "match": 1.0
+ },
+ {
+  "line": "s23_03",
+  "spoken": "Only select this option when everything is in order.",
+  "heard": "only select this option when everything is in order.",
+  "match": 1.0
+ },
+ {
+  "line": "s23_04",
+  "spoken": "Once you have selected Nil Discrepancy, tap Next to continue.",
+  "heard": "Once you have selected nil discrepancy, tap next to continue.",
+  "match": 1.0
+ },
+ {
+  "line": "s24_00",
+  "spoken": "If you identify an actual discrepancy during your escort duty, you must follow the required reporting procedures.",
+  "heard": "If you identify an actual discrepancy during your escort duty,  you must follow the required reporting procedures.",
+  "match": 1.0
+ },
+ {
+  "line": "s24_01",
+  "spoken": "Immediately report the abnormality to the Duty Security Executive.",
+  "heard": "immediately report the abnormality to the duty security executive.",
+  "match": 1.0
+ },
+ {
+  "line": "s24_02",
+  "spoken": "As stated in the form, Discrepancy Identified must only be selected after the report has been submitted to the Duty Officer and the required notification email has been sent.",
+  "heard": "As stated in the form, discrepancy identified must only be selected after the report has  been submitted to the duty officer and the required notification email has been sent.",
+  "match": 1.0
+ },
+ {
+  "line": "s24_03",
+  "spoken": "Once the reporting requirements have been completed, select Discrepancy Identified.",
+  "heard": "Once the reporting requirements have been completed,  select discrepancy identified.",
+  "match": 1.0
+ },
+ {
+  "line": "s24_04",
+  "spoken": "Then, tap Next.",
+  "heard": "Then tap Next.",
+  "match": 1.0
+ },
+ {
+  "line": "s25_00",
+  "spoken": "If you have selected Discrepancy Identified, the form will direct you to the additional details section.",
+  "heard": "If you have selected discrepancy identified,  the form will direct you to the additional details section.",
+  "match": 1.0
+ },
+ {
+  "line": "s25_01",
+  "spoken": "Here, you may provide further information regarding the discrepancy.",
+  "heard": "Here, you may provide further information regarding the discrepancy.",
+  "match": 1.0
+ },
+ {
+  "line": "s25_02",
+  "spoken": "This field is optional, so you may leave it empty if no additional information is required.",
+  "heard": "This field is optional, so you may leave it empty  if no additional information is required.",
+  "match": 1.0
+ },
+ {
+  "line": "s25_03",
+  "spoken": "However, if there are relevant details that should be recorded, enter them clearly.",
+  "heard": "However, if there are relevant details that should be recorded, enter them clearly.",
+  "match": 1.0
+ },
+ {
+  "line": "s25_04",
+  "spoken": "Once completed, tap Next to proceed.",
+  "heard": "Once completed, tap Next to proceed.",
+  "match": 1.0
+ },
+ {
+  "line": "s26_00",
+  "spoken": "We will now proceed to the first security sign-off section.",
+  "heard": "We will now proceed to the first security sign-off section.",
+  "match": 1.0
+ },
+ {
+  "line": "s26_01",
+  "spoken": "This section is for the AirAsia or AirAsia X Security personnel who conducted the checks at the catering facility.",
+  "heard": "This section is for the AirAsia or AirAsia X security personnel  who conducted the checks at the catering facility.",
+  "match": 1.0
+ },
+ {
+  "line": "s26_02",
+  "spoken": "The sign-off is important because it records who was responsible for the security inspection.",
+  "heard": "The sign-off is important because it records who is responsible for the security inspection.",
+  "match": 0.93
+ },
+ {
+  "line": "s26_03",
+  "spoken": "The relevant personnel must enter their details accurately.",
+  "heard": "The relevant personnel must enter their details accurately.",
+  "match": 1.0
+ },
+ {
+  "line": "s27_00",
+  "spoken": "First, locate the Name field.",
+  "heard": "First, locate the name field.",
+  "match": 1.0
+ },
+ {
+  "line": "s27_01",
+  "spoken": "Tap the box and enter the full name of the security personnel who performed the check at the catering facility.",
+  "heard": "Tap the box and enter the full name of the security personnel  who performed the check at the catering facility.",
+  "match": 1.0
+ },
+ {
+  "line": "s27_02",
+  "spoken": "In this demonstration, we are using TEST USER as an example.",
+  "heard": "In this demonstration, we are using TestUser as an example.",
+  "match": 0.82
+ },
+ {
+  "line": "s27_03",
+  "spoken": "During actual operations, enter the correct full name.",
+  "heard": "During actual operations, enter the correct full name.",
+  "match": 1.0
+ },
+ {
+  "line": "s27_04",
+  "spoken": "Do not use another staff member's name to complete your sign-off.",
+  "heard": "Do not use another staff member's name to complete your sign-off.",
+  "match": 1.0
+ },
+ {
+  "line": "s28_00",
+  "spoken": "Next, locate the Staff I D field.",
+  "heard": "Next, locate the staff ID field.",
+  "match": 0.71
+ },
+ {
+  "line": "s28_01",
+  "spoken": "Tap the box and enter the correct staff identification number.",
+  "heard": "Tap the box and enter the correct staff identification number.",
+  "match": 1.0
+ },
+ {
+  "line": "s28_02",
+  "spoken": "In this demonstration, we are using test, zero zero one.",
+  "heard": "In this demonstration, we are using test 001.",
+  "match": 0.7
+ },
+ {
+  "line": "s28_03",
+  "spoken": "During actual operations, enter the actual staff I D of the personnel performing the sign-off.",
+  "heard": "During actual operations, enter the actual staff ID of the personnel performing the sign-off.",
+  "match": 0.88
+ },
+ {
+  "line": "s28_04",
+  "spoken": "Double-check the number before continuing.",
+  "heard": "Double check the number before continuing.",
+  "match": 1.0
+ },
+ {
+  "line": "s28_05",
+  "spoken": "This helps maintain accurate personnel identification and accountability in the security record.",
+  "heard": "This helps maintain accurate personnel identification and accountability in the security record.",
+  "match": 1.0
+ },
+ {
+  "line": "s29_00",
+  "spoken": "Next, enter the required end time for the catering facility security check.",
+  "heard": "Next, enter the required end time for the catering facility security check.",
+  "match": 1.0
+ },
+ {
+  "line": "s29_01",
+  "spoken": "Tap the time field and enter the hour, followed by the minutes.",
+  "heard": "Tap the time field and enter the hour, followed by the minutes.",
+  "match": 1.0
+ },
+ {
+  "line": "s29_02",
+  "spoken": "For this demonstration, we are using ten thirty A M.",
+  "heard": "For this demonstration, we are using 10.30 a.m.",
+  "match": 0.8
+ },
+ {
+  "line": "s29_03",
+  "spoken": "Remember to select the correct A M or P M option.",
+  "heard": "Remember to select the correct M or PM option.",
+  "match": 0.82
+ },
+ {
+  "line": "s29_04",
+  "spoken": "Always record the actual time for the completed check.",
+  "heard": "Always record the actual time for the completed check.",
+  "match": 1.0
+ },
+ {
+  "line": "s30_00",
+  "spoken": "Now, locate the signature field.",
+  "heard": "Now locate the signature field.",
+  "match": 1.0
+ },
+ {
+  "line": "s30_01",
+  "spoken": "For this e-Form, the signature is completed by typing your full name.",
+  "heard": "For this e-form, the signature is completed by typing your full name.",
+  "match": 1.0
+ },
+ {
+  "line": "s30_02",
+  "spoken": "Tap the designated box and enter your full name correctly.",
+  "heard": "Tap the designated box and enter your full name correctly.",
+  "match": 1.0
+ },
+ {
+  "line": "s30_03",
+  "spoken": "Ensure that the name matches the personnel performing the sign-off.",
+  "heard": "Ensure that the name matches the personnel performing the sign-off.",
+  "match": 1.0
+ },
+ {
+  "line": "s30_04",
+  "spoken": "Once all the required information has been entered, tap Next to proceed.",
+  "heard": "Once all the required information has been entered, tap Next to proceed.",
+  "match": 1.0
+ },
+ {
+  "line": "s31_00",
+  "spoken": "We will now move to page nine, which is the final security sign-off section.",
+  "heard": "We will now move to page nine,  which is the final security sign-off section.",
+  "match": 1.0
+ },
+ {
+  "line": "s31_01",
+  "spoken": "This section is used to record the security check performed at the aircraft.",
+  "heard": "This section is used to record the security check performed at the aircraft.",
+  "match": 1.0
+ },
+ {
+  "line": "s31_02",
+  "spoken": "Just like the catering facility section, the required personnel details must be entered accurately.",
+  "heard": "Just like the catering facility section,  the required personnel details must be entered accurately.",
+  "match": 1.0
+ },
+ {
+  "line": "s31_03",
+  "spoken": "There are four fields to complete, following the same process as the previous sign-off.",
+  "heard": "There are four fields to complete,  following the same process as the previous sign-off.",
+  "match": 1.0
+ },
+ {
+  "line": "s32_00",
+  "spoken": "First, enter the full name of the security personnel who performed the aircraft check.",
+  "heard": "First, enter the full name of the security personnel  who performed the aircraft check.",
+  "match": 1.0
+ },
+ {
+  "line": "s32_01",
+  "spoken": "Next, enter the correct Staff Number.",
+  "heard": "Next, enter the correct staff number.",
+  "match": 1.0
+ },
+ {
+  "line": "s32_02",
+  "spoken": "Please note that this section uses the label Staff Number instead of Staff I D.",
+  "heard": "Please note that this section uses the label staff number instead of staff ID.",
+  "match": 0.87
+ },
+ {
+  "line": "s32_03",
+  "spoken": "Then, enter the actual escort end time, including the correct A M or P M selection.",
+  "heard": "Then, enter the actual escort end time, including the correct M or PM selection.",
+  "match": 0.88
+ },
+ {
+  "line": "s32_04",
+  "spoken": "For this demonstration, we are using test user two, test, zero zero two, and ten forty-five as sample details.",
+  "heard": "For this demonstration, we are using TestUser2, Test002, and 1045 as sample details.",
+  "match": 0.5
+ },
+ {
+  "line": "s32_05",
+  "spoken": "Complete any remaining required sign-off fields shown on the form.",
+  "heard": "Complete any remaining required sign-off fields shown on the form.",
+  "match": 1.0
+ },
+ {
+  "line": "s33_00",
+  "spoken": "Before submitting the e-Form, please review all the information carefully.",
+  "heard": "Before submitting the e-form, please review all the information carefully.",
+  "match": 1.0
+ },
+ {
+  "line": "s33_01",
+  "spoken": "Check the flight details, inspection answers, truck number, seal number, remarks, and both security sign-offs.",
+  "heard": "Check the flight details, inspection answers, truck number, seal number, remarks and both  security sign-offs.",
+  "match": 1.0
+ },
+ {
+  "line": "s33_02",
+  "spoken": "If you notice any mistake, tap Back to return to the earlier page.",
+  "heard": "If you notice any mistake, tap back to return to the earlier page.",
+  "match": 1.0
+ },
+ {
+  "line": "s33_03",
+  "spoken": "Your previously entered information will remain filled in, allowing you to make the necessary corrections.",
+  "heard": "Your previously entered information will remain filled in,  allowing you to make the necessary corrections.",
+  "match": 1.0
+ },
+ {
+  "line": "s33_04",
+  "spoken": "After correcting the details, tap Next until you return to the final page.",
+  "heard": "After correcting the details, tap Next until you return to the final page.",
+  "match": 1.0
+ },
+ {
+  "line": "s34_00",
+  "spoken": "Once you have checked all the information and confirmed that everything is correct, you are ready to submit the checklist.",
+  "heard": "Once you have checked all the information  and confirmed that everything is correct,  you are ready to submit the checklist.",
+  "match": 1.0
+ },
+ {
+  "line": "s34_01",
+  "spoken": "Scroll to the bottom of the final page.",
+  "heard": "Scroll to the bottom of the final page.",
+  "match": 1.0
+ },
+ {
+  "line": "s34_02",
+  "spoken": "You will see the Submit button.",
+  "heard": "You will see the Submit button.",
+  "match": 1.0
+ },
+ {
+  "line": "s34_03",
+  "spoken": "Tap Submit to send your completed High-Lift Escort Checklist.",
+  "heard": "Tap Submit to send your completed High Lift Escort checklist.",
+  "match": 1.0
+ },
+ {
+  "line": "s34_04",
+  "spoken": "Remember, the Submit button is only available on the final page.",
+  "heard": "Remember, the Submit button is only available on the final page.",
+  "match": 1.0
+ },
+ {
+  "line": "s34_05",
+  "spoken": "Make sure all information is correct before submitting because the submitted response cannot be edited.",
+  "heard": "Make sure all information is correct before submitting,  because the submitted response cannot be edited.",
+  "match": 1.0
+ },
+ {
+  "line": "s35_00",
+  "spoken": "After tapping Submit, the form will display a confirmation message.",
+  "heard": "After tapping Submit, the form will display a confirmation message.",
+  "match": 1.0
+ },
+ {
+  "line": "s35_01",
+  "spoken": "The message will read, Your response has been recorded.",
+  "heard": "The message will read, your response has been recorded.",
+  "match": 1.0
+ },
+ {
+  "line": "s35_02",
+  "spoken": "This confirms that your completed checklist has been successfully submitted.",
+  "heard": "This confirms that your completed checklist has been successfully submitted.",
+  "match": 1.0
+ },
+ {
+  "line": "s35_03",
+  "spoken": "You may also see an option labelled Submit another response.",
+  "heard": "You may also see an option labeled Submit Another Response.",
+  "match": 0.9
+ },
+ {
+  "line": "s35_04",
+  "spoken": "Only select this option when you need to complete a new checklist for another escort duty.",
+  "heard": "Only select this option when you need to complete a new checklist for another escort duty.",
+  "match": 1.0
+ },
+ {
+  "line": "s35_05",
+  "spoken": "Do not submit a duplicate response for the same escort unnecessarily.",
+  "heard": "do not submit a duplicate response for the same escort unnecessarily.",
+  "match": 1.0
+ },
+ {
+  "line": "s36_00",
+  "spoken": "Please remember that once you have submitted the form, you cannot edit the response.",
+  "heard": "Please remember that once you have submitted the form,  you cannot edit the response.",
+  "match": 1.0
+ },
+ {
+  "line": "s36_01",
+  "spoken": "The form does not provide an edit link, and a copy of the completed response will not be sent to you.",
+  "heard": "The form does not provide an edit link, and a copy of the completed response will not be  sent to you.",
+  "match": 1.0
+ },
+ {
+  "line": "s36_02",
+  "spoken": "This is why you must check every page carefully before tapping Submit.",
+  "heard": "This is why you must check every page carefully before tapping Submit.",
+  "match": 1.0
+ },
+ {
+  "line": "s36_03",
+  "spoken": "If you discover an error after submitting, inform your supervisor immediately so the matter can be addressed through the appropriate process.",
+  "heard": "If you discover an error after submitting, inform your supervisor immediately so the  matter can be addressed through the appropriate process.",
+  "match": 1.0
+ },
+ {
+  "line": "s37_00",
+  "spoken": "Now, let us understand what happens after you submit the e-Form.",
+  "heard": "Now, let us understand what happens after you submit the e-form.",
+  "match": 1.0
+ },
+ {
+  "line": "s37_01",
+  "spoken": "Every successful submission is automatically recorded in a central Google Sheet.",
+  "heard": "Every successful submission is automatically recorded in a central Google Sheet.",
+  "match": 1.0
+ },
+ {
+  "line": "s37_02",
+  "spoken": "Each submitted checklist creates a new row in the response sheet.",
+  "heard": "Each submitted checklist creates a new row in the response sheet.",
+  "match": 1.0
+ },
+ {
+  "line": "s37_03",
+  "spoken": "For example, the sheet shown on the screen contains a test response created for this training guide.",
+  "heard": "For example, the sheet shown on the screen  contains a test response created for this training guide.",
+  "match": 1.0
+ },
+ {
+  "line": "s37_04",
+  "spoken": "This allows authorized personnel to review the submitted escort records.",
+  "heard": "This allows authorized personnel to review the submitted escort records.",
+  "match": 1.0
+ },
+ {
+  "line": "s38_00",
+  "spoken": "The responsibilities are straightforward.",
+  "heard": "The responsibilities are straightforward.",
+  "match": 1.0
+ },
+ {
+  "line": "s38_01",
+  "spoken": "As Av-Sec staff, your responsibility is to perform the required security checks, complete the e-Form accurately, and tap Submit.",
+  "heard": "As AvSEC staff, your responsibility is to perform the required security checks,  complete the e-form accurately, and tap Submit.",
+  "match": 0.9
+ },
+ {
+  "line": "s38_02",
+  "spoken": "Once submitted, your response is automatically stored in the central Google Sheet.",
+  "heard": "Once submitted, your response is automatically  stored in the central Google Sheet.",
+  "match": 1.0
+ },
+ {
+  "line": "s38_03",
+  "spoken": "Authorized supervisors are responsible for reviewing and managing these records.",
+  "heard": "Authorized supervisors are responsible for reviewing and managing these records.",
+  "match": 1.0
+ },
+ {
+  "line": "s38_04",
+  "spoken": "Staff members are not required to access or manage the response sheet themselves.",
+  "heard": "Staff members are not required to access or manage the response sheet themselves.",
+  "match": 1.0
+ },
+ {
+  "line": "s39_00",
+  "spoken": "Before we conclude this training, please take note of the following important instructions.",
+  "heard": "Before we conclude this training, please take note of the following important instructions.",
+  "match": 1.0
+ },
+ {
+  "line": "s39_01",
+  "spoken": "If you experience any difficulty accessing the e-Form, such as the form not opening, pages failing to load, or submission errors, first check your internet connection and ensure you are using the correct link or Q R code.",
+  "heard": "If you experience any difficulty accessing the eForm, such as the form not opening, pages  failing to load, or submission errors, first check your internet connection and ensure you  are using the correct link or QR code.",
+  "match": 0.92
+ },
+ {
+  "line": "s39_02",
+  "spoken": "If the problem continues, you must immediately report the issue to your respective supervisor.",
+  "heard": "If the problem continues, you must immediately report the issue to your respective supervisor.",
+  "match": 1.0
+ },
+ {
+  "line": "s39_03",
+  "spoken": "The issue shall then be escalated to the System Unit for immediate rectification.",
+  "heard": "The issue shall then be escalated to the system unit for immediate rectification.",
+  "match": 1.0
+ },
+ {
+  "line": "s39_04",
+  "spoken": "If the technical issue cannot be resolved immediately or remains unresolved for a certain period, the manual form may be used as a temporary alternative to ensure that security operations and documentation can continue.",
+  "heard": "If the technical issue cannot be resolved immediately  or remains unresolved for a certain period,  the manual form may be used as a temporary alternative  to ensure that security operations  and documentation can continue.",
+  "match": 1.0
+ },
+ {
+  "line": "s39_05",
+  "spoken": "However, the use of the manual form must first be approved by the Head of Department.",
+  "heard": "However, the use of the manual form must first be approved by the head of department.",
+  "match": 1.0
+ },
+ {
+  "line": "s39_06",
+  "spoken": "Staff are not permitted to switch to manual documentation without the required approval.",
+  "heard": "Staff are not permitted to switch to manual documentation without the required approval.",
+  "match": 1.0
+ },
+ {
+  "line": "s39_07",
+  "spoken": "Once the system has been restored, all staff shall resume using the e-Form according to the instructions provided by their supervisor.",
+  "heard": "Once the system has been restored, all staff shall resume using the e-form according to  the instructions provided by their supervisor.",
+  "match": 1.0
+ },
+ {
+  "line": "s39_08",
+  "spoken": "Please remember that accurate documentation, timely reporting, and compliance with security procedures must be maintained at all times, including during system disruptions.",
+  "heard": "Please remember that accurate documentation, timely reporting, and compliance with security  procedures must be maintained at all times, including during system disruptions.",
+  "match": 1.0
+ },
+ {
+  "line": "s39_09",
+  "spoken": "Your responsibility is not only to complete the form, but also to ensure that every required security check is properly conducted and accurately recorded.",
+  "heard": "Your responsibility is not only to complete the form,  but also to ensure that every required security check  is properly conducted and accurately recorded.",
+  "match": 1.0
+ },
+ {
+  "line": "s39_10",
+  "spoken": "If you encounter any abnormality during your escort duty, report it immediately to the Duty Security Executive.",
+  "heard": "If you encounter any abnormality during your escort duty,  report it immediately to the duty security executive.",
+  "match": 1.0
+ },
+ {
+  "line": "s39_11",
+  "spoken": "Thank you for your attention, understanding, and cooperation.",
+  "heard": "Thank you for your attention, understanding, and cooperation.",
+  "match": 1.0
+ },
+ {
+  "line": "s39_12",
+  "spoken": "Stay alert, follow the required procedures, and always prioritize aviation security.",
+  "heard": "Stay alert, follow the required procedures, and always prioritize aviation security.",
+  "match": 1.0
+ },
+ {
+  "line": "s39_13",
+  "spoken": "This concludes the A. A. S. E. C. F. zero four two, High-Lift Escort e-Form Staff Training.",
+  "heard": "This concludes the A, ASEC F042 High Lift Escort E-Form Staff Training.",
+  "match": 0.68
+ },
+ {
+  "line": "s39_14",
+  "spoken": "Thank you.",
+  "heard": "Thank you.",
+  "match": 1.0
+ }
+]

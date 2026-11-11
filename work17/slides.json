@@ -1,0 +1,1506 @@
+[
+ {
+  "n": 1,
+  "shot": {
+   "src": "image15.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": []
+  },
+  "texts": [
+   {
+    "t": "STAFF GUIDE",
+    "size": 18.0
+   },
+   {
+    "t": "High-Lift Escort eForm",
+    "size": 48.0
+   },
+   {
+    "t": "AA/SEC/F/042 – Hi-lift Escort Checklist",
+    "size": 22.0
+   },
+   {
+    "t": "How to fill it in on your phone, one step at a time",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 2,
+  "shot": null,
+  "texts": [
+   {
+    "t": "ABOUT THIS FORM",
+    "size": 15.0
+   },
+   {
+    "t": "What is this form for?",
+    "size": 40.0
+   },
+   {
+    "t": "Record one hi-lift escort Flight number, ETD, sector and start time.",
+    "size": 24.0
+   },
+   {
+    "t": "1",
+    "size": 26.0
+   },
+   {
+    "t": "From the form: “Please report any abnormality to Duty Security Executive immediately.”",
+    "size": 20.0
+   },
+   {
+    "t": "Checks at the catering facility Prohibited-item check in the truck / hi-lift cabin, seal and lock, truck number, seal number.",
+    "size": 24.0
+   },
+   {
+    "t": "2",
+    "size": 26.0
+   },
+   {
+    "t": "Two security sign-offs Catering facility security, then aircraft security.",
+    "size": 24.0
+   },
+   {
+    "t": "3",
+    "size": 26.0
+   },
+   {
+    "t": "Fill in one form for each escort, as you do the checks.",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 3,
+  "shot": {
+   "src": "image1.png",
+   "size": [
+    540,
+    540
+   ],
+   "boxes": []
+  },
+  "texts": [
+   {
+    "t": "STEP 1 · OPEN THE FORM",
+    "size": 15.0
+   },
+   {
+    "t": "Open the form on your phone",
+    "size": 40.0
+   },
+   {
+    "t": "Get the form link from your supervisor.",
+    "size": 22.0
+   },
+   {
+    "t": "1",
+    "size": 22.0
+   },
+   {
+    "t": "Tap the link, or scan this code with your phone camera.",
+    "size": 22.0
+   },
+   {
+    "t": "2",
+    "size": 22.0
+   },
+   {
+    "t": "The form opens in your browser. No app needed.",
+    "size": 22.0
+   },
+   {
+    "t": "3",
+    "size": 22.0
+   },
+   {
+    "t": "Scan to open the form",
+    "size": 18.0
+   },
+   {
+    "t": "docs.google.com/forms/d/e/1FAIpQLSdvRbvLoDAUtwm8XPoAqVZGMPkAjgAHXka_e8h5XoG_oo-enQ/viewform",
+    "size": 12.0
+   }
+  ]
+ },
+ {
+  "n": 4,
+  "shot": {
+   "src": "image15.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": [
+    {
+     "x": 24,
+     "y": 32,
+     "w": 702,
+     "h": 70,
+     "round": false
+    }
+   ]
+  },
+  "texts": [
+   {
+    "t": "THE FORM OPENS",
+    "size": 15.0
+   },
+   {
+    "t": "Check you have the right form",
+    "size": 36.0
+   },
+   {
+    "t": "The title says AA/SEC/F/042 – Hi-lift Escort Checklist.",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 5,
+  "shot": {
+   "src": "image15.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": [
+    {
+     "x": 26,
+     "y": 252,
+     "w": 248,
+     "h": 42,
+     "round": false
+    }
+   ]
+  },
+  "texts": [
+   {
+    "t": "GOOD TO KNOW",
+    "size": 15.0
+   },
+   {
+    "t": "Red * means you must answer",
+    "size": 36.0
+   },
+   {
+    "t": "You cannot go to the next page until every * box is filled.",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 6,
+  "shot": {
+   "src": "image2.jpg",
+   "size": [
+    767,
+    1304
+   ],
+   "boxes": []
+  },
+  "texts": [
+   {
+    "t": "PAGE 1 OF 9",
+    "size": 15.0
+   },
+   {
+    "t": "Flight details",
+    "size": 36.0
+   },
+   {
+    "t": "This page has 4 boxes: Time (starts), Flight No., ETD, Sector. Scroll down to see them all.",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 7,
+  "shot": {
+   "src": "image7.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": [
+    {
+     "x": 24,
+     "y": 422,
+     "w": 172,
+     "h": 60,
+     "round": false
+    }
+   ]
+  },
+  "texts": [
+   {
+    "t": "TEST / SAMPLE DATA",
+    "size": 12.0
+   },
+   {
+    "t": "PAGE 1 OF 9",
+    "size": 15.0
+   },
+   {
+    "t": "2",
+    "size": 30.0
+   },
+   {
+    "t": "Tap the box. Type the start time.",
+    "size": 36.0
+   },
+   {
+    "t": "Type the hour, then the minutes. Sample: 10 : 00",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 8,
+  "shot": {
+   "src": "image3.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": [
+    {
+     "x": 24,
+     "y": 89,
+     "w": 382,
+     "h": 58,
+     "round": false
+    }
+   ]
+  },
+  "texts": [
+   {
+    "t": "TEST / SAMPLE DATA",
+    "size": 12.0
+   },
+   {
+    "t": "PAGE 1 OF 9",
+    "size": 15.0
+   },
+   {
+    "t": "3",
+    "size": 30.0
+   },
+   {
+    "t": "Tap the box. Type the flight number.",
+    "size": 36.0
+   },
+   {
+    "t": "Sample: TEST-AK01",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 9,
+  "shot": {
+   "src": "image3.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": [
+    {
+     "x": 24,
+     "y": 290,
+     "w": 172,
+     "h": 58,
+     "round": false
+    }
+   ]
+  },
+  "texts": [
+   {
+    "t": "TEST / SAMPLE DATA",
+    "size": 12.0
+   },
+   {
+    "t": "PAGE 1 OF 9",
+    "size": 15.0
+   },
+   {
+    "t": "4",
+    "size": 30.0
+   },
+   {
+    "t": "Type the ETD",
+    "size": 36.0
+   },
+   {
+    "t": "Hour, then minutes. Sample: 11 : 30",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 10,
+  "shot": {
+   "src": "image4.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": [
+    {
+     "x": 82,
+     "y": 232,
+     "w": 127,
+     "h": 154,
+     "round": false
+    }
+   ]
+  },
+  "texts": [
+   {
+    "t": "TEST / SAMPLE DATA",
+    "size": 12.0
+   },
+   {
+    "t": "PAGE 1 OF 9",
+    "size": 15.0
+   },
+   {
+    "t": "5",
+    "size": 30.0
+   },
+   {
+    "t": "Choose AM or PM",
+    "size": 36.0
+   },
+   {
+    "t": "Tap AM to open the list. Choose PM for afternoon or night times. Do this for every time box.",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 11,
+  "shot": {
+   "src": "image3.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": [
+    {
+     "x": 24,
+     "y": 464,
+     "w": 382,
+     "h": 58,
+     "round": false
+    }
+   ]
+  },
+  "texts": [
+   {
+    "t": "TEST / SAMPLE DATA",
+    "size": 12.0
+   },
+   {
+    "t": "PAGE 1 OF 9",
+    "size": 15.0
+   },
+   {
+    "t": "6",
+    "size": 30.0
+   },
+   {
+    "t": "Tap the box. Type the sector.",
+    "size": 36.0
+   },
+   {
+    "t": "Sample: KUL-TEST",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 12,
+  "shot": {
+   "src": "image8.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": [
+    {
+     "x": 4,
+     "y": 316,
+     "w": 114,
+     "h": 64,
+     "round": false
+    }
+   ]
+  },
+  "texts": [
+   {
+    "t": "TEST / SAMPLE DATA",
+    "size": 12.0
+   },
+   {
+    "t": "PAGE 1 OF 9",
+    "size": 15.0
+   },
+   {
+    "t": "7",
+    "size": 30.0
+   },
+   {
+    "t": "Tap Next",
+    "size": 36.0
+   },
+   {
+    "t": "The bar shows which page you are on.",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 13,
+  "shot": {
+   "src": "image10.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": [
+    {
+     "x": 30,
+     "y": 478,
+     "w": 244,
+     "h": 46,
+     "round": false
+    }
+   ]
+  },
+  "texts": [
+   {
+    "t": "IF YOU MISS A BOX",
+    "size": 15.0
+   },
+   {
+    "t": "Red message? Fill in that box.",
+    "size": 36.0
+   },
+   {
+    "t": "“This is a required question” means the box is empty. Fill it in, then tap Next again.",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 14,
+  "shot": {
+   "src": "image13.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": []
+  },
+  "texts": [
+   {
+    "t": "PAGE 2 OF 9",
+    "size": 15.0
+   },
+   {
+    "t": "Item 1: prohibited-item check",
+    "size": 36.0
+   },
+   {
+    "t": "Inspect the catering truck / hi-lift cabin for prohibited items.",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 15,
+  "shot": {
+   "src": "image12.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": [
+    {
+     "x": 28,
+     "y": 190,
+     "w": 102,
+     "h": 52,
+     "round": true
+    }
+   ]
+  },
+  "texts": [
+   {
+    "t": "PAGE 2 OF 9",
+    "size": 15.0
+   },
+   {
+    "t": "8",
+    "size": 30.0
+   },
+   {
+    "t": "Choose your answer",
+    "size": 36.0
+   },
+   {
+    "t": "Tap YES when the check is completed.",
+    "size": 20.0
+   },
+   {
+    "t": "Then tap Next",
+    "size": 17.0
+   }
+  ]
+ },
+ {
+  "n": 16,
+  "shot": {
+   "src": "image17.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": [
+    {
+     "x": 24,
+     "y": 314,
+     "w": 712,
+     "h": 60,
+     "round": false
+    }
+   ]
+  },
+  "texts": [
+   {
+    "t": "TEST / SAMPLE DATA",
+    "size": 12.0
+   },
+   {
+    "t": "ONLY IF YOU CHOSE NO",
+    "size": 15.0
+   },
+   {
+    "t": "9",
+    "size": 30.0
+   },
+   {
+    "t": "Type the reason",
+    "size": 36.0
+   },
+   {
+    "t": "Choosing NO opens this page. The reason is required.",
+    "size": 20.0
+   },
+   {
+    "t": "Then tap Next",
+    "size": 17.0
+   }
+  ]
+ },
+ {
+  "n": 17,
+  "shot": {
+   "src": "image18.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": []
+  },
+  "texts": [
+   {
+    "t": "PAGE 4 OF 9",
+    "size": 15.0
+   },
+   {
+    "t": "Item 2: seal and lock",
+    "size": 36.0
+   },
+   {
+    "t": "Seal and lock the catering truck before departing to the aircraft / apron.",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 18,
+  "shot": {
+   "src": "image14.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": [
+    {
+     "x": 28,
+     "y": 189,
+     "w": 102,
+     "h": 52,
+     "round": true
+    }
+   ]
+  },
+  "texts": [
+   {
+    "t": "PAGE 4 OF 9",
+    "size": 15.0
+   },
+   {
+    "t": "10",
+    "size": 30.0
+   },
+   {
+    "t": "Choose your answer",
+    "size": 36.0
+   },
+   {
+    "t": "Tap YES when the truck is sealed and locked.",
+    "size": 20.0
+   },
+   {
+    "t": "Then tap Next",
+    "size": 17.0
+   }
+  ]
+ },
+ {
+  "n": 19,
+  "shot": {
+   "src": "image16.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": [
+    {
+     "x": 24,
+     "y": 314,
+     "w": 712,
+     "h": 60,
+     "round": false
+    }
+   ]
+  },
+  "texts": [
+   {
+    "t": "TEST / SAMPLE DATA",
+    "size": 12.0
+   },
+   {
+    "t": "ONLY IF YOU CHOSE NO",
+    "size": 15.0
+   },
+   {
+    "t": "11",
+    "size": 30.0
+   },
+   {
+    "t": "Type the reason",
+    "size": 36.0
+   },
+   {
+    "t": "Choosing NO opens this page. The reason is required.",
+    "size": 20.0
+   },
+   {
+    "t": "Then tap Next",
+    "size": 17.0
+   }
+  ]
+ },
+ {
+  "n": 20,
+  "shot": {
+   "src": "image20.jpg",
+   "size": [
+    767,
+    1011
+   ],
+   "boxes": []
+  },
+  "texts": [
+   {
+    "t": "TEST / SAMPLE DATA",
+    "size": 12.0
+   },
+   {
+    "t": "PAGE 6 OF 9",
+    "size": 15.0
+   },
+   {
+    "t": "Truck, seal and remark",
+    "size": 36.0
+   },
+   {
+    "t": "Two boxes to type in, then one answer to choose.",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 21,
+  "shot": {
+   "src": "image19.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": [
+    {
+     "x": 24,
+     "y": 249,
+     "w": 382,
+     "h": 58,
+     "round": false
+    }
+   ]
+  },
+  "texts": [
+   {
+    "t": "TEST / SAMPLE DATA",
+    "size": 12.0
+   },
+   {
+    "t": "PAGE 6 OF 9",
+    "size": 15.0
+   },
+   {
+    "t": "12",
+    "size": 30.0
+   },
+   {
+    "t": "Type the hi-lift number",
+    "size": 36.0
+   },
+   {
+    "t": "Catering hi-lift truck / hi-lift number. Sample: TEST-HL01",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 22,
+  "shot": {
+   "src": "image19.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": [
+    {
+     "x": 24,
+     "y": 422,
+     "w": 382,
+     "h": 58,
+     "round": false
+    }
+   ]
+  },
+  "texts": [
+   {
+    "t": "TEST / SAMPLE DATA",
+    "size": 12.0
+   },
+   {
+    "t": "PAGE 6 OF 9",
+    "size": 15.0
+   },
+   {
+    "t": "13",
+    "size": 30.0
+   },
+   {
+    "t": "Type the seal number",
+    "size": 36.0
+   },
+   {
+    "t": "Catering truck seal number. Sample: TEST-0001",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 23,
+  "shot": {
+   "src": "image24.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": [
+    {
+     "x": 28,
+     "y": 172,
+     "w": 187,
+     "h": 50,
+     "round": true
+    }
+   ]
+  },
+  "texts": [
+   {
+    "t": "PAGE 6 OF 9",
+    "size": 15.0
+   },
+   {
+    "t": "14",
+    "size": 30.0
+   },
+   {
+    "t": "Choose the remark",
+    "size": 36.0
+   },
+   {
+    "t": "Nil Discrepancy = nothing wrong found.",
+    "size": 20.0
+   },
+   {
+    "t": "Then tap Next",
+    "size": 17.0
+   }
+  ]
+ },
+ {
+  "n": 24,
+  "shot": {
+   "src": "image23.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": [
+    {
+     "x": 28,
+     "y": 216,
+     "w": 702,
+     "h": 68,
+     "round": false
+    }
+   ]
+  },
+  "texts": [
+   {
+    "t": "ONLY IF THERE IS A PROBLEM",
+    "size": 15.0
+   },
+   {
+    "t": "15",
+    "size": 30.0
+   },
+   {
+    "t": "Choose Discrepancy Identified",
+    "size": 34.0
+   },
+   {
+    "t": "Only after the report is submitted to the Duty Officer and the notification email is sent.",
+    "size": 20.0
+   },
+   {
+    "t": "Then tap Next",
+    "size": 17.0
+   }
+  ]
+ },
+ {
+  "n": 25,
+  "shot": {
+   "src": "image29.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": [
+    {
+     "x": 24,
+     "y": 268,
+     "w": 712,
+     "h": 58,
+     "round": false
+    }
+   ]
+  },
+  "texts": [
+   {
+    "t": "PAGE 7 · DISCREPANCY ONLY",
+    "size": 15.0
+   },
+   {
+    "t": "16",
+    "size": 30.0
+   },
+   {
+    "t": "Add details if needed",
+    "size": 36.0
+   },
+   {
+    "t": "This box is optional. You can leave it empty and tap Next.",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 26,
+  "shot": {
+   "src": "image27.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": [
+    {
+     "x": 8,
+     "y": 251,
+     "w": 750,
+     "h": 67,
+     "round": false
+    }
+   ]
+  },
+  "texts": [
+   {
+    "t": "PAGE 8 OF 9",
+    "size": 15.0
+   },
+   {
+    "t": "Sign-off: catering facility",
+    "size": 36.0
+   },
+   {
+    "t": "Checked by AirAsia / AirAsia X Security at the catering facility.",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 27,
+  "shot": {
+   "src": "image21.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": [
+    {
+     "x": 24,
+     "y": 99,
+     "w": 382,
+     "h": 58,
+     "round": false
+    }
+   ]
+  },
+  "texts": [
+   {
+    "t": "TEST / SAMPLE DATA",
+    "size": 12.0
+   },
+   {
+    "t": "PAGE 8 OF 9",
+    "size": 15.0
+   },
+   {
+    "t": "17",
+    "size": 30.0
+   },
+   {
+    "t": "Type your name",
+    "size": 36.0
+   },
+   {
+    "t": "Sample: TEST USER",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 28,
+  "shot": {
+   "src": "image21.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": [
+    {
+     "x": 24,
+     "y": 271,
+     "w": 382,
+     "h": 58,
+     "round": false
+    }
+   ]
+  },
+  "texts": [
+   {
+    "t": "TEST / SAMPLE DATA",
+    "size": 12.0
+   },
+   {
+    "t": "PAGE 8 OF 9",
+    "size": 15.0
+   },
+   {
+    "t": "18",
+    "size": 30.0
+   },
+   {
+    "t": "Type your staff ID",
+    "size": 36.0
+   },
+   {
+    "t": "Sample: TEST001",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 29,
+  "shot": {
+   "src": "image21.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": [
+    {
+     "x": 24,
+     "y": 471,
+     "w": 172,
+     "h": 58,
+     "round": false
+    }
+   ]
+  },
+  "texts": [
+   {
+    "t": "TEST / SAMPLE DATA",
+    "size": 12.0
+   },
+   {
+    "t": "PAGE 8 OF 9",
+    "size": 15.0
+   },
+   {
+    "t": "19",
+    "size": 30.0
+   },
+   {
+    "t": "Type the end time",
+    "size": 36.0
+   },
+   {
+    "t": "Hour, minutes, then check AM / PM. Sample: 10 : 30 AM",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 30,
+  "shot": {
+   "src": "image25.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": [
+    {
+     "x": 24,
+     "y": 178,
+     "w": 382,
+     "h": 112,
+     "round": false
+    }
+   ]
+  },
+  "texts": [
+   {
+    "t": "TEST / SAMPLE DATA",
+    "size": 12.0
+   },
+   {
+    "t": "PAGE 8 OF 9",
+    "size": 15.0
+   },
+   {
+    "t": "20",
+    "size": 30.0
+   },
+   {
+    "t": "Sign: type your full name",
+    "size": 36.0
+   },
+   {
+    "t": "The signature is your full name, typed.",
+    "size": 20.0
+   },
+   {
+    "t": "Then tap Next",
+    "size": 17.0
+   }
+  ]
+ },
+ {
+  "n": 31,
+  "shot": {
+   "src": "image30.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": [
+    {
+     "x": 8,
+     "y": 251,
+     "w": 750,
+     "h": 67,
+     "round": false
+    }
+   ]
+  },
+  "texts": [
+   {
+    "t": "PAGE 9 OF 9",
+    "size": 15.0
+   },
+   {
+    "t": "Sign-off: aircraft",
+    "size": 36.0
+   },
+   {
+    "t": "Checked by AirAsia / AirAsia X Security at the aircraft. Same 4 boxes as page 8.",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 32,
+  "shot": {
+   "src": "image32.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": [
+    {
+     "x": 24,
+     "y": 99,
+     "w": 382,
+     "h": 58,
+     "round": false
+    },
+    {
+     "x": 24,
+     "y": 271,
+     "w": 382,
+     "h": 58,
+     "round": false
+    },
+    {
+     "x": 24,
+     "y": 471,
+     "w": 172,
+     "h": 58,
+     "round": false
+    }
+   ]
+  },
+  "texts": [
+   {
+    "t": "TEST / SAMPLE DATA",
+    "size": 12.0
+   },
+   {
+    "t": "PAGE 9 OF 9",
+    "size": 15.0
+   },
+   {
+    "t": "21",
+    "size": 30.0
+   },
+   {
+    "t": "Fill in name, staff no. and end time",
+    "size": 34.0
+   },
+   {
+    "t": "Same as page 8. This page says STAFF NO. Sample: TEST USER 2, TEST002, 10 : 45",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 33,
+  "shot": {
+   "src": "image31.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": [
+    {
+     "x": 4,
+     "y": 316,
+     "w": 114,
+     "h": 64,
+     "round": false
+    }
+   ]
+  },
+  "texts": [
+   {
+    "t": "TEST / SAMPLE DATA",
+    "size": 12.0
+   },
+   {
+    "t": "PAGE 9 OF 9",
+    "size": 15.0
+   },
+   {
+    "t": "22",
+    "size": 30.0
+   },
+   {
+    "t": "Check your details",
+    "size": 36.0
+   },
+   {
+    "t": "Tap Back to look at earlier pages. Your answers stay filled in. Fix anything wrong, then come back with Next.",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 34,
+  "shot": {
+   "src": "image31.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": [
+    {
+     "x": 114,
+     "y": 316,
+     "w": 132,
+     "h": 64,
+     "round": false
+    }
+   ]
+  },
+  "texts": [
+   {
+    "t": "TEST / SAMPLE DATA",
+    "size": 12.0
+   },
+   {
+    "t": "PAGE 9 OF 9",
+    "size": 15.0
+   },
+   {
+    "t": "23",
+    "size": 30.0
+   },
+   {
+    "t": "Tap Submit",
+    "size": 36.0
+   },
+   {
+    "t": "Submit is only on the last page.",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 35,
+  "shot": {
+   "src": "image34.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": [
+    {
+     "x": 34,
+     "y": 110,
+     "w": 292,
+     "h": 44,
+     "round": false
+    }
+   ]
+  },
+  "texts": [
+   {
+    "t": "DONE",
+    "size": 15.0
+   },
+   {
+    "t": "24",
+    "size": 30.0
+   },
+   {
+    "t": "Look for this message",
+    "size": 36.0
+   },
+   {
+    "t": "“Your response has been recorded.” means it was sent. Use “Submit another response” only for a new escort.",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 36,
+  "shot": {
+   "src": "image34.jpg",
+   "size": [
+    767,
+    564
+   ],
+   "boxes": []
+  },
+  "texts": [
+   {
+    "t": "AFTER YOU SUBMIT",
+    "size": 15.0
+   },
+   {
+    "t": "You cannot change it after Submit",
+    "size": 40.0
+   },
+   {
+    "t": "No edit link Editing after submitting is turned off for this form.",
+    "size": 26.0
+   },
+   {
+    "t": "✕",
+    "size": 28.0
+   },
+   {
+    "t": "No copy sent to you The form does not collect email or send copies.",
+    "size": 26.0
+   },
+   {
+    "t": "✕",
+    "size": 28.0
+   },
+   {
+    "t": "Made a mistake? Tell your supervisor straight away.",
+    "size": 26.0
+   },
+   {
+    "t": "!",
+    "size": 28.0
+   },
+   {
+    "t": "So: check every page before you tap Submit.",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 37,
+  "shot": {
+   "src": "image35.jpg",
+   "size": [
+    815,
+    342
+   ],
+   "boxes": [
+    {
+     "x": 26,
+     "y": 203,
+     "w": 547,
+     "h": 34,
+     "round": false
+    }
+   ]
+  },
+  "texts": [
+   {
+    "t": "WHERE ANSWERS GO",
+    "size": 15.0
+   },
+   {
+    "t": "Every Submit adds one row to a Google Sheet",
+    "size": 32.0
+   },
+   {
+    "t": "Sheet: AA/SEC/F/042 Hi-lift Escort Checklist (Responses). Row 4 is the TEST response made for this guide.",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 38,
+  "shot": null,
+  "texts": [
+   {
+    "t": "WHO DOES WHAT",
+    "size": 15.0
+   },
+   {
+    "t": "You submit. Supervisors review.",
+    "size": 40.0
+   },
+   {
+    "t": "Staff Fill in the form on your phone and tap Submit.",
+    "size": 26.0
+   },
+   {
+    "t": "Response Sheet Each submission is saved as a new row.",
+    "size": 26.0
+   },
+   {
+    "t": "Authorised supervisors Review the records in the Sheet.",
+    "size": 26.0
+   },
+   {
+    "t": "Staff do not need to open the Sheet.",
+    "size": 22.0
+   }
+  ]
+ },
+ {
+  "n": 39,
+  "shot": null,
+  "texts": [
+   {
+    "t": "Need help?",
+    "size": 48.0
+   },
+   {
+    "t": "Form will not open? Check the link. Use the link or QR code from your supervisor.",
+    "size": 28.0
+   },
+   {
+    "t": "1",
+    "size": 30.0
+   },
+   {
+    "t": "Page will not load or submit? Check your internet connection (data or Wi-Fi), then try again.",
+    "size": 28.0
+   },
+   {
+    "t": "2",
+    "size": 30.0
+   },
+   {
+    "t": "Not sure what to type? Ask your supervisor before you submit.",
+    "size": 28.0
+   },
+   {
+    "t": "3",
+    "size": 30.0
+   }
+  ]
+ }
+]

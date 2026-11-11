@@ -1,0 +1,63 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; font-family: "Inter", sans-serif; color: #16161a; overflow: hidden; }
+.a { position: absolute; }
+.card { position: absolute; background: #fff; border-radius: 22px; box-shadow: 0 18px 40px rgba(22,22,26,.10); }
+.kick { font-weight: 800; font-size: 28px; letter-spacing: 3px; color: #e4002b; }
+.h1 { font-weight: 800; font-size: 60px; line-height: 1.08; letter-spacing: -1px; }
+.h2 { font-weight: 800; font-size: 44px; line-height: 1.12; }
+.h3 { font-weight: 700; font-size: 34px; line-height: 1.22; }
+.t { font-weight: 500; font-size: 32px; line-height: 1.35; color: #5f6170; }
+.num { width: 76px; height: 76px; border-radius: 50%; background: #e4002b; color: #fff; font-weight: 800; font-size: 36px; display: flex; align-items: center; justify-content: center; flex: none; }
+.row { display: flex; align-items: center; gap: 24px; }
+.chip { display: inline-block; padding: 12px 24px; border-radius: 40px; font-weight: 800; font-size: 30px; }
+.sample { border: 3px dashed #e4002b; color: #16161a; background: #fff; border-radius: 14px; padding: 14px 24px; font-size: 34px; font-weight: 700; }
+.sample b { color: #e4002b; }
+.badge { background: #e4002b; color: #fff; font-weight: 800; font-size: 28px; letter-spacing: 2px; padding: 8px 16px; border-radius: 8px; }
+.next { background: #16161a; color: #fff; }
+.note { position: absolute; border-radius: 18px; padding: 22px 30px; font-size: 32px; font-weight: 700; line-height: 1.25; }
+.note.red { background: #e4002b; color: #fff; } .note.soft { background: #fdeaee; color: #e4002b; border: 3px solid rgba(228,0,43,.3); }
+.note.ink { background: #16161a; color: #fff; } .note.ok { background: #e5f5ec; color: #1e8a4c; border: 3px solid rgba(30,138,76,.35); }
+.dev { position: absolute; background: #111114; border-radius: 34px; padding: 16px; box-shadow: 0 30px 70px rgba(22,22,26,.28); }
+.view { position: relative; overflow: hidden; border-radius: 20px; background: #fff; }
+.zoom { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+.zoom img { display: block; }
+.ring { position: absolute; border: 7px solid #e4002b; border-radius: 12px; box-shadow: 0 0 0 6px rgba(228,0,43,.18); }
+.ring.round { border-radius: 999px; }
+.tap { position: absolute; width: 70px; height: 70px; border-radius: 50%; background: rgba(228,0,43,.35); border: 4px solid #e4002b; }
+.flow { position: absolute; height: 170px; border-radius: 22px; background: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 22px;
+  box-shadow: 0 18px 40px rgba(22,22,26,.10); }
+.flow b { font-size: 34px; line-height: 1.15; } .flow span { font-size: 28px; color: #5f6170; margin-top: 10px; line-height: 1.2; }
+.flow.red { background: #e4002b; color: #fff; } .flow.red span { color: rgba(255,255,255,.88); } .flow.ink { background: #16161a; color: #fff; } .flow.ink span { color: rgba(255,255,255,.8); }
+.arrow { position: absolute; height: 6px; background: #5f6170; border-radius: 3px; transform-origin: 0 50%; }
+.arrow:after { content: ""; position: absolute; right: -4px; top: -9px; border-left: 20px solid #5f6170; border-top: 12px solid transparent; border-bottom: 12px solid transparent; }
+.x { width: 62px; height: 62px; border-radius: 50%; background: #e4002b; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 34px; flex: none; }
+</style>
+  <div id="root" data-composition-id="s05" data-width="1920" data-height="1080">
+    <div id="dv" class="dev" style="left:110px;top:200px"><div class="view" style="width:880px;height:647px"><div class="zoom" id="dv_z"><div id="rg0" class="ring" style="left:21.831px;top:281.126px;width:300.537px;height:64.188px"></div><img src="assets/deck/image15.jpg" style="width:880px;height:647.093px" alt=""></div><div class="a" id="dv_ov" style="left:0;top:0;width:880px;height:647px"></div></div></div>
+    <div id="kick" class="a kick" style="left:1100px;top:200px">GOOD TO KNOW</div>
+    <div id="ttl" class="a row" style="left:1100px;top:250px"><div class="h1" style="max-width:800px">Red * means you must answer</div></div>
+    <div id="bd0" class="a t" style="left:1100px;top:470px;width:760px">You cannot go to the next page until every * box is filled.</div>
+    <div id="tp" class="tap" style="left:263.099px;top:494.22px"></div>
+  </div>
+  <script>
+    gsap.set("#kick",{opacity:0,x:-70});
+    gsap.set("#ttl",{opacity:0,x:-70});
+    gsap.set("#bd0",{opacity:0,y:40});
+    gsap.set("#rg0",{opacity:0,scale:1.25,transformOrigin:"50% 50%"});
+    gsap.set("#tp",{opacity:0,scale:0.3});
+    const tl = gsap.timeline({ paused: true });
+    tl.to("#kick",{opacity:1,x:0,duration:0.5,ease:"power3.out"},0.25);
+    tl.to("#ttl",{opacity:1,x:0,duration:0.5,ease:"power3.out"},0.35);
+    tl.to("#bd0",{opacity:1,y:0,duration:0.5,ease:"power3.out"},5.489);
+    tl.to("#rg0",{opacity:1,scale:1,duration:0.4,ease:"back.out(1.8)"},1.3);
+    tl.to("#rg0",{scale:1.05,duration:0.5,ease:"sine.inOut"},1.9);
+    tl.to("#rg0",{scale:1,duration:0.5,ease:"sine.inOut"},2.4);
+    tl.to("#dv_z",{scale:1.55,x:0,y:-161.992,duration:0.9,ease:"power3.inOut"},1.9);
+    tl.to("#dv_z",{scale:1,x:0,y:0,duration:0.9,ease:"power3.inOut"},19.854);
+    tl.set("#tp",{opacity:1},1.3);
+    tl.to("#tp",{scale:1.6,opacity:0,duration:0.6,ease:"power2.out"},1.3);
+    tl.set({}, {}, 21.254);
+    window.__timelines["s05"] = tl;
+  </script>
+</template>

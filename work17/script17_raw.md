@@ -1,0 +1,242 @@
+### Slide 1 – Introduction
+Welcome to the High-Lift Escort eForm training.
+In this video, we will guide you through the process of completing the AA/SEC/F/042 – Hi-lift Escort Checklist using your mobile phone.
+We will demonstrate each step, from opening the form and entering flight details to completing the required security inspections, providing security sign-offs, and submitting your report.
+Please follow the instructions carefully to ensure that every escort duty is recorded accurately.
+### Slide 2 – Purpose of the Form
+Before we begin, let us understand the purpose of this form.
+The High-Lift Escort Checklist is used to document each hi-lift escort duty.
+This includes recording the flight details, performing the required security inspections at the catering facility, verifying the catering truck sealing and locking process, and completing two mandatory security sign-offs.
+You are required to complete one form for each escort duty.
+Most importantly, if you identify any abnormality during the inspection, you must report it immediately to the Duty Security Executive.
+### Slide 3 – Opening the eForm
+First, obtain the High-Lift Escort eForm link from your supervisor.
+You can access the form by tapping the provided link or scanning the QR code displayed on the screen using your mobile phone camera.
+Once you scan the QR code, the form will open in your phone's web browser.
+There is no need to download or install any additional application.
+### Slide 4 – Verifying the Correct Form
+Once the form opens, check the title displayed at the top of your screen.
+Make sure the title reads AA/SEC/F/042 – Hi-lift Escort Checklist.
+This is important to ensure that you are completing the correct form for your assigned escort duty.
+If the title does not match, check with your supervisor before proceeding.
+### Slide 5 – Understanding Mandatory Fields
+Before filling in the form, please take note of the red asterisk symbol.
+Any question marked with a red asterisk is mandatory.
+This means you must complete that field before moving to the next page.
+If you leave a required field empty, the form will not allow you to proceed until the missing information is entered.
+### Slide 6 – Page One: Flight Details
+Now, we will begin with page one of the form.
+This section requires you to enter four important details.
+These are the escort start time, flight number, Estimated Time of Departure, or ETD, and the flight sector.
+Scroll down the page to view all four fields.
+Ensure that the information you enter matches your actual escort assignment.
+### Slide 7 – Entering the Start Time
+First, locate the field labelled Time Starts.
+Tap the time field and enter the actual time you began your escort duty.
+Enter the hour first, followed by the minutes.
+For example, if your escort started at ten o'clock in the morning, enter 10:00 AM.
+Remember to record the actual start time and check that you have selected the correct AM or PM option.
+### Slide 8 – Entering the Flight Number
+Next, locate the Flight Number field.
+Tap the box and enter the flight number for your assigned escort duty.
+In this demonstration, we are using TEST-AK01 as an example.
+This is sample information for training purposes only.
+During actual operations, always enter the correct flight number for the flight you are escorting.
+### Slide 9 – Entering the ETD
+Now, proceed to the ETD field.
+ETD stands for Estimated Time of Departure.
+Tap the time field and enter the estimated departure time for your assigned flight.
+Enter the hour first, followed by the minutes.
+For this demonstration, we are using 11:30 AM.
+Always verify the departure time before proceeding.
+### Slide 10 – Selecting AM or PM
+Whenever you enter a time in the eForm, you must verify whether it is AM or PM.
+Tap the AM or PM dropdown menu displayed beside the time field.
+Select AM for morning times or PM for afternoon and night times.
+For example, 10:00 in the morning should be recorded as 10:00 AM, while 10:00 at night should be recorded as 10:00 PM.
+Please remember to check this for every time field throughout the form.
+### Slide 11 – Entering the Flight Sector
+Next, locate the Sector field.
+Tap the box and enter the flight sector for your escort assignment.
+In this demonstration, we are using KUL-TEST as sample information.
+During actual operations, enter the correct sector based on your assigned flight.
+Double-check the details before continuing.
+### Slide 12 – Proceeding to the Next Page
+Once you have completed all four flight details, review the information carefully.
+Make sure the start time, flight number, ETD, and sector are correct.
+After checking, scroll to the bottom of the page and tap Next.
+You will notice a progress bar showing your current position in the form.
+This helps you identify which page you are completing.
+### Slide 13 – Required Question Error
+If you accidentally leave a mandatory field empty, a red error message will appear.
+The message will state, "This is a required question."
+This simply means that you have missed a mandatory field.
+Locate the highlighted question and enter the missing information.
+Once completed, tap Next again to proceed.
+### Slide 14 – Prohibited-Item Inspection
+We will now move to the prohibited-item inspection section.
+This section requires you to confirm that the catering truck or hi-lift cabin has been inspected for prohibited items.
+Before answering the question, you must physically carry out the required security inspection.
+Do not select an answer without completing the actual check.
+If you identify any prohibited item or abnormality, immediately report it to the Duty Security Executive.
+### Slide 15 – Confirming the Inspection
+After completing the prohibited-item inspection, select the appropriate answer.
+If you have completed the required inspection, select YES.
+By selecting YES, you are confirming that the inspection has actually been carried out.
+Once you have selected your answer, tap Next.
+Remember, selecting YES does not replace the requirement to physically conduct the inspection.
+### Slide 16 – If the Inspection Is Not Completed
+If the prohibited-item inspection was not completed, you must select NO.
+The form will automatically direct you to another page requiring an explanation.
+Tap the text box and clearly enter the reason why the inspection was not completed.
+This field is mandatory, so you cannot leave it empty.
+If the situation involves a security concern or abnormality, immediately notify the Duty Security Executive.
+Once the reason has been entered, tap Next to continue.
+### Slide 17 – Catering Truck Sealing and Locking
+We will now proceed to the next security checkpoint.
+This section requires you to confirm that the catering truck has been properly sealed and locked before departing for the aircraft or apron.
+Before answering, verify that the required sealing and locking process has been completed.
+Ensure that the truck is secured according to the required security procedures.
+### Slide 18 – Confirming the Sealing Process
+Once you have verified that the catering truck has been properly sealed and locked, select YES.
+This confirms that the required sealing and locking process has been completed.
+After selecting YES, tap Next to proceed.
+Remember, only select YES after physically confirming that the truck is properly secured.
+### Slide 19 – If the Truck Is Not Sealed or Locked
+If the catering truck has not been properly sealed or locked, select NO.
+The form will direct you to another page where you must provide an explanation.
+Enter the actual reason why the sealing and locking process was not completed.
+Make sure your explanation is clear and accurate.
+If you discover any abnormality involving the seal or locking arrangement, report it immediately to the Duty Security Executive.
+Once completed, tap Next.
+### Slide 20 – Truck Number, Seal Number and Remarks
+We will now move to page six of the eForm.
+In this section, you are required to record the catering hi-lift truck number, catering truck seal number, and inspection remarks.
+These details are important because they allow the security records to be traced back to the specific vehicle and seal used during the escort.
+Let's complete each field one by one.
+### Slide 21 – Entering the Hi-Lift Truck Number
+First, locate the Catering Hi-Lift Truck or Hi-Lift Number field.
+Tap the box and enter the identification number of the truck assigned to your escort duty.
+For this demonstration, we are using TEST-HL01.
+During actual operations, enter the real truck identification number.
+Always double-check the number to make sure it matches the vehicle being escorted.
+### Slide 22 – Entering the Catering Truck Seal Number
+Next, locate the Catering Truck Seal Number field.
+Tap the box and enter the seal number shown on the physical catering truck seal.
+In this demonstration, we are using TEST-0001.
+This is only sample information.
+During actual operations, ensure that every letter and number matches the actual seal.
+An incorrect seal number can affect the accuracy and traceability of your security record.
+### Slide 23 – Selecting Nil Discrepancy
+Next, we will complete the remarks section.
+If all required checks have been completed and no abnormality or discrepancy has been identified, select Nil Discrepancy.
+This indicates that no discrepancy was found during the inspection.
+Only select this option when everything is in order.
+Once you have selected Nil Discrepancy, tap Next to continue.
+### Slide 24 – Selecting Discrepancy Identified
+If you identify an actual discrepancy during your escort duty, you must follow the required reporting procedures.
+Immediately report the abnormality to the Duty Security Executive.
+As stated in the form, Discrepancy Identified must only be selected after the report has been submitted to the Duty Officer and the required notification email has been sent.
+Once the reporting requirements have been completed, select Discrepancy Identified.
+Then, tap Next.
+### Slide 25 – Entering Additional Discrepancy Details
+If you have selected Discrepancy Identified, the form will direct you to the additional details section.
+Here, you may provide further information regarding the discrepancy.
+This field is optional, so you may leave it empty if no additional information is required.
+However, if there are relevant details that should be recorded, enter them clearly.
+Once completed, tap Next to proceed.
+### Slide 26 – Catering Facility Security Sign-Off
+We will now proceed to the first security sign-off section.
+This section is for the AirAsia or AirAsia X Security personnel who conducted the checks at the catering facility.
+The sign-off is important because it records who was responsible for the security inspection.
+The relevant personnel must enter their details accurately.
+### Slide 27 – Entering the Staff Name
+First, locate the Name field.
+Tap the box and enter the full name of the security personnel who performed the check at the catering facility.
+In this demonstration, we are using TEST USER as an example.
+During actual operations, enter the correct full name.
+Do not use another staff member's name to complete your sign-off.
+### Slide 28 – Entering the Staff ID
+Next, locate the Staff ID field.
+Tap the box and enter the correct staff identification number.
+In this demonstration, we are using TEST001.
+During actual operations, enter the actual staff ID of the personnel performing the sign-off.
+Double-check the number before continuing.
+This helps maintain accurate personnel identification and accountability in the security record.
+### Slide 29 – Recording the End Time
+Next, enter the required end time for the catering facility security check.
+Tap the time field and enter the hour, followed by the minutes.
+For this demonstration, we are using 10:30 AM.
+Remember to select the correct AM or PM option.
+Always record the actual time for the completed check.
+### Slide 30 – Completing the Signature
+Now, locate the signature field.
+For this eForm, the signature is completed by typing your full name.
+Tap the designated box and enter your full name correctly.
+Ensure that the name matches the personnel performing the sign-off.
+Once all the required information has been entered, tap Next to proceed.
+### Slide 31 – Aircraft Security Sign-Off
+We will now move to page nine, which is the final security sign-off section.
+This section is used to record the security check performed at the aircraft.
+Just like the catering facility section, the required personnel details must be entered accurately.
+There are four fields to complete, following the same process as the previous sign-off.
+### Slide 32 – Completing the Aircraft Sign-Off Details
+First, enter the full name of the security personnel who performed the aircraft check.
+Next, enter the correct Staff Number.
+Please note that this section uses the label Staff No. instead of Staff ID.
+Then, enter the actual escort end time, including the correct AM or PM selection.
+For this demonstration, we are using TEST USER 2, TEST002, and 10:45 as sample details.
+Complete any remaining required sign-off fields shown on the form.
+### Slide 33 – Reviewing the Completed Form
+Before submitting the eForm, please review all the information carefully.
+Check the flight details, inspection answers, truck number, seal number, remarks, and both security sign-offs.
+If you notice any mistake, tap Back to return to the earlier page.
+Your previously entered information will remain filled in, allowing you to make the necessary corrections.
+After correcting the details, tap Next until you return to the final page.
+### Slide 34 – Submitting the eForm
+Once you have checked all the information and confirmed that everything is correct, you are ready to submit the checklist.
+Scroll to the bottom of the final page.
+You will see the Submit button.
+Tap Submit to send your completed High-Lift Escort Checklist.
+Remember, the Submit button is only available on the final page.
+Make sure all information is correct before submitting because the submitted response cannot be edited.
+### Slide 35 – Submission Confirmation
+After tapping Submit, the form will display a confirmation message.
+The message will read, "Your response has been recorded."
+This confirms that your completed checklist has been successfully submitted.
+You may also see an option labelled Submit another response.
+Only select this option when you need to complete a new checklist for another escort duty.
+Do not submit a duplicate response for the same escort unnecessarily.
+### Slide 36 – Important Information After Submission
+Please remember that once you have submitted the form, you cannot edit the response.
+The form does not provide an edit link, and a copy of the completed response will not be sent to you.
+This is why you must check every page carefully before tapping Submit.
+If you discover an error after submitting, inform your supervisor immediately so the matter can be addressed through the appropriate process.
+### Slide 37 – Where the Submitted Information Goes
+Now, let us understand what happens after you submit the eForm.
+Every successful submission is automatically recorded in a central Google Sheet.
+Each submitted checklist creates a new row in the response sheet.
+For example, the sheet shown on the screen contains a test response created for this training guide.
+This allows authorized personnel to review the submitted escort records.
+### Slide 38 – Staff and Supervisor Responsibilities
+The responsibilities are straightforward.
+As AVSEC staff, your responsibility is to perform the required security checks, complete the eForm accurately, and tap Submit.
+Once submitted, your response is automatically stored in the central Google Sheet.
+Authorized supervisors are responsible for reviewing and managing these records.
+Staff members are not required to access or manage the response sheet themselves.
+### Slide 39 – Troubleshooting, System Issues and Closing
+Before we conclude this training, please take note of the following important instructions.
+If you experience any difficulty accessing the eForm, such as the form not opening, pages failing to load, or submission errors, first check your internet connection and ensure you are using the correct link or QR code.
+If the problem continues, you must immediately report the issue to your respective supervisor.
+The issue shall then be escalated to the System Unit for immediate rectification.
+If the technical issue cannot be resolved immediately or remains unresolved for a certain period, the manual form may be used as a temporary alternative to ensure that security operations and documentation can continue.
+However, the use of the manual form must first be approved by the Head of Department.
+Staff are not permitted to switch to manual documentation without the required approval.
+Once the system has been restored, all staff shall resume using the eForm according to the instructions provided by their supervisor.
+Please remember that accurate documentation, timely reporting, and compliance with security procedures must be maintained at all times, including during system disruptions.
+Your responsibility is not only to complete the form, but also to ensure that every required security check is properly conducted and accurately recorded.
+If you encounter any abnormality during your escort duty, report it immediately to the Duty Security Executive.
+Thank you for your attention, understanding, and cooperation.
+Stay alert, follow the required procedures, and always prioritize aviation security.
+This concludes the AA/SEC/F/042 – High-Lift Escort eForm Staff Training.
+Thank you.

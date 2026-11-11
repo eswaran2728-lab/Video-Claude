@@ -1,0 +1,94 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; font-family: "Inter", sans-serif; color: #16161a; overflow: hidden; }
+.a { position: absolute; }
+.card { position: absolute; background: #fff; border-radius: 22px; box-shadow: 0 18px 40px rgba(22,22,26,.10); }
+.kick { font-weight: 800; font-size: 28px; letter-spacing: 3px; color: #e4002b; }
+.h1 { font-weight: 800; font-size: 60px; line-height: 1.08; letter-spacing: -1px; }
+.h2 { font-weight: 800; font-size: 44px; line-height: 1.12; }
+.h3 { font-weight: 700; font-size: 34px; line-height: 1.22; }
+.t { font-weight: 500; font-size: 32px; line-height: 1.35; color: #5f6170; }
+.num { width: 76px; height: 76px; border-radius: 50%; background: #e4002b; color: #fff; font-weight: 800; font-size: 36px; display: flex; align-items: center; justify-content: center; flex: none; }
+.row { display: flex; align-items: center; gap: 24px; }
+.chip { display: inline-block; padding: 12px 24px; border-radius: 40px; font-weight: 800; font-size: 30px; }
+.sample { border: 3px dashed #e4002b; color: #16161a; background: #fff; border-radius: 14px; padding: 14px 24px; font-size: 34px; font-weight: 700; }
+.sample b { color: #e4002b; }
+.badge { background: #e4002b; color: #fff; font-weight: 800; font-size: 28px; letter-spacing: 2px; padding: 8px 16px; border-radius: 8px; }
+.next { background: #16161a; color: #fff; }
+.note { position: absolute; border-radius: 18px; padding: 22px 30px; font-size: 32px; font-weight: 700; line-height: 1.25; }
+.note.red { background: #e4002b; color: #fff; } .note.soft { background: #fdeaee; color: #e4002b; border: 3px solid rgba(228,0,43,.3); }
+.note.ink { background: #16161a; color: #fff; } .note.ok { background: #e5f5ec; color: #1e8a4c; border: 3px solid rgba(30,138,76,.35); }
+.dev { position: absolute; background: #111114; border-radius: 34px; padding: 16px; box-shadow: 0 30px 70px rgba(22,22,26,.28); }
+.view { position: relative; overflow: hidden; border-radius: 20px; background: #fff; }
+.zoom { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+.zoom img { display: block; }
+.ring { position: absolute; border: 7px solid #e4002b; border-radius: 12px; box-shadow: 0 0 0 6px rgba(228,0,43,.18); }
+.ring.round { border-radius: 999px; }
+.tap { position: absolute; width: 70px; height: 70px; border-radius: 50%; background: rgba(228,0,43,.35); border: 4px solid #e4002b; }
+.flow { position: absolute; height: 170px; border-radius: 22px; background: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 22px;
+  box-shadow: 0 18px 40px rgba(22,22,26,.10); }
+.flow b { font-size: 34px; line-height: 1.15; } .flow span { font-size: 28px; color: #5f6170; margin-top: 10px; line-height: 1.2; }
+.flow.red { background: #e4002b; color: #fff; } .flow.red span { color: rgba(255,255,255,.88); } .flow.ink { background: #16161a; color: #fff; } .flow.ink span { color: rgba(255,255,255,.8); }
+.arrow { position: absolute; height: 6px; background: #5f6170; border-radius: 3px; transform-origin: 0 50%; }
+.arrow:after { content: ""; position: absolute; right: -4px; top: -9px; border-left: 20px solid #5f6170; border-top: 12px solid transparent; border-bottom: 12px solid transparent; }
+.x { width: 62px; height: 62px; border-radius: 50%; background: #e4002b; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 34px; flex: none; }
+</style>
+  <div id="root" data-composition-id="s01" data-width="1920" data-height="1080">
+    <div id="bg" class="a" style="left:0;top:0;width:1920px;height:1080px;background:#111114"></div>
+    <div id="k" class="a kick" style="left:150px;top:300px">STAFF GUIDE</div>
+    <div id="ttl" class="a h1" style="left:150px;top:350px;color:#fff;width:820px;font-size:84px">High-Lift Escort eForm</div>
+    <div id="sub" class="a" style="left:150px;top:550px;color:#fff;font-size:38px;font-weight:700">AA/SEC/F/042 – Hi-lift Escort Checklist</div>
+    <div id="sub2" class="a" style="left:150px;top:610px;color:rgba(255,255,255,.7);font-size:32px;font-weight:500">How to fill it in on your phone, one step at a time</div>
+    <div id="dv" class="dev" style="left:1030px;top:250px"><div class="view" style="width:760px;height:558.853px"><img src="assets/deck/image15.jpg" style="width:760px;display:block" alt=""></div></div>
+    <div id="h2" class="a h1" style="left:150px;top:200px">What this training covers</div>
+    <div id="fw0" class="flow " style="left:150px;top:400px;width:300px"><b>Open the form</b><span>link or QR code</span></div>
+    <div id="fwa0" class="arrow" style="left:464px;top:482px;width:10px"></div>
+    <div id="fw1" class="flow " style="left:500px;top:400px;width:300px"><b>Flight details</b><span>time, flight, ETD, sector</span></div>
+    <div id="fwa1" class="arrow" style="left:814px;top:482px;width:10px"></div>
+    <div id="fw2" class="flow " style="left:850px;top:400px;width:300px"><b>Security inspections</b><span>prohibited items, seal and lock</span></div>
+    <div id="fwa2" class="arrow" style="left:1164px;top:482px;width:10px"></div>
+    <div id="fw3" class="flow " style="left:1200px;top:400px;width:300px"><b>Security sign-offs</b><span>catering facility, aircraft</span></div>
+    <div id="fwa3" class="arrow" style="left:1514px;top:482px;width:10px"></div>
+    <div id="fw4" class="flow red" style="left:1550px;top:400px;width:300px"><b>Submit</b><span>your report</span></div>
+    <div id="acc" class="note ink" style="left:150px;top:680px;width:1620px;text-align:center">Follow each step so every escort duty is recorded accurately</div>
+  </div>
+  <script>
+    gsap.set("#sub",{opacity:0,x:-70});
+    gsap.set("#sub2",{opacity:0,x:-70});
+    gsap.set("#dv",{opacity:0,x:70});
+    gsap.set("#h2",{opacity:0,x:-70});
+    gsap.set("#fw0",{opacity:0,y:40});
+    gsap.set("#fwa0",{scaleX:0});
+    gsap.set("#fw1",{opacity:0,y:40});
+    gsap.set("#fwa1",{scaleX:0});
+    gsap.set("#fw2",{opacity:0,y:40});
+    gsap.set("#fwa2",{scaleX:0});
+    gsap.set("#fw3",{opacity:0,y:40});
+    gsap.set("#fwa3",{scaleX:0});
+    gsap.set("#fw4",{opacity:0,y:40});
+    gsap.set("#acc",{opacity:0,y:40});
+    const tl = gsap.timeline({ paused: true });
+    tl.to("#bg",{opacity:0,duration:0.35,ease:"power2.in"},14.027);
+    tl.to("#k",{opacity:0,duration:0.35,ease:"power2.in"},14.027);
+    tl.to("#ttl",{opacity:0,duration:0.35,ease:"power2.in"},14.027);
+    tl.to("#sub",{opacity:1,x:0,duration:0.5,ease:"power3.out"},0.4);
+    tl.to("#sub",{opacity:0,duration:0.35,ease:"power2.in"},14.027);
+    tl.to("#sub2",{opacity:1,x:0,duration:0.5,ease:"power3.out"},4.489);
+    tl.to("#sub2",{opacity:0,duration:0.35,ease:"power2.in"},14.027);
+    tl.to("#dv",{opacity:1,x:0,duration:0.5,ease:"power3.out"},0.2);
+    tl.to("#dv",{opacity:0,duration:0.35,ease:"power2.in"},14.027);
+    tl.to("#h2",{opacity:1,x:0,duration:0.5,ease:"power3.out"},14.577);
+    tl.to("#fw0",{opacity:1,y:0,duration:0.5,ease:"power3.out"},14.977);
+    tl.to("#fwa0",{scaleX:1,duration:0.5,ease:"power3.out"},15.977);
+    tl.to("#fw1",{opacity:1,y:0,duration:0.5,ease:"power3.out"},16.077);
+    tl.to("#fwa1",{scaleX:1,duration:0.5,ease:"power3.out"},17.077);
+    tl.to("#fw2",{opacity:1,y:0,duration:0.5,ease:"power3.out"},17.177);
+    tl.to("#fwa2",{scaleX:1,duration:0.5,ease:"power3.out"},18.177);
+    tl.to("#fw3",{opacity:1,y:0,duration:0.5,ease:"power3.out"},18.277);
+    tl.to("#fwa3",{scaleX:1,duration:0.5,ease:"power3.out"},19.277);
+    tl.to("#fw4",{opacity:1,y:0,duration:0.5,ease:"power3.out"},19.377);
+    tl.to("#acc",{opacity:1,y:0,duration:0.5,ease:"power3.out"},26.192);
+    tl.set({}, {}, 32.747);
+    window.__timelines["s01"] = tl;
+  </script>
+</template>
