@@ -74,3 +74,10 @@ Final (only after approval): `render --quality high --sdr` → `./master_final.s
 - **`hyperframes check`:** 0 errors. Warnings left: small text inside the mock form UI, and two duplicate-image notices.
 - **Snapshots:** `sheets/snap1`, `snap2` and `sheets/preview_v01_sheet.jpg` (one frame every 25 s).
 - **Not verified:** I cannot listen. The voice was checked by speech recognition (`vo_check.json`), and levels by measurement only.
+
+## Final v01 (creator: "proceed final")
+- **File:** `FINAL_AA-SEC-F-077_Attendance_Training_v01_1920x1080.mp4` (not in git), rendered with `--quality high --sdr --workers 3`
+  and mastered with `master_final.sh`.
+- **Specs:** 1920x1080 H.264, 30 fps, 29,883 frames, 996.2 s, 66 MB; −14.0 LUFS, −2.0 dBFS peak.
+- **Checks:** full decode with 0 errors; no black stretches; audio lag 0 ms at three points; sample frames
+  (`sheets/final_v01_check.jpg`) match the approved preview. Nothing is published.
