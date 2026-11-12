@@ -41,3 +41,7 @@ No final export has been made and nothing is published.
   - Checked frame by frame around the cut: `sheets/faceblur_check.jpg`.
 - **Rebuild:** `prep_clips.sh` now builds the clips from those files; the composition and sound are unchanged.
   - Preview `PREVIEW_movie_scene_promo_v02.mp4`; v01 is kept.
+- **Final:** `FINAL_movie_scene_promo_v02_1080x1920.mp4` (not in git), rendered with `--quality high --sdr` and mastered with
+  `master_final.sh`.
+  - Specs: 1080x1920, 30 fps, 2196 frames, 73.3 s; −14.0 LUFS, −1.9 dBFS peak.
+  - Checks: full decode with 0 errors; audio lag 0 ms. Nothing is published.
