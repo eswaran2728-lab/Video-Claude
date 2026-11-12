@@ -1,0 +1,62 @@
+{
+ "intro": {
+  "dur": 4.063,
+  "lines": [
+   {
+    "text": "Check this out!",
+    "t0": 0.35,
+    "t1": 1.236
+   },
+   {
+    "text": "This is the original scene from the movie.",
+    "t0": 1.486,
+    "t1": 3.563
+   }
+  ]
+ },
+ "mid": {
+  "dur": 3.835,
+  "lines": [
+   {
+    "text": "Now\u2026 I recreated this exact scene,",
+    "t0": 0.35,
+    "t1": 2.451
+   },
+   {
+    "text": "just for me!",
+    "t0": 2.501,
+    "t1": 3.335
+   }
+  ]
+ },
+ "cta": {
+  "dur": 13.02,
+  "lines": [
+   {
+    "text": "Want your own version?",
+    "t0": 0.35,
+    "t1": 1.37
+   },
+   {
+    "text": "Just DM me.",
+    "t0": 1.72,
+    "t1": 2.66
+   },
+   {
+    "text": "Only RM20 per video!",
+    "t0": 3.01,
+    "t1": 4.733
+   },
+   {
+    "text": "This promotion is for today and tomorrow only: 12 and 13 November.",
+    "t0": 5.183,
+    "t1": 10.089
+   },
+   {
+    "text": "DM me now, before the offer ends!",
+    "t0": 10.489,
+    "t1": 12.52
+   }
+  ]
+ }
+}
