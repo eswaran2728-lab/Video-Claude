@@ -29,3 +29,15 @@ No final export has been made and nothing is published.
 - **Notes:**
   - The original clip shows another TikTok creator's watermark and handle; it is shown as supplied.
   - No contact handle was given, so the CTA says "DM me".
+
+## v02: creator's notes ("hide that tiktok name" + "blur the women face in the second") → final
+- **`privacy18.py`, TikTok watermark:** the TikTok logo and "@handle" in the original clip are blurred where they sit
+  (top-left 0–5.0 s, bottom-right 5.0–17.4 s) → `src/original_clean.mp4`.
+- **`privacy18.py`, the woman's face in the recreation:**
+  - Tracked with MediaPipe BlazeFace on every frame (`detect_faces.py`, `faces_raw.json`) through her shot (12.07–24.1 s).
+  - The track is smoothed separately on each side of the camera cut at 21.6 s, and gaps are filled.
+  - From 15.8 s, while she turns (no detection), the first detection is held.
+  - Blur: feathered ellipse, 1.6x the face box → `src/recreated_faceblur.mp4`.
+  - Checked frame by frame around the cut: `sheets/faceblur_check.jpg`.
+- **Rebuild:** `prep_clips.sh` now builds the clips from those files; the composition and sound are unchanged.
+  - Preview `PREVIEW_movie_scene_promo_v02.mp4`; v01 is kept.
