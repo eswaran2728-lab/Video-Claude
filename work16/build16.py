@@ -194,6 +194,25 @@ for i, (lab, col) in enumerate(labels):
     if i: S.add(f"sa{i}", "", f"left:{x - 52}px;top:507px;width:30px", "arrow", S.c(f"st{i + 1}") - 0.1, None, "draw")
 S.add("stn", "Check-in at the start. Check-out at the end.", f"left:150px;top:680px;color:{RED};font-size:36px;font-weight:700", "a", S.c("st4") + 1.0, None, "up")
 
+# ---------------- S02b WHERE TO SCAN (v02, from the creator's notice) ----------------
+S = Scene(SC["s02b"]); scenes.append(S); bn = S.c("ban")
+PIN = '<svg width="64" height="64" viewBox="0 0 24 24"><path d="M12 2c-3.9 0-7 3.1-7 7 0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z" fill="#d6203a"/><circle cx="12" cy="9" r="2.6" fill="#fff"/></svg>'
+CAM = '<svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="#14213d" stroke-width="1.8"><rect x="3" y="7" width="13" height="8" rx="1.5"/><path d="M16 9l5-2v8l-5-2"/><path d="M7 15v4M4 19h6"/></svg>'
+S.add("h", "Where to scan your attendance QR", "left:150px;top:120px", "a h1", 0.3, None, "left")
+S.add("sub", "QR codes are provided at the respective offices", f"left:150px;top:205px;font-size:34px;font-weight:600;color:{MUTED}", "a", S.c("intro") + 0.6, None, "up")
+for i, (cue, name, where, extra) in enumerate((("redq", "RedQ Office", "Displayed at the RedQ Office", "For staff reporting to RedQ"),
+                                              ("gso", "Group Security Operation Office", "Displayed at the DSE workstation", f'{CAM}<span>Under CCTV surveillance</span>'))):
+    x = 150 + i * 840
+    S.add(f"loc{i}", f'<div class="row" style="gap:18px">{PIN}<div class="h2" style="max-width:560px">{name}</div></div>'
+          f'<div class="h3" style="margin-top:26px">{where}</div>'
+          f'<div class="row" style="margin-top:18px;gap:14px;font-size:30px;font-weight:600;color:{MUTED}">{extra}</div>'
+          f'<div style="position:absolute;right:34px;top:34px;display:flex;gap:10px"><img src="assets/deck/image-1-1.png" style="width:92px;height:92px" alt=""><img src="assets/deck/image-1-2.png" style="width:92px;height:92px" alt=""></div>',
+          f"left:{x}px;top:290px;width:780px;height:320px;padding:36px", "card", S.c(cue) + 0.3, None, "up", ("curated/ui-pop.wav", -15))
+S.add("all", "✓ Scan the QR code at your own office premises", f"left:150px;top:650px;width:1620px;text-align:center", "note green", S.c("all") + 0.3, bn, "up", ("clean-ding.wav", -17))
+S.add("ban", '<div style="font-size:30px;letter-spacing:3px;opacity:.9">⛔ STRICTLY PROHIBITED</div>Scanning or submitting your attendance QR outside your designated office premises',
+      f"left:150px;top:620px;width:1620px;background:{RED};color:#fff;text-align:center", "note", bn + 0.2, None, "pop", ("curated/hook-impact.wav", -16))
+S.add("disc", "Violations will be subject to disciplinary action", f"left:150px;top:775px;width:1620px;text-align:center;font-size:34px", "note red", S.c("disc") + 0.3, None, "up", ("curated/ui-click.wav", -14))
+
 # ---------------- S03 / S07 SCAN + TITLE ----------------
 def scan_scene(S, kind):
     g = kind == "g"; col = GREEN if g else RED; word = "Check-in" if g else "Check-out"; other = "Check-out" if g else "Check-in"
@@ -235,28 +254,29 @@ S = Scene(SC["s07"]); scan_out = S; scan_scene(S, "r")
 S = Scene(SC["s04"]); scenes.append(S)
 S.add("h", f'<div class="num" style="background:{GREEN}">2</div><div class="h1">Fill in the Check-in form</div>', "left:150px;top:120px", "a row", 0.3, None, "left")
 fd = S.c("f_date")
-k1 = shot(S, "sh1", "image-4-1.png", 150, 290, 860, (646, 325), S.c("f_email"), fd)
-S.hl("hle", 150 + 20 * k1, 290 + 66 * k1, 540 * k1, 40 * k1, S.c("email_tick"), S.c("f_desig"))
-S.add("tick", "✓", f"left:{R(150 + 27 * k1)}px;top:{R(290 + 74 * k1)}px;width:{R(30 * k1)}px;height:{R(30 * k1)}px;background:{GREEN};color:#fff;font-weight:900;font-size:30px;text-align:center;line-height:{R(30 * k1)}px;border-radius:6px", "a",
+k1 = shot(S, "sh1", "v02_designation.png", 150, 270, 700, (780, 641), S.c("f_email"), fd)       # v02: creator's new screenshot (email hidden)
+S.hl("hle", 150 + 28 * k1, 270 + 86 * k1, 640 * k1, 40 * k1, S.c("email_tick"), S.c("f_desig"))
+S.add("tick", "✓", f"left:{R(150 + 36 * k1)}px;top:{R(270 + 94 * k1)}px;width:{R(25 * k1)}px;height:{R(25 * k1)}px;background:{GREEN};color:#fff;font-weight:900;font-size:22px;text-align:center;line-height:{R(25 * k1)}px;border-radius:5px", "a",
       S.c("email_tick") + 0.6, fd, "pop", ("curated/ui-click.wav", -14))
-for i, (cue, y) in enumerate((("dse", 178), ("so", 226), ("aso", 273))):
-    S.hl(f"hld{i}", 150 + 36 * k1, 290 + y * k1, 230 * k1, 32 * k1, S.c(cue), S.c("aso_pick") if i < 2 else fd)
-# designation chips under the shot
-for i, (ab, full, cue) in enumerate((("DSE", "Security Executive", "dse"), ("SO", "Security Officer", "so"), ("ASO", "Assistant Security Officer", "aso"))):
-    S.add(f"dg{i}", f'<b style="font-size:38px">{ab}</b><span style="font-size:28px;line-height:1.1">{full}</span>', f"left:{150 + i * 290}px;top:{R(290 + 325 * k1 + 40)}px;width:270px;height:120px;background:{NAVY}",
-          "flow", S.c(cue) + 0.1, fd, "up", ("curated/ui-pop.wav", -17))
-S.st("#dg2", S.c("aso_pick") + 0.3, {"background": GREEN}); S.pulse("dg2", S.c("aso_pick") + 0.3)
+DESIG = (("d1", 345), ("d2", 403), ("d3", 460), ("d4", 518), ("d5", 575))       # ASO, SO, SSO, SE, SM rows
+for i, (cue, y) in enumerate(DESIG):
+    S.hl(f"hld{i}", 150 + 30 * k1, 270 + y * k1, 335 * k1, 40 * k1, S.c(cue), S.c("aso_pick") if i else fd)
+S.st("#hld0", S.c("aso_pick") + 0.3, {"borderColor": GREEN})
+for i, (ab, (cue, y)) in enumerate(zip(("ASO", "SO", "SSO", "SE", "SM"), DESIG)):      # big labels beside each dropdown row
+    S.add(f"dg{i}", ab, f"left:{R(150 + 395 * k1)}px;top:{R(270 + (y - 2) * k1)}px;width:130px;height:46px;line-height:46px;text-align:center;border-radius:23px;background:{NAVY};color:#fff;font-weight:800;font-size:30px",
+          "a", S.c(cue) + 0.1, fd, "left", ("curated/ui-pop.wav", -18))
+S.st("#dg0", S.c("aso_pick") + 0.3, {"background": GREEN}); S.pulse("dg0", S.c("aso_pick") + 0.3)
 # date / name / staff id mock fields (after designation)
-k2 = shot(S, "sh2", "image-5-1.png", 150, 290, 600, (646, 435), fd, S.c("f_name"))
+k2 = shot(S, "sh2", "v02_date.png", 150, 290, 600, (646, 165), fd, S.c("f_name"))
 S.hl("hlt", 150 + 22 * k2, 290 + 28 * k2, 300 * k2, 100 * k2, fd + 0.5, S.c("f_name"))
-S.add("dm", "Matches your Check-in and Check-out records", f"left:150px;top:{R(290 + 435 * k2 + 30)}px;width:600px", "note navy", S.c("date_match") + 0.6, S.c("f_name"), "up")
+S.add("dm", "Matches your Check-in and Check-out records", f"left:150px;top:{R(290 + 165 * k2 + 40)}px;width:600px", "note navy", S.c("date_match") + 0.6, S.c("f_name"), "up")
 for i, (lab, cue, t_out) in enumerate((("Name", "f_name", None), ("Staff ID", "f_id", None))):
     S.add(f"in{i}", f'<div style="font-size:30px;color:#202124">{lab} <span style="color:{RED}">*</span></div><div style="margin-top:26px;border-bottom:2px solid #c5c9d1;width:460px;font-size:26px;color:#9aa0a6;padding-bottom:8px">Your answer</div>',
           f"left:150px;top:{300 + i * 230}px;width:700px;height:190px;padding:30px 36px", "card", S.c(cue), None, "up")
 S.add("idm", "Identifies you and matches your attendance", f"left:150px;top:770px;width:700px", "note navy", S.c("id_match") + 0.6, None, "up")
 # right: what the form asks
 S.add("wl", "What the form asks", "left:1100px;top:270px", "a h2", 0.8, None, "up")
-for i, (lab, sub, cue) in enumerate((("Email", "tick the Record email box", "f_email"), ("Designation", "DSE, SO or ASO", "f_desig"), ("Shift start date", "the date your shift starts", "f_date"),
+for i, (lab, sub, cue) in enumerate((("Email", "tick the Record email box", "f_email"), ("Designation", "ASO, SO, SSO, SE or SM", "f_desig"), ("Shift start date", "the date your shift starts", "f_date"),
                                      ("Name", "your name, accurately", "f_name"), ("Staff ID", "check it carefully", "f_id"))):
     S.add(f"fl{i}", f'<div class="num" style="background:{GREEN};width:54px;height:54px;font-size:28px">{i + 1}</div><div><div class="h3">{lab}</div><div class="t" style="font-size:28px">{sub}</div></div>',
           f"left:1100px;top:{360 + i * 100}px", "a row", S.c(cue), None, "left", ("curated/ui-pop.wav", -18))
@@ -265,19 +285,19 @@ S.add("tm", '<span style="font-weight:700">Team</span>: next', f"left:1176px;top
 # ---------------- S05 TEAMS ----------------
 S = Scene(SC["s05"]); scenes.append(S); fa = S.c("fix_after")
 S.add("h", f'<div class="num" style="background:{GREEN}">3</div><div class="h1">Select your team</div>', "left:150px;top:120px", "a row", 0.3, fa, "left")
-k = shot(S, "sh", "image-5-1.png", 150, 280, 560, (646, 435), 0.5, fa)
-S.hl("hlteam", 150 + 20 * k, 280 + 195 * k, 300 * k, 205 * k, S.c("teams"), S.c("why"))
-TEAMS = ["ALPHA", "BRAVO", "CHARLIE", "DELTA"]
+k = shot(S, "sh", "v02_team_list.png", 150, 270, 470, (400, 348), 0.5, fa)                # v02: creator's new screenshot (with REDQ)
+S.hl("hlteam", 150 + 18 * k, 270 + 78 * k, 250 * k, 240 * k, S.c("teams"), S.c("why"))
+TEAMS = ["ALPHA", "BRAVO", "CHARLIE", "DELTA", "REDQ"]
 for i, tm in enumerate(TEAMS):
-    x, y = 820 + (i % 2) * 360, 280 + (i // 2) * 170
-    S.add(f"tm{i}", f'<b style="font-size:44px;letter-spacing:2px">{tm}</b>', f"left:{x}px;top:{y}px;width:330px;height:140px;background:{NAVY}", "flow", S.c(["t_a", "t_b", "t_c", "t_d"][i]), fa, "pop",
+    x, y = 820 + (i % 3) * 320, 280 + (i // 3) * 150
+    S.add(f"tm{i}", f'<b style="font-size:42px;letter-spacing:2px">{tm}</b>', f"left:{x}px;top:{y}px;width:300px;height:125px;background:{NAVY}", "flow", S.c(["t_a", "t_b", "t_c", "t_d", "t_e"][i]), fa, "pop",
           ("curated/ui-pop.wav", -16))
-S.add("why", "Why does it matter?", f"left:1560px;top:300px;width:260px", "note navy", S.c("why"), S.c("ex_pick"), "pop")
+S.add("why", "Why does it matter?", f"left:1460px;top:440px;width:300px", "note navy", S.c("why"), S.c("ex_pick"), "pop")
 # sheet tabs
-S.add("tabs", "".join(f'<div id="tab{i}" style="padding:14px 28px;border-radius:14px 14px 0 0;background:#e9edf3;font-weight:700;font-size:30px;color:{MUTED}">{t.title()}</div>' for i, t in enumerate(TEAMS)),
+S.add("tabs", "".join(f'<div id="tab{i}" style="padding:14px 24px;border-radius:14px 14px 0 0;background:#e9edf3;font-weight:700;font-size:30px;color:{MUTED}">{t if t == "REDQ" else t.title()}</div>' for i, t in enumerate(TEAMS)),
       "left:820px;top:690px;display:flex;gap:10px;border-bottom:5px solid #c9d1de", "a", S.c("tabs") + 0.5, fa, "up")
 S.add("tabl", "Your team = your tab in the central Google Sheet", f"left:820px;top:790px;font-size:30px;font-weight:700;color:{INK}", "a", S.c("tabs") + 1.4, fa, "up")
-S.add("you", f'You belong to <b style="color:{GREEN}">BRAVO</b>', f"left:150px;top:{R(280 + 435 * k + 30)}px;font-size:34px", "a", S.c("ex_pick") + 0.3, fa, "up")
+S.add("you", f'You belong to <b style="color:{GREEN}">BRAVO</b>', f"left:150px;top:{R(270 + 348 * k + 30)}px;font-size:34px", "a", S.c("ex_pick") + 0.3, fa, "up")
 S.st("#tm0", S.c("ex_pick") + 2.5, {"background": RED}); S.pulse("tm0", S.c("ex_pick") + 2.5)
 S.add("rec", "Your record", f"left:1000px;top:560px;background:#fff;border:3px solid {RED};padding:10px 22px;border-radius:12px;font-weight:700;font-size:30px;color:{RED}", "a", S.c("ex_land"), S.c("fix_before"), "pop")
 S.tw("#rec", S.c("ex_land") + 0.7, 1.0, {"x": -175, "y": 95, "scale": 0.8}, "power2.inOut")
@@ -369,13 +389,15 @@ S.add("rule", "Remember: no manual time entry is required.", f"left:150px;top:68
 # ---------------- S10 WHERE IT GOES ----------------
 S = Scene(SC["s10"]); scenes.append(S)
 S.add("h", "Where your attendance goes", "left:150px;top:120px", "a h1", 0.3, None, "left")
-flow_row(S, "fw", [("Staff scans QR", "Check-in or Check-out"), ("Submits the form", "Check-in or Check-out form"), ("Google Sheet records the time", "automatically"), ("Appears under your team", "Alpha, Bravo, Charlie or Delta")],
+flow_row(S, "fw", [("Staff scans QR", "Check-in or Check-out"), ("Submits the form", "Check-in or Check-out form"), ("Google Sheet records the time", "automatically"), ("Appears under your team", "Alpha, Bravo, Charlie, Delta or REDQ")],
          150, 250, 360, 60, [S.c("p1"), S.c("p1") + 1.6, S.c("p1") + 3.6, S.c("p2") + 0.5], colors=[NAVY, NAVY, NAVY, GREEN])
-k = shot(S, "sheet", "image-10-1.png", 150, 480, 1620, (1410, 153), S.c("p2") + 1.2, None, "up")
-for i, (cue, x0, x1) in enumerate((("alpha", 485, 548), ("bravo", 565, 628), ("cd", 648, 718), ("cd", 730, 800))):
-    S.hl(f"hlt{i}", 150 + (x0 - 6) * k, 480 + 118 * k, (x1 - x0 + 12) * k, 34 * k, S.c(cue) + (0.4 if i < 3 else 1.2), S.c("times"))
-S.hl("hli", 150 + 48 * k, 480 + 25 * k, 170 * k, 80 * k, S.c("times") + 1.0, S.c("resp")); S.hl("hlo", 150 + 1198 * k, 480 + 25 * k, 145 * k, 80 * k, S.c("times") + 2.0, S.c("resp"))
-S.add("sm", "Sample view, staff details hidden", f"left:150px;top:{R(480 + 153 * k + 12)}px;font-size:28px;color:{MUTED}", "a", S.c("p2") + 1.5, None, "fade")
+tm_ = S.c("times")
+k = shot(S, "sheet", "v02_sheet_strip.png", 150, 470, 1620, (1874, 271), S.c("p2") + 1.2, tm_ + 2.4, "up")    # v02: creator's new Sheet (staff details hidden)
+for i, (cue, x0, x1) in enumerate((("alpha", 536, 634), ("bravo", 636, 735), ("cd", 737, 846), ("cd", 848, 942), ("cd", 944, 1042))):
+    S.hl(f"hlt{i}", 150 + x0 * k, 470 + 230 * k, (x1 - x0) * k, 42 * k, S.c(cue) + (0.4 if i < 2 else 1.0 + 0.6 * (i - 2)), tm_ + 2.4)
+k = shot(S, "sheet2", "image-10-1.png", 150, 470, 1620, (1410, 153), tm_ + 2.2, None, "fade")
+S.hl("hli", 150 + 48 * k, 470 + 25 * k, 170 * k, 80 * k, tm_ + 2.9, S.c("resp")); S.hl("hlo", 150 + 1198 * k, 470 + 25 * k, 145 * k, 80 * k, tm_ + 3.6, S.c("resp"))
+S.add("sm", "Sample view, staff details hidden", f"left:150px;top:{R(470 + 271 * 1620 / 1874 + 12)}px;font-size:28px;color:{MUTED}", "a", S.c("p2") + 1.5, None, "fade")
 S.add("sup", "Reviewed by authorised supervisors", f"left:150px;top:720px", "note navy", S.c("sup") + 0.3, None, "up")
 S.add("ns", "Staff: no need to open or update the Sheet", f"left:900px;top:720px", "note green", S.c("nostaff") + 0.3, S.c("resp"), "up")
 for i, lab in enumerate(("Use the correct QR codes", "Complete the forms accurately", "Verify each submission")):

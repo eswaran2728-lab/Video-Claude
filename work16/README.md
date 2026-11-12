@@ -81,3 +81,31 @@ Final (only after approval): `render --quality high --sdr` → `./master_final.s
 - **Specs:** 1920x1080 H.264, 30 fps, 29,883 frames, 996.2 s, 66 MB; −14.0 LUFS, −2.0 dBFS peak.
 - **Checks:** full decode with 0 errors; no black stretches; audio lag 0 ms at three points; sample frames
   (`sheets/final_v01_check.jpg`) match the approved preview. Nothing is published.
+
+## v02: creator's update (new QR-location notice, five designations, REDQ team)
+Previews: `PREVIEW_AA-SEC-F-077_training_v02.mp4`. The v01 files (preview and final) are kept; the v01 scripts are in git
+history and its timing is in `timing_v01.json`.
+
+- **New screenshots** (`src/v02/`): designation dropdown, team options, Google Sheet with tabs.
+  - `prep_v02.py` covers personal data with grey "hidden" boxes, as the deck did: the email in the dropdown screenshot,
+    and the Email, Name and Staff ID cells in the Sheet.
+  - It also crops each image to the useful part (`edit/assets/deck/v02_*.png`).
+- **New scene 03 "Attendance recording via QR code"** (`s02b`, after "Two QR codes"). The voiceover follows the creator's
+  notice. Visuals:
+  - RedQ Office card;
+  - Group Security Operation Office card (DSE workstation, under CCTV);
+  - "Scan the QR code at your own office premises";
+  - red "STRICTLY PROHIBITED" banner and "disciplinary action".
+- **Designation (scene 05):** the five options in the form's order: ASO – Assistant Security Officer, SO – Security
+  Officer, SSO – Senior Security Officer, SE – Security Executive, SM – Security Manager.
+  - The new screenshot is used, with a highlight and a big label beside each row; ASO turns green on the example.
+  - Voice: "There are five options", each read out (SO is spelled "S. O.", the clearest reading).
+- **Team (scene 06):** five teams (Alpha, Bravo, Charlie, Delta, REDQ), shown on the new screenshot, the team tiles and the
+  Sheet tabs. Voice: "five operational teams… Red Q Team".
+- **Where it goes (scene 11):** flow box "Alpha, Bravo, Charlie, Delta or REDQ", and the new Sheet strip with all five tabs
+  highlighted. Voice: "The same applies to Charlie, Delta and Red Q".
+  - The deck's earlier sample view is kept for the Check-in/Check-out timestamp columns, which the new screenshot does not show.
+- **Unchanged:** the role "Duty Security Executive (DSE)" in the reporting flow, which is a duty role rather than a form
+  designation.
+- **Not updated (no new screenshot):** the Check-out form screenshot (scene 09) still shows four team options.
+- **Length:** 17 min 33 s (14 scenes).

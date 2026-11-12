@@ -1,0 +1,69 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; font-family: "Inter", sans-serif; color: #14213d; overflow: hidden; }
+.a { position: absolute; }
+.card { position: absolute; background: #fff; border-radius: 22px; box-shadow: 0 18px 40px rgba(20,33,61,.12); }
+.pill { display: inline-block; padding: 10px 26px; border-radius: 40px; color: #fff; font-weight: 800; letter-spacing: 1.5px; font-size: 30px; }
+.g { background: #1e8a4c; } .r { background: #d6203a; } .n { background: #1b2a4a; } .am { background: #f5a524; }
+.h1 { font-weight: 800; font-size: 64px; line-height: 1.08; letter-spacing: -1px; }
+.h2 { font-weight: 800; font-size: 46px; line-height: 1.12; }
+.h3 { font-weight: 700; font-size: 36px; line-height: 1.2; }
+.t { font-weight: 500; font-size: 30px; line-height: 1.32; color: #5b6577; }
+.num { width: 64px; height: 64px; border-radius: 50%; color: #fff; font-weight: 800; font-size: 32px; display: flex; align-items: center; justify-content: center; }
+.row { display: flex; align-items: center; gap: 22px; }
+.ok { color: #1e8a4c; } .bad { color: #d6203a; }
+.note { position: absolute; border-radius: 18px; padding: 22px 30px; font-size: 32px; font-weight: 700; line-height: 1.25; }
+.note.red { background: #fde8eb; color: #d6203a; border: 3px solid rgba(214,32,58,.35); }
+.note.green { background: #e5f5ec; color: #1e8a4c; border: 3px solid rgba(30,138,76,.35); }
+.note.navy { background: #1b2a4a; color: #fff; }
+.hl { position: absolute; border: 6px solid #f5a524; border-radius: 12px; box-shadow: 0 0 0 9999px rgba(20,33,61,0); }
+.shot { position: absolute; border-radius: 16px; box-shadow: 0 18px 40px rgba(20,33,61,.18); background: #fff; overflow: hidden; }
+.shot img { display: block; width: 100%; height: 100%; }
+.qr { position: absolute; background: #fff; border-radius: 22px; padding: 18px; box-shadow: 0 18px 40px rgba(20,33,61,.15); }
+.qr img { display: block; width: 100%; height: 100%; }
+.x, .v { width: 58px; height: 58px; border-radius: 50%; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 34px; flex: none; }
+.x { background: #d6203a; } .v { background: #1e8a4c; }
+.phone { position: absolute; width: 400px; height: 760px; border-radius: 56px; background: #0f1830; padding: 18px; box-shadow: 0 30px 60px rgba(20,33,61,.3); }
+.screen { position: absolute; left: 18px; top: 18px; right: 18px; bottom: 18px; border-radius: 40px; background: #fff; overflow: hidden; }
+.gf { position: absolute; inset: 0; background: #ede7f6; }
+.gfc { position: absolute; left: 16px; right: 16px; background: #fff; border-radius: 12px; }
+.gfbar { height: 12px; background: #673ab7; border-radius: 12px 12px 0 0; }
+.gft { padding: 16px 18px; font-size: 25px; line-height: 1.25; color: #202124; }
+.arrow { position: absolute; height: 6px; background: #5b6577; border-radius: 3px; transform-origin: 0 50%; }
+.arrow:after { content: ""; position: absolute; right: -4px; top: -9px; border-left: 20px solid #5b6577; border-top: 12px solid transparent; border-bottom: 12px solid transparent; }
+.flow { position: absolute; height: 150px; border-radius: 20px; background: #1b2a4a; color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 18px; }
+.flow b { font-size: 32px; line-height: 1.15; } .flow span { font-size: 28px; opacity: .85; margin-top: 8px; line-height: 1.2; }
+.chk { display: flex; align-items: center; gap: 22px; font-size: 34px; font-weight: 700; }
+.box { width: 50px; height: 50px; border-radius: 10px; border: 4px solid #b7c0cf; display: flex; align-items: center; justify-content: center; flex: none; background: #fff; }
+.tick { color: #fff; font-weight: 900; font-size: 32px; }
+</style>
+  <div id="root" data-composition-id="s02b" data-width="1920" data-height="1080">
+    <div id="h" class="a h1" style="left:150px;top:120px">Where to scan your attendance QR</div>
+    <div id="sub" class="a" style="left:150px;top:205px;font-size:34px;font-weight:600;color:#5b6577">QR codes are provided at the respective offices</div>
+    <div id="loc0" class="card" style="left:150px;top:290px;width:780px;height:320px;padding:36px"><div class="row" style="gap:18px"><svg width="64" height="64" viewBox="0 0 24 24"><path d="M12 2c-3.9 0-7 3.1-7 7 0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z" fill="#d6203a"/><circle cx="12" cy="9" r="2.6" fill="#fff"/></svg><div class="h2" style="max-width:560px">RedQ Office</div></div><div class="h3" style="margin-top:26px">Displayed at the RedQ Office</div><div class="row" style="margin-top:18px;gap:14px;font-size:30px;font-weight:600;color:#5b6577">For staff reporting to RedQ</div><div style="position:absolute;right:34px;top:34px;display:flex;gap:10px"><img src="assets/deck/image-1-1.png" style="width:92px;height:92px" alt=""><img src="assets/deck/image-1-2.png" style="width:92px;height:92px" alt=""></div></div>
+    <div id="loc1" class="card" style="left:990px;top:290px;width:780px;height:320px;padding:36px"><div class="row" style="gap:18px"><svg width="64" height="64" viewBox="0 0 24 24"><path d="M12 2c-3.9 0-7 3.1-7 7 0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z" fill="#d6203a"/><circle cx="12" cy="9" r="2.6" fill="#fff"/></svg><div class="h2" style="max-width:560px">Group Security Operation Office</div></div><div class="h3" style="margin-top:26px">Displayed at the DSE workstation</div><div class="row" style="margin-top:18px;gap:14px;font-size:30px;font-weight:600;color:#5b6577"><svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="#14213d" stroke-width="1.8"><rect x="3" y="7" width="13" height="8" rx="1.5"/><path d="M16 9l5-2v8l-5-2"/><path d="M7 15v4M4 19h6"/></svg><span>Under CCTV surveillance</span></div><div style="position:absolute;right:34px;top:34px;display:flex;gap:10px"><img src="assets/deck/image-1-1.png" style="width:92px;height:92px" alt=""><img src="assets/deck/image-1-2.png" style="width:92px;height:92px" alt=""></div></div>
+    <div id="all" class="note green" style="left:150px;top:650px;width:1620px;text-align:center">✓ Scan the QR code at your own office premises</div>
+    <div id="ban" class="note" style="left:150px;top:620px;width:1620px;background:#d6203a;color:#fff;text-align:center"><div style="font-size:30px;letter-spacing:3px;opacity:.9">⛔ STRICTLY PROHIBITED</div>Scanning or submitting your attendance QR outside your designated office premises</div>
+    <div id="disc" class="note red" style="left:150px;top:775px;width:1620px;text-align:center;font-size:34px">Violations will be subject to disciplinary action</div>
+  </div>
+  <script>
+    gsap.set("#h",{opacity:0,x:-70});
+    gsap.set("#sub",{opacity:0,y:40});
+    gsap.set("#loc0",{opacity:0,y:40});
+    gsap.set("#loc1",{opacity:0,y:40});
+    gsap.set("#all",{opacity:0,y:40});
+    gsap.set("#ban",{opacity:0,scale:0.7});
+    gsap.set("#disc",{opacity:0,y:40});
+    const tl = gsap.timeline({ paused: true });
+    tl.to("#h",{opacity:1,x:0,duration:0.5,ease:"power3.out"},0.3);
+    tl.to("#sub",{opacity:1,y:0,duration:0.5,ease:"power3.out"},1.6);
+    tl.to("#loc0",{opacity:1,y:0,duration:0.5,ease:"power3.out"},6.853);
+    tl.to("#loc1",{opacity:1,y:0,duration:0.5,ease:"power3.out"},14.868);
+    tl.to("#all",{opacity:1,y:0,duration:0.5,ease:"power3.out"},26.518);
+    tl.to("#all",{opacity:0,duration:0.35,ease:"power2.in"},32.881);
+    tl.to("#ban",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},33.431);
+    tl.to("#disc",{opacity:1,y:0,duration:0.5,ease:"power3.out"},43.854);
+    tl.set({}, {}, 49.428);
+    window.__timelines["s02b"] = tl;
+  </script>
+</template>

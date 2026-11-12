@@ -1,0 +1,1645 @@
+{
+ "voice": "af_heart",
+ "speed": 1.0,
+ "scenes": [
+  {
+   "id": "s01",
+   "title": "Introduction",
+   "dur": 51.47,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Good morning, everyone.",
+     "cue": "title",
+     "t0": 1.0,
+     "t1": 2.425
+    },
+    {
+     "i": 1,
+     "text": "Today, I'll be conducting a short briefing on our AA/SEC/F/077 Attendance Record, specifically on how to properly Check in and Check out using the QR code system.",
+     "cue": "form",
+     "t0": 2.845,
+     "t1": 15.416
+    },
+    {
+     "i": 2,
+     "text": "The purpose of this system is to ensure that every personnel's attendance is recorded accurately, from the beginning of their shift until the completion of their duty.",
+     "cue": "span",
+     "t0": 15.836,
+     "t1": 25.307
+    },
+    {
+     "i": 3,
+     "text": "The process is quite straightforward.",
+     "cue": null,
+     "t0": 25.727,
+     "t1": 27.583
+    },
+    {
+     "i": 4,
+     "text": "All you need is your mobile phone, your official AirAsia Google account, and the correct QR code.",
+     "cue": "need",
+     "t0": 28.003,
+     "t1": 33.854
+    },
+    {
+     "i": 5,
+     "text": "Throughout this briefing, I'll guide everyone step by step, explain the common mistakes to avoid, and what you should do if you accidentally submit incorrect information.",
+     "cue": "agenda",
+     "t0": 34.274,
+     "t1": 44.037
+    },
+    {
+     "i": 6,
+     "text": "By the end of this briefing, everyone should be able to complete their attendance independently and correctly.",
+     "cue": "goal",
+     "t0": 44.457,
+     "t1": 50.27
+    }
+   ],
+   "start": 0
+  },
+  {
+   "id": "s02",
+   "title": "Understanding the two QR codes",
+   "dur": 52.272,
+   "lines": [
+    {
+     "i": 0,
+     "text": "First, everyone needs to understand that we are using two separate QR codes for attendance.",
+     "cue": "two",
+     "t0": 1.0,
+     "t1": 6.545
+    },
+    {
+     "i": 1,
+     "text": "The first one is the green QR code, which is used for Check-in.",
+     "cue": "green",
+     "t0": 6.965,
+     "t1": 10.607
+    },
+    {
+     "i": 2,
+     "text": "This QR code must be scanned when you start your shift.",
+     "cue": "green_t",
+     "t0": 11.027,
+     "t1": 14.049
+    },
+    {
+     "i": 3,
+     "text": "The second one is the red QR code, which is used for Check-out.",
+     "cue": "red",
+     "t0": 14.469,
+     "t1": 18.124
+    },
+    {
+     "i": 4,
+     "text": "This QR code must be scanned when you finish your shift.",
+     "cue": "red_t",
+     "t0": 18.544,
+     "t1": 21.619
+    },
+    {
+     "i": 5,
+     "text": "It's important not to confuse these two QR codes because each one serves a different purpose.",
+     "cue": "swap",
+     "t0": 22.039,
+     "t1": 27.492
+    },
+    {
+     "i": 6,
+     "text": "Just remember:",
+     "cue": null,
+     "t0": 27.912,
+     "t1": 28.83
+    },
+    {
+     "i": 7,
+     "text": "Green means Check-in, at the start of your shift.",
+     "cue": "mem_g",
+     "t0": 29.13,
+     "t1": 31.611
+    },
+    {
+     "i": 8,
+     "text": "Red means Check-out, at the end of your shift.",
+     "cue": "mem_r",
+     "t0": 32.031,
+     "t1": 34.388
+    },
+    {
+     "i": 9,
+     "text": "For both procedures, there are four basic steps:",
+     "cue": "steps",
+     "t0": 34.808,
+     "t1": 37.616
+    },
+    {
+     "i": 10,
+     "text": "1. Scan the correct QR code.",
+     "cue": "st1",
+     "t0": 37.916,
+     "t1": 39.967
+    },
+    {
+     "i": 11,
+     "text": "2. Complete the required information.",
+     "cue": "st2",
+     "t0": 40.387,
+     "t1": 42.664
+    },
+    {
+     "i": 12,
+     "text": "3. Press Submit.",
+     "cue": "st3",
+     "t0": 43.084,
+     "t1": 44.291
+    },
+    {
+     "i": 13,
+     "text": "4. Verify that your response has been recorded.",
+     "cue": "st4",
+     "t0": 44.711,
+     "t1": 47.703
+    },
+    {
+     "i": 14,
+     "text": "Now, let's go through the Check-in procedure first.",
+     "cue": null,
+     "t0": 48.453,
+     "t1": 51.072
+    }
+   ],
+   "start": 51.47
+  },
+  {
+   "id": "s03",
+   "title": "Start of shift: scan the Check-in QR",
+   "dur": 41.516,
+   "lines": [
+    {
+     "i": 0,
+     "text": "When you report for duty, you must first scan the green Check-in QR code.",
+     "cue": "qr",
+     "t0": 1.0,
+     "t1": 5.165
+    },
+    {
+     "i": 1,
+     "text": "Once you scan it, you will be directed to the Google Form.",
+     "cue": "form",
+     "t0": 5.585,
+     "t1": 8.655
+    },
+    {
+     "i": 2,
+     "text": "Before filling in anything, please make sure you are signed in using your official AirAsia Google account.",
+     "cue": "acct",
+     "t0": 9.405,
+     "t1": 15.085
+    },
+    {
+     "i": 3,
+     "text": "Do not use your personal Gmail account.",
+     "cue": "nogmail",
+     "t0": 15.505,
+     "t1": 17.801
+    },
+    {
+     "i": 4,
+     "text": "Next, check the title displayed at the top of the form.",
+     "cue": "title",
+     "t0": 18.221,
+     "t1": 21.156
+    },
+    {
+     "i": 5,
+     "text": "The title should be:",
+     "cue": null,
+     "t0": 21.576,
+     "t1": 22.725
+    },
+    {
+     "i": 6,
+     "text": "AA/SEC/F/077 Attendance Record – Check-in",
+     "cue": "title_ok",
+     "t0": 23.025,
+     "t1": 27.261
+    },
+    {
+     "i": 7,
+     "text": "If the form shows Check-out instead, it means you have scanned the wrong QR code.",
+     "cue": "wrong",
+     "t0": 27.681,
+     "t1": 32.23
+    },
+    {
+     "i": 8,
+     "text": "In that situation, simply go back and scan the correct green QR code.",
+     "cue": "back",
+     "t0": 32.65,
+     "t1": 37.018
+    },
+    {
+     "i": 9,
+     "text": "Always verify the form title before proceeding.",
+     "cue": "verify",
+     "t0": 37.438,
+     "t1": 40.316
+    }
+   ],
+   "start": 103.742
+  },
+  {
+   "id": "s04",
+   "title": "Filling in the Check-in form",
+   "dur": 75.206,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Once you have opened the correct Check-in form, you will be required to complete several fields.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 5.876
+    },
+    {
+     "i": 1,
+     "text": "Let's go through them one by one.",
+     "cue": null,
+     "t0": 6.296,
+     "t1": 7.957
+    },
+    {
+     "i": 2,
+     "text": "First: Email",
+     "cue": "f_email",
+     "t0": 8.707,
+     "t1": 9.794
+    },
+    {
+     "i": 3,
+     "text": "At the top of the Google Form, you will see a checkbox to record your email address.",
+     "cue": "email_box",
+     "t0": 10.214,
+     "t1": 14.677
+    },
+    {
+     "i": 4,
+     "text": "Make sure you tick the Record email checkbox.",
+     "cue": "email_tick",
+     "t0": 15.097,
+     "t1": 17.409
+    },
+    {
+     "i": 5,
+     "text": "This allows your official company email address to be included with your attendance submission.",
+     "cue": null,
+     "t0": 17.829,
+     "t1": 23.166
+    },
+    {
+     "i": 6,
+     "text": "Second: Designation",
+     "cue": "f_desig",
+     "t0": 23.916,
+     "t1": 25.309
+    },
+    {
+     "i": 7,
+     "text": "You will be asked to select your designation.",
+     "cue": null,
+     "t0": 25.729,
+     "t1": 27.946
+    },
+    {
+     "i": 8,
+     "text": "There are three options:",
+     "cue": null,
+     "t0": 28.366,
+     "t1": 29.606
+    },
+    {
+     "i": 9,
+     "text": "Security Executive (DSE)",
+     "cue": "dse",
+     "t0": 29.906,
+     "t1": 32.012
+    },
+    {
+     "i": 10,
+     "text": "Security Officer (SO)",
+     "cue": "so",
+     "t0": 32.432,
+     "t1": 34.092
+    },
+    {
+     "i": 11,
+     "text": "Assistant Security Officer (ASO)",
+     "cue": "aso",
+     "t0": 34.512,
+     "t1": 36.758
+    },
+    {
+     "i": 12,
+     "text": "Please select your actual designation.",
+     "cue": null,
+     "t0": 37.178,
+     "t1": 39.27
+    },
+    {
+     "i": 13,
+     "text": "For example, if you are an Assistant Security Officer, select ASO.",
+     "cue": "aso_pick",
+     "t0": 40.02,
+     "t1": 44.223
+    },
+    {
+     "i": 14,
+     "text": "Third: Shift Start Date",
+     "cue": "f_date",
+     "t0": 44.973,
+     "t1": 46.401
+    },
+    {
+     "i": 15,
+     "text": "You must select the date on which your shift begins.",
+     "cue": null,
+     "t0": 46.821,
+     "t1": 49.379
+    },
+    {
+     "i": 16,
+     "text": "Please make sure you enter the correct date because it will be used to match your Check-in and Check-out records.",
+     "cue": "date_match",
+     "t0": 49.799,
+     "t1": 55.099
+    },
+    {
+     "i": 17,
+     "text": "Fourth: Name",
+     "cue": "f_name",
+     "t0": 55.849,
+     "t1": 56.808
+    },
+    {
+     "i": 18,
+     "text": "Enter your name accurately.",
+     "cue": null,
+     "t0": 57.228,
+     "t1": 58.595
+    },
+    {
+     "i": 19,
+     "text": "Fifth: Staff ID",
+     "cue": "f_id",
+     "t0": 59.345,
+     "t1": 60.706
+    },
+    {
+     "i": 20,
+     "text": "Enter your correct Staff ID.",
+     "cue": null,
+     "t0": 61.126,
+     "t1": 62.826
+    },
+    {
+     "i": 21,
+     "text": "This is especially important because your Staff ID is used to identify and match your attendance information.",
+     "cue": "id_match",
+     "t0": 63.246,
+     "t1": 69.944
+    },
+    {
+     "i": 22,
+     "text": "Please check your Staff ID carefully before submitting the form.",
+     "cue": null,
+     "t0": 70.364,
+     "t1": 74.006
+    }
+   ],
+   "start": 145.258
+  },
+  {
+   "id": "s05",
+   "title": "Selecting your team",
+   "dur": 99.934,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Next, you need to select your assigned team.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 3.225
+    },
+    {
+     "i": 1,
+     "text": "As everyone knows, we have four operational teams:",
+     "cue": "teams",
+     "t0": 3.645,
+     "t1": 6.704
+    },
+    {
+     "i": 2,
+     "text": "Alpha Team",
+     "cue": "t_a",
+     "t0": 7.004,
+     "t1": 7.821
+    },
+    {
+     "i": 3,
+     "text": "Bravo Team",
+     "cue": "t_b",
+     "t0": 8.241,
+     "t1": 9.107
+    },
+    {
+     "i": 4,
+     "text": "Charlie Team",
+     "cue": "t_c",
+     "t0": 9.527,
+     "t1": 10.392
+    },
+    {
+     "i": 5,
+     "text": "Delta Team",
+     "cue": "t_d",
+     "t0": 10.812,
+     "t1": 11.679
+    },
+    {
+     "i": 6,
+     "text": "You must select the team you are assigned to for that particular shift.",
+     "cue": null,
+     "t0": 12.099,
+     "t1": 15.577
+    },
+    {
+     "i": 7,
+     "text": "Now, why is the team selection important?",
+     "cue": "why",
+     "t0": 16.327,
+     "t1": 18.736
+    },
+    {
+     "i": 8,
+     "text": "Because once you submit your attendance, the system will automatically organise the record into the corresponding team's tab in our central Google Sheet.",
+     "cue": "tabs",
+     "t0": 19.156,
+     "t1": 27.794
+    },
+    {
+     "i": 9,
+     "text": "For example:",
+     "cue": null,
+     "t0": 28.544,
+     "t1": 29.387
+    },
+    {
+     "i": 10,
+     "text": "Let's say you belong to Bravo Team, but you accidentally select Alpha Team when completing the form.",
+     "cue": "ex_pick",
+     "t0": 29.687,
+     "t1": 35.554
+    },
+    {
+     "i": 11,
+     "text": "When you submit your attendance, your record will appear under Alpha Team instead of Bravo Team.",
+     "cue": "ex_land",
+     "t0": 35.974,
+     "t1": 41.053
+    },
+    {
+     "i": 12,
+     "text": "This will result in an incorrect attendance record.",
+     "cue": "ex_wrong",
+     "t0": 41.473,
+     "t1": 44.204
+    },
+    {
+     "i": 13,
+     "text": "Now, what should you do if this happens?",
+     "cue": null,
+     "t0": 44.954,
+     "t1": 46.84
+    },
+    {
+     "i": 14,
+     "text": "If you realise that you selected the wrong team before submitting, simply correct your selection.",
+     "cue": "fix_before",
+     "t0": 47.26,
+     "t1": 52.272
+    },
+    {
+     "i": 15,
+     "text": "However, if you have already submitted the attendance form with the wrong team, you must immediately inform your respective Duty Security Executive (DSE).",
+     "cue": "fix_after",
+     "t0": 53.022,
+     "t1": 62.431
+    },
+    {
+     "i": 16,
+     "text": "The respective DSE shall then report the error to the Operations Security Manager for the necessary correction to the attendance record.",
+     "cue": "osm",
+     "t0": 62.851,
+     "t1": 71.248
+    },
+    {
+     "i": 17,
+     "text": "Staff must not submit another attendance response to correct the mistake unless instructed by an authorised supervisor.",
+     "cue": "no_resubmit",
+     "t0": 71.668,
+     "t1": 79.449
+    },
+    {
+     "i": 18,
+     "text": "So, the reporting flow is simple:",
+     "cue": "flow",
+     "t0": 80.199,
+     "t1": 81.979
+    },
+    {
+     "i": 19,
+     "text": "Staff → Respective DSE → Operations Security Manager → Attendance Correction",
+     "cue": "flow_all",
+     "t0": 82.279,
+     "t1": 88.256
+    },
+    {
+     "i": 20,
+     "text": "Please remember that attendance corrections must be handled through the proper reporting channel.",
+     "cue": null,
+     "t0": 88.676,
+     "t1": 93.815
+    },
+    {
+     "i": 21,
+     "text": "Therefore, always double-check your team selection before pressing Submit.",
+     "cue": "double",
+     "t0": 94.565,
+     "t1": 98.735
+    }
+   ],
+   "start": 220.464
+  },
+  {
+   "id": "s06",
+   "title": "Review, submit and confirm your Check-in",
+   "dur": 66.357,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Once you have completed the form, don't immediately press Submit.",
+     "cue": "hold",
+     "t0": 1.0,
+     "t1": 4.331
+    },
+    {
+     "i": 1,
+     "text": "Take a few seconds to review all the information you have entered.",
+     "cue": null,
+     "t0": 4.751,
+     "t1": 8.11
+    },
+    {
+     "i": 2,
+     "text": "Make sure:",
+     "cue": "check",
+     "t0": 8.53,
+     "t1": 9.199
+    },
+    {
+     "i": 3,
+     "text": "Your company email is selected.",
+     "cue": "c1",
+     "t0": 9.499,
+     "t1": 11.196
+    },
+    {
+     "i": 4,
+     "text": "Your designation is correct.",
+     "cue": "c2",
+     "t0": 11.616,
+     "t1": 13.214
+    },
+    {
+     "i": 5,
+     "text": "Your shift start date is correct.",
+     "cue": "c3",
+     "t0": 13.634,
+     "t1": 15.38
+    },
+    {
+     "i": 6,
+     "text": "Your assigned team is correct.",
+     "cue": "c4",
+     "t0": 15.8,
+     "t1": 17.293
+    },
+    {
+     "i": 7,
+     "text": "Your name is accurate.",
+     "cue": "c5",
+     "t0": 17.713,
+     "t1": 19.005
+    },
+    {
+     "i": 8,
+     "text": "Your Staff ID is correct.",
+     "cue": "c6",
+     "t0": 19.425,
+     "t1": 20.909
+    },
+    {
+     "i": 9,
+     "text": "After verifying everything, press the Submit button.",
+     "cue": "submit",
+     "t0": 21.329,
+     "t1": 24.248
+    },
+    {
+     "i": 10,
+     "text": "You only need to submit your Check-in form once per shift.",
+     "cue": "once",
+     "t0": 24.668,
+     "t1": 27.567
+    },
+    {
+     "i": 11,
+     "text": "Once you press Submit, wait for the confirmation screen.",
+     "cue": "wait",
+     "t0": 27.987,
+     "t1": 30.989
+    },
+    {
+     "i": 12,
+     "text": "You should see the message:",
+     "cue": null,
+     "t0": 31.409,
+     "t1": 32.647
+    },
+    {
+     "i": 13,
+     "text": "\"Your response has been recorded.\"",
+     "cue": "recorded",
+     "t0": 32.947,
+     "t1": 34.682
+    },
+    {
+     "i": 14,
+     "text": "This confirmation is important because it indicates that your submission has been successfully received.",
+     "cue": null,
+     "t0": 35.102,
+     "t1": 41.009
+    },
+    {
+     "i": 15,
+     "text": "If you see this message, your Check-in is complete.",
+     "cue": "complete",
+     "t0": 41.429,
+     "t1": 44.101
+    },
+    {
+     "i": 16,
+     "text": "However, if the confirmation screen does not appear, check whether there are any missing fields, form errors, or internet connection issues.",
+     "cue": "noconf",
+     "t0": 44.851,
+     "t1": 52.703
+    },
+    {
+     "i": 17,
+     "text": "If you are unsure whether your attendance has been successfully submitted, inform your supervisor instead of repeatedly submitting the form.",
+     "cue": "unsure",
+     "t0": 53.123,
+     "t1": 60.727
+    },
+    {
+     "i": 18,
+     "text": "Remember, multiple submissions may create duplicate attendance records.",
+     "cue": "dupes",
+     "t0": 61.147,
+     "t1": 65.157
+    }
+   ],
+   "start": 320.398
+  },
+  {
+   "id": "s07",
+   "title": "End of shift: scan the Check-out QR",
+   "dur": 38.395,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Now, let's move to the Check-out procedure.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 3.321
+    },
+    {
+     "i": 1,
+     "text": "Once you have completed your shift, you must record your Check-out.",
+     "cue": null,
+     "t0": 3.741,
+     "t1": 6.929
+    },
+    {
+     "i": 2,
+     "text": "This time, you must scan the red Check-out QR code.",
+     "cue": "qr",
+     "t0": 7.349,
+     "t1": 10.329
+    },
+    {
+     "i": 3,
+     "text": "Please do not scan the green Check-in QR code again.",
+     "cue": "not_green",
+     "t0": 10.749,
+     "t1": 13.659
+    },
+    {
+     "i": 4,
+     "text": "After scanning, the Google Form will open.",
+     "cue": "form",
+     "t0": 14.079,
+     "t1": 16.493
+    },
+    {
+     "i": 5,
+     "text": "Just like the Check-in procedure, make sure you are using your official AirAsia Google account.",
+     "cue": "acct",
+     "t0": 16.913,
+     "t1": 21.861
+    },
+    {
+     "i": 6,
+     "text": "The form title should display:",
+     "cue": "title",
+     "t0": 22.281,
+     "t1": 23.864
+    },
+    {
+     "i": 7,
+     "text": "AA/SEC/F/077 Attendance Record – Check-out",
+     "cue": "title_ok",
+     "t0": 24.164,
+     "t1": 28.472
+    },
+    {
+     "i": 8,
+     "text": "Always check the title before proceeding.",
+     "cue": null,
+     "t0": 28.892,
+     "t1": 30.994
+    },
+    {
+     "i": 9,
+     "text": "The Check-out procedure is similar to Check-in, but the form is shorter and requires fewer details.",
+     "cue": "shorter",
+     "t0": 31.414,
+     "t1": 37.195
+    }
+   ],
+   "start": 386.755
+  },
+  {
+   "id": "s08",
+   "title": "Completing your Check-out form",
+   "dur": 93.833,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Once the Check-out form opens, you will need to complete the required information.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 5.414
+    },
+    {
+     "i": 1,
+     "text": "First, tick the Record email checkbox.",
+     "cue": "email",
+     "t0": 5.834,
+     "t1": 8.137
+    },
+    {
+     "i": 2,
+     "text": "Next, enter your Staff ID.",
+     "cue": "id",
+     "t0": 8.557,
+     "t1": 10.216
+    },
+    {
+     "i": 3,
+     "text": "Please ensure you use the same Staff ID that you entered during Check-in.",
+     "cue": "id_same",
+     "t0": 10.636,
+     "t1": 14.941
+    },
+    {
+     "i": 4,
+     "text": "After that, select your Shift Start Date.",
+     "cue": "date",
+     "t0": 15.361,
+     "t1": 17.533
+    },
+    {
+     "i": 5,
+     "text": "Now, I want everyone to pay attention to this part, especially those working overnight shifts.",
+     "cue": "attn",
+     "t0": 18.283,
+     "t1": 23.802
+    },
+    {
+     "i": 6,
+     "text": "Let's look at one example.",
+     "cue": null,
+     "t0": 24.222,
+     "t1": 25.564
+    },
+    {
+     "i": 7,
+     "text": "Suppose your shift starts on 11 November at 8:00 PM and finishes on 12 November at 8:00 AM.",
+     "cue": "night",
+     "t0": 25.984,
+     "t1": 32.939
+    },
+    {
+     "i": 8,
+     "text": "When you Check out on 12 November, what date should you select?",
+     "cue": "q",
+     "t0": 33.359,
+     "t1": 36.787
+    },
+    {
+     "i": 9,
+     "text": "The correct answer is 11 November, because that is the date your shift originally started.",
+     "cue": "ans",
+     "t0": 37.207,
+     "t1": 42.888
+    },
+    {
+     "i": 10,
+     "text": "You should not select 12 November simply because you are checking out on that date.",
+     "cue": "not12",
+     "t0": 43.308,
+     "t1": 47.834
+    },
+    {
+     "i": 11,
+     "text": "The system uses the shift start date to match your attendance correctly.",
+     "cue": null,
+     "t0": 48.254,
+     "t1": 52.024
+    },
+    {
+     "i": 12,
+     "text": "Next, select the same team used during your correct Check-in.",
+     "cue": "team",
+     "t0": 52.444,
+     "t1": 55.792
+    },
+    {
+     "i": 13,
+     "text": "For example, if you checked in under Bravo Team, your Check-out should also be under Bravo Team.",
+     "cue": "bravo",
+     "t0": 56.542,
+     "t1": 62.087
+    },
+    {
+     "i": 14,
+     "text": "If you discover that your Check-in contains an incorrect team selection, inform your respective DSE so the error can be reported for correction.",
+     "cue": "dse",
+     "t0": 62.507,
+     "t1": 71.346
+    },
+    {
+     "i": 15,
+     "text": "You will notice that the Check-out form does not ask for your name or designation.",
+     "cue": "noname",
+     "t0": 71.766,
+     "t1": 76.235
+    },
+    {
+     "i": 16,
+     "text": "This is normal because those details were already provided during Check-in.",
+     "cue": null,
+     "t0": 76.655,
+     "t1": 80.898
+    },
+    {
+     "i": 17,
+     "text": "Once all required information is completed, press Submit once.",
+     "cue": "submit",
+     "t0": 81.318,
+     "t1": 85.012
+    },
+    {
+     "i": 18,
+     "text": "Wait for the confirmation message:",
+     "cue": null,
+     "t0": 85.432,
+     "t1": 87.144
+    },
+    {
+     "i": 19,
+     "text": "\"Your response has been recorded.\"",
+     "cue": "recorded",
+     "t0": 87.444,
+     "t1": 89.179
+    },
+    {
+     "i": 20,
+     "text": "Once this appears, your Check-out submission is complete.",
+     "cue": "complete",
+     "t0": 89.599,
+     "t1": 92.633
+    }
+   ],
+   "start": 425.15
+  },
+  {
+   "id": "s09",
+   "title": "Attendance time is recorded automatically",
+   "dur": 58.452,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Now, there is one important feature I want everyone to understand.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 4.971
+    },
+    {
+     "i": 1,
+     "text": "You do not need to manually enter your Check-in or Check-out time.",
+     "cue": "nomanual",
+     "t0": 5.391,
+     "t1": 8.797
+    },
+    {
+     "i": 2,
+     "text": "The system automatically records the timestamp when you submit the Google Form.",
+     "cue": "auto",
+     "t0": 9.217,
+     "t1": 13.661
+    },
+    {
+     "i": 3,
+     "text": "For example, let's say your shift starts at 8:00 AM.",
+     "cue": "ex_start",
+     "t0": 14.411,
+     "t1": 17.167
+    },
+    {
+     "i": 4,
+     "text": "If you submit your Check-in form at 8:05 AM, the system will record the submission timestamp as 8:05 AM.",
+     "cue": "ex_in",
+     "t0": 17.587,
+     "t1": 24.907
+    },
+    {
+     "i": 5,
+     "text": "Similarly, if you complete your shift and submit your Check-out at 8:10 PM, the system will record the submission timestamp as 8:10 PM.",
+     "cue": "ex_out",
+     "t0": 25.327,
+     "t1": 34.437
+    },
+    {
+     "i": 6,
+     "text": "You don't need to type any time manually.",
+     "cue": null,
+     "t0": 34.857,
+     "t1": 36.731
+    },
+    {
+     "i": 7,
+     "text": "In fact, the forms do not provide a field for you to enter your own time.",
+     "cue": "nofield",
+     "t0": 37.151,
+     "t1": 40.97
+    },
+    {
+     "i": 8,
+     "text": "The timestamp is automatically captured and reflected in the attendance Google Sheet.",
+     "cue": "sheet",
+     "t0": 41.39,
+     "t1": 46.589
+    },
+    {
+     "i": 9,
+     "text": "Therefore, please make sure you submit your Check-in when reporting for duty and your Check-out when completing your shift.",
+     "cue": null,
+     "t0": 47.339,
+     "t1": 53.754
+    },
+    {
+     "i": 10,
+     "text": "Remember:",
+     "cue": null,
+     "t0": 54.174,
+     "t1": 54.823
+    },
+    {
+     "i": 11,
+     "text": "No manual time entry is required.",
+     "cue": "rule",
+     "t0": 55.123,
+     "t1": 57.252
+    }
+   ],
+   "start": 518.983
+  },
+  {
+   "id": "s10",
+   "title": "Where does your attendance record go?",
+   "dur": 54.808,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Now, some of you might be wondering what happens after you submit the form.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 4.78
+    },
+    {
+     "i": 1,
+     "text": "Let me explain.",
+     "cue": null,
+     "t0": 5.2,
+     "t1": 6.175
+    },
+    {
+     "i": 2,
+     "text": "Once you press Submit, your attendance response is automatically recorded in our central Google Sheet.",
+     "cue": "p1",
+     "t0": 6.595,
+     "t1": 12.463
+    },
+    {
+     "i": 3,
+     "text": "The system organises the information according to the team you selected.",
+     "cue": "p2",
+     "t0": 12.883,
+     "t1": 17.056
+    },
+    {
+     "i": 4,
+     "text": "For example:",
+     "cue": null,
+     "t0": 17.806,
+     "t1": 18.649
+    },
+    {
+     "i": 5,
+     "text": "If you select Alpha Team, your attendance will appear in the Alpha tab.",
+     "cue": "alpha",
+     "t0": 18.949,
+     "t1": 22.81
+    },
+    {
+     "i": 6,
+     "text": "If you select Bravo Team, your attendance will appear in the Bravo tab.",
+     "cue": "bravo",
+     "t0": 23.23,
+     "t1": 27.365
+    },
+    {
+     "i": 7,
+     "text": "The same applies to Charlie and Delta.",
+     "cue": "cd",
+     "t0": 27.785,
+     "t1": 29.734
+    },
+    {
+     "i": 8,
+     "text": "The Google Sheet contains your attendance information, including the recorded Check-in and Check-out timestamps.",
+     "cue": "times",
+     "t0": 30.154,
+     "t1": 36.439
+    },
+    {
+     "i": 9,
+     "text": "These records can be monitored and reviewed by authorised supervisors.",
+     "cue": "sup",
+     "t0": 36.859,
+     "t1": 40.849
+    },
+    {
+     "i": 10,
+     "text": "As staff, you do not need to access or manually update the Google Sheet.",
+     "cue": "nostaff",
+     "t0": 41.269,
+     "t1": 45.27
+    },
+    {
+     "i": 11,
+     "text": "Your responsibility is to use the correct QR codes, complete the forms accurately, and verify that each submission is successful.",
+     "cue": "resp",
+     "t0": 45.69,
+     "t1": 53.608
+    }
+   ],
+   "start": 577.435
+  },
+  {
+   "id": "s11",
+   "title": "Common mistakes to avoid",
+   "dur": 104.619,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Before we finish, I want to highlight a few common mistakes that everyone should avoid.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 5.716
+    },
+    {
+     "i": 1,
+     "text": "Mistake 1: Scanning the wrong QR code",
+     "cue": "m1",
+     "t0": 6.466,
+     "t1": 9.213
+    },
+    {
+     "i": 2,
+     "text": "Some staff may accidentally scan the Check-out QR code when starting duty.",
+     "cue": null,
+     "t0": 9.633,
+     "t1": 13.993
+    },
+    {
+     "i": 3,
+     "text": "Always remember:",
+     "cue": null,
+     "t0": 14.413,
+     "t1": 15.439
+    },
+    {
+     "i": 4,
+     "text": "Green for Check-in and red for Check-out.",
+     "cue": "m1_ok",
+     "t0": 15.739,
+     "t1": 18.042
+    },
+    {
+     "i": 5,
+     "text": "Mistake 2: Selecting the wrong team",
+     "cue": "m2",
+     "t0": 18.792,
+     "t1": 21.118
+    },
+    {
+     "i": 6,
+     "text": "Always verify that you have selected your assigned team.",
+     "cue": "m2_ok",
+     "t0": 21.538,
+     "t1": 24.584
+    },
+    {
+     "i": 7,
+     "text": "If you accidentally submit attendance under the wrong team, immediately inform your respective DSE.",
+     "cue": null,
+     "t0": 25.004,
+     "t1": 31.095
+    },
+    {
+     "i": 8,
+     "text": "The DSE shall report the issue to the Operations Security Manager for correction.",
+     "cue": null,
+     "t0": 31.515,
+     "t1": 36.811
+    },
+    {
+     "i": 9,
+     "text": "Do not submit another form to try to fix the error yourself unless authorised.",
+     "cue": null,
+     "t0": 37.231,
+     "t1": 41.977
+    },
+    {
+     "i": 10,
+     "text": "Mistake 3: Entering the wrong Shift Start Date",
+     "cue": "m3",
+     "t0": 42.727,
+     "t1": 45.611
+    },
+    {
+     "i": 11,
+     "text": "This is particularly important for overnight shifts.",
+     "cue": null,
+     "t0": 46.031,
+     "t1": 48.781
+    },
+    {
+     "i": 12,
+     "text": "Remember that the shift start date must remain the same during both Check-in and Check-out.",
+     "cue": "m3_ok",
+     "t0": 49.201,
+     "t1": 54.095
+    },
+    {
+     "i": 13,
+     "text": "Mistake 4: Using a personal Gmail account",
+     "cue": "m4",
+     "t0": 54.845,
+     "t1": 57.758
+    },
+    {
+     "i": 14,
+     "text": "Always use your official AirAsia Google account when completing both forms.",
+     "cue": "m4_ok",
+     "t0": 58.178,
+     "t1": 62.503
+    },
+    {
+     "i": 15,
+     "text": "Mistake 5: Submitting multiple responses",
+     "cue": "m5",
+     "t0": 63.253,
+     "t1": 66.108
+    },
+    {
+     "i": 16,
+     "text": "You only need one successful Check-in and one successful Check-out for each shift.",
+     "cue": "m5_ok",
+     "t0": 66.528,
+     "t1": 71.126
+    },
+    {
+     "i": 17,
+     "text": "If you have received the confirmation message, do not submit another response.",
+     "cue": null,
+     "t0": 71.546,
+     "t1": 75.848
+    },
+    {
+     "i": 18,
+     "text": "Mistake 6: Forgetting to Check out",
+     "cue": "m6",
+     "t0": 76.598,
+     "t1": 78.856
+    },
+    {
+     "i": 19,
+     "text": "Some personnel may complete their Check-in but forget to submit their Check-out.",
+     "cue": null,
+     "t0": 79.276,
+     "t1": 83.367
+    },
+    {
+     "i": 20,
+     "text": "This will result in an incomplete attendance record.",
+     "cue": null,
+     "t0": 83.787,
+     "t1": 86.567
+    },
+    {
+     "i": 21,
+     "text": "Therefore, before leaving duty, always ensure that your Check-out has been properly submitted.",
+     "cue": "m6_ok",
+     "t0": 87.317,
+     "t1": 92.654
+    },
+    {
+     "i": 22,
+     "text": "If you encounter any issues or realise that you have submitted incorrect information, inform your respective DSE so the matter can be reported through the proper channel.",
+     "cue": "report",
+     "t0": 93.074,
+     "t1": 103.419
+    }
+   ],
+   "start": 632.243
+  },
+  {
+   "id": "s12",
+   "title": "Final recap",
+   "dur": 113.085,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Alright, everyone. Before we end today's briefing, let's quickly recap the whole procedure.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 6.222
+    },
+    {
+     "i": 1,
+     "text": "At the beginning of your shift:",
+     "cue": "in",
+     "t0": 6.972,
+     "t1": 8.318
+    },
+    {
+     "i": 2,
+     "text": "Scan the green Check-in QR code.",
+     "cue": "in1",
+     "t0": 8.618,
+     "t1": 10.551
+    },
+    {
+     "i": 3,
+     "text": "Sign in using your official AirAsia Google account.",
+     "cue": "in2",
+     "t0": 10.971,
+     "t1": 13.87
+    },
+    {
+     "i": 4,
+     "text": "Complete all the required information, including your designation, shift start date, team, name, and Staff ID.",
+     "cue": "in3",
+     "t0": 14.29,
+     "t1": 21.353
+    },
+    {
+     "i": 5,
+     "text": "Review your details, press Submit once, and verify that your response has been recorded.",
+     "cue": "in4",
+     "t0": 21.773,
+     "t1": 26.936
+    },
+    {
+     "i": 6,
+     "text": "At the end of your shift:",
+     "cue": "out",
+     "t0": 27.686,
+     "t1": 28.898
+    },
+    {
+     "i": 7,
+     "text": "Scan the red Check-out QR code.",
+     "cue": "out1",
+     "t0": 29.198,
+     "t1": 31.146
+    },
+    {
+     "i": 8,
+     "text": "Use the same official AirAsia Google account.",
+     "cue": "out2",
+     "t0": 31.566,
+     "t1": 34.173
+    },
+    {
+     "i": 9,
+     "text": "Enter the same Staff ID and shift start date, and select your correct team.",
+     "cue": "out3",
+     "t0": 34.593,
+     "t1": 38.948
+    },
+    {
+     "i": 10,
+     "text": "Press Submit once and wait for the confirmation message.",
+     "cue": "out4",
+     "t0": 39.368,
+     "t1": 42.509
+    },
+    {
+     "i": 11,
+     "text": "Now, there are three important rules I want everyone to remember:",
+     "cue": "rules",
+     "t0": 43.259,
+     "t1": 47.083
+    },
+    {
+     "i": 12,
+     "text": "Rule 1: Always use your official AirAsia Google account.",
+     "cue": "r1",
+     "t0": 47.833,
+     "t1": 51.34
+    },
+    {
+     "i": 13,
+     "text": "Rule 2: Never enter or change the attendance time manually. The system records it automatically.",
+     "cue": "r2",
+     "t0": 52.09,
+     "t1": 58.239
+    },
+    {
+     "i": 14,
+     "text": "Rule 3: Submit each form only once per shift and always verify the confirmation message.",
+     "cue": "r3",
+     "t0": 58.989,
+     "t1": 64.819
+    },
+    {
+     "i": 15,
+     "text": "And one additional reminder:",
+     "cue": null,
+     "t0": 65.569,
+     "t1": 67.105
+    },
+    {
+     "i": 16,
+     "text": "If you accidentally submit incorrect attendance information, immediately report it to your respective DSE.",
+     "cue": "rem",
+     "t0": 67.405,
+     "t1": 74.117
+    },
+    {
+     "i": 17,
+     "text": "The DSE shall escalate the matter to the Operations Security Manager for the necessary correction.",
+     "cue": "rem2",
+     "t0": 74.537,
+     "t1": 80.632
+    },
+    {
+     "i": 18,
+     "text": "The purpose of this procedure is to ensure that our attendance records remain accurate, properly organised, and available for authorised supervisory review.",
+     "cue": "purpose",
+     "t0": 81.052,
+     "t1": 90.433
+    },
+    {
+     "i": 19,
+     "text": "Everyone is responsible for ensuring that their attendance is recorded correctly.",
+     "cue": null,
+     "t0": 90.853,
+     "t1": 95.787
+    },
+    {
+     "i": 20,
+     "text": "That concludes the briefing on the AA/SEC/F/077 Attendance Record.",
+     "cue": "end",
+     "t0": 96.207,
+     "t1": 102.308
+    },
+    {
+     "i": 21,
+     "text": "Thank you, everyone, for your attention and cooperation.",
+     "cue": "thanks",
+     "t0": 102.728,
+     "t1": 105.892
+    },
+    {
+     "i": 22,
+     "text": "Before we finish, does anyone have any questions regarding the Check-in or Check-out procedure?",
+     "cue": "qs",
+     "t0": 106.642,
+     "t1": 111.885
+    }
+   ],
+   "start": 736.862
+  },
+  {
+   "id": "s13",
+   "title": "Staff understanding check",
+   "dur": 146.129,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Staff understanding check.",
+     "cue": "intro",
+     "t0": 1.0,
+     "t1": 4.132
+    },
+    {
+     "i": 1,
+     "text": "Which QR code should you scan at the beginning of your shift?",
+     "cue": "q1",
+     "t0": 4.552,
+     "t1": 8.587
+    },
+    {
+     "i": 2,
+     "text": "The green Check-in QR code.",
+     "cue": "a1",
+     "t0": 12.087,
+     "t1": 13.754
+    },
+    {
+     "i": 3,
+     "text": "Which QR code should you scan after completing your shift?",
+     "cue": "q2",
+     "t0": 15.154,
+     "t1": 19.377
+    },
+    {
+     "i": 4,
+     "text": "The red Check-out QR code.",
+     "cue": "a2",
+     "t0": 22.877,
+     "t1": 24.583
+    },
+    {
+     "i": 5,
+     "text": "Can you use your personal Gmail account?",
+     "cue": "q3",
+     "t0": 25.983,
+     "t1": 29.215
+    },
+    {
+     "i": 6,
+     "text": "No. Only the official AirAsia Google account should be used.",
+     "cue": "a3",
+     "t0": 32.715,
+     "t1": 36.166
+    },
+    {
+     "i": 7,
+     "text": "If your shift starts on 11 November at 8:00 PM and ends on 12 November at 8:00 AM, which date should you select during Check-out?",
+     "cue": "q4",
+     "t0": 37.566,
+     "t1": 47.725
+    },
+    {
+     "i": 8,
+     "text": "11 November, because that is the shift start date.",
+     "cue": "a4",
+     "t0": 51.225,
+     "t1": 54.395
+    },
+    {
+     "i": 9,
+     "text": "If you accidentally select Alpha Team instead of Bravo Team and have already submitted the form, what should you do?",
+     "cue": "q5",
+     "t0": 55.795,
+     "t1": 63.45
+    },
+    {
+     "i": 10,
+     "text": "Immediately inform the respective DSE. The DSE shall report the error to the Operations Security Manager for the necessary attendance correction.",
+     "cue": "a5",
+     "t0": 66.95,
+     "t1": 76.87
+    },
+    {
+     "i": 11,
+     "text": "Do you need to manually enter your Check-in and Check-out times?",
+     "cue": "q6",
+     "t0": 78.27,
+     "t1": 82.332
+    },
+    {
+     "i": 12,
+     "text": "No. The system automatically records the time of submission.",
+     "cue": "a6",
+     "t0": 85.832,
+     "t1": 89.278
+    },
+    {
+     "i": 13,
+     "text": "How do you confirm your attendance was successfully submitted?",
+     "cue": "q7",
+     "t0": 90.678,
+     "t1": 94.839
+    },
+    {
+     "i": 14,
+     "text": "The Google Form displays \"Your response has been recorded.\"",
+     "cue": "a7",
+     "t0": 98.339,
+     "t1": 101.751
+    },
+    {
+     "i": 15,
+     "text": "Can you submit the same Check-in form multiple times?",
+     "cue": "q8",
+     "t0": 103.151,
+     "t1": 107.054
+    },
+    {
+     "i": 16,
+     "text": "No. Only one successful Check-in submission is required per shift.",
+     "cue": "a8",
+     "t0": 110.554,
+     "t1": 114.805
+    },
+    {
+     "i": 17,
+     "text": "Who can review the attendance records in the central Google Sheet?",
+     "cue": "q9",
+     "t0": 116.205,
+     "t1": 120.736
+    },
+    {
+     "i": 18,
+     "text": "Authorised supervisors.",
+     "cue": "a9",
+     "t0": 124.236,
+     "t1": 125.661
+    },
+    {
+     "i": 19,
+     "text": "What must you do before completing your duty?",
+     "cue": "q10",
+     "t0": 127.061,
+     "t1": 130.234
+    },
+    {
+     "i": 20,
+     "text": "Scan the red Check-out QR code, complete the form, submit it, and verify the confirmation.",
+     "cue": "a10",
+     "t0": 133.734,
+     "t1": 139.529
+    },
+    {
+     "i": 21,
+     "text": "End of training. AA/SEC/F/077 – Attendance Record Staff Guidance",
+     "cue": "end",
+     "t0": 140.929,
+     "t1": 144.929,
+     "silent": true
+    }
+   ],
+   "start": 849.947
+  }
+ ],
+ "total": 996.076
+}

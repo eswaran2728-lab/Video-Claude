@@ -45,15 +45,17 @@
     <div id="fwa1" class="arrow" style="left:942px;top:322px;width:26px"></div>
     <div id="fw2" class="flow" style="left:990px;top:250px;width:360px;background:#1b2a4a"><b>Google Sheet records the time</b><span>automatically</span></div>
     <div id="fwa2" class="arrow" style="left:1362px;top:322px;width:26px"></div>
-    <div id="fw3" class="flow" style="left:1410px;top:250px;width:360px;background:#1e8a4c"><b>Appears under your team</b><span>Alpha, Bravo, Charlie or Delta</span></div>
-    <div id="sheet" class="shot" style="left:150px;top:480px;width:1620px;height:175.787px"><img src="assets/deck/image-10-1.png" alt=""></div>
-    <div id="hlt0" class="hl" style="left:700.34px;top:615.574px;width:86.17px;height:39.064px"></div>
-    <div id="hlt1" class="hl" style="left:792.255px;top:615.574px;width:86.17px;height:39.064px"></div>
-    <div id="hlt2" class="hl" style="left:887.617px;top:615.574px;width:94.213px;height:39.064px"></div>
-    <div id="hlt3" class="hl" style="left:981.83px;top:615.574px;width:94.213px;height:39.064px"></div>
-    <div id="hli" class="hl" style="left:205.149px;top:508.723px;width:195.319px;height:91.915px"></div>
-    <div id="hlo" class="hl" style="left:1526.426px;top:508.723px;width:166.596px;height:91.915px"></div>
-    <div id="sm" class="a" style="left:150px;top:667.787px;font-size:28px;color:#5b6577">Sample view, staff details hidden</div>
+    <div id="fw3" class="flow" style="left:1410px;top:250px;width:360px;background:#1e8a4c"><b>Appears under your team</b><span>Alpha, Bravo, Charlie, Delta or REDQ</span></div>
+    <div id="sheet" class="shot" style="left:150px;top:470px;width:1620px;height:234.269px"><img src="assets/deck/v02_sheet_strip.png" alt=""></div>
+    <div id="hlt0" class="hl" style="left:613.351px;top:668.826px;width:84.717px;height:36.307px"></div>
+    <div id="hlt1" class="hl" style="left:699.797px;top:668.826px;width:85.582px;height:36.307px"></div>
+    <div id="hlt2" class="hl" style="left:787.108px;top:668.826px;width:94.226px;height:36.307px"></div>
+    <div id="hlt3" class="hl" style="left:883.063px;top:668.826px;width:81.259px;height:36.307px"></div>
+    <div id="hlt4" class="hl" style="left:966.051px;top:668.826px;width:84.717px;height:36.307px"></div>
+    <div id="sheet2" class="shot" style="left:150px;top:470px;width:1620px;height:175.787px"><img src="assets/deck/image-10-1.png" alt=""></div>
+    <div id="hli" class="hl" style="left:205.149px;top:498.723px;width:195.319px;height:91.915px"></div>
+    <div id="hlo" class="hl" style="left:1526.426px;top:498.723px;width:166.596px;height:91.915px"></div>
+    <div id="sm" class="a" style="left:150px;top:716.269px;font-size:28px;color:#5b6577">Sample view, staff details hidden</div>
     <div id="sup" class="note navy" style="left:150px;top:720px">Reviewed by authorised supervisors</div>
     <div id="ns" class="note green" style="left:900px;top:720px">Staff: no need to open or update the Sheet</div>
     <div id="rs0" class="note green" style="left:150px;top:820px;width:520px;font-size:30px">✓ Use the correct QR codes</div>
@@ -74,6 +76,8 @@
     gsap.set("#hlt1",{opacity:0,scale:0.7});
     gsap.set("#hlt2",{opacity:0,scale:0.7});
     gsap.set("#hlt3",{opacity:0,scale:0.7});
+    gsap.set("#hlt4",{opacity:0,scale:0.7});
+    gsap.set("#sheet2",{opacity:0});
     gsap.set("#hli",{opacity:0,scale:0.7});
     gsap.set("#hlo",{opacity:0,scale:0.7});
     gsap.set("#sm",{opacity:0});
@@ -92,26 +96,30 @@
     tl.to("#fwa2",{scaleX:1,duration:0.5,ease:"power3.out"},13.283);
     tl.to("#fw3",{opacity:1,y:0,duration:0.5,ease:"power3.out"},13.383);
     tl.to("#sheet",{opacity:1,y:0,duration:0.5,ease:"power3.out"},14.083);
+    tl.to("#sheet",{opacity:0,duration:0.35,ease:"power2.in"},33.078);
     tl.to("#hlt0",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},19.349);
-    tl.to("#hlt0",{opacity:0,duration:0.35,ease:"power2.in"},29.804);
+    tl.to("#hlt0",{opacity:0,duration:0.35,ease:"power2.in"},33.078);
     tl.to("#hlt1",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},23.63);
-    tl.to("#hlt1",{opacity:0,duration:0.35,ease:"power2.in"},29.804);
-    tl.to("#hlt2",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},28.185);
-    tl.to("#hlt2",{opacity:0,duration:0.35,ease:"power2.in"},29.804);
-    tl.to("#hlt3",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},28.985);
-    tl.to("#hlt3",{opacity:0,duration:0.35,ease:"power2.in"},29.804);
-    tl.to("#hli",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},31.154);
-    tl.to("#hli",{opacity:0,duration:0.35,ease:"power2.in"},45.34);
-    tl.to("#hlo",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},32.154);
-    tl.to("#hlo",{opacity:0,duration:0.35,ease:"power2.in"},45.34);
+    tl.to("#hlt1",{opacity:0,duration:0.35,ease:"power2.in"},33.078);
+    tl.to("#hlt2",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},28.785);
+    tl.to("#hlt2",{opacity:0,duration:0.35,ease:"power2.in"},33.078);
+    tl.to("#hlt3",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},29.385);
+    tl.to("#hlt3",{opacity:0,duration:0.35,ease:"power2.in"},33.078);
+    tl.to("#hlt4",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},29.985);
+    tl.to("#hlt4",{opacity:0,duration:0.35,ease:"power2.in"},33.078);
+    tl.to("#sheet2",{opacity:1,duration:0.5,ease:"power3.out"},33.228);
+    tl.to("#hli",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},33.928);
+    tl.to("#hli",{opacity:0,duration:0.35,ease:"power2.in"},46.215);
+    tl.to("#hlo",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},34.628);
+    tl.to("#hlo",{opacity:0,duration:0.35,ease:"power2.in"},46.215);
     tl.to("#sm",{opacity:1,duration:0.5,ease:"power3.out"},14.383);
-    tl.to("#sup",{opacity:1,y:0,duration:0.5,ease:"power3.out"},37.159);
-    tl.to("#ns",{opacity:1,y:0,duration:0.5,ease:"power3.out"},41.569);
-    tl.to("#ns",{opacity:0,duration:0.35,ease:"power2.in"},45.34);
-    tl.to("#rs0",{opacity:1,y:0,duration:0.5,ease:"power3.out"},46.29);
-    tl.to("#rs1",{opacity:1,y:0,duration:0.5,ease:"power3.out"},47.59);
-    tl.to("#rs2",{opacity:1,y:0,duration:0.5,ease:"power3.out"},48.89);
-    tl.set({}, {}, 54.808);
+    tl.to("#sup",{opacity:1,y:0,duration:0.5,ease:"power3.out"},38.033);
+    tl.to("#ns",{opacity:1,y:0,duration:0.5,ease:"power3.out"},42.443);
+    tl.to("#ns",{opacity:0,duration:0.35,ease:"power2.in"},46.215);
+    tl.to("#rs0",{opacity:1,y:0,duration:0.5,ease:"power3.out"},47.165);
+    tl.to("#rs1",{opacity:1,y:0,duration:0.5,ease:"power3.out"},48.465);
+    tl.to("#rs2",{opacity:1,y:0,duration:0.5,ease:"power3.out"},49.765);
+    tl.set({}, {}, 55.682);
     window.__timelines["s10"] = tl;
   </script>
 </template>

@@ -173,6 +173,56 @@
    "start": 51.47
   },
   {
+   "id": "s02b",
+   "title": "Attendance recording via QR code",
+   "dur": 49.428,
+   "lines": [
+    {
+     "i": 0,
+     "text": "QR codes have been provided for attendance recording at the respective offices.",
+     "cue": "intro",
+     "t0": 1.0,
+     "t1": 6.133
+    },
+    {
+     "i": 1,
+     "text": "RedQ Office: The attendance QR code will be displayed at the RedQ Office for staff reporting to this location.",
+     "cue": "redq",
+     "t0": 6.553,
+     "t1": 14.148
+    },
+    {
+     "i": 2,
+     "text": "Group Security Operation Office: The attendance QR code will be displayed at the DSE workstation, under CCTV surveillance, for staff reporting to this office.",
+     "cue": "gso",
+     "t0": 14.568,
+     "t1": 25.798
+    },
+    {
+     "i": 3,
+     "text": "All staff are required to scan the QR code at their respective office premises to record their attendance.",
+     "cue": "all",
+     "t0": 26.218,
+     "t1": 32.811
+    },
+    {
+     "i": 4,
+     "text": "Strictly Prohibited: Staff are strictly prohibited from scanning or submitting their attendance QR code outside their respective designated office premises.",
+     "cue": "ban",
+     "t0": 33.231,
+     "t1": 43.134
+    },
+    {
+     "i": 5,
+     "text": "Any staff found violating this requirement will be subject to disciplinary action.",
+     "cue": "disc",
+     "t0": 43.554,
+     "t1": 48.228
+    }
+   ],
+   "start": 103.742
+  },
+  {
    "id": "s03",
    "title": "Start of shift: scan the Check-in QR",
    "dur": 41.516,
@@ -248,12 +298,12 @@
      "t1": 40.316
     }
    ],
-   "start": 103.742
+   "start": 153.17
   },
   {
    "id": "s04",
    "title": "Filling in the Check-in form",
-   "dur": 75.206,
+   "dur": 80.182,
    "lines": [
     {
      "i": 0,
@@ -313,116 +363,130 @@
     },
     {
      "i": 8,
-     "text": "There are three options:",
+     "text": "There are five options:",
      "cue": null,
      "t0": 28.366,
-     "t1": 29.606
+     "t1": 29.643
     },
     {
      "i": 9,
-     "text": "Security Executive (DSE)",
-     "cue": "dse",
-     "t0": 29.906,
-     "t1": 32.012
+     "text": "ASO – Assistant Security Officer",
+     "cue": "d1",
+     "t0": 29.943,
+     "t1": 32.235
     },
     {
      "i": 10,
-     "text": "Security Officer (SO)",
-     "cue": "so",
-     "t0": 32.432,
-     "t1": 34.092
+     "text": "SO – Security Officer",
+     "cue": "d2",
+     "t0": 32.655,
+     "t1": 34.426
     },
     {
      "i": 11,
-     "text": "Assistant Security Officer (ASO)",
-     "cue": "aso",
-     "t0": 34.512,
-     "t1": 36.758
+     "text": "SSO – Senior Security Officer",
+     "cue": "d3",
+     "t0": 34.846,
+     "t1": 37.226
     },
     {
      "i": 12,
-     "text": "Please select your actual designation.",
-     "cue": null,
-     "t0": 37.178,
-     "t1": 39.27
+     "text": "SE – Security Executive",
+     "cue": "d4",
+     "t0": 37.646,
+     "t1": 39.577
     },
     {
      "i": 13,
-     "text": "For example, if you are an Assistant Security Officer, select ASO.",
-     "cue": "aso_pick",
-     "t0": 40.02,
-     "t1": 44.223
+     "text": "SM – Security Manager",
+     "cue": "d5",
+     "t0": 39.997,
+     "t1": 41.734
     },
     {
      "i": 14,
-     "text": "Third: Shift Start Date",
-     "cue": "f_date",
-     "t0": 44.973,
-     "t1": 46.401
+     "text": "Please select your actual designation.",
+     "cue": null,
+     "t0": 42.154,
+     "t1": 44.246
     },
     {
      "i": 15,
-     "text": "You must select the date on which your shift begins.",
-     "cue": null,
-     "t0": 46.821,
-     "t1": 49.379
+     "text": "For example, if you are an Assistant Security Officer, select ASO.",
+     "cue": "aso_pick",
+     "t0": 44.996,
+     "t1": 49.199
     },
     {
      "i": 16,
-     "text": "Please make sure you enter the correct date because it will be used to match your Check-in and Check-out records.",
-     "cue": "date_match",
-     "t0": 49.799,
-     "t1": 55.099
+     "text": "Third: Shift Start Date",
+     "cue": "f_date",
+     "t0": 49.949,
+     "t1": 51.376
     },
     {
      "i": 17,
-     "text": "Fourth: Name",
-     "cue": "f_name",
-     "t0": 55.849,
-     "t1": 56.808
+     "text": "You must select the date on which your shift begins.",
+     "cue": null,
+     "t0": 51.796,
+     "t1": 54.355
     },
     {
      "i": 18,
-     "text": "Enter your name accurately.",
-     "cue": null,
-     "t0": 57.228,
-     "t1": 58.595
+     "text": "Please make sure you enter the correct date because it will be used to match your Check-in and Check-out records.",
+     "cue": "date_match",
+     "t0": 54.775,
+     "t1": 60.075
     },
     {
      "i": 19,
-     "text": "Fifth: Staff ID",
-     "cue": "f_id",
-     "t0": 59.345,
-     "t1": 60.706
+     "text": "Fourth: Name",
+     "cue": "f_name",
+     "t0": 60.825,
+     "t1": 61.784
     },
     {
      "i": 20,
-     "text": "Enter your correct Staff ID.",
+     "text": "Enter your name accurately.",
      "cue": null,
-     "t0": 61.126,
-     "t1": 62.826
+     "t0": 62.204,
+     "t1": 63.57
     },
     {
      "i": 21,
-     "text": "This is especially important because your Staff ID is used to identify and match your attendance information.",
-     "cue": "id_match",
-     "t0": 63.246,
-     "t1": 69.944
+     "text": "Fifth: Staff ID",
+     "cue": "f_id",
+     "t0": 64.32,
+     "t1": 65.682
     },
     {
      "i": 22,
+     "text": "Enter your correct Staff ID.",
+     "cue": null,
+     "t0": 66.102,
+     "t1": 67.801
+    },
+    {
+     "i": 23,
+     "text": "This is especially important because your Staff ID is used to identify and match your attendance information.",
+     "cue": "id_match",
+     "t0": 68.221,
+     "t1": 74.92
+    },
+    {
+     "i": 24,
      "text": "Please check your Staff ID carefully before submitting the form.",
      "cue": null,
-     "t0": 70.364,
-     "t1": 74.006
+     "t0": 75.34,
+     "t1": 78.982
     }
    ],
-   "start": 145.258
+   "start": 194.686
   },
   {
    "id": "s05",
    "title": "Selecting your team",
-   "dur": 99.934,
+   "dur": 101.397,
    "lines": [
     {
      "i": 0,
@@ -433,153 +497,160 @@
     },
     {
      "i": 1,
-     "text": "As everyone knows, we have four operational teams:",
+     "text": "As everyone knows, we have five operational teams:",
      "cue": "teams",
      "t0": 3.645,
-     "t1": 6.704
+     "t1": 6.797
     },
     {
      "i": 2,
      "text": "Alpha Team",
      "cue": "t_a",
-     "t0": 7.004,
-     "t1": 7.821
+     "t0": 7.097,
+     "t1": 7.915
     },
     {
      "i": 3,
      "text": "Bravo Team",
      "cue": "t_b",
-     "t0": 8.241,
-     "t1": 9.107
+     "t0": 8.335,
+     "t1": 9.201
     },
     {
      "i": 4,
      "text": "Charlie Team",
      "cue": "t_c",
-     "t0": 9.527,
-     "t1": 10.392
+     "t0": 9.621,
+     "t1": 10.485
     },
     {
      "i": 5,
      "text": "Delta Team",
      "cue": "t_d",
-     "t0": 10.812,
-     "t1": 11.679
+     "t0": 10.905,
+     "t1": 11.773
     },
     {
      "i": 6,
-     "text": "You must select the team you are assigned to for that particular shift.",
-     "cue": null,
-     "t0": 12.099,
-     "t1": 15.577
+     "text": "REDQ Team",
+     "cue": "t_e",
+     "t0": 12.193,
+     "t1": 13.141
     },
     {
      "i": 7,
-     "text": "Now, why is the team selection important?",
-     "cue": "why",
-     "t0": 16.327,
-     "t1": 18.736
+     "text": "You must select the team you are assigned to for that particular shift.",
+     "cue": null,
+     "t0": 13.561,
+     "t1": 17.039
     },
     {
      "i": 8,
-     "text": "Because once you submit your attendance, the system will automatically organise the record into the corresponding team's tab in our central Google Sheet.",
-     "cue": "tabs",
-     "t0": 19.156,
-     "t1": 27.794
+     "text": "Now, why is the team selection important?",
+     "cue": "why",
+     "t0": 17.789,
+     "t1": 20.199
     },
     {
      "i": 9,
-     "text": "For example:",
-     "cue": null,
-     "t0": 28.544,
-     "t1": 29.387
+     "text": "Because once you submit your attendance, the system will automatically organise the record into the corresponding team's tab in our central Google Sheet.",
+     "cue": "tabs",
+     "t0": 20.619,
+     "t1": 29.256
     },
     {
      "i": 10,
-     "text": "Let's say you belong to Bravo Team, but you accidentally select Alpha Team when completing the form.",
-     "cue": "ex_pick",
-     "t0": 29.687,
-     "t1": 35.554
+     "text": "For example:",
+     "cue": null,
+     "t0": 30.006,
+     "t1": 30.849
     },
     {
      "i": 11,
-     "text": "When you submit your attendance, your record will appear under Alpha Team instead of Bravo Team.",
-     "cue": "ex_land",
-     "t0": 35.974,
-     "t1": 41.053
+     "text": "Let's say you belong to Bravo Team, but you accidentally select Alpha Team when completing the form.",
+     "cue": "ex_pick",
+     "t0": 31.149,
+     "t1": 37.016
     },
     {
      "i": 12,
-     "text": "This will result in an incorrect attendance record.",
-     "cue": "ex_wrong",
-     "t0": 41.473,
-     "t1": 44.204
+     "text": "When you submit your attendance, your record will appear under Alpha Team instead of Bravo Team.",
+     "cue": "ex_land",
+     "t0": 37.436,
+     "t1": 42.515
     },
     {
      "i": 13,
-     "text": "Now, what should you do if this happens?",
-     "cue": null,
-     "t0": 44.954,
-     "t1": 46.84
+     "text": "This will result in an incorrect attendance record.",
+     "cue": "ex_wrong",
+     "t0": 42.935,
+     "t1": 45.666
     },
     {
      "i": 14,
-     "text": "If you realise that you selected the wrong team before submitting, simply correct your selection.",
-     "cue": "fix_before",
-     "t0": 47.26,
-     "t1": 52.272
+     "text": "Now, what should you do if this happens?",
+     "cue": null,
+     "t0": 46.416,
+     "t1": 48.302
     },
     {
      "i": 15,
-     "text": "However, if you have already submitted the attendance form with the wrong team, you must immediately inform your respective Duty Security Executive (DSE).",
-     "cue": "fix_after",
-     "t0": 53.022,
-     "t1": 62.431
+     "text": "If you realise that you selected the wrong team before submitting, simply correct your selection.",
+     "cue": "fix_before",
+     "t0": 48.722,
+     "t1": 53.734
     },
     {
      "i": 16,
-     "text": "The respective DSE shall then report the error to the Operations Security Manager for the necessary correction to the attendance record.",
-     "cue": "osm",
-     "t0": 62.851,
-     "t1": 71.248
+     "text": "However, if you have already submitted the attendance form with the wrong team, you must immediately inform your respective Duty Security Executive (DSE).",
+     "cue": "fix_after",
+     "t0": 54.484,
+     "t1": 63.893
     },
     {
      "i": 17,
-     "text": "Staff must not submit another attendance response to correct the mistake unless instructed by an authorised supervisor.",
-     "cue": "no_resubmit",
-     "t0": 71.668,
-     "t1": 79.449
+     "text": "The respective DSE shall then report the error to the Operations Security Manager for the necessary correction to the attendance record.",
+     "cue": "osm",
+     "t0": 64.313,
+     "t1": 72.711
     },
     {
      "i": 18,
-     "text": "So, the reporting flow is simple:",
-     "cue": "flow",
-     "t0": 80.199,
-     "t1": 81.979
+     "text": "Staff must not submit another attendance response to correct the mistake unless instructed by an authorised supervisor.",
+     "cue": "no_resubmit",
+     "t0": 73.131,
+     "t1": 80.911
     },
     {
      "i": 19,
-     "text": "Staff → Respective DSE → Operations Security Manager → Attendance Correction",
-     "cue": "flow_all",
-     "t0": 82.279,
-     "t1": 88.256
+     "text": "So, the reporting flow is simple:",
+     "cue": "flow",
+     "t0": 81.661,
+     "t1": 83.441
     },
     {
      "i": 20,
-     "text": "Please remember that attendance corrections must be handled through the proper reporting channel.",
-     "cue": null,
-     "t0": 88.676,
-     "t1": 93.815
+     "text": "Staff → Respective DSE → Operations Security Manager → Attendance Correction",
+     "cue": "flow_all",
+     "t0": 83.741,
+     "t1": 89.718
     },
     {
      "i": 21,
+     "text": "Please remember that attendance corrections must be handled through the proper reporting channel.",
+     "cue": null,
+     "t0": 90.138,
+     "t1": 95.277
+    },
+    {
+     "i": 22,
      "text": "Therefore, always double-check your team selection before pressing Submit.",
      "cue": "double",
-     "t0": 94.565,
-     "t1": 98.735
+     "t0": 96.027,
+     "t1": 100.197
     }
    ],
-   "start": 220.464
+   "start": 274.868
   },
   {
    "id": "s06",
@@ -720,7 +791,7 @@
      "t1": 65.157
     }
    ],
-   "start": 320.398
+   "start": 376.265
   },
   {
    "id": "s07",
@@ -798,7 +869,7 @@
      "t1": 37.195
     }
    ],
-   "start": 386.755
+   "start": 442.622
   },
   {
    "id": "s08",
@@ -953,7 +1024,7 @@
      "t1": 92.633
     }
    ],
-   "start": 425.15
+   "start": 481.017
   },
   {
    "id": "s09",
@@ -1045,12 +1116,12 @@
      "t1": 57.252
     }
    ],
-   "start": 518.983
+   "start": 574.85
   },
   {
    "id": "s10",
    "title": "Where does your attendance record go?",
-   "dur": 54.808,
+   "dur": 55.682,
    "lines": [
     {
      "i": 0,
@@ -1103,41 +1174,41 @@
     },
     {
      "i": 7,
-     "text": "The same applies to Charlie and Delta.",
+     "text": "The same applies to Charlie, Delta and REDQ.",
      "cue": "cd",
      "t0": 27.785,
-     "t1": 29.734
+     "t1": 30.608
     },
     {
      "i": 8,
      "text": "The Google Sheet contains your attendance information, including the recorded Check-in and Check-out timestamps.",
      "cue": "times",
-     "t0": 30.154,
-     "t1": 36.439
+     "t0": 31.028,
+     "t1": 37.313
     },
     {
      "i": 9,
      "text": "These records can be monitored and reviewed by authorised supervisors.",
      "cue": "sup",
-     "t0": 36.859,
-     "t1": 40.849
+     "t0": 37.733,
+     "t1": 41.723
     },
     {
      "i": 10,
      "text": "As staff, you do not need to access or manually update the Google Sheet.",
      "cue": "nostaff",
-     "t0": 41.269,
-     "t1": 45.27
+     "t0": 42.143,
+     "t1": 46.145
     },
     {
      "i": 11,
      "text": "Your responsibility is to use the correct QR codes, complete the forms accurately, and verify that each submission is successful.",
      "cue": "resp",
-     "t0": 45.69,
-     "t1": 53.608
+     "t0": 46.565,
+     "t1": 54.482
     }
    ],
-   "start": 577.435
+   "start": 633.302
   },
   {
    "id": "s11",
@@ -1306,7 +1377,7 @@
      "t1": 103.419
     }
    ],
-   "start": 632.243
+   "start": 688.984
   },
   {
    "id": "s12",
@@ -1475,7 +1546,7 @@
      "t1": 111.885
     }
    ],
-   "start": 736.862
+   "start": 793.603
   },
   {
    "id": "s13",
@@ -1638,8 +1709,8 @@
      "silent": true
     }
    ],
-   "start": 849.947
+   "start": 906.688
   }
  ],
- "total": 996.076
+ "total": 1052.817
 }

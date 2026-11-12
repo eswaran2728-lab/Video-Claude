@@ -1,6 +1,8 @@
 # AA/SEC/F/077 Attendance Record - trainer's speaking script (creator-supplied, verbatim wording), split into scenes and lines.
 # Each line: (caption text, cue id or None[, spoken override]). The caption shows the script's text; the spoken override only
 # changes how the AI voice pronounces codes, times and arrows (e.g. "AA/SEC/F/077" -> "A A, sec, F, zero seven seven").
+# v02 (creator's update): new scene s02b (where to scan: RedQ Office / Group Security Operation Office, prohibition),
+# designation list ASO / SO / SSO / SE / SM, and the REDQ team.
 # A cue id names the visual beat that appears when that line starts (see build16.py).
 FORM = "A. A. S. E. C. F. zero seven seven"     # spelled letter by letter: the clearest reading in the voice check
 
@@ -33,6 +35,18 @@ SCENES = [
   ("4. Verify that your response has been recorded.", "st4", "Four. Verify that your response has been recorded."),
   ("Now, let's go through the Check-in procedure first.", None),
  ]),
+ dict(id="s02b", title="Attendance recording via QR code", lines=[            # v02: added from the creator's notice
+  ("QR codes have been provided for attendance recording at the respective offices.", "intro", "Q R codes have been provided for attendance recording at the respective offices."),
+  ("RedQ Office: The attendance QR code will be displayed at the RedQ Office for staff reporting to this location.", "redq",
+   "At the Red Q Office, the attendance Q R code will be displayed at the Red Q Office, for staff reporting to this location."),
+  ("Group Security Operation Office: The attendance QR code will be displayed at the DSE workstation, under CCTV surveillance, for staff reporting to this office.", "gso",
+   "At the Group Security Operation Office, the attendance Q R code will be displayed at the D S E workstation, under C C T V surveillance, for staff reporting to this office."),
+  ("All staff are required to scan the QR code at their respective office premises to record their attendance.", "all",
+   "All staff are required to scan the Q R code at their respective office premises to record their attendance."),
+  ("Strictly Prohibited: Staff are strictly prohibited from scanning or submitting their attendance QR code outside their respective designated office premises.", "ban",
+   "Strictly prohibited. Staff are strictly prohibited from scanning or submitting their attendance Q R code outside their respective designated office premises."),
+  ("Any staff found violating this requirement will be subject to disciplinary action.", "disc"),
+ ]),
  dict(id="s03", title="Start of shift: scan the Check-in QR", lines=[
   ("When you report for duty, you must first scan the green Check-in QR code.", "qr", "When you report for duty, you must first scan the green Check-in Q R code."),
   ("Once you scan it, you will be directed to the Google Form.", "form"),
@@ -54,10 +68,12 @@ SCENES = [
   ("This allows your official company email address to be included with your attendance submission.", None),
   ("Second: Designation", "f_desig", "Second. Designation."),
   ("You will be asked to select your designation.", None),
-  ("There are three options:", None),
-  ("Security Executive (DSE)", "dse", "Security Executive, D S E."),
-  ("Security Officer (SO)", "so", "Security Officer, S O."),
-  ("Assistant Security Officer (ASO)", "aso", "Assistant Security Officer, A S O."),
+  ("There are five options:", None),
+  ("ASO – Assistant Security Officer", "d1", "A S O, Assistant Security Officer."),
+  ("SO – Security Officer", "d2", "S. O. Security Officer."),
+  ("SSO – Senior Security Officer", "d3", "S S O, Senior Security Officer."),
+  ("SE – Security Executive", "d4", "S E, Security Executive."),
+  ("SM – Security Manager", "d5", "S M, Security Manager."),
   ("Please select your actual designation.", None),
   ("For example, if you are an Assistant Security Officer, select ASO.", "aso_pick", "For example, if you are an Assistant Security Officer, select A S O."),
   ("Third: Shift Start Date", "f_date", "Third. Shift Start Date."),
@@ -73,8 +89,8 @@ SCENES = [
  ]),
  dict(id="s05", title="Selecting your team", lines=[
   ("Next, you need to select your assigned team.", None),
-  ("As everyone knows, we have four operational teams:", "teams"),
-  ("Alpha Team", "t_a"), ("Bravo Team", "t_b"), ("Charlie Team", "t_c"), ("Delta Team", "t_d"),
+  ("As everyone knows, we have five operational teams:", "teams"),
+  ("Alpha Team", "t_a"), ("Bravo Team", "t_b"), ("Charlie Team", "t_c"), ("Delta Team", "t_d"), ("REDQ Team", "t_e", "Red Q Team."),
   ("You must select the team you are assigned to for that particular shift.", None),
   ("Now, why is the team selection important?", "why"),
   ("Because once you submit your attendance, the system will automatically organise the record into the corresponding team's tab in our central Google Sheet.", "tabs"),
@@ -173,7 +189,7 @@ SCENES = [
   ("For example:", None),
   ("If you select Alpha Team, your attendance will appear in the Alpha tab.", "alpha"),
   ("If you select Bravo Team, your attendance will appear in the Bravo tab.", "bravo"),
-  ("The same applies to Charlie and Delta.", "cd"),
+  ("The same applies to Charlie, Delta and REDQ.", "cd", "The same applies to Charlie, Delta and Red Q."),
   ("The Google Sheet contains your attendance information, including the recorded Check-in and Check-out timestamps.", "times"),
   ("These records can be monitored and reviewed by authorised supervisors.", "sup"),
   ("As staff, you do not need to access or manually update the Google Sheet.", "nostaff"),
