@@ -109,3 +109,9 @@ history and its timing is in `timing_v01.json`.
   designation.
 - **Check-out form (scene 09):** the deck screenshot is kept for Email, Staff ID and Shift start date, and its team card is replaced with the creator's new one (five teams, with REDQ) in `v02_checkout_form.png` (preview v02b).
 - **Length:** 17 min 33 s (14 scenes).
+
+## Final v02 (creator: "proceed final" on preview v02b)
+- **File:** `FINAL_AA-SEC-F-077_Attendance_Training_v02_1920x1080.mp4` (not in git), rendered with `--quality high --sdr --workers 3`
+  and mastered with `master_final.sh`.
+- **Checks:** full decode; loudness; black detection; audio lag at three points (values in `render_final_v02.log` / the
+  session log). The v01 final is kept. Nothing is published.
