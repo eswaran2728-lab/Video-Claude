@@ -342,7 +342,7 @@ scenes.append(scan_out)
 # ---------------- S08 CHECK-OUT FORM ----------------
 S = Scene(SC["s08"]); scenes.append(S); at, tm = S.c("attn"), S.c("team")
 S.add("h", f'<div class="num" style="background:{RED}">6</div><div class="h1">Complete the Check-out form</div>', "left:150px;top:120px", "a row", 0.3, at, "left")
-k = shot(S, "sh", "image-8-1.png", 150, 250, 560, (525, 560), 0.6, at)
+k = shot(S, "sh", "v02_checkout_form.png", 150, 250, 540, (525, 587), 0.6, at)      # v02: team card with REDQ
 for nm, (y0, y1), cue in (("e", (20, 78), "email"), ("i", (125, 198), "id"), ("d", (250, 328), "date")):
     S.hl(f"hl{nm}", 150 + 15 * k, 250 + y0 * k, 470 * k, (y1 - y0) * k, S.c(cue), at)
 for i, (lab, sub, cue) in enumerate((("Email", "tick the Record email box", "email"), ("Staff ID", "the SAME Staff ID as Check-in", "id"), ("Shift start date", "the date your shift STARTED", "date"))):

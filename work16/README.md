@@ -107,5 +107,5 @@ history and its timing is in `timing_v01.json`.
   - The deck's earlier sample view is kept for the Check-in/Check-out timestamp columns, which the new screenshot does not show.
 - **Unchanged:** the role "Duty Security Executive (DSE)" in the reporting flow, which is a duty role rather than a form
   designation.
-- **Not updated (no new screenshot):** the Check-out form screenshot (scene 09) still shows four team options.
+- **Check-out form (scene 09):** the deck screenshot is kept for Email, Staff ID and Shift start date, and its team card is replaced with the creator's new one (five teams, with REDQ) in `v02_checkout_form.png` (preview v02b).
 - **Length:** 17 min 33 s (14 scenes).

@@ -24,3 +24,10 @@ sh = Image.open("edit/assets/deck/v02_sheet.png"); top = sh.crop((0, 70, 1874, 2
 strip = Image.new("RGB", (1874, top.height + tabs.height), (255, 255, 255)); strip.paste(top, (0, 0)); strip.paste(tabs, (0, top.height)); strip.save("edit/assets/deck/v02_sheet_strip.png")
 print("strip", strip.size)
 Image.open("edit/assets/deck/v02_team.png").crop((0, 0, 400, 348)).save("edit/assets/deck/v02_team_list.png")
+# Check-out form (scene 09): keep the deck's top part (Email, Staff ID, Shift start date) and replace the old 4-option team card
+# with the creator's new one (with REDQ), scaled to the same card width.
+old = Image.open("edit/assets/deck/image-8-1.png").convert("RGB")                      # 525 x 560; team card starts at y ~352
+team = Image.open("src/v02/checkout_team_radio.png").convert("RGB").crop((92, 6, 870, 364))
+team = team.resize((511, round(team.height * 511 / team.width)), Image.LANCZOS)
+out = Image.new("RGB", (525, 352 + team.height), old.getpixel((2, 345))); out.paste(old.crop((0, 0, 525, 352)), (0, 0)); out.paste(team, (7, 352))
+out.save("edit/assets/deck/v02_checkout_form.png"); print("checkout", out.size)
