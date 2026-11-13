@@ -1,0 +1,228 @@
+1
+00:00:00,500 --> 00:00:04,869
+Security fills in the Acknowledgement of Receipt and brings the phone.
+
+2
+00:00:05,319 --> 00:00:11,404
+This guide is for staff handing items to Security, CBTO staff, and witnesses.
+
+3
+00:00:12,504 --> 00:00:16,119
+Before, this was a printed paper form, signed with a pen.
+
+4
+00:00:16,919 --> 00:00:22,958
+Now it is the same form, on the Security officer’s phone, and the signed PDF is
+
+5
+00:00:22,958 --> 00:00:24,487
+saved automatically.
+
+6
+00:00:25,287 --> 00:00:27,306
+Every form works in four steps.
+
+7
+00:00:27,756 --> 00:00:30,869
+Security fills the form, and hands you the phone.
+
+8
+00:00:31,319 --> 00:00:32,487
+You check and sign.
+
+9
+00:00:33,287 --> 00:00:36,615
+Then the phone goes back, and Security signs and saves.
+
+10
+00:00:37,065 --> 00:00:38,362
+Blue is Security.
+
+11
+00:00:38,812 --> 00:00:39,875
+Orange is you.
+
+12
+00:00:40,625 --> 00:00:43,323
+There is nothing to install, and no account.
+
+13
+00:00:44,123 --> 00:00:47,935
+Read the form before you sign, and sign only for yourself.
+
+14
+00:00:48,685 --> 00:00:50,757
+One form, two situations.
+
+15
+00:00:51,207 --> 00:00:54,655
+In Situation A, staff hand items to Security.
+
+16
+00:00:55,905 --> 00:01:00,072
+In Situation B, Security hands items to CBTO.
+
+17
+00:01:01,322 --> 00:01:06,789
+In both, Security fills the form, the Recipient signs first, and a witness signs.
+
+18
+00:01:07,589 --> 00:01:10,931
+Situation A: you hand items to Security.
+
+19
+00:01:11,381 --> 00:01:13,984
+Security signs first, as Recipient.
+
+20
+00:01:15,084 --> 00:01:18,377
+In the app, the order is: Recipient, Security staff.
+
+21
+00:01:18,827 --> 00:01:20,618
+Handed over by, you.
+
+22
+00:01:21,418 --> 00:01:22,492
+Then the witness.
+
+23
+00:01:22,942 --> 00:01:26,523
+Security types all names, items and IDs first.
+
+24
+00:01:26,973 --> 00:01:28,385
+You only check and sign.
+
+25
+00:01:29,135 --> 00:01:31,116
+Security passes you the phone.
+
+26
+00:01:32,766 --> 00:01:34,598
+The orange box shows your name.
+
+27
+00:01:35,398 --> 00:01:38,258
+Check your name, your role, and the items listed.
+
+28
+00:01:40,558 --> 00:01:44,381
+If everything is correct, sign with your finger and tap ‘Confirm’.
+
+29
+00:01:45,181 --> 00:01:47,194
+Tap ‘Clear’ if you need to sign again.
+
+30
+00:01:48,294 --> 00:01:53,420
+Next, the witness does the same: check their own name, sign, and tap ‘Confirm’.
+
+31
+00:01:54,520 --> 00:01:58,644
+When the screen says so, the witness gives the phone back to Security.
+
+32
+00:01:59,994 --> 00:02:01,790
+Security saves the record.
+
+33
+00:02:02,590 --> 00:02:06,768
+Situation B: Security hands items to CBTO.
+
+34
+00:02:07,218 --> 00:02:10,531
+CBTO staff sign first, as Recipient.
+
+35
+00:02:11,631 --> 00:02:15,471
+In the app, the order is: Recipient, CBTO staff.
+
+36
+00:02:15,921 --> 00:02:18,140
+Handed over by, Security staff.
+
+37
+00:02:18,940 --> 00:02:20,014
+Then the witness.
+
+38
+00:02:20,814 --> 00:02:23,685
+Check every item listed is what you received.
+
+39
+00:02:25,785 --> 00:02:29,464
+If you are the CBTO staff member, you sign first.
+
+40
+00:02:31,464 --> 00:02:34,077
+Scroll up and check every item you received.
+
+41
+00:02:36,377 --> 00:02:38,580
+Sign with your finger and tap ‘Confirm’.
+
+42
+00:02:39,380 --> 00:02:40,888
+Tap ‘Clear’ to sign again.
+
+43
+00:02:41,988 --> 00:02:43,925
+Pass the phone back to Security.
+
+44
+00:02:45,575 --> 00:02:48,229
+Security signs as ‘Handed over by’.
+
+45
+00:02:49,029 --> 00:02:51,880
+Then the witness checks, signs and confirms.
+
+46
+00:02:52,980 --> 00:02:57,542
+The witness does the same: check their own name, sign, and tap ‘Confirm’.
+
+47
+00:02:58,642 --> 00:03:02,766
+When the screen says so, the witness gives the phone back to Security.
+
+48
+00:03:04,116 --> 00:03:05,912
+Security saves the record.
+
+49
+00:03:06,712 --> 00:03:09,488
+This is a real Saved screen from a TEST record.
+
+50
+00:03:09,938 --> 00:03:13,137
+The Record ID is in the PDF file name.
+
+51
+00:03:14,587 --> 00:03:17,541
+Security staff email the PDF to you.
+
+52
+00:03:18,341 --> 00:03:19,701
+Keep it for your records.
+
+53
+00:03:20,501 --> 00:03:24,824
+Remember: check your name and role, and read the details before signing.
+
+54
+00:03:25,624 --> 00:03:29,070
+Don’t sign for someone else, or if the details are wrong.
+
+55
+00:03:29,870 --> 00:03:33,528
+Don’t close the app, press Back, or take photos of the screen.
+
+56
+00:03:34,278 --> 00:03:40,944
+Your signature goes into one signed PDF per form, with every signature and a Record ID.
+
+57
+00:03:41,394 --> 00:03:48,511
+It is kept in a restricted AirAsia folder, with a record log, and a PDF copy is emailed to you.
+
