@@ -62,3 +62,9 @@ cd .. && ./master_preview.sh renders/draft_v01.mp4 PREVIEW_FOCA_Checklist_traini
   - Output: 1280x720, 15,234 frames, 507.9 s; −14.0 LUFS, −1.3 dBFS peak.
   - Full decode with 0 errors; audio lag 0 ms; `hyperframes check` 0 errors.
 - **Final (only after approval):** `render --quality high --sdr --workers 3` → `./master_final.sh`.
+
+## Final v01 (creator: "proceed final")
+- **File:** `FINAL_FOCA_Checklist_Training_v01_1920x1080.mp4` (not in git), rendered with `--quality high --sdr --workers 3` and mastered
+  with `master_final.sh`.
+- **Specs:** 1920x1080, 30 fps, 15,234 frames, 507.9 s, 44 MB; −14.0 LUFS, −2.0 dBFS peak.
+- **Checks:** full decode with 0 errors; no black stretches; audio lag 0 ms at three points. Nothing is published.
