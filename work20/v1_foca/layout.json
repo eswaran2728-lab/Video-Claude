@@ -1,0 +1,135 @@
+{
+ "total": 86.499,
+ "scenes": [
+  {
+   "title": "Security hands you the phone",
+   "t0": 0.0,
+   "t1": 18.225
+  },
+  {
+   "title": "Check the details",
+   "t0": 18.225,
+   "t1": 37.713
+  },
+  {
+   "title": "Sign and confirm",
+   "t0": 37.713,
+   "t1": 55.232
+  },
+  {
+   "title": "Give the phone back and receive the PDF",
+   "t0": 55.232,
+   "t1": 86.499
+  }
+ ],
+ "lines": [
+  {
+   "i": 0,
+   "text": "Security has filled in the FOCA Checklist and hands you the phone.",
+   "t0": 0.5,
+   "t1": 4.502
+  },
+  {
+   "i": 1,
+   "text": "If you are the Airline Representative, your job is to check the checklist and sign it.",
+   "t0": 5.452,
+   "t1": 10.978
+  },
+  {
+   "i": 2,
+   "text": "You use Security\u2019s phone.",
+   "t0": 11.578,
+   "t1": 13.044
+  },
+  {
+   "i": 3,
+   "text": "There\u2019s no app to install and no account to sign in to.",
+   "t0": 13.644,
+   "t1": 17.225
+  },
+  {
+   "i": 4,
+   "text": "Tap the orange button to show that you have the phone.",
+   "t0": 19.625,
+   "t1": 22.649
+  },
+  {
+   "i": 5,
+   "text": "Read the flight details.",
+   "t0": 23.599,
+   "t1": 25.109
+  },
+  {
+   "i": 6,
+   "text": "Then check each line that Security has marked.",
+   "t0": 26.859,
+   "t1": 29.784
+  },
+  {
+   "i": 7,
+   "text": "If anything is wrong, tap \u2018Something is wrong\u2019 and give the phone back to Security.",
+   "t0": 31.934,
+   "t1": 36.813
+  },
+  {
+   "i": 8,
+   "text": "If everything is correct, type your own name and ID or staff number.",
+   "t0": 39.013,
+   "t1": 43.413
+  },
+  {
+   "i": 9,
+   "text": "Sign in the box with your finger.",
+   "t0": 44.363,
+   "t1": 46.086
+  },
+  {
+   "i": 10,
+   "text": "If you need to redo your signature, tap \u2018Clear\u2019 and sign again.",
+   "t0": 47.636,
+   "t1": 51.283
+  },
+  {
+   "i": 11,
+   "text": "Then tap \u2018Confirm my signature\u2019.",
+   "t0": 52.233,
+   "t1": 54.232
+  },
+  {
+   "i": 12,
+   "text": "When the screen asks, give the phone back to Security.",
+   "t0": 56.432,
+   "t1": 59.577
+  },
+  {
+   "i": 13,
+   "text": "Security signs and saves the record.",
+   "t0": 60.177,
+   "t1": 62.682
+  },
+  {
+   "i": 14,
+   "text": "The app creates a signed PDF with a Record ID.",
+   "t0": 63.682,
+   "t1": 67.331
+  },
+  {
+   "i": 15,
+   "text": "AirAsia Security keeps it in a restricted folder and logs the record.",
+   "t0": 68.731,
+   "t1": 73.571
+  },
+  {
+   "i": 16,
+   "text": "Security emails you a copy of the signed PDF.",
+   "t0": 74.521,
+   "t1": 78.189
+  },
+  {
+   "i": 17,
+   "text": "Keep it for your records.",
+   "t0": 79.139,
+   "t1": 80.499
+  }
+ ]
+}

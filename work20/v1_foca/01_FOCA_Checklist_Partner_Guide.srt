@@ -1,0 +1,72 @@
+1
+00:00:00,500 --> 00:00:04,502
+Security has filled in the FOCA Checklist and hands you the phone.
+
+2
+00:00:05,452 --> 00:00:10,978
+If you are the Airline Representative, your job is to check the checklist and sign it.
+
+3
+00:00:11,578 --> 00:00:13,044
+You use Security’s phone.
+
+4
+00:00:13,644 --> 00:00:17,225
+There’s no app to install and no account to sign in to.
+
+5
+00:00:19,625 --> 00:00:22,649
+Tap the orange button to show that you have the phone.
+
+6
+00:00:23,599 --> 00:00:25,109
+Read the flight details.
+
+7
+00:00:26,859 --> 00:00:29,784
+Then check each line that Security has marked.
+
+8
+00:00:31,934 --> 00:00:36,813
+If anything is wrong, tap ‘Something is wrong’ and give the phone back to Security.
+
+9
+00:00:39,013 --> 00:00:43,413
+If everything is correct, type your own name and ID or staff number.
+
+10
+00:00:44,363 --> 00:00:46,086
+Sign in the box with your finger.
+
+11
+00:00:47,636 --> 00:00:51,283
+If you need to redo your signature, tap ‘Clear’ and sign again.
+
+12
+00:00:52,233 --> 00:00:54,232
+Then tap ‘Confirm my signature’.
+
+13
+00:00:56,432 --> 00:00:59,577
+When the screen asks, give the phone back to Security.
+
+14
+00:01:00,177 --> 00:01:02,682
+Security signs and saves the record.
+
+15
+00:01:03,682 --> 00:01:07,331
+The app creates a signed PDF with a Record ID.
+
+16
+00:01:08,731 --> 00:01:13,571
+AirAsia Security keeps it in a restricted folder and logs the record.
+
+17
+00:01:14,521 --> 00:01:18,189
+Security emails you a copy of the signed PDF.
+
+18
+00:01:19,139 --> 00:01:20,499
+Keep it for your records.
+

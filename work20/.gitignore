@@ -1,0 +1,13 @@
+*.mp4
+*.wav
+*.mp3
+*.log
+renders/
+vo/
+**/edit/assets/media/
+**/edit/assets/slides/
+slides/
+sheets/
+src/
+__pycache__/
+**/.hyperframes/

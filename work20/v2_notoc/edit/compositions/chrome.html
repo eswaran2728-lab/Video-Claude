@@ -1,0 +1,56 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; font-family: "Inter", sans-serif; }
+.code { position: absolute; left: 240px; top: 18px; color: #c9cbd1; font-weight: 700; font-size: 28px; letter-spacing: 1px; }
+.slabel { position: absolute; right: 240px; top: 16px; font-weight: 800; font-size: 30px; letter-spacing: 2px; text-align: right; }
+.role { position: absolute; left: 240px; top: 896px; height: 52px; display: flex; align-items: center; gap: 12px; padding: 0 22px 0 16px; border-radius: 30px; color: #fff; font-weight: 800; font-size: 28px; letter-spacing: 1px; }
+.stitle { position: absolute; right: 240px; top: 904px; color: #e8e9ec; font-weight: 700; font-size: 30px; text-align: right; }
+.callout { position: absolute; right: 240px; top: 893px; padding: 10px 22px; border-radius: 14px; font-weight: 800; font-size: 28px; line-height: 1.2; white-space: nowrap; }
+.pbar { position: absolute; left: 0; top: 1074px; width: 1920px; height: 6px; background: #c8102e; transform-origin: 0 50%; }
+</style>
+  <div data-hf-id="hf-sbc5" id="root" data-composition-id="chrome" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-k2q7" class="code">AA-SEC-F-063 · NOTOC (Firearm)</div><div data-hf-id="hf-phki" id="pbar" class="pbar"></div>
+    <div data-hf-id="hf-zykf" id="ro1" class="role" style="background:#0b57d0"><svg data-hf-id="hf-80ps" width="26" height="44" viewBox="0 0 24 40"><rect data-hf-id="hf-zl7v" x="1" y="1" width="22" height="38" rx="4" fill="#fff"/><rect data-hf-id="hf-4rhf" x="3" y="5" width="18" height="28" rx="1.5" fill="#fff"/><circle data-hf-id="hf-ulte" cx="12" cy="36" r="1.4" fill="#fff"/></svg><span data-hf-id="hf-3fxz">PHONE: SECURITY</span></div>
+    <div data-hf-id="hf-3lvi" id="ro11" class="role" style="background:#b8550d"><svg data-hf-id="hf-0peg" width="26" height="44" viewBox="0 0 24 40"><rect data-hf-id="hf-o2yz" x="1" y="1" width="22" height="38" rx="4" fill="#fff"/><rect data-hf-id="hf-mplv" x="3" y="5" width="18" height="28" rx="1.5" fill="#fff"/><circle data-hf-id="hf-5pkm" cx="12" cy="36" r="1.4" fill="#fff"/></svg><span data-hf-id="hf-udlj">PHONE: CAPTAIN</span></div>
+    <div data-hf-id="hf-ekge" id="ro35" class="role" style="background:#0b57d0"><svg data-hf-id="hf-zihd" width="26" height="44" viewBox="0 0 24 40"><rect data-hf-id="hf-nony" x="1" y="1" width="22" height="38" rx="4" fill="#fff"/><rect data-hf-id="hf-mbau" x="3" y="5" width="18" height="28" rx="1.5" fill="#fff"/><circle data-hf-id="hf-a5ur" cx="12" cy="36" r="1.4" fill="#fff"/></svg><span data-hf-id="hf-dunr">PHONE: SECURITY</span></div>
+    <div data-hf-id="hf-337x" id="sl39" class="slabel" style="color:#ffffff">SAVED SCREEN · TEST RECORD</div>
+    <div data-hf-id="hf-6ksh" id="sl40" class="slabel" style="color:#ffffff">PDF FILENAME EXAMPLE</div>
+    <div data-hf-id="hf-6fxw" id="st0" class="stitle">1 / 4 · Security hands the phone to the Captain</div>
+    <div data-hf-id="hf-rfmm" id="st1" class="stitle">2 / 4 · Review the details</div>
+    <div data-hf-id="hf-wqg0" id="st2" class="stitle">3 / 4 · Enter your details and sign</div>
+    <div data-hf-id="hf-d13v" id="st3" class="stitle">4 / 4 · Return the phone and receive the PDF</div>
+  </div>
+  <script>
+    gsap.set("#ro1",{opacity:0});
+    gsap.set("#ro11",{opacity:0});
+    gsap.set("#ro35",{opacity:0});
+    gsap.set("#sl39",{opacity:0});
+    gsap.set("#sl40",{opacity:0});
+    gsap.set("#st0",{opacity:0});
+    gsap.set("#st1",{opacity:0});
+    gsap.set("#st2",{opacity:0});
+    gsap.set("#st3",{opacity:0});
+    gsap.set("#pbar",{scaleX:0});
+    const tl = gsap.timeline({ paused: true });
+    tl.to("#sl39",{opacity:1,duration:0.3,ease:"power3.out"},57.377);
+    tl.to("#sl39",{opacity:0,duration:0.3,ease:"power2.in"},60.495);
+    tl.to("#sl40",{opacity:1,duration:0.3,ease:"power3.out"},60.795);
+    tl.to("#sl40",{opacity:0,duration:0.3,ease:"power2.in"},62.095);
+    tl.to("#ro1",{opacity:1,duration:0.3,ease:"power1.out"},0.0);
+    tl.to("#ro1",{opacity:0,duration:0.3,ease:"power1.in"},7.634);
+    tl.to("#ro11",{opacity:1,duration:0.3,ease:"power1.out"},7.634);
+    tl.to("#ro11",{opacity:0,duration:0.3,ease:"power1.in"},52.347);
+    tl.to("#ro35",{opacity:1,duration:0.3,ease:"power1.out"},52.347);
+    tl.to("#st0",{opacity:1,duration:0.3,ease:"power3.out"},0.2);
+    tl.to("#st0",{opacity:0,duration:0.25,ease:"power3.out"},12.741);
+    tl.to("#st1",{opacity:1,duration:0.3,ease:"power3.out"},13.191);
+    tl.to("#st1",{opacity:0,duration:0.25,ease:"power3.out"},30.149);
+    tl.to("#st2",{opacity:1,duration:0.3,ease:"power3.out"},30.599);
+    tl.to("#st2",{opacity:0,duration:0.25,ease:"power3.out"},48.977);
+    tl.to("#st3",{opacity:1,duration:0.3,ease:"power3.out"},49.427);
+    tl.to("#st3",{opacity:0,duration:0.25,ease:"power3.out"},77.286);
+    tl.to("#pbar",{scaleX:1,duration:77.536,ease:"none"},0.0);
+    tl.set({}, {}, 77.536);
+    window.__timelines["chrome"] = tl;
+  </script>
+</template>

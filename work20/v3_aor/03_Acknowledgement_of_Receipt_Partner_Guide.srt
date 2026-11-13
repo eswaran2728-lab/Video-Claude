@@ -1,0 +1,100 @@
+1
+00:00:00,500 --> 00:00:02,138
+There are two situations.
+
+2
+00:00:02,738 --> 00:00:06,124
+In Situation A, you hand items to Security.
+
+3
+00:00:06,724 --> 00:00:10,891
+In Situation B, Security hands items to CBTO.
+
+4
+00:00:11,491 --> 00:00:16,037
+Security fills in the form and brings the phone in both situations.
+
+5
+00:00:17,587 --> 00:00:20,182
+First, check who is receiving the items.
+
+6
+00:00:22,182 --> 00:00:27,471
+If you are handing items to Security, Security signs first as the recipient.
+
+7
+00:00:28,421 --> 00:00:29,760
+Then it is your turn.
+
+8
+00:00:31,710 --> 00:00:34,570
+Check your name, your role, and the items listed.
+
+9
+00:00:37,920 --> 00:00:41,743
+If everything is correct, sign with your finger and tap ‘Confirm’.
+
+10
+00:00:43,093 --> 00:00:45,106
+Tap ‘Clear’ if you need to sign again.
+
+11
+00:00:46,056 --> 00:00:50,263
+Next, the witness checks their own name, signs, and taps ‘Confirm’.
+
+12
+00:00:51,813 --> 00:00:54,468
+The witness gives the phone back to Security.
+
+13
+00:00:56,468 --> 00:01:03,822
+If Security hands items to CBTO, the CBTO staff member signs first as the recipient.
+
+14
+00:01:05,972 --> 00:01:07,831
+If that is you, check your name.
+
+15
+00:01:09,381 --> 00:01:12,021
+Scroll up and check each item you received.
+
+16
+00:01:14,571 --> 00:01:16,773
+Sign with your finger and tap ‘Confirm’.
+
+17
+00:01:18,123 --> 00:01:20,060
+Pass the phone back to Security.
+
+18
+00:01:20,660 --> 00:01:23,314
+Security signs as ‘Handed over by’.
+
+19
+00:01:24,864 --> 00:01:30,824
+The witness checks their own name, signs, taps ‘Confirm’, and gives the phone back to Security.
+
+20
+00:01:32,824 --> 00:01:37,284
+If a name, role, or item is wrong, tell Security before signing.
+
+21
+00:01:37,884 --> 00:01:39,904
+Each person signs for themselves.
+
+22
+00:01:41,254 --> 00:01:44,695
+After everyone has signed, Security saves the record.
+
+23
+00:01:45,295 --> 00:01:48,943
+The app creates a signed PDF with a Record ID.
+
+24
+00:01:51,343 --> 00:01:56,183
+AirAsia Security keeps it in a restricted folder and logs the record.
+
+25
+00:01:57,133 --> 00:02:00,184
+Security emails you a copy for your records.
+

@@ -1,0 +1,123 @@
+{
+ "total": 77.536,
+ "scenes": [
+  {
+   "title": "Security hands the phone to the Captain",
+   "t0": 0.0,
+   "t1": 12.991
+  },
+  {
+   "title": "Review the details",
+   "t0": 12.991,
+   "t1": 30.399
+  },
+  {
+   "title": "Enter your details and sign",
+   "t0": 30.399,
+   "t1": 49.227
+  },
+  {
+   "title": "Return the phone and receive the PDF",
+   "t0": 49.227,
+   "t1": 77.536
+  }
+ ],
+ "lines": [
+  {
+   "i": 0,
+   "text": "Security fills in the NOTOC form and hands the phone to you, the Captain.",
+   "t0": 0.5,
+   "t1": 5.434
+  },
+  {
+   "i": 1,
+   "text": "You check and sign on that same phone.",
+   "t0": 6.034,
+   "t1": 8.227
+  },
+  {
+   "i": 2,
+   "text": "Tap the orange button marked \u2018Captain has the phone\u2019.",
+   "t0": 10.377,
+   "t1": 13.291
+  },
+  {
+   "i": 3,
+   "text": "Check the flight details.",
+   "t0": 14.291,
+   "t1": 15.775
+  },
+  {
+   "i": 4,
+   "text": "Review each entry on the form and check the \u2018Loaded by\u2019 name.",
+   "t0": 17.525,
+   "t1": 21.285
+  },
+  {
+   "i": 5,
+   "text": "If anything is wrong, tap \u2018Something is wrong\u2019 and give the phone back to Security for correction.",
+   "t0": 23.635,
+   "t1": 29.299
+  },
+  {
+   "i": 6,
+   "text": "If everything is correct, type your own name in \u2018Acknowledged by\u2019.",
+   "t0": 31.699,
+   "t1": 35.494
+  },
+  {
+   "i": 7,
+   "text": "Enter your ID number.",
+   "t0": 36.444,
+   "t1": 37.878
+  },
+  {
+   "i": 8,
+   "text": "Sign with your finger.",
+   "t0": 38.828,
+   "t1": 40.093
+  },
+  {
+   "i": 9,
+   "text": "If you need to sign again, tap \u2018Clear\u2019.",
+   "t0": 41.643,
+   "t1": 43.744
+  },
+  {
+   "i": 10,
+   "text": "When your signature is ready, tap \u2018Confirm my signature\u2019.",
+   "t0": 44.694,
+   "t1": 48.227
+  },
+  {
+   "i": 11,
+   "text": "When the screen asks, give the phone back to Security.",
+   "t0": 50.427,
+   "t1": 53.572
+  },
+  {
+   "i": 12,
+   "text": "Security signs and saves the record.",
+   "t0": 54.172,
+   "t1": 56.677
+  },
+  {
+   "i": 13,
+   "text": "The signed PDF has a Record ID.",
+   "t0": 57.677,
+   "t1": 60.295
+  },
+  {
+   "i": 14,
+   "text": "AirAsia Security keeps it in a restricted folder and logs the record.",
+   "t0": 62.695,
+   "t1": 67.535
+  },
+  {
+   "i": 15,
+   "text": "Security emails you a copy for your records.",
+   "t0": 68.485,
+   "t1": 71.536
+  }
+ ]
+}

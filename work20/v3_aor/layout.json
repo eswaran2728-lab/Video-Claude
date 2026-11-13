@@ -1,0 +1,177 @@
+{
+ "total": 126.784,
+ "scenes": [
+  {
+   "title": "Find your situation",
+   "t0": 0.0,
+   "t1": 20.782
+  },
+  {
+   "title": "Situation A \u2014 Staff hands items to Security",
+   "t0": 20.782,
+   "t1": 55.068
+  },
+  {
+   "title": "Situation B \u2014 Security hands items to CBTO",
+   "t0": 55.068,
+   "t1": 91.624
+  },
+  {
+   "title": "Wrong details and the signed copy",
+   "t0": 91.624,
+   "t1": 126.784
+  }
+ ],
+ "lines": [
+  {
+   "i": 0,
+   "text": "There are two situations.",
+   "t0": 0.5,
+   "t1": 2.138
+  },
+  {
+   "i": 1,
+   "text": "In Situation A, you hand items to Security.",
+   "t0": 2.738,
+   "t1": 6.124
+  },
+  {
+   "i": 2,
+   "text": "In Situation B, Security hands items to CBTO.",
+   "t0": 6.724,
+   "t1": 10.891
+  },
+  {
+   "i": 3,
+   "text": "Security fills in the form and brings the phone in both situations.",
+   "t0": 11.491,
+   "t1": 16.037
+  },
+  {
+   "i": 4,
+   "text": "First, check who is receiving the items.",
+   "t0": 17.587,
+   "t1": 20.182
+  },
+  {
+   "i": 5,
+   "text": "If you are handing items to Security, Security signs first as the recipient.",
+   "t0": 22.182,
+   "t1": 27.471
+  },
+  {
+   "i": 6,
+   "text": "Then it is your turn.",
+   "t0": 28.421,
+   "t1": 29.76
+  },
+  {
+   "i": 7,
+   "text": "Check your name, your role, and the items listed.",
+   "t0": 31.71,
+   "t1": 34.57
+  },
+  {
+   "i": 8,
+   "text": "If everything is correct, sign with your finger and tap \u2018Confirm\u2019.",
+   "t0": 37.92,
+   "t1": 41.743
+  },
+  {
+   "i": 9,
+   "text": "Tap \u2018Clear\u2019 if you need to sign again.",
+   "t0": 43.093,
+   "t1": 45.106
+  },
+  {
+   "i": 10,
+   "text": "Next, the witness checks their own name, signs, and taps \u2018Confirm\u2019.",
+   "t0": 46.056,
+   "t1": 50.263
+  },
+  {
+   "i": 11,
+   "text": "The witness gives the phone back to Security.",
+   "t0": 51.813,
+   "t1": 54.468
+  },
+  {
+   "i": 12,
+   "text": "If Security hands items to CBTO, the CBTO staff member signs first as the recipient.",
+   "t0": 56.468,
+   "t1": 63.822
+  },
+  {
+   "i": 13,
+   "text": "If that is you, check your name.",
+   "t0": 65.972,
+   "t1": 67.831
+  },
+  {
+   "i": 14,
+   "text": "Scroll up and check each item you received.",
+   "t0": 69.381,
+   "t1": 72.021
+  },
+  {
+   "i": 15,
+   "text": "Sign with your finger and tap \u2018Confirm\u2019.",
+   "t0": 74.571,
+   "t1": 76.773
+  },
+  {
+   "i": 16,
+   "text": "Pass the phone back to Security.",
+   "t0": 78.123,
+   "t1": 80.06
+  },
+  {
+   "i": 17,
+   "text": "Security signs as \u2018Handed over by\u2019.",
+   "t0": 80.66,
+   "t1": 83.314
+  },
+  {
+   "i": 18,
+   "text": "The witness checks their own name, signs, taps \u2018Confirm\u2019, and gives the phone back to Security.",
+   "t0": 84.864,
+   "t1": 90.824
+  },
+  {
+   "i": 19,
+   "text": "If a name, role, or item is wrong, tell Security before signing.",
+   "t0": 92.824,
+   "t1": 97.284
+  },
+  {
+   "i": 20,
+   "text": "Each person signs for themselves.",
+   "t0": 97.884,
+   "t1": 99.904
+  },
+  {
+   "i": 21,
+   "text": "After everyone has signed, Security saves the record.",
+   "t0": 101.254,
+   "t1": 104.695
+  },
+  {
+   "i": 22,
+   "text": "The app creates a signed PDF with a Record ID.",
+   "t0": 105.295,
+   "t1": 108.943
+  },
+  {
+   "i": 23,
+   "text": "AirAsia Security keeps it in a restricted folder and logs the record.",
+   "t0": 111.343,
+   "t1": 116.183
+  },
+  {
+   "i": 24,
+   "text": "Security emails you a copy for your records.",
+   "t0": 117.133,
+   "t1": 120.184
+  }
+ ]
+}

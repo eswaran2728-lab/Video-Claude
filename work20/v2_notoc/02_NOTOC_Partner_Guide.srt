@@ -1,0 +1,64 @@
+1
+00:00:00,500 --> 00:00:05,434
+Security fills in the NOTOC form and hands the phone to you, the Captain.
+
+2
+00:00:06,034 --> 00:00:08,227
+You check and sign on that same phone.
+
+3
+00:00:10,377 --> 00:00:13,291
+Tap the orange button marked ‘Captain has the phone’.
+
+4
+00:00:14,291 --> 00:00:15,775
+Check the flight details.
+
+5
+00:00:17,525 --> 00:00:21,285
+Review each entry on the form and check the ‘Loaded by’ name.
+
+6
+00:00:23,635 --> 00:00:29,299
+If anything is wrong, tap ‘Something is wrong’ and give the phone back to Security for correction.
+
+7
+00:00:31,699 --> 00:00:35,494
+If everything is correct, type your own name in ‘Acknowledged by’.
+
+8
+00:00:36,444 --> 00:00:37,878
+Enter your ID number.
+
+9
+00:00:38,828 --> 00:00:40,093
+Sign with your finger.
+
+10
+00:00:41,643 --> 00:00:43,744
+If you need to sign again, tap ‘Clear’.
+
+11
+00:00:44,694 --> 00:00:48,227
+When your signature is ready, tap ‘Confirm my signature’.
+
+12
+00:00:50,427 --> 00:00:53,572
+When the screen asks, give the phone back to Security.
+
+13
+00:00:54,172 --> 00:00:56,677
+Security signs and saves the record.
+
+14
+00:00:57,677 --> 00:01:00,295
+The signed PDF has a Record ID.
+
+15
+00:01:02,695 --> 00:01:07,535
+AirAsia Security keeps it in a restricted folder and logs the record.
+
+16
+00:01:08,485 --> 00:01:11,536
+Security emails you a copy for your records.
+

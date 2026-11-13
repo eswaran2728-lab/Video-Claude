@@ -1,0 +1,3376 @@
+[
+ {
+  "n": 1,
+  "shapes": [
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 144.0,
+    "w": 1094.4,
+    "h": 72.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "AIRASIA SECURITY  ·  AA/SEC/F/007"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 230.4,
+    "w": 1094.4,
+    "h": 374.4,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "The Acknowledgement of Receipt is now signed on a phone"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 619.2,
+    "w": 1065.6,
+    "h": 187.2,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "What changes for you, and what you do when Security hands you the phone."
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 892.8,
+    "w": 1094.4,
+    "h": 86.4,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "For staff handing items to Security, CBTO staff and witnesses"
+   },
+   {
+    "kind": "sp",
+    "x": 1275.8,
+    "y": 62.5,
+    "w": 501.1,
+    "h": 955.1,
+    "geom": "roundRect",
+    "ln": "1F1F24",
+    "fill": "1F1F24",
+    "t": ""
+   },
+   {
+    "kind": "pic",
+    "x": 1296.0,
+    "y": 99.9,
+    "w": 460.8,
+    "h": 880.2,
+    "src": "image-1-1.jpg"
+   },
+   {
+    "kind": "sp",
+    "x": 1304.9,
+    "y": 414.2,
+    "w": 441.8,
+    "h": 128.6,
+    "geom": "roundRect",
+    "ln": "E31837",
+    "fill": "E31837",
+    "t": ""
+   }
+  ]
+ },
+ {
+  "n": 2,
+  "shapes": [
+   {
+    "kind": "sp",
+    "x": 100.8,
+    "y": 57.6,
+    "w": 1728.0,
+    "h": 57.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "WHAT CHANGED"
+   },
+   {
+    "kind": "sp",
+    "x": 100.8,
+    "y": 118.1,
+    "w": 1728.0,
+    "h": 129.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "From paper to one phone, signed in person"
+   },
+   {
+    "kind": "sp",
+    "x": 100.8,
+    "y": 288.0,
+    "w": 820.8,
+    "h": 619.2,
+    "geom": "roundRect",
+    "ln": "5F6368",
+    "fill": "F4F5F7",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 158.4,
+    "y": 324.0,
+    "w": 720.0,
+    "h": 86.4,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "BEFORE"
+   },
+   {
+    "kind": "sp",
+    "x": 158.4,
+    "y": 424.8,
+    "w": 720.0,
+    "h": 108.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Printed paper form, signed with a pen"
+   },
+   {
+    "kind": "sp",
+    "x": 1000.8,
+    "y": 288.0,
+    "w": 820.8,
+    "h": 619.2,
+    "geom": "roundRect",
+    "ln": "C8102E",
+    "fill": "FDECEE",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 1058.4,
+    "y": 324.0,
+    "w": 720.0,
+    "h": 86.4,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "NOW"
+   },
+   {
+    "kind": "sp",
+    "x": 1058.4,
+    "y": 424.8,
+    "w": 720.0,
+    "h": 108.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Same form, on the Security officer’s phone"
+   },
+   {
+    "kind": "sp",
+    "x": 1058.4,
+    "y": 542.9,
+    "w": 720.0,
+    "h": 108.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "You sign there and then, with your finger"
+   },
+   {
+    "kind": "sp",
+    "x": 1058.4,
+    "y": 661.0,
+    "w": 720.0,
+    "h": 108.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Signed PDF is saved automatically"
+   },
+   {
+    "kind": "sp",
+    "x": 1058.4,
+    "y": 779.0,
+    "w": 720.0,
+    "h": 108.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Kept in a restricted AirAsia folder"
+   },
+   {
+    "kind": "sp",
+    "x": 100.8,
+    "y": 936.0,
+    "w": 1720.8,
+    "h": 79.2,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "In line with our digitalisation programme, these forms are now signed digitally."
+   },
+   {
+    "kind": "sp",
+    "x": 928.8,
+    "y": 547.2,
+    "w": 64.8,
+    "h": 100.8,
+    "geom": "rightArrow",
+    "ln": "C8102E",
+    "fill": "C8102E",
+    "t": ""
+   }
+  ]
+ },
+ {
+  "n": 3,
+  "shapes": [
+   {
+    "kind": "sp",
+    "x": 100.8,
+    "y": 57.6,
+    "w": 1728.0,
+    "h": 57.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "HOW IT WORKS"
+   },
+   {
+    "kind": "sp",
+    "x": 100.8,
+    "y": 118.1,
+    "w": 1728.0,
+    "h": 129.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Four steps, every form"
+   },
+   {
+    "kind": "sp",
+    "x": 100.8,
+    "y": 331.2,
+    "w": 396.0,
+    "h": 432.0,
+    "geom": "roundRect",
+    "ln": "0B57D0",
+    "fill": "E8F0FE",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 237.6,
+    "y": 367.2,
+    "w": 122.4,
+    "h": 122.4,
+    "geom": "ellipse",
+    "ln": "0B57D0",
+    "fill": "0B57D0",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 237.6,
+    "y": 367.2,
+    "w": 122.4,
+    "h": 122.4,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "1"
+   },
+   {
+    "kind": "sp",
+    "x": 129.6,
+    "y": 518.4,
+    "w": 338.4,
+    "h": 216.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Security fills the form"
+   },
+   {
+    "kind": "sp",
+    "x": 504.0,
+    "y": 518.4,
+    "w": 43.2,
+    "h": 57.6,
+    "geom": "rightArrow",
+    "ln": "B0B4BA",
+    "fill": "B0B4BA",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 554.4,
+    "y": 331.2,
+    "w": 396.0,
+    "h": 432.0,
+    "geom": "roundRect",
+    "ln": "0B57D0",
+    "fill": "E8F0FE",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 691.2,
+    "y": 367.2,
+    "w": 122.4,
+    "h": 122.4,
+    "geom": "ellipse",
+    "ln": "0B57D0",
+    "fill": "0B57D0",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 691.2,
+    "y": 367.2,
+    "w": 122.4,
+    "h": 122.4,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "2"
+   },
+   {
+    "kind": "sp",
+    "x": 583.2,
+    "y": 518.4,
+    "w": 338.4,
+    "h": 216.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Security hands you the phone"
+   },
+   {
+    "kind": "sp",
+    "x": 957.6,
+    "y": 518.4,
+    "w": 43.2,
+    "h": 57.6,
+    "geom": "rightArrow",
+    "ln": "B0B4BA",
+    "fill": "B0B4BA",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 1008.0,
+    "y": 331.2,
+    "w": 396.0,
+    "h": 432.0,
+    "geom": "roundRect",
+    "ln": "B8550D",
+    "fill": "FFF1E6",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 1144.8,
+    "y": 367.2,
+    "w": 122.4,
+    "h": 122.4,
+    "geom": "ellipse",
+    "ln": "B8550D",
+    "fill": "B8550D",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 1144.8,
+    "y": 367.2,
+    "w": 122.4,
+    "h": 122.4,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "3"
+   },
+   {
+    "kind": "sp",
+    "x": 1036.8,
+    "y": 518.4,
+    "w": 338.4,
+    "h": 216.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "You check, type your name &amp; ID, sign"
+   },
+   {
+    "kind": "sp",
+    "x": 1411.2,
+    "y": 518.4,
+    "w": 43.2,
+    "h": 57.6,
+    "geom": "rightArrow",
+    "ln": "B0B4BA",
+    "fill": "B0B4BA",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 1461.6,
+    "y": 331.2,
+    "w": 396.0,
+    "h": 432.0,
+    "geom": "roundRect",
+    "ln": "0B57D0",
+    "fill": "E8F0FE",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 1598.4,
+    "y": 367.2,
+    "w": 122.4,
+    "h": 122.4,
+    "geom": "ellipse",
+    "ln": "0B57D0",
+    "fill": "0B57D0",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 1598.4,
+    "y": 367.2,
+    "w": 122.4,
+    "h": 122.4,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "4"
+   },
+   {
+    "kind": "sp",
+    "x": 1490.4,
+    "y": 518.4,
+    "w": 338.4,
+    "h": 216.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Phone back. Security signs &amp; saves"
+   },
+   {
+    "kind": "sp",
+    "x": 1008.0,
+    "y": 784.8,
+    "w": 396.0,
+    "h": 57.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "YOUR PART"
+   },
+   {
+    "kind": "sp",
+    "x": 100.8,
+    "y": 907.2,
+    "w": 1728.0,
+    "h": 86.4,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Blue = Security does it.  Orange = you do it. The same colours are used on every form in this briefing."
+   }
+  ]
+ },
+ {
+  "n": 4,
+  "shapes": [
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 79.2,
+    "w": 1656.0,
+    "h": 64.8,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "WHAT YOU NEED"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 158.4,
+    "w": 1684.8,
+    "h": 172.8,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Nothing to install. No account."
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 374.4,
+    "w": 103.7,
+    "h": 103.7,
+    "geom": "ellipse",
+    "ln": "C8102E",
+    "fill": "C8102E",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 374.4,
+    "w": 103.7,
+    "h": 103.7,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "1"
+   },
+   {
+    "kind": "sp",
+    "x": 259.2,
+    "y": 367.2,
+    "w": 1540.8,
+    "h": 118.1,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "No app, no login, no email. Security brings the phone"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 518.4,
+    "w": 103.7,
+    "h": 103.7,
+    "geom": "ellipse",
+    "ln": "C8102E",
+    "fill": "C8102E",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 518.4,
+    "w": 103.7,
+    "h": 103.7,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "2"
+   },
+   {
+    "kind": "sp",
+    "x": 259.2,
+    "y": 511.2,
+    "w": 1540.8,
+    "h": 118.1,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Have your own name and ID / staff number ready"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 662.4,
+    "w": 103.7,
+    "h": 103.7,
+    "geom": "ellipse",
+    "ln": "C8102E",
+    "fill": "C8102E",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 662.4,
+    "w": 103.7,
+    "h": 103.7,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "3"
+   },
+   {
+    "kind": "sp",
+    "x": 259.2,
+    "y": 655.2,
+    "w": 1540.8,
+    "h": 118.1,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Read the form before you sign. Wrong? Say so"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 806.4,
+    "w": 103.7,
+    "h": 103.7,
+    "geom": "ellipse",
+    "ln": "C8102E",
+    "fill": "C8102E",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 806.4,
+    "w": 103.7,
+    "h": 103.7,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "4"
+   },
+   {
+    "kind": "sp",
+    "x": 259.2,
+    "y": 799.2,
+    "w": 1540.8,
+    "h": 118.1,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Sign only for yourself. Never for someone else"
+   }
+  ]
+ },
+ {
+  "n": 5,
+  "shapes": [
+   {
+    "kind": "sp",
+    "x": 100.8,
+    "y": 57.6,
+    "w": 1728.0,
+    "h": 57.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "ACKNOWLEDGEMENT OF RECEIPT · AA/SEC/F/007"
+   },
+   {
+    "kind": "sp",
+    "x": 100.8,
+    "y": 118.1,
+    "w": 1728.0,
+    "h": 129.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "One form, two situations"
+   },
+   {
+    "kind": "sp",
+    "x": 100.8,
+    "y": 288.0,
+    "w": 842.4,
+    "h": 676.8,
+    "geom": "roundRect",
+    "ln": "B8550D",
+    "fill": "F4F5F7",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 151.2,
+    "y": 331.2,
+    "w": 129.6,
+    "h": 129.6,
+    "geom": "ellipse",
+    "ln": "B8550D",
+    "fill": "B8550D",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 151.2,
+    "y": 331.2,
+    "w": 129.6,
+    "h": 129.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "A"
+   },
+   {
+    "kind": "sp",
+    "x": 309.6,
+    "y": 324.0,
+    "w": 604.8,
+    "h": 144.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Staff hands items to Security"
+   },
+   {
+    "kind": "sp",
+    "x": 165.6,
+    "y": 511.2,
+    "w": 748.8,
+    "h": 86.4,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Security fills the form"
+   },
+   {
+    "kind": "sp",
+    "x": 165.6,
+    "y": 614.9,
+    "w": 748.8,
+    "h": 86.4,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Security signs as Recipient"
+   },
+   {
+    "kind": "sp",
+    "x": 165.6,
+    "y": 718.6,
+    "w": 748.8,
+    "h": 86.4,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "You sign as “Handed over by”"
+   },
+   {
+    "kind": "sp",
+    "x": 165.6,
+    "y": 822.2,
+    "w": 748.8,
+    "h": 86.4,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Witness signs"
+   },
+   {
+    "kind": "sp",
+    "x": 1000.8,
+    "y": 288.0,
+    "w": 842.4,
+    "h": 676.8,
+    "geom": "roundRect",
+    "ln": "B8550D",
+    "fill": "F4F5F7",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 1051.2,
+    "y": 331.2,
+    "w": 129.6,
+    "h": 129.6,
+    "geom": "ellipse",
+    "ln": "B8550D",
+    "fill": "B8550D",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 1051.2,
+    "y": 331.2,
+    "w": 129.6,
+    "h": 129.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "B"
+   },
+   {
+    "kind": "sp",
+    "x": 1209.6,
+    "y": 324.0,
+    "w": 604.8,
+    "h": 144.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Security hands items to CBTO"
+   },
+   {
+    "kind": "sp",
+    "x": 1065.6,
+    "y": 511.2,
+    "w": 748.8,
+    "h": 86.4,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Security fills the form"
+   },
+   {
+    "kind": "sp",
+    "x": 1065.6,
+    "y": 614.9,
+    "w": 748.8,
+    "h": 86.4,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "CBTO staff sign as Recipient"
+   },
+   {
+    "kind": "sp",
+    "x": 1065.6,
+    "y": 718.6,
+    "w": 748.8,
+    "h": 86.4,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Security signs as “Handed over by”"
+   },
+   {
+    "kind": "sp",
+    "x": 1065.6,
+    "y": 822.2,
+    "w": 748.8,
+    "h": 86.4,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Witness signs"
+   }
+  ]
+ },
+ {
+  "n": 6,
+  "shapes": [
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 129.6,
+    "w": 1656.0,
+    "h": 72.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "SITUATION A  ·  AA/SEC/F/007"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 208.8,
+    "w": 1656.0,
+    "h": 187.2,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "You hand items to Security"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 439.2,
+    "w": 1584.0,
+    "h": 72.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "This part is for:"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 544.3,
+    "w": 72.0,
+    "h": 72.0,
+    "geom": "ellipse",
+    "ln": "FFFFFF",
+    "fill": "FFFFFF",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 230.4,
+    "y": 532.8,
+    "w": 1555.2,
+    "h": 95.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Staff handing over items to Security"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 666.7,
+    "w": 72.0,
+    "h": 72.0,
+    "geom": "ellipse",
+    "ln": "FFFFFF",
+    "fill": "FFFFFF",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 230.4,
+    "y": 655.2,
+    "w": 1555.2,
+    "h": 95.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Witness"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 936.0,
+    "w": 1684.8,
+    "h": 72.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Security fills the form and signs as Recipient first. Then you, then the witness."
+   }
+  ]
+ },
+ {
+  "n": 7,
+  "shapes": [
+   {
+    "kind": "sp",
+    "x": 100.8,
+    "y": 57.6,
+    "w": 1728.0,
+    "h": 57.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "SITUATION A · THE PAPER FORM"
+   },
+   {
+    "kind": "sp",
+    "x": 100.8,
+    "y": 118.1,
+    "w": 1728.0,
+    "h": 129.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Who fills, who signs"
+   },
+   {
+    "kind": "sp",
+    "x": 95.0,
+    "y": 260.6,
+    "w": 774.7,
+    "h": 815.6,
+    "geom": "rect",
+    "ln": "B0B4BA",
+    "fill": "FFFFFF",
+    "t": ""
+   },
+   {
+    "kind": "pic",
+    "x": 100.8,
+    "y": 266.4,
+    "w": 763.2,
+    "h": 804.1,
+    "src": "image-7-1.png"
+   },
+   {
+    "kind": "sp",
+    "x": 132.6,
+    "y": 289.1,
+    "w": 704.1,
+    "h": 422.5,
+    "geom": "rect",
+    "ln": "0B57D0",
+    "fill": "0B57D0",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 593.4,
+    "y": 297.8,
+    "w": 234.7,
+    "h": 46.1,
+    "geom": "roundRect",
+    "ln": "0B57D0",
+    "fill": "0B57D0",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 593.4,
+    "y": 297.8,
+    "w": 234.7,
+    "h": 46.1,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Security fills"
+   },
+   {
+    "kind": "sp",
+    "x": 132.6,
+    "y": 723.4,
+    "w": 386.1,
+    "h": 147.2,
+    "geom": "rect",
+    "ln": "0B57D0",
+    "fill": "0B57D0",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 207.0,
+    "y": 732.1,
+    "w": 303.1,
+    "h": 46.1,
+    "geom": "roundRect",
+    "ln": "0B57D0",
+    "fill": "0B57D0",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 207.0,
+    "y": 732.1,
+    "w": 303.1,
+    "h": 46.1,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Recipient: Security"
+   },
+   {
+    "kind": "sp",
+    "x": 132.6,
+    "y": 893.3,
+    "w": 318.0,
+    "h": 163.5,
+    "geom": "rect",
+    "ln": "B8550D",
+    "fill": "B8550D",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 220.9,
+    "y": 902.0,
+    "w": 221.0,
+    "h": 46.1,
+    "geom": "roundRect",
+    "ln": "B8550D",
+    "fill": "B8550D",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 220.9,
+    "y": 902.0,
+    "w": 221.0,
+    "h": 46.1,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "You hand over"
+   },
+   {
+    "kind": "sp",
+    "x": 482.4,
+    "y": 893.3,
+    "w": 318.0,
+    "h": 163.5,
+    "geom": "rect",
+    "ln": "B8550D",
+    "fill": "B8550D",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 619.0,
+    "y": 902.0,
+    "w": 172.8,
+    "h": 46.1,
+    "geom": "roundRect",
+    "ln": "B8550D",
+    "fill": "B8550D",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 619.0,
+    "y": 902.0,
+    "w": 172.8,
+    "h": 46.1,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Witness"
+   },
+   {
+    "kind": "sp",
+    "x": 964.8,
+    "y": 288.0,
+    "w": 1008.0,
+    "h": 72.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Signing order in the app:"
+   },
+   {
+    "kind": "sp",
+    "x": 964.8,
+    "y": 396.0,
+    "w": 93.6,
+    "h": 93.6,
+    "geom": "ellipse",
+    "ln": "0B57D0",
+    "fill": "0B57D0",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 964.8,
+    "y": 396.0,
+    "w": 93.6,
+    "h": 93.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "1"
+   },
+   {
+    "kind": "sp",
+    "x": 1094.4,
+    "y": 396.0,
+    "w": 748.8,
+    "h": 93.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Recipient: Security staff"
+   },
+   {
+    "kind": "sp",
+    "x": 964.8,
+    "y": 525.6,
+    "w": 93.6,
+    "h": 93.6,
+    "geom": "ellipse",
+    "ln": "B8550D",
+    "fill": "B8550D",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 964.8,
+    "y": 525.6,
+    "w": 93.6,
+    "h": 93.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "2"
+   },
+   {
+    "kind": "sp",
+    "x": 1094.4,
+    "y": 525.6,
+    "w": 748.8,
+    "h": 93.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Handed over by: you"
+   },
+   {
+    "kind": "sp",
+    "x": 964.8,
+    "y": 655.2,
+    "w": 93.6,
+    "h": 93.6,
+    "geom": "ellipse",
+    "ln": "B8550D",
+    "fill": "B8550D",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 964.8,
+    "y": 655.2,
+    "w": 93.6,
+    "h": 93.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "3"
+   },
+   {
+    "kind": "sp",
+    "x": 1094.4,
+    "y": 655.2,
+    "w": 748.8,
+    "h": 93.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Witness"
+   },
+   {
+    "kind": "sp",
+    "x": 964.8,
+    "y": 792.0,
+    "w": 864.0,
+    "h": 115.2,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Security types all names, items and IDs first. You only check and sign."
+   },
+   {
+    "kind": "sp",
+    "x": 964.8,
+    "y": 923.0,
+    "w": 54.7,
+    "h": 46.1,
+    "geom": "rect",
+    "ln": "0B57D0",
+    "fill": "0B57D0",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 1039.7,
+    "y": 914.4,
+    "w": 720.0,
+    "h": 63.4,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Security fills / signs"
+   },
+   {
+    "kind": "sp",
+    "x": 964.8,
+    "y": 1002.2,
+    "w": 54.7,
+    "h": 46.1,
+    "geom": "rect",
+    "ln": "B8550D",
+    "fill": "B8550D",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 1039.7,
+    "y": 993.6,
+    "w": 720.0,
+    "h": 63.4,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "You sign"
+   }
+  ]
+ },
+ {
+  "n": 8,
+  "shapes": [
+   {
+    "kind": "sp",
+    "x": 138.2,
+    "y": 77.6,
+    "w": 501.1,
+    "h": 924.9,
+    "geom": "roundRect",
+    "ln": "1F1F24",
+    "fill": "1F1F24",
+    "t": ""
+   },
+   {
+    "kind": "pic",
+    "x": 158.4,
+    "y": 115.0,
+    "w": 460.8,
+    "h": 850.0,
+    "src": "image-8-1.jpg"
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 86.4,
+    "w": 1065.6,
+    "h": 64.8,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "SITUATION A · IN THE APP 1"
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 165.6,
+    "w": 362.2,
+    "h": 72.0,
+    "geom": "roundRect",
+    "ln": "B8550D",
+    "fill": "B8550D",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 165.6,
+    "w": 362.2,
+    "h": 72.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "YOU: HANDING OVER"
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 266.4,
+    "w": 1065.6,
+    "h": 302.4,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Check it is your turn"
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 597.6,
+    "w": 1036.8,
+    "h": 331.2,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Security has signed as Recipient and passes you the phone. The orange box shows your name."
+   },
+   {
+    "kind": "sp",
+    "x": 167.3,
+    "y": 329.7,
+    "w": 442.9,
+    "h": 106.3,
+    "geom": "roundRect",
+    "ln": "E31837",
+    "fill": "E31837",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 617.5,
+    "y": 382.9,
+    "w": 131.3,
+    "h": 0.0,
+    "geom": "line",
+    "ln": "E31837",
+    "fill": "E31837",
+    "t": ""
+   }
+  ]
+ },
+ {
+  "n": 9,
+  "shapes": [
+   {
+    "kind": "sp",
+    "x": 138.2,
+    "y": 77.6,
+    "w": 501.1,
+    "h": 924.9,
+    "geom": "roundRect",
+    "ln": "1F1F24",
+    "fill": "1F1F24",
+    "t": ""
+   },
+   {
+    "kind": "pic",
+    "x": 158.4,
+    "y": 115.0,
+    "w": 460.8,
+    "h": 850.0,
+    "src": "image-9-1.jpg"
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 86.4,
+    "w": 1065.6,
+    "h": 64.8,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "SITUATION A · IN THE APP 2"
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 165.6,
+    "w": 362.2,
+    "h": 72.0,
+    "geom": "roundRect",
+    "ln": "B8550D",
+    "fill": "B8550D",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 165.6,
+    "w": 362.2,
+    "h": 72.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "YOU: HANDING OVER"
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 266.4,
+    "w": 1065.6,
+    "h": 302.4,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Sign, then tap Confirm"
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 540.0,
+    "w": 1036.8,
+    "h": 151.2,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Sign with your finger. Clear = sign again."
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 698.4,
+    "w": 432.0,
+    "h": 43.2,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "CLOSE-UP"
+   },
+   {
+    "kind": "sp",
+    "x": 771.8,
+    "y": 747.4,
+    "w": 875.5,
+    "h": 175.1,
+    "geom": "rect",
+    "ln": "E31837",
+    "fill": "FFFFFF",
+    "t": ""
+   },
+   {
+    "kind": "pic",
+    "x": 777.6,
+    "y": 753.1,
+    "w": 864.0,
+    "h": 163.6,
+    "src": "image-9-2.jpg"
+   },
+   {
+    "kind": "sp",
+    "x": 180.8,
+    "y": 455.0,
+    "w": 416.1,
+    "h": 234.9,
+    "geom": "roundRect",
+    "ln": "E31837",
+    "fill": "E31837",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 604.0,
+    "y": 572.4,
+    "w": 144.8,
+    "h": 0.0,
+    "geom": "line",
+    "ln": "E31837",
+    "fill": "E31837",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 167.3,
+    "y": 777.1,
+    "w": 442.9,
+    "h": 64.9,
+    "geom": "roundRect",
+    "ln": "E31837",
+    "fill": "E31837",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 617.5,
+    "y": 809.5,
+    "w": 131.3,
+    "h": 0.0,
+    "geom": "line",
+    "ln": "E31837",
+    "fill": "E31837",
+    "t": ""
+   }
+  ]
+ },
+ {
+  "n": 10,
+  "shapes": [
+   {
+    "kind": "sp",
+    "x": 138.2,
+    "y": 77.6,
+    "w": 501.1,
+    "h": 924.9,
+    "geom": "roundRect",
+    "ln": "1F1F24",
+    "fill": "1F1F24",
+    "t": ""
+   },
+   {
+    "kind": "pic",
+    "x": 158.4,
+    "y": 115.0,
+    "w": 460.8,
+    "h": 850.0,
+    "src": "image-10-1.jpg"
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 86.4,
+    "w": 1065.6,
+    "h": 64.8,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "SITUATION A · IN THE APP 3"
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 165.6,
+    "w": 167.8,
+    "h": 72.0,
+    "geom": "roundRect",
+    "ln": "6A1B9A",
+    "fill": "6A1B9A",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 165.6,
+    "w": 167.8,
+    "h": 72.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "WITNESS"
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 266.4,
+    "w": 1065.6,
+    "h": 302.4,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Witness does the same"
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 540.0,
+    "w": 1036.8,
+    "h": 151.2,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Check name, sign, Confirm."
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 698.4,
+    "w": 432.0,
+    "h": 43.2,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "CLOSE-UP"
+   },
+   {
+    "kind": "sp",
+    "x": 771.8,
+    "y": 747.4,
+    "w": 875.5,
+    "h": 175.1,
+    "geom": "rect",
+    "ln": "E31837",
+    "fill": "FFFFFF",
+    "t": ""
+   },
+   {
+    "kind": "pic",
+    "x": 777.6,
+    "y": 753.1,
+    "w": 864.0,
+    "h": 163.6,
+    "src": "image-10-2.jpg"
+   },
+   {
+    "kind": "sp",
+    "x": 167.3,
+    "y": 329.7,
+    "w": 442.9,
+    "h": 106.3,
+    "geom": "roundRect",
+    "ln": "E31837",
+    "fill": "E31837",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 617.5,
+    "y": 382.9,
+    "w": 131.3,
+    "h": 0.0,
+    "geom": "line",
+    "ln": "E31837",
+    "fill": "E31837",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 167.3,
+    "y": 777.1,
+    "w": 442.9,
+    "h": 64.9,
+    "geom": "roundRect",
+    "ln": "E31837",
+    "fill": "E31837",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 617.5,
+    "y": 809.5,
+    "w": 131.3,
+    "h": 0.0,
+    "geom": "line",
+    "ln": "E31837",
+    "fill": "E31837",
+    "t": ""
+   }
+  ]
+ },
+ {
+  "n": 11,
+  "shapes": [
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 79.2,
+    "w": 1656.0,
+    "h": 64.8,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "LAST STEP"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 151.2,
+    "w": 167.8,
+    "h": 72.0,
+    "geom": "roundRect",
+    "ln": "6A1B9A",
+    "fill": "6A1B9A",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 151.2,
+    "w": 167.8,
+    "h": 72.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "WITNESS"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 244.8,
+    "w": 1684.8,
+    "h": 172.8,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Give the phone back to Security"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 446.4,
+    "w": 103.7,
+    "h": 103.7,
+    "geom": "ellipse",
+    "ln": "C8102E",
+    "fill": "C8102E",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 446.4,
+    "w": 103.7,
+    "h": 103.7,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "1"
+   },
+   {
+    "kind": "sp",
+    "x": 259.2,
+    "y": 439.2,
+    "w": 1540.8,
+    "h": 118.1,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Screen says: hand the phone back to Security"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 597.6,
+    "w": 103.7,
+    "h": 103.7,
+    "geom": "ellipse",
+    "ln": "C8102E",
+    "fill": "C8102E",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 597.6,
+    "w": 103.7,
+    "h": 103.7,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "2"
+   },
+   {
+    "kind": "sp",
+    "x": 259.2,
+    "y": 590.4,
+    "w": 1540.8,
+    "h": 118.1,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Security signs and saves the record"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 748.8,
+    "w": 103.7,
+    "h": 103.7,
+    "geom": "ellipse",
+    "ln": "C8102E",
+    "fill": "C8102E",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 748.8,
+    "w": 103.7,
+    "h": 103.7,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "3"
+   },
+   {
+    "kind": "sp",
+    "x": 259.2,
+    "y": 741.6,
+    "w": 1540.8,
+    "h": 118.1,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Security will email you the signed PDF"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 972.0,
+    "w": 1684.8,
+    "h": 57.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Security’s own steps are covered in the staff guide."
+   }
+  ]
+ },
+ {
+  "n": 12,
+  "shapes": [
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 129.6,
+    "w": 1656.0,
+    "h": 72.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "SITUATION B  ·  AA/SEC/F/007"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 208.8,
+    "w": 1656.0,
+    "h": 187.2,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Security hands items to CBTO"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 439.2,
+    "w": 1584.0,
+    "h": 72.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "This part is for:"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 544.3,
+    "w": 72.0,
+    "h": 72.0,
+    "geom": "ellipse",
+    "ln": "FFFFFF",
+    "fill": "FFFFFF",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 230.4,
+    "y": 532.8,
+    "w": 1555.2,
+    "h": 95.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "CBTO staff receiving the items"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 666.7,
+    "w": 72.0,
+    "h": 72.0,
+    "geom": "ellipse",
+    "ln": "FFFFFF",
+    "fill": "FFFFFF",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 230.4,
+    "y": 655.2,
+    "w": 1555.2,
+    "h": 95.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Witness"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 936.0,
+    "w": 1684.8,
+    "h": 72.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Security fills the form. CBTO staff sign first as Recipient, then Security, then the witness."
+   }
+  ]
+ },
+ {
+  "n": 13,
+  "shapes": [
+   {
+    "kind": "sp",
+    "x": 100.8,
+    "y": 57.6,
+    "w": 1728.0,
+    "h": 57.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "SITUATION B · THE PAPER FORM"
+   },
+   {
+    "kind": "sp",
+    "x": 100.8,
+    "y": 118.1,
+    "w": 1728.0,
+    "h": 129.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Who fills, who signs"
+   },
+   {
+    "kind": "sp",
+    "x": 95.0,
+    "y": 260.6,
+    "w": 774.7,
+    "h": 815.6,
+    "geom": "rect",
+    "ln": "B0B4BA",
+    "fill": "FFFFFF",
+    "t": ""
+   },
+   {
+    "kind": "pic",
+    "x": 100.8,
+    "y": 266.4,
+    "w": 763.2,
+    "h": 804.1,
+    "src": "image-13-1.png"
+   },
+   {
+    "kind": "sp",
+    "x": 132.6,
+    "y": 289.1,
+    "w": 704.1,
+    "h": 422.5,
+    "geom": "rect",
+    "ln": "0B57D0",
+    "fill": "0B57D0",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 593.4,
+    "y": 297.8,
+    "w": 234.7,
+    "h": 46.1,
+    "geom": "roundRect",
+    "ln": "0B57D0",
+    "fill": "0B57D0",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 593.4,
+    "y": 297.8,
+    "w": 234.7,
+    "h": 46.1,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Security fills"
+   },
+   {
+    "kind": "sp",
+    "x": 132.6,
+    "y": 723.4,
+    "w": 386.1,
+    "h": 147.2,
+    "geom": "rect",
+    "ln": "B8550D",
+    "fill": "B8550D",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 261.7,
+    "y": 732.1,
+    "w": 248.4,
+    "h": 46.1,
+    "geom": "roundRect",
+    "ln": "B8550D",
+    "fill": "B8550D",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 261.7,
+    "y": 732.1,
+    "w": 248.4,
+    "h": 46.1,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Recipient: CBTO"
+   },
+   {
+    "kind": "sp",
+    "x": 132.6,
+    "y": 893.3,
+    "w": 318.0,
+    "h": 163.5,
+    "geom": "rect",
+    "ln": "0B57D0",
+    "fill": "0B57D0",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 152.5,
+    "y": 902.0,
+    "w": 289.4,
+    "h": 46.1,
+    "geom": "roundRect",
+    "ln": "0B57D0",
+    "fill": "0B57D0",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 152.5,
+    "y": 902.0,
+    "w": 289.4,
+    "h": 46.1,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Handed by Security"
+   },
+   {
+    "kind": "sp",
+    "x": 482.4,
+    "y": 893.3,
+    "w": 318.0,
+    "h": 163.5,
+    "geom": "rect",
+    "ln": "B8550D",
+    "fill": "B8550D",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 619.0,
+    "y": 902.0,
+    "w": 172.8,
+    "h": 46.1,
+    "geom": "roundRect",
+    "ln": "B8550D",
+    "fill": "B8550D",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 619.0,
+    "y": 902.0,
+    "w": 172.8,
+    "h": 46.1,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Witness"
+   },
+   {
+    "kind": "sp",
+    "x": 964.8,
+    "y": 288.0,
+    "w": 1008.0,
+    "h": 72.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Signing order in the app:"
+   },
+   {
+    "kind": "sp",
+    "x": 964.8,
+    "y": 396.0,
+    "w": 93.6,
+    "h": 93.6,
+    "geom": "ellipse",
+    "ln": "B8550D",
+    "fill": "B8550D",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 964.8,
+    "y": 396.0,
+    "w": 93.6,
+    "h": 93.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "1"
+   },
+   {
+    "kind": "sp",
+    "x": 1094.4,
+    "y": 396.0,
+    "w": 748.8,
+    "h": 93.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Recipient: CBTO staff"
+   },
+   {
+    "kind": "sp",
+    "x": 964.8,
+    "y": 525.6,
+    "w": 93.6,
+    "h": 93.6,
+    "geom": "ellipse",
+    "ln": "0B57D0",
+    "fill": "0B57D0",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 964.8,
+    "y": 525.6,
+    "w": 93.6,
+    "h": 93.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "2"
+   },
+   {
+    "kind": "sp",
+    "x": 1094.4,
+    "y": 525.6,
+    "w": 748.8,
+    "h": 93.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Handed over by: Security staff"
+   },
+   {
+    "kind": "sp",
+    "x": 964.8,
+    "y": 655.2,
+    "w": 93.6,
+    "h": 93.6,
+    "geom": "ellipse",
+    "ln": "B8550D",
+    "fill": "B8550D",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 964.8,
+    "y": 655.2,
+    "w": 93.6,
+    "h": 93.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "3"
+   },
+   {
+    "kind": "sp",
+    "x": 1094.4,
+    "y": 655.2,
+    "w": 748.8,
+    "h": 93.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Witness"
+   },
+   {
+    "kind": "sp",
+    "x": 964.8,
+    "y": 792.0,
+    "w": 864.0,
+    "h": 115.2,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Check every item listed is what you received before you sign."
+   },
+   {
+    "kind": "sp",
+    "x": 964.8,
+    "y": 923.0,
+    "w": 54.7,
+    "h": 46.1,
+    "geom": "rect",
+    "ln": "0B57D0",
+    "fill": "0B57D0",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 1039.7,
+    "y": 914.4,
+    "w": 720.0,
+    "h": 63.4,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Security fills / signs"
+   },
+   {
+    "kind": "sp",
+    "x": 964.8,
+    "y": 1002.2,
+    "w": 54.7,
+    "h": 46.1,
+    "geom": "rect",
+    "ln": "B8550D",
+    "fill": "B8550D",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 1039.7,
+    "y": 993.6,
+    "w": 720.0,
+    "h": 63.4,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "You sign"
+   }
+  ]
+ },
+ {
+  "n": 14,
+  "shapes": [
+   {
+    "kind": "sp",
+    "x": 138.2,
+    "y": 77.6,
+    "w": 501.1,
+    "h": 924.9,
+    "geom": "roundRect",
+    "ln": "1F1F24",
+    "fill": "1F1F24",
+    "t": ""
+   },
+   {
+    "kind": "pic",
+    "x": 158.4,
+    "y": 115.0,
+    "w": 460.8,
+    "h": 850.0,
+    "src": "image-14-1.jpg"
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 86.4,
+    "w": 1065.6,
+    "h": 64.8,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "SITUATION B · IN THE APP 1"
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 165.6,
+    "w": 226.1,
+    "h": 72.0,
+    "geom": "roundRect",
+    "ln": "B8550D",
+    "fill": "B8550D",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 165.6,
+    "w": 226.1,
+    "h": 72.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "CBTO STAFF"
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 266.4,
+    "w": 1065.6,
+    "h": 302.4,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Check it is your turn"
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 597.6,
+    "w": 1036.8,
+    "h": 331.2,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "You sign first, as Recipient. Scroll up to check every item you received."
+   },
+   {
+    "kind": "sp",
+    "x": 167.3,
+    "y": 329.7,
+    "w": 442.9,
+    "h": 106.3,
+    "geom": "roundRect",
+    "ln": "E31837",
+    "fill": "E31837",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 617.5,
+    "y": 382.9,
+    "w": 131.3,
+    "h": 0.0,
+    "geom": "line",
+    "ln": "E31837",
+    "fill": "E31837",
+    "t": ""
+   }
+  ]
+ },
+ {
+  "n": 15,
+  "shapes": [
+   {
+    "kind": "sp",
+    "x": 138.2,
+    "y": 77.6,
+    "w": 501.1,
+    "h": 924.9,
+    "geom": "roundRect",
+    "ln": "1F1F24",
+    "fill": "1F1F24",
+    "t": ""
+   },
+   {
+    "kind": "pic",
+    "x": 158.4,
+    "y": 115.0,
+    "w": 460.8,
+    "h": 850.0,
+    "src": "image-15-1.jpg"
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 86.4,
+    "w": 1065.6,
+    "h": 64.8,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "SITUATION B · IN THE APP 2"
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 165.6,
+    "w": 226.1,
+    "h": 72.0,
+    "geom": "roundRect",
+    "ln": "B8550D",
+    "fill": "B8550D",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 165.6,
+    "w": 226.1,
+    "h": 72.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "CBTO STAFF"
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 266.4,
+    "w": 1065.6,
+    "h": 302.4,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Sign, then tap Confirm"
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 540.0,
+    "w": 1036.8,
+    "h": 151.2,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Sign with your finger. Clear = sign again."
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 698.4,
+    "w": 432.0,
+    "h": 43.2,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "CLOSE-UP"
+   },
+   {
+    "kind": "sp",
+    "x": 771.8,
+    "y": 747.4,
+    "w": 875.5,
+    "h": 175.1,
+    "geom": "rect",
+    "ln": "E31837",
+    "fill": "FFFFFF",
+    "t": ""
+   },
+   {
+    "kind": "pic",
+    "x": 777.6,
+    "y": 753.1,
+    "w": 864.0,
+    "h": 163.6,
+    "src": "image-15-2.jpg"
+   },
+   {
+    "kind": "sp",
+    "x": 180.8,
+    "y": 455.0,
+    "w": 416.1,
+    "h": 234.9,
+    "geom": "roundRect",
+    "ln": "E31837",
+    "fill": "E31837",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 604.0,
+    "y": 572.4,
+    "w": 144.8,
+    "h": 0.0,
+    "geom": "line",
+    "ln": "E31837",
+    "fill": "E31837",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 167.3,
+    "y": 777.1,
+    "w": 442.9,
+    "h": 64.9,
+    "geom": "roundRect",
+    "ln": "E31837",
+    "fill": "E31837",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 617.5,
+    "y": 809.5,
+    "w": 131.3,
+    "h": 0.0,
+    "geom": "line",
+    "ln": "E31837",
+    "fill": "E31837",
+    "t": ""
+   }
+  ]
+ },
+ {
+  "n": 16,
+  "shapes": [
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 79.2,
+    "w": 1656.0,
+    "h": 64.8,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "SITUATION B · IN THE APP 3"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 151.2,
+    "w": 226.1,
+    "h": 72.0,
+    "geom": "roundRect",
+    "ln": "B8550D",
+    "fill": "B8550D",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 151.2,
+    "w": 226.1,
+    "h": 72.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "CBTO STAFF"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 244.8,
+    "w": 1684.8,
+    "h": 172.8,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Pass the phone back to Security"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 446.4,
+    "w": 103.7,
+    "h": 103.7,
+    "geom": "ellipse",
+    "ln": "C8102E",
+    "fill": "C8102E",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 446.4,
+    "w": 103.7,
+    "h": 103.7,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "1"
+   },
+   {
+    "kind": "sp",
+    "x": 259.2,
+    "y": 439.2,
+    "w": 1540.8,
+    "h": 118.1,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Security signs as “Handed over by”"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 612.0,
+    "w": 103.7,
+    "h": 103.7,
+    "geom": "ellipse",
+    "ln": "C8102E",
+    "fill": "C8102E",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 612.0,
+    "w": 103.7,
+    "h": 103.7,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "2"
+   },
+   {
+    "kind": "sp",
+    "x": 259.2,
+    "y": 604.8,
+    "w": 1540.8,
+    "h": 118.1,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Then the witness checks, signs and confirms"
+   }
+  ]
+ },
+ {
+  "n": 17,
+  "shapes": [
+   {
+    "kind": "sp",
+    "x": 138.2,
+    "y": 77.6,
+    "w": 501.1,
+    "h": 924.9,
+    "geom": "roundRect",
+    "ln": "1F1F24",
+    "fill": "1F1F24",
+    "t": ""
+   },
+   {
+    "kind": "pic",
+    "x": 158.4,
+    "y": 115.0,
+    "w": 460.8,
+    "h": 850.0,
+    "src": "image-17-1.jpg"
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 86.4,
+    "w": 1065.6,
+    "h": 64.8,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "SITUATION B · IN THE APP 4"
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 165.6,
+    "w": 167.8,
+    "h": 72.0,
+    "geom": "roundRect",
+    "ln": "6A1B9A",
+    "fill": "6A1B9A",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 165.6,
+    "w": 167.8,
+    "h": 72.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "WITNESS"
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 266.4,
+    "w": 1065.6,
+    "h": 302.4,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Witness does the same"
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 540.0,
+    "w": 1036.8,
+    "h": 151.2,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Check name, sign, Confirm."
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 698.4,
+    "w": 432.0,
+    "h": 43.2,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "CLOSE-UP"
+   },
+   {
+    "kind": "sp",
+    "x": 771.8,
+    "y": 747.4,
+    "w": 875.5,
+    "h": 175.1,
+    "geom": "rect",
+    "ln": "E31837",
+    "fill": "FFFFFF",
+    "t": ""
+   },
+   {
+    "kind": "pic",
+    "x": 777.6,
+    "y": 753.1,
+    "w": 864.0,
+    "h": 163.6,
+    "src": "image-17-2.jpg"
+   },
+   {
+    "kind": "sp",
+    "x": 167.3,
+    "y": 329.7,
+    "w": 442.9,
+    "h": 106.3,
+    "geom": "roundRect",
+    "ln": "E31837",
+    "fill": "E31837",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 617.5,
+    "y": 382.9,
+    "w": 131.3,
+    "h": 0.0,
+    "geom": "line",
+    "ln": "E31837",
+    "fill": "E31837",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 167.3,
+    "y": 777.1,
+    "w": 442.9,
+    "h": 64.9,
+    "geom": "roundRect",
+    "ln": "E31837",
+    "fill": "E31837",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 617.5,
+    "y": 809.5,
+    "w": 131.3,
+    "h": 0.0,
+    "geom": "line",
+    "ln": "E31837",
+    "fill": "E31837",
+    "t": ""
+   }
+  ]
+ },
+ {
+  "n": 18,
+  "shapes": [
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 79.2,
+    "w": 1656.0,
+    "h": 64.8,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "LAST STEP"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 151.2,
+    "w": 167.8,
+    "h": 72.0,
+    "geom": "roundRect",
+    "ln": "6A1B9A",
+    "fill": "6A1B9A",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 151.2,
+    "w": 167.8,
+    "h": 72.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "WITNESS"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 244.8,
+    "w": 1684.8,
+    "h": 172.8,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Give the phone back to Security"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 446.4,
+    "w": 103.7,
+    "h": 103.7,
+    "geom": "ellipse",
+    "ln": "C8102E",
+    "fill": "C8102E",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 446.4,
+    "w": 103.7,
+    "h": 103.7,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "1"
+   },
+   {
+    "kind": "sp",
+    "x": 259.2,
+    "y": 439.2,
+    "w": 1540.8,
+    "h": 118.1,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Screen says: hand the phone back to Security"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 597.6,
+    "w": 103.7,
+    "h": 103.7,
+    "geom": "ellipse",
+    "ln": "C8102E",
+    "fill": "C8102E",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 597.6,
+    "w": 103.7,
+    "h": 103.7,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "2"
+   },
+   {
+    "kind": "sp",
+    "x": 259.2,
+    "y": 590.4,
+    "w": 1540.8,
+    "h": 118.1,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Security signs and saves the record"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 748.8,
+    "w": 103.7,
+    "h": 103.7,
+    "geom": "ellipse",
+    "ln": "C8102E",
+    "fill": "C8102E",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 748.8,
+    "w": 103.7,
+    "h": 103.7,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "3"
+   },
+   {
+    "kind": "sp",
+    "x": 259.2,
+    "y": 741.6,
+    "w": 1540.8,
+    "h": 118.1,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Security will email you the signed PDF"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 972.0,
+    "w": 1684.8,
+    "h": 57.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Security’s own steps are covered in the staff guide."
+   }
+  ]
+ },
+ {
+  "n": 19,
+  "shapes": [
+   {
+    "kind": "sp",
+    "x": 100.8,
+    "y": 57.6,
+    "w": 1728.0,
+    "h": 57.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "AFTER SIGNING"
+   },
+   {
+    "kind": "sp",
+    "x": 100.8,
+    "y": 118.1,
+    "w": 1728.0,
+    "h": 129.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Security emails you the signed PDF"
+   },
+   {
+    "kind": "sp",
+    "x": 123.8,
+    "y": 243.4,
+    "w": 558.7,
+    "h": 754.3,
+    "geom": "roundRect",
+    "ln": "1F1F24",
+    "fill": "1F1F24",
+    "t": ""
+   },
+   {
+    "kind": "pic",
+    "x": 144.0,
+    "y": 280.8,
+    "w": 518.4,
+    "h": 679.5,
+    "src": "image-19-1.jpg"
+   },
+   {
+    "kind": "sp",
+    "x": 154.1,
+    "y": 561.4,
+    "w": 498.3,
+    "h": 173.6,
+    "geom": "roundRect",
+    "ln": "E31837",
+    "fill": "E31837",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 720.0,
+    "y": 943.2,
+    "w": 432.0,
+    "h": 115.2,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Real “Saved” screen from a TEST record. The Record ID is in the PDF file name."
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 288.0,
+    "w": 89.3,
+    "h": 89.3,
+    "geom": "ellipse",
+    "ln": "C8102E",
+    "fill": "C8102E",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 288.0,
+    "w": 89.3,
+    "h": 89.3,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "1"
+   },
+   {
+    "kind": "sp",
+    "x": 892.8,
+    "y": 273.6,
+    "w": 936.0,
+    "h": 118.1,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Security saves. The app creates the signed PDF"
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 424.8,
+    "w": 89.3,
+    "h": 89.3,
+    "geom": "ellipse",
+    "ln": "C8102E",
+    "fill": "C8102E",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 424.8,
+    "w": 89.3,
+    "h": 89.3,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "2"
+   },
+   {
+    "kind": "sp",
+    "x": 892.8,
+    "y": 410.4,
+    "w": 936.0,
+    "h": 118.1,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Security staff email the PDF to you"
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 561.6,
+    "w": 89.3,
+    "h": 89.3,
+    "geom": "ellipse",
+    "ln": "C8102E",
+    "fill": "C8102E",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 561.6,
+    "w": 89.3,
+    "h": 89.3,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "3"
+   },
+   {
+    "kind": "sp",
+    "x": 892.8,
+    "y": 547.2,
+    "w": 936.0,
+    "h": 118.1,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Keep it for your records"
+   },
+   {
+    "kind": "sp",
+    "x": 777.6,
+    "y": 720.0,
+    "w": 1051.2,
+    "h": 194.4,
+    "geom": "roundRect",
+    "ln": "D93025",
+    "fill": "FCE8E6",
+    "t": ""
+   },
+   {
+    "kind": "sp",
+    "x": 806.4,
+    "y": 727.2,
+    "w": 993.6,
+    "h": 180.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "The PDF attachment is named like: AA_SEC_F_007_Acknowledgement_TEST-Recipient_ACK007-20261112-191339-A1D1.pdf"
+   }
+  ]
+ },
+ {
+  "n": 20,
+  "shapes": [
+   {
+    "kind": "sp",
+    "x": 100.8,
+    "y": 72.0,
+    "w": 1728.0,
+    "h": 64.8,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "REMEMBER"
+   },
+   {
+    "kind": "sp",
+    "x": 100.8,
+    "y": 136.8,
+    "w": 1728.0,
+    "h": 129.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "When Security hands you the phone"
+   },
+   {
+    "kind": "sp",
+    "x": 100.8,
+    "y": 316.8,
+    "w": 835.2,
+    "h": 72.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "DO"
+   },
+   {
+    "kind": "sp",
+    "x": 993.6,
+    "y": 316.8,
+    "w": 835.2,
+    "h": 72.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "DON’T"
+   },
+   {
+    "kind": "sp",
+    "x": 100.8,
+    "y": 410.4,
+    "w": 849.6,
+    "h": 93.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "✓  Check your name and role on screen"
+   },
+   {
+    "kind": "sp",
+    "x": 100.8,
+    "y": 518.4,
+    "w": 849.6,
+    "h": 93.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "✓  Read the details before signing"
+   },
+   {
+    "kind": "sp",
+    "x": 100.8,
+    "y": 626.4,
+    "w": 849.6,
+    "h": 93.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "✓  Type your own name and ID if asked"
+   },
+   {
+    "kind": "sp",
+    "x": 100.8,
+    "y": 734.4,
+    "w": 849.6,
+    "h": 93.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "✓  Sign with your finger, then Confirm"
+   },
+   {
+    "kind": "sp",
+    "x": 100.8,
+    "y": 842.4,
+    "w": 849.6,
+    "h": 93.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "✓  Hand the phone back to Security"
+   },
+   {
+    "kind": "sp",
+    "x": 993.6,
+    "y": 410.4,
+    "w": 864.0,
+    "h": 93.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "✗  Sign for someone else"
+   },
+   {
+    "kind": "sp",
+    "x": 993.6,
+    "y": 518.4,
+    "w": 864.0,
+    "h": 93.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "✗  Sign if the details are wrong: tap “Something is wrong”"
+   },
+   {
+    "kind": "sp",
+    "x": 993.6,
+    "y": 626.4,
+    "w": 864.0,
+    "h": 93.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "✗  Close the app or press Back"
+   },
+   {
+    "kind": "sp",
+    "x": 993.6,
+    "y": 734.4,
+    "w": 864.0,
+    "h": 93.6,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "✗  Take photos of the screen"
+   }
+  ]
+ },
+ {
+  "n": 21,
+  "shapes": [
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 129.6,
+    "w": 1656.0,
+    "h": 72.0,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "WHERE YOUR SIGNATURE GOES"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 216.0,
+    "w": 1656.0,
+    "h": 259.2,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Into a signed PDF, kept securely by AirAsia Security"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 518.4,
+    "w": 1699.2,
+    "h": 100.8,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "One PDF per form, with every signature and a Record ID"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 633.6,
+    "w": 1699.2,
+    "h": 100.8,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Saved to a restricted AirAsia folder, with a record log"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 748.8,
+    "w": 1699.2,
+    "h": 100.8,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "After completion, a PDF copy of the signed Acknowledgement of Receipt is shared with you by email"
+   },
+   {
+    "kind": "sp",
+    "x": 115.2,
+    "y": 864.0,
+    "w": 1699.2,
+    "h": 100.8,
+    "geom": "rect",
+    "ln": "",
+    "fill": "",
+    "t": "Have a question? Ask the Security staff on duty"
+   }
+  ]
+ }
+]
