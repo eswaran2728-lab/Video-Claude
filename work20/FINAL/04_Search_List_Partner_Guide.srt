@@ -1,0 +1,200 @@
+1
+00:00:00,500 --> 00:00:04,002
+Security fills in the Search List and hands you the phone.
+
+2
+00:00:04,452 --> 00:00:08,406
+This guide is for staff or workmen being searched, and witnesses.
+
+3
+00:00:09,156 --> 00:00:10,480
+Here is what changed.
+
+4
+00:00:11,280 --> 00:00:14,895
+Before, this was a printed paper form, signed with a pen.
+
+5
+00:00:15,695 --> 00:00:19,537
+Now it is the same form, on the Security officer’s phone.
+
+6
+00:00:19,986 --> 00:00:25,352
+You sign with your finger, and the signed PDF is saved automatically, in a
+
+7
+00:00:25,352 --> 00:00:27,237
+restricted AirAsia folder.
+
+8
+00:00:28,037 --> 00:00:30,056
+Every form works in four steps.
+
+9
+00:00:30,506 --> 00:00:33,618
+Security fills the form, and hands you the phone.
+
+10
+00:00:34,068 --> 00:00:36,733
+You check, type your name and ID, and sign.
+
+11
+00:00:37,533 --> 00:00:40,861
+Then the phone goes back, and Security signs and saves.
+
+12
+00:00:41,311 --> 00:00:42,607
+Blue is Security.
+
+13
+00:00:43,057 --> 00:00:44,121
+Orange is you.
+
+14
+00:00:44,871 --> 00:00:47,609
+You need nothing to install, and no account.
+
+15
+00:00:48,059 --> 00:00:49,756
+Security brings the phone.
+
+16
+00:00:50,206 --> 00:00:53,366
+Have your own name and ID or staff number ready.
+
+17
+00:00:54,166 --> 00:00:57,764
+Read the form before you sign, and if it is wrong, say so.
+
+18
+00:00:58,564 --> 00:01:00,181
+Sign only for yourself.
+
+19
+00:01:00,931 --> 00:01:05,053
+This part is for the person searched, and the witness, if one is present.
+
+20
+00:01:05,503 --> 00:01:08,309
+It is the same flow as FOCA and NOTOC.
+
+21
+00:01:09,109 --> 00:01:11,190
+This is the paper form we used.
+
+22
+00:01:11,640 --> 00:01:13,349
+Security fills the form.
+
+23
+00:01:14,949 --> 00:01:17,460
+In the app, the person searched signs first.
+
+24
+00:01:18,260 --> 00:01:20,925
+The witness signs second, only if present.
+
+25
+00:01:21,725 --> 00:01:23,635
+Then the Security staff who searched.
+
+26
+00:01:24,835 --> 00:01:29,368
+Check the items found are listed correctly, or ‘Nil’, before you sign.
+
+27
+00:01:31,168 --> 00:01:34,412
+Check it is your turn: the orange box shows your name.
+
+28
+00:01:36,012 --> 00:01:39,619
+Scroll up and read the search details and the items found.
+
+29
+00:01:41,819 --> 00:01:44,596
+If nothing was found, the form should say ‘Nil’.
+
+30
+00:01:45,396 --> 00:01:48,765
+If anything is wrong, tell Security before you sign.
+
+31
+00:01:50,365 --> 00:01:53,128
+If everything is correct, sign with your finger.
+
+32
+00:01:54,528 --> 00:01:56,541
+Tap ‘Clear’ if you need to sign again.
+
+33
+00:01:57,341 --> 00:01:58,690
+Then tap ‘Confirm’.
+
+34
+00:02:00,390 --> 00:02:06,049
+If a witness is present, they do the same: check their own name, sign, and tap ‘Confirm’.
+
+35
+00:02:08,149 --> 00:02:11,481
+When the screen says so, give the phone back to Security.
+
+36
+00:02:12,831 --> 00:02:15,337
+Security signs and saves the record.
+
+37
+00:02:16,137 --> 00:02:18,913
+This is a real Saved screen from a TEST record.
+
+38
+00:02:19,363 --> 00:02:24,501
+The app creates the signed PDF, and the Record ID is in the file name.
+
+39
+00:02:25,951 --> 00:02:29,776
+Security staff email you a copy of the signed Search List.
+
+40
+00:02:30,576 --> 00:02:31,936
+Keep it for your records.
+
+41
+00:02:32,736 --> 00:02:37,828
+Remember: check your name and role on screen, and read the details before signing.
+
+42
+00:02:38,628 --> 00:02:40,881
+Type your own name and ID if asked.
+
+43
+00:02:41,681 --> 00:02:46,312
+Sign with your finger, then Confirm, and hand the phone back to Security.
+
+44
+00:02:47,112 --> 00:02:50,558
+Don’t sign for someone else, or if the details are wrong.
+
+45
+00:02:51,358 --> 00:02:55,016
+Don’t close the app, press Back, or take photos of the screen.
+
+46
+00:02:55,766 --> 00:03:02,432
+Your signature goes into one signed PDF per form, with every signature and a Record ID.
+
+47
+00:03:02,882 --> 00:03:07,149
+It is saved to a restricted AirAsia folder, with a record log.
+
+48
+00:03:07,599 --> 00:03:12,238
+A PDF copy of the signed Search List is shared with you by email.
+
+49
+00:03:13,288 --> 00:03:14,344
+Have a question?
+
+50
+00:03:14,794 --> 00:03:16,834
+Ask the Security staff on duty.
+

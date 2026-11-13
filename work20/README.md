@@ -58,7 +58,7 @@ You asked for every slide to be explained with motion graphics, each video betwe
 # AirAsia Security: four Partner Briefing guide videos (HyperFrames)
 
 Four separate videos for signers who are handed Security's phone. Each is 1920x1080, 30 fps, and has its own editable
-HyperFrames project and SRT. **Status: v01 previews for review** (draft render quality, 1920x1080). No final MP4 has
+HyperFrames project and SRT. **Status: FINAL v02 rendered (work20/FINAL); v01 previews kept** (draft render quality, 1920x1080). No final MP4 has
 been made and nothing is published.
 
 | # | Video | Project | Runtime | Target | Preview | SRT |
