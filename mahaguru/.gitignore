@@ -1,0 +1,15 @@
+raw/
+thumbs/
+urls.txt
+dl.sh
+audio/src/*.wav
+audio/src/*.org*
+audio/voice/*.mp3
+film/assets/video/
+film/assets/audio/ambience.wav
+film/assets/audio/music.wav
+film/assets/audio/effects.wav
+film/renders/
+film/.hyperframes/
+film/render.log
+film/node_modules/

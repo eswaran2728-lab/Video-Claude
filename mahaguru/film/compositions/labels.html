@@ -1,0 +1,33 @@
+<template>
+  <style>
+
+@font-face { font-family: "MG Serif"; src: url("assets/fonts/serif-tamil-700.woff2") format("woff2"); font-weight: 700; unicode-range: U+0B80-0BFF, U+200C-200D, U+25CC; }
+@font-face { font-family: "MG Serif"; src: url("assets/fonts/serif-tamil-400.woff2") format("woff2"); font-weight: 400; unicode-range: U+0B80-0BFF, U+200C-200D, U+25CC; }
+@font-face { font-family: "MG Serif"; src: url("assets/fonts/serif-latin-700.woff2") format("woff2"); font-weight: 700; unicode-range: U+0000-00FF, U+2000-206F; }
+@font-face { font-family: "MG Serif"; src: url("assets/fonts/serif-latin-400.woff2") format("woff2"); font-weight: 400; unicode-range: U+0000-00FF, U+2000-206F; }
+@font-face { font-family: "MG Sans"; src: url("assets/fonts/sans-tamil-700.woff2") format("woff2"); font-weight: 700; unicode-range: U+0B80-0BFF, U+200C-200D, U+25CC; }
+@font-face { font-family: "MG Sans"; src: url("assets/fonts/sans-tamil-400.woff2") format("woff2"); font-weight: 400; unicode-range: U+0B80-0BFF, U+200C-200D, U+25CC; }
+@font-face { font-family: "MG Sans"; src: url("assets/fonts/sans-latin-700.woff2") format("woff2"); font-weight: 700; unicode-range: U+0000-00FF, U+2000-206F; }
+@font-face { font-family: "MG Sans"; src: url("assets/fonts/sans-latin-400.woff2") format("woff2"); font-weight: 400; unicode-range: U+0000-00FF, U+2000-206F; }
+
+    #root { position:absolute; inset:0; overflow:hidden;  }
+
+    .lbl { position:absolute; left:192px; top:118px; }
+    .lbl span { display:inline-block; font-family:"MG Sans"; font-weight:700; font-size:32px; color:#F3E9D8;
+           background:rgba(0,0,0,0.45); padding:8px 20px 10px 18px; border-left:3px solid #C9A57A; border-radius:0 6px 6px 0; }
+  </style>
+  <div id="root" data-composition-id="labels" data-width="1920" data-height="1080">
+    <div id="lbl-2A" class="lbl clip" data-start="48.70" data-duration="5.00"><span>மறுஉருவாக்கம்</span></div>
+    <div id="lbl-7A" class="lbl clip" data-start="240.70" data-duration="5.00"><span>மறுஉருவாக்கம்</span></div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#lbl-2A span", {opacity:0}, {opacity:0.9, duration:0.6, ease:"sine.out"}, 48.70);
+      tl.to("#lbl-2A span", {opacity:0, duration:0.6, ease:"sine.in"}, 53.00);
+      tl.fromTo("#lbl-7A span", {opacity:0}, {opacity:0.9, duration:0.6, ease:"sine.out"}, 240.70);
+      tl.to("#lbl-7A span", {opacity:0, duration:0.6, ease:"sine.in"}, 245.00);
+      window.__timelines["labels"] = tl;
+    })();
+  </script>
+</template>
