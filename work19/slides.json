@@ -1,0 +1,1348 @@
+[
+ {
+  "n": 1,
+  "shot": {
+   "src": "image-1-1.jpg",
+   "size": [
+    412,
+    787
+   ],
+   "boxes": [
+    {
+     "x": 8,
+     "y": 87,
+     "w": 395,
+     "h": 94
+    }
+   ],
+   "slide_w": 2926080,
+   "slide_h": 5589381
+  },
+  "close": null,
+  "role": null,
+  "texts": [
+   {
+    "t": "STAFF GUIDE  ·  AA/SEC/F/070",
+    "size": 20.0
+   },
+   {
+    "t": "FOCA Checklist",
+    "size": 60.0
+   },
+   {
+    "t": "Security fills the checklist. Airline Rep and Security Rep each sign on the same phone.",
+    "size": 26.0
+   },
+   {
+    "t": "AA-SEC In-Person Signing Forms app",
+    "size": 16.0
+   }
+  ]
+ },
+ {
+  "n": 2,
+  "shot": null,
+  "close": null,
+  "role": null,
+  "texts": [
+   {
+    "t": "AA/SEC/F/070",
+    "size": 24.0
+   },
+   {
+    "t": "Who does what",
+    "size": 60.0
+   },
+   {
+    "t": "Who does what",
+    "size": 22.0
+   },
+   {
+    "t": "1",
+    "size": 28.0
+   },
+   {
+    "t": "Security staff fills the checklist",
+    "size": 30.0
+   },
+   {
+    "t": "2",
+    "size": 28.0
+   },
+   {
+    "t": "Airline Representative: name, ID, sign",
+    "size": 30.0
+   },
+   {
+    "t": "3",
+    "size": 28.0
+   },
+   {
+    "t": "Security Representative: name, ID, sign, save",
+    "size": 30.0
+   }
+  ]
+ },
+ {
+  "n": 3,
+  "shot": null,
+  "close": null,
+  "role": null,
+  "texts": [
+   {
+    "t": "BEFORE YOU START",
+    "size": 18.0
+   },
+   {
+    "t": "Rules for every FOCA",
+    "size": 46.0
+   },
+   {
+    "t": "Use your AirAsia (@airasia.com) Google account",
+    "size": 28.0
+   },
+   {
+    "t": "1",
+    "size": 28.0
+   },
+   {
+    "t": "Each person types their own name and ID, and signs for themselves",
+    "size": 28.0
+   },
+   {
+    "t": "2",
+    "size": 28.0
+   },
+   {
+    "t": "Never sign for anyone else",
+    "size": 28.0
+   },
+   {
+    "t": "3",
+    "size": 28.0
+   },
+   {
+    "t": "One case = one new form. Never reuse an old one",
+    "size": 28.0
+   },
+   {
+    "t": "4",
+    "size": 28.0
+   }
+  ]
+ },
+ {
+  "n": 4,
+  "shot": {
+   "src": "image-4-1.png",
+   "size": [
+    636,
+    636
+   ],
+   "boxes": [],
+   "slide_w": 3474720,
+   "slide_h": 3474720
+  },
+  "close": null,
+  "role": null,
+  "texts": [
+   {
+    "t": "STEP 1",
+    "size": 18.0
+   },
+   {
+    "t": "Get the app link",
+    "size": 50.0
+   },
+   {
+    "t": "Ask your supervisor for the link, or scan this code with your phone camera.",
+    "size": 28.0
+   },
+   {
+    "t": "The link only works for AirAsia Google accounts.",
+    "size": 22.0
+   },
+   {
+    "t": "Scan to open the app",
+    "size": 20.0
+   }
+  ]
+ },
+ {
+  "n": 5,
+  "shot": null,
+  "close": null,
+  "role": null,
+  "texts": [
+   {
+    "t": "STEP 2",
+    "size": 18.0
+   },
+   {
+    "t": "Open it in Chrome on your phone",
+    "size": 46.0
+   },
+   {
+    "t": "Open the Chrome app on the phone",
+    "size": 30.0
+   },
+   {
+    "t": "1",
+    "size": 28.0
+   },
+   {
+    "t": "Paste the link, or scan the code",
+    "size": 30.0
+   },
+   {
+    "t": "2",
+    "size": 28.0
+   },
+   {
+    "t": "If asked, sign in with your @airasia.com account",
+    "size": 30.0
+   },
+   {
+    "t": "3",
+    "size": 28.0
+   },
+   {
+    "t": "Wait for the list of 4 forms",
+    "size": 30.0
+   },
+   {
+    "t": "4",
+    "size": 28.0
+   },
+   {
+    "t": "Tip: in Chrome tap ⋮ → Add to Home screen, so the app is one tap away next time.",
+    "size": 14.0
+   }
+  ]
+ },
+ {
+  "n": 6,
+  "shot": {
+   "src": "image-6-1.jpg",
+   "size": [
+    412,
+    787
+   ],
+   "boxes": [
+    {
+     "x": 8,
+     "y": 87,
+     "w": 395,
+     "h": 94
+    }
+   ],
+   "slide_w": 2926080,
+   "slide_h": 5589381
+  },
+  "close": {
+   "src": "image-6-2.jpg",
+   "size": [
+    824,
+    228
+   ]
+  },
+  "role": {
+   "color": "blue",
+   "y": 1051560,
+   "text": "SECURITY STAFF"
+  },
+  "texts": [
+   {
+    "t": "STEP 3",
+    "size": 18.0
+   },
+   {
+    "t": "Tap FOCA",
+    "size": 50.0
+   },
+   {
+    "t": "Check the form code on the card: AA/SEC/F/070.",
+    "size": 22.0
+   },
+   {
+    "t": "CLOSE-UP",
+    "size": 13.0
+   }
+  ]
+ },
+ {
+  "n": 7,
+  "shot": {
+   "src": "image-7-1.jpg",
+   "size": [
+    1316,
+    938
+   ],
+   "boxes": [],
+   "slide_w": 6766560,
+   "slide_h": 4822974
+  },
+  "close": null,
+  "role": null,
+  "texts": [
+   {
+    "t": "THE WHOLE FORM",
+    "size": 18.0
+   },
+   {
+    "t": "Scroll down to see it all",
+    "size": 44.0
+   },
+   {
+    "t": "Top: flight details. Middle: tick each line. Bottom: blue Next button.",
+    "size": 24.0
+   }
+  ]
+ },
+ {
+  "n": 8,
+  "shot": {
+   "src": "image-8-1.jpg",
+   "size": [
+    412,
+    800
+   ],
+   "boxes": [
+    {
+     "x": 8,
+     "y": 168,
+     "w": 396,
+     "h": 376
+    }
+   ],
+   "slide_w": 2926080,
+   "slide_h": 5681709
+  },
+  "close": null,
+  "role": {
+   "color": "blue",
+   "y": 1051560,
+   "text": "SECURITY STAFF"
+  },
+  "texts": [
+   {
+    "t": "STEP 4",
+    "size": 18.0
+   },
+   {
+    "t": "Fill the flight boxes",
+    "size": 50.0
+   },
+   {
+    "t": "Flight number, aircraft reg, destination, date, STA/ATA, STD/ATD, bay. Flight number and date are a must.",
+    "size": 26.0
+   },
+   {
+    "t": "Sample shown: TEST data only.",
+    "size": 14.0
+   }
+  ]
+ },
+ {
+  "n": 9,
+  "shot": {
+   "src": "image-9-1.jpg",
+   "size": [
+    412,
+    800
+   ],
+   "boxes": [
+    {
+     "x": 20,
+     "y": 112,
+     "w": 372,
+     "h": 55
+    }
+   ],
+   "slide_w": 2926080,
+   "slide_h": 5681709
+  },
+  "close": {
+   "src": "image-9-2.jpg",
+   "size": [
+    784,
+    150
+   ]
+  },
+  "role": {
+   "color": "blue",
+   "y": 1051560,
+   "text": "SECURITY STAFF"
+  },
+  "texts": [
+   {
+    "t": "STEP 5",
+    "size": 18.0
+   },
+   {
+    "t": "Tick one box on every line",
+    "size": 50.0
+   },
+   {
+    "t": "Areas of coverage: Completed or Not Checked. Type a remark if needed.",
+    "size": 22.0
+   },
+   {
+    "t": "CLOSE-UP",
+    "size": 13.0
+   }
+  ]
+ },
+ {
+  "n": 10,
+  "shot": {
+   "src": "image-10-1.jpg",
+   "size": [
+    412,
+    800
+   ],
+   "boxes": [
+    {
+     "x": 8,
+     "y": 705,
+     "w": 396,
+     "h": 60
+    }
+   ],
+   "slide_w": 2926080,
+   "slide_h": 5681709
+  },
+  "close": {
+   "src": "image-10-2.jpg",
+   "size": [
+    824,
+    160
+   ]
+  },
+  "role": {
+   "color": "blue",
+   "y": 1051560,
+   "text": "SECURITY STAFF"
+  },
+  "texts": [
+   {
+    "t": "STEP 6",
+    "size": 18.0
+   },
+   {
+    "t": "Additional Services, then tap Next",
+    "size": 50.0
+   },
+   {
+    "t": "Tick Required/Completed or Not Applicable. Read every line before you tap.",
+    "size": 22.0
+   },
+   {
+    "t": "CLOSE-UP",
+    "size": 13.0
+   }
+  ]
+ },
+ {
+  "n": 11,
+  "shot": {
+   "src": "image-11-1.jpg",
+   "size": [
+    412,
+    537
+   ],
+   "boxes": [
+    {
+     "x": 16,
+     "y": 306,
+     "w": 380,
+     "h": 62
+    }
+   ],
+   "slide_w": 3291840,
+   "slide_h": 4290578
+  },
+  "close": {
+   "src": "image-11-2.jpg",
+   "size": [
+    800,
+    164
+   ]
+  },
+  "role": {
+   "color": "orange",
+   "y": 1051560,
+   "text": "AIRLINE REPRESENTATIVE"
+  },
+  "texts": [
+   {
+    "t": "STEP 7",
+    "size": 18.0
+   },
+   {
+    "t": "Give the phone to the Airline Rep",
+    "size": 50.0
+   },
+   {
+    "t": "They tap the orange button: “Airline Representative has the phone”.",
+    "size": 22.0
+   },
+   {
+    "t": "CLOSE-UP",
+    "size": 13.0
+   }
+  ]
+ },
+ {
+  "n": 12,
+  "shot": {
+   "src": "image-12-1.jpg",
+   "size": [
+    412,
+    800
+   ],
+   "boxes": [
+    {
+     "x": 20,
+     "y": 161,
+     "w": 372,
+     "h": 133
+    }
+   ],
+   "slide_w": 2926080,
+   "slide_h": 5681709
+  },
+  "close": {
+   "src": "image-12-2.jpg",
+   "size": [
+    784,
+    306
+   ]
+  },
+  "role": {
+   "color": "orange",
+   "y": 1051560,
+   "text": "AIRLINE REPRESENTATIVE"
+  },
+  "texts": [
+   {
+    "t": "STEP 8",
+    "size": 18.0
+   },
+   {
+    "t": "Airline Rep checks the form",
+    "size": 50.0
+   },
+   {
+    "t": "They read every detail. Wrong? They tap “Something is wrong” and the phone goes back to Security.",
+    "size": 22.0
+   },
+   {
+    "t": "CLOSE-UP",
+    "size": 13.0
+   }
+  ]
+ },
+ {
+  "n": 13,
+  "shot": {
+   "src": "image-13-1.jpg",
+   "size": [
+    412,
+    537
+   ],
+   "boxes": [
+    {
+     "x": 20,
+     "y": 144,
+     "w": 372,
+     "h": 55
+    }
+   ],
+   "slide_w": 3291840,
+   "slide_h": 4290578
+  },
+  "close": {
+   "src": "image-13-2.jpg",
+   "size": [
+    784,
+    150
+   ]
+  },
+  "role": {
+   "color": "orange",
+   "y": 1051560,
+   "text": "AIRLINE REPRESENTATIVE"
+  },
+  "texts": [
+   {
+    "t": "STEP 9",
+    "size": 18.0
+   },
+   {
+    "t": "Type own name and ID",
+    "size": 50.0
+   },
+   {
+    "t": "Name and ID / staff number of the Airline Rep.",
+    "size": 22.0
+   },
+   {
+    "t": "CLOSE-UP",
+    "size": 13.0
+   }
+  ]
+ },
+ {
+  "n": 14,
+  "shot": {
+   "src": "image-14-1.jpg",
+   "size": [
+    412,
+    537
+   ],
+   "boxes": [
+    {
+     "x": 20,
+     "y": 192,
+     "w": 372,
+     "h": 210
+    }
+   ],
+   "slide_w": 3291840,
+   "slide_h": 4290578
+  },
+  "close": null,
+  "role": {
+   "color": "orange",
+   "y": 1051560,
+   "text": "AIRLINE REPRESENTATIVE"
+  },
+  "texts": [
+   {
+    "t": "STEP 10",
+    "size": 18.0
+   },
+   {
+    "t": "Sign in the box",
+    "size": 50.0
+   },
+   {
+    "t": "Use a finger or stylus. Security staff: do not sign for them.",
+    "size": 26.0
+   }
+  ]
+ },
+ {
+  "n": 15,
+  "shot": {
+   "src": "image-15-1.jpg",
+   "size": [
+    412,
+    537
+   ],
+   "boxes": [
+    {
+     "x": 20,
+     "y": 404,
+     "w": 372,
+     "h": 60
+    }
+   ],
+   "slide_w": 3291840,
+   "slide_h": 4290578
+  },
+  "close": {
+   "src": "image-15-2.jpg",
+   "size": [
+    784,
+    160
+   ]
+  },
+  "role": {
+   "color": "orange",
+   "y": 1051560,
+   "text": "AIRLINE REPRESENTATIVE"
+  },
+  "texts": [
+   {
+    "t": "MISTAKE IN THE SIGNATURE?",
+    "size": 18.0
+   },
+   {
+    "t": "Tap Clear and sign again",
+    "size": 50.0
+   },
+   {
+    "t": "The box empties. Sign one more time.",
+    "size": 22.0
+   },
+   {
+    "t": "CLOSE-UP",
+    "size": 13.0
+   }
+  ]
+ },
+ {
+  "n": 16,
+  "shot": {
+   "src": "image-16-1.jpg",
+   "size": [
+    412,
+    537
+   ],
+   "boxes": [
+    {
+     "x": 8,
+     "y": 478,
+     "w": 396,
+     "h": 59
+    }
+   ],
+   "slide_w": 3291840,
+   "slide_h": 4290578
+  },
+  "close": {
+   "src": "image-16-2.jpg",
+   "size": [
+    824,
+    138
+   ]
+  },
+  "role": {
+   "color": "orange",
+   "y": 1051560,
+   "text": "AIRLINE REPRESENTATIVE"
+  },
+  "texts": [
+   {
+    "t": "STEP 11",
+    "size": 18.0
+   },
+   {
+    "t": "Tap Confirm my signature",
+    "size": 50.0
+   },
+   {
+    "t": "Then the screen asks to hand the phone back to Security.",
+    "size": 22.0
+   },
+   {
+    "t": "CLOSE-UP",
+    "size": 13.0
+   }
+  ]
+ },
+ {
+  "n": 17,
+  "shot": null,
+  "close": null,
+  "role": {
+   "color": "blue",
+   "y": 960120,
+   "text": "SECURITY REPRESENTATIVE"
+  },
+  "texts": [
+   {
+    "t": "STEP 12",
+    "size": 18.0
+   },
+   {
+    "t": "Phone back to Security",
+    "size": 46.0
+   },
+   {
+    "t": "Screen says: “Hand the phone back to SECURITY STAFF”",
+    "size": 28.0
+   },
+   {
+    "t": "1",
+    "size": 28.0
+   },
+   {
+    "t": "Tap the blue button: “Security staff has the phone”",
+    "size": 28.0
+   },
+   {
+    "t": "2",
+    "size": 28.0
+   }
+  ]
+ },
+ {
+  "n": 18,
+  "shot": {
+   "src": "image-18-1.jpg",
+   "size": [
+    412,
+    537
+   ],
+   "boxes": [
+    {
+     "x": 20,
+     "y": 216,
+     "w": 372,
+     "h": 58
+    }
+   ],
+   "slide_w": 3291840,
+   "slide_h": 4290578
+  },
+  "close": {
+   "src": "image-18-2.jpg",
+   "size": [
+    784,
+    156
+   ]
+  },
+  "role": {
+   "color": "blue",
+   "y": 1051560,
+   "text": "SECURITY REPRESENTATIVE"
+  },
+  "texts": [
+   {
+    "t": "STEP 13",
+    "size": 18.0
+   },
+   {
+    "t": "Type own name and ID",
+    "size": 50.0
+   },
+   {
+    "t": "Name and ID / staff number of the Security Rep.",
+    "size": 22.0
+   },
+   {
+    "t": "CLOSE-UP",
+    "size": 13.0
+   }
+  ]
+ },
+ {
+  "n": 19,
+  "shot": {
+   "src": "image-19-1.jpg",
+   "size": [
+    412,
+    787
+   ],
+   "boxes": [
+    {
+     "x": 20,
+     "y": 264,
+     "w": 372,
+     "h": 213
+    }
+   ],
+   "slide_w": 2926080,
+   "slide_h": 5589381
+  },
+  "close": null,
+  "role": {
+   "color": "blue",
+   "y": 1051560,
+   "text": "SECURITY REPRESENTATIVE"
+  },
+  "texts": [
+   {
+    "t": "STEP 14",
+    "size": 18.0
+   },
+   {
+    "t": "Sign in the box",
+    "size": 50.0
+   },
+   {
+    "t": "Mistake? Tap Clear and sign again.",
+    "size": 26.0
+   }
+  ]
+ },
+ {
+  "n": 20,
+  "shot": {
+   "src": "image-20-1.jpg",
+   "size": [
+    412,
+    787
+   ],
+   "boxes": [
+    {
+     "x": 8,
+     "y": 552,
+     "w": 396,
+     "h": 59
+    }
+   ],
+   "slide_w": 2926080,
+   "slide_h": 5589381
+  },
+  "close": {
+   "src": "image-20-2.jpg",
+   "size": [
+    824,
+    158
+   ]
+  },
+  "role": {
+   "color": "blue",
+   "y": 1051560,
+   "text": "SECURITY REPRESENTATIVE"
+  },
+  "texts": [
+   {
+    "t": "STEP 15 · SAVE",
+    "size": 18.0
+   },
+   {
+    "t": "Tap Save record",
+    "size": 50.0
+   },
+   {
+    "t": "Green button: “Save record (PDF to Drive + Sheet)”. Tap once only. It turns to “Saving...”.",
+    "size": 22.0
+   },
+   {
+    "t": "CLOSE-UP",
+    "size": 13.0
+   }
+  ]
+ },
+ {
+  "n": 21,
+  "shot": {
+   "src": "image-21-1.jpg",
+   "size": [
+    412,
+    537
+   ],
+   "boxes": [
+    {
+     "x": 8,
+     "y": 96,
+     "w": 396,
+     "h": 143
+    }
+   ],
+   "slide_w": 3291840,
+   "slide_h": 4290578
+  },
+  "close": {
+   "src": "image-21-2.jpg",
+   "size": [
+    824,
+    326
+   ]
+  },
+  "role": {
+   "color": "blue",
+   "y": 1051560,
+   "text": "SECURITY REPRESENTATIVE"
+  },
+  "texts": [
+   {
+    "t": "STEP 16 · SAVED",
+    "size": 18.0
+   },
+   {
+    "t": "Wait for “Saved”",
+    "size": 50.0
+   },
+   {
+    "t": "You see a tick and a Record ID. Do not close the app before this.",
+    "size": 22.0
+   },
+   {
+    "t": "CLOSE-UP",
+    "size": 13.0
+   },
+   {
+    "t": "Shown: TEST record FOCA-20261111-110458-4003.",
+    "size": 12.0
+   }
+  ]
+ },
+ {
+  "n": 22,
+  "shot": null,
+  "close": null,
+  "role": null,
+  "texts": [
+   {
+    "t": "IF IT SAYS “NOT SAVED”",
+    "size": 18.0
+   },
+   {
+    "t": "Do not start again",
+    "size": 46.0
+   },
+   {
+    "t": "Your entries and signatures stay on the screen",
+    "size": 30.0
+   },
+   {
+    "t": "1",
+    "size": 28.0
+   },
+   {
+    "t": "Check the phone has internet",
+    "size": 30.0
+   },
+   {
+    "t": "2",
+    "size": 28.0
+   },
+   {
+    "t": "Tap Save again",
+    "size": 30.0
+   },
+   {
+    "t": "3",
+    "size": 28.0
+   }
+  ]
+ },
+ {
+  "n": 23,
+  "shot": {
+   "src": "image-23-1.jpg",
+   "size": [
+    412,
+    537
+   ],
+   "boxes": [
+    {
+     "x": 104,
+     "y": 239,
+     "w": 204,
+     "h": 37
+    }
+   ],
+   "slide_w": 3291840,
+   "slide_h": 4290578
+  },
+  "close": {
+   "src": "image-23-2.jpg",
+   "size": [
+    448,
+    114
+   ]
+  },
+  "role": {
+   "color": "blue",
+   "y": 1051560,
+   "text": "SECURITY STAFF"
+  },
+  "texts": [
+   {
+    "t": "AFTER SAVING",
+    "size": 18.0
+   },
+   {
+    "t": "Tap Open the completed PDF",
+    "size": 50.0
+   },
+   {
+    "t": "The signed PDF opens in Google Drive.",
+    "size": 22.0
+   },
+   {
+    "t": "CLOSE-UP",
+    "size": 13.0
+   }
+  ]
+ },
+ {
+  "n": 24,
+  "shot": {
+   "src": "image-24-1.jpg",
+   "size": [
+    1800,
+    940
+   ],
+   "boxes": [
+    {
+     "x": 92,
+     "y": 102,
+     "w": 1036,
+     "h": 74
+    }
+   ],
+   "slide_w": 6949440,
+   "slide_h": 3629152
+  },
+  "close": null,
+  "role": null,
+  "texts": [
+   {
+    "t": "AFTER SAVING",
+    "size": 18.0
+   },
+   {
+    "t": "Check the PDF",
+    "size": 46.0
+   },
+   {
+    "t": "Check the file name: form, date and Record ID. Scroll to check every page and each signature.",
+    "size": 24.0
+   }
+  ]
+ },
+ {
+  "n": 25,
+  "shot": {
+   "src": "image-25-1.jpg",
+   "size": [
+    1336,
+    660
+   ],
+   "boxes": [
+    {
+     "x": 896,
+     "y": 108,
+     "w": 268,
+     "h": 100
+    }
+   ],
+   "slide_w": 6949440,
+   "slide_h": 3433107
+  },
+  "close": null,
+  "role": null,
+  "texts": [
+   {
+    "t": "SHARE THE PDF",
+    "size": 18.0
+   },
+   {
+    "t": "Tap Share",
+    "size": 46.0
+   },
+   {
+    "t": "The blue Share button is at the top right.",
+    "size": 24.0
+   }
+  ]
+ },
+ {
+  "n": 26,
+  "shot": {
+   "src": "image-26-1.jpg",
+   "size": [
+    1140,
+    1280
+   ],
+   "boxes": [
+    {
+     "x": 96,
+     "y": 1138,
+     "w": 280,
+     "h": 102
+    },
+    {
+     "x": 168,
+     "y": 976,
+     "w": 240,
+     "h": 112
+    }
+   ],
+   "slide_w": 4071938,
+   "slide_h": 4572000
+  },
+  "close": null,
+  "role": null,
+  "texts": [
+   {
+    "t": "SHARE THE PDF",
+    "size": 18.0
+   },
+   {
+    "t": "Tap Copy link",
+    "size": 46.0
+   },
+   {
+    "t": "Send the link only to an authorised person. Keep access “Restricted”. Never change it to “Anyone with the link”.",
+    "size": 24.0
+   }
+  ]
+ },
+ {
+  "n": 27,
+  "shot": null,
+  "close": null,
+  "role": {
+   "color": "blue",
+   "y": 4023360,
+   "text": "FOCA"
+  },
+  "texts": [
+   {
+    "t": "WHERE THE PDF IS SAVED",
+    "size": 18.0
+   },
+   {
+    "t": "Google Drive",
+    "size": 46.0
+   },
+   {
+    "t": "My Drive",
+    "size": 22.0
+   },
+   {
+    "t": "Every save adds: • 1 new signed PDF in this folder • 1 new row in the records Sheet Only authorised people open this folder.",
+    "size": 22.0
+   },
+   {
+    "t": "AA-SEC Signed Forms (RESTRICTED)",
+    "size": 22.0
+   },
+   {
+    "t": "PDF:  FOCA_&lt;flight&gt;_&lt;date&gt;_&lt;Record ID&gt;.pdf",
+    "size": 13.0
+   },
+   {
+    "t": "Locations checked in eswaranp@airasia.com Drive, 12 Nov 2026.",
+    "size": 13.0
+   }
+  ]
+ },
+ {
+  "n": 28,
+  "shot": null,
+  "close": null,
+  "role": null,
+  "texts": [
+   {
+    "t": "WHERE THE RECORD IS SAVED",
+    "size": 18.0
+   },
+   {
+    "t": "Google Sheets: one row per save",
+    "size": 44.0
+   },
+   {
+    "t": "Sheet: FOCA Records",
+    "size": 22.0
+   },
+   {
+    "t": "Same folder as the PDFs: FOCA",
+    "size": 20.0
+   },
+   {
+    "t": "Example: the TEST row",
+    "size": 20.0
+   },
+   {
+    "t": "Records are written by the app. Do not edit or delete rows.",
+    "size": 13.0
+   }
+  ]
+ },
+ {
+  "n": 29,
+  "shot": {
+   "src": "image-29-1.jpg",
+   "size": [
+    412,
+    537
+   ],
+   "boxes": [
+    {
+     "x": 16,
+     "y": 308,
+     "w": 380,
+     "h": 59
+    }
+   ],
+   "slide_w": 3291840,
+   "slide_h": 4290578
+  },
+  "close": {
+   "src": "image-29-2.jpg",
+   "size": [
+    800,
+    158
+   ]
+  },
+  "role": {
+   "color": "blue",
+   "y": 1051560,
+   "text": "SECURITY STAFF"
+  },
+  "texts": [
+   {
+    "t": "NEW CASE?",
+    "size": 18.0
+   },
+   {
+    "t": "Start a new form",
+    "size": 50.0
+   },
+   {
+    "t": "Each save = its own PDF and record. New case: tap “Start a new FOCA form”.",
+    "size": 22.0
+   },
+   {
+    "t": "CLOSE-UP",
+    "size": 13.0
+   }
+  ]
+ },
+ {
+  "n": 30,
+  "shot": null,
+  "close": null,
+  "role": null,
+  "texts": [
+   {
+    "t": "FOCA · QUICK CHECK",
+    "size": 18.0
+   },
+   {
+    "t": "Every time",
+    "size": 46.0
+   },
+   {
+    "t": "Flight details and date correct",
+    "size": 27.0
+   },
+   {
+    "t": "1",
+    "size": 28.0
+   },
+   {
+    "t": "One box ticked on every line",
+    "size": 27.0
+   },
+   {
+    "t": "2",
+    "size": 28.0
+   },
+   {
+    "t": "Airline Rep typed own name, ID and signed",
+    "size": 27.0
+   },
+   {
+    "t": "3",
+    "size": 28.0
+   },
+   {
+    "t": "Security Rep typed own name, ID and signed",
+    "size": 27.0
+   },
+   {
+    "t": "4",
+    "size": 28.0
+   },
+   {
+    "t": "Saved screen seen, PDF checked",
+    "size": 27.0
+   },
+   {
+    "t": "5",
+    "size": 28.0
+   }
+  ]
+ }
+]

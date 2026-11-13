@@ -1,0 +1,100 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; font-family: "Inter", sans-serif; color: #1a1a1a; overflow: hidden; }
+.a { position: absolute; }
+.card { position: absolute; background: #fff; border-radius: 22px; box-shadow: 0 18px 40px rgba(26,26,26,.10); }
+.kick { font-weight: 800; font-size: 28px; letter-spacing: 3px; color: #c8102e; }
+.h1 { font-weight: 800; font-size: 60px; line-height: 1.08; letter-spacing: -1px; }
+.h2 { font-weight: 800; font-size: 44px; line-height: 1.12; }
+.h3 { font-weight: 700; font-size: 34px; line-height: 1.22; }
+.t { font-weight: 500; font-size: 32px; line-height: 1.35; color: #5f6368; }
+.num { width: 72px; height: 72px; border-radius: 50%; background: #c8102e; color: #fff; font-weight: 800; font-size: 34px; display: flex; align-items: center; justify-content: center; flex: none; }
+.row { display: flex; align-items: center; gap: 24px; }
+.role { display: inline-flex; align-items: center; gap: 12px; padding: 10px 22px; border-radius: 40px; color: #fff; font-weight: 800; font-size: 28px; letter-spacing: 2px; }
+.chip { display: inline-block; padding: 12px 24px; border-radius: 40px; font-weight: 800; font-size: 30px; }
+.note { position: absolute; border-radius: 18px; padding: 22px 30px; font-size: 32px; font-weight: 700; line-height: 1.25; }
+.note.red { background: #c8102e; color: #fff; } .note.soft { background: #fdeaee; color: #c8102e; border: 3px solid rgba(200,16,46,.3); }
+.note.ink { background: #1a1a1a; color: #fff; } .note.ok { background: #e6f4ea; color: #188038; border: 3px solid rgba(24,128,56,.35); }
+.note.blue { background: #e8f0fe; color: #0b57d0; border: 3px solid rgba(11,87,208,.3); }
+.dev { position: absolute; background: #121214; border-radius: 40px; padding: 16px; box-shadow: 0 30px 70px rgba(26,26,26,.28); }
+.view { position: relative; overflow: hidden; border-radius: 26px; background: #fff; }
+.zoom { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+.zoom img { display: block; }
+.ring { position: absolute; border: 6px solid #c8102e; border-radius: 12px; box-shadow: 0 0 0 6px rgba(200,16,46,.18); }
+.tap { position: absolute; width: 64px; height: 64px; border-radius: 50%; background: rgba(200,16,46,.35); border: 4px solid #c8102e; }
+.close { position: absolute; background: #fff; border: 4px solid #c8102e; border-radius: 16px; padding: 10px; box-shadow: 0 18px 40px rgba(26,26,26,.15); }
+.close img { display: block; }
+.closel { position: absolute; background: #c8102e; color: #fff; font-weight: 800; font-size: 28px; letter-spacing: 3px; padding: 6px 14px; border-radius: 8px; }
+.flow { position: absolute; border-radius: 22px; background: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 22px;
+  box-shadow: 0 18px 40px rgba(26,26,26,.10); }
+.flow b { font-size: 34px; line-height: 1.15; } .flow span { font-size: 28px; color: #5f6368; margin-top: 10px; line-height: 1.2; }
+.arrow { position: absolute; height: 6px; background: #5f6368; border-radius: 3px; transform-origin: 0 50%; }
+.arrow:after { content: ""; position: absolute; right: -4px; top: -9px; border-left: 20px solid #5f6368; border-top: 12px solid transparent; border-bottom: 12px solid transparent; }
+.btn { display: inline-block; padding: 18px 30px; border-radius: 14px; color: #fff; font-weight: 800; font-size: 32px; box-shadow: 0 10px 24px rgba(0,0,0,.18); }
+.ok-tick { width: 64px; height: 64px; border-radius: 50%; background: #188038; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 36px; flex: none; }
+</style>
+  <div id="root" data-composition-id="s30" data-width="1920" data-height="1080">
+    <div id="bg" class="a" style="left:0;top:0;width:1920px;height:1080px;background:#121214"></div>
+    <div id="k" class="a kick" style="left:150px;top:150px;color:#ff6b7f">FOCA · QUICK CHECK</div>
+    <div id="ttl" class="a h1" style="left:150px;top:200px;color:#fff">Five questions, every time</div>
+    <div id="q0" class="a row" style="left:150px;top:330px"><div class="ok-tick" id="qt0" style="background:#3c4043">1</div><div class="h2" style="color:#fff">Flight details and date correct?</div></div>
+    <div id="q1" class="a row" style="left:150px;top:442px"><div class="ok-tick" id="qt1" style="background:#3c4043">2</div><div class="h2" style="color:#fff">One answer on every checklist line?</div></div>
+    <div id="q2" class="a row" style="left:150px;top:554px"><div class="ok-tick" id="qt2" style="background:#3c4043">3</div><div class="h2" style="color:#fff">Airline Rep: own name and ID, signed?</div></div>
+    <div id="q3" class="a row" style="left:150px;top:666px"><div class="ok-tick" id="qt3" style="background:#3c4043">4</div><div class="h2" style="color:#fff">Security Rep: own name and ID, signed?</div></div>
+    <div id="q4" class="a row" style="left:150px;top:778px"><div class="ok-tick" id="qt4" style="background:#3c4043">5</div><div class="h2" style="color:#fff">Saw “Saved” and both signatures in the PDF?</div></div>
+    <div id="p1" class="a h1" style="left:150px;top:300px;color:#fff;width:1620px">Let’s practise one case together</div>
+    <div id="pw0" class="a role" style="left:150px;top:470px;background:#0b57d0;font-size:32px"><svg width="54" height="54" viewBox="0 0 24 24"><rect x="6.5" y="2" width="11" height="20" rx="2.4" fill="#fff"/><rect x="8" y="4.2" width="8" height="13.5" rx=".6" fill="#fff"/></svg><span>Security staff</span></div>
+    <div id="pw1" class="a role" style="left:580px;top:470px;background:#b8550d;font-size:32px"><svg width="54" height="54" viewBox="0 0 24 24"><rect x="6.5" y="2" width="11" height="20" rx="2.4" fill="#fff"/><rect x="8" y="4.2" width="8" height="13.5" rx=".6" fill="#fff"/></svg><span>Airline Rep</span></div>
+    <div id="pwa1" class="arrow" style="left:530px;top:500px;width:40px;background:#9aa0a6"></div>
+    <div id="pw2" class="a role" style="left:1010px;top:470px;background:#0b57d0;font-size:32px"><svg width="54" height="54" viewBox="0 0 24 24"><rect x="6.5" y="2" width="11" height="20" rx="2.4" fill="#fff"/><rect x="8" y="4.2" width="8" height="13.5" rx=".6" fill="#fff"/></svg><span>Security Rep</span></div>
+    <div id="pwa2" class="arrow" style="left:960px;top:500px;width:40px;background:#9aa0a6"></div>
+    <div id="p2" class="note ink" style="left:150px;top:600px;width:1620px;font-size:34px">At each step: who holds the phone, and which button they tap?</div>
+    <div id="p3" class="note red" style="left:150px;top:740px;width:1620px;font-size:34px">At the end: show where the signed PDF is, and its row in Google Sheets</div>
+  </div>
+  <script>
+    gsap.set("#k",{opacity:0,x:-70});
+    gsap.set("#ttl",{opacity:0,x:-70});
+    gsap.set("#q0",{opacity:0,x:-70});
+    gsap.set("#q1",{opacity:0,x:-70});
+    gsap.set("#q2",{opacity:0,x:-70});
+    gsap.set("#q3",{opacity:0,x:-70});
+    gsap.set("#q4",{opacity:0,x:-70});
+    gsap.set("#p1",{opacity:0,y:40});
+    gsap.set("#pw0",{opacity:0,y:40});
+    gsap.set("#pw1",{opacity:0,y:40});
+    gsap.set("#pwa1",{scaleX:0});
+    gsap.set("#pw2",{opacity:0,y:40});
+    gsap.set("#pwa2",{scaleX:0});
+    gsap.set("#p2",{opacity:0,y:40});
+    gsap.set("#p3",{opacity:0,y:40});
+    const tl = gsap.timeline({ paused: true });
+    tl.to("#k",{opacity:1,x:0,duration:0.5,ease:"power3.out"},0.2);
+    tl.to("#ttl",{opacity:1,x:0,duration:0.5,ease:"power3.out"},0.3);
+    tl.to("#ttl",{opacity:0,duration:0.35,ease:"power2.in"},23.981);
+    tl.to("#q0",{opacity:1,x:0,duration:0.5,ease:"power3.out"},4.152);
+    tl.to("#q0",{opacity:0,duration:0.35,ease:"power2.in"},23.981);
+    tl.set("#qt0",{background:"#188038"},5.452);
+    tl.to("#q1",{opacity:1,x:0,duration:0.5,ease:"power3.out"},7.017);
+    tl.to("#q1",{opacity:0,duration:0.35,ease:"power2.in"},23.981);
+    tl.set("#qt1",{background:"#188038"},8.317);
+    tl.to("#q2",{opacity:1,x:0,duration:0.5,ease:"power3.out"},10.332);
+    tl.to("#q2",{opacity:0,duration:0.35,ease:"power2.in"},23.981);
+    tl.set("#qt2",{background:"#188038"},11.632);
+    tl.to("#q3",{opacity:1,x:0,duration:0.5,ease:"power3.out"},15.22);
+    tl.to("#q3",{opacity:0,duration:0.35,ease:"power2.in"},23.981);
+    tl.set("#qt3",{background:"#188038"},16.52);
+    tl.to("#q4",{opacity:1,x:0,duration:0.5,ease:"power3.out"},20.209);
+    tl.to("#q4",{opacity:0,duration:0.35,ease:"power2.in"},23.981);
+    tl.set("#qt4",{background:"#188038"},21.509);
+    tl.to("#p1",{opacity:1,y:0,duration:0.5,ease:"power3.out"},24.531);
+    tl.to("#pw0",{opacity:1,y:0,duration:0.5,ease:"power3.out"},26.951);
+    tl.to("#pw1",{opacity:1,y:0,duration:0.5,ease:"power3.out"},27.551);
+    tl.to("#pwa1",{scaleX:1,duration:0.5,ease:"power3.out"},27.451);
+    tl.to("#pw2",{opacity:1,y:0,duration:0.5,ease:"power3.out"},28.151);
+    tl.to("#pwa2",{scaleX:1,duration:0.5,ease:"power3.out"},28.051);
+    tl.to("#p2",{opacity:1,y:0,duration:0.5,ease:"power3.out"},28.951);
+    tl.to("#p3",{opacity:1,y:0,duration:0.5,ease:"power3.out"},31.539);
+    tl.set({}, {}, 38.005);
+    window.__timelines["s30"] = tl;
+  </script>
+</template>

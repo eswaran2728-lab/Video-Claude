@@ -1,0 +1,1185 @@
+{
+ "voice": "af_heart",
+ "speed": 1.0,
+ "scenes": [
+  {
+   "id": "s01",
+   "title": "FOCA Checklist",
+   "dur": 20.947,
+   "lines": [
+    {
+     "i": 0,
+     "text": "This training shows you how to fill in, sign, and save a FOCA checklist on your phone.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 5.947
+    },
+    {
+     "i": 1,
+     "text": "Security fills in the checklist first.",
+     "cue": null,
+     "t0": 6.367,
+     "t1": 8.416
+    },
+    {
+     "i": 2,
+     "text": "Then the Airline Representative signs.",
+     "cue": null,
+     "t0": 9.016,
+     "t1": 11.105
+    },
+    {
+     "i": 3,
+     "text": "Then the Security Representative signs and saves it.",
+     "cue": null,
+     "t0": 11.705,
+     "t1": 14.69
+    },
+    {
+     "i": 4,
+     "text": "Both representatives use the same phone.",
+     "cue": null,
+     "t0": 15.11,
+     "t1": 17.46
+    },
+    {
+     "i": 5,
+     "text": "We’ll go through it one step at a time.",
+     "cue": null,
+     "t0": 17.88,
+     "t1": 19.747
+    }
+   ],
+   "start": 0
+  },
+  {
+   "id": "s02",
+   "title": "Who does what",
+   "dur": 18.67,
+   "lines": [
+    {
+     "i": 0,
+     "text": "There are three parts.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 2.173
+    },
+    {
+     "i": 1,
+     "text": "First, Security staff fill in the checklist.",
+     "cue": null,
+     "t0": 2.593,
+     "t1": 4.968
+    },
+    {
+     "i": 2,
+     "text": "Second, the Airline Representative checks the details, types their own name and ID, and signs.",
+     "cue": null,
+     "t0": 5.388,
+     "t1": 11.269
+    },
+    {
+     "i": 3,
+     "text": "Third, the Security Representative types their own name and ID, signs, and saves the record.",
+     "cue": null,
+     "t0": 11.689,
+     "t1": 17.47
+    }
+   ],
+   "start": 20.947
+  },
+  {
+   "id": "s03",
+   "title": "Rules for every FOCA",
+   "dur": 16.32,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Use your AirAsia Google account.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 2.865
+    },
+    {
+     "i": 1,
+     "text": "Your email address should end in airasia.com.",
+     "cue": null,
+     "t0": 3.285,
+     "t1": 6.083
+    },
+    {
+     "i": 2,
+     "text": "When it’s your turn to sign, type your own name and ID.",
+     "cue": null,
+     "t0": 6.503,
+     "t1": 9.313
+    },
+    {
+     "i": 3,
+     "text": "Sign for yourself.",
+     "cue": null,
+     "t0": 9.733,
+     "t1": 10.847
+    },
+    {
+     "i": 4,
+     "text": "Never sign for someone else.",
+     "cue": null,
+     "t0": 11.267,
+     "t1": 12.716
+    },
+    {
+     "i": 5,
+     "text": "Start a new form for every new case.",
+     "cue": null,
+     "t0": 13.136,
+     "t1": 15.12
+    }
+   ],
+   "start": 39.617
+  },
+  {
+   "id": "s04",
+   "title": "Get the app link",
+   "dur": 11.446,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Ask your supervisor for the app link.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 2.833
+    },
+    {
+     "i": 1,
+     "text": "You can also use the QR code shown here.",
+     "cue": null,
+     "t0": 3.253,
+     "t1": 5.391
+    },
+    {
+     "i": 2,
+     "text": "Open your phone camera, point it at the QR code, and tap the link that appears.",
+     "cue": null,
+     "t0": 5.811,
+     "t1": 10.246
+    }
+   ],
+   "start": 55.937
+  },
+  {
+   "id": "s05",
+   "title": "Open the app in Chrome",
+   "dur": 23.078,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Open Chrome on your phone.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 2.421
+    },
+    {
+     "i": 1,
+     "text": "Paste the link into the address bar.",
+     "cue": null,
+     "t0": 2.841,
+     "t1": 4.693
+    },
+    {
+     "i": 2,
+     "text": "If you scanned the QR code, open the link in Chrome.",
+     "cue": null,
+     "t0": 5.293,
+     "t1": 8.264
+    },
+    {
+     "i": 3,
+     "text": "If Google asks you to sign in, choose your AirAsia account.",
+     "cue": null,
+     "t0": 8.864,
+     "t1": 12.179
+    },
+    {
+     "i": 4,
+     "text": "Wait until you see four forms on the screen.",
+     "cue": null,
+     "t0": 12.599,
+     "t1": 15.036
+    },
+    {
+     "i": 5,
+     "text": "If you want to open the app with one tap next time, tap the three dots in Chrome and choose Add to Home screen.",
+     "cue": null,
+     "t0": 15.636,
+     "t1": 21.878
+    }
+   ],
+   "start": 67.383
+  },
+  {
+   "id": "s06",
+   "title": "Tap FOCA",
+   "dur": 12.459,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Look for the card that says FOCA.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 2.649
+    },
+    {
+     "i": 1,
+     "text": "Check the code below the name.",
+     "cue": null,
+     "t0": 3.069,
+     "t1": 4.544
+    },
+    {
+     "i": 2,
+     "text": "It should say AA/SEC/F/070.",
+     "cue": null,
+     "t0": 4.964,
+     "t1": 8.486
+    },
+    {
+     "i": 3,
+     "text": "Once you see the right code, tap the card.",
+     "cue": null,
+     "t0": 9.086,
+     "t1": 11.259
+    }
+   ],
+   "start": 90.461
+  },
+  {
+   "id": "s07",
+   "title": "Look at the whole form",
+   "dur": 14.936,
+   "lines": [
+    {
+     "i": 0,
+     "text": "At the top, you’ll see boxes for the flight details.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 3.719
+    },
+    {
+     "i": 1,
+     "text": "In the middle, you’ll see the checklist.",
+     "cue": null,
+     "t0": 4.139,
+     "t1": 5.909
+    },
+    {
+     "i": 2,
+     "text": "At the bottom, you’ll see a blue Next button.",
+     "cue": null,
+     "t0": 6.329,
+     "t1": 8.418
+    },
+    {
+     "i": 3,
+     "text": "Scroll down so you can see where each part is.",
+     "cue": null,
+     "t0": 8.838,
+     "t1": 11.342
+    },
+    {
+     "i": 4,
+     "text": "Then go back to the top to start.",
+     "cue": null,
+     "t0": 11.942,
+     "t1": 13.736
+    }
+   ],
+   "start": 102.92
+  },
+  {
+   "id": "s08",
+   "title": "Fill in the flight details",
+   "dur": 35.494,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Start with the flight number.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 2.321
+    },
+    {
+     "i": 1,
+     "text": "Then enter the aircraft registration, the destination, and the date.",
+     "cue": null,
+     "t0": 2.921,
+     "t1": 6.889
+    },
+    {
+     "i": 2,
+     "text": "Next, enter the arrival and departure times.",
+     "cue": null,
+     "t0": 7.309,
+     "t1": 9.95
+    },
+    {
+     "i": 3,
+     "text": "STA is the scheduled arrival time.",
+     "cue": null,
+     "t0": 10.37,
+     "t1": 13.039
+    },
+    {
+     "i": 4,
+     "text": "ATA is the actual arrival time.",
+     "cue": null,
+     "t0": 13.459,
+     "t1": 16.041
+    },
+    {
+     "i": 5,
+     "text": "STD is the scheduled departure time.",
+     "cue": null,
+     "t0": 16.461,
+     "t1": 19.359
+    },
+    {
+     "i": 6,
+     "text": "ATD is the actual departure time.",
+     "cue": null,
+     "t0": 19.779,
+     "t1": 22.488
+    },
+    {
+     "i": 7,
+     "text": "Finally, enter the aircraft bay.",
+     "cue": null,
+     "t0": 22.908,
+     "t1": 24.82
+    },
+    {
+     "i": 8,
+     "text": "The flight number and date are required.",
+     "cue": null,
+     "t0": 25.24,
+     "t1": 27.324
+    },
+    {
+     "i": 9,
+     "text": "Check both before you move on.",
+     "cue": null,
+     "t0": 27.744,
+     "t1": 29.272
+    },
+    {
+     "i": 10,
+     "text": "The slide shows test data.",
+     "cue": null,
+     "t0": 29.692,
+     "t1": 31.135
+    },
+    {
+     "i": 11,
+     "text": "For a real case, enter the details for that flight.",
+     "cue": null,
+     "t0": 31.555,
+     "t1": 34.294
+    }
+   ],
+   "start": 117.856
+  },
+  {
+   "id": "s09",
+   "title": "Tick one box on every line",
+   "dur": 18.123,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Look for Areas of Coverage.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 2.468
+    },
+    {
+     "i": 1,
+     "text": "Read the first line.",
+     "cue": null,
+     "t0": 2.888,
+     "t1": 4.055
+    },
+    {
+     "i": 2,
+     "text": "If you completed that check, tap Completed.",
+     "cue": null,
+     "t0": 4.655,
+     "t1": 6.902
+    },
+    {
+     "i": 3,
+     "text": "If the area was not checked, tap Not Checked.",
+     "cue": null,
+     "t0": 7.502,
+     "t1": 9.957
+    },
+    {
+     "i": 4,
+     "text": "Add a remark if you need to explain what happened.",
+     "cue": null,
+     "t0": 10.377,
+     "t1": 12.841
+    },
+    {
+     "i": 5,
+     "text": "Now move to the next line.",
+     "cue": null,
+     "t0": 13.261,
+     "t1": 14.671
+    },
+    {
+     "i": 6,
+     "text": "Choose one answer on every line.",
+     "cue": null,
+     "t0": 15.091,
+     "t1": 16.923
+    }
+   ],
+   "start": 153.35
+  },
+  {
+   "id": "s10",
+   "title": "Complete Additional Services",
+   "dur": 17.722,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Scroll down to Additional Services.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 3.139
+    },
+    {
+     "i": 1,
+     "text": "Read each line.",
+     "cue": null,
+     "t0": 3.559,
+     "t1": 4.551
+    },
+    {
+     "i": 2,
+     "text": "Choose Required/Completed if the service was required and completed.",
+     "cue": null,
+     "t0": 4.971,
+     "t1": 9.092
+    },
+    {
+     "i": 3,
+     "text": "Choose Not Applicable if the service does not apply to this case.",
+     "cue": null,
+     "t0": 9.512,
+     "t1": 12.995
+    },
+    {
+     "i": 4,
+     "text": "Once you’ve checked your answers, tap the blue Next button.",
+     "cue": null,
+     "t0": 13.595,
+     "t1": 16.522
+    }
+   ],
+   "start": 171.473
+  },
+  {
+   "id": "s11",
+   "title": "Hand the phone to the Airline Representative",
+   "dur": 13.396,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Security staff, hand the phone to the Airline Representative.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 4.48
+    },
+    {
+     "i": 1,
+     "text": "Once the Airline Representative is holding the phone, they tap the orange button that says Airline Representative has the phone.",
+     "cue": null,
+     "t0": 5.08,
+     "t1": 12.196
+    }
+   ],
+   "start": 189.195
+  },
+  {
+   "id": "s12",
+   "title": "Airline Representative checks the form",
+   "dur": 16.757,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Airline Representative, read through the details on the screen.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 4.54
+    },
+    {
+     "i": 1,
+     "text": "If you spot a mistake, tap Something is wrong.",
+     "cue": null,
+     "t0": 5.14,
+     "t1": 7.55
+    },
+    {
+     "i": 2,
+     "text": "Then give the phone back to Security so they can correct it.",
+     "cue": null,
+     "t0": 8.15,
+     "t1": 11.252
+    },
+    {
+     "i": 3,
+     "text": "If everything is correct, move on to the name and ID boxes.",
+     "cue": null,
+     "t0": 11.852,
+     "t1": 15.557
+    }
+   ],
+   "start": 202.591
+  },
+  {
+   "id": "s13",
+   "title": "Airline Representative enters their name and ID",
+   "dur": 12.083,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Tap the name box and type your own name.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 3.145
+    },
+    {
+     "i": 1,
+     "text": "Then tap the ID box and enter your own staff ID or staff number.",
+     "cue": null,
+     "t0": 3.745,
+     "t1": 8.095
+    },
+    {
+     "i": 2,
+     "text": "Look at both boxes again before you sign.",
+     "cue": null,
+     "t0": 8.515,
+     "t1": 10.883
+    }
+   ],
+   "start": 219.348
+  },
+  {
+   "id": "s14",
+   "title": "Airline Representative signs",
+   "dur": 11.987,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Use your finger or a stylus to sign inside the box.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 4.061
+    },
+    {
+     "i": 1,
+     "text": "The Airline Representative signs for themselves.",
+     "cue": null,
+     "t0": 4.481,
+     "t1": 7.191
+    },
+    {
+     "i": 2,
+     "text": "Security staff, give them time to complete their signature.",
+     "cue": null,
+     "t0": 7.611,
+     "t1": 10.787
+    }
+   ],
+   "start": 231.431
+  },
+  {
+   "id": "s15",
+   "title": "Clear a signature mistake",
+   "dur": 8.43,
+   "lines": [
+    {
+     "i": 0,
+     "text": "If you make a mistake, tap Clear.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 2.802
+    },
+    {
+     "i": 1,
+     "text": "The signature box will become empty.",
+     "cue": null,
+     "t0": 3.222,
+     "t1": 5.206
+    },
+    {
+     "i": 2,
+     "text": "Sign again in the same box.",
+     "cue": null,
+     "t0": 5.626,
+     "t1": 7.23
+    }
+   ],
+   "start": 243.418
+  },
+  {
+   "id": "s16",
+   "title": "Confirm the Airline Representative’s signature",
+   "dur": 8.911,
+   "lines": [
+    {
+     "i": 0,
+     "text": "When you’re happy with your signature, tap Confirm my signature.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 4.181
+    },
+    {
+     "i": 1,
+     "text": "The next screen will ask you to hand the phone back to Security.",
+     "cue": null,
+     "t0": 4.601,
+     "t1": 7.711
+    }
+   ],
+   "start": 251.848
+  },
+  {
+   "id": "s17",
+   "title": "Hand the phone back to Security",
+   "dur": 14.183,
+   "lines": [
+    {
+     "i": 0,
+     "text": "When you see Hand the phone back to SECURITY STAFF, pass the phone back to the Security Representative.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 6.288
+    },
+    {
+     "i": 1,
+     "text": "Once the Security Representative is holding it, they tap the blue button that says Security staff has the phone.",
+     "cue": null,
+     "t0": 6.888,
+     "t1": 12.983
+    }
+   ],
+   "start": 260.759
+  },
+  {
+   "id": "s18",
+   "title": "Security Representative enters their name and ID",
+   "dur": 11.564,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Security Representative, tap the name box and type your own name.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 4.83
+    },
+    {
+     "i": 1,
+     "text": "Then enter your own staff ID or staff number.",
+     "cue": null,
+     "t0": 5.43,
+     "t1": 8.006
+    },
+    {
+     "i": 2,
+     "text": "Check both boxes before you sign.",
+     "cue": null,
+     "t0": 8.426,
+     "t1": 10.364
+    }
+   ],
+   "start": 274.942
+  },
+  {
+   "id": "s19",
+   "title": "Security Representative signs",
+   "dur": 11.396,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Use your finger or a stylus to sign inside the box.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 4.061
+    },
+    {
+     "i": 1,
+     "text": "If you make a mistake, tap Clear and sign again.",
+     "cue": null,
+     "t0": 4.661,
+     "t1": 7.226
+    },
+    {
+     "i": 2,
+     "text": "Check that your signature is visible in the box.",
+     "cue": null,
+     "t0": 7.646,
+     "t1": 10.196
+    }
+   ],
+   "start": 286.506
+  },
+  {
+   "id": "s20",
+   "title": "Save the record",
+   "dur": 10.791,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Find the green button that says Save record (PDF to Drive + Sheet).",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 5.32
+    },
+    {
+     "i": 1,
+     "text": "Tap it once.",
+     "cue": null,
+     "t0": 5.74,
+     "t1": 6.556
+    },
+    {
+     "i": 2,
+     "text": "When it says Saving..., keep the app open and wait.",
+     "cue": null,
+     "t0": 6.976,
+     "t1": 9.591
+    }
+   ],
+   "start": 297.902
+  },
+  {
+   "id": "s21",
+   "title": "Wait for “Saved”",
+   "dur": 19.782,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Look for three things.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 2.177
+    },
+    {
+     "i": 1,
+     "text": "A tick, the word Saved, and a Record ID.",
+     "cue": null,
+     "t0": 2.597,
+     "t1": 5.221
+    },
+    {
+     "i": 2,
+     "text": "The Record ID is the reference number for this case.",
+     "cue": null,
+     "t0": 5.641,
+     "t1": 8.734
+    },
+    {
+     "i": 3,
+     "text": "Once you see Saved, the app has put the signed checklist in Google Drive and added one row to Google Sheets.",
+     "cue": null,
+     "t0": 9.334,
+     "t1": 15.744
+    },
+    {
+     "i": 4,
+     "text": "That row has a link to the signed PDF.",
+     "cue": null,
+     "t0": 16.164,
+     "t1": 18.582
+    }
+   ],
+   "start": 308.693
+  },
+  {
+   "id": "s22",
+   "title": "If the screen says “Not saved”",
+   "dur": 13.03,
+   "lines": [
+    {
+     "i": 0,
+     "text": "If you see Not saved, stay on the same screen.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 3.523
+    },
+    {
+     "i": 1,
+     "text": "Your answers and signatures are still there.",
+     "cue": null,
+     "t0": 3.943,
+     "t1": 6.151
+    },
+    {
+     "i": 2,
+     "text": "Check your mobile data or Wi-Fi.",
+     "cue": null,
+     "t0": 6.571,
+     "t1": 8.577
+    },
+    {
+     "i": 3,
+     "text": "Then tap Save again and wait for the confirmation.",
+     "cue": null,
+     "t0": 9.177,
+     "t1": 11.83
+    }
+   ],
+   "start": 328.475
+  },
+  {
+   "id": "s23",
+   "title": "Open the completed PDF",
+   "dur": 8.664,
+   "lines": [
+    {
+     "i": 0,
+     "text": "On the Saved screen, tap Open the completed PDF.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 4.368
+    },
+    {
+     "i": 1,
+     "text": "This opens the signed checklist in Google Drive.",
+     "cue": null,
+     "t0": 4.788,
+     "t1": 7.464
+    }
+   ],
+   "start": 341.505
+  },
+  {
+   "id": "s24",
+   "title": "Check the completed PDF",
+   "dur": 17.054,
+   "lines": [
+    {
+     "i": 0,
+     "text": "First, check the file name.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 2.508
+    },
+    {
+     "i": 1,
+     "text": "Look for the form name, the date, and the Record ID.",
+     "cue": null,
+     "t0": 2.928,
+     "t1": 5.862
+    },
+    {
+     "i": 2,
+     "text": "Then scroll through every page.",
+     "cue": null,
+     "t0": 6.462,
+     "t1": 8.136
+    },
+    {
+     "i": 3,
+     "text": "Find the Airline Representative’s signature.",
+     "cue": null,
+     "t0": 8.556,
+     "t1": 10.863
+    },
+    {
+     "i": 4,
+     "text": "Then find the Security Representative’s signature.",
+     "cue": null,
+     "t0": 11.463,
+     "t1": 14.137
+    },
+    {
+     "i": 5,
+     "text": "Make sure you can see both.",
+     "cue": null,
+     "t0": 14.557,
+     "t1": 15.854
+    }
+   ],
+   "start": 350.169
+  },
+  {
+   "id": "s25",
+   "title": "Open the sharing menu",
+   "dur": 9.219,
+   "lines": [
+    {
+     "i": 0,
+     "text": "If you need to send the PDF link to an authorised person, look at the top right of the screen.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 6.292
+    },
+    {
+     "i": 1,
+     "text": "Tap the blue Share button.",
+     "cue": null,
+     "t0": 6.712,
+     "t1": 8.019
+    }
+   ],
+   "start": 367.223
+  },
+  {
+   "id": "s26",
+   "title": "Copy the restricted link",
+   "dur": 10.637,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Check that access is set to Restricted.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 3.073
+    },
+    {
+     "i": 1,
+     "text": "Keep it on Restricted.",
+     "cue": null,
+     "t0": 3.493,
+     "t1": 4.869
+    },
+    {
+     "i": 2,
+     "text": "Then tap Copy link and send the link only to an authorised person.",
+     "cue": null,
+     "t0": 5.469,
+     "t1": 9.437
+    }
+   ],
+   "start": 376.442
+  },
+  {
+   "id": "s27",
+   "title": "Where the checklist and signatures go",
+   "dur": 34.686,
+   "lines": [
+    {
+     "i": 0,
+     "text": "The app saves one PDF for each case.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 3.425
+    },
+    {
+     "i": 1,
+     "text": "That PDF contains the completed checklist and both signatures.",
+     "cue": null,
+     "t0": 3.845,
+     "t1": 8.017
+    },
+    {
+     "i": 2,
+     "text": "Here’s where authorised staff can find it.",
+     "cue": null,
+     "t0": 8.437,
+     "t1": 10.505
+    },
+    {
+     "i": 3,
+     "text": "In Google Drive, open My Drive.",
+     "cue": null,
+     "t0": 10.925,
+     "t1": 13.055
+    },
+    {
+     "i": 4,
+     "text": "Then open AA-SEC Signed Forms (RESTRICTED).",
+     "cue": null,
+     "t0": 13.655,
+     "t1": 17.452
+    },
+    {
+     "i": 5,
+     "text": "Inside that folder, open FOCA.",
+     "cue": null,
+     "t0": 17.872,
+     "t1": 19.883
+    },
+    {
+     "i": 6,
+     "text": "The file name starts with FOCA and includes the flight number, the date, and the Record ID.",
+     "cue": null,
+     "t0": 20.303,
+     "t1": 25.42
+    },
+    {
+     "i": 7,
+     "text": "If you’ve just saved the case, you can open the same file straight from the Saved screen by tapping Open the completed PDF.",
+     "cue": null,
+     "t0": 26.02,
+     "t1": 33.486
+    }
+   ],
+   "start": 387.079
+  },
+  {
+   "id": "s28",
+   "title": "Where the record details go",
+   "dur": 32.749,
+   "lines": [
+    {
+     "i": 0,
+     "text": "The app also adds one row to the FOCA Records Google Sheet.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 4.511
+    },
+    {
+     "i": 1,
+     "text": "The sheet is in the same FOCA folder as the PDFs.",
+     "cue": null,
+     "t0": 4.931,
+     "t1": 8.228
+    },
+    {
+     "i": 2,
+     "text": "Each row shows the Record ID, the date and time it was saved in Malaysia time, the flight number, the names of both representatives, and a link to the signed PDF.",
+     "cue": null,
+     "t0": 8.648,
+     "t1": 19.018
+    },
+    {
+     "i": 3,
+     "text": "If an authorised person needs to find the checklist later, they can look for the Record ID in the sheet and tap the PDF link on that row.",
+     "cue": null,
+     "t0": 19.618,
+     "t1": 27.418
+    },
+    {
+     "i": 4,
+     "text": "The app writes the row automatically.",
+     "cue": null,
+     "t0": 27.838,
+     "t1": 29.647
+    },
+    {
+     "i": 5,
+     "text": "Leave the rows as they are.",
+     "cue": null,
+     "t0": 30.067,
+     "t1": 31.549
+    }
+   ],
+   "start": 421.765
+  },
+  {
+   "id": "s29",
+   "title": "Start a new case",
+   "dur": 15.281,
+   "lines": [
+    {
+     "i": 0,
+     "text": "When you have a different case to record, tap Start a new FOCA form.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 4.616
+    },
+    {
+     "i": 1,
+     "text": "Enter the details for that case.",
+     "cue": null,
+     "t0": 5.036,
+     "t1": 6.685
+    },
+    {
+     "i": 2,
+     "text": "Once you save it, it gets its own Record ID, its own signed PDF, and its own row in FOCA Records.",
+     "cue": null,
+     "t0": 7.285,
+     "t1": 14.081
+    }
+   ],
+   "start": 454.514
+  },
+  {
+   "id": "s30",
+   "title": "Final check",
+   "dur": 38.005,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Before you finish, ask yourself five questions.",
+     "cue": null,
+     "t0": 1.0,
+     "t1": 3.632
+    },
+    {
+     "i": 1,
+     "text": "One. Are the flight details and date correct?",
+     "cue": null,
+     "t0": 4.052,
+     "t1": 6.497
+    },
+    {
+     "i": 2,
+     "text": "Two. Did I choose one answer on every checklist line?",
+     "cue": null,
+     "t0": 6.917,
+     "t1": 9.812
+    },
+    {
+     "i": 3,
+     "text": "Three. Did the Airline Representative enter their own name and ID and sign?",
+     "cue": null,
+     "t0": 10.232,
+     "t1": 14.7
+    },
+    {
+     "i": 4,
+     "text": "Four. Did the Security Representative enter their own name and ID and sign?",
+     "cue": null,
+     "t0": 15.12,
+     "t1": 19.689
+    },
+    {
+     "i": 5,
+     "text": "Five. Did I see Saved and check both signatures in the PDF?",
+     "cue": null,
+     "t0": 20.109,
+     "t1": 23.911
+    },
+    {
+     "i": 6,
+     "text": "Let’s practise one case together.",
+     "cue": null,
+     "t0": 24.331,
+     "t1": 26.131
+    },
+    {
+     "i": 7,
+     "text": "At each step, tell me who should be holding the phone and which button they should tap.",
+     "cue": null,
+     "t0": 26.551,
+     "t1": 30.819
+    },
+    {
+     "i": 8,
+     "text": "At the end, show me where you’d find the signed PDF and where you’d find its record in Google Sheets.",
+     "cue": null,
+     "t0": 31.239,
+     "t1": 36.805
+    }
+   ],
+   "start": 469.795
+  }
+ ],
+ "total": 507.8
+}

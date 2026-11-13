@@ -1,0 +1,71 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; font-family: "Inter", sans-serif; color: #1a1a1a; overflow: hidden; }
+.a { position: absolute; }
+.card { position: absolute; background: #fff; border-radius: 22px; box-shadow: 0 18px 40px rgba(26,26,26,.10); }
+.kick { font-weight: 800; font-size: 28px; letter-spacing: 3px; color: #c8102e; }
+.h1 { font-weight: 800; font-size: 60px; line-height: 1.08; letter-spacing: -1px; }
+.h2 { font-weight: 800; font-size: 44px; line-height: 1.12; }
+.h3 { font-weight: 700; font-size: 34px; line-height: 1.22; }
+.t { font-weight: 500; font-size: 32px; line-height: 1.35; color: #5f6368; }
+.num { width: 72px; height: 72px; border-radius: 50%; background: #c8102e; color: #fff; font-weight: 800; font-size: 34px; display: flex; align-items: center; justify-content: center; flex: none; }
+.row { display: flex; align-items: center; gap: 24px; }
+.role { display: inline-flex; align-items: center; gap: 12px; padding: 10px 22px; border-radius: 40px; color: #fff; font-weight: 800; font-size: 28px; letter-spacing: 2px; }
+.chip { display: inline-block; padding: 12px 24px; border-radius: 40px; font-weight: 800; font-size: 30px; }
+.note { position: absolute; border-radius: 18px; padding: 22px 30px; font-size: 32px; font-weight: 700; line-height: 1.25; }
+.note.red { background: #c8102e; color: #fff; } .note.soft { background: #fdeaee; color: #c8102e; border: 3px solid rgba(200,16,46,.3); }
+.note.ink { background: #1a1a1a; color: #fff; } .note.ok { background: #e6f4ea; color: #188038; border: 3px solid rgba(24,128,56,.35); }
+.note.blue { background: #e8f0fe; color: #0b57d0; border: 3px solid rgba(11,87,208,.3); }
+.dev { position: absolute; background: #121214; border-radius: 40px; padding: 16px; box-shadow: 0 30px 70px rgba(26,26,26,.28); }
+.view { position: relative; overflow: hidden; border-radius: 26px; background: #fff; }
+.zoom { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+.zoom img { display: block; }
+.ring { position: absolute; border: 6px solid #c8102e; border-radius: 12px; box-shadow: 0 0 0 6px rgba(200,16,46,.18); }
+.tap { position: absolute; width: 64px; height: 64px; border-radius: 50%; background: rgba(200,16,46,.35); border: 4px solid #c8102e; }
+.close { position: absolute; background: #fff; border: 4px solid #c8102e; border-radius: 16px; padding: 10px; box-shadow: 0 18px 40px rgba(26,26,26,.15); }
+.close img { display: block; }
+.closel { position: absolute; background: #c8102e; color: #fff; font-weight: 800; font-size: 28px; letter-spacing: 3px; padding: 6px 14px; border-radius: 8px; }
+.flow { position: absolute; border-radius: 22px; background: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 22px;
+  box-shadow: 0 18px 40px rgba(26,26,26,.10); }
+.flow b { font-size: 34px; line-height: 1.15; } .flow span { font-size: 28px; color: #5f6368; margin-top: 10px; line-height: 1.2; }
+.arrow { position: absolute; height: 6px; background: #5f6368; border-radius: 3px; transform-origin: 0 50%; }
+.arrow:after { content: ""; position: absolute; right: -4px; top: -9px; border-left: 20px solid #5f6368; border-top: 12px solid transparent; border-bottom: 12px solid transparent; }
+.btn { display: inline-block; padding: 18px 30px; border-radius: 14px; color: #fff; font-weight: 800; font-size: 32px; box-shadow: 0 10px 24px rgba(0,0,0,.18); }
+.ok-tick { width: 64px; height: 64px; border-radius: 50%; background: #188038; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 36px; flex: none; }
+</style>
+  <div id="root" data-composition-id="s04" data-width="1920" data-height="1080">
+    <div id="k" class="a kick" style="left:150px;top:150px">STEP 1</div>
+    <div id="ttl" class="a h1" style="left:150px;top:200px">Get the app link</div>
+    <div id="st0" class="a row" style="left:150px;top:350px"><div class="num">1</div><div class="h3" style="max-width:820px">Ask your supervisor for the app link</div></div>
+    <div id="st1" class="a row" style="left:150px;top:500px"><div class="num">2</div><div class="h3" style="max-width:820px">Or use the QR code shown here</div></div>
+    <div id="st2" class="a row" style="left:150px;top:650px"><div class="num">3</div><div class="h3" style="max-width:820px">Open your camera, point it at the code, tap the link</div></div>
+    <div id="only" class="note blue" style="left:150px;top:820px;width:900px">The link only works for AirAsia Google accounts</div>
+    <div id="qr" class="card" style="left:1230px;top:220px;padding:30px"><img src="assets/deck/image-4-1.png" style="width:440px;height:440px;display:block" alt=""><div style="text-align:center;font-weight:700;font-size:30px;margin-top:10px">Scan to open the app</div></div>
+    <div id="sl" class="a" style="left:1260px;top:252px;width:440px;height:6px;background:#c8102e;box-shadow:0 0 18px #c8102e"></div>
+  </div>
+  <script>
+    gsap.set("#k",{opacity:0,x:-70});
+    gsap.set("#ttl",{opacity:0,x:-70});
+    gsap.set("#st0",{opacity:0,x:-70});
+    gsap.set("#st1",{opacity:0,x:-70});
+    gsap.set("#st2",{opacity:0,x:-70});
+    gsap.set("#only",{opacity:0,y:40});
+    gsap.set("#qr",{opacity:0,scale:0.7});
+    gsap.set("#sl",{opacity:0});
+    const tl = gsap.timeline({ paused: true });
+    tl.to("#k",{opacity:1,x:0,duration:0.5,ease:"power3.out"},0.2);
+    tl.to("#ttl",{opacity:1,x:0,duration:0.5,ease:"power3.out"},0.3);
+    tl.to("#st0",{opacity:1,x:0,duration:0.5,ease:"power3.out"},1.3);
+    tl.to("#st1",{opacity:1,x:0,duration:0.5,ease:"power3.out"},3.553);
+    tl.to("#st2",{opacity:1,x:0,duration:0.5,ease:"power3.out"},6.111);
+    tl.to("#only",{opacity:1,y:0,duration:0.5,ease:"power3.out"},7.811);
+    tl.to("#qr",{opacity:1,scale:1,duration:0.45,ease:"back.out(1.6)"},3.553);
+    tl.to("#sl",{opacity:1,duration:0.5,ease:"power3.out"},6.111);
+    tl.to("#sl",{y:430,duration:1.5,ease:"power1.inOut"},6.111);
+    tl.to("#sl",{y:0,duration:1.5,ease:"power1.inOut"},7.611);
+    tl.to("#qr",{scale:1.04,duration:0.22,ease:"power2.out"},4.853);
+    tl.to("#qr",{scale:1,duration:0.35,ease:"power2.inOut"},5.073);
+    tl.set({}, {}, 11.446);
+    window.__timelines["s04"] = tl;
+  </script>
+</template>

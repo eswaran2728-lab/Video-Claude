@@ -1,0 +1,295 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; font-family: "Inter", sans-serif; }
+    .cap { position: absolute; left: 210px; width: 1500px; bottom: 74px; text-align: center; opacity: 0; }
+    .cap span { display: inline; background: rgba(26,26,26,.9); color: #fff; font-size: 36px; font-weight: 600; line-height: 1.5; padding: 6px 18px; border-radius: 10px;
+      -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+  </style>
+  <div id="root" data-composition-id="captions" data-width="1920" data-height="1080">
+    <div id="cg0" class="cap"><span>This training shows you how to fill in, sign, and save a FOCA checklist on your phone.</span></div>
+    <div id="cg1" class="cap"><span>Security fills in the checklist first.</span></div>
+    <div id="cg2" class="cap"><span>Then the Airline Representative signs.</span></div>
+    <div id="cg3" class="cap"><span>Then the Security Representative signs and saves it.</span></div>
+    <div id="cg4" class="cap"><span>Both representatives use the same phone.</span></div>
+    <div id="cg5" class="cap"><span>We’ll go through it one step at a time.</span></div>
+    <div id="cg6" class="cap"><span>There are three parts.</span></div>
+    <div id="cg7" class="cap"><span>First, Security staff fill in the checklist.</span></div>
+    <div id="cg8" class="cap"><span>Second, the Airline Representative checks the details, types their own name and ID, and signs.</span></div>
+    <div id="cg9" class="cap"><span>Third, the Security Representative types their own name and ID, signs, and saves the record.</span></div>
+    <div id="cg10" class="cap"><span>Use your AirAsia Google account.</span></div>
+    <div id="cg11" class="cap"><span>Your email address should end in airasia.com.</span></div>
+    <div id="cg12" class="cap"><span>When it’s your turn to sign, type your own name and ID.</span></div>
+    <div id="cg13" class="cap"><span>Sign for yourself.</span></div>
+    <div id="cg14" class="cap"><span>Never sign for someone else.</span></div>
+    <div id="cg15" class="cap"><span>Start a new form for every new case.</span></div>
+    <div id="cg16" class="cap"><span>Ask your supervisor for the app link.</span></div>
+    <div id="cg17" class="cap"><span>You can also use the QR code shown here.</span></div>
+    <div id="cg18" class="cap"><span>Open your phone camera, point it at the QR code, and tap the link that appears.</span></div>
+    <div id="cg19" class="cap"><span>Open Chrome on your phone.</span></div>
+    <div id="cg20" class="cap"><span>Paste the link into the address bar.</span></div>
+    <div id="cg21" class="cap"><span>If you scanned the QR code, open the link in Chrome.</span></div>
+    <div id="cg22" class="cap"><span>If Google asks you to sign in, choose your AirAsia account.</span></div>
+    <div id="cg23" class="cap"><span>Wait until you see four forms on the screen.</span></div>
+    <div id="cg24" class="cap"><span>If you want to open the app with one tap next time, tap the three dots in Chrome and</span></div>
+    <div id="cg25" class="cap"><span>choose Add to Home screen.</span></div>
+    <div id="cg26" class="cap"><span>Look for the card that says FOCA.</span></div>
+    <div id="cg27" class="cap"><span>Check the code below the name.</span></div>
+    <div id="cg28" class="cap"><span>It should say AA/SEC/F/070.</span></div>
+    <div id="cg29" class="cap"><span>Once you see the right code, tap the card.</span></div>
+    <div id="cg30" class="cap"><span>At the top, you’ll see boxes for the flight details.</span></div>
+    <div id="cg31" class="cap"><span>In the middle, you’ll see the checklist.</span></div>
+    <div id="cg32" class="cap"><span>At the bottom, you’ll see a blue Next button.</span></div>
+    <div id="cg33" class="cap"><span>Scroll down so you can see where each part is.</span></div>
+    <div id="cg34" class="cap"><span>Then go back to the top to start.</span></div>
+    <div id="cg35" class="cap"><span>Start with the flight number.</span></div>
+    <div id="cg36" class="cap"><span>Then enter the aircraft registration, the destination, and the date.</span></div>
+    <div id="cg37" class="cap"><span>Next, enter the arrival and departure times.</span></div>
+    <div id="cg38" class="cap"><span>STA is the scheduled arrival time.</span></div>
+    <div id="cg39" class="cap"><span>ATA is the actual arrival time.</span></div>
+    <div id="cg40" class="cap"><span>STD is the scheduled departure time.</span></div>
+    <div id="cg41" class="cap"><span>ATD is the actual departure time.</span></div>
+    <div id="cg42" class="cap"><span>Finally, enter the aircraft bay.</span></div>
+    <div id="cg43" class="cap"><span>The flight number and date are required.</span></div>
+    <div id="cg44" class="cap"><span>Check both before you move on.</span></div>
+    <div id="cg45" class="cap"><span>The slide shows test data.</span></div>
+    <div id="cg46" class="cap"><span>For a real case, enter the details for that flight.</span></div>
+    <div id="cg47" class="cap"><span>Look for Areas of Coverage.</span></div>
+    <div id="cg48" class="cap"><span>Read the first line.</span></div>
+    <div id="cg49" class="cap"><span>If you completed that check, tap Completed.</span></div>
+    <div id="cg50" class="cap"><span>If the area was not checked, tap Not Checked.</span></div>
+    <div id="cg51" class="cap"><span>Add a remark if you need to explain what happened.</span></div>
+    <div id="cg52" class="cap"><span>Now move to the next line.</span></div>
+    <div id="cg53" class="cap"><span>Choose one answer on every line.</span></div>
+    <div id="cg54" class="cap"><span>Scroll down to Additional Services.</span></div>
+    <div id="cg55" class="cap"><span>Read each line.</span></div>
+    <div id="cg56" class="cap"><span>Choose Required/Completed if the service was required and completed.</span></div>
+    <div id="cg57" class="cap"><span>Choose Not Applicable if the service does not apply to this case.</span></div>
+    <div id="cg58" class="cap"><span>Once you’ve checked your answers, tap the blue Next button.</span></div>
+    <div id="cg59" class="cap"><span>Security staff, hand the phone to the Airline Representative.</span></div>
+    <div id="cg60" class="cap"><span>Once the Airline Representative is holding the phone, they tap the orange button that</span></div>
+    <div id="cg61" class="cap"><span>says Airline Representative has the phone.</span></div>
+    <div id="cg62" class="cap"><span>Airline Representative, read through the details on the screen.</span></div>
+    <div id="cg63" class="cap"><span>If you spot a mistake, tap Something is wrong.</span></div>
+    <div id="cg64" class="cap"><span>Then give the phone back to Security so they can correct it.</span></div>
+    <div id="cg65" class="cap"><span>If everything is correct, move on to the name and ID boxes.</span></div>
+    <div id="cg66" class="cap"><span>Tap the name box and type your own name.</span></div>
+    <div id="cg67" class="cap"><span>Then tap the ID box and enter your own staff ID or staff number.</span></div>
+    <div id="cg68" class="cap"><span>Look at both boxes again before you sign.</span></div>
+    <div id="cg69" class="cap"><span>Use your finger or a stylus to sign inside the box.</span></div>
+    <div id="cg70" class="cap"><span>The Airline Representative signs for themselves.</span></div>
+    <div id="cg71" class="cap"><span>Security staff, give them time to complete their signature.</span></div>
+    <div id="cg72" class="cap"><span>If you make a mistake, tap Clear.</span></div>
+    <div id="cg73" class="cap"><span>The signature box will become empty.</span></div>
+    <div id="cg74" class="cap"><span>Sign again in the same box.</span></div>
+    <div id="cg75" class="cap"><span>When you’re happy with your signature, tap Confirm my signature.</span></div>
+    <div id="cg76" class="cap"><span>The next screen will ask you to hand the phone back to Security.</span></div>
+    <div id="cg77" class="cap"><span>When you see Hand the phone back to SECURITY STAFF, pass the phone back to the Security Representative.</span></div>
+    <div id="cg78" class="cap"><span>Once the Security Representative is holding it, they tap the blue button that says</span></div>
+    <div id="cg79" class="cap"><span>Security staff has the phone.</span></div>
+    <div id="cg80" class="cap"><span>Security Representative, tap the name box and type your own name.</span></div>
+    <div id="cg81" class="cap"><span>Then enter your own staff ID or staff number.</span></div>
+    <div id="cg82" class="cap"><span>Check both boxes before you sign.</span></div>
+    <div id="cg83" class="cap"><span>Use your finger or a stylus to sign inside the box.</span></div>
+    <div id="cg84" class="cap"><span>If you make a mistake, tap Clear and sign again.</span></div>
+    <div id="cg85" class="cap"><span>Check that your signature is visible in the box.</span></div>
+    <div id="cg86" class="cap"><span>Find the green button that says Save record (PDF to Drive + Sheet).</span></div>
+    <div id="cg87" class="cap"><span>Tap it once.</span></div>
+    <div id="cg88" class="cap"><span>When it says Saving..., keep the app open and wait.</span></div>
+    <div id="cg89" class="cap"><span>Look for three things.</span></div>
+    <div id="cg90" class="cap"><span>A tick, the word Saved, and a Record ID.</span></div>
+    <div id="cg91" class="cap"><span>The Record ID is the reference number for this case.</span></div>
+    <div id="cg92" class="cap"><span>Once you see Saved, the app has put the signed checklist in Google Drive and added one row to Google Sheets.</span></div>
+    <div id="cg93" class="cap"><span>That row has a link to the signed PDF.</span></div>
+    <div id="cg94" class="cap"><span>If you see Not saved, stay on the same screen.</span></div>
+    <div id="cg95" class="cap"><span>Your answers and signatures are still there.</span></div>
+    <div id="cg96" class="cap"><span>Check your mobile data or Wi-Fi.</span></div>
+    <div id="cg97" class="cap"><span>Then tap Save again and wait for the confirmation.</span></div>
+    <div id="cg98" class="cap"><span>On the Saved screen, tap Open the completed PDF.</span></div>
+    <div id="cg99" class="cap"><span>This opens the signed checklist in Google Drive.</span></div>
+    <div id="cg100" class="cap"><span>First, check the file name.</span></div>
+    <div id="cg101" class="cap"><span>Look for the form name, the date, and the Record ID.</span></div>
+    <div id="cg102" class="cap"><span>Then scroll through every page.</span></div>
+    <div id="cg103" class="cap"><span>Find the Airline Representative’s signature.</span></div>
+    <div id="cg104" class="cap"><span>Then find the Security Representative’s signature.</span></div>
+    <div id="cg105" class="cap"><span>Make sure you can see both.</span></div>
+    <div id="cg106" class="cap"><span>If you need to send the PDF link to an authorised person, look at the top right of the screen.</span></div>
+    <div id="cg107" class="cap"><span>Tap the blue Share button.</span></div>
+    <div id="cg108" class="cap"><span>Check that access is set to Restricted.</span></div>
+    <div id="cg109" class="cap"><span>Keep it on Restricted.</span></div>
+    <div id="cg110" class="cap"><span>Then tap Copy link and send the link only to an authorised person.</span></div>
+    <div id="cg111" class="cap"><span>The app saves one PDF for each case.</span></div>
+    <div id="cg112" class="cap"><span>That PDF contains the completed checklist and both signatures.</span></div>
+    <div id="cg113" class="cap"><span>Here’s where authorised staff can find it.</span></div>
+    <div id="cg114" class="cap"><span>In Google Drive, open My Drive.</span></div>
+    <div id="cg115" class="cap"><span>Then open AA-SEC Signed Forms (RESTRICTED).</span></div>
+    <div id="cg116" class="cap"><span>Inside that folder, open FOCA.</span></div>
+    <div id="cg117" class="cap"><span>The file name starts with FOCA and includes the flight number, the date, and the Record ID.</span></div>
+    <div id="cg118" class="cap"><span>If you’ve just saved the case, you can open the same file straight from the Saved screen</span></div>
+    <div id="cg119" class="cap"><span>by tapping Open the completed PDF.</span></div>
+    <div id="cg120" class="cap"><span>The app also adds one row to the FOCA Records Google Sheet.</span></div>
+    <div id="cg121" class="cap"><span>The sheet is in the same FOCA folder as the PDFs.</span></div>
+    <div id="cg122" class="cap"><span>Each row shows the Record ID, the date and time it was saved in Malaysia time, the</span></div>
+    <div id="cg123" class="cap"><span>flight number, the names of both representatives, and a link to the signed PDF.</span></div>
+    <div id="cg124" class="cap"><span>If an authorised person needs to find the checklist later, they can look for the Record</span></div>
+    <div id="cg125" class="cap"><span>ID in the sheet and tap the PDF link on that row.</span></div>
+    <div id="cg126" class="cap"><span>The app writes the row automatically.</span></div>
+    <div id="cg127" class="cap"><span>Leave the rows as they are.</span></div>
+    <div id="cg128" class="cap"><span>When you have a different case to record, tap Start a new FOCA form.</span></div>
+    <div id="cg129" class="cap"><span>Enter the details for that case.</span></div>
+    <div id="cg130" class="cap"><span>Once you save it, it gets its own Record ID, its own signed PDF, and its own row in FOCA Records.</span></div>
+    <div id="cg131" class="cap"><span>Before you finish, ask yourself five questions.</span></div>
+    <div id="cg132" class="cap"><span>One. Are the flight details and date correct?</span></div>
+    <div id="cg133" class="cap"><span>Two. Did I choose one answer on every checklist line?</span></div>
+    <div id="cg134" class="cap"><span>Three. Did the Airline Representative enter their own name and ID and sign?</span></div>
+    <div id="cg135" class="cap"><span>Four. Did the Security Representative enter their own name and ID and sign?</span></div>
+    <div id="cg136" class="cap"><span>Five. Did I see Saved and check both signatures in the PDF?</span></div>
+    <div id="cg137" class="cap"><span>Let’s practise one case together.</span></div>
+    <div id="cg138" class="cap"><span>At each step, tell me who should be holding the phone and which button they should tap.</span></div>
+    <div id="cg139" class="cap"><span>At the end, show me where you’d find the signed PDF and where you’d find its record in Google Sheets.</span></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.set("#cg0",{opacity:1},1.0);tl.set("#cg0",{opacity:0},5.927);
+    tl.set("#cg1",{opacity:1},6.367);tl.set("#cg1",{opacity:0},8.396);
+    tl.set("#cg2",{opacity:1},9.016);tl.set("#cg2",{opacity:0},11.085);
+    tl.set("#cg3",{opacity:1},11.705);tl.set("#cg3",{opacity:0},14.67);
+    tl.set("#cg4",{opacity:1},15.11);tl.set("#cg4",{opacity:0},17.44);
+    tl.set("#cg5",{opacity:1},17.88);tl.set("#cg5",{opacity:0},19.727);
+    tl.set("#cg6",{opacity:1},21.947);tl.set("#cg6",{opacity:0},23.1);
+    tl.set("#cg7",{opacity:1},23.54);tl.set("#cg7",{opacity:0},25.895);
+    tl.set("#cg8",{opacity:1},26.335);tl.set("#cg8",{opacity:0},32.196);
+    tl.set("#cg9",{opacity:1},32.636);tl.set("#cg9",{opacity:0},38.397);
+    tl.set("#cg10",{opacity:1},40.617);tl.set("#cg10",{opacity:0},42.462);
+    tl.set("#cg11",{opacity:1},42.902);tl.set("#cg11",{opacity:0},45.68);
+    tl.set("#cg12",{opacity:1},46.12);tl.set("#cg12",{opacity:0},48.91);
+    tl.set("#cg13",{opacity:1},49.35);tl.set("#cg13",{opacity:0},50.444);
+    tl.set("#cg14",{opacity:1},50.884);tl.set("#cg14",{opacity:0},52.313);
+    tl.set("#cg15",{opacity:1},52.753);tl.set("#cg15",{opacity:0},54.717);
+    tl.set("#cg16",{opacity:1},56.937);tl.set("#cg16",{opacity:0},58.75);
+    tl.set("#cg17",{opacity:1},59.19);tl.set("#cg17",{opacity:0},61.308);
+    tl.set("#cg18",{opacity:1},61.748);tl.set("#cg18",{opacity:0},66.163);
+    tl.set("#cg19",{opacity:1},68.383);tl.set("#cg19",{opacity:0},69.784);
+    tl.set("#cg20",{opacity:1},70.224);tl.set("#cg20",{opacity:0},72.056);
+    tl.set("#cg21",{opacity:1},72.676);tl.set("#cg21",{opacity:0},75.627);
+    tl.set("#cg22",{opacity:1},76.247);tl.set("#cg22",{opacity:0},79.542);
+    tl.set("#cg23",{opacity:1},79.982);tl.set("#cg23",{opacity:0},82.399);
+    tl.set("#cg24",{opacity:1},83.019);tl.set("#cg24",{opacity:0},87.766);
+    tl.set("#cg25",{opacity:1},87.786);tl.set("#cg25",{opacity:0},89.241);
+    tl.set("#cg26",{opacity:1},91.461);tl.set("#cg26",{opacity:0},93.09);
+    tl.set("#cg27",{opacity:1},93.53);tl.set("#cg27",{opacity:0},94.985);
+    tl.set("#cg28",{opacity:1},95.425);tl.set("#cg28",{opacity:0},98.927);
+    tl.set("#cg29",{opacity:1},99.547);tl.set("#cg29",{opacity:0},101.7);
+    tl.set("#cg30",{opacity:1},103.92);tl.set("#cg30",{opacity:0},106.619);
+    tl.set("#cg31",{opacity:1},107.059);tl.set("#cg31",{opacity:0},108.809);
+    tl.set("#cg32",{opacity:1},109.249);tl.set("#cg32",{opacity:0},111.318);
+    tl.set("#cg33",{opacity:1},111.758);tl.set("#cg33",{opacity:0},114.242);
+    tl.set("#cg34",{opacity:1},114.862);tl.set("#cg34",{opacity:0},116.636);
+    tl.set("#cg35",{opacity:1},118.856);tl.set("#cg35",{opacity:0},120.157);
+    tl.set("#cg36",{opacity:1},120.777);tl.set("#cg36",{opacity:0},124.725);
+    tl.set("#cg37",{opacity:1},125.165);tl.set("#cg37",{opacity:0},127.786);
+    tl.set("#cg38",{opacity:1},128.226);tl.set("#cg38",{opacity:0},130.875);
+    tl.set("#cg39",{opacity:1},131.315);tl.set("#cg39",{opacity:0},133.877);
+    tl.set("#cg40",{opacity:1},134.317);tl.set("#cg40",{opacity:0},137.195);
+    tl.set("#cg41",{opacity:1},137.635);tl.set("#cg41",{opacity:0},140.324);
+    tl.set("#cg42",{opacity:1},140.764);tl.set("#cg42",{opacity:0},142.656);
+    tl.set("#cg43",{opacity:1},143.096);tl.set("#cg43",{opacity:0},145.16);
+    tl.set("#cg44",{opacity:1},145.6);tl.set("#cg44",{opacity:0},147.108);
+    tl.set("#cg45",{opacity:1},147.548);tl.set("#cg45",{opacity:0},148.971);
+    tl.set("#cg46",{opacity:1},149.411);tl.set("#cg46",{opacity:0},152.13);
+    tl.set("#cg47",{opacity:1},154.35);tl.set("#cg47",{opacity:0},155.798);
+    tl.set("#cg48",{opacity:1},156.238);tl.set("#cg48",{opacity:0},157.385);
+    tl.set("#cg49",{opacity:1},158.005);tl.set("#cg49",{opacity:0},160.232);
+    tl.set("#cg50",{opacity:1},160.852);tl.set("#cg50",{opacity:0},163.287);
+    tl.set("#cg51",{opacity:1},163.727);tl.set("#cg51",{opacity:0},166.171);
+    tl.set("#cg52",{opacity:1},166.611);tl.set("#cg52",{opacity:0},168.001);
+    tl.set("#cg53",{opacity:1},168.441);tl.set("#cg53",{opacity:0},170.253);
+    tl.set("#cg54",{opacity:1},172.473);tl.set("#cg54",{opacity:0},174.592);
+    tl.set("#cg55",{opacity:1},175.032);tl.set("#cg55",{opacity:0},176.004);
+    tl.set("#cg56",{opacity:1},176.444);tl.set("#cg56",{opacity:0},180.545);
+    tl.set("#cg57",{opacity:1},180.985);tl.set("#cg57",{opacity:0},184.448);
+    tl.set("#cg58",{opacity:1},185.068);tl.set("#cg58",{opacity:0},187.975);
+    tl.set("#cg59",{opacity:1},190.195);tl.set("#cg59",{opacity:0},193.655);
+    tl.set("#cg60",{opacity:1},194.275);tl.set("#cg60",{opacity:0},199.018);
+    tl.set("#cg61",{opacity:1},199.038);tl.set("#cg61",{opacity:0},201.371);
+    tl.set("#cg62",{opacity:1},203.591);tl.set("#cg62",{opacity:0},207.111);
+    tl.set("#cg63",{opacity:1},207.731);tl.set("#cg63",{opacity:0},210.121);
+    tl.set("#cg64",{opacity:1},210.741);tl.set("#cg64",{opacity:0},213.823);
+    tl.set("#cg65",{opacity:1},214.443);tl.set("#cg65",{opacity:0},218.128);
+    tl.set("#cg66",{opacity:1},220.348);tl.set("#cg66",{opacity:0},222.473);
+    tl.set("#cg67",{opacity:1},223.093);tl.set("#cg67",{opacity:0},227.423);
+    tl.set("#cg68",{opacity:1},227.863);tl.set("#cg68",{opacity:0},230.211);
+    tl.set("#cg69",{opacity:1},232.431);tl.set("#cg69",{opacity:0},235.472);
+    tl.set("#cg70",{opacity:1},235.912);tl.set("#cg70",{opacity:0},238.602);
+    tl.set("#cg71",{opacity:1},239.042);tl.set("#cg71",{opacity:0},242.198);
+    tl.set("#cg72",{opacity:1},244.418);tl.set("#cg72",{opacity:0},246.2);
+    tl.set("#cg73",{opacity:1},246.64);tl.set("#cg73",{opacity:0},248.604);
+    tl.set("#cg74",{opacity:1},249.044);tl.set("#cg74",{opacity:0},250.628);
+    tl.set("#cg75",{opacity:1},252.848);tl.set("#cg75",{opacity:0},256.009);
+    tl.set("#cg76",{opacity:1},256.449);tl.set("#cg76",{opacity:0},259.539);
+    tl.set("#cg77",{opacity:1},261.759);tl.set("#cg77",{opacity:0},267.027);
+    tl.set("#cg78",{opacity:1},267.647);tl.set("#cg78",{opacity:0},272.13);
+    tl.set("#cg79",{opacity:1},272.15);tl.set("#cg79",{opacity:0},273.722);
+    tl.set("#cg80",{opacity:1},275.942);tl.set("#cg80",{opacity:0},279.752);
+    tl.set("#cg81",{opacity:1},280.372);tl.set("#cg81",{opacity:0},282.928);
+    tl.set("#cg82",{opacity:1},283.368);tl.set("#cg82",{opacity:0},285.286);
+    tl.set("#cg83",{opacity:1},287.506);tl.set("#cg83",{opacity:0},290.547);
+    tl.set("#cg84",{opacity:1},291.167);tl.set("#cg84",{opacity:0},293.712);
+    tl.set("#cg85",{opacity:1},294.152);tl.set("#cg85",{opacity:0},296.682);
+    tl.set("#cg86",{opacity:1},298.902);tl.set("#cg86",{opacity:0},303.202);
+    tl.set("#cg87",{opacity:1},303.642);tl.set("#cg87",{opacity:0},304.438);
+    tl.set("#cg88",{opacity:1},304.878);tl.set("#cg88",{opacity:0},307.473);
+    tl.set("#cg89",{opacity:1},309.693);tl.set("#cg89",{opacity:0},310.85);
+    tl.set("#cg90",{opacity:1},311.29);tl.set("#cg90",{opacity:0},313.894);
+    tl.set("#cg91",{opacity:1},314.334);tl.set("#cg91",{opacity:0},317.407);
+    tl.set("#cg92",{opacity:1},318.027);tl.set("#cg92",{opacity:0},324.417);
+    tl.set("#cg93",{opacity:1},324.857);tl.set("#cg93",{opacity:0},327.255);
+    tl.set("#cg94",{opacity:1},329.475);tl.set("#cg94",{opacity:0},331.978);
+    tl.set("#cg95",{opacity:1},332.418);tl.set("#cg95",{opacity:0},334.606);
+    tl.set("#cg96",{opacity:1},335.046);tl.set("#cg96",{opacity:0},337.032);
+    tl.set("#cg97",{opacity:1},337.652);tl.set("#cg97",{opacity:0},340.285);
+    tl.set("#cg98",{opacity:1},342.505);tl.set("#cg98",{opacity:0},345.853);
+    tl.set("#cg99",{opacity:1},346.293);tl.set("#cg99",{opacity:0},348.949);
+    tl.set("#cg100",{opacity:1},351.169);tl.set("#cg100",{opacity:0},352.657);
+    tl.set("#cg101",{opacity:1},353.097);tl.set("#cg101",{opacity:0},356.011);
+    tl.set("#cg102",{opacity:1},356.631);tl.set("#cg102",{opacity:0},358.285);
+    tl.set("#cg103",{opacity:1},358.725);tl.set("#cg103",{opacity:0},361.012);
+    tl.set("#cg104",{opacity:1},361.632);tl.set("#cg104",{opacity:0},364.286);
+    tl.set("#cg105",{opacity:1},364.726);tl.set("#cg105",{opacity:0},366.003);
+    tl.set("#cg106",{opacity:1},368.223);tl.set("#cg106",{opacity:0},373.495);
+    tl.set("#cg107",{opacity:1},373.935);tl.set("#cg107",{opacity:0},375.222);
+    tl.set("#cg108",{opacity:1},377.442);tl.set("#cg108",{opacity:0},379.495);
+    tl.set("#cg109",{opacity:1},379.935);tl.set("#cg109",{opacity:0},381.291);
+    tl.set("#cg110",{opacity:1},381.911);tl.set("#cg110",{opacity:0},385.859);
+    tl.set("#cg111",{opacity:1},388.079);tl.set("#cg111",{opacity:0},390.484);
+    tl.set("#cg112",{opacity:1},390.924);tl.set("#cg112",{opacity:0},395.076);
+    tl.set("#cg113",{opacity:1},395.516);tl.set("#cg113",{opacity:0},397.564);
+    tl.set("#cg114",{opacity:1},398.004);tl.set("#cg114",{opacity:0},400.114);
+    tl.set("#cg115",{opacity:1},400.734);tl.set("#cg115",{opacity:0},404.511);
+    tl.set("#cg116",{opacity:1},404.951);tl.set("#cg116",{opacity:0},406.942);
+    tl.set("#cg117",{opacity:1},407.382);tl.set("#cg117",{opacity:0},412.479);
+    tl.set("#cg118",{opacity:1},413.099);tl.set("#cg118",{opacity:0},418.464);
+    tl.set("#cg119",{opacity:1},418.484);tl.set("#cg119",{opacity:0},420.545);
+    tl.set("#cg120",{opacity:1},422.765);tl.set("#cg120",{opacity:0},426.256);
+    tl.set("#cg121",{opacity:1},426.696);tl.set("#cg121",{opacity:0},429.973);
+    tl.set("#cg122",{opacity:1},430.413);tl.set("#cg122",{opacity:0},435.675);
+    tl.set("#cg123",{opacity:1},435.695);tl.set("#cg123",{opacity:0},440.763);
+    tl.set("#cg124",{opacity:1},441.383);tl.set("#cg124",{opacity:0},446.353);
+    tl.set("#cg125",{opacity:1},446.373);tl.set("#cg125",{opacity:0},449.163);
+    tl.set("#cg126",{opacity:1},449.603);tl.set("#cg126",{opacity:0},451.392);
+    tl.set("#cg127",{opacity:1},451.832);tl.set("#cg127",{opacity:0},453.294);
+    tl.set("#cg128",{opacity:1},455.514);tl.set("#cg128",{opacity:0},459.11);
+    tl.set("#cg129",{opacity:1},459.55);tl.set("#cg129",{opacity:0},461.179);
+    tl.set("#cg130",{opacity:1},461.799);tl.set("#cg130",{opacity:0},468.575);
+    tl.set("#cg131",{opacity:1},470.795);tl.set("#cg131",{opacity:0},473.407);
+    tl.set("#cg132",{opacity:1},473.847);tl.set("#cg132",{opacity:0},476.272);
+    tl.set("#cg133",{opacity:1},476.712);tl.set("#cg133",{opacity:0},479.587);
+    tl.set("#cg134",{opacity:1},480.027);tl.set("#cg134",{opacity:0},484.475);
+    tl.set("#cg135",{opacity:1},484.915);tl.set("#cg135",{opacity:0},489.464);
+    tl.set("#cg136",{opacity:1},489.904);tl.set("#cg136",{opacity:0},493.686);
+    tl.set("#cg137",{opacity:1},494.126);tl.set("#cg137",{opacity:0},495.906);
+    tl.set("#cg138",{opacity:1},496.346);tl.set("#cg138",{opacity:0},500.594);
+    tl.set("#cg139",{opacity:1},501.034);tl.set("#cg139",{opacity:0},506.58);
+    tl.set({}, {}, 507.8);
+    window.__timelines["captions"] = tl;
+  </script>
+</template>

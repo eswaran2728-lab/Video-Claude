@@ -1,0 +1,806 @@
+[
+ {
+  "line": "s01_00",
+  "spoken": "This training shows you how to fill in, sign, and save a FOCA checklist on your phone.",
+  "heard": "This training shows you how to fill in, sign, and save a FOCA checklist on your phone.",
+  "match": 1.0
+ },
+ {
+  "line": "s01_01",
+  "spoken": "Security fills in the checklist first.",
+  "heard": "Security fills in the checklist first.",
+  "match": 1.0
+ },
+ {
+  "line": "s01_02",
+  "spoken": "Then the Airline Representative signs.",
+  "heard": "then the airline representative signs.",
+  "match": 1.0
+ },
+ {
+  "line": "s01_03",
+  "spoken": "Then the Security Representative signs and saves it.",
+  "heard": "Then the security representative signs and saves it.",
+  "match": 1.0
+ },
+ {
+  "line": "s01_04",
+  "spoken": "Both representatives use the same phone.",
+  "heard": "Both representatives use the same phone.",
+  "match": 1.0
+ },
+ {
+  "line": "s01_05",
+  "spoken": "We’ll go through it one step at a time.",
+  "heard": "We'll go through it one step at a time.",
+  "match": 1.0
+ },
+ {
+  "line": "s02_00",
+  "spoken": "There are three parts.",
+  "heard": "There are three parts.",
+  "match": 1.0
+ },
+ {
+  "line": "s02_01",
+  "spoken": "First, Security staff fill in the checklist.",
+  "heard": "First, security staff fill in the checklist.",
+  "match": 1.0
+ },
+ {
+  "line": "s02_02",
+  "spoken": "Second, the Airline Representative checks the details, types their own name and I D, and signs.",
+  "heard": "Second, the airline representative checks the details, types their own name and ID and signs.",
+  "match": 0.88
+ },
+ {
+  "line": "s02_03",
+  "spoken": "Third, the Security Representative types their own name and I D, signs, and saves the record.",
+  "heard": "Third, the security representative types their own name and ID, signs, and saves the record.",
+  "match": 0.88
+ },
+ {
+  "line": "s03_00",
+  "spoken": "Use your AirAsia Google account.",
+  "heard": "Use your AirAsia Google account.",
+  "match": 1.0
+ },
+ {
+  "line": "s03_01",
+  "spoken": "Your email address should end in Air Asia dot com.",
+  "heard": "Your email address should end in AirAsia.com.",
+  "match": 0.7
+ },
+ {
+  "line": "s03_02",
+  "spoken": "When it’s your turn to sign, type your own name and I D.",
+  "heard": "When it's your turn to sign, type your own name and ID.",
+  "match": 0.86
+ },
+ {
+  "line": "s03_03",
+  "spoken": "Sign for yourself.",
+  "heard": "Sign for yourself.",
+  "match": 1.0
+ },
+ {
+  "line": "s03_04",
+  "spoken": "Never sign for someone else.",
+  "heard": "Never sign for someone else.",
+  "match": 1.0
+ },
+ {
+  "line": "s03_05",
+  "spoken": "Start a new form for every new case.",
+  "heard": "Start a new form for every new case.",
+  "match": 1.0
+ },
+ {
+  "line": "s04_00",
+  "spoken": "Ask your supervisor for the app link.",
+  "heard": "Ask your supervisor for the app link.",
+  "match": 1.0
+ },
+ {
+  "line": "s04_01",
+  "spoken": "You can also use the QR code shown here.",
+  "heard": "You can also use the QR code shown here.",
+  "match": 1.0
+ },
+ {
+  "line": "s04_02",
+  "spoken": "Open your phone camera, point it at the QR code, and tap the link that appears.",
+  "heard": "Open your phone camera, point it at the QR code, and tap the link that appears.",
+  "match": 1.0
+ },
+ {
+  "line": "s05_00",
+  "spoken": "Open Chrome on your phone.",
+  "heard": "Open Chrome on your phone.",
+  "match": 1.0
+ },
+ {
+  "line": "s05_01",
+  "spoken": "Paste the link into the address bar.",
+  "heard": "paste the link into the address bar.",
+  "match": 1.0
+ },
+ {
+  "line": "s05_02",
+  "spoken": "If you scanned the QR code, open the link in Chrome.",
+  "heard": "If you scan the QR code, open the link in Chrome.",
+  "match": 0.91
+ },
+ {
+  "line": "s05_03",
+  "spoken": "If Google asks you to sign in, choose your AirAsia account.",
+  "heard": "If Google asks you to sign in, choose your AirAsia account.",
+  "match": 1.0
+ },
+ {
+  "line": "s05_04",
+  "spoken": "Wait until you see four forms on the screen.",
+  "heard": "Wait until you see four forms on the screen.",
+  "match": 1.0
+ },
+ {
+  "line": "s05_05",
+  "spoken": "If you want to open the app with one tap next time, tap the three dots in Chrome and choose Add to Home screen.",
+  "heard": "If you want to open the app with one tap next time,  tap the three dots in Chrome and choose Add to Home screen.",
+  "match": 1.0
+ },
+ {
+  "line": "s06_00",
+  "spoken": "Look for the card that says FOCA.",
+  "heard": "Look for the card that says FOCA.",
+  "match": 1.0
+ },
+ {
+  "line": "s06_01",
+  "spoken": "Check the code below the name.",
+  "heard": "Check the code below the name.",
+  "match": 1.0
+ },
+ {
+  "line": "s06_02",
+  "spoken": "It should say A. A. S. E. C. F. zero seven zero.",
+  "heard": "It should say A, ASTCF 070.",
+  "match": 0.42
+ },
+ {
+  "line": "s06_03",
+  "spoken": "Once you see the right code, tap the card.",
+  "heard": "Once you see the right code, tap the card.",
+  "match": 1.0
+ },
+ {
+  "line": "s07_00",
+  "spoken": "At the top, you’ll see boxes for the flight details.",
+  "heard": "At the top, you'll see boxes for the flight details.",
+  "match": 1.0
+ },
+ {
+  "line": "s07_01",
+  "spoken": "In the middle, you’ll see the checklist.",
+  "heard": "In the middle, you'll see the checklist.",
+  "match": 1.0
+ },
+ {
+  "line": "s07_02",
+  "spoken": "At the bottom, you’ll see a blue Next button.",
+  "heard": "At the bottom, you'll see a blue Next button.",
+  "match": 1.0
+ },
+ {
+  "line": "s07_03",
+  "spoken": "Scroll down so you can see where each part is.",
+  "heard": "Scroll down so you can see where each part is.",
+  "match": 1.0
+ },
+ {
+  "line": "s07_04",
+  "spoken": "Then go back to the top to start.",
+  "heard": "Then go back to the top to start.",
+  "match": 1.0
+ },
+ {
+  "line": "s08_00",
+  "spoken": "Start with the flight number.",
+  "heard": "Start with the flight number.",
+  "match": 1.0
+ },
+ {
+  "line": "s08_01",
+  "spoken": "Then enter the aircraft registration, the destination, and the date.",
+  "heard": "Then enter the aircraft registration, the destination, and the date.",
+  "match": 1.0
+ },
+ {
+  "line": "s08_02",
+  "spoken": "Next, enter the arrival and departure times.",
+  "heard": "Next, enter the arrival and departure times.",
+  "match": 1.0
+ },
+ {
+  "line": "s08_03",
+  "spoken": "S. T. A. is the scheduled arrival time.",
+  "heard": "STA is the scheduled arrival time.",
+  "match": 0.62
+ },
+ {
+  "line": "s08_04",
+  "spoken": "A. T. A. is the actual arrival time.",
+  "heard": "ATA is the actual arrival time.",
+  "match": 0.62
+ },
+ {
+  "line": "s08_05",
+  "spoken": "S. T. D. is the scheduled departure time.",
+  "heard": "STD is the Scheduled Departure Time.",
+  "match": 0.62
+ },
+ {
+  "line": "s08_06",
+  "spoken": "A. T. D. is the actual departure time.",
+  "heard": "ATD is the actual departure time.",
+  "match": 0.62
+ },
+ {
+  "line": "s08_07",
+  "spoken": "Finally, enter the aircraft bay.",
+  "heard": "Finally, enter the aircraft bay.",
+  "match": 1.0
+ },
+ {
+  "line": "s08_08",
+  "spoken": "The flight number and date are required.",
+  "heard": "The flight number and date are required.",
+  "match": 1.0
+ },
+ {
+  "line": "s08_09",
+  "spoken": "Check both before you move on.",
+  "heard": "Check both before you move on.",
+  "match": 1.0
+ },
+ {
+  "line": "s08_10",
+  "spoken": "The slide shows test data.",
+  "heard": "The slide shows test data.",
+  "match": 1.0
+ },
+ {
+  "line": "s08_11",
+  "spoken": "For a real case, enter the details for that flight.",
+  "heard": "For a real case, enter the details for that flight.",
+  "match": 1.0
+ },
+ {
+  "line": "s09_00",
+  "spoken": "Look for Areas of Coverage.",
+  "heard": "Look for areas of coverage.",
+  "match": 1.0
+ },
+ {
+  "line": "s09_01",
+  "spoken": "Read the first line.",
+  "heard": "Read the first line.",
+  "match": 1.0
+ },
+ {
+  "line": "s09_02",
+  "spoken": "If you completed that check, tap Completed.",
+  "heard": "If you completed that check, tap completed.",
+  "match": 1.0
+ },
+ {
+  "line": "s09_03",
+  "spoken": "If the area was not checked, tap Not Checked.",
+  "heard": "If the area was not checked, tap not checked.",
+  "match": 1.0
+ },
+ {
+  "line": "s09_04",
+  "spoken": "Add a remark if you need to explain what happened.",
+  "heard": "Add a remark if you need to explain what happened.",
+  "match": 1.0
+ },
+ {
+  "line": "s09_05",
+  "spoken": "Now move to the next line.",
+  "heard": "Now move to the next line.",
+  "match": 1.0
+ },
+ {
+  "line": "s09_06",
+  "spoken": "Choose one answer on every line.",
+  "heard": "Choose one answer on every line.",
+  "match": 1.0
+ },
+ {
+  "line": "s10_00",
+  "spoken": "Scroll down to Additional Services.",
+  "heard": "Scroll down to Additional Services.",
+  "match": 1.0
+ },
+ {
+  "line": "s10_01",
+  "spoken": "Read each line.",
+  "heard": "Read each line.",
+  "match": 1.0
+ },
+ {
+  "line": "s10_02",
+  "spoken": "Choose Required, Completed, if the service was required and completed.",
+  "heard": "Choose required, completed, if the service was required and completed.",
+  "match": 1.0
+ },
+ {
+  "line": "s10_03",
+  "spoken": "Choose Not Applicable if the service does not apply to this case.",
+  "heard": "Choose not applicable if the service does not apply to this case.",
+  "match": 1.0
+ },
+ {
+  "line": "s10_04",
+  "spoken": "Once you’ve checked your answers, tap the blue Next button.",
+  "heard": "Once you've checked your answers, tap the blue Next button.",
+  "match": 1.0
+ },
+ {
+  "line": "s11_00",
+  "spoken": "Security staff, hand the phone to the Airline Representative.",
+  "heard": "security staff, hand the phone to the airline representative.",
+  "match": 1.0
+ },
+ {
+  "line": "s11_01",
+  "spoken": "Once the Airline Representative is holding the phone, they tap the orange button that says Airline Representative has the phone.",
+  "heard": "Once the airline representative is holding the phone,  they tap the orange button that says  airline representative has the phone.",
+  "match": 1.0
+ },
+ {
+  "line": "s12_00",
+  "spoken": "Airline Representative, read through the details on the screen.",
+  "heard": "Airline representative, read through the details on the screen.",
+  "match": 1.0
+ },
+ {
+  "line": "s12_01",
+  "spoken": "If you spot a mistake, tap Something is wrong.",
+  "heard": "If you spot a mistake, tap something is wrong.",
+  "match": 1.0
+ },
+ {
+  "line": "s12_02",
+  "spoken": "Then give the phone back to Security so they can correct it.",
+  "heard": "Then give the phone back to security so they can correct it.",
+  "match": 1.0
+ },
+ {
+  "line": "s12_03",
+  "spoken": "If everything is correct, move on to the name and I D boxes.",
+  "heard": "If everything is correct, move on to the name and ID boxes.",
+  "match": 0.85
+ },
+ {
+  "line": "s13_00",
+  "spoken": "Tap the name box and type your own name.",
+  "heard": "Tap the name box and type your own name.",
+  "match": 1.0
+ },
+ {
+  "line": "s13_01",
+  "spoken": "Then tap the I D box and enter your own staff I D or staff number.",
+  "heard": "Then tap the ID box and enter your own staff ID or staff number.",
+  "match": 0.75
+ },
+ {
+  "line": "s13_02",
+  "spoken": "Look at both boxes again before you sign.",
+  "heard": "Look at both boxes again before you sign.",
+  "match": 1.0
+ },
+ {
+  "line": "s14_00",
+  "spoken": "Use your finger or a stylus to sign inside the box.",
+  "heard": "Use your finger or a stylus to sign inside the box.",
+  "match": 1.0
+ },
+ {
+  "line": "s14_01",
+  "spoken": "The Airline Representative signs for themselves.",
+  "heard": "the airline representative signs for themselves.",
+  "match": 1.0
+ },
+ {
+  "line": "s14_02",
+  "spoken": "Security staff, give them time to complete their signature.",
+  "heard": "Security staff give them time to complete their signature.",
+  "match": 1.0
+ },
+ {
+  "line": "s15_00",
+  "spoken": "If you make a mistake, tap Clear.",
+  "heard": "If you make a mistake, tap clear.",
+  "match": 1.0
+ },
+ {
+  "line": "s15_01",
+  "spoken": "The signature box will become empty.",
+  "heard": "The signature box will become empty.",
+  "match": 1.0
+ },
+ {
+  "line": "s15_02",
+  "spoken": "Sign again in the same box.",
+  "heard": "Sign again in the same box.",
+  "match": 1.0
+ },
+ {
+  "line": "s16_00",
+  "spoken": "When you’re happy with your signature, tap Confirm my signature.",
+  "heard": "When you're happy with your signature, tap Confirm My Signature.",
+  "match": 1.0
+ },
+ {
+  "line": "s16_01",
+  "spoken": "The next screen will ask you to hand the phone back to Security.",
+  "heard": "The next screen will ask you to hand the phone back to security.",
+  "match": 1.0
+ },
+ {
+  "line": "s17_00",
+  "spoken": "When you see Hand the phone back to Security Staff, pass the phone back to the Security Representative.",
+  "heard": "When you see hand the phone back to security staff,  pass the phone back to the security representative.",
+  "match": 1.0
+ },
+ {
+  "line": "s17_01",
+  "spoken": "Once the Security Representative is holding it, they tap the blue button that says Security staff has the phone.",
+  "heard": "Once the security representative is holding it,  they tap the blue button  that says security staff has the phone.",
+  "match": 1.0
+ },
+ {
+  "line": "s18_00",
+  "spoken": "Security Representative, tap the name box and type your own name.",
+  "heard": "Security representative, tap the name box and type your own name.",
+  "match": 1.0
+ },
+ {
+  "line": "s18_01",
+  "spoken": "Then enter your own staff I D or staff number.",
+  "heard": "Then enter your own staff ID or staff number.",
+  "match": 0.8
+ },
+ {
+  "line": "s18_02",
+  "spoken": "Check both boxes before you sign.",
+  "heard": "Check both boxes before you sign.",
+  "match": 1.0
+ },
+ {
+  "line": "s19_00",
+  "spoken": "Use your finger or a stylus to sign inside the box.",
+  "heard": "Use your finger or a stylus to sign inside the box.",
+  "match": 1.0
+ },
+ {
+  "line": "s19_01",
+  "spoken": "If you make a mistake, tap Clear and sign again.",
+  "heard": "If you make a mistake, tap clear and sign again.",
+  "match": 1.0
+ },
+ {
+  "line": "s19_02",
+  "spoken": "Check that your signature is visible in the box.",
+  "heard": "check that your signature is visible in the box.",
+  "match": 1.0
+ },
+ {
+  "line": "s20_00",
+  "spoken": "Find the green button that says Save record , P D F to Drive plus Sheet,.",
+  "heard": "Find the green button that says Save Record, PDF to drive plus sheet.",
+  "match": 0.8
+ },
+ {
+  "line": "s20_01",
+  "spoken": "Tap it once.",
+  "heard": "Tap it once.",
+  "match": 1.0
+ },
+ {
+  "line": "s20_02",
+  "spoken": "When it says Saving, keep the app open and wait.",
+  "heard": "When it says saving, keep the app open and wait.",
+  "match": 1.0
+ },
+ {
+  "line": "s21_00",
+  "spoken": "Look for three things.",
+  "heard": "Look for three things.",
+  "match": 1.0
+ },
+ {
+  "line": "s21_01",
+  "spoken": "A tick, the word Saved, and a Record I D.",
+  "heard": "a tick the word saved, and a record ID.",
+  "match": 0.8
+ },
+ {
+  "line": "s21_02",
+  "spoken": "The Record I D is the reference number for this case.",
+  "heard": "The record ID is the reference number for this case.",
+  "match": 0.82
+ },
+ {
+  "line": "s21_03",
+  "spoken": "Once you see Saved, the app has put the signed checklist in Google Drive and added one row to Google Sheets.",
+  "heard": "Once you see saved, the app has put the sign checklist  in Google Drive and added one row to Google Sheets.",
+  "match": 0.95
+ },
+ {
+  "line": "s21_04",
+  "spoken": "That row has a link to the signed P D F.",
+  "heard": "That row has a link to the signed PDF.",
+  "match": 0.73
+ },
+ {
+  "line": "s22_00",
+  "spoken": "If you see Not saved, stay on the same screen.",
+  "heard": "If you see not saved, stay on the same screen.",
+  "match": 1.0
+ },
+ {
+  "line": "s22_01",
+  "spoken": "Your answers and signatures are still there.",
+  "heard": "Your answers and signatures are still there.",
+  "match": 1.0
+ },
+ {
+  "line": "s22_02",
+  "spoken": "Check your mobile data or wifi.",
+  "heard": "Check your mobile data or Wi-Fi.",
+  "match": 0.83
+ },
+ {
+  "line": "s22_03",
+  "spoken": "Then tap Save again and wait for the confirmation.",
+  "heard": "Then tap Save again and wait for the confirmation.",
+  "match": 1.0
+ },
+ {
+  "line": "s23_00",
+  "spoken": "On the Saved screen, tap Open the completed P D F.",
+  "heard": "On the Save screen, tap open the completed PDF.",
+  "match": 0.64
+ },
+ {
+  "line": "s23_01",
+  "spoken": "This opens the signed checklist in Google Drive.",
+  "heard": "This opens the sign checklist in Google Drive.",
+  "match": 0.88
+ },
+ {
+  "line": "s24_00",
+  "spoken": "First, check the file name.",
+  "heard": "First, check the file name.",
+  "match": 1.0
+ },
+ {
+  "line": "s24_01",
+  "spoken": "Look for the form name, the date, and the Record I D.",
+  "heard": "Look for the form name, the date, and the record ID.",
+  "match": 0.83
+ },
+ {
+  "line": "s24_02",
+  "spoken": "Then scroll through every page.",
+  "heard": "then scroll through every page.",
+  "match": 1.0
+ },
+ {
+  "line": "s24_03",
+  "spoken": "Find the Airline Representative’s signature.",
+  "heard": "Find the airline representative's signature.",
+  "match": 1.0
+ },
+ {
+  "line": "s24_04",
+  "spoken": "Then find the Security Representative’s signature.",
+  "heard": "then find the security representative's signature.",
+  "match": 1.0
+ },
+ {
+  "line": "s24_05",
+  "spoken": "Make sure you can see both.",
+  "heard": "Make sure you can see both.",
+  "match": 1.0
+ },
+ {
+  "line": "s25_00",
+  "spoken": "If you need to send the P D F link to an authorised person, look at the top right of the screen.",
+  "heard": "If you need to send the PDF link to an authorized person,  look at the top right of the screen.",
+  "match": 0.82
+ },
+ {
+  "line": "s25_01",
+  "spoken": "Tap the blue Share button.",
+  "heard": "Tap the blue share button.",
+  "match": 1.0
+ },
+ {
+  "line": "s26_00",
+  "spoken": "Check that access is set to Restricted.",
+  "heard": "Check that access is set to restricted.",
+  "match": 1.0
+ },
+ {
+  "line": "s26_01",
+  "spoken": "Keep it on Restricted.",
+  "heard": "Keep it unrestricted.",
+  "match": 0.5
+ },
+ {
+  "line": "s26_02",
+  "spoken": "Then tap Copy link and send the link only to an authorised person.",
+  "heard": "Then tap copy link and send the link only to an authorized person.",
+  "match": 0.92
+ },
+ {
+  "line": "s27_00",
+  "spoken": "The app saves one P D F for each case.",
+  "heard": "The app saves one PDF for each case.",
+  "match": 0.7
+ },
+ {
+  "line": "s27_01",
+  "spoken": "That P D F contains the completed checklist and both signatures.",
+  "heard": "That PDF contains the completed checklist and both signatures.",
+  "match": 0.73
+ },
+ {
+  "line": "s27_02",
+  "spoken": "Here’s where authorised staff can find it.",
+  "heard": "Here's where authorized staff can find it.",
+  "match": 0.88
+ },
+ {
+  "line": "s27_03",
+  "spoken": "In Google Drive, open My Drive.",
+  "heard": "In Google Drive, open My Drive.",
+  "match": 1.0
+ },
+ {
+  "line": "s27_04",
+  "spoken": "Then open A. A. S. E. C. Signed Forms , restricted,.",
+  "heard": "Then open A, A-S-E-C, Sign Forms Restricted.",
+  "match": 0.9
+ },
+ {
+  "line": "s27_05",
+  "spoken": "Inside that folder, open FOCA.",
+  "heard": "Inside that folder, open FOCA.",
+  "match": 1.0
+ },
+ {
+  "line": "s27_06",
+  "spoken": "The file name starts with FOCA and includes the flight number, the date, and the Record I D.",
+  "heard": "The filename starts with FOCA and includes the flight number, the date, and the record ID.",
+  "match": 0.78
+ },
+ {
+  "line": "s27_07",
+  "spoken": "If you’ve just saved the case, you can open the same file straight from the Saved screen by tapping Open the completed P D F.",
+  "heard": "If you've just saved the case, you can open the same file straight from the saved screen  by tapping open the completed PDF.",
+  "match": 0.88
+ },
+ {
+  "line": "s28_00",
+  "spoken": "The app also adds one row to the FOCA Records Google Sheet.",
+  "heard": "The app also adds one row to the Fokker Records Google Sheet.",
+  "match": 0.92
+ },
+ {
+  "line": "s28_01",
+  "spoken": "The sheet is in the same FOCA folder as the PDFs.",
+  "heard": "The sheet is in the same FOCA folder as the PDFs.",
+  "match": 1.0
+ },
+ {
+  "line": "s28_02",
+  "spoken": "Each row shows the Record I D, the date and time it was saved in Malaysia time, the flight number, the names of both representatives, and a link to the signed P D F.",
+  "heard": "Each row shows the record ID, the date and time it was saved in Malaysia time, the flight  number, the names of both representatives, and a link to the signed PDF.",
+  "match": 0.85
+ },
+ {
+  "line": "s28_03",
+  "spoken": "If an authorised person needs to find the checklist later, they can look for the Record I D in the sheet and tap the P D F link on that row.",
+  "heard": "If an authorized person needs to find the checklist later,  they can look for the record ID in the sheet  and tap the PDF link on that row.",
+  "match": 0.81
+ },
+ {
+  "line": "s28_04",
+  "spoken": "The app writes the row automatically.",
+  "heard": "The app writes the row automatically.",
+  "match": 1.0
+ },
+ {
+  "line": "s28_05",
+  "spoken": "Leave the rows as they are.",
+  "heard": "Leave the rose as they are.",
+  "match": 0.83
+ },
+ {
+  "line": "s29_00",
+  "spoken": "When you have a different case to record, tap Start a new FOCA form.",
+  "heard": "When you have a different case to record,  tap Start a new FOCA form.",
+  "match": 1.0
+ },
+ {
+  "line": "s29_01",
+  "spoken": "Enter the details for that case.",
+  "heard": "Enter the details for that case.",
+  "match": 1.0
+ },
+ {
+  "line": "s29_02",
+  "spoken": "Once you save it, it gets its own Record I D, its own signed P D F, and its own row in FOCA Records.",
+  "heard": "Once you save it, it gets its own record ID,  its own signed PDF, and its own row in Fokker records.",
+  "match": 0.75
+ },
+ {
+  "line": "s30_00",
+  "spoken": "Before you finish, ask yourself five questions.",
+  "heard": "Before you finish, ask yourself five questions.",
+  "match": 1.0
+ },
+ {
+  "line": "s30_01",
+  "spoken": "One. Are the flight details and date correct?",
+  "heard": "One are the flight details and date correct.",
+  "match": 1.0
+ },
+ {
+  "line": "s30_02",
+  "spoken": "Two. Did I choose one answer on every checklist line?",
+  "heard": "Two, did I choose one answer on every checklist line?",
+  "match": 1.0
+ },
+ {
+  "line": "s30_03",
+  "spoken": "Three. Did the Airline Representative enter their own name and I D and sign?",
+  "heard": "Three, did the airline representative enter their own name and ID and sign?",
+  "match": 0.86
+ },
+ {
+  "line": "s30_04",
+  "spoken": "Four. Did the Security Representative enter their own name and I D and sign?",
+  "heard": "Four, did the security representative enter their own name and ID and sign?",
+  "match": 0.86
+ },
+ {
+  "line": "s30_05",
+  "spoken": "Five. Did I see Saved and check both signatures in the P D F?",
+  "heard": "Five, did I see saved and check both signatures in the PDF?",
+  "match": 0.79
+ },
+ {
+  "line": "s30_06",
+  "spoken": "Let’s practise one case together.",
+  "heard": "Let's practice one case together.",
+  "match": 0.83
+ },
+ {
+  "line": "s30_07",
+  "spoken": "At each step, tell me who should be holding the phone and which button they should tap.",
+  "heard": "At each step, tell me who should be holding the phone and which button they should tap.",
+  "match": 1.0
+ },
+ {
+  "line": "s30_08",
+  "spoken": "At the end, show me where you’d find the signed P D F and where you’d find its record in Google Sheets.",
+  "heard": "At the end, show me where you'd find the signed PDF and where you'd find its record  in Google Sheets.",
+  "match": 0.92
+ }
+]
