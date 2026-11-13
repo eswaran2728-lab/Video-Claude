@@ -232,12 +232,15 @@ def main():
       .vw {{ position:absolute; inset:0; }}
       .vw video {{ position:absolute; left:0; top:0; width:1920px; height:1080px; object-fit:cover; }}
       #black {{ position:absolute; inset:0; background:#000; z-index:90; pointer-events:none; }}
+      .bar {{ position:absolute; left:0; width:1920px; height:60px; background:#000; z-index:95; pointer-events:none; }}
     </style>
   </head>
   <body>
     <div id="root" data-composition-id="main" data-start="0" data-duration="{TOTAL:.3f}" data-width="1920" data-height="1080" data-fps="30">
 {chr(10).join(vids)}
       <div id="black"></div>
+      <div class="bar" style="top:0" data-layout-ignore></div>
+      <div class="bar" style="bottom:0" data-layout-ignore></div>
 {chr(10).join(hosts)}
 {chr(10).join(audios)}
     </div>

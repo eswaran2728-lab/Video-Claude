@@ -1,0 +1,102 @@
+{
+ "period": {
+  "shots": [
+   "2A",
+   "2B",
+   "2C",
+   "2D",
+   "3A",
+   "3B",
+   "3C",
+   "3D",
+   "4A",
+   "4B",
+   "4C",
+   "4D",
+   "5A",
+   "5B",
+   "5C",
+   "5D",
+   "6A",
+   "6B",
+   "6C",
+   "6D",
+   "7A",
+   "7B",
+   "7C",
+   "7D",
+   "8A",
+   "8B",
+   "8C",
+   "8D"
+  ],
+  "grading": {
+   "preset": "vintage-wash",
+   "intensity": 0.72,
+   "adjust": {
+    "temperature": 0.11,
+    "contrast": 0.06,
+    "saturation": -0.14
+   },
+   "wheels": {
+    "shadows": {
+     "hue": 32,
+     "amount": 0.08,
+     "level": 0.02
+    },
+    "highlights": {
+     "hue": 45,
+     "amount": 0.08,
+     "level": 0
+    }
+   },
+   "details": {
+    "vignette": 0.16,
+    "grain": 0.15,
+    "grainSize": 0.22,
+    "grainRoughness": 0.6
+   }
+  }
+ },
+ "present": {
+  "shots": [
+   "1A",
+   "1B",
+   "1C",
+   "1D",
+   "9A",
+   "9B",
+   "9C",
+   "9D",
+   "10A",
+   "10B",
+   "10C"
+  ],
+  "grading": {
+   "adjust": {
+    "contrast": 0.12,
+    "vibrance": 0.1,
+    "blacks": -0.05,
+    "highlights": -0.06,
+    "temperature": -0.04
+   },
+   "wheels": {
+    "shadows": {
+     "hue": 208,
+     "amount": 0.09,
+     "level": 0
+    },
+    "highlights": {
+     "hue": 38,
+     "amount": 0.05,
+     "level": 0
+    }
+   },
+   "details": {
+    "vignette": 0.12,
+    "grain": 0.04,
+    "grainSize": 0.15
+   }
+  }
+ }
+}
