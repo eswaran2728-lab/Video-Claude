@@ -1,0 +1,82 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; font-family: "Inter", sans-serif; overflow: hidden; }
+.shot, .mg { position: absolute; left: 240px; top: 70px; width: 1440px; height: 810px; overflow: hidden; border-radius: 18px; background: #fff; }
+.cam { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+.cam > img { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+.ring { position: absolute; border: 6px solid; }
+.hlb { position: absolute; border: 5px solid; border-radius: 12px; }
+.chipx { position: absolute; color: #fff; font-weight: 800; padding: 8px 20px; border-radius: 12px; white-space: nowrap; box-shadow: 0 8px 20px rgba(0,0,0,.25); }
+.mge { position: absolute; }
+.mgt { position: absolute; left: 0; top: 70px; width: 1440px; text-align: center; font-weight: 800; font-size: 54px; color: #1a1a1d; }
+.mg[style*="#1a1a1d"] .mgt { color: #fff; }
+.mgs { font-weight: 700; font-size: 32px; line-height: 1.25; color: #1a1a1d; margin-top: 14px; }
+.mgsub { font-weight: 700; font-size: 40px; color: #fff; }
+.rchip { display: inline-block; white-space: nowrap; color: #fff; font-weight: 800; letter-spacing: 1px; padding: 10px 22px; border-radius: 40px; }
+.sumc { width: 300px; height: 130px; border-radius: 22px; color: #fff; font-weight: 800; font-size: 42px; display: flex; align-items: center; justify-content: center; }
+.arrowx { width: 60px; height: 8px; background: #9aa0a6; border-radius: 4px; transform-origin: 0 50%; position: relative; }
+.arrowx:after { content: ""; position: absolute; right: -6px; top: -11px; border-left: 22px solid #9aa0a6; border-top: 15px solid transparent; border-bottom: 15px solid transparent; }
+.arrowx.w { width: 30px; }
+</style>
+  <div data-hf-id="hf-qvwq" id="root" data-composition-id="scene3" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-ixbw" id="sh43" class="shot"><div data-hf-id="hf-mx6s" id="sh43c" class="cam"><img data-hf-id="hf-8bkw" src="assets/slides/s-06.jpg" alt=""><div data-hf-id="hf-9cp7" id="hl44" class="hlb" style="left:103.4px;top:247.4px;width:743.5px;height:794.9px;border-color:#5f6368;background:#5f636822"></div></div></div>
+    <div data-hf-id="hf-yeqa" id="sh45" class="shot"><div data-hf-id="hf-b6ga" id="sh45c" class="cam"><img data-hf-id="hf-fu5x" src="assets/slides/o-1.jpg" alt=""><div data-hf-id="hf-1mc1" id="hl46" class="hlb" style="left:658.441px;top:274.855px;width:627.141px;height:114.524px;border-color:#0b57d0;background:#0b57d022"></div><div data-hf-id="hf-t998" id="hl47" class="hlb" style="left:658.441px;top:397.011px;width:627.141px;height:112.342px;border-color:#0b57d0;background:#0b57d022"></div><div data-hf-id="hf-mdwn" id="hl48" class="hlb" style="left:658.441px;top:519.167px;width:624.96px;height:184.327px;border-color:#0b57d0;background:#0b57d022"></div></div></div>
+    <div data-hf-id="hf-s5j2" id="sh49" class="shot"><div data-hf-id="hf-ktz2" id="sh49c" class="cam"><img data-hf-id="hf-oy3c" src="assets/slides/s-06.jpg" alt=""><div data-hf-id="hf-4b6z" id="hl50" class="hlb" style="left:954.0px;top:386.0px;width:892.0px;height:114.0px;border-color:#b8550d;background:#b8550d22"></div><div data-hf-id="hf-7c8l" id="hl51" class="hlb" style="left:559.0px;top:810.0px;width:262.0px;height:108.0px;border-color:#b8550d;background:#b8550d22"></div><div data-hf-id="hf-3awa" id="hl52" class="hlb" style="left:954.0px;top:516.0px;width:892.0px;height:114.0px;border-color:#b8550d;background:#b8550d22"></div><div data-hf-id="hf-rll9" id="hl53" class="hlb" style="left:139.0px;top:810.0px;width:235.0px;height:108.0px;border-color:#b8550d;background:#b8550d22"></div><div data-hf-id="hf-6lvp" id="hl54" class="hlb" style="left:954.0px;top:645.0px;width:892.0px;height:114.0px;border-color:#0b57d0;background:#0b57d022"></div><div data-hf-id="hf-avl3" id="hl55" class="hlb" style="left:139.0px;top:935.0px;width:363.0px;height:106.0px;border-color:#0b57d0;background:#0b57d022"></div></div></div>
+    <div data-hf-id="hf-9p4y" id="sh56" class="shot"><div data-hf-id="hf-etza" id="sh56c" class="cam"><img data-hf-id="hf-hy95" src="assets/slides/o-1.jpg" alt=""><div data-hf-id="hf-lhgr" id="hl57" class="hlb" style="left:658.441px;top:519.167px;width:624.96px;height:184.327px;border-color:#b8550d;background:#b8550d22"></div></div></div>
+  </div>
+  <script>
+    gsap.set("#hl44",{opacity:0});
+    gsap.set("#sh43",{opacity:0});
+    gsap.set("#sh43c",{x:0.0,y:0.0,scale:0.75,transformOrigin:"0px 0px"});
+    gsap.set("#hl46",{opacity:0});
+    gsap.set("#hl47",{opacity:0});
+    gsap.set("#hl48",{opacity:0});
+    gsap.set("#sh45",{opacity:0});
+    gsap.set("#sh45c",{x:0.0,y:0.0,scale:0.75,transformOrigin:"0px 0px"});
+    gsap.set("#hl50",{opacity:0});
+    gsap.set("#hl51",{opacity:0});
+    gsap.set("#hl52",{opacity:0});
+    gsap.set("#hl53",{opacity:0});
+    gsap.set("#hl54",{opacity:0});
+    gsap.set("#hl55",{opacity:0});
+    gsap.set("#sh49",{opacity:0});
+    gsap.set("#sh49c",{x:0.0,y:0.0,scale:0.75,transformOrigin:"0px 0px"});
+    gsap.set("#hl57",{opacity:0});
+    gsap.set("#sh56",{opacity:0});
+    gsap.set("#sh56c",{x:0.0,y:0.0,scale:0.75,transformOrigin:"0px 0px"});
+    const tl = gsap.timeline({ paused: true });
+    tl.to("#hl44",{opacity:1,duration:0.35,ease:"power2.out"},0.75);
+    tl.to("#hl44",{opacity:0,duration:0.25,ease:"power2.in"},2.531);
+    tl.to("#sh43",{opacity:1,duration:0.35,ease:"power1.out"},0.0);
+    tl.set("#sh43",{opacity:0},3.131);
+    tl.to("#hl46",{opacity:1,duration:0.35,ease:"power2.out"},3.281);
+    tl.to("#hl46",{opacity:0,duration:0.25,ease:"power2.in"},5.84);
+    tl.to("#hl47",{opacity:1,duration:0.35,ease:"power2.out"},3.681);
+    tl.to("#hl47",{opacity:0,duration:0.25,ease:"power2.in"},5.84);
+    tl.to("#hl48",{opacity:1,duration:0.35,ease:"power2.out"},4.081);
+    tl.to("#hl48",{opacity:0,duration:0.25,ease:"power2.in"},5.84);
+    tl.to("#sh45",{opacity:1,duration:0.35,ease:"power1.out"},2.781);
+    tl.set("#sh45",{opacity:0},6.44);
+    tl.to("#sh45c",{x:-1050.684,y:-484.128,scale:1.822,duration:0.9,ease:"power2.inOut"},3.381);
+    tl.to("#hl50",{opacity:1,duration:0.35,ease:"power2.out"},6.95);
+    tl.to("#hl50",{opacity:0,duration:0.25,ease:"power2.in"},15.726);
+    tl.to("#hl51",{opacity:1,duration:0.35,ease:"power2.out"},6.95);
+    tl.to("#hl51",{opacity:0,duration:0.25,ease:"power2.in"},15.726);
+    tl.to("#hl52",{opacity:1,duration:0.35,ease:"power2.out"},9.701);
+    tl.to("#hl52",{opacity:0,duration:0.25,ease:"power2.in"},15.726);
+    tl.to("#hl53",{opacity:1,duration:0.35,ease:"power2.out"},9.701);
+    tl.to("#hl53",{opacity:0,duration:0.25,ease:"power2.in"},15.726);
+    tl.to("#hl54",{opacity:1,duration:0.35,ease:"power2.out"},13.166);
+    tl.to("#hl54",{opacity:0,duration:0.25,ease:"power2.in"},15.726);
+    tl.to("#hl55",{opacity:1,duration:0.35,ease:"power2.out"},13.166);
+    tl.to("#hl55",{opacity:0,duration:0.25,ease:"power2.in"},15.726);
+    tl.to("#sh49",{opacity:1,duration:0.35,ease:"power1.out"},6.09);
+    tl.set("#sh49",{opacity:0},16.326);
+    tl.to("#hl57",{opacity:1,duration:0.35,ease:"power2.out"},16.476);
+    tl.to("#hl57",{opacity:0,duration:0.25,ease:"power2.in"},21.809);
+    tl.to("#sh56",{opacity:1,duration:0.35,ease:"power1.out"},15.976);
+    tl.to("#sh56c",{x:-1263.427,y:-843.845,scale:2.043,duration:0.9,ease:"power2.inOut"},16.376);
+    tl.set({}, {}, 22.059);
+    window.__timelines["scene3"] = tl;
+  </script>
+</template>

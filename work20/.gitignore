@@ -11,3 +11,5 @@ sheets/
 src/
 __pycache__/
 **/.hyperframes/
+**/orig/
+vo/

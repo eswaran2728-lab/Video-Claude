@@ -1,0 +1,330 @@
+{
+ "total": 210.131,
+ "scenes": [
+  {
+   "title": "What changed",
+   "t0": 0.0,
+   "t1": 28.543
+  },
+  {
+   "title": "How it works",
+   "t0": 28.543,
+   "t1": 70.961
+  },
+  {
+   "title": "The paper form we used",
+   "t0": 70.961,
+   "t1": 88.209
+  },
+  {
+   "title": "Check the details",
+   "t0": 88.209,
+   "t1": 107.906
+  },
+  {
+   "title": "Sign and confirm",
+   "t0": 107.906,
+   "t1": 135.555
+  },
+  {
+   "title": "Phone back and the signed PDF",
+   "t0": 135.555,
+   "t1": 160.082
+  },
+  {
+   "title": "Remember",
+   "t0": 160.082,
+   "t1": 210.131
+  }
+ ],
+ "lines": [
+  {
+   "i": 0,
+   "text": "Security fills in the NOTOC form and hands the phone to you, the Captain.",
+   "t0": 0.5,
+   "t1": 5.434
+  },
+  {
+   "i": 1,
+   "text": "The NOTOC for firearms is now signed on a phone.",
+   "t0": 5.884,
+   "t1": 9.362
+  },
+  {
+   "i": 2,
+   "text": "Here is what changed.",
+   "t0": 10.112,
+   "t1": 11.436
+  },
+  {
+   "i": 3,
+   "text": "Before, this was a printed paper form, signed with a pen.",
+   "t0": 12.236,
+   "t1": 15.851
+  },
+  {
+   "i": 4,
+   "text": "Now it is the same form, on the Security officer\u2019s phone.",
+   "t0": 16.651,
+   "t1": 20.493
+  },
+  {
+   "i": 5,
+   "text": "You sign with your finger, and the signed PDF is saved automatically, in a restricted AirAsia folder.",
+   "t0": 20.943,
+   "t1": 28.193
+  },
+  {
+   "i": 6,
+   "text": "Every form works in four steps.",
+   "t0": 28.993,
+   "t1": 31.012
+  },
+  {
+   "i": 7,
+   "text": "Security fills the form, and hands you the phone.",
+   "t0": 31.462,
+   "t1": 34.574
+  },
+  {
+   "i": 8,
+   "text": "You check, type your name and ID, and sign.",
+   "t0": 35.024,
+   "t1": 37.689
+  },
+  {
+   "i": 9,
+   "text": "Then the phone goes back, and Security signs and saves.",
+   "t0": 38.489,
+   "t1": 41.817
+  },
+  {
+   "i": 10,
+   "text": "Blue is Security.",
+   "t0": 42.267,
+   "t1": 43.563
+  },
+  {
+   "i": 11,
+   "text": "Orange is you.",
+   "t0": 44.013,
+   "t1": 45.077
+  },
+  {
+   "i": 12,
+   "text": "You need nothing to install, and no account.",
+   "t0": 45.827,
+   "t1": 48.565
+  },
+  {
+   "i": 13,
+   "text": "Security brings the phone.",
+   "t0": 49.015,
+   "t1": 50.712
+  },
+  {
+   "i": 14,
+   "text": "Have your own name and ID or staff number ready.",
+   "t0": 51.162,
+   "t1": 54.322
+  },
+  {
+   "i": 15,
+   "text": "Read the form before you sign, and if it is wrong, say so.",
+   "t0": 55.122,
+   "t1": 58.72
+  },
+  {
+   "i": 16,
+   "text": "Sign only for yourself.",
+   "t0": 59.52,
+   "t1": 61.137
+  },
+  {
+   "i": 17,
+   "text": "This part is for the Captain, the Pilot in Command.",
+   "t0": 61.887,
+   "t1": 65.096
+  },
+  {
+   "i": 18,
+   "text": "Security fills, the Captain checks and signs, and Security signs and saves.",
+   "t0": 65.546,
+   "t1": 70.611
+  },
+  {
+   "i": 19,
+   "text": "This is the paper form we used.",
+   "t0": 71.411,
+   "t1": 73.492
+  },
+  {
+   "i": 20,
+   "text": "Security fills the firearm details, and signs as \u2018Loaded by\u2019.",
+   "t0": 73.942,
+   "t1": 78.571
+  },
+  {
+   "i": 21,
+   "text": "The Captain checks the flight and firearm details, types their own name and ID, and signs to acknowledge.",
+   "t0": 79.821,
+   "t1": 86.859
+  },
+  {
+   "i": 22,
+   "text": "In the app, Security fills the form, then hands you the phone.",
+   "t0": 88.659,
+   "t1": 92.272
+  },
+  {
+   "i": 23,
+   "text": "Tap the orange button marked \u2018Captain has the phone\u2019.",
+   "t0": 94.172,
+   "t1": 97.085
+  },
+  {
+   "i": 24,
+   "text": "Check the flight details.",
+   "t0": 98.985,
+   "t1": 100.47
+  },
+  {
+   "i": 25,
+   "text": "Review every firearm line on the form, and check the \u2018Loaded by\u2019 name.",
+   "t0": 101.87,
+   "t1": 106.356
+  },
+  {
+   "i": 26,
+   "text": "If everything is correct, type your own name in \u2018Acknowledged by\u2019.",
+   "t0": 108.356,
+   "t1": 112.151
+  },
+  {
+   "i": 27,
+   "text": "Enter your ID number.",
+   "t0": 113.551,
+   "t1": 114.985
+  },
+  {
+   "i": 28,
+   "text": "Sign in the box with your finger.",
+   "t0": 115.785,
+   "t1": 117.508
+  },
+  {
+   "i": 29,
+   "text": "If you need to sign again, tap \u2018Clear\u2019.",
+   "t0": 119.408,
+   "t1": 121.509
+  },
+  {
+   "i": 30,
+   "text": "If anything in the form is wrong, tap \u2018Something is wrong\u2019 and give the phone back to Security for correction.",
+   "t0": 122.309,
+   "t1": 128.671
+  },
+  {
+   "i": 31,
+   "text": "When your signature is ready, tap \u2018Confirm my signature\u2019.",
+   "t0": 130.871,
+   "t1": 134.405
+  },
+  {
+   "i": 32,
+   "text": "When the screen says so, give the phone back to Security.",
+   "t0": 136.005,
+   "t1": 139.338
+  },
+  {
+   "i": 33,
+   "text": "Security signs and saves the record.",
+   "t0": 140.688,
+   "t1": 143.193
+  },
+  {
+   "i": 34,
+   "text": "This is a real Saved screen from a TEST record.",
+   "t0": 143.943,
+   "t1": 146.719
+  },
+  {
+   "i": 35,
+   "text": "The app creates the signed PDF, and the Record ID is in the PDF file name.",
+   "t0": 147.169,
+   "t1": 153.168
+  },
+  {
+   "i": 36,
+   "text": "Security staff email the PDF to you.",
+   "t0": 154.618,
+   "t1": 157.572
+  },
+  {
+   "i": 37,
+   "text": "Keep it for your records.",
+   "t0": 158.372,
+   "t1": 159.732
+  },
+  {
+   "i": 38,
+   "text": "Remember: check your name and role on screen, and read the details before signing.",
+   "t0": 160.532,
+   "t1": 165.624
+  },
+  {
+   "i": 39,
+   "text": "Type your own name and ID if asked.",
+   "t0": 166.424,
+   "t1": 168.676
+  },
+  {
+   "i": 40,
+   "text": "Sign with your finger, then Confirm, and hand the phone back to Security.",
+   "t0": 169.476,
+   "t1": 174.108
+  },
+  {
+   "i": 41,
+   "text": "Don\u2019t sign for someone else, or if the details are wrong.",
+   "t0": 174.908,
+   "t1": 178.354
+  },
+  {
+   "i": 42,
+   "text": "Don\u2019t close the app, press Back, or take photos of the screen.",
+   "t0": 179.154,
+   "t1": 182.811
+  },
+  {
+   "i": 43,
+   "text": "Your signature goes into one signed PDF per form, with every signature and a Record ID.",
+   "t0": 183.561,
+   "t1": 190.228
+  },
+  {
+   "i": 44,
+   "text": "It is saved to a restricted AirAsia folder, with a record log.",
+   "t0": 190.678,
+   "t1": 194.945
+  },
+  {
+   "i": 45,
+   "text": "A PDF copy of the signed NOTOC is shared with you by email.",
+   "t0": 195.395,
+   "t1": 199.935
+  },
+  {
+   "i": 46,
+   "text": "Have a question?",
+   "t0": 200.985,
+   "t1": 202.041
+  },
+  {
+   "i": 47,
+   "text": "Ask the Security staff on duty.",
+   "t0": 202.491,
+   "t1": 204.531
+  }
+ ]
+}

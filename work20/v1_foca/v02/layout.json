@@ -1,0 +1,336 @@
+{
+ "total": 202.236,
+ "scenes": [
+  {
+   "title": "What changed",
+   "t0": 0.0,
+   "t1": 28.181
+  },
+  {
+   "title": "How it works",
+   "t0": 28.181,
+   "t1": 66.034
+  },
+  {
+   "title": "The paper form we used",
+   "t0": 66.034,
+   "t1": 85.741
+  },
+  {
+   "title": "Check the details",
+   "t0": 85.741,
+   "t1": 111.469
+  },
+  {
+   "title": "Sign and confirm",
+   "t0": 111.469,
+   "t1": 128.967
+  },
+  {
+   "title": "Phone back and the signed PDF",
+   "t0": 128.967,
+   "t1": 151.687
+  },
+  {
+   "title": "Remember",
+   "t0": 151.687,
+   "t1": 202.236
+  }
+ ],
+ "lines": [
+  {
+   "i": 0,
+   "text": "Security has filled in the FOCA Checklist and hands you the phone.",
+   "t0": 0.5,
+   "t1": 4.502
+  },
+  {
+   "i": 1,
+   "text": "This guide is for Airline Representatives of foreign air carriers.",
+   "t0": 4.952,
+   "t1": 9.0
+  },
+  {
+   "i": 2,
+   "text": "Here is what changed.",
+   "t0": 9.75,
+   "t1": 11.074
+  },
+  {
+   "i": 3,
+   "text": "Before, this was a printed paper form, signed with a pen.",
+   "t0": 11.874,
+   "t1": 15.489
+  },
+  {
+   "i": 4,
+   "text": "Now it is the same form, on the Security officer\u2019s phone.",
+   "t0": 16.289,
+   "t1": 20.13
+  },
+  {
+   "i": 5,
+   "text": "You sign with your finger, and the signed PDF is saved automatically, in a restricted AirAsia folder.",
+   "t0": 20.58,
+   "t1": 27.831
+  },
+  {
+   "i": 6,
+   "text": "Every form works in four steps.",
+   "t0": 28.631,
+   "t1": 30.65
+  },
+  {
+   "i": 7,
+   "text": "Security fills the form, and hands you the phone.",
+   "t0": 31.1,
+   "t1": 34.212
+  },
+  {
+   "i": 8,
+   "text": "You check, type your name and ID, and sign.",
+   "t0": 34.662,
+   "t1": 37.327
+  },
+  {
+   "i": 9,
+   "text": "Then the phone goes back, and Security signs and saves.",
+   "t0": 38.127,
+   "t1": 41.454
+  },
+  {
+   "i": 10,
+   "text": "Blue is Security.",
+   "t0": 41.904,
+   "t1": 43.201
+  },
+  {
+   "i": 11,
+   "text": "Orange is you.",
+   "t0": 43.651,
+   "t1": 44.715
+  },
+  {
+   "i": 12,
+   "text": "You need nothing to install, and no account.",
+   "t0": 45.465,
+   "t1": 48.203
+  },
+  {
+   "i": 13,
+   "text": "Security brings the phone.",
+   "t0": 48.653,
+   "t1": 50.35
+  },
+  {
+   "i": 14,
+   "text": "Have your own name and ID or staff number ready.",
+   "t0": 50.8,
+   "t1": 53.96
+  },
+  {
+   "i": 15,
+   "text": "Read the form before you sign, and if it is wrong, say so.",
+   "t0": 54.76,
+   "t1": 58.357
+  },
+  {
+   "i": 16,
+   "text": "Sign only for yourself.",
+   "t0": 59.157,
+   "t1": 60.775
+  },
+  {
+   "i": 17,
+   "text": "This part is for the Airline Representative of a foreign carrier.",
+   "t0": 61.525,
+   "t1": 65.684
+  },
+  {
+   "i": 18,
+   "text": "This is the paper form we used.",
+   "t0": 66.484,
+   "t1": 68.565
+  },
+  {
+   "i": 19,
+   "text": "Security fills pages one and two.",
+   "t0": 69.015,
+   "t1": 71.29
+  },
+  {
+   "i": 20,
+   "text": "On page two, the Security Rep signs, and the Airline Representative signs.",
+   "t0": 73.14,
+   "t1": 78.356
+  },
+  {
+   "i": 21,
+   "text": "The app shows the same form, so your job is the same: check the checklist and sign it.",
+   "t0": 79.406,
+   "t1": 84.791
+  },
+  {
+   "i": 22,
+   "text": "In the app, Security fills the form, then hands you the phone.",
+   "t0": 86.191,
+   "t1": 89.803
+  },
+  {
+   "i": 23,
+   "text": "Tap the orange button to show that you have the phone.",
+   "t0": 91.703,
+   "t1": 94.728
+  },
+  {
+   "i": 24,
+   "text": "Read the flight details.",
+   "t0": 96.628,
+   "t1": 98.137
+  },
+  {
+   "i": 25,
+   "text": "Then check each line that Security has ticked.",
+   "t0": 99.737,
+   "t1": 102.593
+  },
+  {
+   "i": 26,
+   "text": "If anything is wrong, tap \u2018Something is wrong\u2019.",
+   "t0": 104.593,
+   "t1": 107.296
+  },
+  {
+   "i": 27,
+   "text": "The phone goes back to Security.",
+   "t0": 107.746,
+   "t1": 109.719
+  },
+  {
+   "i": 28,
+   "text": "If everything is correct, type your own name and ID or staff number.",
+   "t0": 111.919,
+   "t1": 116.32
+  },
+  {
+   "i": 29,
+   "text": "Sign in the box with your finger.",
+   "t0": 117.72,
+   "t1": 119.443
+  },
+  {
+   "i": 30,
+   "text": "Not happy with the signature?",
+   "t0": 120.993,
+   "t1": 122.688
+  },
+  {
+   "i": 31,
+   "text": "Tap \u2018Clear\u2019 and sign again.",
+   "t0": 123.488,
+   "t1": 125.018
+  },
+  {
+   "i": 32,
+   "text": "Then tap \u2018Confirm my signature\u2019.",
+   "t0": 125.818,
+   "t1": 127.817
+  },
+  {
+   "i": 33,
+   "text": "When the screen says so, give the phone back to Security.",
+   "t0": 129.417,
+   "t1": 132.749
+  },
+  {
+   "i": 34,
+   "text": "Security signs and saves the record.",
+   "t0": 134.099,
+   "t1": 136.605
+  },
+  {
+   "i": 35,
+   "text": "Security saves, and the app creates the signed PDF.",
+   "t0": 137.355,
+   "t1": 141.168
+  },
+  {
+   "i": 36,
+   "text": "This is a real signed PDF from a TEST record.",
+   "t0": 141.618,
+   "t1": 144.773
+  },
+  {
+   "i": 37,
+   "text": "Security staff email the PDF to you.",
+   "t0": 146.223,
+   "t1": 149.178
+  },
+  {
+   "i": 38,
+   "text": "Keep it for your records.",
+   "t0": 149.978,
+   "t1": 151.337
+  },
+  {
+   "i": 39,
+   "text": "Remember: check your name and role on screen, and read the details before signing.",
+   "t0": 152.137,
+   "t1": 157.23
+  },
+  {
+   "i": 40,
+   "text": "Type your own name and ID if asked.",
+   "t0": 158.03,
+   "t1": 160.282
+  },
+  {
+   "i": 41,
+   "text": "Sign with your finger, then Confirm, and hand the phone back to Security.",
+   "t0": 161.082,
+   "t1": 165.713
+  },
+  {
+   "i": 42,
+   "text": "Don\u2019t sign for someone else, or if the details are wrong.",
+   "t0": 166.513,
+   "t1": 169.959
+  },
+  {
+   "i": 43,
+   "text": "Don\u2019t close the app, press Back, or take photos of the screen.",
+   "t0": 170.759,
+   "t1": 174.417
+  },
+  {
+   "i": 44,
+   "text": "Your signature goes into one signed PDF per form, with every signature and a Record ID.",
+   "t0": 175.167,
+   "t1": 181.834
+  },
+  {
+   "i": 45,
+   "text": "It is saved to a restricted AirAsia folder, with a record log.",
+   "t0": 182.284,
+   "t1": 186.551
+  },
+  {
+   "i": 46,
+   "text": "A PDF copy of the signed FOCA Checklist is shared with you by email.",
+   "t0": 187.001,
+   "t1": 192.04
+  },
+  {
+   "i": 47,
+   "text": "Have a question?",
+   "t0": 193.09,
+   "t1": 194.146
+  },
+  {
+   "i": 48,
+   "text": "Ask the Security staff on duty.",
+   "t0": 194.596,
+   "t1": 196.636
+  }
+ ]
+}

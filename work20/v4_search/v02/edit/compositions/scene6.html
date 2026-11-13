@@ -1,0 +1,57 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; font-family: "Inter", sans-serif; overflow: hidden; }
+.shot, .mg { position: absolute; left: 240px; top: 70px; width: 1440px; height: 810px; overflow: hidden; border-radius: 18px; background: #fff; }
+.cam { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+.cam > img { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+.ring { position: absolute; border: 6px solid; }
+.hlb { position: absolute; border: 5px solid; border-radius: 12px; }
+.chipx { position: absolute; color: #fff; font-weight: 800; padding: 8px 20px; border-radius: 12px; white-space: nowrap; box-shadow: 0 8px 20px rgba(0,0,0,.25); }
+.mge { position: absolute; }
+.mgt { position: absolute; left: 0; top: 70px; width: 1440px; text-align: center; font-weight: 800; font-size: 54px; color: #1a1a1d; }
+.mg[style*="#1a1a1d"] .mgt { color: #fff; }
+.mgs { font-weight: 700; font-size: 32px; line-height: 1.25; color: #1a1a1d; margin-top: 14px; }
+.mgsub { font-weight: 700; font-size: 40px; color: #fff; }
+.rchip { display: inline-block; white-space: nowrap; color: #fff; font-weight: 800; letter-spacing: 1px; padding: 10px 22px; border-radius: 40px; }
+.sumc { width: 300px; height: 130px; border-radius: 22px; color: #fff; font-weight: 800; font-size: 42px; display: flex; align-items: center; justify-content: center; }
+.arrowx { width: 60px; height: 8px; background: #9aa0a6; border-radius: 4px; transform-origin: 0 50%; position: relative; }
+.arrowx:after { content: ""; position: absolute; right: -6px; top: -11px; border-left: 22px solid #9aa0a6; border-top: 15px solid transparent; border-bottom: 15px solid transparent; }
+.arrowx.w { width: 30px; }
+</style>
+  <div data-hf-id="hf-zrbt" id="root" data-composition-id="scene6" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-7cp5" id="sh99" class="shot"><div data-hf-id="hf-ywlj" id="sh99c" class="cam"><img data-hf-id="hf-bjko" src="assets/slides/s-11.jpg" alt=""><div data-hf-id="hf-vygy" id="hl100" class="hlb" style="left:148.0px;top:555.0px;width:510.0px;height:186.0px;border-color:#ffb000;background:#ffb00022"></div><div data-hf-id="hf-d8fj" id="rg101" class="ring" style="left:151.0px;top:677.0px;width:488.0px;height:60.0px;border-color:#ffb000;border-radius:14px;box-shadow:0 0 0 7px #ffb00055, 0 0 26px #ffb000"></div><div data-hf-id="hf-f45b" id="hl102" class="hlb" style="left:772.0px;top:714.0px;width:1063.0px;height:206.0px;border-color:#ffb000;background:#ffb00022"></div><div data-hf-id="hf-4stf" id="hl103" class="hlb" style="left:771.6px;top:267.6px;width:1063.2px;height:130.1px;border-color:#ffb000;background:#ffb00022"></div><div data-hf-id="hf-7ogn" id="hl104" class="hlb" style="left:771.6px;top:404.4px;width:1063.2px;height:130.1px;border-color:#ffb000;background:#ffb00022"></div><div data-hf-id="hf-rvoi" id="hl105" class="hlb" style="left:771.6px;top:541.2px;width:1063.2px;height:130.1px;border-color:#ffb000;background:#ffb00022"></div></div></div>
+  </div>
+  <script>
+    gsap.set("#hl100",{opacity:0});
+    gsap.set("#rg101",{opacity:0,scale:1.3,transformOrigin:"50% 50%"});
+    gsap.set("#hl102",{opacity:0});
+    gsap.set("#hl103",{opacity:0});
+    gsap.set("#hl104",{opacity:0});
+    gsap.set("#hl105",{opacity:0});
+    gsap.set("#sh99",{opacity:0});
+    gsap.set("#sh99c",{x:0.0,y:0.0,scale:0.75,transformOrigin:"0px 0px"});
+    const tl = gsap.timeline({ paused: true });
+    tl.to("#hl100",{opacity:1,duration:0.35,ease:"power2.out"},1.05);
+    tl.to("#hl100",{opacity:0,duration:0.25,ease:"power2.in"},6.206);
+    tl.to("#rg101",{opacity:1,scale:1,duration:0.35,ease:"back.out(1.8)"},6.456);
+    tl.to("#rg101",{scale:1.07,duration:0.3,ease:"sine.inOut"},6.906);
+    tl.to("#rg101",{scale:1,duration:0.3,ease:"sine.inOut"},7.206);
+    tl.to("#rg101",{scale:1.07,duration:0.3,ease:"sine.inOut"},7.606);
+    tl.to("#rg101",{scale:1,duration:0.3,ease:"sine.inOut"},7.906);
+    tl.to("#rg101",{opacity:0,duration:0.25,ease:"power2.in"},8.356);
+    tl.to("#hl102",{opacity:1,duration:0.35,ease:"power2.out"},8.136);
+    tl.to("#hl102",{opacity:0,duration:0.25,ease:"power2.in"},9.914);
+    tl.to("#hl103",{opacity:1,duration:0.35,ease:"power2.out"},10.064);
+    tl.to("#hl103",{opacity:0,duration:0.25,ease:"power2.in"},16.349);
+    tl.to("#hl104",{opacity:1,duration:0.35,ease:"power2.out"},10.364);
+    tl.to("#hl104",{opacity:0,duration:0.25,ease:"power2.in"},16.349);
+    tl.to("#hl105",{opacity:1,duration:0.35,ease:"power2.out"},14.689);
+    tl.to("#hl105",{opacity:0,duration:0.25,ease:"power2.in"},16.349);
+    tl.to("#sh99",{opacity:1,duration:0.35,ease:"power1.out"},0.0);
+    tl.to("#sh99c",{x:-176.386,y:-1036.335,scale:2.224,duration:0.9,ease:"power2.inOut"},0.75);
+    tl.to("#sh99c",{x:-903.597,y:-535.212,scale:1.246,duration:0.9,ease:"power2.inOut"},7.836);
+    tl.to("#sh99c",{x:0.0,y:0.0,scale:0.75,duration:0.9,ease:"power2.inOut"},9.964);
+    tl.set({}, {}, 16.599);
+    window.__timelines["scene6"] = tl;
+  </script>
+</template>

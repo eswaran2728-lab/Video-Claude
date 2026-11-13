@@ -1,0 +1,78 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; font-family: "Inter", sans-serif; overflow: hidden; }
+.shot, .mg { position: absolute; left: 240px; top: 70px; width: 1440px; height: 810px; overflow: hidden; border-radius: 18px; background: #fff; }
+.cam { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+.cam > img { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+.ring { position: absolute; border: 6px solid; }
+.hlb { position: absolute; border: 5px solid; border-radius: 12px; }
+.chipx { position: absolute; color: #fff; font-weight: 800; padding: 8px 20px; border-radius: 12px; white-space: nowrap; box-shadow: 0 8px 20px rgba(0,0,0,.25); }
+.mge { position: absolute; }
+.mgt { position: absolute; left: 0; top: 70px; width: 1440px; text-align: center; font-weight: 800; font-size: 54px; color: #1a1a1d; }
+.mg[style*="#1a1a1d"] .mgt { color: #fff; }
+.mgs { font-weight: 700; font-size: 32px; line-height: 1.25; color: #1a1a1d; margin-top: 14px; }
+.mgsub { font-weight: 700; font-size: 40px; color: #fff; }
+.rchip { display: inline-block; white-space: nowrap; color: #fff; font-weight: 800; letter-spacing: 1px; padding: 10px 22px; border-radius: 40px; }
+.sumc { width: 300px; height: 130px; border-radius: 22px; color: #fff; font-weight: 800; font-size: 42px; display: flex; align-items: center; justify-content: center; }
+.arrowx { width: 60px; height: 8px; background: #9aa0a6; border-radius: 4px; transform-origin: 0 50%; position: relative; }
+.arrowx:after { content: ""; position: absolute; right: -6px; top: -11px; border-left: 22px solid #9aa0a6; border-top: 15px solid transparent; border-bottom: 15px solid transparent; }
+.arrowx.w { width: 30px; }
+</style>
+  <div data-hf-id="hf-qvwq" id="root" data-composition-id="scene3" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-jl4m" id="sh41" class="shot"><div data-hf-id="hf-77bq" id="sh41c" class="cam"><img data-hf-id="hf-8bkw" src="assets/slides/s-06.jpg" alt=""><div data-hf-id="hf-mc1z" id="hl42" class="hlb" style="left:89.0px;top:341.0px;width:851.5px;height:609.0px;border-color:#5f6368;background:#5f636822"></div><div data-hf-id="hf-6a3b" id="hl43" class="hlb" style="left:989.0px;top:341.0px;width:851.5px;height:609.0px;border-color:#5f6368;background:#5f636822"></div></div></div>
+    <div data-hf-id="hf-6etf" id="sh44" class="shot"><div data-hf-id="hf-nf59" id="sh44c" class="cam"><img data-hf-id="hf-fu5x" src="assets/slides/o-1.jpg" alt=""><div data-hf-id="hf-9hsp" id="hl45" class="hlb" style="left:352.754px;top:298.426px;width:1214.539px;height:130.404px;border-color:#0b57d0;background:#0b57d022"></div><div data-hf-id="hf-xdi0" id="hl46" class="hlb" style="left:352.754px;top:448.281px;width:1214.539px;height:425.18px;border-color:#0b57d0;background:#0b57d022"></div></div></div>
+    <div data-hf-id="hf-vjbs" id="sh47" class="shot"><div data-hf-id="hf-wkpk" id="sh47c" class="cam"><img data-hf-id="hf-71cq" src="assets/slides/o-2.jpg" alt=""><div data-hf-id="hf-f0he" id="hl48" class="hlb" style="left:352.754px;top:337.277px;width:1254.624px;height:232.774px;border-color:#0b57d0;background:#0b57d022"></div><div data-hf-id="hf-2174" id="hl49" class="hlb" style="left:346.587px;top:683.855px;width:215.507px;height:70.585px;border-color:#0b57d0;background:#0b57d022"></div><div data-hf-id="hf-888r" id="hl50" class="hlb" style="left:1274.701px;top:683.855px;width:212.423px;height:70.585px;border-color:#b8550d;background:#b8550d22"></div></div></div>
+    <div data-hf-id="hf-uvja" id="sh52" class="shot"><div data-hf-id="hf-ohi2" id="sh52c" class="cam"><img data-hf-id="hf-oy3c" src="assets/slides/s-06.jpg" alt=""><div data-hf-id="hf-89zs" id="hl53" class="hlb" style="left:1584.0px;top:710.0px;width:228.0px;height:116.0px;border-color:#b8550d;background:#b8550d22"></div><div data-hf-id="hf-56jc" id="hl54" class="hlb" style="left:606.0px;top:987.0px;width:814.0px;height:75.0px;border-color:#b8550d;background:#b8550d22"></div><div data-hf-id="hf-hc5b" id="cp55" class="chipx" style="left:1430.0px;top:836.0px;background:#b8550d;font-size:38px">Airline Rep signs here</div></div></div>
+  </div>
+  <script>
+    gsap.set("#hl42",{opacity:0});
+    gsap.set("#hl43",{opacity:0});
+    gsap.set("#sh41",{opacity:0});
+    gsap.set("#sh41c",{x:0.0,y:0.0,scale:0.75,transformOrigin:"0px 0px"});
+    gsap.set("#hl45",{opacity:0});
+    gsap.set("#hl46",{opacity:0});
+    gsap.set("#sh44",{opacity:0});
+    gsap.set("#sh44c",{x:0.0,y:0.0,scale:0.75,transformOrigin:"0px 0px"});
+    gsap.set("#hl48",{opacity:0});
+    gsap.set("#hl49",{opacity:0});
+    gsap.set("#hl50",{opacity:0});
+    gsap.set("#sh47",{opacity:0});
+    gsap.set("#sh47c",{x:0.0,y:0.0,scale:0.75,transformOrigin:"0px 0px"});
+    gsap.set("#hl53",{opacity:0});
+    gsap.set("#hl54",{opacity:0});
+    gsap.set("#cp55",{opacity:0,x:-30});
+    gsap.set("#sh52",{opacity:0});
+    gsap.set("#sh52c",{x:0.0,y:0.0,scale:0.75,transformOrigin:"0px 0px"});
+    const tl = gsap.timeline({ paused: true });
+    tl.to("#hl42",{opacity:1,duration:0.35,ease:"power2.out"},0.75);
+    tl.to("#hl42",{opacity:0,duration:0.25,ease:"power2.in"},2.531);
+    tl.to("#hl43",{opacity:1,duration:0.35,ease:"power2.out"},0.75);
+    tl.to("#hl43",{opacity:0,duration:0.25,ease:"power2.in"},2.531);
+    tl.to("#sh41",{opacity:1,duration:0.35,ease:"power1.out"},0.0);
+    tl.set("#sh41",{opacity:0},3.131);
+    tl.to("#hl45",{opacity:1,duration:0.35,ease:"power2.out"},3.201);
+    tl.to("#hl45",{opacity:0,duration:0.25,ease:"power2.in"},5.606);
+    tl.to("#hl46",{opacity:1,duration:0.35,ease:"power2.out"},3.701);
+    tl.to("#hl46",{opacity:0,duration:0.25,ease:"power2.in"},5.606);
+    tl.to("#sh44",{opacity:1,duration:0.35,ease:"power1.out"},2.781);
+    tl.set("#sh44",{opacity:0},6.206);
+    tl.to("#hl48",{opacity:1,duration:0.35,ease:"power2.out"},6.156);
+    tl.to("#hl48",{opacity:0,duration:0.25,ease:"power2.in"},7.056);
+    tl.to("#hl49",{opacity:1,duration:0.35,ease:"power2.out"},8.406);
+    tl.to("#hl49",{opacity:0,duration:0.25,ease:"power2.in"},12.922);
+    tl.to("#hl50",{opacity:1,duration:0.35,ease:"power2.out"},10.286);
+    tl.to("#hl50",{opacity:0,duration:0.25,ease:"power2.in"},12.922);
+    tl.to("#sh47",{opacity:1,duration:0.35,ease:"power1.out"},5.856);
+    tl.set("#sh47",{opacity:0},13.522);
+    tl.to("#sh47c",{x:-323.047,y:-333.073,scale:1.08,duration:0.9,ease:"power2.inOut"},7.306);
+    tl.to("#hl53",{opacity:1,duration:0.35,ease:"power2.out"},13.572);
+    tl.to("#hl53",{opacity:0,duration:0.25,ease:"power2.in"},19.457);
+    tl.to("#hl54",{opacity:1,duration:0.35,ease:"power2.out"},13.572);
+    tl.to("#hl54",{opacity:0,duration:0.25,ease:"power2.in"},19.457);
+    tl.to("#cp55",{opacity:1,x:0,duration:0.4,ease:"back.out(1.6)"},13.772);
+    tl.to("#cp55",{opacity:0,duration:0.25,ease:"power2.in"},19.457);
+    tl.to("#sh52",{opacity:1,duration:0.35,ease:"power1.out"},13.172);
+    tl.set({}, {}, 19.707);
+    window.__timelines["scene3"] = tl;
+  </script>
+</template>

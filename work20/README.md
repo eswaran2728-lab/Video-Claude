@@ -1,3 +1,60 @@
+# v02 (current): every slide explained, with the original paper forms
+
+You asked for every slide to be explained with motion graphics, each video between 2 and 4 minutes, showing the past
+(original paper) form and the current app. v01 is kept unchanged above and in `vN/edit`.
+
+| # | Video | v02 project | Runtime | Slides covered | Preview | SRT |
+|---|---|---|---|---|---|---|
+| 1 | FOCA Checklist | `v1_foca/v02/edit` | 3:22 | all 14 | `v1_foca/v02/PREVIEW_01_FOCA_Checklist_Partner_Guide_v02.mp4` | `v1_foca/v02/01_FOCA_Checklist_Partner_Guide.srt` |
+| 2 | NOTOC (Firearm) | `v2_notoc/v02/edit` | 3:30 | all 14 | `v2_notoc/v02/PREVIEW_02_NOTOC_Partner_Guide_v02.mp4` | `v2_notoc/v02/02_NOTOC_Partner_Guide.srt` |
+| 3 | Acknowledgement of Receipt | `v3_aor/v02/edit` | 3:55 | all 21 | `v3_aor/v02/PREVIEW_03_Acknowledgement_of_Receipt_Partner_Guide_v02.mp4` | `v3_aor/v02/03_Acknowledgement_of_Receipt_Partner_Guide.srt` |
+| 4 | Search List | `v4_search/v02/edit` | 3:23 | all 13 | `v4_search/v02/PREVIEW_04_Search_List_Partner_Guide_v02.mp4` | `v4_search/v02/04_Search_List_Partner_Guide.srt` |
+
+**What is new in v02**
+- **Every slide, in deck order.** The voiceover (`scripts20.VIDEOS2`) is one block per slide, written only from what
+  each slide says. Your original opening lines are kept.
+  - Newly covered: title, What changed, How it works (four steps, colour key), What you need, This part is for, the
+    DO/DON'T slide, and Where your signature goes.
+- **Past form → current app.**
+  - The original forms you supplied (`vN/orig/original_form.pdf`, blank templates, no personal data) are shown in full,
+    with zooms on each section. Stage label: "ORIGINAL PAPER FORM".
+  - FOCA pages 1–2: flight information, checklist, additional services, Security / Airline Representative signature
+    lines.
+  - NOTOC: flight row, firearm table, "To be filled up by Security Personnel" and "To be filled up by Captain".
+  - Acknowledgement of Receipt: name line, items table, Recipient / Handed over by / Witness blocks.
+  - Search List: search conducted on, in the presence of, items found.
+  - A BEFORE → NOW card puts the original paper form next to the app on Security's phone.
+- **Motion graphics on every slide.**
+  - Highlights land on the spoken word.
+  - The phone-holder pill changes as the phone moves.
+  - Handover animations each time the phone changes hands.
+  - The two-situations animation (Acknowledgement of Receipt).
+  - The camera moves from the DO column to the DON'T column.
+  - The "Where your signature goes" flow and the "Your part" summary.
+- **Voice:** same Kokoro voice with slightly shorter pauses (about 130–140 wpm while speaking; overall rate including
+  holds is about 128–132 wpm).
+  - Every line was checked by transcription.
+  - "Handed over by, you." is voiced as "Handed over by. You." for clarity; the caption keeps the slide wording.
+
+**Asset notes (unchanged from v01)**
+- FOCA: no "Something is wrong" button in the deck screenshots, so a plain-text callout is used.
+- NOTOC / Acknowledgement of Receipt / Search List: a Saved screen plus an example filename, labelled as such; no signed
+  PDF view in those decks.
+- Acknowledgement of Receipt and Search List: the role, items and search details are not on the app screenshots. They
+  are shown on the original paper form, with "scroll up" callouts.
+- No email screenshot exists in any deck, so the email step is animated.
+
+**Checks:**
+- `hyperframes check`: 0 errors on all four. The only warnings: a slide shown twice in one scene (intended).
+- Every sentence was snapshotted and reviewed (`vN/v02/sheets/`).
+- Previews are 1920x1080, 30 fps, −14 LUFS, peak −2 dBFS, no decode errors.
+
+**Rebuild:** `VER=v02 python3 vo20.py vN && VER=v02 python3 build20.py vN`, then `./render_previews_v02.sh`.
+- Shared slide treatments: `common20.py`. Per-video plans: `plan2_vN_*.py`. Original-form stage images: `slides/o-N.jpg`
+  (`orig20.json`).
+
+---
+
 # AirAsia Security: four Partner Briefing guide videos (HyperFrames)
 
 Four separate videos for signers who are handed Security's phone. Each is 1920x1080, 30 fps, and has its own editable

@@ -7,13 +7,16 @@
 import json, sys, html, re, os, shutil, importlib, subprocess
 import numpy as np, soundfile as sf, scipy.signal as ss
 import scripts20
-v = sys.argv[1]; D = scripts20.VIDEOS[v]; PL = importlib.import_module(f"plan_{v}")
-T = json.load(open(f"{v}/timing.json")); R = lambda x: round(float(x), 3); esc = html.escape
+v = sys.argv[1]; VER = os.environ.get("VER", "v01"); D = (scripts20.VIDEOS2 if VER == "v02" else scripts20.VIDEOS)[v]; O = v if VER == "v01" else f"{v}/{VER}"
+PL = importlib.import_module(f"plan_{v}" if VER == "v01" else f"plan2_{v}")
+T = json.load(open(f"{O}/timing.json")); R = lambda x: round(float(x), 3); esc = html.escape
 BLUE, ORANGE, INK, BG, AMBER, GREEN, RED = "#0b57d0", "#b8550d", "#1a1a1d", "#16161a", "#ffb000", "#188038", "#c8102e"
 SX, SY, SW, SH = 240, 70, 1440, 810; BASE = SW / 1920
 
 # ---------- layout with read holds ----------
 HOLDS = getattr(PL, "HOLDS", {}); END = getattr(PL, "END_HOLD", 0.0)
+for (n_, j_), sec_ in getattr(PL, "HOLDS_S", {}).items():                 # v02 plans give holds per (slide, sentence on that slide)
+    HOLDS = dict(HOLDS); HOLDS[[l for l in T["lines"] if l.get("slide") == n_][j_]["i"]] = sec_
 shift, acc = {}, 0.0
 for l in T["lines"]: shift[l["i"]] = acc; acc += HOLDS.get(l["i"], 0.0)
 LINES = []
@@ -38,6 +41,11 @@ class Plan:
         hits = [w for w in LINES[i]["words"] if w["w"] == word.lower()]
         return R((hits[k]["t"] if len(hits) > k else LINES[i]["t0"]) + d)
     def S(s, k): return SCN[k]
+    def sl(s, n, j=0): return [l["i"] for l in LINES if l.get("slide") == n][j]          # global line index of the j-th sentence on slide n
+    def nsl(s, n): return sum(1 for l in LINES if l.get("slide") == n)
+    def A(s, n, d=0.0): return s.L(s.sl(n), d)                                         # first sentence on slide n starts
+    def Z(s, n, d=0.0): return s.E(s.sl(n, -1), d)                                     # last sentence on slide n ends
+    def Wn(s, n, j, word, k=0, d=0.0): return s.W(s.sl(n, j), word, k, d)
     def Se(s, k): return SCN_END[k]
 
 
@@ -76,14 +84,14 @@ class Shot:
         INIT(s.B, f"#{rid}", {"opacity": 0, "scale": 1.3, "transformOrigin": "50% 50%"})
         J(s.B, f"#{rid}", t, 0.35, {"opacity": 1, "scale": 1}, "back.out(1.8)", s.base)
         for k in range(2): J(s.B, f"#{rid}", t + 0.45 + 0.7 * k, 0.3, {"scale": 1.07}, "sine.inOut", s.base); J(s.B, f"#{rid}", t + 0.75 + 0.7 * k, 0.3, {"scale": 1}, "sine.inOut", s.base)
-        if t_end: J(s.B, f"#{rid}", t_end - 0.25, 0.25, {"opacity": 0}, "power2.in", s.base)
+        if t_end: J(s.B, f"#{rid}", max(t_end - 0.25, t + 1.9), 0.25, {"opacity": 0}, "power2.in", s.base)
         if sfx: CUES.append((R(t), "curated/ui-click.wav", -15))
         return s
     def hl(s, t, rect, t_end=None, color=AMBER):
         x, y, w, h = rect; hid = uid("hl")
         s.inner.append(f'<div id="{hid}" class="hlb" style="left:{R(x - 6)}px;top:{R(y - 6)}px;width:{R(w + 12)}px;height:{R(h + 12)}px;border-color:{color};background:{color}22"></div>')
         INIT(s.B, f"#{hid}", {"opacity": 0}); J(s.B, f"#{hid}", t, 0.35, {"opacity": 1}, "power2.out", s.base)
-        if t_end: J(s.B, f"#{hid}", t_end - 0.25, 0.25, {"opacity": 0}, "power2.in", s.base)
+        if t_end: J(s.B, f"#{hid}", max(t_end - 0.25, t + 0.37), 0.25, {"opacity": 0}, "power2.in", s.base)
         return s
     def chip(s, t, x, y, text, color, t_end=None, size=40):
         cid = uid("cp")
@@ -93,13 +101,14 @@ class Shot:
         CUES.append((R(t), "curated/ui-pop.wav", -17)); return s
     def done(s):
         cid = f"{s.id}c"
-        s.B["els"].append(f'<div id="{s.id}" class="shot"><div id="{cid}" class="cam"><img src="assets/slides/s-{s.slide:02d}.jpg" alt="">{"".join(s.inner)}</div></div>')
+        s.B["els"].append(f'<div id="{s.id}" class="shot"><div id="{cid}" class="cam"><img src="assets/slides/{s.slide if isinstance(s.slide, str) else f"s-{s.slide:02d}"}.jpg" alt="">{"".join(s.inner)}</div></div>')
         INIT(s.B, f"#{s.id}", {"opacity": 0}); INIT(s.B, f"#{cid}", dict(cam_tf(960, 540, 1920), transformOrigin="0px 0px"))
         J(s.B, f"#{s.id}", s.t0, s.fade, {"opacity": 1}, "power1.out", s.base)
         if s.t1 < SCN_END[s.k] - 1e-3: SET(s.B, f"#{s.id}", s.t1 + 0.35, {"opacity": 0}, s.base)
+        busy = s.t0
         for t, cx, cy, w, d in sorted(s.cams):
             if t <= s.t0 + 1e-3: SET(s.B, f"#{cid}", s.t0, cam_tf(cx, cy, w), s.base)
-            else: J(s.B, f"#{cid}", t, d, cam_tf(cx, cy, w), "power2.inOut", s.base)
+            else: t = max(t, busy + 0.02); J(s.B, f"#{cid}", t, d, cam_tf(cx, cy, w), "power2.inOut", s.base); busy = t + d
         CUES.append((R(s.t0), "curated/zoom-swish.wav", -22))
 
 
@@ -171,6 +180,23 @@ def summary(t0, t1, steps, sub=None, title="Your part"):
     c.done(); CUES.append((R(t0 + 0.3 + 0.55 * n), "clean-ding.wav", -15)); return c
 
 
+def before_now(t0, t1, paper, t_now, t_pdf=None, title="From paper to one phone"):
+    """BEFORE: the real paper form from the deck  ->  NOW: the real app screen on Security's phone"""
+    c = Card(t0, t1, title)
+    c.el(f'<div style="width:640px;text-align:center"><span class="rchip" style="background:#5f6368;font-size:30px">BEFORE</span></div>', 40, 160, t0 + 0.1)
+    c.el(f'<div style="width:640px;height:400px;display:flex;align-items:center;justify-content:center"><img src="assets/media/{paper}" style="max-width:600px;max-height:400px;'
+         f'border:2px solid #c9cbd1;border-radius:8px;box-shadow:0 10px 26px rgba(0,0,0,.18)"></div>', 40, 225, t0 + 0.2)
+    c.el('<div class="mgs" style="width:640px;text-align:center">Printed paper form,<br>signed with a pen</div>', 40, 640, t0 + 0.4)
+    c.el('<div class="arrowx" style="width:110px"></div>', 668, 420, t_now - 0.2, enter="draw")
+    c.el(f'<div style="width:400px;text-align:center"><span class="rchip" style="background:{RED};font-size:30px">NOW</span></div>', 760, 160, t_now)
+    c.el('<div style="width:400px;height:400px;display:flex;align-items:center;justify-content:center"><img src="assets/media/image-1-1.jpg" style="height:400px;'
+         'border:8px solid #1f1f24;border-radius:22px;box-shadow:0 10px 26px rgba(0,0,0,.25)"></div>', 760, 225, t_now + 0.1, enter="pop", sfx="curated/ui-pop.wav")
+    c.el('<div class="mgs" style="width:400px;text-align:center">Same form, on the<br>Security officer’s phone</div>', 760, 640, t_now + 0.4)
+    if t_pdf: c.el(f'<div style="width:250px;text-align:center">{ICON["pdf"].replace("width=\"120\" height=\"140\"", "width=\"56\" height=\"66\"")}'
+                   f'<div class="mgs" style="font-size:28px;color:{GREEN}">Signed PDF<br>saved<br>automatically</div></div>', 1175, 330, t_pdf, enter="pop", sfx="curated/ui-pop.wav")
+    c.done(); return c
+
+
 # ---------- chrome: phone holder, scene title, callouts, stage labels ----------
 def role(t, name, color):
     rid = uid("ro"); CH["els"].append(f'<div id="{rid}" class="role" style="background:{color}">{PHONE("#fff").replace("width=\"70\" height=\"118\"", "width=\"26\" height=\"44\"")}<span>PHONE: {esc(name)}</span></div>')
@@ -190,12 +216,12 @@ def stage_label(t0, t1, text, color="#ffffff"):
 
 
 # ---------- run the plan ----------
-PL.build(P, dict(Shot=Shot, handover=handover, flow=flow, summary=summary, role=role, callout=callout, stage_label=stage_label, Card=Card,
+PL.build(P, dict(Shot=Shot, handover=handover, flow=flow, summary=summary, role=role, callout=callout, stage_label=stage_label, Card=Card, before_now=before_now, SHAPES=SHAPES, LINES=LINES,
                  BLUE=BLUE, ORANGE=ORANGE, GREEN=GREEN, AMBER=AMBER, RED=RED, person=person, role_chip=role_chip, ICON=ICON, fit=fit))
 roles = sorted(CH.get("roles", []))
 for j, (t, rid) in enumerate(roles):
     J(CH, f"#{rid}", t, 0.3, {"opacity": 1}, "power1.out")
-    if j + 1 < len(roles): J(CH, f"#{rid}", roles[j + 1][0], 0.3, {"opacity": 0}, "power1.in")
+    if j + 1 < len(roles): J(CH, f"#{rid}", roles[j + 1][0] - 0.16, 0.15, {"opacity": 0}, "power1.in")
     CUES.append((R(t), "curated/ui-pop.wav", -18))
 merged = []                                                     # callouts closer than 0.8 s count as one (no title flash)
 for c0, c1 in sorted(CH.get("callouts", [])):
@@ -230,12 +256,14 @@ for l in LINES:
         dd = d * len(p) / tot; CAP["els"].append(f'<div id="cg{n}" class="cap"><span>{esc(p)}</span></div>')
         SET(CAP, f"#cg{n}", t, {"opacity": 1}); SET(CAP, f"#cg{n}", t + dd - 0.02, {"opacity": 0}); srt.append((t, t + dd, p)); t += dd; n += 1
 fmt = lambda x: f"{int(x // 3600):02d}:{int(x % 3600 // 60):02d}:{int(x % 60):02d},{int(round((x % 1) * 1000)) % 1000:03d}"
-open(f"{v}/{D['export'].replace('.mp4', '.srt')}", "w").write("".join(f"{i + 1}\n{fmt(a)} --> {fmt(b)}\n{p}\n\n" for i, (a, b, p) in enumerate(srt)))
+open(f"{O}/{D['export'].replace('.mp4', '.srt')}", "w").write("".join(f"{i + 1}\n{fmt(a)} --> {fmt(b)}\n{p}\n\n" for i, (a, b, p) in enumerate(srt)))
 
 # ---------- write HyperFrames project ----------
-E = f"{v}/edit"; os.makedirs(f"{E}/compositions", exist_ok=True); os.makedirs(f"{E}/assets/slides", exist_ok=True)
+E = f"{O}/edit"; os.makedirs(f"{E}/compositions", exist_ok=True); os.makedirs(f"{E}/assets/slides", exist_ok=True)
 for f in os.listdir(f"{v}/slides"):
     if not os.path.exists(f"{E}/assets/slides/{f}"): shutil.copy(f"{v}/slides/{f}", f"{E}/assets/slides/{f}")
+if VER != "v01" and not os.path.isdir(f"{E}/assets/media"): shutil.copytree(f"{v}/edit/assets/media", f"{E}/assets/media")
+if VER != "v01" and os.path.isdir(f"{v}/orig/media"): shutil.copytree(f"{v}/orig/media", f"{E}/assets/media", dirs_exist_ok=True)
 CSS = f'''
 #root {{ position: absolute; inset: 0; font-family: "Inter", sans-serif; overflow: hidden; }}
 .shot, .mg {{ position: absolute; left: {SX}px; top: {SY}px; width: {SW}px; height: {SH}px; overflow: hidden; border-radius: 18px; background: #fff; }}
@@ -316,12 +344,12 @@ open(f"{E}/index.html", "w").write(f'''<!doctype html>
 # ---------- audio: voice at the laid-out times + low music bed + SFX ----------
 SR = 48000; L = int(round(TOTAL * SR)); db = lambda g: 10 ** (g / 20); vo = np.zeros(L)
 for l in LINES:
-    a, sr = sf.read(f"{v}/vo/lines/{l['scene']}_{[x for x in T['lines'] if x['scene'] == l['scene']].index(next(x for x in T['lines'] if x['i'] == l['i'])):02d}.wav")
+    a, sr = sf.read(f"{O}/vo/lines/{l['scene']}_{[x for x in T['lines'] if x['scene'] == l['scene']].index(next(x for x in T['lines'] if x['i'] == l['i'])):02d}.wav")
     a = ss.resample_poly(a, SR, sr); i = int(round(l["t0"] * SR)); vo[i:i + len(a)] += a[:L - i]
-sf.write(f"{v}/vo/vo_laid.wav", vo, SR, subtype="FLOAT")
-subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-i", f"{v}/vo/vo_laid.wav", "-af", "highpass=f=70,equalizer=f=3500:t=q:w=1.2:g=1.5,acompressor=threshold=-20dB:ratio=2.5:attack=5:release=120:makeup=2",
-                "-ar", str(SR), "-c:a", "pcm_f32le", f"{v}/vo/vo_proc.wav"], check=True)
-vv, _ = sf.read(f"{v}/vo/vo_proc.wav"); vv = np.pad(vv, (0, max(0, L - len(vv))))[:L]
+sf.write(f"{O}/vo/vo_laid.wav", vo, SR, subtype="FLOAT")
+subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-i", f"{O}/vo/vo_laid.wav", "-af", "highpass=f=70,equalizer=f=3500:t=q:w=1.2:g=1.5,acompressor=threshold=-20dB:ratio=2.5:attack=5:release=120:makeup=2",
+                "-ar", str(SR), "-c:a", "pcm_f32le", f"{O}/vo/vo_proc.wav"], check=True)
+vv, _ = sf.read(f"{O}/vo/vo_proc.wav"); vv = np.pad(vv, (0, max(0, L - len(vv))))[:L]
 mus = np.frombuffer(subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-i", "music/mixkit_33_motivating_mornings.mp3", "-ac", "2", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True).stdout,
                     np.float32).reshape(-1, 2).astype(np.float64)[:L]
 mus = np.pad(mus, ((0, L - len(mus)), (0, 0))); fi, fo = int(1.0 * SR), int(2.5 * SR); mus[:fi] *= np.linspace(0, 1, fi)[:, None]; mus[-fo:] *= np.linspace(1, 0, fo)[:, None]
@@ -338,5 +366,5 @@ sf.write(f"{E}/assets/mix_pre.wav", mix, SR, subtype="PCM_24")
 subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-i", f"{E}/assets/mix_pre.wav", "-af", "alimiter=limit=0.595:attack=3:release=60:level=false", "-ar", str(SR), "-c:a", "pcm_s24le",
                 f"{E}/assets/mix.wav"], check=True); os.remove(f"{E}/assets/mix_pre.wav")
 json.dump(dict(total=TOTAL, scenes=[dict(title=D["scenes"][k][0], t0=SCN[k], t1=SCN_END[k]) for k in range(NS)], lines=[dict(i=l["i"], text=l["text"], t0=l["t0"], t1=l["t1"]) for l in LINES]),
-          open(f"{v}/layout.json", "w"), indent=1)
+          open(f"{O}/layout.json", "w"), indent=1)
 print(v, "built", TOTAL, "s,", n, "caption chunks,", len(CUES), "sfx")

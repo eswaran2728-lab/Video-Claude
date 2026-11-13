@@ -1,0 +1,373 @@
+{
+ "total": 234.711,
+ "scenes": [
+  {
+   "title": "What changed",
+   "t0": 0.0,
+   "t1": 24.837
+  },
+  {
+   "title": "How it works",
+   "t0": 24.837,
+   "t1": 67.139
+  },
+  {
+   "title": "Situation A: staff hands items to Security",
+   "t0": 67.139,
+   "t1": 122.14
+  },
+  {
+   "title": "Situation B: Security hands items to CBTO",
+   "t0": 122.14,
+   "t1": 186.262
+  },
+  {
+   "title": "The signed copy",
+   "t0": 186.262,
+   "t1": 200.051
+  },
+  {
+   "title": "Remember",
+   "t0": 200.051,
+   "t1": 234.711
+  }
+ ],
+ "lines": [
+  {
+   "i": 0,
+   "text": "Security fills in the Acknowledgement of Receipt and brings the phone.",
+   "t0": 0.5,
+   "t1": 4.869
+  },
+  {
+   "i": 1,
+   "text": "This guide is for staff handing items to Security, CBTO staff, and witnesses.",
+   "t0": 5.319,
+   "t1": 11.404
+  },
+  {
+   "i": 2,
+   "text": "Before, this was a printed paper form, signed with a pen.",
+   "t0": 12.504,
+   "t1": 16.119
+  },
+  {
+   "i": 3,
+   "text": "Now it is the same form, on the Security officer\u2019s phone, and the signed PDF is saved automatically.",
+   "t0": 16.919,
+   "t1": 24.487
+  },
+  {
+   "i": 4,
+   "text": "Every form works in four steps.",
+   "t0": 25.287,
+   "t1": 27.306
+  },
+  {
+   "i": 5,
+   "text": "Security fills the form, and hands you the phone.",
+   "t0": 27.756,
+   "t1": 30.869
+  },
+  {
+   "i": 6,
+   "text": "You check and sign.",
+   "t0": 31.319,
+   "t1": 32.487
+  },
+  {
+   "i": 7,
+   "text": "Then the phone goes back, and Security signs and saves.",
+   "t0": 33.287,
+   "t1": 36.615
+  },
+  {
+   "i": 8,
+   "text": "Blue is Security.",
+   "t0": 37.065,
+   "t1": 38.362
+  },
+  {
+   "i": 9,
+   "text": "Orange is you.",
+   "t0": 38.812,
+   "t1": 39.875
+  },
+  {
+   "i": 10,
+   "text": "There is nothing to install, and no account.",
+   "t0": 40.625,
+   "t1": 43.323
+  },
+  {
+   "i": 11,
+   "text": "Read the form before you sign, and sign only for yourself.",
+   "t0": 44.123,
+   "t1": 47.935
+  },
+  {
+   "i": 12,
+   "text": "One form, two situations.",
+   "t0": 48.685,
+   "t1": 50.757
+  },
+  {
+   "i": 13,
+   "text": "In Situation A, staff hand items to Security.",
+   "t0": 51.207,
+   "t1": 54.655
+  },
+  {
+   "i": 14,
+   "text": "In Situation B, Security hands items to CBTO.",
+   "t0": 55.905,
+   "t1": 60.072
+  },
+  {
+   "i": 15,
+   "text": "In both, Security fills the form, the Recipient signs first, and a witness signs.",
+   "t0": 61.322,
+   "t1": 66.789
+  },
+  {
+   "i": 16,
+   "text": "Situation A: you hand items to Security.",
+   "t0": 67.589,
+   "t1": 70.931
+  },
+  {
+   "i": 17,
+   "text": "Security signs first, as Recipient.",
+   "t0": 71.381,
+   "t1": 73.984
+  },
+  {
+   "i": 18,
+   "text": "In the app, the order is: Recipient, Security staff.",
+   "t0": 75.084,
+   "t1": 78.377
+  },
+  {
+   "i": 19,
+   "text": "Handed over by, you.",
+   "t0": 78.827,
+   "t1": 80.618
+  },
+  {
+   "i": 20,
+   "text": "Then the witness.",
+   "t0": 81.418,
+   "t1": 82.492
+  },
+  {
+   "i": 21,
+   "text": "Security types all names, items and IDs first.",
+   "t0": 82.942,
+   "t1": 86.523
+  },
+  {
+   "i": 22,
+   "text": "You only check and sign.",
+   "t0": 86.973,
+   "t1": 88.385
+  },
+  {
+   "i": 23,
+   "text": "Security passes you the phone.",
+   "t0": 89.135,
+   "t1": 91.116
+  },
+  {
+   "i": 24,
+   "text": "The orange box shows your name.",
+   "t0": 92.766,
+   "t1": 94.598
+  },
+  {
+   "i": 25,
+   "text": "Check your name, your role, and the items listed.",
+   "t0": 95.398,
+   "t1": 98.258
+  },
+  {
+   "i": 26,
+   "text": "If everything is correct, sign with your finger and tap \u2018Confirm\u2019.",
+   "t0": 100.558,
+   "t1": 104.381
+  },
+  {
+   "i": 27,
+   "text": "Tap \u2018Clear\u2019 if you need to sign again.",
+   "t0": 105.181,
+   "t1": 107.194
+  },
+  {
+   "i": 28,
+   "text": "Next, the witness does the same: check their own name, sign, and tap \u2018Confirm\u2019.",
+   "t0": 108.294,
+   "t1": 113.42
+  },
+  {
+   "i": 29,
+   "text": "When the screen says so, the witness gives the phone back to Security.",
+   "t0": 114.52,
+   "t1": 118.644
+  },
+  {
+   "i": 30,
+   "text": "Security saves the record.",
+   "t0": 119.994,
+   "t1": 121.79
+  },
+  {
+   "i": 31,
+   "text": "Situation B: Security hands items to CBTO.",
+   "t0": 122.59,
+   "t1": 126.768
+  },
+  {
+   "i": 32,
+   "text": "CBTO staff sign first, as Recipient.",
+   "t0": 127.218,
+   "t1": 130.531
+  },
+  {
+   "i": 33,
+   "text": "In the app, the order is: Recipient, CBTO staff.",
+   "t0": 131.631,
+   "t1": 135.471
+  },
+  {
+   "i": 34,
+   "text": "Handed over by, Security staff.",
+   "t0": 135.921,
+   "t1": 138.14
+  },
+  {
+   "i": 35,
+   "text": "Then the witness.",
+   "t0": 138.94,
+   "t1": 140.014
+  },
+  {
+   "i": 36,
+   "text": "Check every item listed is what you received.",
+   "t0": 140.814,
+   "t1": 143.685
+  },
+  {
+   "i": 37,
+   "text": "If you are the CBTO staff member, you sign first.",
+   "t0": 145.785,
+   "t1": 149.464
+  },
+  {
+   "i": 38,
+   "text": "Scroll up and check every item you received.",
+   "t0": 151.464,
+   "t1": 154.077
+  },
+  {
+   "i": 39,
+   "text": "Sign with your finger and tap \u2018Confirm\u2019.",
+   "t0": 156.377,
+   "t1": 158.58
+  },
+  {
+   "i": 40,
+   "text": "Tap \u2018Clear\u2019 to sign again.",
+   "t0": 159.38,
+   "t1": 160.888
+  },
+  {
+   "i": 41,
+   "text": "Pass the phone back to Security.",
+   "t0": 161.988,
+   "t1": 163.925
+  },
+  {
+   "i": 42,
+   "text": "Security signs as \u2018Handed over by\u2019.",
+   "t0": 165.575,
+   "t1": 168.229
+  },
+  {
+   "i": 43,
+   "text": "Then the witness checks, signs and confirms.",
+   "t0": 169.029,
+   "t1": 171.88
+  },
+  {
+   "i": 44,
+   "text": "The witness does the same: check their own name, sign, and tap \u2018Confirm\u2019.",
+   "t0": 172.98,
+   "t1": 177.542
+  },
+  {
+   "i": 45,
+   "text": "When the screen says so, the witness gives the phone back to Security.",
+   "t0": 178.642,
+   "t1": 182.766
+  },
+  {
+   "i": 46,
+   "text": "Security saves the record.",
+   "t0": 184.116,
+   "t1": 185.912
+  },
+  {
+   "i": 47,
+   "text": "This is a real Saved screen from a TEST record.",
+   "t0": 186.712,
+   "t1": 189.488
+  },
+  {
+   "i": 48,
+   "text": "The Record ID is in the PDF file name.",
+   "t0": 189.938,
+   "t1": 193.137
+  },
+  {
+   "i": 49,
+   "text": "Security staff email the PDF to you.",
+   "t0": 194.587,
+   "t1": 197.541
+  },
+  {
+   "i": 50,
+   "text": "Keep it for your records.",
+   "t0": 198.341,
+   "t1": 199.701
+  },
+  {
+   "i": 51,
+   "text": "Remember: check your name and role, and read the details before signing.",
+   "t0": 200.501,
+   "t1": 204.824
+  },
+  {
+   "i": 52,
+   "text": "Don\u2019t sign for someone else, or if the details are wrong.",
+   "t0": 205.624,
+   "t1": 209.07
+  },
+  {
+   "i": 53,
+   "text": "Don\u2019t close the app, press Back, or take photos of the screen.",
+   "t0": 209.87,
+   "t1": 213.528
+  },
+  {
+   "i": 54,
+   "text": "Your signature goes into one signed PDF per form, with every signature and a Record ID.",
+   "t0": 214.278,
+   "t1": 220.944
+  },
+  {
+   "i": 55,
+   "text": "It is kept in a restricted AirAsia folder, with a record log, and a PDF copy is emailed to you.",
+   "t0": 221.394,
+   "t1": 228.511
+  }
+ ]
+}
