@@ -1,0 +1,11 @@
+source/
+analysis/wav/
+analysis/a48/
+analysis/tx/
+analysis/track_A.wav
+analysis/onset.npy
+v*/assets/video/
+v*/assets/audio/
+v*/renders/
+v*/.hyperframes/
+v*/node_modules/
