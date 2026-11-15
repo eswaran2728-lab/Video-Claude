@@ -1,0 +1,141 @@
+{
+ "shots": [
+  {
+   "id": "s01",
+   "clip": "c12",
+   "in": 4.2,
+   "dur": 2.4,
+   "at": 0.0,
+   "why": "HOOK: both performers leap at once"
+  },
+  {
+   "id": "s02",
+   "clip": "c05",
+   "in": 2.0,
+   "dur": 3.0,
+   "at": 2.4,
+   "why": "establish: whole stage, crowd and cameras"
+  },
+  {
+   "id": "s03",
+   "clip": "c02",
+   "in": 6.3,
+   "dur": 3.0,
+   "at": 5.4,
+   "why": "act 1: dancer in red beside a jump kick"
+  },
+  {
+   "id": "s04",
+   "clip": "c07",
+   "in": 26.0,
+   "dur": 3.0,
+   "at": 8.4,
+   "why": "act 1: dancer solo"
+  },
+  {
+   "id": "s05",
+   "clip": "c01",
+   "in": 2.4,
+   "dur": 2.6,
+   "at": 11.4,
+   "why": "act 1 close: trio in formation"
+  },
+  {
+   "id": "s06",
+   "clip": "c08",
+   "in": 5.3,
+   "dur": 3.0,
+   "at": 14.0,
+   "why": "act 2: stick duel"
+  },
+  {
+   "id": "s07",
+   "clip": "c12",
+   "in": 12.6,
+   "dur": 2.4,
+   "at": 17.0,
+   "why": "act 2: clinch and lift"
+  },
+  {
+   "id": "n11",
+   "clip": "c11",
+   "in": 24.2,
+   "dur": 2.4,
+   "at": 19.4,
+   "why": "act 2: flying kick"
+  },
+  {
+   "id": "s08",
+   "clip": "c09",
+   "in": 28.7,
+   "dur": 2.7,
+   "at": 21.8,
+   "why": "act 2: strike into takedown"
+  },
+  {
+   "id": "n13",
+   "clip": "c13",
+   "in": 43.4,
+   "dur": 2.6,
+   "at": 24.5,
+   "why": "act 2: wide angle, flying kick on the left while a second pair spars"
+  },
+  {
+   "id": "s09",
+   "clip": "c12",
+   "in": 23.0,
+   "dur": 2.6,
+   "at": 27.1,
+   "why": "act 2: throw"
+  },
+  {
+   "id": "s10",
+   "clip": "c10",
+   "in": 24.0,
+   "dur": 2.6,
+   "at": 29.7,
+   "why": "act 2 close: wide angle, flying exchange"
+  },
+  {
+   "id": "n04",
+   "clip": "c04",
+   "in": 8.0,
+   "dur": 2.8,
+   "at": 32.3,
+   "why": "act 3 opener: two pairs fight at once"
+  },
+  {
+   "id": "s11",
+   "clip": "c06",
+   "in": 10.5,
+   "dur": 3.0,
+   "at": 35.1,
+   "why": "act 3: whole team, pan left to right"
+  },
+  {
+   "id": "s12",
+   "clip": "c06",
+   "in": 20.0,
+   "dur": 2.6,
+   "at": 38.1,
+   "why": "act 3: team, pan back"
+  },
+  {
+   "id": "s13",
+   "clip": "c06",
+   "in": 34.5,
+   "dur": 3.0,
+   "at": 40.7,
+   "why": "act 3 peak: sticks raised"
+  },
+  {
+   "id": "s14",
+   "clip": "c08",
+   "in": 39.6,
+   "dur": 4.2,
+   "at": 43.7,
+   "why": "payoff: the pair stand and salute, slow push-in"
+  }
+ ],
+ "total": 52.1
+}

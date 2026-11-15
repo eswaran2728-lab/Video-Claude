@@ -6,5 +6,5 @@ import json
 for s in json.load(open('$V/edit-plan.json'))['shots']: print(s['id'], s['clip'], s['in'], round(s['dur']+0.2,2))" | while read id clip in dur; do
   out=$V/assets/video/$id.mp4
   [ -f "$out" ] && continue
-  python3 analysis/sr/upscale.py source/$clip.mp4 $in $dur $V/assets/video/.tmp_$id.mp4 && mv $V/assets/video/.tmp_$id.mp4 $out
+  python3 analysis/sr/upscale.py source/$clip.mp4 $in $dur $V/assets/video/.tmp_$id.mp4 </dev/null && mv $V/assets/video/.tmp_$id.mp4 $out
 done; ls $V/assets/video | wc -l
