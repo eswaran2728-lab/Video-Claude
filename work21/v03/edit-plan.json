@@ -1,0 +1,540 @@
+{
+ "title": "Deepavali stage reel v03 — AI-upscaled footage, delivery-quality render",
+ "format": "1080x1920, 30 fps",
+ "total": 52.1,
+ "panel": {
+  "top": 420,
+  "size": 1080
+ },
+ "audio": {
+  "bed_clip": "c12",
+  "bed_in": 0.0,
+  "note": "continuous event audio from one clip; no joins"
+ },
+ "grading": {
+  "adjust": {
+   "saturation": -0.1,
+   "highlights": -0.14,
+   "contrast": 0.06,
+   "blacks": -0.03,
+   "temperature": -0.02
+  },
+  "details": {
+   "vignette": 0.14
+  }
+ },
+ "shots": [
+  {
+   "id": "s01",
+   "clip": "c12",
+   "in": 4.2,
+   "dur": 2.4,
+   "why": "HOOK: both performers leap at once",
+   "move": [
+    [
+     0,
+     410,
+     1.0
+    ],
+    [
+     0.6,
+     410,
+     1.0
+    ],
+    [
+     0.95,
+     410,
+     1.2,
+     "power3.out"
+    ],
+    [
+     2.4,
+     410,
+     1.24,
+     "none"
+    ]
+   ]
+  },
+  {
+   "id": "s02",
+   "clip": "c05",
+   "in": 2.0,
+   "dur": 3.0,
+   "why": "establish: whole stage, crowd and cameras",
+   "move": [
+    [
+     0,
+     330,
+     1.0
+    ],
+    [
+     3.0,
+     520,
+     1.0
+    ]
+   ],
+   "wide": true
+  },
+  {
+   "id": "s03",
+   "clip": "c02",
+   "in": 6.3,
+   "dur": 3.0,
+   "why": "act 1: dancer in red beside a jump kick",
+   "move": [
+    [
+     0,
+     400,
+     1.0
+    ],
+    [
+     3.0,
+     420,
+     1.06
+    ]
+   ]
+  },
+  {
+   "id": "s04",
+   "clip": "c07",
+   "in": 26.0,
+   "dur": 3.0,
+   "why": "act 1: dancer solo",
+   "move": [
+    [
+     0,
+     340,
+     1.04
+    ],
+    [
+     3.0,
+     380,
+     1.1
+    ]
+   ]
+  },
+  {
+   "id": "s05",
+   "clip": "c01",
+   "in": 2.4,
+   "dur": 2.6,
+   "why": "act 1 close: trio in formation",
+   "move": [
+    [
+     0,
+     330,
+     1.0
+    ],
+    [
+     3.0,
+     390,
+     1.0
+    ]
+   ]
+  },
+  {
+   "id": "s06",
+   "clip": "c08",
+   "in": 5.3,
+   "dur": 3.0,
+   "why": "act 2: stick duel",
+   "move": [
+    [
+     0,
+     400,
+     1.0
+    ],
+    [
+     3.0,
+     420,
+     1.06
+    ]
+   ]
+  },
+  {
+   "id": "s07",
+   "clip": "c12",
+   "in": 12.6,
+   "dur": 2.4,
+   "why": "act 2: clinch and lift",
+   "move": [
+    [
+     0,
+     390,
+     1.0
+    ],
+    [
+     0.8,
+     390,
+     1.0
+    ],
+    [
+     1.15,
+     385,
+     1.14,
+     "power3.out"
+    ],
+    [
+     2.4,
+     380,
+     1.16,
+     "none"
+    ]
+   ]
+  },
+  {
+   "id": "n11",
+   "clip": "c11",
+   "in": 24.2,
+   "dur": 2.4,
+   "why": "act 2: flying kick",
+   "move": [
+    [
+     0,
+     460,
+     1.0
+    ],
+    [
+     0.6,
+     460,
+     1.0
+    ],
+    [
+     0.95,
+     460,
+     1.14,
+     "power3.out"
+    ],
+    [
+     2.4,
+     465,
+     1.16,
+     "none"
+    ]
+   ]
+  },
+  {
+   "id": "s08",
+   "clip": "c09",
+   "in": 28.7,
+   "dur": 2.7,
+   "why": "act 2: strike into takedown",
+   "move": [
+    [
+     0,
+     425,
+     1.0
+    ],
+    [
+     0.9,
+     420,
+     1.0
+    ],
+    [
+     1.25,
+     400,
+     1.15,
+     "power3.out"
+    ],
+    [
+     2.7,
+     380,
+     1.15,
+     "sine.inOut"
+    ]
+   ]
+  },
+  {
+   "id": "n13",
+   "clip": "c13",
+   "in": 43.4,
+   "dur": 2.6,
+   "why": "act 2: wide angle, flying kick on the left while a second pair spars",
+   "move": [
+    [
+     0,
+     250,
+     1.0
+    ],
+    [
+     2.6,
+     300,
+     1.06
+    ]
+   ]
+  },
+  {
+   "id": "s09",
+   "clip": "c12",
+   "in": 23.0,
+   "dur": 2.6,
+   "why": "act 2: throw",
+   "move": [
+    [
+     0,
+     350,
+     1.0
+    ],
+    [
+     2.6,
+     360,
+     1.06
+    ]
+   ]
+  },
+  {
+   "id": "s10",
+   "clip": "c10",
+   "in": 24.0,
+   "dur": 2.6,
+   "why": "act 2 close: wide angle, flying exchange",
+   "move": [
+    [
+     0,
+     620,
+     1.0
+    ],
+    [
+     3.0,
+     640,
+     1.0
+    ]
+   ]
+  },
+  {
+   "id": "n04",
+   "clip": "c04",
+   "in": 8.0,
+   "dur": 2.8,
+   "why": "act 3 opener: two pairs fight at once",
+   "move": [
+    [
+     0,
+     300,
+     1.0
+    ],
+    [
+     2.8,
+     520,
+     1.0
+    ]
+   ]
+  },
+  {
+   "id": "s11",
+   "clip": "c06",
+   "in": 10.5,
+   "dur": 3.0,
+   "why": "act 3: whole team, pan left to right",
+   "move": [
+    [
+     0,
+     300,
+     1.0
+    ],
+    [
+     3.0,
+     560,
+     1.0
+    ]
+   ]
+  },
+  {
+   "id": "s12",
+   "clip": "c06",
+   "in": 20.0,
+   "dur": 2.6,
+   "why": "act 3: team, pan back",
+   "move": [
+    [
+     0,
+     560,
+     1.0
+    ],
+    [
+     3.0,
+     330,
+     1.0
+    ]
+   ]
+  },
+  {
+   "id": "s13",
+   "clip": "c06",
+   "in": 34.5,
+   "dur": 3.0,
+   "why": "act 3 peak: sticks raised",
+   "move": [
+    [
+     0,
+     300,
+     1.0
+    ],
+    [
+     3.0,
+     480,
+     1.1
+    ]
+   ]
+  },
+  {
+   "id": "s14",
+   "clip": "c08",
+   "in": 39.6,
+   "dur": 4.2,
+   "why": "payoff: the pair stand and salute, slow push-in",
+   "move": [
+    [
+     0,
+     450,
+     1.0
+    ],
+    [
+     4.2,
+     450,
+     1.08,
+     "none"
+    ]
+   ]
+  }
+ ],
+ "text": [
+  {
+   "zone": "top",
+   "start": 0.0,
+   "end": 2.4,
+   "lines": [
+    [
+     "kick",
+     "Deepavali · Selangor 2026"
+    ],
+    [
+     "big",
+     "Silambam takes the stage"
+    ]
+   ]
+  },
+  {
+   "zone": "top",
+   "start": 2.4,
+   "end": 5.4,
+   "lines": [
+    [
+     "kick",
+     "Sambutan Hari Deepavali"
+    ],
+    [
+     "mid",
+     "Peringkat Negeri Selangor 2026"
+    ]
+   ]
+  },
+  {
+   "zone": "bot",
+   "start": 2.6,
+   "end": 5.4,
+   "lines": [
+    [
+     "cap",
+     "14 November 2026"
+    ],
+    [
+     "sub",
+     "Dataran Klang @ Padang Chetty"
+    ]
+   ]
+  },
+  {
+   "zone": "top",
+   "start": 5.4,
+   "end": 14.0,
+   "lines": [
+    [
+     "kick",
+     "Part 1"
+    ],
+    [
+     "mid",
+     "It opens with grace"
+    ]
+   ]
+  },
+  {
+   "zone": "top",
+   "start": 14.0,
+   "end": 32.3,
+   "lines": [
+    [
+     "kick",
+     "Part 2"
+    ],
+    [
+     "mid",
+     "Then it goes one on one"
+    ]
+   ]
+  },
+  {
+   "zone": "top",
+   "start": 32.3,
+   "end": 43.7,
+   "lines": [
+    [
+     "kick",
+     "Part 3"
+    ],
+    [
+     "mid",
+     "Then the whole team"
+    ]
+   ]
+  },
+  {
+   "zone": "top",
+   "start": 43.7,
+   "end": 47.8,
+   "lines": [
+    [
+     "kick",
+     "The close"
+    ],
+    [
+     "mid",
+     "And it ends in respect"
+    ]
+   ]
+  }
+ ],
+ "chips": [
+  {
+   "label": "Grace",
+   "start": 5.4,
+   "end": 14.0
+  },
+  {
+   "label": "Duel",
+   "start": 14.0,
+   "end": 32.3
+  },
+  {
+   "label": "Team",
+   "start": 32.3,
+   "end": 43.7
+  }
+ ],
+ "flashes": [
+  2.4,
+  5.4,
+  14.0,
+  32.3,
+  43.7
+ ],
+ "endcard": {
+  "start": 47.6,
+  "tamil": "தீபாவளி கொண்டாட்டம்",
+  "title": "Sambutan Hari Deepavali Peringkat Negeri Selangor 2026",
+  "date": "14 November 2026 · Klang"
+ },
+ "base_zoom": 1.2,
+ "per_shot_proxies": true
+}

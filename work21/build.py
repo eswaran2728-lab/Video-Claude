@@ -28,7 +28,7 @@ e = html.escape
 vids, tw = [], []
 for i, s in enumerate(P['shots']):
     sid = s['id']
-    vids.append(f'''        <div id="w-{sid}" class="sw" style="z-index:{i+1}"><video id="v-{sid}" class="clip" src="assets/video/{s['clip']}.mp4" muted playsinline data-start="{s['at']:.3f}" data-duration="{s['dur']:.3f}" data-media-start="{s['in']:.3f}" data-track-index="1"></video></div>''')
+    vids.append(f'''        <div id="w-{sid}" class="sw" style="z-index:{i+1}"><video id="v-{sid}" class="clip" src="assets/video/{s['id'] if P.get('per_shot_proxies') else s['clip']}.mp4" muted playsinline data-start="{s['at']:.3f}" data-duration="{s['dur']:.3f}" data-media-start="{0 if P.get('per_shot_proxies') else s['in']:.3f}" data-track-index="1"></video></div>''')
     kf = s['move']                      # [[t_rel, cx, zoom, ease?], ...]
     bz = 1.0 if s.get('wide') else P.get('base_zoom', 1.0)
     kf = [[k[0], k[1], round(k[2]*bz, 3)] + k[3:] for k in kf]
