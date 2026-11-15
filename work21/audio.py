@@ -45,7 +45,8 @@ sh = {s['id']: s for s in P['shots']}; at = {}; t = 0
 for s in P['shots']: at[s['id']] = t; t += s['dur']
 put(boom(), at['s01'] + 0.72, 0.5)             # the leap in the hook
 for x in P['flashes']: put(whoosh(), x - 0.3, 0.16)   # act changes
-put(boom(), at['s08'] + 1.05, 0.38)            # takedown punch-in
+put(boom(), at['s08'] + 1.05, 0.38)
+if 'n11' in at: put(boom(), at['n11'] + 0.72, 0.36)            # takedown punch-in
 put(shimmer(), P['endcard']['start'] + 0.45, 0.2)     # end card
 sf.write(os.path.join(out, 'sfx.wav'), fx, SR, subtype='PCM_16')
 print('bed + sfx written; sfx peak', float(np.abs(fx).max()))
