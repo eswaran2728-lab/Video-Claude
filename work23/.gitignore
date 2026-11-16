@@ -1,0 +1,10 @@
+source/
+analysis/*.wav
+analysis/asr/
+analysis/tx_*/
+analysis/transcript.json
+v*/assets/img/
+v*/assets/video/
+v*/assets/audio/
+v*/renders/
+v*/.hyperframes/
