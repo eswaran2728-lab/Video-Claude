@@ -50,6 +50,7 @@ for i, c in enumerate(P['text']):
 
 fl = ''.join(f'''      tl.fromTo("#flash", {{ opacity: 0.55 }}, {{ opacity: 0, duration: 0.3, ease: "power2.out", immediateRender: false }}, {x});\n''' for x in P['flashes'])
 EC = P['endcard']
+HD = P.get('header')
 chips = ''.join(f'<span id="chip{i+1}" class="chip">{e(c["label"])}</span>' for i, c in enumerate(P['chips']))
 chtw = ''
 for i, c in enumerate(P['chips']):
@@ -85,8 +86,13 @@ doc = f'''<!DOCTYPE html>
       .mid {{ font-family:"HSerif",serif; font-weight:700; font-size:66px; line-height:1.06; color:#fff6e6; }}
       .cap {{ font-weight:700; font-size:46px; line-height:1.18; color:#fff6e6; }}
       .sub {{ font-weight:400; font-size:36px; line-height:1.25; color:#f3d9a4; margin-top:10px; }}
-      #chips {{ position:absolute; left:0; width:{W}px; top:{PY+PS+214}px; z-index:20; display:flex; justify-content:center; gap:18px; }}
+      #chips {{ position:absolute; left:0; width:{W}px; top:{PY+PS+P.get('chips_gap',214)}px; z-index:20; display:flex; justify-content:center; gap:18px; }}
       .chip {{ font-weight:700; font-size:28px; letter-spacing:.12em; text-transform:uppercase; color:#f0c35b; border:2px solid #f0c35b; border-radius:999px; padding:10px 26px; background-color:rgba(240,195,91,0); }}
+      #hdr {{ position:absolute; left:0; top:0; width:{W}px; height:{PY}px; z-index:90; pointer-events:none; }}
+      #hdri {{ position:absolute; left:0; width:{W}px; top:{HD.get('top',56)}px; height:{HD.get('logo',150)}px; display:flex; align-items:center; justify-content:center; gap:22px; }}
+      #hdri img {{ height:{HD.get('logo',150)}px; width:auto; }}
+      #hdri .l1 {{ font-weight:700; font-size:38px; line-height:1.1; letter-spacing:.07em; color:#fff6e6; text-transform:uppercase; }}
+      #hdri .l2 {{ font-weight:700; font-size:30px; line-height:1.2; letter-spacing:.32em; color:#f0c35b; text-transform:uppercase; margin-top:6px; }}
       #end {{ position:absolute; inset:0; z-index:80; background: radial-gradient(110% 70% at 50% 38%, #6a1512 0%, #2a0b0a 55%, #120706 100%); }}
       #endi {{ position:absolute; left:108px; width:{W-216}px; top:560px; text-align:center; }}
       #end .ta {{ font-family:"HTamil",serif; font-weight:700; font-size:92px; line-height:1.3; color:#f7d77a; }}
@@ -114,6 +120,7 @@ doc = f'''<!DOCTYPE html>
           <div class="dt">{e(EC['date'])}</div>
         </div>
       </div>
+{('<div id="hdr" class="clip" data-start="0" data-duration="%.3f" data-track-index="7" data-track-kind="graphics"><div id="hdri"><img src="%s" alt=""><div><div class="l1">%s</div><div class="l2">%s</div></div></div></div>' % (TOTAL, HD['logo_src'], e(HD['line1']), e(HD['line2']))) if HD else ''}
       <audio id="bed" class="clip" src="assets/audio/bed.wav" data-start="0" data-duration="{TOTAL:.3f}" data-track-index="10" data-volume="1"></audio>
       <audio id="sfx" class="clip" src="assets/audio/sfx.wav" data-start="0" data-duration="{TOTAL:.3f}" data-track-index="11" data-volume="1"></audio>
     </div>
