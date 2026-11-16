@@ -1,0 +1,180 @@
+{
+ "title": "Statue reel v03 — v02 graphics + the owner's own voice",
+ "message": "Owner: 'Showing my new statue' (16 Nov 2026). Speech in the clip is not intelligible to transcription.",
+ "source": "source/A001_11152346_C016.mov (Blackmagic Camera on iPhone, 2160x3840 portrait, 24 fps, Rec.709). Usable: 0.00-1.80 s. Still = frame at 0.167 s.",
+ "grade_note": "Baked LUT grade.cube (same as v01) on hero_graded.jpg, statue_colour.png, bg_clean.jpg, turn.mp4. Grey print = generated from the frame (visual effect, not footage of a raw print).",
+ "shots": [
+  {
+   "id": "p1",
+   "kind": "scene",
+   "dur": 5.6,
+   "scale": 0.5,
+   "pos": [
+    87,
+    428
+   ],
+   "print": {
+    "scan": [
+     0.0,
+     3.0
+    ],
+    "paint": [
+     3.3,
+     4.8
+    ]
+   },
+   "why": "HOOK: the statue prints layer by layer on a build plate under a hotend, then is painted by a brush stroke"
+  },
+  {
+   "id": "d1",
+   "kind": "still",
+   "src_time": 0.167,
+   "dur": 1.6,
+   "anchor": [
+    430,
+    1990
+   ],
+   "screen": [
+    400,
+    1180
+   ],
+   "cw0": 760,
+   "cw1": 690,
+   "why": "detail: sword and gold hilt"
+  },
+  {
+   "id": "d2",
+   "kind": "still",
+   "src_time": 0.167,
+   "dur": 1.6,
+   "anchor": [
+    987,
+    2462
+   ],
+   "screen": [
+    620,
+    1120
+   ],
+   "cw0": 820,
+   "cw1": 740,
+   "why": "detail: gold ornaments"
+  },
+  {
+   "id": "d3",
+   "kind": "still",
+   "src_time": 0.167,
+   "dur": 1.6,
+   "anchor": [
+    1075,
+    3150
+   ],
+   "screen": [
+    600,
+    1300
+   ],
+   "cw0": 1150,
+   "cw1": 1040,
+   "why": "detail: painted drape and kneeling pose"
+  },
+  {
+   "id": "rv",
+   "kind": "scene",
+   "dur": 2.4,
+   "anchor": [
+    1050,
+    2500
+   ],
+   "cw_bg0": 1500,
+   "cw_st0": 1150,
+   "why": "parallax pull-back: statue layer and background converge to the real frame"
+  },
+  {
+   "id": "tn",
+   "kind": "video",
+   "src": "turn.mp4",
+   "src_time": [
+    0.167,
+    1.787
+   ],
+   "dur": 1.6,
+   "why": "real footage: the statue is turned"
+  },
+  {
+   "id": "ec",
+   "kind": "scene",
+   "dur": 5.4,
+   "why": "podium end card"
+  }
+ ],
+ "titles": [
+  {
+   "start": 0.0,
+   "end": 3.0,
+   "kicker": "My new statue",
+   "title": "Printed layer by layer"
+  },
+  {
+   "start": 3.3,
+   "end": 5.6,
+   "kicker": "Step 2",
+   "title": "Painted by hand"
+  },
+  {
+   "start": 5.6,
+   "end": 10.4,
+   "kicker": "The details"
+  },
+  {
+   "start": 10.55,
+   "end": 14.2,
+   "kicker": "Step 3 · Done",
+   "title": "The finished piece"
+  }
+ ],
+ "callouts": [
+  {
+   "shot": "d1",
+   "kicker": "Detail 01",
+   "text": "Raised sword",
+   "label_at": [
+    590,
+    900
+   ]
+  },
+  {
+   "shot": "d2",
+   "kicker": "Detail 02",
+   "text": "Gold ornaments",
+   "label_at": [
+    130,
+    1460
+   ]
+  },
+  {
+   "shot": "d3",
+   "kicker": "Detail 03",
+   "text": "Painted drape",
+   "label_at": [
+    620,
+    1010
+   ]
+  }
+ ],
+ "endcard": {
+  "kicker": "My new statue",
+  "name": "Eshan Creations",
+  "line": "3D printed · hand-painted",
+  "handle": "@e_shan9"
+ },
+ "voice": {
+  "source": "source/A001_11152346_C016.mov",
+  "src_range": [
+   1.75,
+   21.4
+  ],
+  "start_at": 0.35,
+  "max_gap": 0.45,
+  "pad": 0.15,
+  "note": "Speech found by spectrum (500-2800 Hz energy). Kept in original order; only silences longer than 0.45 s were shortened. Speech after 21.4 s (camera being carried) left out."
+ }
+}

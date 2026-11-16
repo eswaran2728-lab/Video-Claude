@@ -276,6 +276,7 @@ doc = f'''<!DOCTYPE html>
       <div id="scrim"></div>
       <div id="flash"></div>
       <audio id="music" class="clip" src="assets/audio/music.wav" data-start="0" data-duration="{TOTAL:.3f}" data-track-index="10" data-volume="1"></audio>
+{('      <audio id="voice" class="clip" src="assets/audio/voice.wav" data-start="0" data-duration="%.3f" data-track-index="12" data-volume="1"></audio>' % TOTAL) if P.get('voice') else ''}
       <audio id="sfx" class="clip" src="assets/audio/sfx.wav" data-start="0" data-duration="{TOTAL:.3f}" data-track-index="11" data-volume="1"></audio>
     </div>
     <script>

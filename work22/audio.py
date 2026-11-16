@@ -93,11 +93,21 @@ def whoosh(d=0.6):
 for k3 in ('d1', 'rv', 'ec'):
     put(fx, whoosh(), at[k3] - 0.35, 0.22)
 
+# duck music (and soften effects) under the owner's voice
+vm = os.path.join(ROOT, V, 'voice-map.json')
+if os.path.exists(vm):
+    duck = np.ones(N, np.float32)
+    for sg in json.load(open(vm))['segments']:
+        s_, e_ = int((sg['at'] - 0.2) * SR), int((sg['at'] + sg['dur'] + 0.35) * SR)
+        duck[max(0, s_):e_] = 10 ** (-11 / 20)
+    kk = int(0.25 * SR); cs = np.concatenate([[0], np.cumsum(duck, dtype=np.float64)]); ix = np.arange(N)
+    l_, h_ = np.clip(ix - kk // 2, 0, N), np.clip(ix + kk // 2, 0, N); duck = ((cs[h_] - cs[l_]) / np.maximum(1, h_ - l_)).astype(np.float32)
+    mus *= duck[:, None]; fx *= (0.55 + 0.45 * duck)[:, None]
 out = os.path.join(ROOT, V, 'assets', 'audio'); os.makedirs(out, exist_ok=True)
 for name, x in (('music', mus), ('sfx', fx)):
     x = x[: int(T * SR)]
     sf.write(os.path.join(out, name + '_raw.wav'), x / (np.abs(x).max() + 1e-9) * 0.9, SR, subtype='PCM_24')
 # levels: music to -17 LUFS, effects mixed relative to it
-subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', os.path.join(out, 'music_raw.wav'), '-af', 'loudnorm=I=-17:TP=-2:LRA=9', '-ar', str(SR), os.path.join(out, 'music.wav')], check=True)
+subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', os.path.join(out, 'music_raw.wav'), '-af', 'loudnorm=I=%d:TP=-2:LRA=11' % (-22 if os.path.exists(vm) else -17), '-ar', str(SR), os.path.join(out, 'music.wav')], check=True)
 subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', os.path.join(out, 'sfx_raw.wav'), '-af', 'volume=-9dB', '-ar', str(SR), os.path.join(out, 'sfx.wav')], check=True)
 print('audio written', round(T, 2), 's')
