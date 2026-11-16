@@ -12,3 +12,7 @@ Vertical highlight reel (1080x1920, 30 fps, 45.5 s) cut from 12 supplied clips (
 Rebuild: `python3 build.py v01 && python3 audio.py v01`, then in `v01/`: `npx hyperframes lint`, `npx hyperframes render --quality draft`.
 Proxies in `v01/assets/video/` are 2x lanczos upscales of the sources (see the ffmpeg line in validation notes).
 New revisions: copy `v01/` to `v02/` and edit the plan there; keep v01 as is.
+
+## v05
+- Adds logo header (Mahaguru logo cut out from the supplied PNG + "MAHAGURU SRI S. ARUMUGAM / STUDENTS") from 0 to 52.1 s; not over the appended masters clip, which carries its own header.
+- Panel moved to top 480, chips gap 180. Delivered: v05/renders/Silambam_Deepavali_Selangor_2026_FINAL_v05.mp4 (67.1 s, -15.9 LUFS, decodes clean).
