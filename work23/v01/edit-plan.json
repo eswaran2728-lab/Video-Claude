@@ -1,0 +1,431 @@
+{
+ "title": "Hanuman Vahanam order story v01",
+ "format": "1080x1920, 30 fps",
+ "cut": {
+  "pad_in": 0.12,
+  "pad_out": 0.18,
+  "max_gap": 0.4
+ },
+ "tail_card": 3.6,
+ "blocks": [
+  {
+   "id": "h1",
+   "kind": "broll",
+   "clip": "C006",
+   "src": [
+    9.3,
+    10.6
+   ],
+   "role": "hook: raw print with supports"
+  },
+  {
+   "id": "h2",
+   "kind": "broll",
+   "clip": "C006",
+   "src": [
+    43.0,
+    44.6
+   ],
+   "role": "hook: finished gold vahanam"
+  },
+  {
+   "id": "a",
+   "kind": "talk",
+   "clip": "C005",
+   "src": [
+    1.7,
+    23.3
+   ],
+   "why": "the order: customer asked for a Hanuman Vahanam for Deepavali, Rama seated on top"
+  },
+  {
+   "id": "rvv",
+   "kind": "broll",
+   "clip": "C005",
+   "src": [
+    39.7,
+    42.1
+   ],
+   "role": "reveal: he swings the finished statue into frame"
+  },
+  {
+   "id": "rv",
+   "kind": "talk",
+   "clip": "C005",
+   "src": [
+    38.9,
+    48.4
+   ],
+   "lead": 0.0,
+   "why": "reveal: he brings the gold statue in, then 'shall we see a fun fact?'",
+   "drop": []
+  },
+  {
+   "id": "b",
+   "kind": "talk",
+   "clip": "C006",
+   "src": [
+    0.1,
+    45.2
+   ],
+   "why": "the fun fact: first print, settings changed, second print perfect, brass / metallic gold paint, strong back support"
+  },
+  {
+   "id": "c",
+   "kind": "talk",
+   "clip": "C007",
+   "src": [
+    0.5,
+    16.2
+   ],
+   "why": "call to action: order this design, Rama side or Hanuman side, vanakkam"
+  }
+ ],
+ "removed": [
+  {
+   "clip": "C005",
+   "src": [
+    23.8,
+    38.9
+   ],
+   "why": "about the base; unclear and slow, mostly repeating what was already said (ASR is uncertain - restore if needed)"
+  },
+  {
+   "clip": "C006",
+   "src": [
+    45.2,
+    48.0
+   ],
+   "why": "'take a look' + looking off camera"
+  },
+  {
+   "clip": "C005",
+   "src": [
+    48.4,
+    51.4
+   ],
+   "why": "trailing word, off-camera"
+  }
+ ],
+ "zoom": {
+  "h1": {
+   "scale": 1.06,
+   "origin": [
+    30,
+    45
+   ],
+   "push": 1.08
+  },
+  "h2": {
+   "scale": 1.1,
+   "origin": [
+    50,
+    55
+   ],
+   "push": 1.06
+  },
+  "a_0": {
+   "scale": 1.0,
+   "origin": [
+    50,
+    30
+   ],
+   "push": 1.03,
+   "steps": [
+    [
+     6.45,
+     1.16
+    ],
+    [
+     11.9,
+     1.0
+    ],
+    [
+     15.1,
+     1.12
+    ],
+    [
+     19.3,
+     1.0
+    ]
+   ]
+  },
+  "rvv": {
+   "scale": 1.0,
+   "origin": [
+    50,
+    50
+   ],
+   "push": 1.06
+  },
+  "rv_0": {
+   "scale": 1.12,
+   "origin": [
+    50,
+    45
+   ],
+   "push": 1.03
+  },
+  "rv_1": {
+   "scale": 1.3,
+   "origin": [
+    50,
+    30
+   ],
+   "push": 1.04
+  },
+  "b_0": {
+   "scale": 1.0,
+   "origin": [
+    40,
+    45
+   ],
+   "push": 1.04,
+   "steps": [
+    [
+     36.0,
+     1.12
+    ]
+   ]
+  },
+  "b_1": {
+   "scale": 1.14,
+   "origin": [
+    45,
+    45
+   ],
+   "push": 1.03,
+   "steps": [
+    [
+     45.2,
+     1.0
+    ]
+   ]
+  },
+  "b_2": {
+   "scale": 1.0,
+   "origin": [
+    50,
+    50
+   ],
+   "push": 1.06
+  },
+  "b_3": {
+   "scale": 1.12,
+   "origin": [
+    55,
+    50
+   ],
+   "push": 1.03,
+   "steps": [
+    [
+     61.7,
+     1.0
+    ]
+   ]
+  },
+  "b_4": {
+   "scale": 1.18,
+   "origin": [
+    55,
+    55
+   ],
+   "push": 1.03
+  },
+  "b_5": {
+   "scale": 1.0,
+   "origin": [
+    55,
+    50
+   ],
+   "push": 1.04
+  },
+  "c_0": {
+   "scale": 1.0,
+   "origin": [
+    50,
+    40
+   ],
+   "push": 1.03
+  },
+  "c_1": {
+   "scale": 1.14,
+   "origin": [
+    50,
+    35
+   ],
+   "push": 1.03,
+   "steps": [
+    [
+     83.5,
+     1.0
+    ]
+   ]
+  }
+ },
+ "gfx": [
+  {
+   "kind": "hook",
+   "t": [
+    0.0,
+    2.9
+   ],
+   "kicker": "Customer order",
+   "a": "Raw 3D print",
+   "b": "→ Hanuman Vahanam",
+   "b_at": 1.3,
+   "flash": 0.0
+  },
+  {
+   "kind": "card",
+   "t": [
+    3.1,
+    9.6
+   ],
+   "kicker": "The order",
+   "text": "A Hanuman Vahanam"
+  },
+  {
+   "kind": "chips",
+   "t": [
+    9.7,
+    14.9
+   ],
+   "items": [
+    [
+     "For Deepavali",
+     "#f0c35b"
+    ]
+   ]
+  },
+  {
+   "kind": "chips",
+   "t": [
+    15.1,
+    19.2
+   ],
+   "items": [
+    [
+     "Rama seated on top",
+     "#e8743b"
+    ]
+   ]
+  },
+  {
+   "kind": "big",
+   "t": [
+    24.32,
+    26.6
+   ],
+   "text": "This.",
+   "shine": true,
+   "flash": 0.55
+  },
+  {
+   "kind": "big",
+   "t": [
+    30.55,
+    32.07
+   ],
+   "text": "Fun fact?",
+   "sub": "How it really started"
+  },
+  {
+   "kind": "tag",
+   "t": [
+    32.2,
+    49.4
+   ],
+   "kicker": "Print #1",
+   "text": "Raw print + supports"
+  },
+  {
+   "kind": "tag",
+   "t": [
+    51.6,
+    56.2
+   ],
+   "kicker": "Print #2",
+   "text": "Came out perfect",
+   "tone": "gold"
+  },
+  {
+   "kind": "slicer",
+   "t": [
+    56.3,
+    61.6
+   ],
+   "title": "Print settings tweaked",
+   "rows": [
+    "Supports",
+    "Layer height",
+    "Orientation"
+   ],
+   "moves": [
+    [
+     0.8,
+     0.45
+    ],
+    [
+     0.6,
+     0.35
+    ],
+    [
+     0.3,
+     0.7
+    ]
+   ],
+   "ok": "✓ Clean print"
+  },
+  {
+   "kind": "chips",
+   "t": [
+    61.7,
+    66.8
+   ],
+   "items": [
+    [
+     "Brass",
+     "#b5893a"
+    ],
+    [
+     "Metallic gold",
+     "#e9be55"
+    ],
+    [
+     "Hand-painted",
+     "#f3e2b8"
+    ]
+   ],
+   "stagger": 0.5
+  },
+  {
+   "kind": "card",
+   "t": [
+    67.0,
+    74.2
+   ],
+   "kicker": "Built to last",
+   "text": "Strong support at the back"
+  },
+  {
+   "kind": "card",
+   "t": [
+    74.5,
+    88.6
+   ],
+   "kicker": "Want one like this?",
+   "text": "Order this design"
+  }
+ ],
+ "flashes": [
+  2.9,
+  32.07
+ ],
+ "endcard": {
+  "kicker": "Hanuman Vahanam",
+  "name": "Eshan Creations",
+  "line": "3D printed · hand-painted · made to order",
+  "handle": "@e_shan9"
+ }
+}

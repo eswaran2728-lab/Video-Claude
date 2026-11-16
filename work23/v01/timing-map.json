@@ -1,0 +1,173 @@
+{
+ "segments": [
+  {
+   "id": "h1",
+   "clip": "C006",
+   "src": [
+    9.3,
+    10.6
+   ],
+   "at": 0.0,
+   "dur": 1.3,
+   "kind": "broll",
+   "role": "hook: raw print with supports"
+  },
+  {
+   "id": "h2",
+   "clip": "C006",
+   "src": [
+    43.0,
+    44.6
+   ],
+   "at": 1.3,
+   "dur": 1.6,
+   "kind": "broll",
+   "role": "hook: finished gold vahanam"
+  },
+  {
+   "id": "a_0",
+   "clip": "C005",
+   "src": [
+    1.78,
+    23.2
+   ],
+   "at": 2.9,
+   "dur": 21.42,
+   "kind": "talk",
+   "block": "a"
+  },
+  {
+   "id": "rvv",
+   "clip": "C005",
+   "src": [
+    39.7,
+    42.1
+   ],
+   "at": 24.32,
+   "dur": 2.4,
+   "kind": "broll",
+   "role": "reveal: he swings the finished statue into frame"
+  },
+  {
+   "id": "rv_0",
+   "clip": "C005",
+   "src": [
+    42.23,
+    46.2
+   ],
+   "at": 26.72,
+   "dur": 3.97,
+   "kind": "talk",
+   "block": "rv"
+  },
+  {
+   "id": "rv_1",
+   "clip": "C005",
+   "src": [
+    46.9,
+    48.28
+   ],
+   "at": 30.69,
+   "dur": 1.38,
+   "kind": "talk",
+   "block": "rv"
+  },
+  {
+   "id": "b_0",
+   "clip": "C006",
+   "src": [
+    0.17,
+    10.15
+   ],
+   "at": 32.07,
+   "dur": 9.98,
+   "kind": "talk",
+   "block": "b"
+  },
+  {
+   "id": "b_1",
+   "clip": "C006",
+   "src": [
+    10.63,
+    17.14
+   ],
+   "at": 42.05,
+   "dur": 6.51,
+   "kind": "talk",
+   "block": "b"
+  },
+  {
+   "id": "b_2",
+   "clip": "C006",
+   "src": [
+    17.58,
+    22.04
+   ],
+   "at": 48.56,
+   "dur": 4.46,
+   "kind": "talk",
+   "block": "b"
+  },
+  {
+   "id": "b_3",
+   "clip": "C006",
+   "src": [
+    22.6,
+    36.45
+   ],
+   "at": 53.02,
+   "dur": 13.85,
+   "kind": "talk",
+   "block": "b"
+  },
+  {
+   "id": "b_4",
+   "clip": "C006",
+   "src": [
+    37.1,
+    41.24
+   ],
+   "at": 66.87,
+   "dur": 4.14,
+   "kind": "talk",
+   "block": "b"
+  },
+  {
+   "id": "b_5",
+   "clip": "C006",
+   "src": [
+    41.72,
+    45.09
+   ],
+   "at": 71.01,
+   "dur": 3.37,
+   "kind": "talk",
+   "block": "b"
+  },
+  {
+   "id": "c_0",
+   "clip": "C007",
+   "src": [
+    0.58,
+    2.69
+   ],
+   "at": 74.38,
+   "dur": 2.11,
+   "kind": "talk",
+   "block": "c"
+  },
+  {
+   "id": "c_1",
+   "clip": "C007",
+   "src": [
+    3.46,
+    16.1
+   ],
+   "at": 76.49,
+   "dur": 12.64,
+   "kind": "talk",
+   "block": "c"
+  }
+ ],
+ "cut_end": 89.13
+}

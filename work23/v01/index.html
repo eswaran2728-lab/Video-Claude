@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, height=1920">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family:"HSerif"; font-weight:700; src:url("assets/fonts/serif-latin-700.woff2") format("woff2"); }
+      @font-face { font-family:"HSans"; font-weight:400; src:url("assets/fonts/sans-latin-400.woff2") format("woff2"); }
+      @font-face { font-family:"HSans"; font-weight:700; src:url("assets/fonts/sans-latin-700.woff2") format("woff2"); }
+      * { margin:0; padding:0; box-sizing:border-box; }
+      html, body { width:1080px; height:1920px; overflow:hidden; background:#0b0907; }
+      #root { position:relative; width:1080px; height:1920px; overflow:hidden; font-family:"HSans",sans-serif; background:#0b0907; }
+      .vw { position:absolute; inset:0; pointer-events:none; }
+      .full { position:absolute; left:0; top:0; width:1080px; height:1920px; object-fit:cover; }
+      #vig { position:absolute; inset:0; z-index:40; pointer-events:none; background:radial-gradient(90% 70% at 50% 45%, rgba(0,0,0,0) 55%, rgba(0,0,0,.38) 100%); }
+      #grad { position:absolute; left:0; bottom:0; width:1080px; height:760px; z-index:41; pointer-events:none; background:linear-gradient(rgba(8,6,4,0), rgba(8,6,4,.62)); }
+      #flash { position:absolute; inset:0; z-index:90; background:#fff3dc; opacity:0; pointer-events:none; }
+      #shine { position:absolute; left:0; top:-300px; width:520px; height:2600px; z-index:89; transform:rotate(16deg); opacity:0; pointer-events:none; mix-blend-mode:screen;
+        background:linear-gradient(90deg, rgba(255,226,160,0), rgba(255,226,160,.45), rgba(255,226,160,0)); }
+      .hook { position:absolute; left:0; width:1080px; top:0; padding:150px 70px 120px; z-index:60; text-align:center; background:linear-gradient(rgba(8,6,4,.85), rgba(8,6,4,.55) 60%, rgba(8,6,4,0)); }
+      .hk-k { font-weight:700; font-size:30px; letter-spacing:.3em; color:#f0c35b; text-transform:uppercase; text-shadow:0 2px 12px rgba(0,0,0,.8); }
+      .hk-h { position:relative; display:grid; place-items:center; margin-top:16px; font-family:"HSerif",serif; font-weight:700; line-height:1.04; }
+      .hk-a, .hk-b { grid-area:1/1; }
+      .hk-a { font-size:84px; color:#ffffff; text-shadow:0 6px 30px rgba(0,0,0,.75); }
+      .hk-b { font-size:110px; background:linear-gradient(180deg,#fff6dc,#f3cf7c 55%,#c98d2c); -webkit-background-clip:text; background-clip:text; color:transparent; filter:drop-shadow(0 6px 24px rgba(0,0,0,.7)); }
+      .tag { position:absolute; left:70px; top:250px; z-index:61; display:flex; align-items:center; gap:16px; padding:16px 28px; border-radius:16px;
+        background:rgba(12,14,18,.72); border:1.5px solid rgba(140,230,255,.55); box-shadow:0 10px 36px rgba(0,0,0,.5); }
+      .tag .dot { width:16px; height:16px; border-radius:50%; background:#5fe0ff; box-shadow:0 0 12px #5fe0ff; }
+      .tag.gold { border-color:rgba(240,195,91,.7); } .tag.gold .dot { background:#f0c35b; box-shadow:0 0 12px #f0c35b; }
+      .tag .tk { font-weight:700; font-size:28px; letter-spacing:.2em; color:#8fe9ff; text-transform:uppercase; }
+      .tag.gold .tk { color:#f0c35b; }
+      .tag .tt { font-family:"HSerif",serif; font-weight:700; font-size:44px; color:#fbf3e3; }
+      .card { position:absolute; left:70px; top:1430px; z-index:62; padding:24px 36px 26px 44px; border-radius:22px; max-width:900px; transform-origin:50% 100%;
+        background:linear-gradient(135deg, rgba(36,27,18,.86), rgba(14,11,8,.9)); border:1.5px solid rgba(255,214,150,.5); box-shadow:0 20px 60px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.15); }
+      .cbar { position:absolute; left:0; top:18px; bottom:18px; width:8px; border-radius:4px; background:linear-gradient(#ffe0a0,#d99a3a); }
+      .ck { font-weight:700; font-size:28px; letter-spacing:.22em; color:#f0c35b; text-transform:uppercase; }
+      .ct { font-family:"HSerif",serif; font-weight:700; font-size:64px; color:#fbf3e3; line-height:1.08; margin-top:8px; }
+      .chips { position:absolute; left:70px; right:70px; top:1680px; z-index:63; display:flex; flex-wrap:wrap; gap:18px; }
+      .chip { display:inline-flex; align-items:center; gap:14px; padding:14px 28px; border-radius:999px; font-weight:700; font-size:44px; color:#fbf3e3;
+        background:rgba(14,11,8,.8); border:1.5px solid rgba(255,255,255,.25); box-shadow:0 10px 30px rgba(0,0,0,.5); }
+      .chip i { width:34px; height:34px; border-radius:50%; background:var(--c); box-shadow:inset 0 -6px 10px rgba(0,0,0,.35), inset 0 6px 10px rgba(255,255,255,.4), 0 0 14px var(--c); }
+      .big { position:absolute; left:0; width:1080px; top:1180px; z-index:70; text-align:center; }
+      .bw { display:inline-block; font-family:"HSerif",serif; font-weight:700; font-size:150px; line-height:1; color:#fff; padding:10px 40px 24px; border-radius:30px;
+        background:linear-gradient(180deg, rgba(240,195,91,.95), rgba(196,128,36,.95)); color:#1a1006; box-shadow:0 24px 70px rgba(0,0,0,.6); }
+      .bs { font-weight:700; font-size:40px; color:#fbf3e3; margin-top:18px; text-shadow:0 3px 14px rgba(0,0,0,.85); }
+      .call { position:absolute; inset:0; z-index:64; }
+      .csvg { position:absolute; inset:0; width:1080px; height:1920px; overflow:visible; }
+      .csvg circle:first-child { fill:none; stroke:#ffe1a0; stroke-width:4; }
+      .csvg circle:nth-child(2) { fill:#ffd37a; stroke:#1a120a; stroke-width:4; }
+      .csvg path { fill:none; stroke:#ffe1a0; stroke-width:5; stroke-dasharray:1; filter:drop-shadow(0 2px 6px rgba(0,0,0,.7)); }
+      .clab { position:absolute; transform:translate(-50%,-110%); white-space:nowrap; padding:16px 30px; border-radius:18px; font-family:"HSerif",serif; font-weight:700; font-size:48px; color:#1a1006;
+        background:linear-gradient(180deg,#ffe6ad,#f0c35b); box-shadow:0 14px 40px rgba(0,0,0,.55); }
+      .slicer { position:absolute; left:110px; width:860px; top:1180px; z-index:65; padding:28px 34px; border-radius:24px; transform-origin:0 50%;
+        background:linear-gradient(160deg, rgba(20,24,30,.9), rgba(10,12,16,.92)); border:1.5px solid rgba(140,230,255,.45); box-shadow:0 24px 70px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.12); }
+      .sh { display:flex; align-items:center; gap:14px; font-weight:700; font-size:30px; letter-spacing:.2em; text-transform:uppercase; color:#8fe9ff; margin-bottom:18px; }
+      .sdot { width:14px; height:14px; border-radius:50%; background:#5fe0ff; box-shadow:0 0 10px #5fe0ff; }
+      .srow { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:12px 0; font-size:34px; color:#e9eef5; }
+      .strk { position:relative; width:440px; height:12px; border-radius:6px; background:rgba(255,255,255,.12); }
+      .sfil { position:absolute; left:0; top:0; width:420px; height:12px; border-radius:6px; background:linear-gradient(90deg,#5fe0ff,#f0c35b); }
+      .sknob { position:absolute; left:-12px; top:-10px; width:32px; height:32px; border-radius:50%; background:#fff; box-shadow:0 0 0 4px rgba(95,224,255,.5), 0 4px 12px rgba(0,0,0,.5); }
+      .sok { margin-top:18px; display:inline-block; font-weight:700; font-size:34px; color:#0b1a10; background:#7ff0a8; padding:10px 26px; border-radius:999px; }
+      #end { position:absolute; inset:0; z-index:95; overflow:hidden; background:#0b0907; }
+      #endph { position:absolute; inset:0; } #endph img { width:1080px; height:1920px; object-fit:cover; }
+      #endsh { position:absolute; inset:0; background:linear-gradient(rgba(10,8,6,.86) 0%, rgba(10,8,6,.35) 38%, rgba(10,8,6,.15) 60%, rgba(10,8,6,.55) 100%); }
+      #sparks i { position:absolute; border-radius:50%; background:#ffd37a; box-shadow:0 0 10px 3px rgba(255,200,100,.6); opacity:0; }
+      #endi { position:absolute; left:80px; width:920px; top:170px; text-align:center; }
+      #endi .ek { font-weight:700; font-size:30px; letter-spacing:.3em; color:#f0c35b; text-transform:uppercase; }
+      #endi .en { font-family:"HSerif",serif; font-weight:700; font-size:104px; line-height:1.04; margin-top:20px; color:#fcebc6; text-shadow:0 0 30px rgba(240,190,90,.45), 0 4px 18px rgba(0,0,0,.7); }
+      #endi .er { width:240px; height:4px; margin:28px auto 0; background:linear-gradient(90deg,rgba(240,195,91,0),#f0c35b,rgba(240,195,91,0)); }
+      #endi .es { font-size:38px; color:#f1dfc0; margin-top:24px; }
+      #endi .eh { display:inline-block; margin-top:26px; font-weight:700; font-size:40px; color:#1a120a; padding:12px 40px; border-radius:999px; background:linear-gradient(180deg,#ffe0a0,#e6ad45); box-shadow:0 8px 30px rgba(240,180,70,.45); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="92.730" data-width="1080" data-height="1920" data-fps="30">
+      <div id="w-h1" class="vw" style="z-index:1"><video id="v-h1" class="clip full" src="assets/video/h1.mp4" muted playsinline data-start="0.000" data-duration="1.300" data-media-start="0" data-track-index="1"></video></div>
+      <div id="w-h2" class="vw" style="z-index:2"><video id="v-h2" class="clip full" src="assets/video/h2.mp4" muted playsinline data-start="1.300" data-duration="1.600" data-media-start="0" data-track-index="1"></video></div>
+      <div id="w-a_0" class="vw" style="z-index:3"><video id="v-a_0" class="clip full" src="assets/video/a_0.mp4" muted playsinline data-start="2.900" data-duration="21.420" data-media-start="0" data-track-index="1"></video></div>
+      <div id="w-rvv" class="vw" style="z-index:4"><video id="v-rvv" class="clip full" src="assets/video/rvv.mp4" muted playsinline data-start="24.320" data-duration="2.400" data-media-start="0" data-track-index="1"></video></div>
+      <div id="w-rv_0" class="vw" style="z-index:5"><video id="v-rv_0" class="clip full" src="assets/video/rv_0.mp4" muted playsinline data-start="26.720" data-duration="3.970" data-media-start="0" data-track-index="1"></video></div>
+      <div id="w-rv_1" class="vw" style="z-index:6"><video id="v-rv_1" class="clip full" src="assets/video/rv_1.mp4" muted playsinline data-start="30.690" data-duration="1.380" data-media-start="0" data-track-index="1"></video></div>
+      <div id="w-b_0" class="vw" style="z-index:7"><video id="v-b_0" class="clip full" src="assets/video/b_0.mp4" muted playsinline data-start="32.070" data-duration="9.980" data-media-start="0" data-track-index="1"></video></div>
+      <div id="w-b_1" class="vw" style="z-index:8"><video id="v-b_1" class="clip full" src="assets/video/b_1.mp4" muted playsinline data-start="42.050" data-duration="6.510" data-media-start="0" data-track-index="1"></video></div>
+      <div id="w-b_2" class="vw" style="z-index:9"><video id="v-b_2" class="clip full" src="assets/video/b_2.mp4" muted playsinline data-start="48.560" data-duration="4.460" data-media-start="0" data-track-index="1"></video></div>
+      <div id="w-b_3" class="vw" style="z-index:10"><video id="v-b_3" class="clip full" src="assets/video/b_3.mp4" muted playsinline data-start="53.020" data-duration="13.850" data-media-start="0" data-track-index="1"></video></div>
+      <div id="w-b_4" class="vw" style="z-index:11"><video id="v-b_4" class="clip full" src="assets/video/b_4.mp4" muted playsinline data-start="66.870" data-duration="4.140" data-media-start="0" data-track-index="1"></video></div>
+      <div id="w-b_5" class="vw" style="z-index:12"><video id="v-b_5" class="clip full" src="assets/video/b_5.mp4" muted playsinline data-start="71.010" data-duration="3.370" data-media-start="0" data-track-index="1"></video></div>
+      <div id="w-c_0" class="vw" style="z-index:13"><video id="v-c_0" class="clip full" src="assets/video/c_0.mp4" muted playsinline data-start="74.380" data-duration="2.110" data-media-start="0" data-track-index="1"></video></div>
+      <div id="w-c_1" class="vw" style="z-index:14"><video id="v-c_1" class="clip full" src="assets/video/c_1.mp4" muted playsinline data-start="76.490" data-duration="12.640" data-media-start="0" data-track-index="1"></video></div>
+      <div id="vig"></div><div id="grad"></div>
+      <div id="g1" class="clip hook" data-start="0.0" data-duration="2.9" data-track-index="3" data-track-kind="graphics">
+        <div class="hk-k">Customer order</div><div class="hk-h"><span class="hk-a">Raw 3D print</span><span id="g1b" class="hk-b">→ Hanuman Vahanam</span></div></div>
+      <div id="g2" class="clip card" data-start="3.1" data-duration="6.5" data-track-index="5" data-track-kind="graphics"><div class="cbar"></div><div class="ck">The order</div><div class="ct">A Hanuman Vahanam</div></div>
+      <div id="g3" class="clip chips" data-start="9.7" data-duration="5.2" data-track-index="6" data-track-kind="graphics"><span class="chip" style="--c:#f0c35b"><i></i>For Deepavali</span></div>
+      <div id="g4" class="clip chips" data-start="15.1" data-duration="4.1" data-track-index="6" data-track-kind="graphics"><span class="chip" style="--c:#e8743b"><i></i>Rama seated on top</span></div>
+      <div id="g5" class="clip big" data-start="24.32" data-duration="2.28" data-track-index="7" data-track-kind="graphics"><div class="bw">This.</div></div>
+      <div id="g6" class="clip big" data-start="30.55" data-duration="1.52" data-track-index="7" data-track-kind="graphics"><div class="bw">Fun fact?</div><div class="bs">How it really started</div></div>
+      <div id="g7" class="clip tag " data-start="32.2" data-duration="17.2" data-track-index="4" data-track-kind="graphics"><span class="dot"></span><span class="tk">Print #1</span><span class="tt">Raw print + supports</span></div>
+      <div id="g8" class="clip tag gold" data-start="51.6" data-duration="4.6" data-track-index="4" data-track-kind="graphics"><span class="dot"></span><span class="tk">Print #2</span><span class="tt">Came out perfect</span></div>
+      <div id="g9" class="clip slicer" data-start="56.3" data-duration="5.3" data-track-index="9" data-track-kind="graphics"><div class="sh"><span class="sdot"></span>Print settings tweaked</div><div class="srow"><span>Supports</span><div class="strk"><div id="g9s0" class="sfil"></div><div id="g9k0" class="sknob"></div></div></div><div class="srow"><span>Layer height</span><div class="strk"><div id="g9s1" class="sfil"></div><div id="g9k1" class="sknob"></div></div></div><div class="srow"><span>Orientation</span><div class="strk"><div id="g9s2" class="sfil"></div><div id="g9k2" class="sknob"></div></div></div><div id="g9ok" class="sok">✓ Clean print</div></div>
+      <div id="g10" class="clip chips" data-start="61.7" data-duration="5.1" data-track-index="6" data-track-kind="graphics"><span class="chip" style="--c:#b5893a"><i></i>Brass</span><span class="chip" style="--c:#e9be55"><i></i>Metallic gold</span><span class="chip" style="--c:#f3e2b8"><i></i>Hand-painted</span></div>
+      <div id="g11" class="clip card" data-start="67.0" data-duration="7.2" data-track-index="5" data-track-kind="graphics"><div class="cbar"></div><div class="ck">Built to last</div><div class="ct">Strong support at the back</div></div>
+      <div id="g12" class="clip card" data-start="74.5" data-duration="14.1" data-track-index="5" data-track-kind="graphics"><div class="cbar"></div><div class="ck">Want one like this?</div><div class="ct">Order this design</div></div>
+      <div id="end" class="clip" data-start="88.830" data-duration="3.900" data-track-index="10" data-track-kind="graphics">
+        <div id="endph"><img src="assets/img/photo.jpg" alt=""></div><div id="endsh"></div>
+        <div id="sparks"><i style="left:40px; top:200px; width:3px; height:3px"></i><i style="left:178px; top:411px; width:5px; height:5px"></i><i style="left:315px; top:623px; width:7px; height:7px"></i><i style="left:452px; top:834px; width:3px; height:3px"></i><i style="left:590px; top:1045px; width:5px; height:5px"></i><i style="left:728px; top:1256px; width:7px; height:7px"></i><i style="left:865px; top:1468px; width:3px; height:3px"></i><i style="left:1002px; top:1679px; width:5px; height:5px"></i><i style="left:140px; top:390px; width:7px; height:7px"></i><i style="left:278px; top:602px; width:3px; height:3px"></i><i style="left:415px; top:813px; width:5px; height:5px"></i><i style="left:552px; top:1024px; width:7px; height:7px"></i><i style="left:690px; top:1236px; width:3px; height:3px"></i><i style="left:828px; top:1447px; width:5px; height:5px"></i><i style="left:965px; top:1658px; width:7px; height:7px"></i><i style="left:102px; top:370px; width:3px; height:3px"></i><i style="left:240px; top:581px; width:5px; height:5px"></i><i style="left:378px; top:792px; width:7px; height:7px"></i><i style="left:515px; top:1003px; width:3px; height:3px"></i><i style="left:652px; top:1215px; width:5px; height:5px"></i><i style="left:790px; top:1426px; width:7px; height:7px"></i><i style="left:928px; top:1637px; width:3px; height:3px"></i><i style="left:65px; top:349px; width:5px; height:5px"></i><i style="left:202px; top:560px; width:7px; height:7px"></i></div>
+        <div id="endi"><div class="ek">Hanuman Vahanam</div><div class="en">Eshan Creations</div><div class="er"></div><div class="es">3D printed · hand-painted · made to order</div><div><span class="eh">@e_shan9</span></div></div>
+      </div>
+      <div id="shine"></div><div id="flash"></div>
+      <audio id="voice" class="clip" src="assets/audio/voice.wav" data-start="0" data-duration="92.730" data-track-index="12" data-volume="1"></audio>
+      <audio id="music" class="clip" src="assets/audio/music.wav" data-start="0" data-duration="92.730" data-track-index="10" data-volume="1"></audio>
+      <audio id="sfx" class="clip" src="assets/audio/sfx.wav" data-start="0" data-duration="92.730" data-track-index="11" data-volume="1"></audio>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      gsap.set("#w-h1", { scale: 1.06, transformOrigin: "30% 45%" });
+      tl.to("#w-h1", { scale: 1.1448, duration: 1.300, ease: "none" }, 0.000);
+      gsap.set("#w-h2", { scale: 1.1, transformOrigin: "50% 55%" });
+      tl.to("#w-h2", { scale: 1.166, duration: 1.600, ease: "none" }, 1.300);
+      gsap.set("#w-a_0", { scale: 1.0, transformOrigin: "50% 30%" });
+      tl.to("#w-a_0", { scale: 1.03, duration: 21.420, ease: "none" }, 2.900);
+      tl.set("#w-a_0", { scale: 1.16 }, 6.45);
+      tl.to("#w-a_0", { scale: 1.1832, duration: 17.87, ease: "none" }, 6.45);
+      tl.set("#w-a_0", { scale: 1.0 }, 11.9);
+      tl.to("#w-a_0", { scale: 1.02, duration: 12.42, ease: "none" }, 11.9);
+      tl.set("#w-a_0", { scale: 1.12 }, 15.1);
+      tl.to("#w-a_0", { scale: 1.1424, duration: 9.22, ease: "none" }, 15.1);
+      tl.set("#w-a_0", { scale: 1.0 }, 19.3);
+      tl.to("#w-a_0", { scale: 1.02, duration: 5.02, ease: "none" }, 19.3);
+      gsap.set("#w-rvv", { scale: 1.0, transformOrigin: "50% 50%" });
+      tl.to("#w-rvv", { scale: 1.06, duration: 2.400, ease: "none" }, 24.320);
+      gsap.set("#w-rv_0", { scale: 1.12, transformOrigin: "50% 45%" });
+      tl.to("#w-rv_0", { scale: 1.1536, duration: 3.970, ease: "none" }, 26.720);
+      gsap.set("#w-rv_1", { scale: 1.3, transformOrigin: "50% 30%" });
+      tl.to("#w-rv_1", { scale: 1.352, duration: 1.380, ease: "none" }, 30.690);
+      gsap.set("#w-b_0", { scale: 1.0, transformOrigin: "40% 45%" });
+      tl.to("#w-b_0", { scale: 1.04, duration: 9.980, ease: "none" }, 32.070);
+      tl.set("#w-b_0", { scale: 1.12 }, 36.0);
+      tl.to("#w-b_0", { scale: 1.1424, duration: 6.05, ease: "none" }, 36.0);
+      gsap.set("#w-b_1", { scale: 1.14, transformOrigin: "45% 45%" });
+      tl.to("#w-b_1", { scale: 1.1742, duration: 6.510, ease: "none" }, 42.050);
+      tl.set("#w-b_1", { scale: 1.0 }, 45.2);
+      tl.to("#w-b_1", { scale: 1.02, duration: 3.36, ease: "none" }, 45.2);
+      gsap.set("#w-b_2", { scale: 1.0, transformOrigin: "50% 50%" });
+      tl.to("#w-b_2", { scale: 1.06, duration: 4.460, ease: "none" }, 48.560);
+      gsap.set("#w-b_3", { scale: 1.12, transformOrigin: "55% 50%" });
+      tl.to("#w-b_3", { scale: 1.1536, duration: 13.850, ease: "none" }, 53.020);
+      tl.set("#w-b_3", { scale: 1.0 }, 61.7);
+      tl.to("#w-b_3", { scale: 1.02, duration: 5.17, ease: "none" }, 61.7);
+      gsap.set("#w-b_4", { scale: 1.18, transformOrigin: "55% 55%" });
+      tl.to("#w-b_4", { scale: 1.2154, duration: 4.140, ease: "none" }, 66.870);
+      gsap.set("#w-b_5", { scale: 1.0, transformOrigin: "55% 50%" });
+      tl.to("#w-b_5", { scale: 1.04, duration: 3.370, ease: "none" }, 71.010);
+      gsap.set("#w-c_0", { scale: 1.0, transformOrigin: "50% 40%" });
+      tl.to("#w-c_0", { scale: 1.03, duration: 2.110, ease: "none" }, 74.380);
+      gsap.set("#w-c_1", { scale: 1.14, transformOrigin: "50% 35%" });
+      tl.to("#w-c_1", { scale: 1.1742, duration: 12.640, ease: "none" }, 76.490);
+      tl.set("#w-c_1", { scale: 1.0 }, 83.5);
+      tl.to("#w-c_1", { scale: 1.02, duration: 5.63, ease: "none" }, 83.5);
+      tl.fromTo("#g1 .hk-k", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 0.0);
+      tl.fromTo("#g1 .hk-a", { opacity: 0, yPercent: 60 }, { opacity: 1, yPercent: 0, duration: 0.4, ease: "power4.out" }, 0.05);
+      tl.fromTo("#g1b", { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2.2)" }, 1.3);
+      tl.to("#g1 .hk-a", { opacity: 0, yPercent: -60, duration: 0.2, ease: "power2.in" }, 1.25);
+      tl.fromTo("#g2", { opacity: 0, y: 40, rotationX: -30 }, { opacity: 1, y: 0, rotationX: 0, duration: 0.45, ease: "power3.out" }, 3.1);
+      tl.fromTo("#g2 .cbar", { scaleY: 0 }, { scaleY: 1, transformOrigin: "50% 100%", duration: 0.35, ease: "power2.out" }, 3.2);
+      tl.to("#g2", { opacity: 0, y: 20, duration: 0.22 }, 9.360);
+      tl.fromTo("#g3 .chip", { opacity: 0, y: 30, scale: 0.8 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, stagger: 0.35, ease: "back.out(2)" }, 9.7);
+      tl.to("#g3", { opacity: 0, duration: 0.22 }, 14.660);
+      tl.fromTo("#g4 .chip", { opacity: 0, y: 30, scale: 0.8 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, stagger: 0.35, ease: "back.out(2)" }, 15.1);
+      tl.to("#g4", { opacity: 0, duration: 0.22 }, 18.960);
+      tl.fromTo("#g5 .bw", { opacity: 0, scale: 2.2, rotation: -6 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.4, ease: "back.out(1.8)" }, 24.32);
+      tl.to("#g5", { opacity: 0, scale: 1.1, duration: 0.2 }, 26.380);
+      tl.fromTo("#flash", { opacity: 0.55 }, { opacity: 0, duration: 0.3, ease: "power2.out", immediateRender: false }, 24.32);
+      tl.fromTo("#shine", { x: -1300, opacity: 1 }, { x: 1400, opacity: 1, duration: 0.6, ease: "power2.inOut", immediateRender: false }, 24.32);
+      tl.fromTo("#g6 .bw", { opacity: 0, scale: 2.2, rotation: -6 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.4, ease: "back.out(1.8)" }, 30.55);
+      tl.fromTo("#g6 .bs", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3 }, 30.8);
+      tl.to("#g6", { opacity: 0, scale: 1.1, duration: 0.2 }, 31.850);
+      tl.fromTo("#g7", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, 32.2);
+      tl.to("#g7", { opacity: 0, x: -30, duration: 0.2 }, 49.180);
+      tl.fromTo("#g8", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, 51.6);
+      tl.to("#g8", { opacity: 0, x: -30, duration: 0.2 }, 55.980);
+      tl.fromTo("#g9", { opacity: 0, y: 60, rotationY: -25 }, { opacity: 1, y: 0, rotationY: 0, duration: 0.5, ease: "power3.out" }, 56.3);
+      tl.fromTo("#g9s0", { scaleX: 0.8 }, { scaleX: 0.45, transformOrigin: "0 50%", duration: 0.9, ease: "power2.inOut" }, 56.8);
+      tl.fromTo("#g9k0", { x: 336 }, { x: 189, duration: 0.9, ease: "power2.inOut" }, 56.8);
+      tl.fromTo("#g9s1", { scaleX: 0.6 }, { scaleX: 0.35, transformOrigin: "0 50%", duration: 0.9, ease: "power2.inOut" }, 57.05);
+      tl.fromTo("#g9k1", { x: 252 }, { x: 147, duration: 0.9, ease: "power2.inOut" }, 57.05);
+      tl.fromTo("#g9s2", { scaleX: 0.3 }, { scaleX: 0.7, transformOrigin: "0 50%", duration: 0.9, ease: "power2.inOut" }, 57.3);
+      tl.fromTo("#g9k2", { x: 126 }, { x: 294, duration: 0.9, ease: "power2.inOut" }, 57.3);
+      tl.fromTo("#g9ok", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2.5)" }, 58.35);
+      tl.to("#g9", { opacity: 0, y: 30, duration: 0.25 }, 61.330);
+      tl.fromTo("#g10 .chip", { opacity: 0, y: 30, scale: 0.8 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, stagger: 0.5, ease: "back.out(2)" }, 61.7);
+      tl.to("#g10", { opacity: 0, duration: 0.22 }, 66.560);
+      tl.fromTo("#g11", { opacity: 0, y: 40, rotationX: -30 }, { opacity: 1, y: 0, rotationX: 0, duration: 0.45, ease: "power3.out" }, 67.0);
+      tl.fromTo("#g11 .cbar", { scaleY: 0 }, { scaleY: 1, transformOrigin: "50% 100%", duration: 0.35, ease: "power2.out" }, 67.1);
+      tl.to("#g11", { opacity: 0, y: 20, duration: 0.22 }, 73.960);
+      tl.fromTo("#g12", { opacity: 0, y: 40, rotationX: -30 }, { opacity: 1, y: 0, rotationX: 0, duration: 0.45, ease: "power3.out" }, 74.5);
+      tl.fromTo("#g12 .cbar", { scaleY: 0 }, { scaleY: 1, transformOrigin: "50% 100%", duration: 0.35, ease: "power2.out" }, 74.6);
+      tl.to("#g12", { opacity: 0, y: 20, duration: 0.22 }, 88.360);
+      tl.fromTo("#flash", { opacity: 0.5 }, { opacity: 0, duration: 0.28, ease: "power2.out", immediateRender: false }, 2.9);
+      tl.fromTo("#flash", { opacity: 0.5 }, { opacity: 0, duration: 0.28, ease: "power2.out", immediateRender: false }, 32.07);
+      tl.fromTo("#end", { opacity: 0 }, { opacity: 1, duration: 0.45, ease: "power1.inOut" }, 88.83);
+      tl.fromTo("#endph", { scale: 1.12 }, { scale: 1.0, duration: 3.90, ease: "power2.out" }, 88.83);
+      tl.fromTo("#endi > *", { y: 36, opacity: 0 }, { y: 0, opacity: 1, duration: 0.55, stagger: 0.12, ease: "power3.out" }, 89.17999999999999);
+      tl.fromTo("#endi .er", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.inOut" }, 89.38);
+      tl.fromTo("#sparks i", { opacity: 0, y: 30 }, { opacity: 0.85, y: -60, duration: 3.60, stagger: { each: 0.05 }, ease: "none" }, 89.03);
+      tl.set({}, {}, 92.73);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
