@@ -1,0 +1,64 @@
+{
+ "total": 17.1,
+ "shots": [
+  {
+   "id": "p1",
+   "kind": "scene",
+   "src_time": null,
+   "at": 0.0,
+   "dur": 5.2,
+   "why": "HOOK: the statue prints layer by layer on a build plate under a hotend, then is painted by a brush stroke"
+  },
+  {
+   "id": "d1",
+   "kind": "still",
+   "src_time": 0.167,
+   "at": 5.2,
+   "dur": 1.4,
+   "why": "detail: sword and gold hilt"
+  },
+  {
+   "id": "d2",
+   "kind": "still",
+   "src_time": 0.167,
+   "at": 6.6,
+   "dur": 1.4,
+   "why": "detail: gold ornaments"
+  },
+  {
+   "id": "d3",
+   "kind": "still",
+   "src_time": 0.167,
+   "at": 8.0,
+   "dur": 1.4,
+   "why": "detail: painted drape and kneeling pose"
+  },
+  {
+   "id": "rv",
+   "kind": "scene",
+   "src_time": null,
+   "at": 9.4,
+   "dur": 2.2,
+   "why": "parallax pull-back: statue layer and background converge to the real frame"
+  },
+  {
+   "id": "tn",
+   "kind": "video",
+   "src_time": [
+    0.167,
+    1.787
+   ],
+   "at": 11.6,
+   "dur": 1.6,
+   "why": "real footage: the statue is turned"
+  },
+  {
+   "id": "ec",
+   "kind": "scene",
+   "src_time": null,
+   "at": 13.2,
+   "dur": 3.9,
+   "why": "podium end card"
+  }
+ ]
+}
