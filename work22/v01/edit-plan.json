@@ -1,0 +1,228 @@
+{
+ "title": "Statue showcase reel v01 (work22)",
+ "source": "source/A001_11152346_C016.mov (Blackmagic Camera on iPhone, 2160x3840 portrait, 24 fps, Rec.709). Usable: 0.00-1.80 s. Still = frame at 0.167 s.",
+ "grading": null,
+ "shots": [
+  {
+   "id": "p1",
+   "kind": "still",
+   "src_time": 0.167,
+   "dur": 4.6,
+   "anchor": [
+    925,
+    1975
+   ],
+   "screen": [
+    540,
+    1080
+   ],
+   "cw0": 820,
+   "cw1": 690,
+   "why": "HOOK: statue face appears as a print (scan line), then is painted (brush reveal)",
+   "print": {
+    "from": 50,
+    "scan": [
+     0.0,
+     1.9
+    ],
+    "paint": [
+     2.3,
+     3.5
+    ]
+   }
+  },
+  {
+   "id": "d1",
+   "kind": "still",
+   "src_time": 0.167,
+   "dur": 1.45,
+   "anchor": [
+    430,
+    1990
+   ],
+   "screen": [
+    400,
+    1180
+   ],
+   "cw0": 760,
+   "cw1": 690,
+   "why": "detail: sword and gold hilt",
+   "flash_in": true
+  },
+  {
+   "id": "d2",
+   "kind": "still",
+   "src_time": 0.167,
+   "dur": 1.45,
+   "anchor": [
+    987,
+    2462
+   ],
+   "screen": [
+    620,
+    1120
+   ],
+   "cw0": 820,
+   "cw1": 740,
+   "why": "detail: gold ornaments"
+  },
+  {
+   "id": "d3",
+   "kind": "still",
+   "src_time": 0.167,
+   "dur": 1.45,
+   "anchor": [
+    1075,
+    3150
+   ],
+   "screen": [
+    600,
+    1300
+   ],
+   "cw0": 1150,
+   "cw1": 1040,
+   "why": "detail: painted drape and kneeling pose"
+  },
+  {
+   "id": "rv",
+   "kind": "still",
+   "src_time": 0.167,
+   "dur": 2.1,
+   "anchor": [
+    1050,
+    2625
+   ],
+   "screen": [
+    525,
+    1312.5
+   ],
+   "cw0": 1150,
+   "cw1": 2160,
+   "ease": "power2.inOut",
+   "why": "pull back from the statue to reveal the maker holding it",
+   "flash_in": true
+  },
+  {
+   "id": "tn",
+   "kind": "video",
+   "src": "turn.mp4",
+   "src_time": [
+    0.167,
+    1.8
+   ],
+   "dur": 1.6,
+   "why": "real footage resumes: the statue is turned to show its side and back"
+  },
+  {
+   "id": "ec",
+   "kind": "blank",
+   "dur": 3.6,
+   "why": "end card"
+  }
+ ],
+ "titles": [
+  {
+   "start": 0.0,
+   "end": 2.3,
+   "lines": [
+    [
+     "k",
+     "Step 1 · Print"
+    ],
+    [
+     "h",
+     "Printed layer"
+    ],
+    [
+     "h",
+     "by layer"
+    ]
+   ]
+  },
+  {
+   "start": 2.3,
+   "end": 4.6,
+   "lines": [
+    [
+     "k",
+     "Step 2 · Paint"
+    ],
+    [
+     "h",
+     "Then painted"
+    ],
+    [
+     "h hl",
+     "by hand"
+    ]
+   ],
+   "hl": true
+  },
+  {
+   "start": 4.6,
+   "end": 8.95,
+   "lines": [
+    [
+     "k",
+     "The details"
+    ]
+   ]
+  },
+  {
+   "start": 9.45,
+   "end": 12.65,
+   "lines": [
+    [
+     "k",
+     "Step 3 · Done"
+    ],
+    [
+     "h",
+     "The finished piece"
+    ]
+   ]
+  }
+ ],
+ "callouts": [
+  {
+   "shot": "d1",
+   "kicker": "Detail 01",
+   "text": "Raised sword",
+   "label_at": [
+    600,
+    900
+   ],
+   "side": "r"
+  },
+  {
+   "shot": "d2",
+   "kicker": "Detail 02",
+   "text": "Gold ornaments",
+   "label_at": [
+    330,
+    820
+   ],
+   "side": "r"
+  },
+  {
+   "shot": "d3",
+   "kicker": "Detail 03",
+   "text": "Painted drape",
+   "label_at": [
+    300,
+    1020
+   ],
+   "side": "r"
+  }
+ ],
+ "endcard": {
+  "kicker": "3D printed · hand-painted",
+  "name": "Eshan Creations",
+  "lines": [
+   "Custom statues, made to order"
+  ],
+  "handle": "@e_shan9",
+  "shot": "ec"
+ },
+ "grade_note": "Baked: grade.py -> v01/grade.cube applied with ffmpeg lut3d to hero stills, grey still and turn.mp4; vignette is an overlay layer."
+}

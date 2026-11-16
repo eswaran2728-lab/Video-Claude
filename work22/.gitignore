@@ -1,0 +1,8 @@
+source/
+analysis/frames/
+analysis/*.wav
+v*/assets/img/
+v*/assets/video/
+v*/assets/audio/
+v*/renders/
+v*/.hyperframes/

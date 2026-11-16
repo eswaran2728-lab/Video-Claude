@@ -1,0 +1,64 @@
+{
+ "total": 16.25,
+ "shots": [
+  {
+   "id": "p1",
+   "kind": "still",
+   "src_time": 0.167,
+   "at": 0.0,
+   "dur": 4.6,
+   "why": "HOOK: statue face appears as a print (scan line), then is painted (brush reveal)"
+  },
+  {
+   "id": "d1",
+   "kind": "still",
+   "src_time": 0.167,
+   "at": 4.6,
+   "dur": 1.45,
+   "why": "detail: sword and gold hilt"
+  },
+  {
+   "id": "d2",
+   "kind": "still",
+   "src_time": 0.167,
+   "at": 6.05,
+   "dur": 1.45,
+   "why": "detail: gold ornaments"
+  },
+  {
+   "id": "d3",
+   "kind": "still",
+   "src_time": 0.167,
+   "at": 7.5,
+   "dur": 1.45,
+   "why": "detail: painted drape and kneeling pose"
+  },
+  {
+   "id": "rv",
+   "kind": "still",
+   "src_time": 0.167,
+   "at": 8.95,
+   "dur": 2.1,
+   "why": "pull back from the statue to reveal the maker holding it"
+  },
+  {
+   "id": "tn",
+   "kind": "video",
+   "src_time": [
+    0.167,
+    1.8
+   ],
+   "at": 11.05,
+   "dur": 1.6,
+   "why": "real footage resumes: the statue is turned to show its side and back"
+  },
+  {
+   "id": "ec",
+   "kind": "blank",
+   "src_time": null,
+   "at": 12.65,
+   "dur": 3.6,
+   "why": "end card"
+  }
+ ]
+}
