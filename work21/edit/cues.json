@@ -1,0 +1,129 @@
+{
+ "cues": [
+  {
+   "t": 2.365,
+   "sfx": "curated/zoom-swish.wav",
+   "gain_db": -16
+  },
+  {
+   "t": 2.415,
+   "sfx": "curated/hook-impact.wav",
+   "gain_db": -8
+  },
+  {
+   "t": 4.83,
+   "sfx": "curated/zoom-swish.wav",
+   "gain_db": -14
+  },
+  {
+   "t": 5.434,
+   "sfx": "curated/ui-pop.wav",
+   "gain_db": -15
+  },
+  {
+   "t": 6.038,
+   "sfx": "curated/ui-pop.wav",
+   "gain_db": -15
+  },
+  {
+   "t": 6.641,
+   "sfx": "curated/ui-pop.wav",
+   "gain_db": -15
+  },
+  {
+   "t": 7.245,
+   "sfx": "tick.wav",
+   "gain_db": -14
+  },
+  {
+   "t": 7.547,
+   "sfx": "tick.wav",
+   "gain_db": -14
+  },
+  {
+   "t": 8.06,
+   "sfx": "curated/metallic-riser.wav",
+   "gain_db": -13
+  },
+  {
+   "t": 9.66,
+   "sfx": "sub-impact.wav",
+   "gain_db": -10
+  },
+  {
+   "t": 16.905,
+   "sfx": "curated/zoom-swish.wav",
+   "gain_db": -15
+  },
+  {
+   "t": 24.15,
+   "sfx": "curated/zoom-swish.wav",
+   "gain_db": -12
+  },
+  {
+   "t": 24.753,
+   "sfx": "thock.wav",
+   "gain_db": -14
+  },
+  {
+   "t": 25.357,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -20
+  },
+  {
+   "t": 28.376,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -20
+  },
+  {
+   "t": 31.395,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -20
+  },
+  {
+   "t": 33.81,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -20
+  },
+  {
+   "t": 36.225,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -20
+  },
+  {
+   "t": 38.64,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -20
+  },
+  {
+   "t": 41.055,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -20
+  },
+  {
+   "t": 45.884,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -20
+  },
+  {
+   "t": 45.884,
+   "sfx": "sub-impact.wav",
+   "gain_db": -11
+  },
+  {
+   "t": 45.934,
+   "sfx": "sparkle.wav",
+   "gain_db": -12
+  },
+  {
+   "t": 46.488,
+   "sfx": "shimmer.wav",
+   "gain_db": -17
+  },
+  {
+   "t": 53.279,
+   "sfx": "thock.wav",
+   "gain_db": -12
+  }
+ ]
+}

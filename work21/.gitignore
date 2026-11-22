@@ -1,0 +1,14 @@
+src/
+audio/
+renders/
+music/
+*.mp4
+edit/assets/v/
+edit/assets/p/
+edit/assets/*.wav
+edit/.hyperframes/
+__pycache__/
+*.log
+sheets/f041.png
+sheets/*.png
+sheets/snap1/*.png

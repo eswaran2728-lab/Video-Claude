@@ -1,0 +1,55 @@
+{
+ "IMG_2025": {
+  "lang": "ms",
+  "prob": 0.81,
+  "segs": [
+   {
+    "s": 0.0,
+    "e": 5.76,
+    "t": "Terima kasih kerana menonton.",
+    "p": -0.34,
+    "ns": 0.51
+   }
+  ]
+ },
+ "IMG_1918": {
+  "lang": "jw",
+  "prob": 0.61,
+  "segs": [
+   {
+    "s": 10.1,
+    "e": 18.86,
+    "t": "Sampai jumpa di video selanjutnya.",
+    "p": -0.76,
+    "ns": 0.65
+   }
+  ]
+ },
+ "IMG_1921": {
+  "lang": "jw",
+  "prob": 0.42,
+  "segs": [
+   {
+    "s": 28.58,
+    "e": 29.98,
+    "t": "Assalamualaikum",
+    "p": -0.67,
+    "ns": 0.51
+   },
+   {
+    "s": 49.34,
+    "e": 52.14,
+    "t": "Selamat malam",
+    "p": -0.38,
+    "ns": 0.18
+   },
+   {
+    "s": 60.0,
+    "e": 62.6,
+    "t": "Selamat malam",
+    "p": -0.2,
+    "ns": 0.06
+   }
+  ]
+ }
+}
