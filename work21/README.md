@@ -1,9 +1,13 @@
 # Silambam at Hari Sukan Negara, Sepang 2026: event reel
 
 9:16, 1080x1920, 30 fps, HyperFrames 0.8.193.
-- **Current:** v02 preview, `PREVIEW_silambam_hari_sukan_negara_sepang_v02.mp4` (2:11, draft render quality; project `edit_v02/`).
+- **FINAL (approved v02):** `FINAL_silambam_hari_sukan_negara_sepang_v02_1080x1920.mp4`.
+  - 2:11.5, 1080x1920, 30 fps, 3942 frames, high-quality render; −14.0 LUFS, −1.9 dBFS peak.
+  - 0 decode errors; audio lag 0 ms; the only dark frames are the closing fade.
+  - Contact sheet: `sheets/final_v02_sheet.jpg`.
+- v02 preview: `PREVIEW_silambam_hari_sukan_negara_sepang_v02.mp4` (draft render quality; project `edit_v02/`).
 - v01 is kept unchanged: `PREVIEW_..._v01.mp4`, 61 s, project `edit/`.
-- No final export has been made and nothing is published.
+- Nothing is published.
 
 ## v02: "use all the videos and pics, about 2 minutes, fast pace, motion graphics, Mahaguru logo at top, Mahaguru Sri S Arumugam students, a good Tamil song"
 Built from `plan21_v02.py`, `build21_v02.py` (+ `build21_v02.css`), `render21.py` / `mix21.py` with `VERSION=v02`.
