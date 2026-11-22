@@ -104,3 +104,15 @@ Final, only after approval: `render --quality high`, then `master_final.sh`.
 - Audio/mix lag: 0 ms at 5, 25 and 50 s. The only dark frame is the closing fade.
 - `hyperframes check`: 0 errors. The 2 warnings are structural (one large composition), the same pattern work15 rendered with.
 - Snapshots and sheets: `sheets/snap1`, `sheets/preview_v01_sheet.jpg`.
+
+## v03: "Add this at last"
+- **What it is:** the approved v02 followed by the creator's `FINAL_Silambam_Masters_Intro_v02_1080x1920.mp4` (from work9; 15 s, 1080x1920 30 fps,
+  with its own music). It is copied to `src/append/masters_intro_v02.mp4`, which is not in git.
+- **Script:** `append_v03.sh IN OUT`.
+  - One x264 CRF 16 re-encode through the concat filter.
+  - 30 ms / 20 ms audio fades at the join, a limiter, then the −14 LUFS master.
+- **The join:** the v02 end card fades to black as its song ends; the intro opens on its own dark logo screen.
+- **Preview** `PREVIEW_silambam_hari_sukan_negara_sepang_v03.mp4` (v02 preview + intro):
+  - 2:26.6, 4392 frames (3942 + 450), −14.0 LUFS, −2.5 dBFS peak, 0 decode errors.
+- **Final, after approval:** `./append_v03.sh FINAL_silambam_hari_sukan_negara_sepang_v02_1080x1920.mp4 FINAL_silambam_hari_sukan_negara_sepang_v03_1080x1920.mp4`.
+- **Note:** work9 describes the intro's music as a temporary reference-audio bed; it is kept as supplied.
