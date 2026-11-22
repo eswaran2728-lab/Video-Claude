@@ -1,0 +1,52 @@
+@font-face { font-family: "IDBI"; src: url("assets/fonts/InterDisplay-BlackItalic.otf"); }
+@font-face { font-family: "IDB"; src: url("assets/fonts/InterDisplay-Black.otf"); }
+@font-face { font-family: "IEBI"; src: url("assets/fonts/InterDisplay-ExtraBoldItalic.otf"); }
+@font-face { font-family: "ISB"; src: url("assets/fonts/Inter-SemiBold.otf"); }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: {INK}; }
+#root { position: absolute; inset: 0; overflow: hidden; }
+.vid { position: absolute; inset: 0; width: 1080px; height: 1920px; object-fit: cover; transform-origin: 50% 40%; }
+#gfx { position: absolute; inset: 0; }
+.full { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+.card { position: absolute; left: 0; width: 1080px; object-fit: cover; box-shadow: 0 30px 80px rgba(0,0,0,.6); }
+.layer { position: absolute; inset: 0; }
+.stripe { position: absolute; left: -40px; width: 1160px; height: 26px; transform: skewY(-4deg); }
+.word { position: absolute; left: 0; top: 1225px; width: 1080px; text-align: center; font-family: "IDBI"; font-size: 168px; line-height: 1; color: {Y};
+        letter-spacing: 2px; -webkit-text-stroke: 3px {INK}; text-shadow: 0 10px 0 {INK}, 0 18px 40px rgba(0,0,0,.55); }
+.sub { position: absolute; left: 140px; top: 1430px; width: 800px; text-align: center; font-family: "ISB"; font-size: 34px; letter-spacing: 4px; color: #fff;
+       background: rgba(11,11,16,.78); padding: 14px 0; border-radius: 10px; }
+#evBars { position: absolute; left: 0; top: 1188px; width: 1080px; }
+.bar { height: 12px; margin-bottom: 6px; transform: skewX(-20deg); width: 1100px; }
+.panel { position: absolute; left: 72px; top: 1240px; width: 936px; height: 470px; background: rgba(11,11,16,.84); border-radius: 22px; padding: 34px 40px; }
+.evs { font-family: "ISB"; font-size: 34px; letter-spacing: 8px; color: #fff; }
+.evbig { font-family: "IDBI"; font-size: 78px; line-height: 1.15; margin-top: 6px; white-space: nowrap; }
+.evbig span { display: inline-block; }
+.evsub { font-family: "IEBI"; font-size: 40px; color: #fff; letter-spacing: 1px; margin-top: 4px; }
+.pill { display: flex; align-items: center; gap: 16px; font-family: "ISB"; font-size: 36px; color: #fff; margin-top: 22px; }
+.hdband { position: absolute; left: 0; top: 0; width: 1080px; height: 430px; background: linear-gradient(180deg, rgba(11,11,16,.72), rgba(11,11,16,.45) 60%, rgba(11,11,16,0)); }
+.hd { position: absolute; left: 180px; top: 112px; width: 720px; text-align: center; padding: 10px 0 12px; border-radius: 22px; background: rgba(11,11,16,.66); }
+#hdLogo { width: 128px; height: 126px; display: block; margin: 0 auto; transform-origin: 50% 50%; filter: drop-shadow(0 4px 10px rgba(0,0,0,.5)); }
+.hd1 { white-space: nowrap; font-family: "IDB"; font-size: 34px; letter-spacing: 3px; color: {GOLD}; margin-top: 8px; text-shadow: 0 2px 8px rgba(0,0,0,.7); }
+.hd2 { font-family: "ISB"; font-size: 28px; letter-spacing: 10px; color: #fff; margin-top: 2px; text-shadow: 0 2px 8px rgba(0,0,0,.7); }
+.rv1 { position: absolute; left: 0; top: 1420px; width: 1080px; text-align: center; font-family: "IDBI"; font-size: 64px; color: {GOLD}; text-shadow: 0 6px 0 {INK}; }
+.rv2 { position: absolute; left: 0; top: 1500px; width: 1080px; text-align: center; font-family: "IDBI"; font-size: 120px; color: #fff; letter-spacing: 6px; text-shadow: 0 8px 0 {INK}; }
+.tbar { position: absolute; left: 0; top: 440px; width: 1080px; height: 270px; background: linear-gradient(90deg, rgba(11,11,16,.9), rgba(11,11,16,.5)); }
+.tt { position: absolute; left: 72px; top: 440px; font-family: "IDBI"; font-size: 116px; line-height: 1.1; color: {Y}; }
+.tag { position: absolute; left: 72px; top: 1500px; display: flex; align-items: center; gap: 16px; padding: 14px 26px 14px 18px; background: rgba(11,11,16,.8);
+       border-radius: 12px; font-family: "IDBI"; font-size: 52px; color: #fff; letter-spacing: 2px; }
+.tag i { width: 14px; height: 52px; display: block; transform: skewX(-15deg); }
+.thbg { position: absolute; left: 0; top: 420px; width: 1080px; height: 420px; background: linear-gradient(180deg, rgba(11,11,16,0), rgba(11,11,16,.82) 25%, rgba(11,11,16,.82) 75%, rgba(11,11,16,0)); }
+.parts { position: absolute; left: 540px; top: 540px; }
+.pt { position: absolute; display: block; border-radius: 50%; background: {Y}; box-shadow: inset -3px -3px 0 #c88a00; }
+.thw { position: absolute; left: 0; top: 470px; width: 1080px; text-align: center; font-family: "IDBI"; font-size: 150px; line-height: 1; color: {Y}; text-shadow: 0 8px 0 {INK}; }
+.thc { position: absolute; left: 0; top: 645px; width: 1080px; text-align: center; font-family: "IDB"; font-size: 54px; color: #fff; letter-spacing: 10px; }
+.thl { position: absolute; left: 0; top: 725px; width: 1080px; text-align: center; font-family: "ISB"; font-size: 38px; color: #ffe9a8; }
+.wc { position: absolute; width: 120px; height: 160px; border: 2px solid {INK}; }
+.wallt { position: absolute; left: 0; top: 820px; width: 1080px; text-align: center; }
+.w1 { font-family: "IDBI"; font-size: 84px; color: {Y}; text-shadow: 0 6px 0 {INK}; }
+.w2 { font-family: "IDBI"; font-size: 110px; color: #fff; text-shadow: 0 8px 0 {INK}; }
+.enlogo { position: absolute; left: 340px; top: 400px; width: 400px; height: 393px; filter: drop-shadow(0 10px 30px rgba(0,0,0,.6)); }
+.enb1 { position: absolute; left: 0; top: 840px; width: 1080px; text-align: center; font-family: "IDBI"; font-size: 64px; color: {GOLD}; text-shadow: 0 5px 0 {INK}; }
+.enb2 { position: absolute; left: 0; top: 920px; width: 1080px; text-align: center; font-family: "IDBI"; font-size: 104px; color: #fff; letter-spacing: 8px; text-shadow: 0 6px 0 {INK}; }
+.ene { position: absolute; left: 0; top: 1075px; width: 1080px; text-align: center; font-family: "IEBI"; font-size: 40px; line-height: 1.25; color: #fff; }
+.end { position: absolute; left: 0; top: 1200px; width: 1080px; text-align: center; font-family: "ISB"; font-size: 34px; color: {Y}; letter-spacing: 2px; }

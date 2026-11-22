@@ -12,3 +12,10 @@ __pycache__/
 sheets/f041.png
 sheets/*.png
 sheets/snap1/*.png
+check_v02.log
+edit_v02/assets/v/
+edit_v02/assets/p/
+edit_v02/assets/t/
+edit_v02/assets/*.wav
+edit_v02/.hyperframes/
+sheets/snap_v02*/*.png

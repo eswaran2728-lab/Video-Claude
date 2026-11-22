@@ -1,8 +1,43 @@
 # Silambam at Hari Sukan Negara, Sepang 2026: event reel
 
-9:16, 1080x1920, 30 fps, 61 s, HyperFrames 0.8.193.
-- **Current:** v01 preview, `PREVIEW_silambam_hari_sukan_negara_sepang_v01.mp4` (draft render quality).
+9:16, 1080x1920, 30 fps, HyperFrames 0.8.193.
+- **Current:** v02 preview, `PREVIEW_silambam_hari_sukan_negara_sepang_v02.mp4` (2:11, draft render quality; project `edit_v02/`).
+- v01 is kept unchanged: `PREVIEW_..._v01.mp4`, 61 s, project `edit/`.
 - No final export has been made and nothing is published.
+
+## v02: "use all the videos and pics, about 2 minutes, fast pace, motion graphics, Mahaguru logo at top, Mahaguru Sri S Arumugam students, a good Tamil song"
+Built from `plan21_v02.py`, `build21_v02.py` (+ `build21_v02.css`), `render21.py` / `mix21.py` with `VERSION=v02`.
+- **All media:**
+  - All 107 photos appear in the cut (`plan21_v02` asserts this).
+  - Both performance clips are cut through (22 moments), plus the medal-group clip.
+  - A photo wall at 1:55 assembles all 107 photos again.
+- **Pace:** about 92 hard cuts on a 110 BPM grid.
+  - Distinct photos get one beat (0.55 s); near-identical burst frames get half a beat; group photos get 1.5 beats.
+  - The song's quieter break (1:10–1:27) slows to longer push-ins on the eight best close-ups ("PROUD MOMENTS").
+  - The song's stop is a freeze-flash; the music then returns to fast cuts ("ON THE STAGE").
+- **Brand:**
+  - The Mahaguru logo (the transparent file supplied for work15) pops in large at 0:09 over the stage lineups, with "MAHAGURU SRI S ARUMUGAM / STUDENTS".
+  - It then flies into a header on a dark backing at the top, held until the end card.
+  - The end card shows the large logo, the name, the event and the date.
+- **Motion graphics:**
+  - SILAMBAM slam; the event card from the banner text; IN ACTION and SLOW MOTION tags.
+  - MEDALS & BELTS, PROUD MOMENTS and ON THE STAGE titles.
+  - TAHNIAH! with particles; the photo wall "PROUD OF EVERY STUDENT".
+  - Push-ins on photos, and flashes on section changes.
+- **Music:** a commercial Tamil film song was not downloaded (no licence; platforms may mute or claim it). The placeholder is
+  "Mumbai Chase", Steve Oxen, Fesliyan Studios: fast, Indian (tabla, sitar, tumbi, shehnai), Indian, not Tamil.
+  - Licence: free for non-commercial use with a link to fesliyanstudios.com in the post's description. Commercial or
+    monetised use needs a donation licence.
+  - Fesliyan notes that TikTok/Instagram/Facebook may limit one track to 60 s.
+  - It plays from its first big hit (song 3.85 s) to its natural end.
+  - The edit can be re-cut to a song file the creator supplies, as in work15 v02.
+- **Checks:**
+  - 1080x1920, 3942 frames, 131.4 s; −14.0 LUFS, −1.9 dBFS peak; full decode with 0 errors.
+  - Audio lag 0 ms at 10, 60 and 110 s.
+  - Cuts sit a median 29 ms from the beat grid.
+  - The only dark frames are the closing fade. Cuts are snapped to the frame grid, which fixed one-frame black gaps at clip→photo cuts.
+  - `hyperframes check`: 0 errors, 3 structural warnings.
+
 
 ## Sources
 **Drive folder** `1r1MNaLtPCPtHEZbUQF0geENsWPKxnyts`, new set uploaded 22.11.2026 (the folder's earlier set is work15).
