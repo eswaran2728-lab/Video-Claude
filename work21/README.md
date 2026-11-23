@@ -152,3 +152,14 @@ Built from `plan21_v05.py`; music, beat grid, titles, header and the appended Ma
 - **Preview** `PREVIEW_silambam_hari_sukan_negara_sepang_v05.mp4` (+ `_small`, 44 MB):
   - 2:26.5, 4392 frames, −14.0 LUFS, −2.3 dBFS peak, 0 decode errors.
   - The only dark frames are the fade into the intro.
+
+## v06: "Cut down the loop video, it comes multiple times"
+- **Change:** v05's performance section alternated the girl's and boy's clips 13 times (0:13–0:35), which read as the same video looping.
+  v06 (`plan21_v06.py`) gives each performer ONE continuous take; everything else is as v05.
+  - **Girl:** IMG_1921 11.0–18.6 s in real time, flowing straight into 18.6–20.3 s at half speed (her jumping spin, SLOW MOTION). Beats 24–44, 10.9 s.
+  - **Photos:** the four performance photos (106, 102, 103, 105), one beat each.
+  - **Boy:** IMG_1918 from 5.4 s, continuing from where his event-card shot ends; follow-crop 1.25x. Beats 48–64, 8.7 s.
+- **No repeats:** no source moment is used twice (asserted).
+- **Preview** `PREVIEW_silambam_hari_sukan_negara_sepang_v06.mp4` (+ `_small`, 44 MB):
+  - 2:26.5, 4392 frames, −14.0 LUFS, −2.3 dBFS peak, 0 decode errors.
+  - The only dark frames are the fade into the intro.
