@@ -1,6 +1,9 @@
 # Silambam at Hari Sukan Negara, Sepang 2026: event reel
 
 9:16, 1080x1920, 30 fps, HyperFrames 0.8.193.
+- **FINAL v03 (approved):** `FINAL_silambam_hari_sukan_negara_sepang_v03_1080x1920.mp4`, the v02 reel plus the Masters Intro.
+  - 2:26.5, 1080x1920, 30 fps, 4392 frames; −14.0 LUFS, −2.5 dBFS peak; 0 decode errors.
+  - Contact sheet: `sheets/final_v03_sheet.jpg`.
 - **FINAL (approved v02):** `FINAL_silambam_hari_sukan_negara_sepang_v02_1080x1920.mp4`.
   - 2:11.5, 1080x1920, 30 fps, 3942 frames, high-quality render; −14.0 LUFS, −1.9 dBFS peak.
   - 0 decode errors; audio lag 0 ms; the only dark frames are the closing fade.
