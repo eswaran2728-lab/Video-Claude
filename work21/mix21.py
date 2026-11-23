@@ -14,7 +14,7 @@ mus = np.pad(mus, ((0, L - len(mus)), (0, 0)))
 fo = int(getattr(P, "FADE", 2.6) * SR); mus[-fo:] *= np.linspace(1, 0, fo)[:, None] ** 1.5; mus[:int(0.05 * SR)] *= np.linspace(0, 1, int(0.05 * SR))[:, None]
 mix = mus * db(-3)
 for s in P.SEGS:                                          # venue sound under its own picture, low
-    if s.get("speed", 1) < 1: continue
+    if s.get("speed", 1) != 1: continue
     t0, t1 = P.b(s["k0"]), P.b(s["k1"]); n = int((t1 - t0) * SR)
     a = load(["ffmpeg", "-nostdin", "-v", "error", "-ss", str(s["src"]), "-t", f"{t1 - t0:.3f}", "-i", f"src/mov/{s['clip']}.MOV", "-af", "highpass=f=120", "-ac", "2", "-ar", str(SR), "-f", "f32le", "-"])[:n]
     f = int(0.04 * SR); env = np.ones(len(a)); env[:f] = np.linspace(0, 1, f); env[-f:] = np.linspace(1, 0, f)

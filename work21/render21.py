@@ -33,7 +33,7 @@ for s in sorted(P.SEGS, key=lambda x: x["k0"]):
         run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-f", "lavfi", "-i", f"color=c=0x0b0b10:s=1080x1920:r=30:d={(f0 - t_frames) / 30 + 1:.3f}", "-frames:v", str(f0 - t_frames),
              "-c:v", "libx264", "-crf", "20", "-preset", "veryfast", "-pix_fmt", "yuv420p", g]); pieces.append(g)
     n = f1 - f0; sp = s.get("speed", 1.0); dur = n / 30
-    tm = (f",minterpolate=fps={round(30 / sp, 3)}:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1,setpts=PTS/{sp},fps=30" if sp < 1 else "")
+    tm = (f",minterpolate=fps={round(30 / sp, 3)}:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1,setpts=PTS/{sp},fps=30" if sp < 1 else (f",setpts=PTS/{sp},fps=30" if sp > 1 else ""))
     z = s.get("zoom")
     if z:                                                  # follow-crop: linear pan between the tracked positions at the segment's ends
         cw, ch = round(SW / z / 2) * 2, round(SW / z * 16 / 9 / 2) * 2

@@ -42,7 +42,7 @@ for j, p in enumerate(P.PHOTOS):
         if j % 4 == 0: CUE(t0, "curated/camera-shutter-light.wav", -21)
 
 # plate push-ins where the action needs emphasis: the shout, the slow-motion spin, the final bow
-for k0, k1, z in ((4, 8, 1.08), (P.SLOWMO[0], P.SLOWMO[1], 1.10)) + (() if P.SLOWMO[1] > 60 or getattr(P, "OUT", "") == "edit_v06" else ((61, 64, 1.06),)):
+for k0, k1, z in ((4, 8, 1.08), (P.SLOWMO[0], P.SLOWMO[1], 1.10)) + (() if P.SLOWMO[1] > 60 or getattr(P, "OUT", "") == "edit_v06" or getattr(P, "PERF2", False) else ((61, 64, 1.06),)):
     SET("#plate", b(k0), {"scale": 1.0}); J("#plate", b(k0), b(k1) - b(k0), {"scale": z}, "sine.inOut"); SET("#plate", b(k1), {"scale": 1.0})
 
 # ---------------- HOOK ----------------
@@ -98,8 +98,8 @@ def title(id_, l1, l2, k0, k1, col=Y):
 def tag(id_, text, k0, k1):
     els.append(f'<div id="{id_}" class="tag"><i style="background:{Y}"></i>{text}</div>')
     show(f"#{id_}", b(k0), b(k1), 0, 0.2); FROM(f"#{id_}", b(k0), 0.35, {"x": -60, "opacity": 0}, {"x": 0, "opacity": 1})
-tag("tgPerf", "IN ACTION", 24.1, 28); tag("tgSlow", "SLOW MOTION", P.SLOWMO[0] + 0.1, P.SLOWMO[1] - 0.1)
-if getattr(P, "OUT", "") == "edit_v06": tag("tgPerf2", "IN ACTION", 48.1, 52)
+tag("tgPerf", "IN ACTION", 24.1, 28); (tag("tgSlow", getattr(P, "SLOW_TAG", "SLOW MOTION"), P.SLOWMO[0] + 0.1, P.SLOWMO[1] - 0.1) if getattr(P, "SLOW_TAG", "SLOW MOTION") else None)
+if getattr(P, "OUT", "") == "edit_v06" or getattr(P, "PERF2", False): tag("tgPerf2", "IN ACTION", 48.1, 52)
 title("tMB", "MEDALS", "&amp; BELTS", 64, 68)
 title("tPM", "PROUD", "MOMENTS", 129, 133)
 title("tOS", "ON THE", "STAGE", 161, 164)

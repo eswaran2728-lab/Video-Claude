@@ -163,3 +163,12 @@ Built from `plan21_v05.py`; music, beat grid, titles, header and the appended Ma
 - **Preview** `PREVIEW_silambam_hari_sukan_negara_sepang_v06.mp4` (+ `_small`, 44 MB):
   - 2:26.5, 4392 frames, −14.0 LUFS, −2.3 dBFS peak, 0 decode errors.
   - The only dark frames are the fade into the intro.
+
+## v07: "Speed up the spinning to 1.5"
+- **Change:** the girl's spin (beats 38–44, about 0:20–0:24) now plays at 1.5x instead of 0.5x slow motion (`plan21_v07.py`).
+  - Source: IMG_1921 18.64 → 23.55 s, continuous with her real-time take.
+  - The SLOW MOTION tag is removed.
+  - The clip's own sound is left out under the sped-up part.
+  - Everything else is as v06.
+- **Preview** `PREVIEW_silambam_hari_sukan_negara_sepang_v07.mp4` (+ `_small`):
+  - 2:26.5, 4392 frames, −14.0 LUFS, −2.3 dBFS peak, 0 decode errors.
