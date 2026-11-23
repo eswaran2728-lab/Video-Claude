@@ -1,0 +1,284 @@
+{
+ "cues": [
+  {
+   "t": 1.091,
+   "sfx": "curated/zoom-swish.wav",
+   "gain_db": -19
+  },
+  {
+   "t": 2.132,
+   "sfx": "curated/zoom-swish.wav",
+   "gain_db": -16
+  },
+  {
+   "t": 2.182,
+   "sfx": "curated/hook-impact.wav",
+   "gain_db": -8
+  },
+  {
+   "t": 4.364,
+   "sfx": "curated/zoom-swish.wav",
+   "gain_db": -14
+  },
+  {
+   "t": 4.909,
+   "sfx": "curated/ui-pop.wav",
+   "gain_db": -15
+  },
+  {
+   "t": 5.454,
+   "sfx": "curated/ui-pop.wav",
+   "gain_db": -15
+  },
+  {
+   "t": 6.0,
+   "sfx": "curated/ui-pop.wav",
+   "gain_db": -15
+  },
+  {
+   "t": 6.546,
+   "sfx": "tick.wav",
+   "gain_db": -14
+  },
+  {
+   "t": 6.818,
+   "sfx": "tick.wav",
+   "gain_db": -14
+  },
+  {
+   "t": 8.727,
+   "sfx": "sub-impact.wav",
+   "gain_db": -10
+  },
+  {
+   "t": 8.777,
+   "sfx": "shimmer.wav",
+   "gain_db": -15
+  },
+  {
+   "t": 9.546,
+   "sfx": "curated/hook-impact.wav",
+   "gain_db": -12
+  },
+  {
+   "t": 10.909,
+   "sfx": "curated/zoom-swish.wav",
+   "gain_db": -15
+  },
+  {
+   "t": 13.091,
+   "sfx": "sub-impact.wav",
+   "gain_db": -12
+  },
+  {
+   "t": 26.728,
+   "sfx": "curated/zoom-swish.wav",
+   "gain_db": -15
+  },
+  {
+   "t": 34.91,
+   "sfx": "curated/zoom-swish.wav",
+   "gain_db": -12
+  },
+  {
+   "t": 35.455,
+   "sfx": "thock.wav",
+   "gain_db": -14
+  },
+  {
+   "t": 35.663,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -21
+  },
+  {
+   "t": 39.096,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -21
+  },
+  {
+   "t": 42.529,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -21
+  },
+  {
+   "t": 45.963,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -21
+  },
+  {
+   "t": 49.763,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -21
+  },
+  {
+   "t": 52.829,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -21
+  },
+  {
+   "t": 55.863,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -21
+  },
+  {
+   "t": 58.529,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -21
+  },
+  {
+   "t": 61.196,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -21
+  },
+  {
+   "t": 64.629,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -21
+  },
+  {
+   "t": 68.829,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -21
+  },
+  {
+   "t": 70.365,
+   "sfx": "curated/zoom-swish.wav",
+   "gain_db": -12
+  },
+  {
+   "t": 70.91,
+   "sfx": "thock.wav",
+   "gain_db": -14
+  },
+  {
+   "t": 86.729,
+   "sfx": "sub-impact.wav",
+   "gain_db": -9
+  },
+  {
+   "t": 87.82,
+   "sfx": "curated/zoom-swish.wav",
+   "gain_db": -12
+  },
+  {
+   "t": 88.365,
+   "sfx": "thock.wav",
+   "gain_db": -14
+  },
+  {
+   "t": 88.496,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -21
+  },
+  {
+   "t": 90.296,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -21
+  },
+  {
+   "t": 92.563,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -21
+  },
+  {
+   "t": 94.363,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -21
+  },
+  {
+   "t": 96.396,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -21
+  },
+  {
+   "t": 98.663,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -21
+  },
+  {
+   "t": 100.229,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -21
+  },
+  {
+   "t": 102.029,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -21
+  },
+  {
+   "t": 103.829,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -21
+  },
+  {
+   "t": 105.863,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -21
+  },
+  {
+   "t": 107.996,
+   "sfx": "curated/camera-shutter-light.wav",
+   "gain_db": -21
+  },
+  {
+   "t": 110.729,
+   "sfx": "sub-impact.wav",
+   "gain_db": -11
+  },
+  {
+   "t": 110.779,
+   "sfx": "sparkle.wav",
+   "gain_db": -12
+  },
+  {
+   "t": 111.275,
+   "sfx": "shimmer.wav",
+   "gain_db": -17
+  },
+  {
+   "t": 115.093,
+   "sfx": "tick.wav",
+   "gain_db": -18
+  },
+  {
+   "t": 115.543,
+   "sfx": "tick.wav",
+   "gain_db": -18
+  },
+  {
+   "t": 115.993,
+   "sfx": "tick.wav",
+   "gain_db": -18
+  },
+  {
+   "t": 116.443,
+   "sfx": "tick.wav",
+   "gain_db": -18
+  },
+  {
+   "t": 116.893,
+   "sfx": "tick.wav",
+   "gain_db": -18
+  },
+  {
+   "t": 117.343,
+   "sfx": "tick.wav",
+   "gain_db": -18
+  },
+  {
+   "t": 118.529,
+   "sfx": "curated/hook-impact.wav",
+   "gain_db": -12
+  },
+  {
+   "t": 122.83,
+   "sfx": "thock.wav",
+   "gain_db": -12
+  },
+  {
+   "t": 122.88,
+   "sfx": "shimmer.wav",
+   "gain_db": -16
+  }
+ ]
+}

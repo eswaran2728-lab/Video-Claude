@@ -1,7 +1,8 @@
 # HyperFrames project for work21 v02 -> edit_v02/index.html (+ edit_v02/cues.json).
 # Fast beat-cut edit of every photo and the clips, with a persistent Mahaguru Sri S Arumugam Students header.
 import json, math, random
-import plan21_v02 as P
+import os, importlib
+P = importlib.import_module("plan21_" + os.environ.get("VERSION", "v02"))
 b, T, B = P.b, P.TOTAL, P.B
 Y, R, BL, INK, GOLD = "#ffc72c", "#e4002b", "#2f5bea", "#0b0b10", "#f2c14e"
 els, init, js, cues = [], [], [], []
@@ -30,7 +31,7 @@ for j, p in enumerate(P.PHOTOS):
         if not p.get("freeze"): FROM(f"#{e}", t0, t1 - t0 + (0.25 if slow else 0), {"scale": 1.0}, {"scale": z}, "sine.inOut")
     else:
         land = P.SIZE[pid][0] > P.SIZE[pid][1]
-        css = "top:555px;height:810px" if land else "top:240px;height:1440px"
+        css = ("top:820px;height:810px" if p.get("low") else "top:555px;height:810px") if land else "top:240px;height:1440px"
         els.append(f'<div id="{e}" class="full"><img class="full" src="assets/p/{pid}_bg.jpg" alt=""><img id="{e}c" class="card" style="{css}" src="assets/p/{pid}.jpg" alt=""></div>')
         show(f"#{e}", t0, t1); FROM(f"#{e}c", t0, t1 - t0, {"scale": 1.0}, {"scale": 1.05}, "sine.inOut")
     if p.get("freeze"):                                   # the music stops: flash + punch-in, then hold
@@ -118,11 +119,11 @@ FROM("#thC", b(204), 0.35, {"y": 24, "opacity": 0}, {"y": 0, "opacity": 1}); FRO
 CUE(b(203), "sub-impact.wav", -11); CUE(b(203) + 0.05, "sparkle.wav", -12); CUE(b(204), "shimmer.wav", -17)
 
 # ---------------- PHOTO WALL: all 107 photos assemble (beats 211-225) ----------------
-ids = sorted(P.SIZE); random.seed(7); order = list(range(len(ids))); random.shuffle(order)
+ids = sorted(P.SIZE); random.seed(7); COLS = 9 if len(ids) <= 108 else 10; CW = 1080 // COLS; order = list(range(len(ids))); random.shuffle(order)
 cells = []
 for n, pid in enumerate(ids):
-    x, y = (n % 9) * 120, (n // 9) * 160
-    cells.append(f'<img id="wc{n}" class="wc" src="assets/t/{pid}.jpg" alt="" style="left:{x}px;top:{y}px">'); INIT(f"#wc{n}", {"opacity": 0, "scale": 0.3})
+    x, y = (n % COLS) * CW, (n // COLS) * 160
+    cells.append(f'<img id="wc{n}" class="wc" src="assets/t/{pid}.jpg" alt="" style="left:{x}px;top:{y}px;width:{CW}px;object-fit:cover">'); INIT(f"#wc{n}", {"opacity": 0, "scale": 0.3})
     t = b(P.WALL[0]) + order[n] / len(ids) * 2.6; FROM(f"#wc{n}", t, 0.3, {"opacity": 0, "scale": 0.3}, {"opacity": 1, "scale": 1}, "back.out(1.6)")
 els.append(f'''<div id="wall" class="layer" style="background:{INK}"><div id="wallIn" class="layer">{"".join(cells)}</div>
   <div id="wallDim" class="full" style="background:rgba(11,11,16,.62)"></div>

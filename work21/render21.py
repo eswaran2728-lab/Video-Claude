@@ -60,14 +60,21 @@ assert frames(f"{O}/assets/v/plate.mp4") == TF, frames(f"{O}/assets/v/plate.mp4"
 def still(src, vf, out): run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-i", src, "-vf", vf, "-q:v", "3", "-frames:v", "1", out])
 done = set()
 for p in P.PHOTOS + ([dict(id=P.END_BG, mode="card", fx=.5)] if hasattr(P, "END_BG") else []):
-    src = f"src/png/File_{p['id']}.png"
+    src = getattr(P, "SRC", {}).get(p["id"], f"src/png/File_{p['id']}.png")
     if p["id"] in done: continue
     done.add(p["id"])
     if p["mode"] == "full":
         still(src, f"scale=1080:1920:flags=lanczos,{GRADE}{VIG}", f"{O}/assets/p/{p['id']}.jpg")
     elif p["mode"] == "cover":                               # 9:16 window of the 3:4 photo at focus fx
-        still(src, f"crop=720:1280:{(960 - 720) * min(max((p.get('fx', .55) - .375) / .25, 0), 1):.0f}:0,scale=1080:1920:flags=lanczos,{GRADE}{VIG}", f"{O}/assets/p/{p['id']}.jpg")
+        still(src, f"crop=ih*9/16:ih:(iw-ih*9/16)*{min(max((p.get('fx', .55) - .375) / .25, 0), 1) if P.SIZE[p['id']][0] < P.SIZE[p['id']][1] else p.get('fx', .5):.3f}:0,scale=1080:1920:flags=lanczos,{GRADE}{VIG}", f"{O}/assets/p/{p['id']}.jpg")
     else:
         still(src, f"scale=1080:-2:flags=lanczos,{GRADE}", f"{O}/assets/p/{p['id']}.jpg")
         still(src, f"scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,{GRADE},boxblur=30:2,eq=brightness=-0.25:saturation=0.85", f"{O}/assets/p/{p['id']}_bg.jpg")
 print("plate", TF, "frames;", len(P.PHOTOS), "photos")
+
+if hasattr(P, "WALL"):                                     # thumbnails for the photo wall (every photo)
+    from PIL import Image, ImageOps
+    os.makedirs(f"{O}/assets/t", exist_ok=True)
+    for pid in P.SIZE:
+        t = ImageOps.exif_transpose(Image.open(getattr(P, "SRC", {}).get(pid, f"src/png/File_{pid}.png"))).convert("RGB"); w, h = t.size; sc = max(120 / w, 160 / h)
+        t = t.resize((round(w * sc), round(h * sc))); l, u = (t.width - 120) // 2, (t.height - 160) // 2; t.crop((l, u, l + 120, u + 160)).save(f"{O}/assets/t/{pid}.jpg", quality=85)

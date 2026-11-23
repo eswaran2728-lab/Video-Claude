@@ -119,3 +119,20 @@ Final, only after approval: `render --quality high`, then `master_final.sh`.
   - 2:26.6, 4392 frames (3942 + 450), −14.0 LUFS, −2.5 dBFS peak, 0 decode errors.
 - **Final, after approval:** `./append_v03.sh FINAL_silambam_hari_sukan_negara_sepang_v02_1080x1920.mp4 FINAL_silambam_hari_sukan_negara_sepang_v03_1080x1920.mp4`.
 - **Note:** work9 describes the intro's music as a temporary reference-audio bed; it is kept as supplied.
+
+## v04: "I added some photos in Google Drive, add those also"
+- **New photos:** four JPGs added to the Drive folder on 23.11.2026, downloaded to `src/new/N1–N4.jpg` (not in git).
+  - N1: a designed "Hari Sukan Negara" poster with the whole medal group, signed "Ainggaran".
+  - N2: two coaches.
+  - N3, N4: the presenter handing a gift hamper on stage.
+- **Placement** (`plan21_v04.py`; everything else as v03):
+  - N3, N4 (one beat each, 9:16 crops with all three people) and N2 (two beats) sit just before the coaches' group photo at 1:47–1:49.
+    The ON THE STAGE run is 4 beats tighter to make room.
+  - N1 is the payoff: the medal-group clip is shortened to 4 beats, then the poster holds under TAHNIAH! CONGRATULATIONS (1:53–1:55).
+  - All four join the photo wall (10 columns, 111 photos).
+  - The Masters Intro is still appended (`append_v03.sh`).
+- **Music:** the beat grid and music are unchanged.
+- **Preview** `PREVIEW_silambam_hari_sukan_negara_sepang_v04.mp4` (+ a smaller `_small` copy):
+  - 2:26.5, 4392 frames, −14.0 LUFS, −2.5 dBFS peak, 0 decode errors.
+  - The only dark frames are the fade into the intro.
+- **Final, after approval:** `VERSION=v04` high render → `master_final.sh` → `append_v03.sh`.
