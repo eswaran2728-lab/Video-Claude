@@ -172,3 +172,11 @@ Built from `plan21_v05.py`; music, beat grid, titles, header and the appended Ma
   - Everything else is as v06.
 - **Preview** `PREVIEW_silambam_hari_sukan_negara_sepang_v07.mp4` (+ `_small`):
   - 2:26.5, 4392 frames, −14.0 LUFS, −2.3 dBFS peak, 0 decode errors.
+
+## FINAL v07 (approved)
+- **Masters:** high-quality render of `edit_v07`, plus the Masters Intro (`append_v03.sh`). 2:26.5, 4392 frames, −14.0 LUFS, 0 decode errors.
+  - `FINAL_silambam_hari_sukan_negara_sepang_v07_1080x1920.mp4`: 144 MB master.
+  - `FINAL_silambam_hari_sukan_negara_sepang_v07_1080x1920_small.mp4`: 43 MB, two-pass 2.3 Mb/s, for download and posting.
+  - `FINAL_silambam_hari_sukan_negara_sepang_v07_720x1280.mp4`: 20 MB.
+- **Dark frames:** the only ones are the fade into the intro.
+- **Contact sheet:** `sheets/final_v07_sheet.jpg`.
