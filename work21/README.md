@@ -136,3 +136,19 @@ Final, only after approval: `render --quality high`, then `master_final.sh`.
   - 2:26.5, 4392 frames, −14.0 LUFS, −2.5 dBFS peak, 0 decode errors.
   - The only dark frames are the fade into the intro.
 - **Final, after approval:** `VERSION=v04` high render → `master_final.sh` → `append_v03.sh`.
+
+## v05: "Remove the duplicate videos that arrive multiple times, make it one time, a bit longer"
+Built from `plan21_v05.py`; music, beat grid, titles, header and the appended Masters Intro are unchanged.
+- **Clips:** every clip moment is used once; the plan asserts that no source ranges overlap.
+  - The hook's spin was repeated by the slow motion. The hook now uses a different move (IMG_1921 28.0 s), and the spin appears only once, in slow motion.
+  - The boy's clip no longer overlaps the event-card shot.
+  - Performances are 13 cuts, mostly 3 beats (1.6 s), where v04 had 19, mostly 2 beats.
+  - The photo 104 insert, a near-duplicate of 103, is dropped.
+- **Photos:** each near-identical burst is reduced to one photo, which holds for the whole burst's time.
+  - Dropped: 001–004, 014, 032, 038, 040, 042, 054, 065, 067, 075, 077, 079, 085, 092, 104.
+  - 99 → 93 photo moments, each 0.69–1.0 s instead of 0.55 s.
+  - 099 is no longer shown twice: the freeze-flash on the song's stop now lands on the last close-up of the break (100).
+- **Photo wall:** shows the 93 unique photos only (8 columns). The end-card background is 076 instead of the dropped 077.
+- **Preview** `PREVIEW_silambam_hari_sukan_negara_sepang_v05.mp4` (+ `_small`, 44 MB):
+  - 2:26.5, 4392 frames, −14.0 LUFS, −2.3 dBFS peak, 0 decode errors.
+  - The only dark frames are the fade into the intro.

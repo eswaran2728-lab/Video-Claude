@@ -28,7 +28,9 @@ for j, p in enumerate(P.PHOTOS):
     if p["mode"] in ("cover", "full"):
         els.append(f'<img id="{e}" class="full" src="assets/p/{pid}.jpg" alt="" style="transform-origin:{origins[j % 4]}">')
         show(f"#{e}", t0, t1 + (0.25 if slow else 0), 0.25 if slow else 0, 0.25 if slow else 0)
-        if not p.get("freeze"): FROM(f"#{e}", t0, t1 - t0 + (0.25 if slow else 0), {"scale": 1.0}, {"scale": z}, "sine.inOut")
+        te = q(b(p["freeze_at"])) if p.get("freeze_at") else t1 + (0.25 if slow else 0)
+        if not p.get("freeze"): FROM(f"#{e}", t0, te - t0, {"scale": 1.0}, {"scale": z}, "sine.inOut")
+        if p.get("freeze_at"): J(f"#{e}", te, 0.35, {"scale": z * 1.12}, "expo.out")
     else:
         land = P.SIZE[pid][0] > P.SIZE[pid][1]
         css = ("top:820px;height:810px" if p.get("low") else "top:555px;height:810px") if land else "top:240px;height:1440px"
@@ -119,7 +121,7 @@ FROM("#thC", b(204), 0.35, {"y": 24, "opacity": 0}, {"y": 0, "opacity": 1}); FRO
 CUE(b(203), "sub-impact.wav", -11); CUE(b(203) + 0.05, "sparkle.wav", -12); CUE(b(204), "shimmer.wav", -17)
 
 # ---------------- PHOTO WALL: all 107 photos assemble (beats 211-225) ----------------
-ids = sorted(P.SIZE); random.seed(7); COLS = 9 if len(ids) <= 108 else 10; CW = 1080 // COLS; order = list(range(len(ids))); random.shuffle(order)
+ids = list(getattr(P, "WALL_IDS", sorted(P.SIZE))); random.seed(7); COLS = math.ceil(len(ids) / 12); CW = 1080 // COLS; order = list(range(len(ids))); random.shuffle(order)
 cells = []
 for n, pid in enumerate(ids):
     x, y = (n % COLS) * CW, (n // COLS) * 160
@@ -135,7 +137,7 @@ INIT("#wallDim", {"opacity": 0}); J("#wallDim", b(P.WALL[0] + 6), 0.5, {"opacity
 FROM("#wallT", b(P.WALL[0] + 6.3), 0.45, {"scale": 1.5, "opacity": 0}, {"scale": 1, "opacity": 1}, "expo.out"); CUE(b(P.WALL[0] + 6.3), "curated/hook-impact.wav", -12)
 
 # ---------------- END CARD ----------------
-els.append(f'''<div id="end" class="layer"><img id="enBg" class="full" src="assets/p/077_bg.jpg" alt="">
+els.append(f'''<div id="end" class="layer"><img id="enBg" class="full" src="assets/p/{getattr(P, 'END_BG', '077')}_bg.jpg" alt="">
   <img id="enLogo" class="enlogo" src="assets/logo/mahaguru.png" alt="">
   <div id="enB1" class="enb1">{P.BRAND1}</div><div id="enB2" class="enb2">{P.BRAND2}</div>
   <div id="enE" class="ene">HARI SUKAN NEGARA<br>{P.EVENT_SUB}</div><div id="enD" class="end">15.11.2026 · {P.EVENT_VENUE}</div></div>''')
