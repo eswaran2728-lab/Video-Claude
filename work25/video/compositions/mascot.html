@@ -23,7 +23,7 @@
     gsap.set("#motif",{opacity:0,scale:.5});
     const tl = gsap.timeline({ paused: true });
     tl.to("#mas",{opacity:1,y:0,duration:0.9,ease:"back.out(1.6)"},0.3);
-    tl.to("#mas",{y:-10,duration:1.0,ease:"sine.inOut",yoyo:true,repeat:87},1.3);
+    tl.to("#mas",{y:-10,duration:1.0,ease:"sine.inOut",yoyo:true,repeat:99},1.3);
     tl.to("#armR",{rotation:-140,duration:0.3,ease:"power2.out"},0.6);
     tl.to("#armR",{rotation:-105,duration:0.22,ease:"sine.inOut",yoyo:true,repeat:5},0.9);
     tl.to("#armR",{rotation:0,duration:0.4,ease:"power2.inOut"},2.3);
@@ -96,13 +96,21 @@
     tl.to("#armR",{rotation:-140,duration:0.3,ease:"power2.out"},83.219);
     tl.to("#armR",{rotation:-105,duration:0.22,ease:"sine.inOut",yoyo:true,repeat:5},83.519);
     tl.to("#armR",{rotation:0,duration:0.4,ease:"power2.inOut"},84.919);
-    tl.to("#armL",{rotation:130,duration:0.3,ease:"back.out(2)"},85.576);
-    tl.to("#armR",{rotation:-130,duration:0.3,ease:"back.out(2)"},85.576);
-    tl.to("#mbody",{y:-70,duration:0.32,ease:"power2.out",yoyo:true,repeat:3},85.576);
-    tl.to("#armL,#armR",{rotation:0,duration:0.45,ease:"power2.inOut"},86.976);
-    tl.to("#armR",{rotation:-140,duration:0.3,ease:"power2.out"},88.092);
-    tl.to("#armR",{rotation:-105,duration:0.22,ease:"sine.inOut",yoyo:true,repeat:5},88.392);
-    tl.to("#armR",{rotation:0,duration:0.4,ease:"power2.inOut"},89.792);
+    tl.to("#armR",{rotation:-95,duration:0.35,ease:"back.out(2)"},88.172);
+    tl.to("#pl,#pr",{x:2,y:-2,duration:0.3},88.172);
+    tl.to("#armR",{rotation:0,duration:0.4,ease:"power2.inOut"},89.772);
+    tl.to("#pl,#pr",{x:0,y:0,duration:0.3},89.772);
+    tl.to("#armL",{rotation:130,duration:0.3,ease:"back.out(2)"},94.194);
+    tl.to("#armR",{rotation:-130,duration:0.3,ease:"back.out(2)"},94.194);
+    tl.to("#mbody",{y:-70,duration:0.32,ease:"power2.out",yoyo:true,repeat:3},94.194);
+    tl.to("#armL,#armR",{rotation:0,duration:0.45,ease:"power2.inOut"},95.594);
+    tl.to("#armL",{rotation:130,duration:0.3,ease:"back.out(2)"},98.069);
+    tl.to("#armR",{rotation:-130,duration:0.3,ease:"back.out(2)"},98.069);
+    tl.to("#mbody",{y:-70,duration:0.32,ease:"power2.out",yoyo:true,repeat:3},98.069);
+    tl.to("#armL,#armR",{rotation:0,duration:0.45,ease:"power2.inOut"},99.469);
+    tl.to("#armR",{rotation:-140,duration:0.3,ease:"power2.out"},100.585);
+    tl.to("#armR",{rotation:-105,duration:0.22,ease:"sine.inOut",yoyo:true,repeat:5},100.885);
+    tl.to("#armR",{rotation:0,duration:0.4,ease:"power2.inOut"},102.285);
     tl.to("#motif",{opacity:1,scale:1,duration:0.6,ease:"back.out(2)"},1.0);
     tl.to("#mb0",{opacity:0,rotationY:90,duration:0.3,ease:"power2.in"},7.317);
     tl.fromTo("#mb1",{opacity:0,rotationY:-90},{opacity:1,rotationY:0,duration:0.4,ease:"back.out(2)",immediateRender:false},7.617);
@@ -119,8 +127,8 @@
     tl.to("#mb4",{opacity:0,rotationY:90,duration:0.3,ease:"power2.in"},76.679);
     tl.fromTo("#mb5",{opacity:0,rotationY:-90},{opacity:1,rotationY:0,duration:0.4,ease:"back.out(2)",immediateRender:false},76.979);
     tl.to("#mbelt,#mknot",{fill:"#111111",duration:0.4},76.979);
-    tl.to("#motif",{opacity:0,duration:0.4},84.976);
-    tl.set({}, {}, 90.688);
+    tl.to("#motif",{opacity:0,duration:0.4},97.469);
+    tl.set({}, {}, 103.181);
     window.__timelines["mascot"] = tl;
   </script>
 </template>

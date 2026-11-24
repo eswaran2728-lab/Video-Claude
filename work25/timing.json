@@ -1186,6 +1186,185 @@
   },
   {
    "id": "s14",
+   "title": "Home screen",
+   "step": null,
+   "dur": 12.493,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Tip! Put the app on your home screen.",
+     "cue": "tip",
+     "t0": 0.6,
+     "t1": 2.586,
+     "words": [
+      {
+       "w": "Tip!",
+       "s": 0.6,
+       "e": 0.82
+      },
+      {
+       "w": "Put",
+       "s": 1.14,
+       "e": 1.24
+      },
+      {
+       "w": "the",
+       "s": 1.24,
+       "e": 1.34
+      },
+      {
+       "w": "app",
+       "s": 1.34,
+       "e": 1.58
+      },
+      {
+       "w": "on",
+       "s": 1.58,
+       "e": 1.7
+      },
+      {
+       "w": "your",
+       "s": 1.7,
+       "e": 1.78
+      },
+      {
+       "w": "home",
+       "s": 1.78,
+       "e": 1.98
+      },
+      {
+       "w": "screen.",
+       "s": 1.98,
+       "e": 2.26
+      }
+     ],
+     "heard": "Tip, put the app on your home screen."
+    },
+    {
+     "i": 1,
+     "text": "Open the menu in your browser.",
+     "cue": "menu",
+     "t0": 3.196,
+     "t1": 4.941,
+     "words": [
+      {
+       "w": "Open",
+       "s": 3.196,
+       "e": 3.436
+      },
+      {
+       "w": "the",
+       "s": 3.436,
+       "e": 3.616
+      },
+      {
+       "w": "menu",
+       "s": 3.616,
+       "e": 3.896
+      },
+      {
+       "w": "in",
+       "s": 3.896,
+       "e": 4.156
+      },
+      {
+       "w": "your",
+       "s": 4.156,
+       "e": 4.236
+      },
+      {
+       "w": "browser.",
+       "s": 4.236,
+       "e": 4.496
+      }
+     ],
+     "heard": "Open the menu in your browser."
+    },
+    {
+     "i": 2,
+     "text": "Tap Add to Home screen.",
+     "cue": "add",
+     "t0": 6.151,
+     "t1": 7.568,
+     "words": [
+      {
+       "w": "Tap",
+       "s": 6.151,
+       "e": 6.331
+      },
+      {
+       "w": "Add",
+       "s": 6.331,
+       "e": 6.631
+      },
+      {
+       "w": "to",
+       "s": 6.631,
+       "e": 6.771
+      },
+      {
+       "w": "Home",
+       "s": 6.771,
+       "e": 6.951
+      },
+      {
+       "w": "screen.",
+       "s": 6.951,
+       "e": 7.211
+      }
+     ],
+     "heard": "Tap Add to home screen."
+    },
+    {
+     "i": 3,
+     "text": "Now it is just one tap away!",
+     "cue": "icon",
+     "t0": 9.018,
+     "t1": 10.843,
+     "words": [
+      {
+       "w": "Now",
+       "s": 9.018,
+       "e": 9.278
+      },
+      {
+       "w": "it",
+       "s": 9.278,
+       "e": 9.478
+      },
+      {
+       "w": "is",
+       "s": 9.478,
+       "e": 9.598
+      },
+      {
+       "w": "just",
+       "s": 9.598,
+       "e": 9.818
+      },
+      {
+       "w": "one",
+       "s": 9.818,
+       "e": 10.118
+      },
+      {
+       "w": "tap",
+       "s": 10.118,
+       "e": 10.338
+      },
+      {
+       "w": "away!",
+       "s": 10.338,
+       "e": 10.618
+      }
+     ],
+     "heard": "Now it is just one tap away."
+    }
+   ],
+   "start": 84.976
+  },
+  {
+   "id": "s15",
    "title": "Outro",
    "step": null,
    "dur": 5.712,
@@ -1205,7 +1384,7 @@
       {
        "w": "job!",
        "s": 0.88,
-       "e": 1.22
+       "e": 1.24
       }
      ],
      "heard": "Great job."
@@ -1256,8 +1435,8 @@
      "heard": "Vanicam."
     }
    ],
-   "start": 84.976
+   "start": 97.469
   }
  ],
- "total": 90.688
+ "total": 103.181
 }

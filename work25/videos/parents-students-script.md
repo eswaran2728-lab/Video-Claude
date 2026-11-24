@@ -1,6 +1,6 @@
 # BeltFlow Lite – Parents & Students guide: voiceover script
 
-Total length: 1:30.69 (1080×1920, 30 fps). Voice: Kokoro `af_heart` (free, local), speed 0.9. Times are from the start of the video.
+Total length: 1:43.18 (1080×1920, 30 fps). Voice: Kokoro `af_heart` (free, local), speed 0.9. Times are from the start of the video.
 
 Captions show the same words, highlighted word by word as they are spoken.
 
@@ -90,14 +90,23 @@ _1:21.23 – 1:24.98_
 - **1:21.83 – 1:22.57** · All done?
 - **1:22.82 – 1:23.81** · Tap Sign out.
 
-## 14 · Outro
-_1:24.98 – 1:30.69_
+## 14 · Home screen
+_1:24.98 – 1:37.47_
 
-- **1:25.58 – 1:26.56** · Great job!
-- **1:26.81 – 1:27.84** · See you at class!
-- **1:28.09 – 1:28.92** · Vanakkam!
+- **1:25.58 – 1:27.56** · Tip! Put the app on your home screen.
+- **1:28.17 – 1:29.92** · Open the menu in your browser.
+- **1:31.13 – 1:32.54** · Tap Add to Home screen.
+- **1:33.99 – 1:35.82** · Now it is just one tap away!
+
+## 15 · Outro
+_1:37.47 – 1:43.18_
+
+- **1:38.07 – 1:39.05** · Great job!
+- **1:39.30 – 1:40.33** · See you at class!
+- **1:40.58 – 1:41.41** · Vanakkam!
 
 ## On-screen extras (no voice)
 - Scene 03 tip: “Get your PIN from your Master.”
 - Scene 08 tip: “Paid cash? Choose Cash instead.”
+- Scene 14 hints: “iPhone: tap Share ⤴” · “Android: tap ⋮” · “1 tap!”
 - Outro: “BeltFlow Lite · PERSATUAN SILAMBAM DAERAH SEPANG · beltflow-lite.vercel.app · Ask your Master for your PIN”

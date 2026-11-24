@@ -358,8 +358,73 @@ S.phone_on([("a", "10-account.png", 1688)])
 S.push(S.c("done", 0.1), 300, 372, 1.8); S.hl("a", "h0", (40, 330, 750, 415), S.c("out"), S.dur)
 S.tap("a", "t1", 227, 372, S.w("out", 1, 0.1)); M(S, S.c("out", 0.4), "wave")
 
-# ---------------- 14 OUTRO ----------------
+# ---------------- 14 HOME SCREEN TIP (no screenshot: browser menu + home screen drawn in HTML) ----------------
 S = Scene("s14"); scenes.append(S)
+SX, SY = SX0, SY0                                   # screen origin on stage (290, 206)
+ITEMS = [("⤴", "Share"), ("⊕", "Add to Home screen"), ("☆", "Bookmark"), ("⌕", "Find in page")]
+rows = "".join(f'<div id="mi{i}" style="display:flex;align-items:center;gap:22px;height:80px;padding:0 34px;font-size:30px;font-weight:{800 if i == 1 else 600};color:#1f1435;border-radius:16px;margin:0 14px">'
+               f'<span style="width:44px;text-align:center;font-size:34px">{ic}</span>{lab}</div>' for i, (ic, lab) in enumerate(ITEMS))
+APPS = [("#4ade80", "Phone"), ("#60a5fa", "Messages"), ("#f472b6", "Photos"), ("#facc15", "Camera"), ("#a78bfa", "Clock"), ("#fb923c", "Maps"), ("#34d399", "WhatsApp"), ("#f87171", "Music"),
+        ("#93c5fd", "Weather"), (None, "BeltFlow"), ("#fcd34d", "Notes"), ("#c4b5fd", "Settings")]
+grid = ""
+for k, (col, lab) in enumerate(APPS):
+    r_, c_ = divmod(k, 4); x = 30 + c_ * 115; y = 150 + r_ * 160
+    if col is None:
+        grid += (f'<div id="bfic" class="a" style="left:{x}px;top:{y}px;width:90px;text-align:center"><div style="width:90px;height:90px;border-radius:22px;background:linear-gradient(145deg,#3b2366,{PLUM2});box-shadow:0 0 0 3px {AMBER};padding:16px 6px">{belt_svg(AMBER, 78)}</div>'
+                 f'<div style="font-size:20px;font-weight:800;color:#fff;margin-top:8px">BeltFlow</div></div>')
+    else:
+        grid += f'<div class="a" style="left:{x}px;top:{y}px;width:90px;text-align:center"><div style="width:90px;height:90px;border-radius:22px;background:{col};opacity:.9"></div><div style="font-size:20px;color:#fff;margin-top:8px;opacity:.9">{lab}</div></div>'
+S.els.append(f'''<div id="cam" class="cam"><div id="flt" class="a" style="left:0;top:0;width:1080px;height:1920px"><div id="ph" class="phone"><div class="scr">
+  <div id="brw" class="ly" style="height:1082px;background:#fff">
+    <div style="height:120px;background:#ececf1;display:flex;align-items:flex-end;gap:12px;padding:0 18px 14px">
+      <div style="flex:1;height:54px;border-radius:27px;background:#fff;font-size:22px;color:#333;line-height:54px;padding-left:22px;font-weight:600">beltflow-lite.vercel.app</div>
+      <div id="dots" style="width:54px;height:54px;border-radius:50%;background:#fff;font-size:36px;line-height:50px;text-align:center;color:#333;font-weight:800">⋮</div></div>
+    <img src="assets/screens/01-login-parent-student.png" style="display:block;width:500px" alt="">
+    <div id="dim" class="a" style="left:0;top:0;width:500px;height:1082px;background:rgba(18,10,33,.5)"></div>
+    <div id="sheet" class="a" style="left:0;top:{1082 - 372}px;width:500px;height:372px;background:#fff;border-radius:28px 28px 0 0;padding-top:22px;box-shadow:0 -10px 30px rgba(0,0,0,.25)">{rows}</div>
+  </div>
+  <div id="home" class="ly" style="height:1082px;background:radial-gradient(90% 60% at 30% 20%,#5b3a8f,#24123f 70%)">
+    <div class="a" style="left:0;top:60px;width:500px;text-align:center;font-size:24px;color:#fff;opacity:.8;font-weight:700">9:41</div>{grid}
+    <div id="bfglow" class="a" style="left:{30 + 115 - 25}px;top:{150 + 320 - 25}px;width:140px;height:140px;border-radius:50%;border:6px solid {AMBER}"></div>
+  </div>
+</div><div class="notch"></div></div></div></div>''')
+S.gs("#ph", {"scale": 0.96, "transformOrigin": "50% 50%"}); S.tw("#ph", 0.05, 0.8, {"scale": 1}, "back.out(1.6)")
+S.js.append(f'tl.to("#flt",{{y:-12,duration:1.3,ease:"sine.inOut",yoyo:true,repeat:7}},1.0);')
+S.gs("#sheet", {"y": 372}); S.gs("#dim", {"opacity": 0}); S.gs("#home", {"x": 500}); S.gs("#bfic", {"scale": 0, "opacity": 0}); S.gs("#bfglow", {"opacity": 0})
+S.add("tipc", f'<span style="font-size:48px">★</span> Tip!', "left:700px;top:190px;font-size:52px", "chip am", S.c("tip", 0.1), S.c("icon"), "pop", ("clean-ding.wav", -18))
+def stage_tap(eid, x, y, t):
+    S.add(f"{eid}r", "", f"left:{x - 45}px;top:{y - 45}px;width:90px;height:90px", "pulse")
+    S.add(eid, FINGER, f"left:{x - 34}px;top:{y - 8}px;width:120px;height:150px;filter:drop-shadow(0 8px 10px rgba(0,0,0,.35))", "a")
+    S.gs(f"#{eid}", {"opacity": 0, "x": 130, "y": 170}); S.gs(f"#{eid}r", {"opacity": 0, "scale": 0.3})
+    S.tw(f"#{eid}", t - 0.75, 0.6, {"opacity": 1, "x": 0, "y": 0}, "power3.out")
+    S.tw(f"#{eid}", t - 0.12, 0.12, {"scale": 0.86}, "power2.in"); S.tw(f"#{eid}", t, 0.25, {"scale": 1}, "back.out(3)")
+    S.ft(f"#{eid}r", t, 0.7, {"opacity": 1, "scale": 0.3}, {"opacity": 0, "scale": 2.6}, "power2.out")
+    S.tw(f"#{eid}", t + 0.9, 0.45, {"opacity": 0, "x": 90, "y": 120}, "power2.in"); S.sfx(t, "curated/ui-click.wav", -12)
+# menu
+dx, dy = SX + 457, SY + 81
+tm = S.w("menu", 1, 0.2); stage_tap("f1", dx, dy, tm)
+S.tw("#dim", tm + 0.2, 0.4, {"opacity": 1}, "power2.out"); S.tw("#sheet", tm + 0.2, 0.6, {"y": 0}, "back.out(1.2)"); S.sfx(tm + 0.2, "curated/zoom-swish.wav", -24)
+S.add("ios", "iPhone: tap Share ⤴", "left:90px;top:1180px;font-size:36px", "chip", tm + 0.5, S.c("add", 0.2), "pop", ("curated/ui-pop.wav", -22))
+S.add("and", "Android: tap ⋮", "left:610px;top:1180px;font-size:36px", "chip", tm + 0.8, S.c("add", 0.2), "pop", ("curated/ui-pop.wav", -22))
+# add to home screen
+ay = SY + 710 + 22 + 80 + 40
+S.tw("#mi1", S.c("add"), 0.3, {"backgroundColor": "#ffe7c2"}, "power2.out")
+S.add("hlA", "", f"left:{SX + 8}px;top:{ay - 46}px;width:484px;height:92px;border:6px solid {AMBER};border-radius:18px;box-shadow:0 0 24px rgba(255,158,27,.8)", "a", S.c("add"), S.w("add", 1, 1.0), "pop")
+ta = S.w("add", 1, 0.2); stage_tap("f2", SX + 300, ay, ta)
+S.tw("#sheet", ta + 0.5, 0.4, {"y": 372}, "power2.in"); S.tw("#dim", ta + 0.5, 0.4, {"opacity": 0}, "power2.in")
+S.tw("#home", ta + 0.8, 0.7, {"x": 0}, "power3.inOut"); S.tw("#brw", ta + 0.8, 0.7, {"x": -500}, "power3.inOut"); S.sfx(ta + 0.8, "curated/zoom-swish.wav", -22)
+S.tw("#bfic", ta + 1.5, 0.6, {"scale": 1, "opacity": 1}, "back.out(2.4)"); S.sfx(ta + 1.5, "curated/ui-pop.wav", -14)
+# one tap away
+ic_x, ic_y = SX + 145 + 45, SY + 470 + 45
+ti = S.c("icon", 0.2)
+for k in range(3): S.ft("#bfglow", ti + 0.5 * k, 1.0, {"opacity": 0.9, "scale": 0.6}, {"opacity": 0, "scale": 1.6}, "power2.out")
+S.burst("hs", ic_x, ic_y, ti + 0.2, 26, tick=False)
+stage_tap("f3", ic_x, ic_y, S.w("icon", 4, 0.3))
+S.add("one", '1 tap!', "left:640px;top:600px;font-size:64px", "chip am", S.w("icon", 4), S.dur, "pop", ("clean-ding.wav", -16))
+M(S, S.c("menu"), "point"); M(S, S.c("icon", 0.2), "cheer")
+
+# ---------------- 15 OUTRO ----------------
+S = Scene("s15"); scenes.append(S)
 S.add("lg", f'''<svg width="300" height="300" viewBox="0 0 100 100"><g transform="rotate(-35 50 50)">{'<rect x="8" y="46" width="84" height="8" rx="4" fill="#c98a4b"/>'}</g><g transform="rotate(35 50 50)"><rect x="8" y="46" width="84" height="8" rx="4" fill="#c98a4b"/></g>
    <rect x="22" y="34" width="56" height="12" rx="4" fill="#fff"/><path d="M45 44 L36 66 L43 66 L50 52 L57 66 L64 66 L55 44 Z" fill="#fff"/><rect x="43" y="31" width="14" height="17" rx="3" fill="#fff"/></svg>''',
       "left:390px;top:260px", "a")
@@ -448,7 +513,7 @@ for i, t in enumerate(STEP_AT[1:], 1):
     ms_js.append(f'tl.to("#mbelt,#mknot",{{fill:"{BELTS[i]}",duration:0.4}},{R(t + 1.6)});')
     CUES.append((R(t + 1.6), "tick.wav", -20))
 # hide motif on intro/outro cards
-ms_js.append(f'tl.to("#motif",{{opacity:0,duration:0.4}},{R(SC["s14"]["start"])});')
+ms_js.append(f'tl.to("#motif",{{opacity:0,duration:0.4}},{R(SC["s15"]["start"])});')
 open("video/compositions/mascot.html", "w").write(f'''<template>
   <style>#root {{ position:absolute; inset:0; overflow:visible; }} .a {{ position:absolute; }}</style>
   <div id="root" data-composition-id="mascot" data-width="1080" data-height="1920">
@@ -468,7 +533,7 @@ open("video/compositions/mascot.html", "w").write(f'''<template>
 # ---------------- captions: one group per voice line, word-by-word highlight, key words stay amber ----------------
 KEY = {"Vanakkam!", "together!", "Parent", "Student.", "phone", "PIN.", "Sign", "in!", "English,", "Malay", "Tamil!", "children.", "belt", "classes", "name",
        "Green", "Red", "Orange", "tests", "fee?", "Pay.", "bank", "Copy!", "bank?", "photo", "Send", "wait.", "checks", "green!", "Notices", "test", "Belts",
-       "next", "Students", "own", "done?", "out.", "Great", "job!", "class!"}
+       "next", "Students", "own", "done?", "out.", "Great", "job!", "class!", "home", "menu", "Add", "Home", "screen.", "one", "tap"}
 cap_els, cap_js, cap_init, srt, n = [], [], [], [], 0
 fmt = lambda t: f"{int(t // 3600):02d}:{int(t % 3600 // 60):02d}:{int(t % 60):02d},{int(round((t % 1) * 1000)) % 1000:03d}"
 lines = [(sc, l) for sc in T["scenes"] for l in sc["lines"]]

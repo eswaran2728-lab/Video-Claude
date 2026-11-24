@@ -37,6 +37,7 @@
     <div id="x12s3" class="a" style="left:540px;top:0;width:181px;height:1920px;background:#16a34a"></div>
     <div id="x12s4" class="a" style="left:720px;top:0;width:181px;height:1920px;background:#2563eb"></div>
     <div id="x12s5" class="a" style="left:900px;top:0;width:181px;height:1920px;background:#111111"></div>
+    <div id="x13p" class="a" style="left:0;top:0;width:1300px;height:1920px;background:linear-gradient(90deg,#ff9e1b 0 70px,#1f1435 70px)"></div>
   </div>
   <script>
     gsap.set("#x0s0",{yPercent:-100});
@@ -72,6 +73,7 @@
     gsap.set("#x12s3",{yPercent:-100});
     gsap.set("#x12s4",{yPercent:-100});
     gsap.set("#x12s5",{yPercent:-100});
+    gsap.set("#x13p",{x:1100});
     const tl = gsap.timeline({ paused: true });
     tl.to("#x0s0",{yPercent:0,duration:0.32,ease:"power2.in"},5.617);
     tl.to("#x0s0",{yPercent:100,duration:0.34,ease:"power2.out"},6.037);
@@ -145,7 +147,9 @@
     tl.to("#x12s4",{yPercent:100,duration:0.34,ease:"power2.out"},85.044);
     tl.to("#x12s5",{yPercent:0,duration:0.32,ease:"power2.in"},84.636);
     tl.to("#x12s5",{yPercent:100,duration:0.34,ease:"power2.out"},85.056);
-    tl.set({}, {}, 90.688);
+    tl.to("#x13p",{x:-110,duration:0.38,ease:"power3.in"},97.089);
+    tl.to("#x13p",{x:-1400,duration:0.4,ease:"power3.out"},97.469);
+    tl.set({}, {}, 103.181);
     window.__timelines["trans"] = tl;
   </script>
 </template>
