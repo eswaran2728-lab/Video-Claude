@@ -1,0 +1,275 @@
+1
+00:00:01,400 --> 00:00:03,146
+Hello, Admin! Vanakkam!
+
+2
+00:00:03,396 --> 00:00:04,897
+Let's fill our Sheet together!
+
+3
+00:00:06,367 --> 00:00:08,156
+We fill the tabs in this order.
+
+4
+00:00:10,086 --> 00:00:11,024
+One by one!
+
+5
+00:00:13,394 --> 00:00:14,497
+First, Config.
+
+6
+00:00:14,747 --> 00:00:16,373
+Type your Persatuan name here.
+
+7
+00:00:17,211 --> 00:00:18,412
+It shows on the app.
+
+8
+00:00:20,866 --> 00:00:21,813
+Belts tab.
+
+9
+00:00:22,063 --> 00:00:23,529
+One row for each belt.
+
+10
+00:00:24,031 --> 00:00:26,094
+Put them in order: 1, 2, 3.
+
+11
+00:00:26,680 --> 00:00:27,937
+Type the colour code.
+
+12
+00:00:28,439 --> 00:00:29,837
+The app paints the belt!
+
+13
+00:00:31,475 --> 00:00:32,270
+New belt?
+
+14
+00:00:32,520 --> 00:00:34,340
+Type it on the next empty row.
+
+15
+00:00:36,102 --> 00:00:36,763
+Easy!
+
+16
+00:00:39,217 --> 00:00:40,310
+Masters tab.
+
+17
+00:00:40,560 --> 00:00:43,313
+Write each Master's Gmail, name and phone.
+
+18
+00:00:44,067 --> 00:00:46,900
+Masters can add their bank details in the app too.
+
+19
+00:00:49,438 --> 00:00:50,429
+Classes tab.
+
+20
+00:00:50,679 --> 00:00:52,193
+One row for each class.
+
+21
+00:00:52,695 --> 00:00:54,584
+Give it a short ID and a name.
+
+22
+00:00:55,086 --> 00:00:56,487
+Then a place and a time.
+
+23
+00:00:58,041 --> 00:00:59,161
+Who teaches it?
+
+24
+00:00:59,411 --> 00:01:00,337
+Tap the arrow.
+
+25
+00:01:01,007 --> 00:01:02,057
+Pick the Master!
+
+26
+00:01:04,763 --> 00:01:05,831
+Students tab.
+
+27
+00:01:06,081 --> 00:01:07,570
+One row for each student.
+
+28
+00:01:08,072 --> 00:01:10,252
+The IC number is very important.
+
+29
+00:01:10,838 --> 00:01:11,846
+Check it twice!
+
+30
+00:01:13,484 --> 00:01:15,608
+Type the IC, name and birthday.
+
+31
+00:01:17,286 --> 00:01:19,075
+Then pick the belt from the list.
+
+32
+00:01:19,997 --> 00:01:21,928
+See? The new belt is already here!
+
+33
+00:01:23,818 --> 00:01:25,214
+Type the monthly fee.
+
+34
+00:01:25,800 --> 00:01:27,130
+Pick Yes for Active.
+
+35
+00:01:27,968 --> 00:01:28,547
+Done!
+
+36
+00:01:31,085 --> 00:01:33,862
+Enrolments tab puts students into classes.
+
+37
+00:01:34,448 --> 00:01:36,490
+One row for each class they join.
+
+38
+00:01:38,128 --> 00:01:39,054
+Tap the arrow.
+
+39
+00:01:39,556 --> 00:01:41,452
+Type a few numbers of the IC.
+
+40
+00:01:42,290 --> 00:01:43,594
+It finds the student!
+
+41
+00:01:45,232 --> 00:01:46,439
+Now pick the class.
+
+42
+00:01:47,361 --> 00:01:49,712
+New classes show up here by themselves!
+
+43
+00:01:52,754 --> 00:01:53,745
+Parents tab.
+
+44
+00:01:53,995 --> 00:01:55,703
+Type the parent's phone and name.
+
+45
+00:01:56,289 --> 00:01:58,862
+In Children, type the kids' IC numbers.
+
+46
+00:02:00,288 --> 00:02:01,729
+Put a comma between them.
+
+47
+00:02:04,519 --> 00:02:06,422
+Access tab says who can sign in.
+
+48
+00:02:08,144 --> 00:02:08,990
+Pick the role:
+
+49
+00:02:09,576 --> 00:02:12,046
+Admin, Master, Parent or Student.
+
+50
+00:02:14,188 --> 00:02:15,518
+Pick Yes for Active.
+
+51
+00:02:16,356 --> 00:02:18,361
+Now give them a PIN from the app.
+
+52
+00:02:21,067 --> 00:02:23,492
+Fees tab fills by itself every month.
+
+53
+00:02:24,162 --> 00:02:25,580
+Green Paid, red Due.
+
+54
+00:02:27,554 --> 00:02:29,193
+Gradings shows belt tests.
+
+55
+00:02:29,695 --> 00:02:31,278
+Masters fill this in the app.
+
+56
+00:02:32,916 --> 00:02:34,567
+Attendance fills by itself
+
+57
+00:02:34,817 --> 00:02:36,429
+when Masters tap in the app.
+
+58
+00:02:36,931 --> 00:02:37,903
+Don't type here!
+
+59
+00:02:39,709 --> 00:02:41,841
+Notices are posted from the app too.
+
+60
+00:02:43,563 --> 00:02:46,515
+You type: Config, Belts, Masters, Classes,
+
+61
+00:02:46,933 --> 00:02:49,447
+Students, Enrolments, Parents, Access.
+
+62
+00:02:49,949 --> 00:02:51,244
+The app does the rest!
+
+63
+00:02:51,914 --> 00:02:53,244
+Four golden rules!
+
+64
+00:02:53,620 --> 00:02:55,203
+Never change the top row.
+
+65
+00:02:55,705 --> 00:02:57,484
+Check every IC number twice.
+
+66
+00:02:57,986 --> 00:02:59,603
+Use the lists when you see them.
+
+67
+00:03:00,105 --> 00:03:02,597
+Don't delete rows. Set Active to No.
+
+68
+00:03:04,319 --> 00:03:05,579
+Great job, Admin!
+
+69
+00:03:05,829 --> 00:03:06,655
+Vanakkam!
