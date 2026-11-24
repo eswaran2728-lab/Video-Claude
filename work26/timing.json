@@ -1,0 +1,1386 @@
+{
+ "voice": "af_heart",
+ "speed": 0.9,
+ "scenes": [
+  {
+   "id": "s01",
+   "title": "Intro",
+   "step": null,
+   "dur": 5.282,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Vanakkam, Master!",
+     "cue": "hello",
+     "t0": 1.4,
+     "t1": 2.733,
+     "words": [
+      {
+       "w": "Vanakkam,",
+       "s": 1.4,
+       "e": 1.96
+      },
+      {
+       "w": "Master!",
+       "s": 1.96,
+       "e": 2.38
+      }
+     ],
+     "heard": "VanaCam Master."
+    },
+    {
+     "i": 1,
+     "text": "Let's learn the app!",
+     "cue": "learn",
+     "t0": 2.983,
+     "t1": 4.112,
+     "words": [
+      {
+       "w": "Let's",
+       "s": 2.983,
+       "e": 3.323
+      },
+      {
+       "w": "learn",
+       "s": 3.323,
+       "e": 3.463
+      },
+      {
+       "w": "the",
+       "s": 3.463,
+       "e": 3.603
+      },
+      {
+       "w": "app!",
+       "s": 3.603,
+       "e": 3.843
+      }
+     ],
+     "heard": "Let's learn the app."
+    }
+   ],
+   "start": 0
+  },
+  {
+   "id": "s02",
+   "title": "Sign in",
+   "step": [
+    1,
+    "Sign in"
+   ],
+   "dur": 7.401,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Open the app.",
+     "cue": "open",
+     "t0": 1.5,
+     "t1": 2.496,
+     "words": [
+      {
+       "w": "Open",
+       "s": 1.5,
+       "e": 1.8
+      },
+      {
+       "w": "the",
+       "s": 1.8,
+       "e": 2.02
+      },
+      {
+       "w": "app.",
+       "s": 2.02,
+       "e": 2.24
+      }
+     ],
+     "heard": "Open the app."
+    },
+    {
+     "i": 1,
+     "text": "Tap Staff.",
+     "cue": "staff",
+     "t0": 2.746,
+     "t1": 3.613,
+     "words": [
+      {
+       "w": "Tap",
+       "s": 2.746,
+       "e": 2.966
+      },
+      {
+       "w": "Staff.",
+       "s": 2.966,
+       "e": 3.286
+      }
+     ],
+     "heard": "Tap staff."
+    },
+    {
+     "i": 2,
+     "text": "Tap Sign in with Google.",
+     "cue": "google",
+     "t0": 4.223,
+     "t1": 5.631,
+     "words": [
+      {
+       "w": "Tap",
+       "s": 4.223,
+       "e": 4.423
+      },
+      {
+       "w": "Sign",
+       "s": 4.423,
+       "e": 4.723
+      },
+      {
+       "w": "in",
+       "s": 4.723,
+       "e": 4.923
+      },
+      {
+       "w": "with",
+       "s": 4.923,
+       "e": 5.063
+      },
+      {
+       "w": "Google.",
+       "s": 5.063,
+       "e": 5.303
+      }
+     ],
+     "heard": "Tap sign in with Google."
+    }
+   ],
+   "start": 5.282
+  },
+  {
+   "id": "s03",
+   "title": "Home",
+   "step": null,
+   "dur": 8.878,
+   "lines": [
+    {
+     "i": 0,
+     "text": "This is your home.",
+     "cue": "home",
+     "t0": 0.6,
+     "t1": 1.713,
+     "words": [
+      {
+       "w": "This",
+       "s": 0.6,
+       "e": 0.82
+      },
+      {
+       "w": "is",
+       "s": 0.82,
+       "e": 0.98
+      },
+      {
+       "w": "your",
+       "s": 0.98,
+       "e": 1.12
+      },
+      {
+       "w": "home.",
+       "s": 1.12,
+       "e": 1.4
+      }
+     ],
+     "heard": "This is your home."
+    },
+    {
+     "i": 1,
+     "text": "See today's classes.",
+     "cue": "classes",
+     "t0": 2.323,
+     "t1": 3.684,
+     "words": [
+      {
+       "w": "See",
+       "s": 2.323,
+       "e": 2.503
+      },
+      {
+       "w": "today's",
+       "s": 2.503,
+       "e": 2.943
+      },
+      {
+       "w": "classes.",
+       "s": 2.943,
+       "e": 3.203
+      }
+     ],
+     "heard": "See today's classes."
+    },
+    {
+     "i": 2,
+     "text": "See payments to check.",
+     "cue": "pay",
+     "t0": 4.294,
+     "t1": 5.673,
+     "words": [
+      {
+       "w": "See",
+       "s": 4.294,
+       "e": 4.494
+      },
+      {
+       "w": "payments",
+       "s": 4.494,
+       "e": 4.874
+      },
+      {
+       "w": "to",
+       "s": 4.874,
+       "e": 5.134
+      },
+      {
+       "w": "check.",
+       "s": 5.134,
+       "e": 5.374
+      }
+     ],
+     "heard": "See payments to check."
+    },
+    {
+     "i": 3,
+     "text": "See reminders to send.",
+     "cue": "rem",
+     "t0": 6.283,
+     "t1": 7.708,
+     "words": [
+      {
+       "w": "See",
+       "s": 6.283,
+       "e": 6.503
+      },
+      {
+       "w": "reminders",
+       "s": 6.503,
+       "e": 6.883
+      },
+      {
+       "w": "to",
+       "s": 6.883,
+       "e": 7.203
+      },
+      {
+       "w": "send.",
+       "s": 7.203,
+       "e": 7.443
+      }
+     ],
+     "heard": "See reminders to send."
+    }
+   ],
+   "start": 12.683
+  },
+  {
+   "id": "s04",
+   "title": "Attendance",
+   "step": [
+    2,
+    "Attendance"
+   ],
+   "dur": 5.629,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Tap Attendance.",
+     "cue": "att",
+     "t0": 1.5,
+     "t1": 2.488,
+     "words": [
+      {
+       "w": "Tap",
+       "s": 1.5,
+       "e": 1.72
+      },
+      {
+       "w": "Attendance.",
+       "s": 1.72,
+       "e": 2.08
+      }
+     ],
+     "heard": "Tap attendance."
+    },
+    {
+     "i": 1,
+     "text": "Pick today's class.",
+     "cue": "pick",
+     "t0": 3.098,
+     "t1": 4.339,
+     "words": [
+      {
+       "w": "Pick",
+       "s": 3.098,
+       "e": 3.278
+      },
+      {
+       "w": "today's",
+       "s": 3.278,
+       "e": 3.738
+      },
+      {
+       "w": "class.",
+       "s": 3.738,
+       "e": 3.978
+      }
+     ],
+     "heard": "Pick today's class."
+    }
+   ],
+   "start": 21.561
+  },
+  {
+   "id": "s05",
+   "title": "Students",
+   "step": null,
+   "dur": 5.373,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Here are your students.",
+     "cue": "kids",
+     "t0": 0.6,
+     "t1": 1.844,
+     "words": [
+      {
+       "w": "Here",
+       "s": 0.6,
+       "e": 0.82
+      },
+      {
+       "w": "are",
+       "s": 0.82,
+       "e": 0.98
+      },
+      {
+       "w": "your",
+       "s": 0.98,
+       "e": 1.08
+      },
+      {
+       "w": "students.",
+       "s": 1.08,
+       "e": 1.4
+      }
+     ],
+     "heard": "Here are your students."
+    },
+    {
+     "i": 1,
+     "text": "One tap for each child.",
+     "cue": "one",
+     "t0": 2.454,
+     "t1": 3.963,
+     "words": [
+      {
+       "w": "One",
+       "s": 2.454,
+       "e": 2.674
+      },
+      {
+       "w": "tap",
+       "s": 2.674,
+       "e": 2.934
+      },
+      {
+       "w": "for",
+       "s": 2.934,
+       "e": 3.194
+      },
+      {
+       "w": "each",
+       "s": 3.194,
+       "e": 3.354
+      },
+      {
+       "w": "child.",
+       "s": 3.354,
+       "e": 3.674
+      }
+     ],
+     "heard": "One tap for each child."
+    }
+   ],
+   "start": 27.19
+  },
+  {
+   "id": "s06",
+   "title": "All present",
+   "step": null,
+   "dur": 6.425,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Everyone came?",
+     "cue": "came",
+     "t0": 0.6,
+     "t1": 1.598,
+     "words": [
+      {
+       "w": "Everyone",
+       "s": 0.6,
+       "e": 0.94
+      },
+      {
+       "w": "came?",
+       "s": 0.94,
+       "e": 1.3
+      }
+     ],
+     "heard": "Everyone came."
+    },
+    {
+     "i": 1,
+     "text": "Tap Mark all present.",
+     "cue": "mark",
+     "t0": 1.848,
+     "t1": 3.24,
+     "words": [
+      {
+       "w": "Tap",
+       "s": 1.848,
+       "e": 2.048
+      },
+      {
+       "w": "Mark",
+       "s": 2.048,
+       "e": 2.348
+      },
+      {
+       "w": "all",
+       "s": 2.348,
+       "e": 2.588
+      },
+      {
+       "w": "present.",
+       "s": 2.588,
+       "e": 2.908
+      }
+     ],
+     "heard": "Tap Mark All Present."
+    },
+    {
+     "i": 2,
+     "text": "So fast!",
+     "cue": "fast",
+     "t0": 4.45,
+     "t1": 5.375,
+     "words": [
+      {
+       "w": "So",
+       "s": 4.45,
+       "e": 4.797
+      },
+      {
+       "w": "fast!",
+       "s": 4.797,
+       "e": 5.374
+      }
+     ],
+     "heard": "is so fast.  [proportional]"
+    }
+   ],
+   "start": 32.563
+  },
+  {
+   "id": "s07",
+   "title": "Absent",
+   "step": null,
+   "dur": 6.468,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Someone absent?",
+     "cue": "abs",
+     "t0": 0.6,
+     "t1": 1.7,
+     "words": [
+      {
+       "w": "Someone",
+       "s": 0.6,
+       "e": 0.92
+      },
+      {
+       "w": "absent?",
+       "s": 0.92,
+       "e": 1.3
+      }
+     ],
+     "heard": "Someone absent."
+    },
+    {
+     "i": 1,
+     "text": "Tap Absent.",
+     "cue": "tapabs",
+     "t0": 1.95,
+     "t1": 2.921,
+     "words": [
+      {
+       "w": "Tap",
+       "s": 1.95,
+       "e": 2.15
+      },
+      {
+       "w": "Absent.",
+       "s": 2.15,
+       "e": 2.71
+      }
+     ],
+     "heard": "Tap Absent."
+    },
+    {
+     "i": 2,
+     "text": "Type why, like Fever.",
+     "cue": "why",
+     "t0": 3.651,
+     "t1": 5.058,
+     "words": [
+      {
+       "w": "Type",
+       "s": 3.651,
+       "e": 3.871
+      },
+      {
+       "w": "why,",
+       "s": 3.871,
+       "e": 4.191
+      },
+      {
+       "w": "like",
+       "s": 4.191,
+       "e": 4.451
+      },
+      {
+       "w": "Fever.",
+       "s": 4.451,
+       "e": 4.811
+      }
+     ],
+     "heard": "Type Y like Fever."
+    }
+   ],
+   "start": 38.988
+  },
+  {
+   "id": "s08",
+   "title": "Submit",
+   "step": null,
+   "dur": 6.672,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Tap Submit.",
+     "cue": "submit",
+     "t0": 0.6,
+     "t1": 1.525,
+     "words": [
+      {
+       "w": "Tap",
+       "s": 0.6,
+       "e": 0.937
+      },
+      {
+       "w": "Submit.",
+       "s": 0.937,
+       "e": 1.525
+      }
+     ],
+     "heard": "Capsubmit.  [proportional]"
+    },
+    {
+     "i": 1,
+     "text": "Done!",
+     "cue": "done",
+     "t0": 2.255,
+     "t1": 2.835,
+     "words": [
+      {
+       "w": "Done!",
+       "s": 2.255,
+       "e": 2.515
+      }
+     ],
+     "heard": "Done."
+    },
+    {
+     "i": 2,
+     "text": "The parent gets a message.",
+     "cue": "msg",
+     "t0": 3.565,
+     "t1": 5.142,
+     "words": [
+      {
+       "w": "The",
+       "s": 3.565,
+       "e": 3.685
+      },
+      {
+       "w": "parent",
+       "s": 3.685,
+       "e": 4.045
+      },
+      {
+       "w": "gets",
+       "s": 4.045,
+       "e": 4.305
+      },
+      {
+       "w": "a",
+       "s": 4.305,
+       "e": 4.465
+      },
+      {
+       "w": "message.",
+       "s": 4.465,
+       "e": 4.725
+      }
+     ],
+     "heard": "The parent gets a message."
+    }
+   ],
+   "start": 45.456
+  },
+  {
+   "id": "s09",
+   "title": "Payments",
+   "step": [
+    3,
+    "Check payments"
+   ],
+   "dur": 13.577,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Parents send fee receipts here.",
+     "cue": "here",
+     "t0": 1.5,
+     "t1": 3.208,
+     "words": [
+      {
+       "w": "Parents",
+       "s": 1.5,
+       "e": 1.8
+      },
+      {
+       "w": "send",
+       "s": 1.8,
+       "e": 2.1
+      },
+      {
+       "w": "fee",
+       "s": 2.1,
+       "e": 2.38
+      },
+      {
+       "w": "receipts",
+       "s": 2.38,
+       "e": 2.86
+      },
+      {
+       "w": "here.",
+       "s": 2.86,
+       "e": 3.02
+      }
+     ],
+     "heard": "Parents send fee receipts here."
+    },
+    {
+     "i": 1,
+     "text": "Tap View receipt.",
+     "cue": "view",
+     "t0": 4.298,
+     "t1": 5.447,
+     "words": [
+      {
+       "w": "Tap",
+       "s": 4.298,
+       "e": 4.498
+      },
+      {
+       "w": "View",
+       "s": 4.498,
+       "e": 4.758
+      },
+      {
+       "w": "receipt.",
+       "s": 4.758,
+       "e": 5.318
+      }
+     ],
+     "heard": "Tap View Receipt."
+    },
+    {
+     "i": 2,
+     "text": "Money came? Tap Acknowledge.",
+     "cue": "ack",
+     "t0": 6.777,
+     "t1": 8.739,
+     "words": [
+      {
+       "w": "Money",
+       "s": 6.777,
+       "e": 7.018
+      },
+      {
+       "w": "came?",
+       "s": 7.018,
+       "e": 7.358
+      },
+      {
+       "w": "Tap",
+       "s": 7.738,
+       "e": 7.917
+      },
+      {
+       "w": "Acknowledge.",
+       "s": 7.917,
+       "e": 8.478
+      }
+     ],
+     "heard": "Money came. Tap Acknowledge."
+    },
+    {
+     "i": 3,
+     "text": "Wrong? Tap Reject.",
+     "cue": "rej",
+     "t0": 10.069,
+     "t1": 11.688,
+     "words": [
+      {
+       "w": "Wrong?",
+       "s": 10.069,
+       "e": 10.469
+      },
+      {
+       "w": "Tap",
+       "s": 10.709,
+       "e": 10.889
+      },
+      {
+       "w": "Reject.",
+       "s": 10.889,
+       "e": 11.269
+      }
+     ],
+     "heard": "Wrong, tap reject."
+    }
+   ],
+   "start": 52.128
+  },
+  {
+   "id": "s10",
+   "title": "Reminders",
+   "step": [
+    4,
+    "Send reminders"
+   ],
+   "dur": 10.492,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Reminders are ready messages.",
+     "cue": "ready",
+     "t0": 1.5,
+     "t1": 3.433,
+     "words": [
+      {
+       "w": "Reminders",
+       "s": 1.5,
+       "e": 2.1
+      },
+      {
+       "w": "are",
+       "s": 2.1,
+       "e": 2.32
+      },
+      {
+       "w": "ready",
+       "s": 2.32,
+       "e": 2.58
+      },
+      {
+       "w": "messages.",
+       "s": 2.58,
+       "e": 2.96
+      }
+     ],
+     "heard": "Reminders are ready messages."
+    },
+    {
+     "i": 1,
+     "text": "Tap Send.",
+     "cue": "send",
+     "t0": 4.163,
+     "t1": 4.985,
+     "words": [
+      {
+       "w": "Tap",
+       "s": 4.163,
+       "e": 4.528
+      },
+      {
+       "w": "Send.",
+       "s": 4.528,
+       "e": 4.985
+      }
+     ],
+     "heard": "Tapsend.  [proportional]"
+    },
+    {
+     "i": 2,
+     "text": "WhatsApp opens.",
+     "cue": "wa",
+     "t0": 5.955,
+     "t1": 7.143,
+     "words": [
+      {
+       "w": "WhatsApp",
+       "s": 5.955,
+       "e": 6.668
+      },
+      {
+       "w": "opens.",
+       "s": 6.668,
+       "e": 7.144
+      }
+     ],
+     "heard": "What's App Opens?  [proportional]"
+    },
+    {
+     "i": 3,
+     "text": "Press send!",
+     "cue": "press",
+     "t0": 7.753,
+     "t1": 8.602,
+     "words": [
+      {
+       "w": "Press",
+       "s": 7.753,
+       "e": 7.973
+      },
+      {
+       "w": "send!",
+       "s": 7.973,
+       "e": 8.373
+      }
+     ],
+     "heard": "Press send."
+    }
+   ],
+   "start": 65.705
+  },
+  {
+   "id": "s11",
+   "title": "More",
+   "step": [
+    5,
+    "More tools"
+   ],
+   "dur": 4.943,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Tap More for extra tools.",
+     "cue": "more",
+     "t0": 1.5,
+     "t1": 3.173,
+     "words": [
+      {
+       "w": "Tap",
+       "s": 1.5,
+       "e": 1.68
+      },
+      {
+       "w": "More",
+       "s": 1.68,
+       "e": 1.96
+      },
+      {
+       "w": "for",
+       "s": 1.96,
+       "e": 2.16
+      },
+      {
+       "w": "extra",
+       "s": 2.16,
+       "e": 2.46
+      },
+      {
+       "w": "tools.",
+       "s": 2.46,
+       "e": 2.82
+      }
+     ],
+     "heard": "Tap more for extra tools."
+    }
+   ],
+   "start": 76.197
+  },
+  {
+   "id": "s12",
+   "title": "Gradings",
+   "step": null,
+   "dur": 7.026,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Belt test coming?",
+     "cue": "test",
+     "t0": 0.6,
+     "t1": 1.784,
+     "words": [
+      {
+       "w": "Belt",
+       "s": 0.6,
+       "e": 0.86
+      },
+      {
+       "w": "test",
+       "s": 0.86,
+       "e": 1.12
+      },
+      {
+       "w": "coming?",
+       "s": 1.12,
+       "e": 1.46
+      }
+     ],
+     "heard": "Belt test coming."
+    },
+    {
+     "i": 1,
+     "text": "Tick the students.",
+     "cue": "tick",
+     "t0": 2.274,
+     "t1": 3.352,
+     "words": [
+      {
+       "w": "Tick",
+       "s": 2.274,
+       "e": 2.494
+      },
+      {
+       "w": "the",
+       "s": 2.494,
+       "e": 2.654
+      },
+      {
+       "w": "students.",
+       "s": 2.654,
+       "e": 2.954
+      }
+     ],
+     "heard": "Tick the students."
+    },
+    {
+     "i": 2,
+     "text": "Tap Nominate.",
+     "cue": "nom",
+     "t0": 4.562,
+     "t1": 5.616,
+     "words": [
+      {
+       "w": "Tap",
+       "s": 4.562,
+       "e": 4.782
+      },
+      {
+       "w": "Nominate.",
+       "s": 4.782,
+       "e": 5.442
+      }
+     ],
+     "heard": "Tap Nominate."
+    }
+   ],
+   "start": 81.14
+  },
+  {
+   "id": "s13",
+   "title": "Belts",
+   "step": null,
+   "dur": 4.872,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Belts shows what each belt must learn.",
+     "cue": "belts",
+     "t0": 0.6,
+     "t1": 2.622,
+     "words": [
+      {
+       "w": "Belts",
+       "s": 0.6,
+       "e": 0.8
+      },
+      {
+       "w": "shows",
+       "s": 0.8,
+       "e": 1.1
+      },
+      {
+       "w": "what",
+       "s": 1.1,
+       "e": 1.36
+      },
+      {
+       "w": "each",
+       "s": 1.36,
+       "e": 1.58
+      },
+      {
+       "w": "belt",
+       "s": 1.58,
+       "e": 1.84
+      },
+      {
+       "w": "must",
+       "s": 1.84,
+       "e": 2.08
+      },
+      {
+       "w": "learn.",
+       "s": 2.08,
+       "e": 2.38
+      }
+     ],
+     "heard": "Belt shows what each belt must learn."
+    }
+   ],
+   "start": 88.166
+  },
+  {
+   "id": "s14",
+   "title": "Notices",
+   "step": null,
+   "dur": 7.346,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Want to tell parents news?",
+     "cue": "news",
+     "t0": 0.6,
+     "t1": 2.151,
+     "words": [
+      {
+       "w": "Want",
+       "s": 0.6,
+       "e": 0.78
+      },
+      {
+       "w": "to",
+       "s": 0.78,
+       "e": 0.94
+      },
+      {
+       "w": "tell",
+       "s": 0.94,
+       "e": 1.08
+      },
+      {
+       "w": "parents",
+       "s": 1.08,
+       "e": 1.46
+      },
+      {
+       "w": "news?",
+       "s": 1.46,
+       "e": 1.76
+      }
+     ],
+     "heard": "Want to tell parents news?"
+    },
+    {
+     "i": 1,
+     "text": "Write a notice.",
+     "cue": "write",
+     "t0": 2.641,
+     "t1": 3.602,
+     "words": [
+      {
+       "w": "Write",
+       "s": 2.641,
+       "e": 2.841
+      },
+      {
+       "w": "a",
+       "s": 2.841,
+       "e": 2.961
+      },
+      {
+       "w": "notice.",
+       "s": 2.961,
+       "e": 3.221
+      }
+     ],
+     "heard": "Write a notice."
+    },
+    {
+     "i": 2,
+     "text": "Tap Post.",
+     "cue": "post",
+     "t0": 5.052,
+     "t1": 5.936,
+     "words": [
+      {
+       "w": "Tap",
+       "s": 5.052,
+       "e": 5.292
+      },
+      {
+       "w": "Post.",
+       "s": 5.292,
+       "e": 5.612
+      }
+     ],
+     "heard": "Tap post."
+    }
+   ],
+   "start": 93.038
+  },
+  {
+   "id": "s15",
+   "title": "Profile",
+   "step": null,
+   "dur": 11.895,
+   "lines": [
+    {
+     "i": 0,
+     "text": "In Profile, see all your classes.",
+     "cue": "classes",
+     "t0": 0.6,
+     "t1": 2.746,
+     "words": [
+      {
+       "w": "In",
+       "s": 0.6,
+       "e": 0.74
+      },
+      {
+       "w": "Profile,",
+       "s": 0.74,
+       "e": 1.36
+      },
+      {
+       "w": "see",
+       "s": 1.58,
+       "e": 1.7
+      },
+      {
+       "w": "all",
+       "s": 1.7,
+       "e": 1.88
+      },
+      {
+       "w": "your",
+       "s": 1.88,
+       "e": 2.0
+      },
+      {
+       "w": "classes.",
+       "s": 2.0,
+       "e": 2.36
+      }
+     ],
+     "heard": "In Profile, see all your classes."
+    },
+    {
+     "i": 1,
+     "text": "Type your bank name and account number.",
+     "cue": "bank",
+     "t0": 3.596,
+     "t1": 5.702,
+     "words": [
+      {
+       "w": "Type",
+       "s": 3.596,
+       "e": 3.816
+      },
+      {
+       "w": "your",
+       "s": 3.816,
+       "e": 3.996
+      },
+      {
+       "w": "bank",
+       "s": 3.996,
+       "e": 4.196
+      },
+      {
+       "w": "name",
+       "s": 4.196,
+       "e": 4.556
+      },
+      {
+       "w": "and",
+       "s": 4.556,
+       "e": 4.896
+      },
+      {
+       "w": "account",
+       "s": 4.896,
+       "e": 5.196
+      },
+      {
+       "w": "number.",
+       "s": 5.196,
+       "e": 5.476
+      }
+     ],
+     "heard": "type your bank name and account number."
+    },
+    {
+     "i": 2,
+     "text": "Tap Save.",
+     "cue": "save",
+     "t0": 6.912,
+     "t1": 7.768,
+     "words": [
+      {
+       "w": "Tap",
+       "s": 6.912,
+       "e": 7.112
+      },
+      {
+       "w": "Save.",
+       "s": 7.112,
+       "e": 7.472
+      }
+     ],
+     "heard": "Tap save."
+    },
+    {
+     "i": 3,
+     "text": "Parents will see it when they pay!",
+     "cue": "see",
+     "t0": 8.858,
+     "t1": 10.485,
+     "words": [
+      {
+       "w": "Parents",
+       "s": 8.858,
+       "e": 9.138
+      },
+      {
+       "w": "will",
+       "s": 9.138,
+       "e": 9.398
+      },
+      {
+       "w": "see",
+       "s": 9.398,
+       "e": 9.638
+      },
+      {
+       "w": "it",
+       "s": 9.638,
+       "e": 9.738
+      },
+      {
+       "w": "when",
+       "s": 9.738,
+       "e": 9.838
+      },
+      {
+       "w": "they",
+       "s": 9.838,
+       "e": 9.978
+      },
+      {
+       "w": "pay!",
+       "s": 9.978,
+       "e": 10.218
+      }
+     ],
+     "heard": "Parents will see it when they pay."
+    }
+   ],
+   "start": 100.384
+  },
+  {
+   "id": "s16",
+   "title": "Outro",
+   "step": null,
+   "dur": 6.558,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Great job, Master!",
+     "cue": "great",
+     "t0": 0.6,
+     "t1": 1.969,
+     "words": [
+      {
+       "w": "Great",
+       "s": 0.6,
+       "e": 0.84
+      },
+      {
+       "w": "job,",
+       "s": 0.84,
+       "e": 1.18
+      },
+      {
+       "w": "Master!",
+       "s": 1.32,
+       "e": 1.6
+      }
+     ],
+     "heard": "Great job, master."
+    },
+    {
+     "i": 1,
+     "text": "Your students are lucky.",
+     "cue": "lucky",
+     "t0": 2.219,
+     "t1": 3.712,
+     "words": [
+      {
+       "w": "Your",
+       "s": 2.219,
+       "e": 2.379
+      },
+      {
+       "w": "students",
+       "s": 2.379,
+       "e": 2.799
+      },
+      {
+       "w": "are",
+       "s": 2.799,
+       "e": 3.119
+      },
+      {
+       "w": "lucky.",
+       "s": 3.119,
+       "e": 3.339
+      }
+     ],
+     "heard": "Your students are lucky."
+    },
+    {
+     "i": 2,
+     "text": "Vanakkam!",
+     "cue": "bye",
+     "t0": 3.962,
+     "t1": 4.788,
+     "words": [
+      {
+       "w": "Vanakkam!",
+       "s": 3.962,
+       "e": 4.602
+      }
+     ],
+     "heard": "Vanicam."
+    }
+   ],
+   "start": 112.279
+  }
+ ],
+ "total": 118.837
+}

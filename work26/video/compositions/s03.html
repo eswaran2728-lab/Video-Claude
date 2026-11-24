@@ -1,0 +1,60 @@
+<template>
+  <style>
+@font-face { font-family:"Jakarta"; font-weight:400; src:url("assets/fonts/plus-jakarta-sans-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family:"Jakarta"; font-weight:700; src:url("assets/fonts/plus-jakarta-sans-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family:"Jakarta"; font-weight:800; src:url("assets/fonts/plus-jakarta-sans-latin-800-normal.woff2") format("woff2"); }
+#root { position:absolute; inset:0; font-family:"Jakarta", "Inter", sans-serif; color:#fff; overflow:hidden; }
+.a { position:absolute; }
+.cam { position:absolute; left:0; top:0; width:1080px; height:1920px; transform-origin:0 0; }
+.phone { position:absolute; left:274px; top:190px; width:532px; height:1114px; border-radius:62px; background:linear-gradient(145deg,#3a2d55,#0d0718);
+  box-shadow:0 40px 90px rgba(0,0,0,.55), inset 0 0 0 3px rgba(255,255,255,.12); }
+.scr { position:absolute; left:16px; top:16px; width:500px; height:1082px; border-radius:46px; overflow:hidden; background:#f7f5fa; }
+.ly { position:absolute; left:0; top:0; width:500px; }
+.ly img { display:block; width:500px; }
+.notch { position:absolute; left:196px; top:26px; width:140px; height:34px; border-radius:20px; background:#0d0718; }
+.hl { position:absolute; border:6px solid #ff9e1b; border-radius:16px; box-shadow:0 0 0 2400px rgba(18,10,33,.52), 0 0 24px rgba(255,158,27,.8); }
+.pulse { position:absolute; border:6px solid #ff9e1b; border-radius:50%; }
+.chip { position:absolute; padding:18px 30px; border-radius:30px; background:#f7f5fa; color:#1f1435; font-weight:800; font-size:44px; box-shadow:0 18px 40px rgba(0,0,0,.4); white-space:nowrap; }
+.chip.am { background:#ff9e1b; color:#120a21; } .chip.gr { background:#10b981; color:#fff; } .chip.rd { background:#ef4444; color:#fff; } .chip.or { background:#f97316; color:#fff; }
+.big { font-weight:800; font-size:104px; line-height:1.02; letter-spacing:-2px; }
+</style>
+  <div id="root" data-composition-id="s03" data-width="1080" data-height="1920">
+    <div id="cam" class="cam"><div id="flt" class="a" style="left:0;top:0;width:1080px;height:1920px"><div id="ph" class="phone"><div class="scr"><div id="La" class="ly" style="height:1420.513px;z-index:1"><img src="assets/screens/02b-master-home-full.png" alt=""><div id="h0" class="hl" style="left:15.641px;top:118.205px;width:468.718px;height:199.487px;border-radius:16px"></div><div id="h1" class="hl" style="left:9.231px;top:816.923px;width:487.949px;height:173.846px;border-radius:16px"></div><div id="h2" class="hl" style="left:15.641px;top:416.282px;width:244.359px;height:157.821px;border-radius:16px"></div><div id="h3" class="hl" style="left:252.821px;top:416.282px;width:234.744px;height:157.821px;border-radius:16px"></div></div></div><div class="notch"></div></div></div></div>
+    <div id="hi" class="chip am" style="left:540px;top:200px;font-size:40px">Vanakkam, Master!</div>
+    <div id="p1" class="chip am" style="left:600px;top:200px;font-size:48px"><span id="p1n">0</span> to check</div>
+    <div id="bell" class="a" style="left:880px;top:220px"><svg width="110" height="110" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0-6 6v4l-2 3h16l-2-3V9a6 6 0 0 0-6-6z" fill="#ff9e1b" stroke="#1f1435" stroke-width="1.4"/><circle cx="12" cy="19.5" r="2" fill="#ff9e1b" stroke="#1f1435" stroke-width="1.4"/></svg></div>
+  </div>
+  <script>
+    gsap.set("#ph",{scale:0.96,transformOrigin:"50% 50%"});
+    gsap.set("#h0",{opacity:0,scale:1.35});
+    gsap.set("#hi",{opacity:0,scale:0.4});
+    gsap.set("#h1",{opacity:0,scale:1.35});
+    gsap.set("#h2",{opacity:0,scale:1.35});
+    gsap.set("#p1",{opacity:0,scale:0.4});
+    gsap.set("#h3",{opacity:0,scale:1.35});
+    gsap.set("#bell",{opacity:0,scale:0.4});
+    const tl = gsap.timeline({ paused: true });
+    tl.to("#ph",{scale:1,duration:0.8,ease:"back.out(1.6)"},0.05);
+    tl.to("#flt",{y:-12,duration:1.3,ease:"sine.inOut",yoyo:true,repeat:3},1.2);
+    tl.to("#h0",{opacity:1,scale:1,duration:0.55,ease:"back.out(1.8)"},0.8);
+    tl.to("#h0",{opacity:0,duration:0.3,ease:"power2.in"},2.023);
+    tl.to("#hi",{opacity:1,scale:1,duration:0.6,ease:"back.out(2.2)"},1.0);
+    tl.to("#hi",{opacity:0,scale:0.8,duration:0.35,ease:"power2.in"},1.973);
+    tl.to("#La",{y:-410.256,duration:1.0,ease:"sine.inOut"},1.823);
+    tl.to("#h1",{opacity:1,scale:1,duration:0.55,ease:"back.out(1.8)"},2.623);
+    tl.to("#h1",{opacity:0,duration:0.3,ease:"power2.in"},3.994);
+    tl.to("#La",{y:-192.308,duration:0.9,ease:"sine.inOut"},3.794);
+    tl.to("#h2",{opacity:1,scale:1,duration:0.55,ease:"back.out(1.8)"},4.494);
+    tl.to("#h2",{opacity:0,duration:0.3,ease:"power2.in"},5.983);
+    tl.to("#p1",{opacity:1,scale:1,duration:0.6,ease:"back.out(2.2)"},4.694);
+    tl.to("#p1",{opacity:0,scale:0.8,duration:0.35,ease:"power2.in"},5.933);
+    (function(){const o={v:0};tl.to(o,{v:1,duration:0.8,ease:"power2.out",onUpdate:()=>{document.getElementById("p1n").textContent="{v}".replace("{v}",Math.round(o.v));}},4.894);})();
+    tl.to("#h3",{opacity:1,scale:1,duration:0.55,ease:"back.out(1.8)"},6.483);
+    tl.to("#h3",{opacity:0,duration:0.3,ease:"power2.in"},8.578);
+    tl.to("#bell",{opacity:1,scale:1,duration:0.6,ease:"back.out(2.2)"},6.583);
+    tl.to("#bell",{opacity:0,scale:0.8,duration:0.35,ease:"power2.in"},8.528);
+    tl.to("#bell",{rotation:18,duration:0.18,ease:"sine.inOut",yoyo:true,repeat:5,transformOrigin:"50% 10%"},7.083);
+    tl.set({}, {}, 8.878);
+    window.__timelines["s03"] = tl;
+  </script>
+</template>

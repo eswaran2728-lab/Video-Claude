@@ -1,0 +1,12 @@
+assets_src/
+vo/
+sfx/
+video/assets/screens/
+video/assets/mix.wav
+video/renders/
+video/.hyperframes/
+videos/*.mp4
+videos/*.png
+*.wav
+__pycache__/
+ocr.json

@@ -1,0 +1,179 @@
+1
+00:00:01,400 --> 00:00:02,733
+Vanakkam, Master!
+
+2
+00:00:02,983 --> 00:00:04,112
+Let's learn the app!
+
+3
+00:00:06,782 --> 00:00:07,778
+Open the app.
+
+4
+00:00:08,028 --> 00:00:08,895
+Tap Staff.
+
+5
+00:00:09,505 --> 00:00:10,913
+Tap Sign in with Google.
+
+6
+00:00:13,283 --> 00:00:14,396
+This is your home.
+
+7
+00:00:15,006 --> 00:00:16,367
+See today's classes.
+
+8
+00:00:16,977 --> 00:00:18,356
+See payments to check.
+
+9
+00:00:18,966 --> 00:00:20,391
+See reminders to send.
+
+10
+00:00:23,061 --> 00:00:24,049
+Tap Attendance.
+
+11
+00:00:24,659 --> 00:00:25,900
+Pick today's class.
+
+12
+00:00:27,790 --> 00:00:29,034
+Here are your students.
+
+13
+00:00:29,644 --> 00:00:31,153
+One tap for each child.
+
+14
+00:00:33,163 --> 00:00:34,161
+Everyone came?
+
+15
+00:00:34,411 --> 00:00:35,803
+Tap Mark all present.
+
+16
+00:00:37,013 --> 00:00:37,938
+So fast!
+
+17
+00:00:39,588 --> 00:00:40,688
+Someone absent?
+
+18
+00:00:40,938 --> 00:00:41,909
+Tap Absent.
+
+19
+00:00:42,639 --> 00:00:44,046
+Type why, like Fever.
+
+20
+00:00:46,056 --> 00:00:46,981
+Tap Submit.
+
+21
+00:00:47,711 --> 00:00:48,291
+Done!
+
+22
+00:00:49,021 --> 00:00:50,598
+The parent gets a message.
+
+23
+00:00:53,628 --> 00:00:55,336
+Parents send fee receipts here.
+
+24
+00:00:56,426 --> 00:00:57,575
+Tap View receipt.
+
+25
+00:00:58,905 --> 00:01:00,867
+Money came? Tap Acknowledge.
+
+26
+00:01:02,197 --> 00:01:03,816
+Wrong? Tap Reject.
+
+27
+00:01:07,205 --> 00:01:09,138
+Reminders are ready messages.
+
+28
+00:01:09,868 --> 00:01:10,690
+Tap Send.
+
+29
+00:01:11,660 --> 00:01:12,848
+WhatsApp opens.
+
+30
+00:01:13,458 --> 00:01:14,307
+Press send!
+
+31
+00:01:17,697 --> 00:01:19,370
+Tap More for extra tools.
+
+32
+00:01:21,740 --> 00:01:22,924
+Belt test coming?
+
+33
+00:01:23,414 --> 00:01:24,492
+Tick the students.
+
+34
+00:01:25,702 --> 00:01:26,756
+Tap Nominate.
+
+35
+00:01:28,766 --> 00:01:30,788
+Belts shows what each belt must learn.
+
+36
+00:01:33,638 --> 00:01:35,189
+Want to tell parents news?
+
+37
+00:01:35,679 --> 00:01:36,640
+Write a notice.
+
+38
+00:01:38,090 --> 00:01:38,974
+Tap Post.
+
+39
+00:01:40,984 --> 00:01:43,130
+In Profile, see all your classes.
+
+40
+00:01:43,980 --> 00:01:46,086
+Type your bank name and account number.
+
+41
+00:01:47,296 --> 00:01:48,152
+Tap Save.
+
+42
+00:01:49,242 --> 00:01:50,869
+Parents will see it when they pay!
+
+43
+00:01:52,879 --> 00:01:54,248
+Great job, Master!
+
+44
+00:01:54,498 --> 00:01:55,991
+Your students are lucky.
+
+45
+00:01:56,241 --> 00:01:57,067
+Vanakkam!
