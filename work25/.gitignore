@@ -7,3 +7,5 @@ video/renders/
 video/.hyperframes/
 videos/*.mp4
 *.wav
+__pycache__/
+ocr.json
