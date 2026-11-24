@@ -1,0 +1,12 @@
+assets_src/
+vo/
+sfx/
+video/
+video_h/
+video_v/
+previews/
+videos/*.mp4
+videos/*.png
+*.wav
+__pycache__/
+ocr.json

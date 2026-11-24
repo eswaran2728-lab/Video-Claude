@@ -1,0 +1,2585 @@
+{
+ "voice": "af_heart",
+ "speed": 0.9,
+ "scenes": [
+  {
+   "id": "s01",
+   "title": "Intro",
+   "step": null,
+   "dur": 5.767,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Hello, Admin! Vanakkam!",
+     "cue": "hello",
+     "t0": 1.4,
+     "t1": 3.146,
+     "words": [
+      {
+       "w": "Hello,",
+       "s": 1.4,
+       "e": 1.64
+      },
+      {
+       "w": "Admin!",
+       "s": 1.64,
+       "e": 2.14
+      },
+      {
+       "w": "Vanakkam!",
+       "s": 2.44,
+       "e": 2.96
+      }
+     ],
+     "heard": "Hello Admin, Vanicam."
+    },
+    {
+     "i": 1,
+     "text": "Let's fill our Sheet together!",
+     "cue": "fill",
+     "t0": 3.396,
+     "t1": 4.897,
+     "words": [
+      {
+       "w": "Let's",
+       "s": 3.396,
+       "e": 3.736
+      },
+      {
+       "w": "fill",
+       "s": 3.736,
+       "e": 3.856
+      },
+      {
+       "w": "our",
+       "s": 3.856,
+       "e": 3.996
+      },
+      {
+       "w": "Sheet",
+       "s": 3.996,
+       "e": 4.236
+      },
+      {
+       "w": "together!",
+       "s": 4.236,
+       "e": 4.536
+      }
+     ],
+     "heard": "Let's fill our sheet together."
+    }
+   ],
+   "start": 0
+  },
+  {
+   "id": "s02",
+   "title": "Tab map",
+   "step": null,
+   "dur": 6.127,
+   "lines": [
+    {
+     "i": 0,
+     "text": "We fill the tabs in this order.",
+     "cue": "order",
+     "t0": 0.6,
+     "t1": 2.389,
+     "words": [
+      {
+       "w": "We",
+       "s": 0.6,
+       "e": 0.72
+      },
+      {
+       "w": "fill",
+       "s": 0.72,
+       "e": 1.0
+      },
+      {
+       "w": "the",
+       "s": 1.0,
+       "e": 1.16
+      },
+      {
+       "w": "tabs",
+       "s": 1.16,
+       "e": 1.52
+      },
+      {
+       "w": "in",
+       "s": 1.52,
+       "e": 1.76
+      },
+      {
+       "w": "this",
+       "s": 1.76,
+       "e": 1.9
+      },
+      {
+       "w": "order.",
+       "s": 1.9,
+       "e": 2.12
+      }
+     ],
+     "heard": "we fill the tabs in this order."
+    },
+    {
+     "i": 1,
+     "text": "One by one!",
+     "cue": "one",
+     "t0": 4.319,
+     "t1": 5.257,
+     "words": [
+      {
+       "w": "One",
+       "s": 4.319,
+       "e": 4.559
+      },
+      {
+       "w": "by",
+       "s": 4.559,
+       "e": 4.759
+      },
+      {
+       "w": "one!",
+       "s": 4.759,
+       "e": 5.019
+      }
+     ],
+     "heard": "one by one."
+    }
+   ],
+   "start": 5.767
+  },
+  {
+   "id": "s03",
+   "title": "Config",
+   "step": [
+    1,
+    "Config"
+   ],
+   "dur": 7.472,
+   "lines": [
+    {
+     "i": 0,
+     "text": "First, Config.",
+     "cue": "first",
+     "t0": 1.5,
+     "t1": 2.603,
+     "words": [
+      {
+       "w": "First,",
+       "s": 1.5,
+       "e": 1.8
+      },
+      {
+       "w": "Config.",
+       "s": 1.98,
+       "e": 2.22
+      }
+     ],
+     "heard": "First, config."
+    },
+    {
+     "i": 1,
+     "text": "Type your Persatuan name here.",
+     "cue": "name",
+     "t0": 2.853,
+     "t1": 4.479,
+     "words": [
+      {
+       "w": "Type",
+       "s": 2.853,
+       "e": 3.124
+      },
+      {
+       "w": "your",
+       "s": 3.124,
+       "e": 3.395
+      },
+      {
+       "w": "Persatuan",
+       "s": 3.395,
+       "e": 3.937
+      },
+      {
+       "w": "name",
+       "s": 3.937,
+       "e": 4.208
+      },
+      {
+       "w": "here.",
+       "s": 4.208,
+       "e": 4.479
+      }
+     ],
+     "heard": "Type your person to a name here.  [proportional]"
+    },
+    {
+     "i": 2,
+     "text": "It shows on the app.",
+     "cue": "shows",
+     "t0": 5.317,
+     "t1": 6.518,
+     "words": [
+      {
+       "w": "It",
+       "s": 5.317,
+       "e": 5.437
+      },
+      {
+       "w": "shows",
+       "s": 5.437,
+       "e": 5.677
+      },
+      {
+       "w": "on",
+       "s": 5.677,
+       "e": 5.917
+      },
+      {
+       "w": "the",
+       "s": 5.917,
+       "e": 6.017
+      },
+      {
+       "w": "app.",
+       "s": 6.017,
+       "e": 6.257
+      }
+     ],
+     "heard": "It shows on the app."
+    }
+   ],
+   "start": 11.894
+  },
+  {
+   "id": "s04",
+   "title": "Belts",
+   "step": [
+    2,
+    "Belts"
+   ],
+   "dur": 11.509,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Belts tab.",
+     "cue": "tab",
+     "t0": 1.5,
+     "t1": 2.447,
+     "words": [
+      {
+       "w": "Belts",
+       "s": 1.5,
+       "e": 1.9
+      },
+      {
+       "w": "tab.",
+       "s": 1.9,
+       "e": 2.18
+      }
+     ],
+     "heard": "Belts tab."
+    },
+    {
+     "i": 1,
+     "text": "One row for each belt.",
+     "cue": "row",
+     "t0": 2.697,
+     "t1": 4.163,
+     "words": [
+      {
+       "w": "One",
+       "s": 2.697,
+       "e": 2.917
+      },
+      {
+       "w": "row",
+       "s": 2.917,
+       "e": 3.177
+      },
+      {
+       "w": "for",
+       "s": 3.177,
+       "e": 3.377
+      },
+      {
+       "w": "each",
+       "s": 3.377,
+       "e": 3.597
+      },
+      {
+       "w": "belt.",
+       "s": 3.597,
+       "e": 3.837
+      }
+     ],
+     "heard": "One row for each belt."
+    },
+    {
+     "i": 2,
+     "text": "Put them in order: 1, 2, 3.",
+     "cue": "order",
+     "t0": 4.665,
+     "t1": 6.728,
+     "words": [
+      {
+       "w": "Put",
+       "s": 4.665,
+       "e": 4.785
+      },
+      {
+       "w": "them",
+       "s": 4.785,
+       "e": 4.925
+      },
+      {
+       "w": "in",
+       "s": 4.925,
+       "e": 5.025
+      },
+      {
+       "w": "order:",
+       "s": 5.025,
+       "e": 5.265
+      },
+      {
+       "w": "1,",
+       "s": 5.665,
+       "e": 5.865
+      },
+      {
+       "w": "2,",
+       "s": 6.025,
+       "e": 6.145
+      },
+      {
+       "w": "3.",
+       "s": 6.265,
+       "e": 6.465
+      }
+     ],
+     "heard": "Put them in order, one, two, three."
+    },
+    {
+     "i": 3,
+     "text": "Type the colour code.",
+     "cue": "code",
+     "t0": 7.314,
+     "t1": 8.571,
+     "words": [
+      {
+       "w": "Type",
+       "s": 7.314,
+       "e": 7.554
+      },
+      {
+       "w": "the",
+       "s": 7.554,
+       "e": 7.734
+      },
+      {
+       "w": "colour",
+       "s": 7.734,
+       "e": 7.974
+      },
+      {
+       "w": "code.",
+       "s": 7.974,
+       "e": 8.274
+      }
+     ],
+     "heard": "Type the color code."
+    },
+    {
+     "i": 4,
+     "text": "The app paints the belt!",
+     "cue": "paints",
+     "t0": 9.073,
+     "t1": 10.471,
+     "words": [
+      {
+       "w": "The",
+       "s": 9.073,
+       "e": 9.193
+      },
+      {
+       "w": "app",
+       "s": 9.193,
+       "e": 9.453
+      },
+      {
+       "w": "paints",
+       "s": 9.453,
+       "e": 9.733
+      },
+      {
+       "w": "the",
+       "s": 9.733,
+       "e": 9.933
+      },
+      {
+       "w": "belt!",
+       "s": 9.933,
+       "e": 10.153
+      }
+     ],
+     "heard": "The app paints the belt."
+    }
+   ],
+   "start": 19.366
+  },
+  {
+   "id": "s05",
+   "title": "New belt",
+   "step": null,
+   "dur": 6.842,
+   "lines": [
+    {
+     "i": 0,
+     "text": "New belt?",
+     "cue": "new",
+     "t0": 0.6,
+     "t1": 1.395,
+     "words": [
+      {
+       "w": "New",
+       "s": 0.6,
+       "e": 0.84
+      },
+      {
+       "w": "belt?",
+       "s": 0.84,
+       "e": 1.06
+      }
+     ],
+     "heard": "New Belt"
+    },
+    {
+     "i": 1,
+     "text": "Type it on the next empty row.",
+     "cue": "type",
+     "t0": 1.645,
+     "t1": 3.465,
+     "words": [
+      {
+       "w": "Type",
+       "s": 1.645,
+       "e": 1.845
+      },
+      {
+       "w": "it",
+       "s": 1.845,
+       "e": 2.125
+      },
+      {
+       "w": "on",
+       "s": 2.125,
+       "e": 2.245
+      },
+      {
+       "w": "the",
+       "s": 2.245,
+       "e": 2.385
+      },
+      {
+       "w": "next",
+       "s": 2.385,
+       "e": 2.585
+      },
+      {
+       "w": "empty",
+       "s": 2.585,
+       "e": 2.925
+      },
+      {
+       "w": "row.",
+       "s": 2.925,
+       "e": 3.225
+      }
+     ],
+     "heard": "Type it on the next empty row."
+    },
+    {
+     "i": 2,
+     "text": "Easy!",
+     "cue": "easy",
+     "t0": 5.227,
+     "t1": 5.888,
+     "words": [
+      {
+       "w": "Easy!",
+       "s": 5.227,
+       "e": 5.427
+      }
+     ],
+     "heard": "Easy."
+    }
+   ],
+   "start": 30.875
+  },
+  {
+   "id": "s06",
+   "title": "Masters",
+   "step": [
+    3,
+    "Masters"
+   ],
+   "dur": 10.221,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Masters tab.",
+     "cue": "tab",
+     "t0": 1.5,
+     "t1": 2.593,
+     "words": [
+      {
+       "w": "Masters",
+       "s": 1.5,
+       "e": 2.06
+      },
+      {
+       "w": "tab.",
+       "s": 2.06,
+       "e": 2.3
+      }
+     ],
+     "heard": "Master's Tab."
+    },
+    {
+     "i": 1,
+     "text": "Write each Master's Gmail, name and phone.",
+     "cue": "write",
+     "t0": 2.843,
+     "t1": 5.596,
+     "words": [
+      {
+       "w": "Write",
+       "s": 2.843,
+       "e": 3.044
+      },
+      {
+       "w": "each",
+       "s": 3.044,
+       "e": 3.283
+      },
+      {
+       "w": "Master's",
+       "s": 3.283,
+       "e": 3.823
+      },
+      {
+       "w": "Gmail,",
+       "s": 3.823,
+       "e": 4.084
+      },
+      {
+       "w": "name",
+       "s": 4.584,
+       "e": 4.884
+      },
+      {
+       "w": "and",
+       "s": 5.024,
+       "e": 5.063
+      },
+      {
+       "w": "phone.",
+       "s": 5.063,
+       "e": 5.344
+      }
+     ],
+     "heard": "Write each master's Gmail, name, and phone."
+    },
+    {
+     "i": 2,
+     "text": "Masters can add their bank details in the app too.",
+     "cue": "bank",
+     "t0": 6.35,
+     "t1": 9.183,
+     "words": [
+      {
+       "w": "Masters",
+       "s": 6.35,
+       "e": 6.71
+      },
+      {
+       "w": "can",
+       "s": 6.71,
+       "e": 7.13
+      },
+      {
+       "w": "add",
+       "s": 7.13,
+       "e": 7.39
+      },
+      {
+       "w": "their",
+       "s": 7.39,
+       "e": 7.51
+      },
+      {
+       "w": "bank",
+       "s": 7.51,
+       "e": 7.71
+      },
+      {
+       "w": "details",
+       "s": 7.71,
+       "e": 8.13
+      },
+      {
+       "w": "in",
+       "s": 8.13,
+       "e": 8.39
+      },
+      {
+       "w": "the",
+       "s": 8.39,
+       "e": 8.49
+      },
+      {
+       "w": "app",
+       "s": 8.49,
+       "e": 8.73
+      },
+      {
+       "w": "too.",
+       "s": 8.73,
+       "e": 8.95
+      }
+     ],
+     "heard": "Masters can add their bank details in the app too."
+    }
+   ],
+   "start": 37.717
+  },
+  {
+   "id": "s07",
+   "title": "Classes",
+   "step": [
+    4,
+    "Classes"
+   ],
+   "dur": 9.503,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Classes tab.",
+     "cue": "tab",
+     "t0": 1.5,
+     "t1": 2.491,
+     "words": [
+      {
+       "w": "Classes",
+       "s": 1.5,
+       "e": 1.94
+      },
+      {
+       "w": "tab.",
+       "s": 1.94,
+       "e": 2.2
+      }
+     ],
+     "heard": "Classes tab."
+    },
+    {
+     "i": 1,
+     "text": "One row for each class.",
+     "cue": "row",
+     "t0": 2.741,
+     "t1": 4.255,
+     "words": [
+      {
+       "w": "One",
+       "s": 2.741,
+       "e": 2.941
+      },
+      {
+       "w": "row",
+       "s": 2.941,
+       "e": 3.201
+      },
+      {
+       "w": "for",
+       "s": 3.201,
+       "e": 3.401
+      },
+      {
+       "w": "each",
+       "s": 3.401,
+       "e": 3.621
+      },
+      {
+       "w": "class.",
+       "s": 3.621,
+       "e": 3.901
+      }
+     ],
+     "heard": "one row for each class."
+    },
+    {
+     "i": 2,
+     "text": "Give it a short ID and a name.",
+     "cue": "id",
+     "t0": 4.757,
+     "t1": 6.646,
+     "words": [
+      {
+       "w": "Give",
+       "s": 4.757,
+       "e": 4.877
+      },
+      {
+       "w": "it",
+       "s": 4.877,
+       "e": 4.977
+      },
+      {
+       "w": "a",
+       "s": 4.977,
+       "e": 5.037
+      },
+      {
+       "w": "short",
+       "s": 5.037,
+       "e": 5.277
+      },
+      {
+       "w": "ID",
+       "s": 5.277,
+       "e": 5.657
+      },
+      {
+       "w": "and",
+       "s": 5.657,
+       "e": 6.057
+      },
+      {
+       "w": "a",
+       "s": 6.057,
+       "e": 6.157
+      },
+      {
+       "w": "name.",
+       "s": 6.157,
+       "e": 6.377
+      }
+     ],
+     "heard": "Give it a short ID and a name."
+    },
+    {
+     "i": 3,
+     "text": "Then a place and a time.",
+     "cue": "place",
+     "t0": 7.148,
+     "t1": 8.549,
+     "words": [
+      {
+       "w": "Then",
+       "s": 7.148,
+       "e": 7.288
+      },
+      {
+       "w": "a",
+       "s": 7.288,
+       "e": 7.388
+      },
+      {
+       "w": "place",
+       "s": 7.388,
+       "e": 7.608
+      },
+      {
+       "w": "and",
+       "s": 7.608,
+       "e": 7.908
+      },
+      {
+       "w": "a",
+       "s": 7.908,
+       "e": 7.988
+      },
+      {
+       "w": "time.",
+       "s": 7.988,
+       "e": 8.248
+      }
+     ],
+     "heard": "then a place and a time."
+    }
+   ],
+   "start": 47.938
+  },
+  {
+   "id": "s08",
+   "title": "Pick Master",
+   "step": null,
+   "dur": 5.822,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Who teaches it?",
+     "cue": "who",
+     "t0": 0.6,
+     "t1": 1.72,
+     "words": [
+      {
+       "w": "Who",
+       "s": 0.6,
+       "e": 0.82
+      },
+      {
+       "w": "teaches",
+       "s": 0.82,
+       "e": 1.22
+      },
+      {
+       "w": "it?",
+       "s": 1.22,
+       "e": 1.5
+      }
+     ],
+     "heard": "Who teaches it?"
+    },
+    {
+     "i": 1,
+     "text": "Tap the arrow.",
+     "cue": "arrow",
+     "t0": 1.97,
+     "t1": 2.896,
+     "words": [
+      {
+       "w": "Tap",
+       "s": 1.97,
+       "e": 2.17
+      },
+      {
+       "w": "the",
+       "s": 2.17,
+       "e": 2.37
+      },
+      {
+       "w": "arrow.",
+       "s": 2.37,
+       "e": 2.61
+      }
+     ],
+     "heard": "Tap the arrow."
+    },
+    {
+     "i": 2,
+     "text": "Pick the Master!",
+     "cue": "pick",
+     "t0": 3.566,
+     "t1": 4.616,
+     "words": [
+      {
+       "w": "Pick",
+       "s": 3.566,
+       "e": 3.706
+      },
+      {
+       "w": "the",
+       "s": 3.706,
+       "e": 3.886
+      },
+      {
+       "w": "Master!",
+       "s": 3.886,
+       "e": 4.246
+      }
+     ],
+     "heard": "Pick the master."
+    }
+   ],
+   "start": 57.441
+  },
+  {
+   "id": "s09",
+   "title": "Students",
+   "step": [
+    5,
+    "Students"
+   ],
+   "dur": 9.621,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Students tab.",
+     "cue": "tab",
+     "t0": 1.5,
+     "t1": 2.568,
+     "words": [
+      {
+       "w": "Students",
+       "s": 1.5,
+       "e": 2.24
+      },
+      {
+       "w": "tab.",
+       "s": 2.24,
+       "e": 2.568
+      }
+     ],
+     "heard": "A student's tab.  [proportional]"
+    },
+    {
+     "i": 1,
+     "text": "One row for each student.",
+     "cue": "row",
+     "t0": 2.818,
+     "t1": 4.307,
+     "words": [
+      {
+       "w": "One",
+       "s": 2.818,
+       "e": 3.018
+      },
+      {
+       "w": "row",
+       "s": 3.018,
+       "e": 3.298
+      },
+      {
+       "w": "for",
+       "s": 3.298,
+       "e": 3.538
+      },
+      {
+       "w": "each",
+       "s": 3.538,
+       "e": 3.738
+      },
+      {
+       "w": "student.",
+       "s": 3.738,
+       "e": 4.038
+      }
+     ],
+     "heard": "One row for each student."
+    },
+    {
+     "i": 2,
+     "text": "The IC number is very important.",
+     "cue": "ic",
+     "t0": 4.809,
+     "t1": 6.989,
+     "words": [
+      {
+       "w": "The",
+       "s": 4.809,
+       "e": 4.889
+      },
+      {
+       "w": "IC",
+       "s": 4.889,
+       "e": 5.169
+      },
+      {
+       "w": "number",
+       "s": 5.169,
+       "e": 5.589
+      },
+      {
+       "w": "is",
+       "s": 5.589,
+       "e": 5.929
+      },
+      {
+       "w": "very",
+       "s": 5.929,
+       "e": 6.189
+      },
+      {
+       "w": "important.",
+       "s": 6.189,
+       "e": 6.629
+      }
+     ],
+     "heard": "The IC number is very important."
+    },
+    {
+     "i": 3,
+     "text": "Check it twice!",
+     "cue": "twice",
+     "t0": 7.575,
+     "t1": 8.583,
+     "words": [
+      {
+       "w": "Check",
+       "s": 7.575,
+       "e": 7.978
+      },
+      {
+       "w": "it",
+       "s": 7.978,
+       "e": 8.18
+      },
+      {
+       "w": "twice!",
+       "s": 8.18,
+       "e": 8.584
+      }
+     ],
+     "heard": "and check it twice.  [proportional]"
+    }
+   ],
+   "start": 63.263
+  },
+  {
+   "id": "s10",
+   "title": "New student",
+   "step": null,
+   "dur": 10.334,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Type the IC, name and birthday.",
+     "cue": "type",
+     "t0": 0.6,
+     "t1": 2.724,
+     "words": [
+      {
+       "w": "Type",
+       "s": 0.6,
+       "e": 0.82
+      },
+      {
+       "w": "the",
+       "s": 0.82,
+       "e": 1.0
+      },
+      {
+       "w": "IC,",
+       "s": 1.0,
+       "e": 1.3
+      },
+      {
+       "w": "name",
+       "s": 1.6,
+       "e": 1.86
+      },
+      {
+       "w": "and",
+       "s": 1.86,
+       "e": 2.08
+      },
+      {
+       "w": "birthday.",
+       "s": 2.08,
+       "e": 2.4
+      }
+     ],
+     "heard": "Type the IC, name and birthday."
+    },
+    {
+     "i": 1,
+     "text": "Then pick the belt from the list.",
+     "cue": "belt",
+     "t0": 4.402,
+     "t1": 6.191,
+     "words": [
+      {
+       "w": "Then",
+       "s": 4.402,
+       "e": 4.622
+      },
+      {
+       "w": "pick",
+       "s": 4.622,
+       "e": 4.922
+      },
+      {
+       "w": "the",
+       "s": 4.922,
+       "e": 5.082
+      },
+      {
+       "w": "belt",
+       "s": 5.082,
+       "e": 5.302
+      },
+      {
+       "w": "from",
+       "s": 5.302,
+       "e": 5.522
+      },
+      {
+       "w": "the",
+       "s": 5.522,
+       "e": 5.642
+      },
+      {
+       "w": "list.",
+       "s": 5.642,
+       "e": 5.962
+      }
+     ],
+     "heard": "Then pick the belt from the list."
+    },
+    {
+     "i": 2,
+     "text": "See? The new belt is already here!",
+     "cue": "here",
+     "t0": 7.113,
+     "t1": 9.044,
+     "words": [
+      {
+       "w": "See?",
+       "s": 7.113,
+       "e": 7.393
+      },
+      {
+       "w": "The",
+       "s": 7.673,
+       "e": 7.773
+      },
+      {
+       "w": "new",
+       "s": 7.773,
+       "e": 7.873
+      },
+      {
+       "w": "belt",
+       "s": 7.873,
+       "e": 8.113
+      },
+      {
+       "w": "is",
+       "s": 8.113,
+       "e": 8.293
+      },
+      {
+       "w": "already",
+       "s": 8.293,
+       "e": 8.533
+      },
+      {
+       "w": "here!",
+       "s": 8.533,
+       "e": 8.833
+      }
+     ],
+     "heard": "See, the new belt is already here."
+    }
+   ],
+   "start": 72.884
+  },
+  {
+   "id": "s11",
+   "title": "Active",
+   "step": null,
+   "dur": 6.367,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Type the monthly fee.",
+     "cue": "fee",
+     "t0": 0.6,
+     "t1": 1.996,
+     "words": [
+      {
+       "w": "Type",
+       "s": 0.6,
+       "e": 0.82
+      },
+      {
+       "w": "the",
+       "s": 0.82,
+       "e": 1.02
+      },
+      {
+       "w": "monthly",
+       "s": 1.02,
+       "e": 1.36
+      },
+      {
+       "w": "fee.",
+       "s": 1.36,
+       "e": 1.72
+      }
+     ],
+     "heard": "Type the monthly fee."
+    },
+    {
+     "i": 1,
+     "text": "Pick Yes for Active.",
+     "cue": "yes",
+     "t0": 2.582,
+     "t1": 3.912,
+     "words": [
+      {
+       "w": "Pick",
+       "s": 2.582,
+       "e": 2.742
+      },
+      {
+       "w": "Yes",
+       "s": 2.742,
+       "e": 3.022
+      },
+      {
+       "w": "for",
+       "s": 3.022,
+       "e": 3.202
+      },
+      {
+       "w": "Active.",
+       "s": 3.202,
+       "e": 3.522
+      }
+     ],
+     "heard": "Pick Yes for Active."
+    },
+    {
+     "i": 2,
+     "text": "Done!",
+     "cue": "done",
+     "t0": 4.75,
+     "t1": 5.329,
+     "words": [
+      {
+       "w": "Done!",
+       "s": 4.75,
+       "e": 5.01
+      }
+     ],
+     "heard": "Done."
+    }
+   ],
+   "start": 83.218
+  },
+  {
+   "id": "s12",
+   "title": "Enrolments",
+   "step": [
+    6,
+    "Enrolments"
+   ],
+   "dur": 7.943,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Enrolments tab puts students into classes.",
+     "cue": "puts",
+     "t0": 1.5,
+     "t1": 4.277,
+     "words": [
+      {
+       "w": "Enrolments",
+       "s": 1.5,
+       "e": 2.1
+      },
+      {
+       "w": "tab",
+       "s": 2.1,
+       "e": 2.42
+      },
+      {
+       "w": "puts",
+       "s": 2.42,
+       "e": 2.94
+      },
+      {
+       "w": "students",
+       "s": 2.94,
+       "e": 3.26
+      },
+      {
+       "w": "into",
+       "s": 3.26,
+       "e": 3.5
+      },
+      {
+       "w": "classes.",
+       "s": 3.5,
+       "e": 3.9
+      }
+     ],
+     "heard": "Enrollments tab puts students into classes."
+    },
+    {
+     "i": 1,
+     "text": "One row for each class they join.",
+     "cue": "row",
+     "t0": 4.863,
+     "t1": 6.905,
+     "words": [
+      {
+       "w": "One",
+       "s": 4.863,
+       "e": 5.063
+      },
+      {
+       "w": "row",
+       "s": 5.063,
+       "e": 5.323
+      },
+      {
+       "w": "for",
+       "s": 5.323,
+       "e": 5.563
+      },
+      {
+       "w": "each",
+       "s": 5.563,
+       "e": 5.803
+      },
+      {
+       "w": "class",
+       "s": 5.803,
+       "e": 6.103
+      },
+      {
+       "w": "they",
+       "s": 6.103,
+       "e": 6.323
+      },
+      {
+       "w": "join.",
+       "s": 6.323,
+       "e": 6.603
+      }
+     ],
+     "heard": "one row for each class they join."
+    }
+   ],
+   "start": 89.585
+  },
+  {
+   "id": "s13",
+   "title": "Find student",
+   "step": null,
+   "dur": 7.104,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Tap the arrow.",
+     "cue": "arrow",
+     "t0": 0.6,
+     "t1": 1.526,
+     "words": [
+      {
+       "w": "Tap",
+       "s": 0.6,
+       "e": 0.8
+      },
+      {
+       "w": "the",
+       "s": 0.8,
+       "e": 1.0
+      },
+      {
+       "w": "arrow.",
+       "s": 1.0,
+       "e": 1.24
+      }
+     ],
+     "heard": "Tap the arrow."
+    },
+    {
+     "i": 1,
+     "text": "Type a few numbers of the IC.",
+     "cue": "type",
+     "t0": 2.028,
+     "t1": 3.924,
+     "words": [
+      {
+       "w": "Type",
+       "s": 2.028,
+       "e": 2.288
+      },
+      {
+       "w": "a",
+       "s": 2.288,
+       "e": 2.448
+      },
+      {
+       "w": "few",
+       "s": 2.448,
+       "e": 2.608
+      },
+      {
+       "w": "numbers",
+       "s": 2.608,
+       "e": 2.888
+      },
+      {
+       "w": "of",
+       "s": 2.888,
+       "e": 3.168
+      },
+      {
+       "w": "the",
+       "s": 3.168,
+       "e": 3.288
+      },
+      {
+       "w": "IC.",
+       "s": 3.288,
+       "e": 3.528
+      }
+     ],
+     "heard": "Type a few numbers of the IC."
+    },
+    {
+     "i": 2,
+     "text": "It finds the student!",
+     "cue": "finds",
+     "t0": 4.762,
+     "t1": 6.066,
+     "words": [
+      {
+       "w": "It",
+       "s": 4.762,
+       "e": 4.882
+      },
+      {
+       "w": "finds",
+       "s": 4.882,
+       "e": 5.202
+      },
+      {
+       "w": "the",
+       "s": 5.202,
+       "e": 5.442
+      },
+      {
+       "w": "student!",
+       "s": 5.442,
+       "e": 5.682
+      }
+     ],
+     "heard": "it finds the student."
+    }
+   ],
+   "start": 97.528
+  },
+  {
+   "id": "s14",
+   "title": "Pick class",
+   "step": null,
+   "dur": 6.622,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Now pick the class.",
+     "cue": "pick",
+     "t0": 0.6,
+     "t1": 1.807,
+     "words": [
+      {
+       "w": "Now",
+       "s": 0.6,
+       "e": 0.82
+      },
+      {
+       "w": "pick",
+       "s": 0.82,
+       "e": 1.06
+      },
+      {
+       "w": "the",
+       "s": 1.06,
+       "e": 1.2
+      },
+      {
+       "w": "class.",
+       "s": 1.2,
+       "e": 1.44
+      }
+     ],
+     "heard": "Now pick the class."
+    },
+    {
+     "i": 1,
+     "text": "New classes show up here by themselves!",
+     "cue": "new",
+     "t0": 2.729,
+     "t1": 5.08,
+     "words": [
+      {
+       "w": "New",
+       "s": 2.729,
+       "e": 2.909
+      },
+      {
+       "w": "classes",
+       "s": 2.909,
+       "e": 3.369
+      },
+      {
+       "w": "show",
+       "s": 3.369,
+       "e": 3.829
+      },
+      {
+       "w": "up",
+       "s": 3.829,
+       "e": 4.029
+      },
+      {
+       "w": "here",
+       "s": 4.029,
+       "e": 4.169
+      },
+      {
+       "w": "by",
+       "s": 4.169,
+       "e": 4.349
+      },
+      {
+       "w": "themselves!",
+       "s": 4.349,
+       "e": 4.609
+      }
+     ],
+     "heard": "New classes show up here by themselves."
+    }
+   ],
+   "start": 104.632
+  },
+  {
+   "id": "s15",
+   "title": "Parents",
+   "step": [
+    7,
+    "Parents"
+   ],
+   "dur": 11.765,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Parents tab.",
+     "cue": "tab",
+     "t0": 1.5,
+     "t1": 2.491,
+     "words": [
+      {
+       "w": "Parents",
+       "s": 1.5,
+       "e": 1.8
+      },
+      {
+       "w": "tab.",
+       "s": 1.8,
+       "e": 2.18
+      }
+     ],
+     "heard": "Parents tab."
+    },
+    {
+     "i": 1,
+     "text": "Type the parent's phone and name.",
+     "cue": "phone",
+     "t0": 2.741,
+     "t1": 4.449,
+     "words": [
+      {
+       "w": "Type",
+       "s": 2.741,
+       "e": 2.961
+      },
+      {
+       "w": "the",
+       "s": 2.961,
+       "e": 3.141
+      },
+      {
+       "w": "parent's",
+       "s": 3.141,
+       "e": 3.521
+      },
+      {
+       "w": "phone",
+       "s": 3.521,
+       "e": 3.741
+      },
+      {
+       "w": "and",
+       "s": 3.741,
+       "e": 3.921
+      },
+      {
+       "w": "name.",
+       "s": 3.921,
+       "e": 4.181
+      }
+     ],
+     "heard": "Type the parent's phone and name."
+    },
+    {
+     "i": 2,
+     "text": "In Children, type the kids' IC numbers.",
+     "cue": "kids",
+     "t0": 5.035,
+     "t1": 7.608,
+     "words": [
+      {
+       "w": "In",
+       "s": 5.035,
+       "e": 5.155
+      },
+      {
+       "w": "Children,",
+       "s": 5.155,
+       "e": 5.555
+      },
+      {
+       "w": "type",
+       "s": 5.955,
+       "e": 6.175
+      },
+      {
+       "w": "the",
+       "s": 6.175,
+       "e": 6.375
+      },
+      {
+       "w": "kids'",
+       "s": 6.375,
+       "e": 6.695
+      },
+      {
+       "w": "IC",
+       "s": 6.695,
+       "e": 6.835
+      },
+      {
+       "w": "numbers.",
+       "s": 6.835,
+       "e": 7.215
+      }
+     ],
+     "heard": "In children, type the kid's IC numbers."
+    },
+    {
+     "i": 3,
+     "text": "Put a comma between them.",
+     "cue": "comma",
+     "t0": 9.034,
+     "t1": 10.475,
+     "words": [
+      {
+       "w": "Put",
+       "s": 9.034,
+       "e": 9.154
+      },
+      {
+       "w": "a",
+       "s": 9.154,
+       "e": 9.274
+      },
+      {
+       "w": "comma",
+       "s": 9.274,
+       "e": 9.594
+      },
+      {
+       "w": "between",
+       "s": 9.594,
+       "e": 9.954
+      },
+      {
+       "w": "them.",
+       "s": 9.954,
+       "e": 10.254
+      }
+     ],
+     "heard": "Put a comma between them."
+    }
+   ],
+   "start": 111.254
+  },
+  {
+   "id": "s16",
+   "title": "Access",
+   "step": [
+    8,
+    "Access"
+   ],
+   "dur": 4.525,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Access tab says who can sign in.",
+     "cue": "who",
+     "t0": 1.5,
+     "t1": 3.403,
+     "words": [
+      {
+       "w": "Access",
+       "s": 1.5,
+       "e": 1.82
+      },
+      {
+       "w": "tab",
+       "s": 1.82,
+       "e": 2.18
+      },
+      {
+       "w": "says",
+       "s": 2.18,
+       "e": 2.42
+      },
+      {
+       "w": "who",
+       "s": 2.42,
+       "e": 2.6
+      },
+      {
+       "w": "can",
+       "s": 2.6,
+       "e": 2.76
+      },
+      {
+       "w": "sign",
+       "s": 2.76,
+       "e": 3.02
+      },
+      {
+       "w": "in.",
+       "s": 3.02,
+       "e": 3.24
+      }
+     ],
+     "heard": "Access tab says who can sign in."
+    }
+   ],
+   "start": 123.019
+  },
+  {
+   "id": "s17",
+   "title": "Pick role",
+   "step": null,
+   "dur": 6.044,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Pick the role:",
+     "cue": "pick",
+     "t0": 0.6,
+     "t1": 1.446,
+     "words": [
+      {
+       "w": "Pick",
+       "s": 0.6,
+       "e": 0.78
+      },
+      {
+       "w": "the",
+       "s": 0.78,
+       "e": 0.96
+      },
+      {
+       "w": "role:",
+       "s": 0.96,
+       "e": 1.18
+      }
+     ],
+     "heard": "Pick the role."
+    },
+    {
+     "i": 1,
+     "text": "Admin, Master, Parent or Student.",
+     "cue": "roles",
+     "t0": 2.032,
+     "t1": 4.502,
+     "words": [
+      {
+       "w": "Admin,",
+       "s": 2.032,
+       "e": 2.472
+      },
+      {
+       "w": "Master,",
+       "s": 2.732,
+       "e": 3.092
+      },
+      {
+       "w": "Parent",
+       "s": 3.432,
+       "e": 3.692
+      },
+      {
+       "w": "or",
+       "s": 3.692,
+       "e": 3.892
+      },
+      {
+       "w": "Student.",
+       "s": 3.892,
+       "e": 4.212
+      }
+     ],
+     "heard": "Admin, master, parent or student."
+    }
+   ],
+   "start": 127.544
+  },
+  {
+   "id": "s18",
+   "title": "Active Yes",
+   "step": null,
+   "dur": 5.979,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Pick Yes for Active.",
+     "cue": "yes",
+     "t0": 0.6,
+     "t1": 1.93,
+     "words": [
+      {
+       "w": "Pick",
+       "s": 0.6,
+       "e": 0.76
+      },
+      {
+       "w": "Yes",
+       "s": 0.76,
+       "e": 1.04
+      },
+      {
+       "w": "for",
+       "s": 1.04,
+       "e": 1.22
+      },
+      {
+       "w": "Active.",
+       "s": 1.22,
+       "e": 1.54
+      }
+     ],
+     "heard": "Pick Yes for Active."
+    },
+    {
+     "i": 1,
+     "text": "Now give them a PIN from the app.",
+     "cue": "pin",
+     "t0": 2.768,
+     "t1": 4.773,
+     "words": [
+      {
+       "w": "Now",
+       "s": 2.768,
+       "e": 3.008
+      },
+      {
+       "w": "give",
+       "s": 3.008,
+       "e": 3.248
+      },
+      {
+       "w": "them",
+       "s": 3.248,
+       "e": 3.388
+      },
+      {
+       "w": "a",
+       "s": 3.388,
+       "e": 3.468
+      },
+      {
+       "w": "PIN",
+       "s": 3.468,
+       "e": 3.888
+      },
+      {
+       "w": "from",
+       "s": 3.888,
+       "e": 4.168
+      },
+      {
+       "w": "the",
+       "s": 4.168,
+       "e": 4.328
+      },
+      {
+       "w": "app.",
+       "s": 4.328,
+       "e": 4.548
+      }
+     ],
+     "heard": "Now give them a PIN from the app."
+    }
+   ],
+   "start": 133.588
+  },
+  {
+   "id": "s19",
+   "title": "Fees",
+   "step": [
+    0,
+    "The app fills these"
+   ],
+   "dur": 7.387,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Fees tab fills by itself every month.",
+     "cue": "fills",
+     "t0": 1.5,
+     "t1": 3.925,
+     "words": [
+      {
+       "w": "Fees",
+       "s": 1.5,
+       "e": 1.82
+      },
+      {
+       "w": "tab",
+       "s": 1.82,
+       "e": 2.04
+      },
+      {
+       "w": "fills",
+       "s": 2.04,
+       "e": 2.32
+      },
+      {
+       "w": "by",
+       "s": 2.32,
+       "e": 2.6
+      },
+      {
+       "w": "itself",
+       "s": 2.6,
+       "e": 2.94
+      },
+      {
+       "w": "every",
+       "s": 2.94,
+       "e": 3.38
+      },
+      {
+       "w": "month.",
+       "s": 3.38,
+       "e": 3.68
+      }
+     ],
+     "heard": "Fee's tab fills by itself every month."
+    },
+    {
+     "i": 1,
+     "text": "Green Paid, red Due.",
+     "cue": "colours",
+     "t0": 4.595,
+     "t1": 6.013,
+     "words": [
+      {
+       "w": "Green",
+       "s": 4.595,
+       "e": 4.835
+      },
+      {
+       "w": "Paid,",
+       "s": 4.835,
+       "e": 5.175
+      },
+      {
+       "w": "red",
+       "s": 5.415,
+       "e": 5.535
+      },
+      {
+       "w": "Due.",
+       "s": 5.535,
+       "e": 5.775
+      }
+     ],
+     "heard": "Green paid, red due."
+    }
+   ],
+   "start": 139.567
+  },
+  {
+   "id": "s20",
+   "title": "Gradings",
+   "step": null,
+   "dur": 5.362,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Gradings shows belt tests.",
+     "cue": "tests",
+     "t0": 0.6,
+     "t1": 2.239,
+     "words": [
+      {
+       "w": "Gradings",
+       "s": 0.6,
+       "e": 0.98
+      },
+      {
+       "w": "shows",
+       "s": 0.98,
+       "e": 1.26
+      },
+      {
+       "w": "belt",
+       "s": 1.26,
+       "e": 1.58
+      },
+      {
+       "w": "tests.",
+       "s": 1.58,
+       "e": 1.9
+      }
+     ],
+     "heard": "Grading shows belt tests."
+    },
+    {
+     "i": 1,
+     "text": "Masters fill this in the app.",
+     "cue": "app",
+     "t0": 2.741,
+     "t1": 4.324,
+     "words": [
+      {
+       "w": "Masters",
+       "s": 2.741,
+       "e": 3.061
+      },
+      {
+       "w": "fill",
+       "s": 3.061,
+       "e": 3.401
+      },
+      {
+       "w": "this",
+       "s": 3.401,
+       "e": 3.581
+      },
+      {
+       "w": "in",
+       "s": 3.581,
+       "e": 3.761
+      },
+      {
+       "w": "the",
+       "s": 3.761,
+       "e": 3.861
+      },
+      {
+       "w": "app.",
+       "s": 3.861,
+       "e": 4.081
+      }
+     ],
+     "heard": "Masters fill this in the app."
+    }
+   ],
+   "start": 146.954
+  },
+  {
+   "id": "s21",
+   "title": "Attendance",
+   "step": null,
+   "dur": 6.793,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Attendance fills by itself",
+     "cue": "fills",
+     "t0": 0.6,
+     "t1": 2.251,
+     "words": [
+      {
+       "w": "Attendance",
+       "s": 0.6,
+       "e": 0.92
+      },
+      {
+       "w": "fills",
+       "s": 0.92,
+       "e": 1.28
+      },
+      {
+       "w": "by",
+       "s": 1.28,
+       "e": 1.58
+      },
+      {
+       "w": "itself",
+       "s": 1.58,
+       "e": 1.86
+      }
+     ],
+     "heard": "attendance fills by itself."
+    },
+    {
+     "i": 1,
+     "text": "when Masters tap in the app.",
+     "cue": "tap",
+     "t0": 2.501,
+     "t1": 4.113,
+     "words": [
+      {
+       "w": "when",
+       "s": 2.501,
+       "e": 2.621
+      },
+      {
+       "w": "Masters",
+       "s": 2.621,
+       "e": 3.021
+      },
+      {
+       "w": "tap",
+       "s": 3.021,
+       "e": 3.381
+      },
+      {
+       "w": "in",
+       "s": 3.381,
+       "e": 3.581
+      },
+      {
+       "w": "the",
+       "s": 3.581,
+       "e": 3.681
+      },
+      {
+       "w": "app.",
+       "s": 3.681,
+       "e": 3.921
+      }
+     ],
+     "heard": "when masters tap in the app."
+    },
+    {
+     "i": 2,
+     "text": "Don't type here!",
+     "cue": "dont",
+     "t0": 4.615,
+     "t1": 5.587,
+     "words": [
+      {
+       "w": "Don't",
+       "s": 4.615,
+       "e": 4.935
+      },
+      {
+       "w": "type",
+       "s": 4.935,
+       "e": 5.115
+      },
+      {
+       "w": "here!",
+       "s": 5.115,
+       "e": 5.375
+      }
+     ],
+     "heard": "Don't type here."
+    }
+   ],
+   "start": 152.316
+  },
+  {
+   "id": "s22",
+   "title": "Notices",
+   "step": null,
+   "dur": 3.854,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Notices are posted from the app too.",
+     "cue": "posted",
+     "t0": 0.6,
+     "t1": 2.732,
+     "words": [
+      {
+       "w": "Notices",
+       "s": 0.6,
+       "e": 1.08
+      },
+      {
+       "w": "are",
+       "s": 1.08,
+       "e": 1.28
+      },
+      {
+       "w": "posted",
+       "s": 1.28,
+       "e": 1.62
+      },
+      {
+       "w": "from",
+       "s": 1.62,
+       "e": 1.88
+      },
+      {
+       "w": "the",
+       "s": 1.88,
+       "e": 2.02
+      },
+      {
+       "w": "app",
+       "s": 2.02,
+       "e": 2.24
+      },
+      {
+       "w": "too.",
+       "s": 2.24,
+       "e": 2.48
+      }
+     ],
+     "heard": "Notices are posted from the app too."
+    }
+   ],
+   "start": 159.109
+  },
+  {
+   "id": "s23",
+   "title": "Recap",
+   "step": null,
+   "dur": 20.756,
+   "lines": [
+    {
+     "i": 0,
+     "text": "You type: Config, Belts, Masters, Classes,",
+     "cue": "you",
+     "t0": 0.6,
+     "t1": 3.552,
+     "words": [
+      {
+       "w": "You",
+       "s": 0.6,
+       "e": 0.74
+      },
+      {
+       "w": "type:",
+       "s": 0.74,
+       "e": 1.0
+      },
+      {
+       "w": "Config,",
+       "s": 1.0,
+       "e": 1.62
+      },
+      {
+       "w": "Belts,",
+       "s": 1.62,
+       "e": 2.08
+      },
+      {
+       "w": "Masters,",
+       "s": 2.08,
+       "e": 2.68
+      },
+      {
+       "w": "Classes,",
+       "s": 2.68,
+       "e": 3.1
+      }
+     ],
+     "heard": "You type config belts masters classes."
+    },
+    {
+     "i": 1,
+     "text": "Students, Enrolments, Parents, Access.",
+     "cue": "you2",
+     "t0": 3.97,
+     "t1": 6.484,
+     "words": [
+      {
+       "w": "Students,",
+       "s": 3.97,
+       "e": 4.35
+      },
+      {
+       "w": "Enrolments,",
+       "s": 4.57,
+       "e": 5.19
+      },
+      {
+       "w": "Parents,",
+       "s": 5.43,
+       "e": 5.63
+      },
+      {
+       "w": "Access.",
+       "s": 5.83,
+       "e": 6.13
+      }
+     ],
+     "heard": "Students' Enrollments, Parents' Access."
+    },
+    {
+     "i": 2,
+     "text": "The app does the rest!",
+     "cue": "rest",
+     "t0": 6.986,
+     "t1": 8.281,
+     "words": [
+      {
+       "w": "The",
+       "s": 6.986,
+       "e": 7.126
+      },
+      {
+       "w": "app",
+       "s": 7.126,
+       "e": 7.386
+      },
+      {
+       "w": "does",
+       "s": 7.386,
+       "e": 7.566
+      },
+      {
+       "w": "the",
+       "s": 7.566,
+       "e": 7.726
+      },
+      {
+       "w": "rest!",
+       "s": 7.726,
+       "e": 8.046
+      }
+     ],
+     "heard": "The app does the rest."
+    },
+    {
+     "i": 3,
+     "text": "Four golden rules!",
+     "cue": "rules",
+     "t0": 8.951,
+     "t1": 10.281,
+     "words": [
+      {
+       "w": "Four",
+       "s": 8.951,
+       "e": 9.211
+      },
+      {
+       "w": "golden",
+       "s": 9.211,
+       "e": 9.551
+      },
+      {
+       "w": "rules!",
+       "s": 9.551,
+       "e": 9.891
+      }
+     ],
+     "heard": "for Golden Rules."
+    },
+    {
+     "i": 4,
+     "text": "Never change the top row.",
+     "cue": "r1",
+     "t0": 10.657,
+     "t1": 12.24,
+     "words": [
+      {
+       "w": "Never",
+       "s": 10.657,
+       "e": 10.917
+      },
+      {
+       "w": "change",
+       "s": 10.917,
+       "e": 11.237
+      },
+      {
+       "w": "the",
+       "s": 11.237,
+       "e": 11.457
+      },
+      {
+       "w": "top",
+       "s": 11.457,
+       "e": 11.697
+      },
+      {
+       "w": "row.",
+       "s": 11.697,
+       "e": 11.957
+      }
+     ],
+     "heard": "Never change the top row."
+    },
+    {
+     "i": 5,
+     "text": "Check every IC number twice.",
+     "cue": "r2",
+     "t0": 12.742,
+     "t1": 14.521,
+     "words": [
+      {
+       "w": "Check",
+       "s": 12.742,
+       "e": 12.942
+      },
+      {
+       "w": "every",
+       "s": 12.942,
+       "e": 13.282
+      },
+      {
+       "w": "IC",
+       "s": 13.282,
+       "e": 13.542
+      },
+      {
+       "w": "number",
+       "s": 13.542,
+       "e": 13.822
+      },
+      {
+       "w": "twice.",
+       "s": 13.822,
+       "e": 14.102
+      }
+     ],
+     "heard": "Check every IC number twice."
+    },
+    {
+     "i": 6,
+     "text": "Use the lists when you see them.",
+     "cue": "r3",
+     "t0": 15.023,
+     "t1": 16.64,
+     "words": [
+      {
+       "w": "Use",
+       "s": 15.023,
+       "e": 15.243
+      },
+      {
+       "w": "the",
+       "s": 15.243,
+       "e": 15.483
+      },
+      {
+       "w": "lists",
+       "s": 15.483,
+       "e": 15.743
+      },
+      {
+       "w": "when",
+       "s": 15.743,
+       "e": 15.943
+      },
+      {
+       "w": "you",
+       "s": 15.943,
+       "e": 16.083
+      },
+      {
+       "w": "see",
+       "s": 16.083,
+       "e": 16.263
+      },
+      {
+       "w": "them.",
+       "s": 16.263,
+       "e": 16.443
+      }
+     ],
+     "heard": "Use the lists when you see them."
+    },
+    {
+     "i": 7,
+     "text": "Don't delete rows. Set Active to No.",
+     "cue": "r4",
+     "t0": 17.142,
+     "t1": 19.634,
+     "words": [
+      {
+       "w": "Don't",
+       "s": 17.142,
+       "e": 17.442
+      },
+      {
+       "w": "delete",
+       "s": 17.442,
+       "e": 17.662
+      },
+      {
+       "w": "rows.",
+       "s": 17.662,
+       "e": 18.042
+      },
+      {
+       "w": "Set",
+       "s": 18.462,
+       "e": 18.702
+      },
+      {
+       "w": "Active",
+       "s": 18.702,
+       "e": 19.042
+      },
+      {
+       "w": "to",
+       "s": 19.042,
+       "e": 19.202
+      },
+      {
+       "w": "No.",
+       "s": 19.202,
+       "e": 19.402
+      }
+     ],
+     "heard": "Don't delete rows, set active to know."
+    }
+   ],
+   "start": 162.963
+  },
+  {
+   "id": "s24",
+   "title": "Outro",
+   "step": null,
+   "dur": 4.31,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Great job, Admin!",
+     "cue": "great",
+     "t0": 0.6,
+     "t1": 1.86,
+     "words": [
+      {
+       "w": "Great",
+       "s": 0.6,
+       "e": 0.84
+      },
+      {
+       "w": "job,",
+       "s": 0.84,
+       "e": 1.18
+      },
+      {
+       "w": "Admin!",
+       "s": 1.34,
+       "e": 1.64
+      }
+     ],
+     "heard": "Great job, Admin."
+    },
+    {
+     "i": 1,
+     "text": "Vanakkam!",
+     "cue": "bye",
+     "t0": 2.11,
+     "t1": 2.936,
+     "words": [
+      {
+       "w": "Vanakkam!",
+       "s": 2.11,
+       "e": 2.75
+      }
+     ],
+     "heard": "Vanicam."
+    }
+   ],
+   "start": 183.719
+  }
+ ],
+ "total": 188.029
+}
