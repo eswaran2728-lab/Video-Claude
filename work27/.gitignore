@@ -10,3 +10,4 @@ videos/*.png
 *.wav
 __pycache__/
 ocr.json
+renders/
