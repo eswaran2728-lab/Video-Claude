@@ -1,0 +1,1263 @@
+{
+ "voice": "af_heart",
+ "speed": 0.9,
+ "scenes": [
+  {
+   "id": "s01",
+   "title": "Intro",
+   "step": null,
+   "dur": 6.017,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Hello! Vanakkam!",
+     "cue": "hello",
+     "t0": 1.4,
+     "t1": 2.566,
+     "words": [
+      {
+       "w": "Hello!",
+       "s": 1.4,
+       "e": 1.68
+      },
+      {
+       "w": "Vanakkam!",
+       "s": 1.84,
+       "e": 2.34
+      }
+     ],
+     "heard": "Hello, Vanicam."
+    },
+    {
+     "i": 1,
+     "text": "Let's learn our Silambam app together!",
+     "cue": "learn",
+     "t0": 2.816,
+     "t1": 4.847,
+     "words": [
+      {
+       "w": "Let's",
+       "s": 2.816,
+       "e": 3.136
+      },
+      {
+       "w": "learn",
+       "s": 3.136,
+       "e": 3.296
+      },
+      {
+       "w": "our",
+       "s": 3.296,
+       "e": 3.436
+      },
+      {
+       "w": "Silambam",
+       "s": 3.436,
+       "e": 3.976
+      },
+      {
+       "w": "app",
+       "s": 3.976,
+       "e": 4.236
+      },
+      {
+       "w": "together!",
+       "s": 4.236,
+       "e": 4.496
+      }
+     ],
+     "heard": "Let's learn our Cilumbam app together."
+    }
+   ],
+   "start": 0
+  },
+  {
+   "id": "s02",
+   "title": "Open the app",
+   "step": [
+    1,
+    "Sign in"
+   ],
+   "dur": 5.24,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Open the app.",
+     "cue": "open",
+     "t0": 1.5,
+     "t1": 2.496,
+     "words": [
+      {
+       "w": "Open",
+       "s": 1.5,
+       "e": 1.8
+      },
+      {
+       "w": "the",
+       "s": 1.8,
+       "e": 2.02
+      },
+      {
+       "w": "app.",
+       "s": 2.02,
+       "e": 2.24
+      }
+     ],
+     "heard": "Open the app."
+    },
+    {
+     "i": 1,
+     "text": "Tap Parent or Student.",
+     "cue": "tap",
+     "t0": 2.746,
+     "t1": 4.19,
+     "words": [
+      {
+       "w": "Tap",
+       "s": 2.746,
+       "e": 2.966
+      },
+      {
+       "w": "Parent",
+       "s": 2.966,
+       "e": 3.326
+      },
+      {
+       "w": "or",
+       "s": 3.326,
+       "e": 3.506
+      },
+      {
+       "w": "Student.",
+       "s": 3.506,
+       "e": 3.806
+      }
+     ],
+     "heard": "tap parent or student."
+    }
+   ],
+   "start": 6.017
+  },
+  {
+   "id": "s03",
+   "title": "Sign in",
+   "step": null,
+   "dur": 6.923,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Type your phone number.",
+     "cue": "phone",
+     "t0": 0.6,
+     "t1": 1.855,
+     "words": [
+      {
+       "w": "Type",
+       "s": 0.6,
+       "e": 0.84
+      },
+      {
+       "w": "your",
+       "s": 0.84,
+       "e": 1.06
+      },
+      {
+       "w": "phone",
+       "s": 1.06,
+       "e": 1.32
+      },
+      {
+       "w": "number.",
+       "s": 1.32,
+       "e": 1.58
+      }
+     ],
+     "heard": "Type your phone number."
+    },
+    {
+     "i": 1,
+     "text": "Then your secret 6-number PIN.",
+     "cue": "pin",
+     "t0": 2.105,
+     "t1": 4.065,
+     "words": [
+      {
+       "w": "Then",
+       "s": 2.105,
+       "e": 2.443
+      },
+      {
+       "w": "your",
+       "s": 2.443,
+       "e": 2.781
+      },
+      {
+       "w": "secret",
+       "s": 2.781,
+       "e": 3.254
+      },
+      {
+       "w": "6-number",
+       "s": 3.254,
+       "e": 3.795
+      },
+      {
+       "w": "PIN.",
+       "s": 3.795,
+       "e": 4.065
+      }
+     ],
+     "heard": "Then your secret six number pin.  [proportional]"
+    },
+    {
+     "i": 2,
+     "text": "Tap Sign in!",
+     "cue": "signin",
+     "t0": 4.675,
+     "t1": 5.633,
+     "words": [
+      {
+       "w": "Tap",
+       "s": 4.675,
+       "e": 4.875
+      },
+      {
+       "w": "Sign",
+       "s": 4.875,
+       "e": 5.215
+      },
+      {
+       "w": "in!",
+       "s": 5.215,
+       "e": 5.435
+      }
+     ],
+     "heard": "Tap sign in."
+    }
+   ],
+   "start": 11.257
+  },
+  {
+   "id": "s04",
+   "title": "Language",
+   "step": null,
+   "dur": 4.748,
+   "lines": [
+    {
+     "i": 0,
+     "text": "You can pick English, Malay or Tamil!",
+     "cue": "lang",
+     "t0": 0.6,
+     "t1": 2.858,
+     "words": [
+      {
+       "w": "You",
+       "s": 0.6,
+       "e": 0.72
+      },
+      {
+       "w": "can",
+       "s": 0.72,
+       "e": 0.88
+      },
+      {
+       "w": "pick",
+       "s": 0.88,
+       "e": 1.08
+      },
+      {
+       "w": "English,",
+       "s": 1.08,
+       "e": 1.44
+      },
+      {
+       "w": "Malay",
+       "s": 1.8,
+       "e": 2.14
+      },
+      {
+       "w": "or",
+       "s": 2.26,
+       "e": 2.26
+      },
+      {
+       "w": "Tamil!",
+       "s": 2.26,
+       "e": 2.58
+      }
+     ],
+     "heard": "You can pick English, Malay, or Tamil."
+    }
+   ],
+   "start": 18.18
+  },
+  {
+   "id": "s05",
+   "title": "My children",
+   "step": [
+    2,
+    "See your child"
+   ],
+   "dur": 7.556,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Here are your children.",
+     "cue": "kids",
+     "t0": 1.5,
+     "t1": 2.715,
+     "words": [
+      {
+       "w": "Here",
+       "s": 1.5,
+       "e": 1.72
+      },
+      {
+       "w": "are",
+       "s": 1.72,
+       "e": 1.88
+      },
+      {
+       "w": "your",
+       "s": 1.88,
+       "e": 2.0
+      },
+      {
+       "w": "children.",
+       "s": 2.0,
+       "e": 2.32
+      }
+     ],
+     "heard": "Here are your children."
+    },
+    {
+     "i": 1,
+     "text": "See their belt colour.",
+     "cue": "belt",
+     "t0": 2.965,
+     "t1": 4.181,
+     "words": [
+      {
+       "w": "See",
+       "s": 2.965,
+       "e": 3.165
+      },
+      {
+       "w": "their",
+       "s": 3.165,
+       "e": 3.325
+      },
+      {
+       "w": "belt",
+       "s": 3.325,
+       "e": 3.565
+      },
+      {
+       "w": "colour.",
+       "s": 3.565,
+       "e": 3.885
+      }
+     ],
+     "heard": "See their belt color."
+    },
+    {
+     "i": 2,
+     "text": "See how many classes they came.",
+     "cue": "count",
+     "t0": 4.431,
+     "t1": 6.146,
+     "words": [
+      {
+       "w": "See",
+       "s": 4.431,
+       "e": 4.611
+      },
+      {
+       "w": "how",
+       "s": 4.611,
+       "e": 4.811
+      },
+      {
+       "w": "many",
+       "s": 4.811,
+       "e": 4.971
+      },
+      {
+       "w": "classes",
+       "s": 4.971,
+       "e": 5.371
+      },
+      {
+       "w": "they",
+       "s": 5.371,
+       "e": 5.631
+      },
+      {
+       "w": "came.",
+       "s": 5.631,
+       "e": 5.891
+      }
+     ],
+     "heard": "See how many classes they came."
+    }
+   ],
+   "start": 22.928
+  },
+  {
+   "id": "s06",
+   "title": "Child details",
+   "step": null,
+   "dur": 10.283,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Tap a name to see more.",
+     "cue": "tapname",
+     "t0": 0.6,
+     "t1": 2.031,
+     "words": [
+      {
+       "w": "Tap",
+       "s": 0.6,
+       "e": 0.8
+      },
+      {
+       "w": "a",
+       "s": 0.8,
+       "e": 0.96
+      },
+      {
+       "w": "name",
+       "s": 0.96,
+       "e": 1.18
+      },
+      {
+       "w": "to",
+       "s": 1.18,
+       "e": 1.36
+      },
+      {
+       "w": "see",
+       "s": 1.36,
+       "e": 1.54
+      },
+      {
+       "w": "more.",
+       "s": 1.54,
+       "e": 1.78
+      }
+     ],
+     "heard": "Tap a name to see more."
+    },
+    {
+     "i": 1,
+     "text": "Green means came.",
+     "cue": "green",
+     "t0": 2.761,
+     "t1": 3.921,
+     "words": [
+      {
+       "w": "Green",
+       "s": 2.761,
+       "e": 3.021
+      },
+      {
+       "w": "means",
+       "s": 3.021,
+       "e": 3.341
+      },
+      {
+       "w": "came.",
+       "s": 3.341,
+       "e": 3.641
+      }
+     ],
+     "heard": "Green means cam."
+    },
+    {
+     "i": 2,
+     "text": "Red means absent.",
+     "cue": "red",
+     "t0": 4.171,
+     "t1": 5.391,
+     "words": [
+      {
+       "w": "Red",
+       "s": 4.171,
+       "e": 4.391
+      },
+      {
+       "w": "means",
+       "s": 4.391,
+       "e": 4.631
+      },
+      {
+       "w": "absent.",
+       "s": 4.631,
+       "e": 5.031
+      }
+     ],
+     "heard": "Red means absent."
+    },
+    {
+     "i": 3,
+     "text": "Orange means late.",
+     "cue": "orange",
+     "t0": 5.641,
+     "t1": 6.87,
+     "words": [
+      {
+       "w": "Orange",
+       "s": 5.641,
+       "e": 5.921
+      },
+      {
+       "w": "means",
+       "s": 5.921,
+       "e": 6.261
+      },
+      {
+       "w": "late.",
+       "s": 6.261,
+       "e": 6.581
+      }
+     ],
+     "heard": "Orange means late."
+    },
+    {
+     "i": 4,
+     "text": "See belt tests here too!",
+     "cue": "grading",
+     "t0": 7.48,
+     "t1": 8.993,
+     "words": [
+      {
+       "w": "See",
+       "s": 7.48,
+       "e": 7.66
+      },
+      {
+       "w": "belt",
+       "s": 7.66,
+       "e": 7.92
+      },
+      {
+       "w": "tests",
+       "s": 7.92,
+       "e": 8.24
+      },
+      {
+       "w": "here",
+       "s": 8.24,
+       "e": 8.48
+      },
+      {
+       "w": "too!",
+       "s": 8.48,
+       "e": 8.7
+      }
+     ],
+     "heard": "See belt tests here too."
+    }
+   ],
+   "start": 30.484
+  },
+  {
+   "id": "s07",
+   "title": "Pay the fee",
+   "step": [
+    3,
+    "Pay the fee"
+   ],
+   "dur": 9.168,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Time to pay the fee?",
+     "cue": "fee",
+     "t0": 1.5,
+     "t1": 2.806,
+     "words": [
+      {
+       "w": "Time",
+       "s": 1.5,
+       "e": 1.76
+      },
+      {
+       "w": "to",
+       "s": 1.76,
+       "e": 1.96
+      },
+      {
+       "w": "pay",
+       "s": 1.96,
+       "e": 2.14
+      },
+      {
+       "w": "the",
+       "s": 2.14,
+       "e": 2.3
+      },
+      {
+       "w": "fee?",
+       "s": 2.3,
+       "e": 2.52
+      }
+     ],
+     "heard": "Time to pay the fee."
+    },
+    {
+     "i": 1,
+     "text": "Tap Pay.",
+     "cue": "pay",
+     "t0": 3.056,
+     "t1": 3.845,
+     "words": [
+      {
+       "w": "Tap",
+       "s": 3.056,
+       "e": 3.276
+      },
+      {
+       "w": "Pay.",
+       "s": 3.276,
+       "e": 3.636
+      }
+     ],
+     "heard": "Tap Pay."
+    },
+    {
+     "i": 2,
+     "text": "You can see the Master's bank account.",
+     "cue": "bank",
+     "t0": 4.455,
+     "t1": 6.475,
+     "words": [
+      {
+       "w": "You",
+       "s": 4.455,
+       "e": 4.595
+      },
+      {
+       "w": "can",
+       "s": 4.595,
+       "e": 4.755
+      },
+      {
+       "w": "see",
+       "s": 4.755,
+       "e": 4.955
+      },
+      {
+       "w": "the",
+       "s": 4.955,
+       "e": 5.095
+      },
+      {
+       "w": "Master's",
+       "s": 5.095,
+       "e": 5.635
+      },
+      {
+       "w": "bank",
+       "s": 5.635,
+       "e": 5.815
+      },
+      {
+       "w": "account.",
+       "s": 5.815,
+       "e": 6.195
+      }
+     ],
+     "heard": "You can see the master's bank account."
+    },
+    {
+     "i": 3,
+     "text": "Tap Copy!",
+     "cue": "copy",
+     "t0": 7.205,
+     "t1": 8.118,
+     "words": [
+      {
+       "w": "Tap",
+       "s": 7.205,
+       "e": 7.425
+      },
+      {
+       "w": "Copy!",
+       "s": 7.425,
+       "e": 7.805
+      }
+     ],
+     "heard": "Tap copy."
+    }
+   ],
+   "start": 40.767
+  },
+  {
+   "id": "s08",
+   "title": "Send receipt",
+   "step": null,
+   "dur": 6.817,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Paid by bank?",
+     "cue": "paid",
+     "t0": 0.6,
+     "t1": 1.603,
+     "words": [
+      {
+       "w": "Paid",
+       "s": 0.6,
+       "e": 0.88
+      },
+      {
+       "w": "by",
+       "s": 0.88,
+       "e": 1.04
+      },
+      {
+       "w": "bank?",
+       "s": 1.04,
+       "e": 1.32
+      }
+     ],
+     "heard": "Paid by bank."
+    },
+    {
+     "i": 1,
+     "text": "Take a photo of your receipt.",
+     "cue": "photo",
+     "t0": 1.853,
+     "t1": 3.497,
+     "words": [
+      {
+       "w": "Take",
+       "s": 1.853,
+       "e": 2.013
+      },
+      {
+       "w": "a",
+       "s": 2.013,
+       "e": 2.173
+      },
+      {
+       "w": "photo",
+       "s": 2.173,
+       "e": 2.473
+      },
+      {
+       "w": "of",
+       "s": 2.473,
+       "e": 2.733
+      },
+      {
+       "w": "your",
+       "s": 2.733,
+       "e": 2.813
+      },
+      {
+       "w": "receipt.",
+       "s": 2.813,
+       "e": 3.133
+      }
+     ],
+     "heard": "Take a photo of your receipt."
+    },
+    {
+     "i": 2,
+     "text": "Tap Send to Master.",
+     "cue": "send",
+     "t0": 4.107,
+     "t1": 5.407,
+     "words": [
+      {
+       "w": "Tap",
+       "s": 4.107,
+       "e": 4.307
+      },
+      {
+       "w": "Send",
+       "s": 4.307,
+       "e": 4.587
+      },
+      {
+       "w": "to",
+       "s": 4.587,
+       "e": 4.727
+      },
+      {
+       "w": "Master.",
+       "s": 4.727,
+       "e": 5.047
+      }
+     ],
+     "heard": "Tap send to master."
+    }
+   ],
+   "start": 49.935
+  },
+  {
+   "id": "s09",
+   "title": "Wait",
+   "step": null,
+   "dur": 6.227,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Now we wait.",
+     "cue": "wait",
+     "t0": 0.6,
+     "t1": 1.554,
+     "words": [
+      {
+       "w": "Now",
+       "s": 0.6,
+       "e": 0.84
+      },
+      {
+       "w": "we",
+       "s": 0.84,
+       "e": 1.02
+      },
+      {
+       "w": "wait.",
+       "s": 1.02,
+       "e": 1.24
+      }
+     ],
+     "heard": "Now we wait."
+    },
+    {
+     "i": 1,
+     "text": "The Master checks it.",
+     "cue": "check",
+     "t0": 1.804,
+     "t1": 3.035,
+     "words": [
+      {
+       "w": "The",
+       "s": 1.804,
+       "e": 1.904
+      },
+      {
+       "w": "Master",
+       "s": 1.904,
+       "e": 2.224
+      },
+      {
+       "w": "checks",
+       "s": 2.224,
+       "e": 2.564
+      },
+      {
+       "w": "it.",
+       "s": 2.564,
+       "e": 2.844
+      }
+     ],
+     "heard": "The master checks it."
+    },
+    {
+     "i": 2,
+     "text": "Then it turns green!",
+     "cue": "turns",
+     "t0": 3.645,
+     "t1": 4.817,
+     "words": [
+      {
+       "w": "Then",
+       "s": 3.645,
+       "e": 3.785
+      },
+      {
+       "w": "it",
+       "s": 3.785,
+       "e": 3.885
+      },
+      {
+       "w": "turns",
+       "s": 3.885,
+       "e": 4.125
+      },
+      {
+       "w": "green!",
+       "s": 4.125,
+       "e": 4.465
+      }
+     ],
+     "heard": "Then it turns green."
+    }
+   ],
+   "start": 56.752
+  },
+  {
+   "id": "s10",
+   "title": "Notices",
+   "step": [
+    4,
+    "News and belts"
+   ],
+   "dur": 5.86,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Notices tell you news.",
+     "cue": "news",
+     "t0": 1.5,
+     "t1": 3.005,
+     "words": [
+      {
+       "w": "Notices",
+       "s": 1.5,
+       "e": 1.98
+      },
+      {
+       "w": "tell",
+       "s": 1.98,
+       "e": 2.28
+      },
+      {
+       "w": "you",
+       "s": 2.28,
+       "e": 2.44
+      },
+      {
+       "w": "news.",
+       "s": 2.44,
+       "e": 2.72
+      }
+     ],
+     "heard": "Notices tell your news."
+    },
+    {
+     "i": 1,
+     "text": "Like belt test day!",
+     "cue": "testday",
+     "t0": 3.255,
+     "t1": 4.57,
+     "words": [
+      {
+       "w": "Like",
+       "s": 3.255,
+       "e": 3.475
+      },
+      {
+       "w": "belt",
+       "s": 3.475,
+       "e": 3.775
+      },
+      {
+       "w": "test",
+       "s": 3.775,
+       "e": 4.035
+      },
+      {
+       "w": "day!",
+       "s": 4.035,
+       "e": 4.315
+      }
+     ],
+     "heard": "Like Belt Test Day."
+    }
+   ],
+   "start": 62.979
+  },
+  {
+   "id": "s11",
+   "title": "Belts",
+   "step": null,
+   "dur": 6.54,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Belts shows what to learn.",
+     "cue": "learn",
+     "t0": 0.6,
+     "t1": 2.024,
+     "words": [
+      {
+       "w": "Belts",
+       "s": 0.6,
+       "e": 0.96
+      },
+      {
+       "w": "shows",
+       "s": 0.96,
+       "e": 1.12
+      },
+      {
+       "w": "what",
+       "s": 1.12,
+       "e": 1.38
+      },
+      {
+       "w": "to",
+       "s": 1.38,
+       "e": 1.54
+      },
+      {
+       "w": "learn.",
+       "s": 1.54,
+       "e": 1.76
+      }
+     ],
+     "heard": "Belts shows what to learn."
+    },
+    {
+     "i": 1,
+     "text": "Learn these, then get your next belt!",
+     "cue": "next",
+     "t0": 2.634,
+     "t1": 4.77,
+     "words": [
+      {
+       "w": "Learn",
+       "s": 2.634,
+       "e": 2.854
+      },
+      {
+       "w": "these,",
+       "s": 2.854,
+       "e": 3.214
+      },
+      {
+       "w": "then",
+       "s": 3.554,
+       "e": 3.674
+      },
+      {
+       "w": "get",
+       "s": 3.674,
+       "e": 3.894
+      },
+      {
+       "w": "your",
+       "s": 3.894,
+       "e": 3.994
+      },
+      {
+       "w": "next",
+       "s": 3.994,
+       "e": 4.214
+      },
+      {
+       "w": "belt!",
+       "s": 4.214,
+       "e": 4.494
+      }
+     ],
+     "heard": "Learn these, then get your next belt."
+    }
+   ],
+   "start": 68.839
+  },
+  {
+   "id": "s12",
+   "title": "Students",
+   "step": [
+    5,
+    "Students and sign out"
+   ],
+   "dur": 5.849,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Students can sign in too,",
+     "cue": "students",
+     "t0": 1.5,
+     "t1": 3.089,
+     "words": [
+      {
+       "w": "Students",
+       "s": 1.5,
+       "e": 1.78
+      },
+      {
+       "w": "can",
+       "s": 1.78,
+       "e": 2.08
+      },
+      {
+       "w": "sign",
+       "s": 2.08,
+       "e": 2.4
+      },
+      {
+       "w": "in",
+       "s": 2.4,
+       "e": 2.58
+      },
+      {
+       "w": "too,",
+       "s": 2.58,
+       "e": 2.78
+      }
+     ],
+     "heard": "Students can sign in too."
+    },
+    {
+     "i": 1,
+     "text": "with their own phone.",
+     "cue": "own",
+     "t0": 3.339,
+     "t1": 4.559,
+     "words": [
+      {
+       "w": "with",
+       "s": 3.339,
+       "e": 3.499
+      },
+      {
+       "w": "their",
+       "s": 3.499,
+       "e": 3.719
+      },
+      {
+       "w": "own",
+       "s": 3.719,
+       "e": 3.919
+      },
+      {
+       "w": "phone.",
+       "s": 3.919,
+       "e": 4.239
+      }
+     ],
+     "heard": "with their own phone."
+    }
+   ],
+   "start": 75.379
+  },
+  {
+   "id": "s13",
+   "title": "Sign out",
+   "step": null,
+   "dur": 3.748,
+   "lines": [
+    {
+     "i": 0,
+     "text": "All done?",
+     "cue": "done",
+     "t0": 0.6,
+     "t1": 1.341,
+     "words": [
+      {
+       "w": "All",
+       "s": 0.6,
+       "e": 0.8
+      },
+      {
+       "w": "done?",
+       "s": 0.8,
+       "e": 1.06
+      }
+     ],
+     "heard": "All done."
+    },
+    {
+     "i": 1,
+     "text": "Tap Sign out.",
+     "cue": "out",
+     "t0": 1.591,
+     "t1": 2.578,
+     "words": [
+      {
+       "w": "Tap",
+       "s": 1.591,
+       "e": 1.791
+      },
+      {
+       "w": "Sign",
+       "s": 1.791,
+       "e": 2.091
+      },
+      {
+       "w": "out.",
+       "s": 2.091,
+       "e": 2.331
+      }
+     ],
+     "heard": "Tap Sign Out."
+    }
+   ],
+   "start": 81.228
+  },
+  {
+   "id": "s14",
+   "title": "Outro",
+   "step": null,
+   "dur": 5.712,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Great job!",
+     "cue": "great",
+     "t0": 0.6,
+     "t1": 1.582,
+     "words": [
+      {
+       "w": "Great",
+       "s": 0.6,
+       "e": 0.88
+      },
+      {
+       "w": "job!",
+       "s": 0.88,
+       "e": 1.22
+      }
+     ],
+     "heard": "Great job."
+    },
+    {
+     "i": 1,
+     "text": "See you at class!",
+     "cue": "see",
+     "t0": 1.832,
+     "t1": 2.866,
+     "words": [
+      {
+       "w": "See",
+       "s": 1.832,
+       "e": 2.032
+      },
+      {
+       "w": "you",
+       "s": 2.032,
+       "e": 2.152
+      },
+      {
+       "w": "at",
+       "s": 2.152,
+       "e": 2.252
+      },
+      {
+       "w": "class!",
+       "s": 2.252,
+       "e": 2.472
+      }
+     ],
+     "heard": "See you at class."
+    },
+    {
+     "i": 2,
+     "text": "Vanakkam!",
+     "cue": "bye",
+     "t0": 3.116,
+     "t1": 3.942,
+     "words": [
+      {
+       "w": "Vanakkam!",
+       "s": 3.116,
+       "e": 3.756
+      }
+     ],
+     "heard": "Vanicam."
+    }
+   ],
+   "start": 84.976
+  }
+ ],
+ "total": 90.688
+}

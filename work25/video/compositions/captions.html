@@ -1,0 +1,462 @@
+<template>
+  <style>
+    @font-face { font-family:"Jakarta"; font-weight:800; src:url("assets/fonts/plus-jakarta-sans-latin-800-normal.woff2") format("woff2"); }
+    #root { position:absolute; inset:0; font-family:"Jakarta", "Inter", sans-serif; }
+    .cg { position:absolute; left:60px; width:960px; top:1335px; height:230px; display:flex; align-items:center; justify-content:center; text-align:center; }
+    .cb { display:inline-block; padding:18px 34px; border-radius:36px; background:rgba(18,10,33,.82); box-shadow:0 18px 40px rgba(0,0,0,.35); font-weight:800; font-size:74px; line-height:1.12; color:#fff; }
+    .w { display:inline-block; margin:0 .14em; }
+  </style>
+  <div id="root" data-composition-id="captions" data-width="1080" data-height="1920">
+    <div id="c0" class="cg"><div class="cb"><span id="c0w0" class="w">Hello!</span><span id="c0w1" class="w">Vanakkam!</span></div></div>
+    <div id="c1" class="cg"><div class="cb"><span id="c1w0" class="w">Let&#x27;s</span><span id="c1w1" class="w">learn</span><span id="c1w2" class="w">our</span><span id="c1w3" class="w">Silambam</span><span id="c1w4" class="w">app</span><span id="c1w5" class="w">together!</span></div></div>
+    <div id="c2" class="cg"><div class="cb"><span id="c2w0" class="w">Open</span><span id="c2w1" class="w">the</span><span id="c2w2" class="w">app.</span></div></div>
+    <div id="c3" class="cg"><div class="cb"><span id="c3w0" class="w">Tap</span><span id="c3w1" class="w">Parent</span><span id="c3w2" class="w">or</span><span id="c3w3" class="w">Student.</span></div></div>
+    <div id="c4" class="cg"><div class="cb"><span id="c4w0" class="w">Type</span><span id="c4w1" class="w">your</span><span id="c4w2" class="w">phone</span><span id="c4w3" class="w">number.</span></div></div>
+    <div id="c5" class="cg"><div class="cb"><span id="c5w0" class="w">Then</span><span id="c5w1" class="w">your</span><span id="c5w2" class="w">secret</span><span id="c5w3" class="w">6-number</span><span id="c5w4" class="w">PIN.</span></div></div>
+    <div id="c6" class="cg"><div class="cb"><span id="c6w0" class="w">Tap</span><span id="c6w1" class="w">Sign</span><span id="c6w2" class="w">in!</span></div></div>
+    <div id="c7" class="cg"><div class="cb"><span id="c7w0" class="w">You</span><span id="c7w1" class="w">can</span><span id="c7w2" class="w">pick</span><span id="c7w3" class="w">English,</span><span id="c7w4" class="w">Malay</span><span id="c7w5" class="w">or</span><span id="c7w6" class="w">Tamil!</span></div></div>
+    <div id="c8" class="cg"><div class="cb"><span id="c8w0" class="w">Here</span><span id="c8w1" class="w">are</span><span id="c8w2" class="w">your</span><span id="c8w3" class="w">children.</span></div></div>
+    <div id="c9" class="cg"><div class="cb"><span id="c9w0" class="w">See</span><span id="c9w1" class="w">their</span><span id="c9w2" class="w">belt</span><span id="c9w3" class="w">colour.</span></div></div>
+    <div id="c10" class="cg"><div class="cb"><span id="c10w0" class="w">See</span><span id="c10w1" class="w">how</span><span id="c10w2" class="w">many</span><span id="c10w3" class="w">classes</span><span id="c10w4" class="w">they</span><span id="c10w5" class="w">came.</span></div></div>
+    <div id="c11" class="cg"><div class="cb"><span id="c11w0" class="w">Tap</span><span id="c11w1" class="w">a</span><span id="c11w2" class="w">name</span><span id="c11w3" class="w">to</span><span id="c11w4" class="w">see</span><span id="c11w5" class="w">more.</span></div></div>
+    <div id="c12" class="cg"><div class="cb"><span id="c12w0" class="w">Green</span><span id="c12w1" class="w">means</span><span id="c12w2" class="w">came.</span></div></div>
+    <div id="c13" class="cg"><div class="cb"><span id="c13w0" class="w">Red</span><span id="c13w1" class="w">means</span><span id="c13w2" class="w">absent.</span></div></div>
+    <div id="c14" class="cg"><div class="cb"><span id="c14w0" class="w">Orange</span><span id="c14w1" class="w">means</span><span id="c14w2" class="w">late.</span></div></div>
+    <div id="c15" class="cg"><div class="cb"><span id="c15w0" class="w">See</span><span id="c15w1" class="w">belt</span><span id="c15w2" class="w">tests</span><span id="c15w3" class="w">here</span><span id="c15w4" class="w">too!</span></div></div>
+    <div id="c16" class="cg"><div class="cb"><span id="c16w0" class="w">Time</span><span id="c16w1" class="w">to</span><span id="c16w2" class="w">pay</span><span id="c16w3" class="w">the</span><span id="c16w4" class="w">fee?</span></div></div>
+    <div id="c17" class="cg"><div class="cb"><span id="c17w0" class="w">Tap</span><span id="c17w1" class="w">Pay.</span></div></div>
+    <div id="c18" class="cg"><div class="cb"><span id="c18w0" class="w">You</span><span id="c18w1" class="w">can</span><span id="c18w2" class="w">see</span><span id="c18w3" class="w">the</span><span id="c18w4" class="w">Master&#x27;s</span><span id="c18w5" class="w">bank</span><span id="c18w6" class="w">account.</span></div></div>
+    <div id="c19" class="cg"><div class="cb"><span id="c19w0" class="w">Tap</span><span id="c19w1" class="w">Copy!</span></div></div>
+    <div id="c20" class="cg"><div class="cb"><span id="c20w0" class="w">Paid</span><span id="c20w1" class="w">by</span><span id="c20w2" class="w">bank?</span></div></div>
+    <div id="c21" class="cg"><div class="cb"><span id="c21w0" class="w">Take</span><span id="c21w1" class="w">a</span><span id="c21w2" class="w">photo</span><span id="c21w3" class="w">of</span><span id="c21w4" class="w">your</span><span id="c21w5" class="w">receipt.</span></div></div>
+    <div id="c22" class="cg"><div class="cb"><span id="c22w0" class="w">Tap</span><span id="c22w1" class="w">Send</span><span id="c22w2" class="w">to</span><span id="c22w3" class="w">Master.</span></div></div>
+    <div id="c23" class="cg"><div class="cb"><span id="c23w0" class="w">Now</span><span id="c23w1" class="w">we</span><span id="c23w2" class="w">wait.</span></div></div>
+    <div id="c24" class="cg"><div class="cb"><span id="c24w0" class="w">The</span><span id="c24w1" class="w">Master</span><span id="c24w2" class="w">checks</span><span id="c24w3" class="w">it.</span></div></div>
+    <div id="c25" class="cg"><div class="cb"><span id="c25w0" class="w">Then</span><span id="c25w1" class="w">it</span><span id="c25w2" class="w">turns</span><span id="c25w3" class="w">green!</span></div></div>
+    <div id="c26" class="cg"><div class="cb"><span id="c26w0" class="w">Notices</span><span id="c26w1" class="w">tell</span><span id="c26w2" class="w">you</span><span id="c26w3" class="w">news.</span></div></div>
+    <div id="c27" class="cg"><div class="cb"><span id="c27w0" class="w">Like</span><span id="c27w1" class="w">belt</span><span id="c27w2" class="w">test</span><span id="c27w3" class="w">day!</span></div></div>
+    <div id="c28" class="cg"><div class="cb"><span id="c28w0" class="w">Belts</span><span id="c28w1" class="w">shows</span><span id="c28w2" class="w">what</span><span id="c28w3" class="w">to</span><span id="c28w4" class="w">learn.</span></div></div>
+    <div id="c29" class="cg"><div class="cb"><span id="c29w0" class="w">Learn</span><span id="c29w1" class="w">these,</span><span id="c29w2" class="w">then</span><span id="c29w3" class="w">get</span><span id="c29w4" class="w">your</span><span id="c29w5" class="w">next</span><span id="c29w6" class="w">belt!</span></div></div>
+    <div id="c30" class="cg"><div class="cb"><span id="c30w0" class="w">Students</span><span id="c30w1" class="w">can</span><span id="c30w2" class="w">sign</span><span id="c30w3" class="w">in</span><span id="c30w4" class="w">too,</span></div></div>
+    <div id="c31" class="cg"><div class="cb"><span id="c31w0" class="w">with</span><span id="c31w1" class="w">their</span><span id="c31w2" class="w">own</span><span id="c31w3" class="w">phone.</span></div></div>
+    <div id="c32" class="cg"><div class="cb"><span id="c32w0" class="w">All</span><span id="c32w1" class="w">done?</span></div></div>
+    <div id="c33" class="cg"><div class="cb"><span id="c33w0" class="w">Tap</span><span id="c33w1" class="w">Sign</span><span id="c33w2" class="w">out.</span></div></div>
+    <div id="c34" class="cg"><div class="cb"><span id="c34w0" class="w">Great</span><span id="c34w1" class="w">job!</span></div></div>
+    <div id="c35" class="cg"><div class="cb"><span id="c35w0" class="w">See</span><span id="c35w1" class="w">you</span><span id="c35w2" class="w">at</span><span id="c35w3" class="w">class!</span></div></div>
+    <div id="c36" class="cg"><div class="cb"><span id="c36w0" class="w">Vanakkam!</span></div></div>
+  </div>
+  <script>
+    gsap.set("#c0",{opacity:0,scale:.82,y:40});
+    gsap.set("#c1",{opacity:0,scale:.82,y:40});
+    gsap.set("#c2",{opacity:0,scale:.82,y:40});
+    gsap.set("#c3",{opacity:0,scale:.82,y:40});
+    gsap.set("#c4",{opacity:0,scale:.82,y:40});
+    gsap.set("#c5",{opacity:0,scale:.82,y:40});
+    gsap.set("#c6",{opacity:0,scale:.82,y:40});
+    gsap.set("#c7",{opacity:0,scale:.82,y:40});
+    gsap.set("#c8",{opacity:0,scale:.82,y:40});
+    gsap.set("#c9",{opacity:0,scale:.82,y:40});
+    gsap.set("#c10",{opacity:0,scale:.82,y:40});
+    gsap.set("#c11",{opacity:0,scale:.82,y:40});
+    gsap.set("#c12",{opacity:0,scale:.82,y:40});
+    gsap.set("#c13",{opacity:0,scale:.82,y:40});
+    gsap.set("#c14",{opacity:0,scale:.82,y:40});
+    gsap.set("#c15",{opacity:0,scale:.82,y:40});
+    gsap.set("#c16",{opacity:0,scale:.82,y:40});
+    gsap.set("#c17",{opacity:0,scale:.82,y:40});
+    gsap.set("#c18",{opacity:0,scale:.82,y:40});
+    gsap.set("#c19",{opacity:0,scale:.82,y:40});
+    gsap.set("#c20",{opacity:0,scale:.82,y:40});
+    gsap.set("#c21",{opacity:0,scale:.82,y:40});
+    gsap.set("#c22",{opacity:0,scale:.82,y:40});
+    gsap.set("#c23",{opacity:0,scale:.82,y:40});
+    gsap.set("#c24",{opacity:0,scale:.82,y:40});
+    gsap.set("#c25",{opacity:0,scale:.82,y:40});
+    gsap.set("#c26",{opacity:0,scale:.82,y:40});
+    gsap.set("#c27",{opacity:0,scale:.82,y:40});
+    gsap.set("#c28",{opacity:0,scale:.82,y:40});
+    gsap.set("#c29",{opacity:0,scale:.82,y:40});
+    gsap.set("#c30",{opacity:0,scale:.82,y:40});
+    gsap.set("#c31",{opacity:0,scale:.82,y:40});
+    gsap.set("#c32",{opacity:0,scale:.82,y:40});
+    gsap.set("#c33",{opacity:0,scale:.82,y:40});
+    gsap.set("#c34",{opacity:0,scale:.82,y:40});
+    gsap.set("#c35",{opacity:0,scale:.82,y:40});
+    gsap.set("#c36",{opacity:0,scale:.82,y:40});
+    const tl = gsap.timeline({ paused: true });
+    tl.to("#c0",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},1.25);
+    tl.to("#c0",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},2.446);
+    tl.to("#c0w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},1.4);
+    tl.to("#c0w0",{color:"#ffffff",scale:1,duration:0.15},1.68);
+    tl.to("#c0w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},1.84);
+    tl.to("#c0w1",{scale:1,duration:0.15},2.34);
+    tl.to("#c1",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},2.666);
+    tl.to("#c1",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},5.797);
+    tl.to("#c1w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},2.816);
+    tl.to("#c1w0",{color:"#ffffff",scale:1,duration:0.15},3.136);
+    tl.to("#c1w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},3.136);
+    tl.to("#c1w1",{color:"#ffffff",scale:1,duration:0.15},3.296);
+    tl.to("#c1w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},3.296);
+    tl.to("#c1w2",{color:"#ffffff",scale:1,duration:0.15},3.436);
+    tl.to("#c1w3",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},3.436);
+    tl.to("#c1w3",{color:"#ffffff",scale:1,duration:0.15},3.976);
+    tl.to("#c1w4",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},3.976);
+    tl.to("#c1w4",{color:"#ffffff",scale:1,duration:0.15},4.236);
+    tl.to("#c1w5",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},4.236);
+    tl.to("#c1w5",{scale:1,duration:0.15},4.496);
+    tl.to("#c2",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},7.367);
+    tl.to("#c2",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},8.393);
+    tl.to("#c2w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},7.517);
+    tl.to("#c2w0",{color:"#ffffff",scale:1,duration:0.15},7.817);
+    tl.to("#c2w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},7.817);
+    tl.to("#c2w1",{color:"#ffffff",scale:1,duration:0.15},8.037);
+    tl.to("#c2w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},8.037);
+    tl.to("#c2w2",{color:"#ffffff",scale:1,duration:0.15},8.257);
+    tl.to("#c3",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},8.613);
+    tl.to("#c3",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},11.157);
+    tl.to("#c3w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},8.763);
+    tl.to("#c3w0",{color:"#ffffff",scale:1,duration:0.15},8.983);
+    tl.to("#c3w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},8.983);
+    tl.to("#c3w1",{scale:1,duration:0.15},9.343);
+    tl.to("#c3w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},9.343);
+    tl.to("#c3w2",{color:"#ffffff",scale:1,duration:0.15},9.523);
+    tl.to("#c3w3",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},9.523);
+    tl.to("#c3w3",{scale:1,duration:0.15},9.823);
+    tl.to("#c4",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},11.707);
+    tl.to("#c4",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},12.992);
+    tl.to("#c4w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},11.857);
+    tl.to("#c4w0",{color:"#ffffff",scale:1,duration:0.15},12.097);
+    tl.to("#c4w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},12.097);
+    tl.to("#c4w1",{color:"#ffffff",scale:1,duration:0.15},12.317);
+    tl.to("#c4w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},12.317);
+    tl.to("#c4w2",{scale:1,duration:0.15},12.577);
+    tl.to("#c4w3",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},12.577);
+    tl.to("#c4w3",{color:"#ffffff",scale:1,duration:0.15},12.837);
+    tl.to("#c5",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},13.212);
+    tl.to("#c5",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},15.562);
+    tl.to("#c5w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},13.362);
+    tl.to("#c5w0",{color:"#ffffff",scale:1,duration:0.15},13.7);
+    tl.to("#c5w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},13.7);
+    tl.to("#c5w1",{color:"#ffffff",scale:1,duration:0.15},14.038);
+    tl.to("#c5w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},14.038);
+    tl.to("#c5w2",{color:"#ffffff",scale:1,duration:0.15},14.511);
+    tl.to("#c5w3",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},14.511);
+    tl.to("#c5w3",{color:"#ffffff",scale:1,duration:0.15},15.052);
+    tl.to("#c5w4",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},15.052);
+    tl.to("#c5w4",{scale:1,duration:0.15},15.322);
+    tl.to("#c6",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},15.782);
+    tl.to("#c6",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},17.84);
+    tl.to("#c6w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},15.932);
+    tl.to("#c6w0",{color:"#ffffff",scale:1,duration:0.15},16.132);
+    tl.to("#c6w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},16.132);
+    tl.to("#c6w1",{scale:1,duration:0.15},16.472);
+    tl.to("#c6w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},16.472);
+    tl.to("#c6w2",{scale:1,duration:0.15},16.692);
+    tl.to("#c7",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},18.63);
+    tl.to("#c7",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},21.988);
+    tl.to("#c7w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},18.78);
+    tl.to("#c7w0",{color:"#ffffff",scale:1,duration:0.15},18.9);
+    tl.to("#c7w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},18.9);
+    tl.to("#c7w1",{color:"#ffffff",scale:1,duration:0.15},19.06);
+    tl.to("#c7w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},19.06);
+    tl.to("#c7w2",{color:"#ffffff",scale:1,duration:0.15},19.26);
+    tl.to("#c7w3",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},19.26);
+    tl.to("#c7w3",{scale:1,duration:0.15},19.62);
+    tl.to("#c7w4",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},19.98);
+    tl.to("#c7w4",{scale:1,duration:0.15},20.32);
+    tl.to("#c7w5",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},20.44);
+    tl.to("#c7w5",{color:"#ffffff",scale:1,duration:0.15},20.56);
+    tl.to("#c7w6",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},20.44);
+    tl.to("#c7w6",{scale:1,duration:0.15},20.76);
+    tl.to("#c8",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},24.278);
+    tl.to("#c8",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},25.523);
+    tl.to("#c8w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},24.428);
+    tl.to("#c8w0",{color:"#ffffff",scale:1,duration:0.15},24.648);
+    tl.to("#c8w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},24.648);
+    tl.to("#c8w1",{color:"#ffffff",scale:1,duration:0.15},24.808);
+    tl.to("#c8w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},24.808);
+    tl.to("#c8w2",{color:"#ffffff",scale:1,duration:0.15},24.928);
+    tl.to("#c8w3",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},24.928);
+    tl.to("#c8w3",{scale:1,duration:0.15},25.248);
+    tl.to("#c9",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},25.743);
+    tl.to("#c9",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},26.989);
+    tl.to("#c9w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},25.893);
+    tl.to("#c9w0",{color:"#ffffff",scale:1,duration:0.15},26.093);
+    tl.to("#c9w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},26.093);
+    tl.to("#c9w1",{color:"#ffffff",scale:1,duration:0.15},26.253);
+    tl.to("#c9w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},26.253);
+    tl.to("#c9w2",{scale:1,duration:0.15},26.493);
+    tl.to("#c9w3",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},26.493);
+    tl.to("#c9w3",{color:"#ffffff",scale:1,duration:0.15},26.813);
+    tl.to("#c10",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},27.209);
+    tl.to("#c10",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},30.024);
+    tl.to("#c10w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},27.359);
+    tl.to("#c10w0",{color:"#ffffff",scale:1,duration:0.15},27.539);
+    tl.to("#c10w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},27.539);
+    tl.to("#c10w1",{color:"#ffffff",scale:1,duration:0.15},27.739);
+    tl.to("#c10w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},27.739);
+    tl.to("#c10w2",{color:"#ffffff",scale:1,duration:0.15},27.899);
+    tl.to("#c10w3",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},27.899);
+    tl.to("#c10w3",{scale:1,duration:0.15},28.299);
+    tl.to("#c10w4",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},28.299);
+    tl.to("#c10w4",{color:"#ffffff",scale:1,duration:0.15},28.559);
+    tl.to("#c10w5",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},28.559);
+    tl.to("#c10w5",{color:"#ffffff",scale:1,duration:0.15},28.819);
+    tl.to("#c11",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},30.934);
+    tl.to("#c11",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},32.875);
+    tl.to("#c11w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},31.084);
+    tl.to("#c11w0",{color:"#ffffff",scale:1,duration:0.15},31.284);
+    tl.to("#c11w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},31.284);
+    tl.to("#c11w1",{color:"#ffffff",scale:1,duration:0.15},31.444);
+    tl.to("#c11w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},31.444);
+    tl.to("#c11w2",{scale:1,duration:0.15},31.664);
+    tl.to("#c11w3",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},31.664);
+    tl.to("#c11w3",{color:"#ffffff",scale:1,duration:0.15},31.844);
+    tl.to("#c11w4",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},31.844);
+    tl.to("#c11w4",{color:"#ffffff",scale:1,duration:0.15},32.024);
+    tl.to("#c11w5",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},32.024);
+    tl.to("#c11w5",{color:"#ffffff",scale:1,duration:0.15},32.264);
+    tl.to("#c12",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},33.095);
+    tl.to("#c12",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},34.285);
+    tl.to("#c12w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},33.245);
+    tl.to("#c12w0",{scale:1,duration:0.15},33.505);
+    tl.to("#c12w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},33.505);
+    tl.to("#c12w1",{color:"#ffffff",scale:1,duration:0.15},33.825);
+    tl.to("#c12w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},33.825);
+    tl.to("#c12w2",{color:"#ffffff",scale:1,duration:0.15},34.125);
+    tl.to("#c13",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},34.505);
+    tl.to("#c13",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},35.755);
+    tl.to("#c13w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},34.655);
+    tl.to("#c13w0",{scale:1,duration:0.15},34.875);
+    tl.to("#c13w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},34.875);
+    tl.to("#c13w1",{color:"#ffffff",scale:1,duration:0.15},35.115);
+    tl.to("#c13w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},35.115);
+    tl.to("#c13w2",{color:"#ffffff",scale:1,duration:0.15},35.515);
+    tl.to("#c14",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},35.975);
+    tl.to("#c14",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},37.594);
+    tl.to("#c14w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},36.125);
+    tl.to("#c14w0",{scale:1,duration:0.15},36.405);
+    tl.to("#c14w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},36.405);
+    tl.to("#c14w1",{color:"#ffffff",scale:1,duration:0.15},36.745);
+    tl.to("#c14w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},36.745);
+    tl.to("#c14w2",{color:"#ffffff",scale:1,duration:0.15},37.065);
+    tl.to("#c15",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},37.814);
+    tl.to("#c15",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},40.427);
+    tl.to("#c15w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},37.964);
+    tl.to("#c15w0",{color:"#ffffff",scale:1,duration:0.15},38.144);
+    tl.to("#c15w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},38.144);
+    tl.to("#c15w1",{scale:1,duration:0.15},38.404);
+    tl.to("#c15w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},38.404);
+    tl.to("#c15w2",{scale:1,duration:0.15},38.724);
+    tl.to("#c15w3",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},38.724);
+    tl.to("#c15w3",{color:"#ffffff",scale:1,duration:0.15},38.964);
+    tl.to("#c15w4",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},38.964);
+    tl.to("#c15w4",{color:"#ffffff",scale:1,duration:0.15},39.184);
+    tl.to("#c16",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},42.117);
+    tl.to("#c16",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},43.453);
+    tl.to("#c16w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},42.267);
+    tl.to("#c16w0",{color:"#ffffff",scale:1,duration:0.15},42.527);
+    tl.to("#c16w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},42.527);
+    tl.to("#c16w1",{color:"#ffffff",scale:1,duration:0.15},42.727);
+    tl.to("#c16w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},42.727);
+    tl.to("#c16w2",{color:"#ffffff",scale:1,duration:0.15},42.907);
+    tl.to("#c16w3",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},42.907);
+    tl.to("#c16w3",{color:"#ffffff",scale:1,duration:0.15},43.067);
+    tl.to("#c16w4",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},43.067);
+    tl.to("#c16w4",{scale:1,duration:0.15},43.287);
+    tl.to("#c17",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},43.673);
+    tl.to("#c17",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},44.852);
+    tl.to("#c17w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},43.823);
+    tl.to("#c17w0",{color:"#ffffff",scale:1,duration:0.15},44.043);
+    tl.to("#c17w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},44.043);
+    tl.to("#c17w1",{scale:1,duration:0.15},44.403);
+    tl.to("#c18",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},45.072);
+    tl.to("#c18",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},47.602);
+    tl.to("#c18w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},45.222);
+    tl.to("#c18w0",{color:"#ffffff",scale:1,duration:0.15},45.362);
+    tl.to("#c18w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},45.362);
+    tl.to("#c18w1",{color:"#ffffff",scale:1,duration:0.15},45.522);
+    tl.to("#c18w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},45.522);
+    tl.to("#c18w2",{color:"#ffffff",scale:1,duration:0.15},45.722);
+    tl.to("#c18w3",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},45.722);
+    tl.to("#c18w3",{color:"#ffffff",scale:1,duration:0.15},45.862);
+    tl.to("#c18w4",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},45.862);
+    tl.to("#c18w4",{color:"#ffffff",scale:1,duration:0.15},46.402);
+    tl.to("#c18w5",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},46.402);
+    tl.to("#c18w5",{scale:1,duration:0.15},46.582);
+    tl.to("#c18w6",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},46.582);
+    tl.to("#c18w6",{color:"#ffffff",scale:1,duration:0.15},46.962);
+    tl.to("#c19",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},47.822);
+    tl.to("#c19",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},49.835);
+    tl.to("#c19w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},47.972);
+    tl.to("#c19w0",{color:"#ffffff",scale:1,duration:0.15},48.192);
+    tl.to("#c19w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},48.192);
+    tl.to("#c19w1",{scale:1,duration:0.15},48.572);
+    tl.to("#c20",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},50.385);
+    tl.to("#c20",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},51.418);
+    tl.to("#c20w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},50.535);
+    tl.to("#c20w0",{color:"#ffffff",scale:1,duration:0.15},50.815);
+    tl.to("#c20w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},50.815);
+    tl.to("#c20w1",{color:"#ffffff",scale:1,duration:0.15},50.975);
+    tl.to("#c20w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},50.975);
+    tl.to("#c20w2",{scale:1,duration:0.15},51.255);
+    tl.to("#c21",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},51.638);
+    tl.to("#c21",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},53.672);
+    tl.to("#c21w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},51.788);
+    tl.to("#c21w0",{color:"#ffffff",scale:1,duration:0.15},51.948);
+    tl.to("#c21w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},51.948);
+    tl.to("#c21w1",{color:"#ffffff",scale:1,duration:0.15},52.108);
+    tl.to("#c21w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},52.108);
+    tl.to("#c21w2",{scale:1,duration:0.15},52.408);
+    tl.to("#c21w3",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},52.408);
+    tl.to("#c21w3",{color:"#ffffff",scale:1,duration:0.15},52.668);
+    tl.to("#c21w4",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},52.668);
+    tl.to("#c21w4",{color:"#ffffff",scale:1,duration:0.15},52.788);
+    tl.to("#c21w5",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},52.748);
+    tl.to("#c21w5",{color:"#ffffff",scale:1,duration:0.15},53.068);
+    tl.to("#c22",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},53.892);
+    tl.to("#c22",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},56.292);
+    tl.to("#c22w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},54.042);
+    tl.to("#c22w0",{color:"#ffffff",scale:1,duration:0.15},54.242);
+    tl.to("#c22w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},54.242);
+    tl.to("#c22w1",{scale:1,duration:0.15},54.522);
+    tl.to("#c22w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},54.522);
+    tl.to("#c22w2",{color:"#ffffff",scale:1,duration:0.15},54.662);
+    tl.to("#c22w3",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},54.662);
+    tl.to("#c22w3",{color:"#ffffff",scale:1,duration:0.15},54.982);
+    tl.to("#c23",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},57.202);
+    tl.to("#c23",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},58.186);
+    tl.to("#c23w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},57.352);
+    tl.to("#c23w0",{color:"#ffffff",scale:1,duration:0.15},57.592);
+    tl.to("#c23w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},57.592);
+    tl.to("#c23w1",{color:"#ffffff",scale:1,duration:0.15},57.772);
+    tl.to("#c23w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},57.772);
+    tl.to("#c23w2",{scale:1,duration:0.15},57.992);
+    tl.to("#c24",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},58.406);
+    tl.to("#c24",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},60.027);
+    tl.to("#c24w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},58.556);
+    tl.to("#c24w0",{color:"#ffffff",scale:1,duration:0.15},58.676);
+    tl.to("#c24w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},58.656);
+    tl.to("#c24w1",{color:"#ffffff",scale:1,duration:0.15},58.976);
+    tl.to("#c24w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},58.976);
+    tl.to("#c24w2",{scale:1,duration:0.15},59.316);
+    tl.to("#c24w3",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},59.316);
+    tl.to("#c24w3",{color:"#ffffff",scale:1,duration:0.15},59.596);
+    tl.to("#c25",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},60.247);
+    tl.to("#c25",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},62.519);
+    tl.to("#c25w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},60.397);
+    tl.to("#c25w0",{color:"#ffffff",scale:1,duration:0.15},60.537);
+    tl.to("#c25w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},60.537);
+    tl.to("#c25w1",{color:"#ffffff",scale:1,duration:0.15},60.657);
+    tl.to("#c25w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},60.637);
+    tl.to("#c25w2",{color:"#ffffff",scale:1,duration:0.15},60.877);
+    tl.to("#c25w3",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},60.877);
+    tl.to("#c25w3",{scale:1,duration:0.15},61.217);
+    tl.to("#c26",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},64.329);
+    tl.to("#c26",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},65.864);
+    tl.to("#c26w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},64.479);
+    tl.to("#c26w0",{scale:1,duration:0.15},64.959);
+    tl.to("#c26w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},64.959);
+    tl.to("#c26w1",{color:"#ffffff",scale:1,duration:0.15},65.259);
+    tl.to("#c26w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},65.259);
+    tl.to("#c26w2",{color:"#ffffff",scale:1,duration:0.15},65.419);
+    tl.to("#c26w3",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},65.419);
+    tl.to("#c26w3",{color:"#ffffff",scale:1,duration:0.15},65.699);
+    tl.to("#c27",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},66.084);
+    tl.to("#c27",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},68.499);
+    tl.to("#c27w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},66.234);
+    tl.to("#c27w0",{color:"#ffffff",scale:1,duration:0.15},66.454);
+    tl.to("#c27w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},66.454);
+    tl.to("#c27w1",{scale:1,duration:0.15},66.754);
+    tl.to("#c27w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},66.754);
+    tl.to("#c27w2",{scale:1,duration:0.15},67.014);
+    tl.to("#c27w3",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},67.014);
+    tl.to("#c27w3",{color:"#ffffff",scale:1,duration:0.15},67.294);
+    tl.to("#c28",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},69.289);
+    tl.to("#c28",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},71.103);
+    tl.to("#c28w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},69.439);
+    tl.to("#c28w0",{scale:1,duration:0.15},69.799);
+    tl.to("#c28w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},69.799);
+    tl.to("#c28w1",{color:"#ffffff",scale:1,duration:0.15},69.959);
+    tl.to("#c28w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},69.959);
+    tl.to("#c28w2",{color:"#ffffff",scale:1,duration:0.15},70.219);
+    tl.to("#c28w3",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},70.219);
+    tl.to("#c28w3",{color:"#ffffff",scale:1,duration:0.15},70.379);
+    tl.to("#c28w4",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},70.379);
+    tl.to("#c28w4",{color:"#ffffff",scale:1,duration:0.15},70.599);
+    tl.to("#c29",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},71.323);
+    tl.to("#c29",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},74.559);
+    tl.to("#c29w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},71.473);
+    tl.to("#c29w0",{color:"#ffffff",scale:1,duration:0.15},71.693);
+    tl.to("#c29w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},71.693);
+    tl.to("#c29w1",{color:"#ffffff",scale:1,duration:0.15},72.053);
+    tl.to("#c29w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},72.393);
+    tl.to("#c29w2",{color:"#ffffff",scale:1,duration:0.15},72.513);
+    tl.to("#c29w3",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},72.513);
+    tl.to("#c29w3",{color:"#ffffff",scale:1,duration:0.15},72.733);
+    tl.to("#c29w4",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},72.733);
+    tl.to("#c29w4",{color:"#ffffff",scale:1,duration:0.15},72.853);
+    tl.to("#c29w5",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},72.833);
+    tl.to("#c29w5",{scale:1,duration:0.15},73.053);
+    tl.to("#c29w6",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},73.053);
+    tl.to("#c29w6",{color:"#ffffff",scale:1,duration:0.15},73.333);
+    tl.to("#c30",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},76.729);
+    tl.to("#c30",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},78.348);
+    tl.to("#c30w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},76.879);
+    tl.to("#c30w0",{scale:1,duration:0.15},77.159);
+    tl.to("#c30w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},77.159);
+    tl.to("#c30w1",{color:"#ffffff",scale:1,duration:0.15},77.459);
+    tl.to("#c30w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},77.459);
+    tl.to("#c30w2",{color:"#ffffff",scale:1,duration:0.15},77.779);
+    tl.to("#c30w3",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},77.779);
+    tl.to("#c30w3",{color:"#ffffff",scale:1,duration:0.15},77.959);
+    tl.to("#c30w4",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},77.959);
+    tl.to("#c30w4",{color:"#ffffff",scale:1,duration:0.15},78.159);
+    tl.to("#c31",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},78.568);
+    tl.to("#c31",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},80.888);
+    tl.to("#c31w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},78.718);
+    tl.to("#c31w0",{color:"#ffffff",scale:1,duration:0.15},78.878);
+    tl.to("#c31w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},78.878);
+    tl.to("#c31w1",{color:"#ffffff",scale:1,duration:0.15},79.098);
+    tl.to("#c31w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},79.098);
+    tl.to("#c31w2",{scale:1,duration:0.15},79.298);
+    tl.to("#c31w3",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},79.298);
+    tl.to("#c31w3",{color:"#ffffff",scale:1,duration:0.15},79.618);
+    tl.to("#c32",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},81.678);
+    tl.to("#c32",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},82.449);
+    tl.to("#c32w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},81.828);
+    tl.to("#c32w0",{color:"#ffffff",scale:1,duration:0.15},82.028);
+    tl.to("#c32w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},82.028);
+    tl.to("#c32w1",{scale:1,duration:0.15},82.288);
+    tl.to("#c33",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},82.669);
+    tl.to("#c33",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},84.756);
+    tl.to("#c33w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},82.819);
+    tl.to("#c33w0",{color:"#ffffff",scale:1,duration:0.15},83.019);
+    tl.to("#c33w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},83.019);
+    tl.to("#c33w1",{scale:1,duration:0.15},83.319);
+    tl.to("#c33w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},83.319);
+    tl.to("#c33w2",{scale:1,duration:0.15},83.559);
+    tl.to("#c34",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},85.426);
+    tl.to("#c34",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},86.438);
+    tl.to("#c34w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},85.576);
+    tl.to("#c34w0",{scale:1,duration:0.15},85.856);
+    tl.to("#c34w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},85.856);
+    tl.to("#c34w1",{scale:1,duration:0.15},86.196);
+    tl.to("#c35",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},86.658);
+    tl.to("#c35",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},87.722);
+    tl.to("#c35w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},86.808);
+    tl.to("#c35w0",{color:"#ffffff",scale:1,duration:0.15},87.008);
+    tl.to("#c35w1",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},87.008);
+    tl.to("#c35w1",{color:"#ffffff",scale:1,duration:0.15},87.128);
+    tl.to("#c35w2",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},87.128);
+    tl.to("#c35w2",{color:"#ffffff",scale:1,duration:0.15},87.248);
+    tl.to("#c35w3",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},87.228);
+    tl.to("#c35w3",{scale:1,duration:0.15},87.448);
+    tl.to("#c36",{opacity:1,scale:1,y:0,duration:0.42,ease:"back.out(1.9)"},87.942);
+    tl.to("#c36",{opacity:0,y:-30,duration:0.25,ease:"power2.in"},89.868);
+    tl.to("#c36w0",{color:"#ff9e1b",scale:1.08,duration:0.12,ease:"power2.out"},88.092);
+    tl.to("#c36w0",{scale:1,duration:0.15},88.732);
+    tl.set({}, {}, 90.688);
+    window.__timelines["captions"] = tl;
+  </script>
+</template>

@@ -1,0 +1,147 @@
+1
+00:00:01,400 --> 00:00:02,566
+Hello! Vanakkam!
+
+2
+00:00:02,816 --> 00:00:04,847
+Let's learn our Silambam app together!
+
+3
+00:00:07,517 --> 00:00:08,513
+Open the app.
+
+4
+00:00:08,763 --> 00:00:10,207
+Tap Parent or Student.
+
+5
+00:00:11,857 --> 00:00:13,112
+Type your phone number.
+
+6
+00:00:13,362 --> 00:00:15,322
+Then your secret 6-number PIN.
+
+7
+00:00:15,932 --> 00:00:16,890
+Tap Sign in!
+
+8
+00:00:18,780 --> 00:00:21,038
+You can pick English, Malay or Tamil!
+
+9
+00:00:24,428 --> 00:00:25,643
+Here are your children.
+
+10
+00:00:25,893 --> 00:00:27,109
+See their belt colour.
+
+11
+00:00:27,359 --> 00:00:29,074
+See how many classes they came.
+
+12
+00:00:31,084 --> 00:00:32,515
+Tap a name to see more.
+
+13
+00:00:33,245 --> 00:00:34,405
+Green means came.
+
+14
+00:00:34,655 --> 00:00:35,875
+Red means absent.
+
+15
+00:00:36,125 --> 00:00:37,354
+Orange means late.
+
+16
+00:00:37,964 --> 00:00:39,477
+See belt tests here too!
+
+17
+00:00:42,267 --> 00:00:43,573
+Time to pay the fee?
+
+18
+00:00:43,823 --> 00:00:44,612
+Tap Pay.
+
+19
+00:00:45,222 --> 00:00:47,242
+You can see the Master's bank account.
+
+20
+00:00:47,972 --> 00:00:48,885
+Tap Copy!
+
+21
+00:00:50,535 --> 00:00:51,538
+Paid by bank?
+
+22
+00:00:51,788 --> 00:00:53,432
+Take a photo of your receipt.
+
+23
+00:00:54,042 --> 00:00:55,342
+Tap Send to Master.
+
+24
+00:00:57,352 --> 00:00:58,306
+Now we wait.
+
+25
+00:00:58,556 --> 00:00:59,787
+The Master checks it.
+
+26
+00:01:00,397 --> 00:01:01,569
+Then it turns green!
+
+27
+00:01:04,479 --> 00:01:05,984
+Notices tell you news.
+
+28
+00:01:06,234 --> 00:01:07,549
+Like belt test day!
+
+29
+00:01:09,439 --> 00:01:10,863
+Belts shows what to learn.
+
+30
+00:01:11,473 --> 00:01:13,609
+Learn these, then get your next belt!
+
+31
+00:01:16,879 --> 00:01:18,468
+Students can sign in too,
+
+32
+00:01:18,718 --> 00:01:19,938
+with their own phone.
+
+33
+00:01:21,828 --> 00:01:22,569
+All done?
+
+34
+00:01:22,819 --> 00:01:23,806
+Tap Sign out.
+
+35
+00:01:25,576 --> 00:01:26,558
+Great job!
+
+36
+00:01:26,808 --> 00:01:27,842
+See you at class!
+
+37
+00:01:28,092 --> 00:01:28,918
+Vanakkam!
