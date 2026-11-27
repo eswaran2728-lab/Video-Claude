@@ -1,0 +1,3738 @@
+[
+ {
+  "scene": "1.1",
+  "n": 0,
+  "text": "Service history is usually scattered across workshops and paper receipts.",
+  "file": "vo/lines/1.1_0.wav",
+  "sr": 24000,
+  "i0": 1089,
+  "i1": 114385,
+  "dur": 4.721,
+  "words": [
+   {
+    "w": "service",
+    "t": 0.0,
+    "e": 0.3
+   },
+   {
+    "w": "history",
+    "t": 0.3,
+    "e": 0.8
+   },
+   {
+    "w": "is",
+    "t": 0.8,
+    "e": 1.44
+   },
+   {
+    "w": "usually",
+    "t": 1.44,
+    "e": 1.8
+   },
+   {
+    "w": "scattered",
+    "t": 1.8,
+    "e": 2.26
+   },
+   {
+    "w": "across",
+    "t": 2.26,
+    "e": 2.52
+   },
+   {
+    "w": "workshops",
+    "t": 2.52,
+    "e": 3.2
+   },
+   {
+    "w": "and",
+    "t": 3.2,
+    "e": 3.7
+   },
+   {
+    "w": "paper",
+    "t": 3.7,
+    "e": 4.04
+   },
+   {
+    "w": "receipts",
+    "t": 4.04,
+    "e": 4.6
+   }
+  ],
+  "heard": "service history is usually scattered across workshops and paper receipts"
+ },
+ {
+  "scene": "1.1",
+  "n": 1,
+  "text": "RevLog keeps one record for every bike.",
+  "file": "vo/lines/1.1_1.wav",
+  "sr": 24000,
+  "i0": 814,
+  "i1": 61088,
+  "dur": 2.511,
+  "words": [
+   {
+    "w": "revlog",
+    "t": 0.0,
+    "e": 0.52
+   },
+   {
+    "w": "keeps",
+    "t": 0.52,
+    "e": 0.9
+   },
+   {
+    "w": "one",
+    "t": 0.9,
+    "e": 1.16
+   },
+   {
+    "w": "record",
+    "t": 1.16,
+    "e": 1.5
+   },
+   {
+    "w": "for",
+    "t": 1.5,
+    "e": 1.8
+   },
+   {
+    "w": "every",
+    "t": 1.8,
+    "e": 2.02
+   },
+   {
+    "w": "bike",
+    "t": 2.02,
+    "e": 2.3
+   }
+  ],
+  "heard": "revlog keeps one record for every bike"
+ },
+ {
+  "scene": "1.1",
+  "n": 2,
+  "text": "The Rider owns it, and workshops add to it with the Rider's approval.",
+  "file": "vo/lines/1.1_2.wav",
+  "sr": 24000,
+  "i0": 1642,
+  "i1": 95177,
+  "dur": 3.897,
+  "words": [
+   {
+    "w": "the",
+    "t": 0.0,
+    "e": 0.1
+   },
+   {
+    "w": "writer",
+    "t": 0.1,
+    "e": 0.36
+   },
+   {
+    "w": "owns",
+    "t": 0.36,
+    "e": 0.74
+   },
+   {
+    "w": "it",
+    "t": 0.74,
+    "e": 0.98
+   },
+   {
+    "w": "and",
+    "t": 1.38,
+    "e": 1.48
+   },
+   {
+    "w": "workshops",
+    "t": 1.48,
+    "e": 1.86
+   },
+   {
+    "w": "add",
+    "t": 1.86,
+    "e": 2.32
+   },
+   {
+    "w": "to",
+    "t": 2.32,
+    "e": 2.52
+   },
+   {
+    "w": "it",
+    "t": 2.52,
+    "e": 2.64
+   },
+   {
+    "w": "with",
+    "t": 2.64,
+    "e": 2.82
+   },
+   {
+    "w": "the",
+    "t": 2.82,
+    "e": 2.94
+   },
+   {
+    "w": "writer's",
+    "t": 2.94,
+    "e": 3.38
+   },
+   {
+    "w": "approval",
+    "t": 3.38,
+    "e": 3.66
+   }
+  ],
+  "heard": "the writer owns it and workshops add to it with the writer's approval"
+ },
+ {
+  "scene": "1.1",
+  "n": 3,
+  "text": "A bike with no owner yet can be served too.",
+  "file": "vo/lines/1.1_3.wav",
+  "sr": 24000,
+  "i0": 2543,
+  "i1": 59618,
+  "dur": 2.378,
+  "words": [
+   {
+    "w": "a",
+    "t": 0.0,
+    "e": 0.06
+   },
+   {
+    "w": "bike",
+    "t": 0.06,
+    "e": 0.28
+   },
+   {
+    "w": "with",
+    "t": 0.28,
+    "e": 0.5
+   },
+   {
+    "w": "no",
+    "t": 0.5,
+    "e": 0.68
+   },
+   {
+    "w": "owner",
+    "t": 0.68,
+    "e": 0.96
+   },
+   {
+    "w": "yet",
+    "t": 0.96,
+    "e": 1.2
+   },
+   {
+    "w": "can",
+    "t": 1.2,
+    "e": 1.52
+   },
+   {
+    "w": "be",
+    "t": 1.52,
+    "e": 1.62
+   },
+   {
+    "w": "served",
+    "t": 1.62,
+    "e": 1.9
+   },
+   {
+    "w": "too",
+    "t": 1.9,
+    "e": 2.18
+   }
+  ],
+  "heard": "a bike with no owner yet can be served too"
+ },
+ {
+  "scene": "2.1",
+  "n": 0,
+  "text": "First, pick one: I ride, or I run a workshop.",
+  "file": "vo/lines/2.1_0.wav",
+  "sr": 24000,
+  "i0": 868,
+  "i1": 75893,
+  "dur": 3.126,
+  "words": [
+   {
+    "w": "first",
+    "t": 0.0,
+    "e": 0.28
+   },
+   {
+    "w": "pick",
+    "t": 0.28,
+    "e": 0.58
+   },
+   {
+    "w": "one",
+    "t": 0.58,
+    "e": 0.88
+   },
+   {
+    "w": "i",
+    "t": 1.32,
+    "e": 1.44
+   },
+   {
+    "w": "ride",
+    "t": 1.44,
+    "e": 1.8
+   },
+   {
+    "w": "or",
+    "t": 1.8,
+    "e": 2.12
+   },
+   {
+    "w": "i",
+    "t": 2.12,
+    "e": 2.26
+   },
+   {
+    "w": "run",
+    "t": 2.26,
+    "e": 2.42
+   },
+   {
+    "w": "a",
+    "t": 2.42,
+    "e": 2.5
+   },
+   {
+    "w": "workshop",
+    "t": 2.5,
+    "e": 2.76
+   }
+  ],
+  "heard": "first pick one i ride or i run a workshop"
+ },
+ {
+  "scene": "2.1",
+  "n": 1,
+  "text": "Then sign in with Google or email.",
+  "file": "vo/lines/2.1_1.wav",
+  "sr": 24000,
+  "i0": 2146,
+  "i1": 47688,
+  "dur": 1.898,
+  "words": [
+   {
+    "w": "then",
+    "t": 0.0,
+    "e": 0.12
+   },
+   {
+    "w": "sign",
+    "t": 0.12,
+    "e": 0.42
+   },
+   {
+    "w": "in",
+    "t": 0.42,
+    "e": 0.6
+   },
+   {
+    "w": "with",
+    "t": 0.6,
+    "e": 0.76
+   },
+   {
+    "w": "google",
+    "t": 0.76,
+    "e": 1.08
+   },
+   {
+    "w": "or",
+    "t": 1.08,
+    "e": 1.34
+   },
+   {
+    "w": "email",
+    "t": 1.34,
+    "e": 1.58
+   }
+  ],
+  "heard": "then sign in with google or email"
+ },
+ {
+  "scene": "2.2",
+  "n": 0,
+  "text": "There are four roles.",
+  "file": "vo/lines/2.2_0.wav",
+  "sr": 24000,
+  "i0": 1605,
+  "i1": 30106,
+  "dur": 1.188,
+  "words": [
+   {
+    "w": "there",
+    "t": 0.0,
+    "e": 0.16
+   },
+   {
+    "w": "are",
+    "t": 0.16,
+    "e": 0.28
+   },
+   {
+    "w": "four",
+    "t": 0.28,
+    "e": 0.56
+   },
+   {
+    "w": "roles",
+    "t": 0.56,
+    "e": 0.88
+   }
+  ],
+  "heard": "there are four roles"
+ },
+ {
+  "scene": "2.2",
+  "n": 1,
+  "text": "The Rider owns the record.",
+  "file": "vo/lines/2.2_1.wav",
+  "sr": 24000,
+  "i0": 1891,
+  "i1": 39008,
+  "dur": 1.547,
+  "words": [
+   {
+    "w": "the",
+    "t": 0.0,
+    "e": 0.1
+   },
+   {
+    "w": "writer",
+    "t": 0.1,
+    "e": 0.42
+   },
+   {
+    "w": "owns",
+    "t": 0.42,
+    "e": 0.78
+   },
+   {
+    "w": "the",
+    "t": 0.78,
+    "e": 1.0
+   },
+   {
+    "w": "record",
+    "t": 1.0,
+    "e": 1.24
+   }
+  ],
+  "heard": "the writer owns the record"
+ },
+ {
+  "scene": "2.2",
+  "n": 2,
+  "text": "The Workshop owner runs the workshop.",
+  "file": "vo/lines/2.2_2.wav",
+  "sr": 24000,
+  "i0": 1618,
+  "i1": 51328,
+  "dur": 2.071,
+  "words": [
+   {
+    "w": "the",
+    "t": 0.0,
+    "e": 0.08
+   },
+   {
+    "w": "workshop",
+    "t": 0.08,
+    "e": 0.42
+   },
+   {
+    "w": "owner",
+    "t": 0.42,
+    "e": 0.84
+   },
+   {
+    "w": "runs",
+    "t": 0.84,
+    "e": 1.22
+   },
+   {
+    "w": "the",
+    "t": 1.22,
+    "e": 1.44
+   },
+   {
+    "w": "workshop",
+    "t": 1.44,
+    "e": 1.72
+   }
+  ],
+  "heard": "the workshop owner runs the workshop"
+ },
+ {
+  "scene": "2.2",
+  "n": 3,
+  "text": "Staff save each service.",
+  "file": "vo/lines/2.2_3.wav",
+  "sr": 24000,
+  "i0": 699,
+  "i1": 36380,
+  "dur": 1.487,
+  "words": [
+   {
+    "w": "staff",
+    "t": 0.0,
+    "e": 0.24
+   },
+   {
+    "w": "save",
+    "t": 0.24,
+    "e": 0.58
+   },
+   {
+    "w": "each",
+    "t": 0.58,
+    "e": 0.84
+   },
+   {
+    "w": "service",
+    "t": 0.84,
+    "e": 1.18
+   }
+  ],
+  "heard": "staff save each service"
+ },
+ {
+  "scene": "2.2",
+  "n": 4,
+  "text": "And the Admin approves workshops and checks ownership.",
+  "file": "vo/lines/2.2_4.wav",
+  "sr": 24000,
+  "i0": 1095,
+  "i1": 69488,
+  "dur": 2.85,
+  "words": [
+   {
+    "w": "and",
+    "t": 0.0,
+    "e": 0.1
+   },
+   {
+    "w": "the",
+    "t": 0.1,
+    "e": 0.18
+   },
+   {
+    "w": "admin",
+    "t": 0.18,
+    "e": 0.56
+   },
+   {
+    "w": "approves",
+    "t": 0.56,
+    "e": 1.08
+   },
+   {
+    "w": "workshops",
+    "t": 1.08,
+    "e": 1.58
+   },
+   {
+    "w": "and",
+    "t": 1.58,
+    "e": 1.92
+   },
+   {
+    "w": "checks",
+    "t": 1.92,
+    "e": 2.18
+   },
+   {
+    "w": "ownership",
+    "t": 2.18,
+    "e": 2.56
+   }
+  ],
+  "heard": "and the admin approves workshops and checks ownership"
+ },
+ {
+  "scene": "3.1",
+  "n": 0,
+  "text": "A Rider finds their bike, then adds the odometer and plate.",
+  "file": "vo/lines/3.1_0.wav",
+  "sr": 24000,
+  "i0": 2019,
+  "i1": 90171,
+  "dur": 3.673,
+  "words": [
+   {
+    "w": "a",
+    "t": 0.0,
+    "e": 0.08
+   },
+   {
+    "w": "rider",
+    "t": 0.08,
+    "e": 0.34
+   },
+   {
+    "w": "finds",
+    "t": 0.34,
+    "e": 0.74
+   },
+   {
+    "w": "their",
+    "t": 0.74,
+    "e": 1.0
+   },
+   {
+    "w": "bike",
+    "t": 1.0,
+    "e": 1.36
+   },
+   {
+    "w": "then",
+    "t": 1.72,
+    "e": 1.9
+   },
+   {
+    "w": "adds",
+    "t": 1.9,
+    "e": 2.22
+   },
+   {
+    "w": "the",
+    "t": 2.22,
+    "e": 2.4
+   },
+   {
+    "w": "odometer",
+    "t": 2.4,
+    "e": 2.9
+   },
+   {
+    "w": "and",
+    "t": 2.9,
+    "e": 3.2
+   },
+   {
+    "w": "plate",
+    "t": 3.2,
+    "e": 3.42
+   }
+  ],
+  "heard": "a rider finds their bike then adds the odometer and plate"
+ },
+ {
+  "scene": "3.2",
+  "n": 0,
+  "text": "Two quick questions help RevLog tell you what's due.",
+  "file": "vo/lines/3.2_0.wav",
+  "sr": 24000,
+  "i0": 995,
+  "i1": 75561,
+  "dur": 3.107,
+  "words": [
+   {
+    "w": "two",
+    "t": 0.0,
+    "e": 0.14
+   },
+   {
+    "w": "quick",
+    "t": 0.14,
+    "e": 0.42
+   },
+   {
+    "w": "questions",
+    "t": 0.42,
+    "e": 0.92
+   },
+   {
+    "w": "help",
+    "t": 0.92,
+    "e": 1.54
+   },
+   {
+    "w": "revlog",
+    "t": 1.54,
+    "e": 2.08
+   },
+   {
+    "w": "tell",
+    "t": 2.08,
+    "e": 2.34
+   },
+   {
+    "w": "you",
+    "t": 2.34,
+    "e": 2.5
+   },
+   {
+    "w": "what",
+    "t": 2.5,
+    "e": 2.66
+   },
+   {
+    "w": "to",
+    "t": 2.66,
+    "e": 2.78
+   },
+   {
+    "w": "do",
+    "t": 2.78,
+    "e": 3.0
+   }
+  ],
+  "heard": "two quick questions help revlog tell you what to do"
+ },
+ {
+  "scene": "3.2",
+  "n": 1,
+  "text": "A short guide follows.",
+  "file": "vo/lines/3.2_1.wav",
+  "sr": 24000,
+  "i0": 2432,
+  "i1": 34543,
+  "dur": 1.338,
+  "words": [
+   {
+    "w": "a",
+    "t": 0.0,
+    "e": 0.08
+   },
+   {
+    "w": "short",
+    "t": 0.08,
+    "e": 0.32
+   },
+   {
+    "w": "guide",
+    "t": 0.32,
+    "e": 0.62
+   },
+   {
+    "w": "follows",
+    "t": 0.62,
+    "e": 1.02
+   }
+  ],
+  "heard": "a short guide follows"
+ },
+ {
+  "scene": "3.2",
+  "n": 2,
+  "text": "Then the Rider agrees to how their data is used.",
+  "file": "vo/lines/3.2_2.wav",
+  "sr": 24000,
+  "i0": 1005,
+  "i1": 64803,
+  "dur": 2.658,
+  "words": [
+   {
+    "w": "then",
+    "t": 0.0,
+    "e": 0.16
+   },
+   {
+    "w": "the",
+    "t": 0.16,
+    "e": 0.28
+   },
+   {
+    "w": "writer",
+    "t": 0.28,
+    "e": 0.56
+   },
+   {
+    "w": "agrees",
+    "t": 0.56,
+    "e": 1.04
+   },
+   {
+    "w": "to",
+    "t": 1.04,
+    "e": 1.34
+   },
+   {
+    "w": "how",
+    "t": 1.34,
+    "e": 1.52
+   },
+   {
+    "w": "their",
+    "t": 1.52,
+    "e": 1.68
+   },
+   {
+    "w": "data",
+    "t": 1.68,
+    "e": 1.94
+   },
+   {
+    "w": "is",
+    "t": 1.94,
+    "e": 2.16
+   },
+   {
+    "w": "used",
+    "t": 2.16,
+    "e": 2.42
+   }
+  ],
+  "heard": "then the writer agrees to how their data is used"
+ },
+ {
+  "scene": "3.3",
+  "n": 0,
+  "text": "The bike is now in the Garage.",
+  "file": "vo/lines/3.3_0.wav",
+  "sr": 24000,
+  "i0": 1593,
+  "i1": 42380,
+  "dur": 1.699,
+  "words": [
+   {
+    "w": "the",
+    "t": 0.0,
+    "e": 0.08
+   },
+   {
+    "w": "bike",
+    "t": 0.08,
+    "e": 0.32
+   },
+   {
+    "w": "is",
+    "t": 0.32,
+    "e": 0.56
+   },
+   {
+    "w": "now",
+    "t": 0.56,
+    "e": 0.76
+   },
+   {
+    "w": "in",
+    "t": 0.76,
+    "e": 0.94
+   },
+   {
+    "w": "the",
+    "t": 0.94,
+    "e": 1.02
+   },
+   {
+    "w": "garage",
+    "t": 1.02,
+    "e": 1.24
+   }
+  ],
+  "heard": "the bike is now in the garage"
+ },
+ {
+  "scene": "3.3",
+  "n": 1,
+  "text": "Below it: Log service, Verify this bike, and What's due.",
+  "file": "vo/lines/3.3_1.wav",
+  "sr": 24000,
+  "i0": 2404,
+  "i1": 84680,
+  "dur": 3.428,
+  "words": [
+   {
+    "w": "below",
+    "t": 0.0,
+    "e": 0.16
+   },
+   {
+    "w": "it",
+    "t": 0.16,
+    "e": 0.46
+   },
+   {
+    "w": "log",
+    "t": 0.72,
+    "e": 0.96
+   },
+   {
+    "w": "service",
+    "t": 0.96,
+    "e": 1.38
+   },
+   {
+    "w": "verify",
+    "t": 1.7,
+    "e": 2.1
+   },
+   {
+    "w": "this",
+    "t": 2.1,
+    "e": 2.36
+   },
+   {
+    "w": "bike",
+    "t": 2.36,
+    "e": 2.64
+   },
+   {
+    "w": "and",
+    "t": 2.64,
+    "e": 2.88
+   },
+   {
+    "w": "what's",
+    "t": 2.88,
+    "e": 3.14
+   },
+   {
+    "w": "due",
+    "t": 3.14,
+    "e": 3.3
+   }
+  ],
+  "heard": "below it log service verify this bike and what's due"
+ },
+ {
+  "scene": "3.4",
+  "n": 0,
+  "text": "Verify this bike asks for photos of your driving licence and geran.",
+  "file": "vo/lines/3.4_0.wav",
+  "sr": 24000,
+  "i0": 909,
+  "i1": 113267,
+  "dur": 4.682,
+  "words": [
+   {
+    "w": "verify",
+    "t": 0.0,
+    "e": 0.48
+   },
+   {
+    "w": "this",
+    "t": 0.48,
+    "e": 0.7
+   },
+   {
+    "w": "bike",
+    "t": 0.7,
+    "e": 1.04
+   },
+   {
+    "w": "asks",
+    "t": 1.28,
+    "e": 1.62
+   },
+   {
+    "w": "for",
+    "t": 1.62,
+    "e": 1.86
+   },
+   {
+    "w": "photos",
+    "t": 1.86,
+    "e": 2.26
+   },
+   {
+    "w": "of",
+    "t": 2.26,
+    "e": 2.48
+   },
+   {
+    "w": "your",
+    "t": 2.48,
+    "e": 2.58
+   },
+   {
+    "w": "driving",
+    "t": 2.58,
+    "e": 2.92
+   },
+   {
+    "w": "license",
+    "t": 2.92,
+    "e": 3.4
+   },
+   {
+    "w": "and",
+    "t": 3.96,
+    "e": 4.06
+   },
+   {
+    "w": "go",
+    "t": 4.06,
+    "e": 4.24
+   },
+   {
+    "w": "on",
+    "t": 4.24,
+    "e": 4.5
+   }
+  ],
+  "heard": "verify this bike asks for photos of your driving license and go on"
+ },
+ {
+  "scene": "3.4",
+  "n": 1,
+  "text": "They prove the bike is yours.",
+  "file": "vo/lines/3.4_1.wav",
+  "sr": 24000,
+  "i0": 1295,
+  "i1": 39492,
+  "dur": 1.592,
+  "words": [
+   {
+    "w": "they",
+    "t": 0.0,
+    "e": 0.12
+   },
+   {
+    "w": "prove",
+    "t": 0.12,
+    "e": 0.42
+   },
+   {
+    "w": "the",
+    "t": 0.42,
+    "e": 0.6
+   },
+   {
+    "w": "bike",
+    "t": 0.6,
+    "e": 0.82
+   },
+   {
+    "w": "is",
+    "t": 0.82,
+    "e": 1.02
+   },
+   {
+    "w": "yours",
+    "t": 1.02,
+    "e": 1.24
+   }
+  ],
+  "heard": "they prove the bike is yours"
+ },
+ {
+  "scene": "3.4",
+  "n": 2,
+  "text": "Document photos are deleted after the check, or kept up to 14 days if checked by hand.",
+  "file": "vo/lines/3.4_2.wav",
+  "sr": 24000,
+  "i0": 638,
+  "i1": 141212,
+  "dur": 5.857,
+  "words": [
+   {
+    "w": "document",
+    "t": 0.0,
+    "e": 0.42
+   },
+   {
+    "w": "photos",
+    "t": 0.42,
+    "e": 0.86
+   },
+   {
+    "w": "are",
+    "t": 0.86,
+    "e": 1.28
+   },
+   {
+    "w": "deleted",
+    "t": 1.28,
+    "e": 1.66
+   },
+   {
+    "w": "after",
+    "t": 1.66,
+    "e": 2.04
+   },
+   {
+    "w": "the",
+    "t": 2.04,
+    "e": 2.2
+   },
+   {
+    "w": "check",
+    "t": 2.2,
+    "e": 2.5
+   },
+   {
+    "w": "or",
+    "t": 2.9,
+    "e": 3.16
+   },
+   {
+    "w": "kept",
+    "t": 3.16,
+    "e": 3.38
+   },
+   {
+    "w": "up",
+    "t": 3.38,
+    "e": 3.6
+   },
+   {
+    "w": "to",
+    "t": 3.6,
+    "e": 3.74
+   },
+   {
+    "w": "14",
+    "t": 3.74,
+    "e": 4.08
+   },
+   {
+    "w": "days",
+    "t": 4.08,
+    "e": 4.48
+   },
+   {
+    "w": "if",
+    "t": 4.48,
+    "e": 4.78
+   },
+   {
+    "w": "checked",
+    "t": 4.78,
+    "e": 5.04
+   },
+   {
+    "w": "by",
+    "t": 5.04,
+    "e": 5.32
+   },
+   {
+    "w": "hand",
+    "t": 5.32,
+    "e": 5.68
+   }
+  ],
+  "heard": "document photos are deleted after the check or kept up to 14 days if checked by hand"
+ },
+ {
+  "scene": "3.4",
+  "n": 3,
+  "text": "Once the bike is verified, My code becomes available. We'll see the Admin's check later.",
+  "file": "vo/lines/3.4_3.wav",
+  "sr": 24000,
+  "i0": 784,
+  "i1": 132621,
+  "dur": 5.493,
+  "words": [
+   {
+    "w": "once",
+    "t": 0.0,
+    "e": 0.18
+   },
+   {
+    "w": "the",
+    "t": 0.18,
+    "e": 0.4
+   },
+   {
+    "w": "bike",
+    "t": 0.4,
+    "e": 0.6
+   },
+   {
+    "w": "is",
+    "t": 0.6,
+    "e": 0.78
+   },
+   {
+    "w": "verified",
+    "t": 0.78,
+    "e": 1.3
+   },
+   {
+    "w": "my",
+    "t": 1.72,
+    "e": 1.86
+   },
+   {
+    "w": "code",
+    "t": 1.86,
+    "e": 2.18
+   },
+   {
+    "w": "becomes",
+    "t": 2.18,
+    "e": 2.6
+   },
+   {
+    "w": "available",
+    "t": 2.6,
+    "e": 3.04
+   },
+   {
+    "w": "we'll",
+    "t": 3.66,
+    "e": 3.88
+   },
+   {
+    "w": "see",
+    "t": 3.88,
+    "e": 4.04
+   },
+   {
+    "w": "the",
+    "t": 4.04,
+    "e": 4.2
+   },
+   {
+    "w": "admins",
+    "t": 4.2,
+    "e": 4.78
+   },
+   {
+    "w": "check",
+    "t": 4.78,
+    "e": 4.98
+   },
+   {
+    "w": "later",
+    "t": 4.98,
+    "e": 5.28
+   }
+  ],
+  "heard": "once the bike is verified my code becomes available we'll see the admins check later"
+ },
+ {
+  "scene": "3.5",
+  "n": 0,
+  "text": "What's due lists every item. Tap one to see how far it has left.",
+  "file": "vo/lines/3.5_0.wav",
+  "sr": 24000,
+  "i0": 1207,
+  "i1": 99913,
+  "dur": 4.113,
+  "words": [
+   {
+    "w": "what's",
+    "t": 0.0,
+    "e": 0.32
+   },
+   {
+    "w": "do",
+    "t": 0.32,
+    "e": 0.44
+   },
+   {
+    "w": "lists",
+    "t": 0.44,
+    "e": 0.74
+   },
+   {
+    "w": "every",
+    "t": 0.74,
+    "e": 1.1
+   },
+   {
+    "w": "item",
+    "t": 1.1,
+    "e": 1.5
+   },
+   {
+    "w": "tap",
+    "t": 2.02,
+    "e": 2.22
+   },
+   {
+    "w": "one",
+    "t": 2.22,
+    "e": 2.5
+   },
+   {
+    "w": "to",
+    "t": 2.5,
+    "e": 2.7
+   },
+   {
+    "w": "see",
+    "t": 2.7,
+    "e": 2.86
+   },
+   {
+    "w": "how",
+    "t": 2.86,
+    "e": 3.06
+   },
+   {
+    "w": "far",
+    "t": 3.06,
+    "e": 3.38
+   },
+   {
+    "w": "it",
+    "t": 3.38,
+    "e": 3.5
+   },
+   {
+    "w": "has",
+    "t": 3.5,
+    "e": 3.62
+   },
+   {
+    "w": "left",
+    "t": 3.62,
+    "e": 3.86
+   }
+  ],
+  "heard": "what's do lists every item tap one to see how far it has left"
+ },
+ {
+  "scene": "3.6",
+  "n": 0,
+  "text": "Log service records your own work.",
+  "file": "vo/lines/3.6_0.wav",
+  "sr": 24000,
+  "i0": 1346,
+  "i1": 49662,
+  "dur": 2.013,
+  "words": [
+   {
+    "w": "log",
+    "t": 0.0,
+    "e": 0.22
+   },
+   {
+    "w": "service",
+    "t": 0.22,
+    "e": 0.68
+   },
+   {
+    "w": "records",
+    "t": 0.68,
+    "e": 1.14
+   },
+   {
+    "w": "your",
+    "t": 1.14,
+    "e": 1.38
+   },
+   {
+    "w": "own",
+    "t": 1.38,
+    "e": 1.58
+   },
+   {
+    "w": "work",
+    "t": 1.58,
+    "e": 1.82
+   }
+  ],
+  "heard": "log service records your own work"
+ },
+ {
+  "scene": "3.6",
+  "n": 1,
+  "text": "It appears in History as a Rider entry, with its details.",
+  "file": "vo/lines/3.6_1.wav",
+  "sr": 24000,
+  "i0": 981,
+  "i1": 96861,
+  "dur": 3.995,
+  "words": [
+   {
+    "w": "it",
+    "t": 0.0,
+    "e": 0.12
+   },
+   {
+    "w": "appears",
+    "t": 0.12,
+    "e": 0.48
+   },
+   {
+    "w": "in",
+    "t": 0.48,
+    "e": 0.72
+   },
+   {
+    "w": "history",
+    "t": 0.72,
+    "e": 1.08
+   },
+   {
+    "w": "as",
+    "t": 1.08,
+    "e": 1.48
+   },
+   {
+    "w": "a",
+    "t": 1.48,
+    "e": 1.58
+   },
+   {
+    "w": "rider",
+    "t": 1.58,
+    "e": 1.88
+   },
+   {
+    "w": "entry",
+    "t": 1.88,
+    "e": 2.36
+   },
+   {
+    "w": "with",
+    "t": 2.82,
+    "e": 3.02
+   },
+   {
+    "w": "its",
+    "t": 3.02,
+    "e": 3.18
+   },
+   {
+    "w": "details",
+    "t": 3.18,
+    "e": 3.64
+   }
+  ],
+  "heard": "it appears in history as a rider entry with its details"
+ },
+ {
+  "scene": "3.7",
+  "n": 0,
+  "text": "Fuel tracks fill-ups and kilometres per litre.",
+  "file": "vo/lines/3.7_0.wav",
+  "sr": 24000,
+  "i0": 1357,
+  "i1": 63767,
+  "dur": 2.6,
+  "words": [
+   {
+    "w": "fuel",
+    "t": 0.0,
+    "e": 0.22
+   },
+   {
+    "w": "tracks",
+    "t": 0.22,
+    "e": 0.6
+   },
+   {
+    "w": "fill",
+    "t": 0.6,
+    "e": 0.92
+   },
+   {
+    "w": "ups",
+    "t": 0.92,
+    "e": 1.14
+   },
+   {
+    "w": "and",
+    "t": 1.14,
+    "e": 1.44
+   },
+   {
+    "w": "kilometers",
+    "t": 1.44,
+    "e": 1.86
+   },
+   {
+    "w": "per",
+    "t": 1.86,
+    "e": 2.16
+   },
+   {
+    "w": "liter",
+    "t": 2.16,
+    "e": 2.4
+   }
+  ],
+  "heard": "fuel tracks fill ups and kilometers per liter"
+ },
+ {
+  "scene": "3.8",
+  "n": 0,
+  "text": "Plus a service schedule, renewal reminders, and spending.",
+  "file": "vo/lines/3.8_0.wav",
+  "sr": 24000,
+  "i0": 908,
+  "i1": 82391,
+  "dur": 3.395,
+  "words": [
+   {
+    "w": "plus",
+    "t": 0.0,
+    "e": 0.14
+   },
+   {
+    "w": "a",
+    "t": 0.14,
+    "e": 0.34
+   },
+   {
+    "w": "service",
+    "t": 0.34,
+    "e": 0.64
+   },
+   {
+    "w": "schedule",
+    "t": 0.64,
+    "e": 1.14
+   },
+   {
+    "w": "renewal",
+    "t": 1.52,
+    "e": 1.84
+   },
+   {
+    "w": "reminders",
+    "t": 1.84,
+    "e": 2.36
+   },
+   {
+    "w": "and",
+    "t": 2.7,
+    "e": 2.78
+   },
+   {
+    "w": "spending",
+    "t": 2.78,
+    "e": 3.04
+   }
+  ],
+  "heard": "plus a service schedule renewal reminders and spending"
+ },
+ {
+  "scene": "4.1",
+  "n": 0,
+  "text": "A Workshop owner registers the workshop.",
+  "file": "vo/lines/4.1_0.wav",
+  "sr": 24000,
+  "i0": 1649,
+  "i1": 59538,
+  "dur": 2.412,
+  "words": [
+   {
+    "w": "a",
+    "t": 0.0,
+    "e": 0.06
+   },
+   {
+    "w": "workshop",
+    "t": 0.06,
+    "e": 0.4
+   },
+   {
+    "w": "owner",
+    "t": 0.4,
+    "e": 0.82
+   },
+   {
+    "w": "registers",
+    "t": 0.82,
+    "e": 1.36
+   },
+   {
+    "w": "the",
+    "t": 1.36,
+    "e": 1.76
+   },
+   {
+    "w": "workshop",
+    "t": 1.76,
+    "e": 2.06
+   }
+  ],
+  "heard": "a workshop owner registers the workshop"
+ },
+ {
+  "scene": "4.1",
+  "n": 1,
+  "text": "RevLog checks every workshop before it can search bikes.",
+  "file": "vo/lines/4.1_1.wav",
+  "sr": 24000,
+  "i0": 850,
+  "i1": 83495,
+  "dur": 3.444,
+  "words": [
+   {
+    "w": "revlog",
+    "t": 0.0,
+    "e": 0.52
+   },
+   {
+    "w": "checks",
+    "t": 0.52,
+    "e": 0.96
+   },
+   {
+    "w": "every",
+    "t": 0.96,
+    "e": 1.32
+   },
+   {
+    "w": "workshop",
+    "t": 1.32,
+    "e": 1.8
+   },
+   {
+    "w": "before",
+    "t": 1.8,
+    "e": 2.18
+   },
+   {
+    "w": "it",
+    "t": 2.18,
+    "e": 2.4
+   },
+   {
+    "w": "can",
+    "t": 2.4,
+    "e": 2.54
+   },
+   {
+    "w": "search",
+    "t": 2.54,
+    "e": 2.8
+   },
+   {
+    "w": "bikes",
+    "t": 2.8,
+    "e": 3.18
+   }
+  ],
+  "heard": "revlog checks every workshop before it can search bikes"
+ },
+ {
+  "scene": "4.2",
+  "n": 0,
+  "text": "The Admin approves it,",
+  "file": "vo/lines/4.2_0.wav",
+  "sr": 24000,
+  "i0": 1460,
+  "i1": 32779,
+  "dur": 1.305,
+  "words": [
+   {
+    "w": "the",
+    "t": 0.0,
+    "e": 0.1
+   },
+   {
+    "w": "admin",
+    "t": 0.1,
+    "e": 0.48
+   },
+   {
+    "w": "approves",
+    "t": 0.48,
+    "e": 1.0
+   },
+   {
+    "w": "it",
+    "t": 1.0,
+    "e": 1.14
+   }
+  ],
+  "heard": "the admin approves it"
+ },
+ {
+  "scene": "4.2",
+  "n": 1,
+  "text": "and now the workshop can search by plate.",
+  "file": "vo/lines/4.2_1.wav",
+  "sr": 24000,
+  "i0": 1436,
+  "i1": 55068,
+  "dur": 2.235,
+  "words": [
+   {
+    "w": "and",
+    "t": 0.0,
+    "e": 0.12
+   },
+   {
+    "w": "now",
+    "t": 0.12,
+    "e": 0.38
+   },
+   {
+    "w": "the",
+    "t": 0.38,
+    "e": 0.58
+   },
+   {
+    "w": "workshop",
+    "t": 0.58,
+    "e": 0.98
+   },
+   {
+    "w": "can",
+    "t": 0.98,
+    "e": 1.22
+   },
+   {
+    "w": "search",
+    "t": 1.22,
+    "e": 1.48
+   },
+   {
+    "w": "by",
+    "t": 1.48,
+    "e": 1.76
+   },
+   {
+    "w": "plate",
+    "t": 1.76,
+    "e": 1.98
+   }
+  ],
+  "heard": "and now the workshop can search by plate"
+ },
+ {
+  "scene": "4.3",
+  "n": 0,
+  "text": "Workshop mode has Search, Customers, Packages and Team.",
+  "file": "vo/lines/4.3_0.wav",
+  "sr": 24000,
+  "i0": 1197,
+  "i1": 91279,
+  "dur": 3.753,
+  "words": [
+   {
+    "w": "workshop",
+    "t": 0.0,
+    "e": 0.36
+   },
+   {
+    "w": "mode",
+    "t": 0.36,
+    "e": 0.68
+   },
+   {
+    "w": "has",
+    "t": 0.68,
+    "e": 0.88
+   },
+   {
+    "w": "search",
+    "t": 0.88,
+    "e": 1.24
+   },
+   {
+    "w": "customers",
+    "t": 1.56,
+    "e": 2.02
+   },
+   {
+    "w": "packages",
+    "t": 2.52,
+    "e": 2.9
+   },
+   {
+    "w": "and",
+    "t": 3.28,
+    "e": 3.34
+   },
+   {
+    "w": "team",
+    "t": 3.34,
+    "e": 3.54
+   }
+  ],
+  "heard": "workshop mode has search customers packages and team"
+ },
+ {
+  "scene": "4.3",
+  "n": 1,
+  "text": "Packages save the usual items and costs, ready in one tap.",
+  "file": "vo/lines/4.3_1.wav",
+  "sr": 24000,
+  "i0": 826,
+  "i1": 95567,
+  "dur": 3.948,
+  "words": [
+   {
+    "w": "packages",
+    "t": 0.0,
+    "e": 0.44
+   },
+   {
+    "w": "save",
+    "t": 0.44,
+    "e": 0.72
+   },
+   {
+    "w": "the",
+    "t": 0.72,
+    "e": 0.92
+   },
+   {
+    "w": "usual",
+    "t": 0.92,
+    "e": 1.18
+   },
+   {
+    "w": "items",
+    "t": 1.18,
+    "e": 1.6
+   },
+   {
+    "w": "and",
+    "t": 1.6,
+    "e": 1.8
+   },
+   {
+    "w": "costs",
+    "t": 1.8,
+    "e": 2.22
+   },
+   {
+    "w": "ready",
+    "t": 2.64,
+    "e": 2.94
+   },
+   {
+    "w": "in",
+    "t": 2.94,
+    "e": 3.22
+   },
+   {
+    "w": "one",
+    "t": 3.22,
+    "e": 3.44
+   },
+   {
+    "w": "tap",
+    "t": 3.44,
+    "e": 3.74
+   }
+  ],
+  "heard": "packages save the usual items and costs ready in one tap"
+ },
+ {
+  "scene": "4.4",
+  "n": 0,
+  "text": "Under Team, the owner adds Branches.",
+  "file": "vo/lines/4.4_0.wav",
+  "sr": 24000,
+  "i0": 1983,
+  "i1": 58252,
+  "dur": 2.345,
+  "words": [
+   {
+    "w": "under",
+    "t": 0.0,
+    "e": 0.18
+   },
+   {
+    "w": "team",
+    "t": 0.18,
+    "e": 0.52
+   },
+   {
+    "w": "the",
+    "t": 0.96,
+    "e": 1.04
+   },
+   {
+    "w": "owner",
+    "t": 1.04,
+    "e": 1.22
+   },
+   {
+    "w": "adds",
+    "t": 1.22,
+    "e": 1.56
+   },
+   {
+    "w": "branches",
+    "t": 1.56,
+    "e": 1.98
+   }
+  ],
+  "heard": "under team the owner adds branches"
+ },
+ {
+  "scene": "4.4",
+  "n": 1,
+  "text": "The Free plan allows one Branch.",
+  "file": "vo/lines/4.4_1.wav",
+  "sr": 24000,
+  "i0": 2155,
+  "i1": 47692,
+  "dur": 1.897,
+  "words": [
+   {
+    "w": "the",
+    "t": 0.0,
+    "e": 0.06
+   },
+   {
+    "w": "free",
+    "t": 0.06,
+    "e": 0.26
+   },
+   {
+    "w": "plan",
+    "t": 0.26,
+    "e": 0.6
+   },
+   {
+    "w": "allows",
+    "t": 0.6,
+    "e": 0.98
+   },
+   {
+    "w": "one",
+    "t": 0.98,
+    "e": 1.32
+   },
+   {
+    "w": "branch",
+    "t": 1.32,
+    "e": 1.6
+   }
+  ],
+  "heard": "the free plan allows one branch"
+ },
+ {
+  "scene": "4.5",
+  "n": 0,
+  "text": "The owner creates an invite code, and a Staff member joins with it.",
+  "file": "vo/lines/4.5_0.wav",
+  "sr": 24000,
+  "i0": 1059,
+  "i1": 99696,
+  "dur": 4.11,
+  "words": [
+   {
+    "w": "the",
+    "t": 0.0,
+    "e": 0.1
+   },
+   {
+    "w": "owner",
+    "t": 0.1,
+    "e": 0.38
+   },
+   {
+    "w": "creates",
+    "t": 0.38,
+    "e": 0.8
+   },
+   {
+    "w": "an",
+    "t": 0.8,
+    "e": 1.04
+   },
+   {
+    "w": "invite",
+    "t": 1.04,
+    "e": 1.36
+   },
+   {
+    "w": "code",
+    "t": 1.36,
+    "e": 1.74
+   },
+   {
+    "w": "and",
+    "t": 2.04,
+    "e": 2.42
+   },
+   {
+    "w": "a",
+    "t": 2.42,
+    "e": 2.52
+   },
+   {
+    "w": "staff",
+    "t": 2.52,
+    "e": 2.74
+   },
+   {
+    "w": "member",
+    "t": 2.74,
+    "e": 3.1
+   },
+   {
+    "w": "joins",
+    "t": 3.1,
+    "e": 3.48
+   },
+   {
+    "w": "with",
+    "t": 3.48,
+    "e": 3.84
+   },
+   {
+    "w": "it",
+    "t": 3.84,
+    "e": 3.98
+   }
+  ],
+  "heard": "the owner creates an invite code and a staff member joins with it"
+ },
+ {
+  "scene": "4.5",
+  "n": 1,
+  "text": "The Free plan limits how many staff you can add.",
+  "file": "vo/lines/4.5_1.wav",
+  "sr": 24000,
+  "i0": 1002,
+  "i1": 66083,
+  "dur": 2.712,
+  "words": [
+   {
+    "w": "the",
+    "t": 0.0,
+    "e": 0.08
+   },
+   {
+    "w": "free",
+    "t": 0.08,
+    "e": 0.3
+   },
+   {
+    "w": "plan",
+    "t": 0.3,
+    "e": 0.68
+   },
+   {
+    "w": "limits",
+    "t": 0.68,
+    "e": 1.22
+   },
+   {
+    "w": "how",
+    "t": 1.22,
+    "e": 1.54
+   },
+   {
+    "w": "many",
+    "t": 1.54,
+    "e": 1.72
+   },
+   {
+    "w": "staff",
+    "t": 1.72,
+    "e": 2.0
+   },
+   {
+    "w": "you",
+    "t": 2.0,
+    "e": 2.2
+   },
+   {
+    "w": "can",
+    "t": 2.2,
+    "e": 2.34
+   },
+   {
+    "w": "add",
+    "t": 2.34,
+    "e": 2.56
+   }
+  ],
+  "heard": "the free plan limits how many staff you can add"
+ },
+ {
+  "scene": "5.1",
+  "n": 0,
+  "text": "Now, a workshop visit. Staff search the plate.",
+  "file": "vo/lines/5.1_0.wav",
+  "sr": 24000,
+  "i0": 1218,
+  "i1": 69138,
+  "dur": 2.83,
+  "words": [
+   {
+    "w": "now",
+    "t": 0.0,
+    "e": 0.24
+   },
+   {
+    "w": "a",
+    "t": 0.24,
+    "e": 0.5
+   },
+   {
+    "w": "workshop",
+    "t": 0.5,
+    "e": 0.82
+   },
+   {
+    "w": "visit",
+    "t": 0.82,
+    "e": 1.22
+   },
+   {
+    "w": "staff",
+    "t": 1.62,
+    "e": 1.92
+   },
+   {
+    "w": "search",
+    "t": 1.92,
+    "e": 2.2
+   },
+   {
+    "w": "the",
+    "t": 2.2,
+    "e": 2.4
+   },
+   {
+    "w": "plate",
+    "t": 2.4,
+    "e": 2.62
+   }
+  ],
+  "heard": "now a workshop visit staff search the plate"
+ },
+ {
+  "scene": "5.1",
+  "n": 1,
+  "text": "The bike belongs to a Rider: Approval needed.",
+  "file": "vo/lines/5.1_1.wav",
+  "sr": 24000,
+  "i0": 1255,
+  "i1": 69977,
+  "dur": 2.863,
+  "words": [
+   {
+    "w": "the",
+    "t": 0.0,
+    "e": 0.08
+   },
+   {
+    "w": "bike",
+    "t": 0.08,
+    "e": 0.32
+   },
+   {
+    "w": "belongs",
+    "t": 0.32,
+    "e": 0.66
+   },
+   {
+    "w": "to",
+    "t": 0.66,
+    "e": 0.94
+   },
+   {
+    "w": "a",
+    "t": 0.94,
+    "e": 1.06
+   },
+   {
+    "w": "rider",
+    "t": 1.06,
+    "e": 1.4
+   },
+   {
+    "w": "approval",
+    "t": 1.4,
+    "e": 2.18
+   },
+   {
+    "w": "needed",
+    "t": 2.18,
+    "e": 2.58
+   }
+  ],
+  "heard": "the bike belongs to a rider approval needed"
+ },
+ {
+  "scene": "5.2",
+  "n": 0,
+  "text": "The Rider opens My code: a QR and a 6-digit code, valid for ten minutes, used once.",
+  "file": "vo/lines/5.2_0.wav",
+  "sr": 24000,
+  "i0": 1490,
+  "i1": 156553,
+  "dur": 6.461,
+  "words": [
+   {
+    "w": "the",
+    "t": 0.0,
+    "e": 0.1
+   },
+   {
+    "w": "writer",
+    "t": 0.1,
+    "e": 0.36
+   },
+   {
+    "w": "opens",
+    "t": 0.36,
+    "e": 0.8
+   },
+   {
+    "w": "my",
+    "t": 0.8,
+    "e": 1.08
+   },
+   {
+    "w": "code",
+    "t": 1.08,
+    "e": 1.46
+   },
+   {
+    "w": "a",
+    "t": 2.1,
+    "e": 2.22
+   },
+   {
+    "w": "qr",
+    "t": 2.22,
+    "e": 2.54
+   },
+   {
+    "w": "and",
+    "t": 2.54,
+    "e": 2.96
+   },
+   {
+    "w": "a",
+    "t": 2.96,
+    "e": 3.06
+   },
+   {
+    "w": "six",
+    "t": 3.06,
+    "e": 3.32
+   },
+   {
+    "w": "digit",
+    "t": 3.32,
+    "e": 3.7
+   },
+   {
+    "w": "code",
+    "t": 3.7,
+    "e": 4.04
+   },
+   {
+    "w": "valid",
+    "t": 4.04,
+    "e": 4.72
+   },
+   {
+    "w": "for",
+    "t": 4.72,
+    "e": 4.98
+   },
+   {
+    "w": "10",
+    "t": 4.98,
+    "e": 5.24
+   },
+   {
+    "w": "minutes",
+    "t": 5.24,
+    "e": 5.5
+   },
+   {
+    "w": "used",
+    "t": 5.5,
+    "e": 5.9
+   },
+   {
+    "w": "once",
+    "t": 5.9,
+    "e": 6.24
+   }
+  ],
+  "heard": "the writer opens my code a qr and a six digit code valid for 10 minutes used once"
+ },
+ {
+  "scene": "5.3",
+  "n": 0,
+  "text": "Staff scan it,",
+  "file": "vo/lines/5.3_0.wav",
+  "sr": 24000,
+  "i0": 843,
+  "i1": 24402,
+  "dur": 0.982,
+  "words": [
+   {
+    "w": "and",
+    "t": 0.0,
+    "e": 0.08
+   },
+   {
+    "w": "staff",
+    "t": 0.08,
+    "e": 0.26
+   },
+   {
+    "w": "scan",
+    "t": 0.26,
+    "e": 0.62
+   },
+   {
+    "w": "it",
+    "t": 0.62,
+    "e": 0.84
+   }
+  ],
+  "heard": "and staff scan it"
+ },
+ {
+  "scene": "5.3",
+  "n": 1,
+  "text": "or type the code and tap Done.",
+  "file": "vo/lines/5.3_1.wav",
+  "sr": 24000,
+  "i0": 1977,
+  "i1": 41985,
+  "dur": 1.667,
+  "words": [
+   {
+    "w": "or",
+    "t": 0.0,
+    "e": 0.1
+   },
+   {
+    "w": "type",
+    "t": 0.1,
+    "e": 0.38
+   },
+   {
+    "w": "the",
+    "t": 0.38,
+    "e": 0.54
+   },
+   {
+    "w": "code",
+    "t": 0.54,
+    "e": 0.8
+   },
+   {
+    "w": "and",
+    "t": 0.8,
+    "e": 0.96
+   },
+   {
+    "w": "tap",
+    "t": 0.96,
+    "e": 1.2
+   },
+   {
+    "w": "done",
+    "t": 1.2,
+    "e": 1.48
+   }
+  ],
+  "heard": "or type the code and tap done"
+ },
+ {
+  "scene": "5.4",
+  "n": 0,
+  "text": "The bike opens, with the Rider's first name and the workshop's record.",
+  "file": "vo/lines/5.4_0.wav",
+  "sr": 24000,
+  "i0": 1095,
+  "i1": 98564,
+  "dur": 4.061,
+  "words": [
+   {
+    "w": "the",
+    "t": 0.0,
+    "e": 0.06
+   },
+   {
+    "w": "bike",
+    "t": 0.06,
+    "e": 0.26
+   },
+   {
+    "w": "opens",
+    "t": 0.26,
+    "e": 0.78
+   },
+   {
+    "w": "with",
+    "t": 0.78,
+    "e": 1.44
+   },
+   {
+    "w": "the",
+    "t": 1.44,
+    "e": 1.58
+   },
+   {
+    "w": "rider's",
+    "t": 1.58,
+    "e": 2.04
+   },
+   {
+    "w": "first",
+    "t": 2.04,
+    "e": 2.24
+   },
+   {
+    "w": "name",
+    "t": 2.24,
+    "e": 2.66
+   },
+   {
+    "w": "and",
+    "t": 2.66,
+    "e": 2.92
+   },
+   {
+    "w": "the",
+    "t": 2.92,
+    "e": 3.04
+   },
+   {
+    "w": "workshop's",
+    "t": 3.04,
+    "e": 3.58
+   },
+   {
+    "w": "record",
+    "t": 3.58,
+    "e": 3.82
+   }
+  ],
+  "heard": "the bike opens with the rider's first name and the workshop's record"
+ },
+ {
+  "scene": "5.5",
+  "n": 0,
+  "text": "In the Rider's History, the workshop's record appears with the Workshop badge.",
+  "file": "vo/lines/5.5_0.wav",
+  "sr": 24000,
+  "i0": 716,
+  "i1": 102900,
+  "dur": 4.258,
+  "words": [
+   {
+    "w": "in",
+    "t": 0.0,
+    "e": 0.1
+   },
+   {
+    "w": "the",
+    "t": 0.1,
+    "e": 0.2
+   },
+   {
+    "w": "writer's",
+    "t": 0.2,
+    "e": 0.66
+   },
+   {
+    "w": "history",
+    "t": 0.66,
+    "e": 1.02
+   },
+   {
+    "w": "the",
+    "t": 1.5,
+    "e": 1.6
+   },
+   {
+    "w": "workshop's",
+    "t": 1.6,
+    "e": 2.18
+   },
+   {
+    "w": "record",
+    "t": 2.18,
+    "e": 2.48
+   },
+   {
+    "w": "appears",
+    "t": 2.48,
+    "e": 2.88
+   },
+   {
+    "w": "with",
+    "t": 2.88,
+    "e": 3.16
+   },
+   {
+    "w": "the",
+    "t": 3.16,
+    "e": 3.26
+   },
+   {
+    "w": "workshop",
+    "t": 3.26,
+    "e": 3.62
+   },
+   {
+    "w": "badge",
+    "t": 3.62,
+    "e": 3.98
+   }
+  ],
+  "heard": "in the writer's history the workshop's record appears with the workshop badge"
+ },
+ {
+  "scene": "5.5",
+  "n": 1,
+  "text": "The Rider typed nothing.",
+  "file": "vo/lines/5.5_1.wav",
+  "sr": 24000,
+  "i0": 1298,
+  "i1": 34921,
+  "dur": 1.401,
+  "words": [
+   {
+    "w": "the",
+    "t": 0.0,
+    "e": 0.1
+   },
+   {
+    "w": "rider",
+    "t": 0.1,
+    "e": 0.38
+   },
+   {
+    "w": "typed",
+    "t": 0.38,
+    "e": 0.74
+   },
+   {
+    "w": "nothing",
+    "t": 0.74,
+    "e": 1.02
+   }
+  ],
+  "heard": "the rider typed nothing"
+ },
+ {
+  "scene": "6.1",
+  "n": 0,
+  "text": "A plate not in the system? Staff tap Add this bike, with its brand and model.",
+  "file": "vo/lines/6.1_0.wav",
+  "sr": 24000,
+  "i0": 1039,
+  "i1": 117474,
+  "dur": 4.851,
+  "words": [
+   {
+    "w": "a",
+    "t": 0.0,
+    "e": 0.06
+   },
+   {
+    "w": "plate",
+    "t": 0.06,
+    "e": 0.3
+   },
+   {
+    "w": "not",
+    "t": 0.3,
+    "e": 0.58
+   },
+   {
+    "w": "in",
+    "t": 0.58,
+    "e": 0.76
+   },
+   {
+    "w": "the",
+    "t": 0.76,
+    "e": 0.86
+   },
+   {
+    "w": "system",
+    "t": 0.86,
+    "e": 1.26
+   },
+   {
+    "w": "stafftap",
+    "t": 1.86,
+    "e": 2.56
+   },
+   {
+    "w": "add",
+    "t": 2.56,
+    "e": 2.76
+   },
+   {
+    "w": "this",
+    "t": 2.76,
+    "e": 2.96
+   },
+   {
+    "w": "bike",
+    "t": 2.96,
+    "e": 3.24
+   },
+   {
+    "w": "with",
+    "t": 3.24,
+    "e": 3.64
+   },
+   {
+    "w": "its",
+    "t": 3.64,
+    "e": 3.8
+   },
+   {
+    "w": "brand",
+    "t": 3.8,
+    "e": 4.18
+   },
+   {
+    "w": "and",
+    "t": 4.18,
+    "e": 4.36
+   },
+   {
+    "w": "model",
+    "t": 4.36,
+    "e": 4.64
+   }
+  ],
+  "heard": "a plate not in the system stafftap add this bike with its brand and model"
+ },
+ {
+  "scene": "6.2",
+  "n": 0,
+  "text": "Then a package, the odometer and costs, and Save record.",
+  "file": "vo/lines/6.2_0.wav",
+  "sr": 24000,
+  "i0": 1660,
+  "i1": 83781,
+  "dur": 3.422,
+  "words": [
+   {
+    "w": "then",
+    "t": 0.0,
+    "e": 0.1
+   },
+   {
+    "w": "a",
+    "t": 0.1,
+    "e": 0.2
+   },
+   {
+    "w": "package",
+    "t": 0.2,
+    "e": 0.58
+   },
+   {
+    "w": "the",
+    "t": 0.94,
+    "e": 1.04
+   },
+   {
+    "w": "odometer",
+    "t": 1.04,
+    "e": 1.54
+   },
+   {
+    "w": "and",
+    "t": 1.54,
+    "e": 1.74
+   },
+   {
+    "w": "costs",
+    "t": 1.74,
+    "e": 2.2
+   },
+   {
+    "w": "and",
+    "t": 2.2,
+    "e": 2.56
+   },
+   {
+    "w": "save",
+    "t": 2.56,
+    "e": 2.84
+   },
+   {
+    "w": "record",
+    "t": 2.84,
+    "e": 3.16
+   }
+  ],
+  "heard": "then a package the odometer and costs and save record"
+ },
+ {
+  "scene": "6.3",
+  "n": 0,
+  "text": "The record carries the workshop's stamp, and Staff show the Claim QR.",
+  "file": "vo/lines/6.3_0.wav",
+  "sr": 24000,
+  "i0": 1191,
+  "i1": 99972,
+  "dur": 4.116,
+  "words": [
+   {
+    "w": "the",
+    "t": 0.0,
+    "e": 0.08
+   },
+   {
+    "w": "record",
+    "t": 0.08,
+    "e": 0.36
+   },
+   {
+    "w": "carries",
+    "t": 0.36,
+    "e": 0.78
+   },
+   {
+    "w": "the",
+    "t": 0.78,
+    "e": 0.96
+   },
+   {
+    "w": "workshop",
+    "t": 0.96,
+    "e": 1.34
+   },
+   {
+    "w": "stamp",
+    "t": 1.34,
+    "e": 1.76
+   },
+   {
+    "w": "and",
+    "t": 1.76,
+    "e": 2.38
+   },
+   {
+    "w": "staff",
+    "t": 2.38,
+    "e": 2.68
+   },
+   {
+    "w": "show",
+    "t": 2.68,
+    "e": 3.0
+   },
+   {
+    "w": "the",
+    "t": 3.0,
+    "e": 3.14
+   },
+   {
+    "w": "claim",
+    "t": 3.14,
+    "e": 3.42
+   },
+   {
+    "w": "qr",
+    "t": 3.42,
+    "e": 3.78
+   }
+  ],
+  "heard": "the record carries the workshop stamp and staff show the claim qr"
+ },
+ {
+  "scene": "6.4",
+  "n": 0,
+  "text": "The Rider scans the Claim QR,",
+  "file": "vo/lines/6.4_0.wav",
+  "sr": 24000,
+  "i0": 1634,
+  "i1": 47173,
+  "dur": 1.897,
+  "words": [
+   {
+    "w": "the",
+    "t": 0.0,
+    "e": 0.08
+   },
+   {
+    "w": "writer",
+    "t": 0.08,
+    "e": 0.38
+   },
+   {
+    "w": "scans",
+    "t": 0.38,
+    "e": 0.76
+   },
+   {
+    "w": "the",
+    "t": 0.76,
+    "e": 1.04
+   },
+   {
+    "w": "claim",
+    "t": 1.04,
+    "e": 1.26
+   },
+   {
+    "w": "qr",
+    "t": 1.26,
+    "e": 1.58
+   }
+  ],
+  "heard": "the writer scans the claim qr"
+ },
+ {
+  "scene": "6.4",
+  "n": 1,
+  "text": "and photographs the geran.",
+  "file": "vo/lines/6.4_1.wav",
+  "sr": 24000,
+  "i0": 1460,
+  "i1": 39674,
+  "dur": 1.592,
+  "words": [
+   {
+    "w": "and",
+    "t": 0.0,
+    "e": 0.12
+   },
+   {
+    "w": "photographs",
+    "t": 0.12,
+    "e": 0.7
+   },
+   {
+    "w": "the",
+    "t": 0.7,
+    "e": 1.0
+   },
+   {
+    "w": "geron",
+    "t": 1.0,
+    "e": 1.38
+   }
+  ],
+  "heard": "and photographs the geron"
+ },
+ {
+  "scene": "6.4",
+  "n": 2,
+  "text": "Once ownership is confirmed, the bike and the workshop's records are theirs.",
+  "file": "vo/lines/6.4_2.wav",
+  "sr": 24000,
+  "i0": 1154,
+  "i1": 107741,
+  "dur": 4.441,
+  "words": [
+   {
+    "w": "once",
+    "t": 0.0,
+    "e": 0.22
+   },
+   {
+    "w": "ownership",
+    "t": 0.22,
+    "e": 0.66
+   },
+   {
+    "w": "is",
+    "t": 0.66,
+    "e": 1.0
+   },
+   {
+    "w": "confirmed",
+    "t": 1.0,
+    "e": 1.5
+   },
+   {
+    "w": "the",
+    "t": 2.12,
+    "e": 2.26
+   },
+   {
+    "w": "bike",
+    "t": 2.26,
+    "e": 2.56
+   },
+   {
+    "w": "and",
+    "t": 2.56,
+    "e": 2.76
+   },
+   {
+    "w": "the",
+    "t": 2.76,
+    "e": 2.86
+   },
+   {
+    "w": "workshop's",
+    "t": 2.86,
+    "e": 3.4
+   },
+   {
+    "w": "records",
+    "t": 3.4,
+    "e": 3.7
+   },
+   {
+    "w": "are",
+    "t": 3.7,
+    "e": 3.88
+   },
+   {
+    "w": "theirs",
+    "t": 3.88,
+    "e": 4.1
+   }
+  ],
+  "heard": "once ownership is confirmed the bike and the workshop's records are theirs"
+ },
+ {
+  "scene": "7.1",
+  "n": 0,
+  "text": "The Rider sees which workshops have access, and can remove one at any time.",
+  "file": "vo/lines/7.1_0.wav",
+  "sr": 24000,
+  "i0": 1152,
+  "i1": 112549,
+  "dur": 4.642,
+  "words": [
+   {
+    "w": "the",
+    "t": 0.0,
+    "e": 0.08
+   },
+   {
+    "w": "writer",
+    "t": 0.08,
+    "e": 0.38
+   },
+   {
+    "w": "sees",
+    "t": 0.38,
+    "e": 0.74
+   },
+   {
+    "w": "which",
+    "t": 0.74,
+    "e": 1.04
+   },
+   {
+    "w": "workshops",
+    "t": 1.04,
+    "e": 1.54
+   },
+   {
+    "w": "have",
+    "t": 1.54,
+    "e": 1.82
+   },
+   {
+    "w": "access",
+    "t": 1.82,
+    "e": 2.28
+   },
+   {
+    "w": "and",
+    "t": 2.28,
+    "e": 3.02
+   },
+   {
+    "w": "can",
+    "t": 3.02,
+    "e": 3.18
+   },
+   {
+    "w": "remove",
+    "t": 3.18,
+    "e": 3.58
+   },
+   {
+    "w": "one",
+    "t": 3.58,
+    "e": 3.84
+   },
+   {
+    "w": "at",
+    "t": 3.84,
+    "e": 4.0
+   },
+   {
+    "w": "any",
+    "t": 4.0,
+    "e": 4.14
+   },
+   {
+    "w": "time",
+    "t": 4.14,
+    "e": 4.44
+   }
+  ],
+  "heard": "the writer sees which workshops have access and can remove one at any time"
+ },
+ {
+  "scene": "7.2",
+  "n": 0,
+  "text": "There are two ways to sell.",
+  "file": "vo/lines/7.2_0.wav",
+  "sr": 24000,
+  "i0": 1710,
+  "i1": 33546,
+  "dur": 1.327,
+  "words": [
+   {
+    "w": "there",
+    "t": 0.0,
+    "e": 0.14
+   },
+   {
+    "w": "are",
+    "t": 0.14,
+    "e": 0.26
+   },
+   {
+    "w": "two",
+    "t": 0.26,
+    "e": 0.42
+   },
+   {
+    "w": "ways",
+    "t": 0.42,
+    "e": 0.64
+   },
+   {
+    "w": "to",
+    "t": 0.64,
+    "e": 0.88
+   },
+   {
+    "w": "sell",
+    "t": 0.88,
+    "e": 1.1
+   }
+  ],
+  "heard": "there are two ways to sell"
+ },
+ {
+  "scene": "7.2",
+  "n": 1,
+  "text": "Sell to a RevLog rider: the seller types the buyer's Receive code.",
+  "file": "vo/lines/7.2_1.wav",
+  "sr": 24000,
+  "i0": 882,
+  "i1": 103875,
+  "dur": 4.291,
+  "words": [
+   {
+    "w": "sell",
+    "t": 0.0,
+    "e": 0.22
+   },
+   {
+    "w": "to",
+    "t": 0.22,
+    "e": 0.42
+   },
+   {
+    "w": "a",
+    "t": 0.42,
+    "e": 0.56
+   },
+   {
+    "w": "revlog",
+    "t": 0.56,
+    "e": 1.08
+   },
+   {
+    "w": "writer",
+    "t": 1.08,
+    "e": 1.5
+   },
+   {
+    "w": "the",
+    "t": 2.0,
+    "e": 2.1
+   },
+   {
+    "w": "seller",
+    "t": 2.1,
+    "e": 2.36
+   },
+   {
+    "w": "types",
+    "t": 2.36,
+    "e": 2.74
+   },
+   {
+    "w": "the",
+    "t": 2.74,
+    "e": 2.94
+   },
+   {
+    "w": "buyer's",
+    "t": 2.94,
+    "e": 3.4
+   },
+   {
+    "w": "receive",
+    "t": 3.4,
+    "e": 3.74
+   },
+   {
+    "w": "code",
+    "t": 3.74,
+    "e": 4.06
+   }
+  ],
+  "heard": "sell to a revlog writer the seller types the buyer's receive code"
+ },
+ {
+  "scene": "7.2",
+  "n": 2,
+  "text": "Or Transfer to a buyer: a locked file, opened with a 6-digit code.",
+  "file": "vo/lines/7.2_2.wav",
+  "sr": 24000,
+  "i0": 1971,
+  "i1": 113624,
+  "dur": 4.652,
+  "words": [
+   {
+    "w": "or",
+    "t": 0.0,
+    "e": 0.12
+   },
+   {
+    "w": "transfer",
+    "t": 0.12,
+    "e": 0.52
+   },
+   {
+    "w": "to",
+    "t": 0.52,
+    "e": 0.74
+   },
+   {
+    "w": "a",
+    "t": 0.74,
+    "e": 0.86
+   },
+   {
+    "w": "buyer",
+    "t": 0.86,
+    "e": 1.12
+   },
+   {
+    "w": "a",
+    "t": 1.74,
+    "e": 1.82
+   },
+   {
+    "w": "locked",
+    "t": 1.82,
+    "e": 2.14
+   },
+   {
+    "w": "file",
+    "t": 2.14,
+    "e": 2.58
+   },
+   {
+    "w": "opened",
+    "t": 2.58,
+    "e": 3.14
+   },
+   {
+    "w": "with",
+    "t": 3.14,
+    "e": 3.42
+   },
+   {
+    "w": "a",
+    "t": 3.42,
+    "e": 3.54
+   },
+   {
+    "w": "six",
+    "t": 3.54,
+    "e": 3.78
+   },
+   {
+    "w": "digit",
+    "t": 3.78,
+    "e": 4.16
+   },
+   {
+    "w": "code",
+    "t": 4.16,
+    "e": 4.46
+   }
+  ],
+  "heard": "or transfer to a buyer a locked file opened with a six digit code"
+ },
+ {
+  "scene": "8.1",
+  "n": 0,
+  "text": "A bike checked by hand waits as not yet verified.",
+  "file": "vo/lines/8.1_0.wav",
+  "sr": 24000,
+  "i0": 1489,
+  "i1": 75675,
+  "dur": 3.091,
+  "words": [
+   {
+    "w": "a",
+    "t": 0.0,
+    "e": 0.08
+   },
+   {
+    "w": "bike",
+    "t": 0.08,
+    "e": 0.3
+   },
+   {
+    "w": "checked",
+    "t": 0.3,
+    "e": 0.62
+   },
+   {
+    "w": "by",
+    "t": 0.62,
+    "e": 0.86
+   },
+   {
+    "w": "hand",
+    "t": 0.86,
+    "e": 1.18
+   },
+   {
+    "w": "weights",
+    "t": 1.18,
+    "e": 1.44
+   },
+   {
+    "w": "is",
+    "t": 1.44,
+    "e": 1.94
+   },
+   {
+    "w": "not",
+    "t": 1.94,
+    "e": 2.16
+   },
+   {
+    "w": "yet",
+    "t": 2.16,
+    "e": 2.32
+   },
+   {
+    "w": "verified",
+    "t": 2.32,
+    "e": 2.7
+   }
+  ],
+  "heard": "a bike checked by hand weights is not yet verified"
+ },
+ {
+  "scene": "8.2",
+  "n": 0,
+  "text": "The Admin opens the case, compares the names, and approves it.",
+  "file": "vo/lines/8.2_0.wav",
+  "sr": 24000,
+  "i0": 1352,
+  "i1": 91574,
+  "dur": 3.759,
+  "words": [
+   {
+    "w": "the",
+    "t": 0.0,
+    "e": 0.08
+   },
+   {
+    "w": "admin",
+    "t": 0.08,
+    "e": 0.44
+   },
+   {
+    "w": "opens",
+    "t": 0.44,
+    "e": 0.84
+   },
+   {
+    "w": "the",
+    "t": 0.84,
+    "e": 1.08
+   },
+   {
+    "w": "case",
+    "t": 1.08,
+    "e": 1.38
+   },
+   {
+    "w": "compares",
+    "t": 1.76,
+    "e": 2.12
+   },
+   {
+    "w": "the",
+    "t": 2.12,
+    "e": 2.36
+   },
+   {
+    "w": "names",
+    "t": 2.36,
+    "e": 2.74
+   },
+   {
+    "w": "and",
+    "t": 3.02,
+    "e": 3.06
+   },
+   {
+    "w": "approves",
+    "t": 3.06,
+    "e": 3.48
+   },
+   {
+    "w": "it",
+    "t": 3.48,
+    "e": 3.62
+   }
+  ],
+  "heard": "the admin opens the case compares the names and approves it"
+ },
+ {
+  "scene": "8.3",
+  "n": 0,
+  "text": "After approval, My code appears where Verify this bike was.",
+  "file": "vo/lines/8.3_0.wav",
+  "sr": 24000,
+  "i0": 1119,
+  "i1": 90622,
+  "dur": 3.729,
+  "words": [
+   {
+    "w": "after",
+    "t": 0.0,
+    "e": 0.24
+   },
+   {
+    "w": "approval",
+    "t": 0.24,
+    "e": 0.68
+   },
+   {
+    "w": "my",
+    "t": 1.16,
+    "e": 1.32
+   },
+   {
+    "w": "code",
+    "t": 1.32,
+    "e": 1.58
+   },
+   {
+    "w": "appears",
+    "t": 1.58,
+    "e": 1.98
+   },
+   {
+    "w": "where",
+    "t": 1.98,
+    "e": 2.24
+   },
+   {
+    "w": "verify",
+    "t": 2.24,
+    "e": 2.66
+   },
+   {
+    "w": "this",
+    "t": 2.66,
+    "e": 2.96
+   },
+   {
+    "w": "bike",
+    "t": 2.96,
+    "e": 3.22
+   },
+   {
+    "w": "was",
+    "t": 3.22,
+    "e": 3.48
+   }
+  ],
+  "heard": "after approval my code appears where verify this bike was"
+ },
+ {
+  "scene": "8.4",
+  "n": 0,
+  "text": "The Admin also sets plans and limits: on the Free plan, 30 bikes and one Branch.",
+  "file": "vo/lines/8.4_0.wav",
+  "sr": 24000,
+  "i0": 1422,
+  "i1": 137780,
+  "dur": 5.682,
+  "words": [
+   {
+    "w": "the",
+    "t": 0.0,
+    "e": 0.08
+   },
+   {
+    "w": "admin",
+    "t": 0.08,
+    "e": 0.42
+   },
+   {
+    "w": "also",
+    "t": 0.42,
+    "e": 0.76
+   },
+   {
+    "w": "sets",
+    "t": 0.76,
+    "e": 1.14
+   },
+   {
+    "w": "plans",
+    "t": 1.14,
+    "e": 1.56
+   },
+   {
+    "w": "and",
+    "t": 1.56,
+    "e": 1.84
+   },
+   {
+    "w": "limits",
+    "t": 1.84,
+    "e": 2.14
+   },
+   {
+    "w": "on",
+    "t": 2.14,
+    "e": 2.98
+   },
+   {
+    "w": "the",
+    "t": 2.98,
+    "e": 3.08
+   },
+   {
+    "w": "free",
+    "t": 3.08,
+    "e": 3.3
+   },
+   {
+    "w": "plan",
+    "t": 3.3,
+    "e": 3.68
+   },
+   {
+    "w": "30",
+    "t": 3.98,
+    "e": 4.28
+   },
+   {
+    "w": "bikes",
+    "t": 4.28,
+    "e": 4.64
+   },
+   {
+    "w": "and",
+    "t": 4.64,
+    "e": 4.92
+   },
+   {
+    "w": "one",
+    "t": 4.92,
+    "e": 5.1
+   },
+   {
+    "w": "branch",
+    "t": 5.1,
+    "e": 5.4
+   }
+  ],
+  "heard": "the admin also sets plans and limits on the free plan 30 bikes and one branch"
+ },
+ {
+  "scene": "9.1",
+  "n": 0,
+  "text": "A workshop sees your bike only after you approve it.",
+  "file": "vo/lines/9.1_0.wav",
+  "sr": 24000,
+  "i0": 2031,
+  "i1": 74091,
+  "dur": 3.002,
+  "words": [
+   {
+    "w": "a",
+    "t": 0.0,
+    "e": 0.08
+   },
+   {
+    "w": "workshop",
+    "t": 0.08,
+    "e": 0.52
+   },
+   {
+    "w": "sees",
+    "t": 0.52,
+    "e": 0.84
+   },
+   {
+    "w": "your",
+    "t": 0.84,
+    "e": 1.04
+   },
+   {
+    "w": "bike",
+    "t": 1.04,
+    "e": 1.34
+   },
+   {
+    "w": "only",
+    "t": 1.34,
+    "e": 1.92
+   },
+   {
+    "w": "after",
+    "t": 1.92,
+    "e": 2.24
+   },
+   {
+    "w": "you",
+    "t": 2.24,
+    "e": 2.4
+   },
+   {
+    "w": "approve",
+    "t": 2.4,
+    "e": 2.7
+   },
+   {
+    "w": "it",
+    "t": 2.7,
+    "e": 2.88
+   }
+  ],
+  "heard": "a workshop sees your bike only after you approve it"
+ },
+ {
+  "scene": "9.2",
+  "n": 0,
+  "text": ""
+ },
+ {
+  "scene": "9.3",
+  "n": 0,
+  "text": "Document photos are deleted after the check, or kept up to 14 days if checked by hand.",
+  "file": "vo/lines/9.3_0.wav",
+  "sr": 24000,
+  "i0": 638,
+  "i1": 141212,
+  "dur": 5.857,
+  "words": [
+   {
+    "w": "document",
+    "t": 0.0,
+    "e": 0.42
+   },
+   {
+    "w": "photos",
+    "t": 0.42,
+    "e": 0.86
+   },
+   {
+    "w": "are",
+    "t": 0.86,
+    "e": 1.28
+   },
+   {
+    "w": "deleted",
+    "t": 1.28,
+    "e": 1.66
+   },
+   {
+    "w": "after",
+    "t": 1.66,
+    "e": 2.04
+   },
+   {
+    "w": "the",
+    "t": 2.04,
+    "e": 2.2
+   },
+   {
+    "w": "check",
+    "t": 2.2,
+    "e": 2.5
+   },
+   {
+    "w": "or",
+    "t": 2.9,
+    "e": 3.16
+   },
+   {
+    "w": "kept",
+    "t": 3.16,
+    "e": 3.38
+   },
+   {
+    "w": "up",
+    "t": 3.38,
+    "e": 3.6
+   },
+   {
+    "w": "to",
+    "t": 3.6,
+    "e": 3.74
+   },
+   {
+    "w": "14",
+    "t": 3.74,
+    "e": 4.08
+   },
+   {
+    "w": "days",
+    "t": 4.08,
+    "e": 4.48
+   },
+   {
+    "w": "if",
+    "t": 4.48,
+    "e": 4.78
+   },
+   {
+    "w": "checked",
+    "t": 4.78,
+    "e": 5.04
+   },
+   {
+    "w": "by",
+    "t": 5.04,
+    "e": 5.32
+   },
+   {
+    "w": "hand",
+    "t": 5.32,
+    "e": 5.68
+   }
+  ],
+  "heard": "document photos are deleted after the check or kept up to 14 days if checked by hand"
+ },
+ {
+  "scene": "10.1",
+  "n": 0,
+  "text": "One record for every bike: owned by the Rider, added to by workshops, checked by the Admin.",
+  "file": "vo/lines/10.1_0.wav",
+  "sr": 24000,
+  "i0": 940,
+  "i1": 147235,
+  "dur": 6.096,
+  "words": [
+   {
+    "w": "one",
+    "t": 0.0,
+    "e": 0.18
+   },
+   {
+    "w": "record",
+    "t": 0.18,
+    "e": 0.52
+   },
+   {
+    "w": "for",
+    "t": 0.52,
+    "e": 0.82
+   },
+   {
+    "w": "every",
+    "t": 0.82,
+    "e": 1.08
+   },
+   {
+    "w": "bike",
+    "t": 1.08,
+    "e": 1.54
+   },
+   {
+    "w": "owned",
+    "t": 1.88,
+    "e": 2.26
+   },
+   {
+    "w": "by",
+    "t": 2.26,
+    "e": 2.46
+   },
+   {
+    "w": "the",
+    "t": 2.46,
+    "e": 2.6
+   },
+   {
+    "w": "rider",
+    "t": 2.6,
+    "e": 2.94
+   },
+   {
+    "w": "added",
+    "t": 3.28,
+    "e": 3.54
+   },
+   {
+    "w": "to",
+    "t": 3.54,
+    "e": 3.72
+   },
+   {
+    "w": "by",
+    "t": 3.72,
+    "e": 3.9
+   },
+   {
+    "w": "workshops",
+    "t": 3.9,
+    "e": 4.36
+   },
+   {
+    "w": "checked",
+    "t": 4.94,
+    "e": 5.14
+   },
+   {
+    "w": "by",
+    "t": 5.14,
+    "e": 5.42
+   },
+   {
+    "w": "the",
+    "t": 5.42,
+    "e": 5.54
+   },
+   {
+    "w": "admin",
+    "t": 5.54,
+    "e": 5.84
+   }
+  ],
+  "heard": "one record for every bike owned by the rider added to by workshops checked by the admin"
+ },
+ {
+  "scene": "10.1",
+  "n": 1,
+  "text": "RevLog.",
+  "file": "vo/lines/10.1_1.wav",
+  "sr": 24000,
+  "i0": 581,
+  "i1": 18783,
+  "dur": 0.758,
+  "words": [
+   {
+    "w": "revlog",
+    "t": 0.0,
+    "e": 0.56
+   }
+  ],
+  "heard": "revlog"
+ }
+]

@@ -1,0 +1,328 @@
+1
+00:00:00,720 --> 00:00:04,420
+Service history is usually scattered across workshops and
+
+2
+00:00:04,420 --> 00:00:05,801
+paper receipts.
+
+3
+00:00:05,841 --> 00:00:08,712
+RevLog keeps one record for every bike.
+
+4
+00:00:08,752 --> 00:00:11,692
+The Rider owns it, and workshops add to it with the
+
+5
+00:00:11,692 --> 00:00:13,009
+Rider's approval.
+
+6
+00:00:13,049 --> 00:00:15,787
+A bike with no owner yet can be served too.
+
+7
+00:00:16,247 --> 00:00:19,733
+First, pick one: I ride, or I run a workshop.
+
+8
+00:00:19,773 --> 00:00:22,031
+Then sign in with Google or email.
+
+9
+00:00:22,191 --> 00:00:23,739
+There are four roles.
+
+10
+00:00:23,779 --> 00:00:25,686
+The Rider owns the record.
+
+11
+00:00:25,726 --> 00:00:28,157
+The Workshop owner runs the workshop.
+
+12
+00:00:28,197 --> 00:00:30,044
+Staff save each service.
+
+13
+00:00:30,084 --> 00:00:33,294
+And the Admin approves workshops and checks ownership.
+
+14
+00:00:33,754 --> 00:00:37,787
+A Rider finds their bike, then adds the odometer and plate.
+
+15
+00:00:37,947 --> 00:00:41,414
+Two quick questions help RevLog tell you what's due.
+
+16
+00:00:41,454 --> 00:00:43,152
+A short guide follows.
+
+17
+00:00:43,192 --> 00:00:46,210
+Then the Rider agrees to how their data is used.
+
+18
+00:00:46,370 --> 00:00:48,429
+The bike is now in the Garage.
+
+19
+00:00:48,469 --> 00:00:52,257
+Below it: Log service, Verify this bike, and What's due.
+
+20
+00:00:52,417 --> 00:00:57,459
+Verify this bike asks for photos of your driving licence and geran.
+
+21
+00:00:57,499 --> 00:00:59,491
+They prove the bike is yours.
+
+22
+00:01:01,099 --> 00:01:03,999
+Document photos are deleted after the check,
+
+23
+00:01:03,999 --> 00:01:07,316
+or kept up to 14 days if checked by hand.
+
+24
+00:01:07,356 --> 00:01:11,016
+Once the bike is verified, My code becomes available.
+
+25
+00:01:11,016 --> 00:01:13,209
+We'll see the Admin's check later.
+
+26
+00:01:13,369 --> 00:01:17,842
+What's due lists every item. Tap one to see how far it has left.
+
+27
+00:01:18,002 --> 00:01:20,375
+Log service records your own work.
+
+28
+00:01:20,415 --> 00:01:23,235
+It appears in History as a Rider entry,
+
+29
+00:01:23,235 --> 00:01:24,770
+with its details.
+
+30
+00:01:24,930 --> 00:01:27,890
+Fuel tracks fill-ups and kilometres per litre.
+
+31
+00:01:28,050 --> 00:01:31,805
+Plus a service schedule, renewal reminders, and spending.
+
+32
+00:01:32,265 --> 00:01:35,037
+A Workshop owner registers the workshop.
+
+33
+00:01:35,077 --> 00:01:38,881
+RevLog checks every workshop before it can search bikes.
+
+34
+00:01:39,041 --> 00:01:40,706
+The Admin approves it,
+
+35
+00:01:40,746 --> 00:01:43,341
+and now the workshop can search by plate.
+
+36
+00:01:43,501 --> 00:01:46,021
+Workshop mode has Search, Customers,
+
+37
+00:01:46,021 --> 00:01:47,614
+Packages and Team.
+
+38
+00:01:47,654 --> 00:01:50,294
+Packages save the usual items and costs,
+
+39
+00:01:50,294 --> 00:01:51,962
+ready in one tap.
+
+40
+00:01:52,122 --> 00:01:54,827
+Under Team, the owner adds Branches.
+
+41
+00:01:54,867 --> 00:01:57,124
+The Free plan allows one Branch.
+
+42
+00:01:57,284 --> 00:02:01,754
+The owner creates an invite code, and a Staff member joins with it.
+
+43
+00:02:01,794 --> 00:02:04,866
+The Free plan limits how many staff you can add.
+
+44
+00:02:05,326 --> 00:02:08,516
+Now, a workshop visit. Staff search the plate.
+
+45
+00:02:08,556 --> 00:02:11,779
+The bike belongs to a Rider: Approval needed.
+
+46
+00:02:11,939 --> 00:02:15,979
+The Rider opens My code: a QR and a 6-digit code,
+
+47
+00:02:15,979 --> 00:02:18,760
+valid for ten minutes, used once.
+
+48
+00:02:18,920 --> 00:02:20,302
+Staff scan it,
+
+49
+00:02:22,120 --> 00:02:24,147
+or type the code and tap Done.
+
+50
+00:02:24,307 --> 00:02:27,347
+The bike opens, with the Rider's first name and the
+
+51
+00:02:27,347 --> 00:02:28,728
+workshop's record.
+
+52
+00:02:28,888 --> 00:02:32,048
+In the Rider's History, the workshop's record appears with
+
+53
+00:02:32,048 --> 00:02:33,506
+the Workshop badge.
+
+54
+00:02:33,546 --> 00:02:35,307
+The Rider typed nothing.
+
+55
+00:02:35,767 --> 00:02:39,007
+A plate not in the system? Staff tap Add this bike,
+
+56
+00:02:39,007 --> 00:02:40,978
+with its brand and model.
+
+57
+00:02:41,138 --> 00:02:43,338
+Then a package, the odometer and costs,
+
+58
+00:02:43,338 --> 00:02:44,920
+and Save record.
+
+59
+00:02:45,080 --> 00:02:46,840
+The record carries the workshop's stamp,
+
+60
+00:02:46,840 --> 00:02:49,556
+and Staff show the Claim QR.
+
+61
+00:02:49,716 --> 00:02:52,013
+The Rider scans the Claim QR,
+
+62
+00:02:53,516 --> 00:02:55,508
+and photographs the geran.
+
+63
+00:02:56,716 --> 00:03:00,116
+Once ownership is confirmed, the bike and the workshop's
+
+64
+00:03:00,116 --> 00:03:01,517
+records are theirs.
+
+65
+00:03:01,977 --> 00:03:04,257
+The Rider sees which workshops have access,
+
+66
+00:03:04,257 --> 00:03:06,979
+and can remove one at any time.
+
+67
+00:03:07,139 --> 00:03:08,826
+There are two ways to sell.
+
+68
+00:03:08,866 --> 00:03:13,517
+Sell to a RevLog rider: the seller types the buyer's Receive code.
+
+69
+00:03:13,557 --> 00:03:16,697
+Or Transfer to a buyer: a locked file,
+
+70
+00:03:16,697 --> 00:03:18,569
+opened with a 6-digit code.
+
+71
+00:03:19,029 --> 00:03:22,480
+A bike checked by hand waits as not yet verified.
+
+72
+00:03:22,640 --> 00:03:25,660
+The Admin opens the case, compares the names,
+
+73
+00:03:25,660 --> 00:03:26,759
+and approves it.
+
+74
+00:03:26,919 --> 00:03:31,048
+After approval, My code appears where Verify this bike was.
+
+75
+00:03:32,239 --> 00:03:34,379
+The Admin also sets plans and limits:
+
+76
+00:03:34,379 --> 00:03:38,281
+on the Free plan, 30 bikes and one Branch.
+
+77
+00:03:38,741 --> 00:03:42,103
+A workshop sees your bike only after you approve it.
+
+78
+00:03:44,183 --> 00:03:47,083
+Document photos are deleted after the check,
+
+79
+00:03:47,083 --> 00:03:50,400
+or kept up to 14 days if checked by hand.
+
+80
+00:03:50,860 --> 00:03:54,140
+One record for every bike: owned by the Rider,
+
+81
+00:03:54,140 --> 00:03:57,316
+added to by workshops, checked by the Admin.
+
+82
+00:03:57,356 --> 00:03:58,474
+RevLog.
+

@@ -1,0 +1,1128 @@
+{
+ "total": 240.014,
+ "lines": [
+  {
+   "scene": "1.1",
+   "n": 0,
+   "t0": 0.72,
+   "sp": 5.441,
+   "t1": 5.841,
+   "text": "Service history is usually scattered across workshops and paper receipts.",
+   "file": "vo/lines/1.1_0.wav",
+   "i0": 1089,
+   "sr": 24000
+  },
+  {
+   "scene": "1.1",
+   "n": 1,
+   "t0": 5.841,
+   "sp": 8.352,
+   "t1": 8.752,
+   "text": "RevLog keeps one record for every bike.",
+   "file": "vo/lines/1.1_1.wav",
+   "i0": 814,
+   "sr": 24000
+  },
+  {
+   "scene": "1.1",
+   "n": 2,
+   "t0": 8.752,
+   "sp": 12.649,
+   "t1": 13.049,
+   "text": "The Rider owns it, and workshops add to it with the Rider's approval.",
+   "file": "vo/lines/1.1_2.wav",
+   "i0": 1642,
+   "sr": 24000
+  },
+  {
+   "scene": "1.1",
+   "n": 3,
+   "t0": 13.049,
+   "sp": 15.427,
+   "t1": 15.827,
+   "text": "A bike with no owner yet can be served too.",
+   "file": "vo/lines/1.1_3.wav",
+   "i0": 2543,
+   "sr": 24000
+  },
+  {
+   "scene": "2.1",
+   "n": 0,
+   "t0": 16.247,
+   "sp": 19.373,
+   "t1": 19.773,
+   "text": "First, pick one: I ride, or I run a workshop.",
+   "file": "vo/lines/2.1_0.wav",
+   "i0": 868,
+   "sr": 24000
+  },
+  {
+   "scene": "2.1",
+   "n": 1,
+   "t0": 19.773,
+   "sp": 21.671,
+   "t1": 22.071,
+   "text": "Then sign in with Google or email.",
+   "file": "vo/lines/2.1_1.wav",
+   "i0": 2146,
+   "sr": 24000
+  },
+  {
+   "scene": "2.2",
+   "n": 0,
+   "t0": 22.191,
+   "sp": 23.379,
+   "t1": 23.779,
+   "text": "There are four roles.",
+   "file": "vo/lines/2.2_0.wav",
+   "i0": 1605,
+   "sr": 24000
+  },
+  {
+   "scene": "2.2",
+   "n": 1,
+   "t0": 23.779,
+   "sp": 25.326,
+   "t1": 25.726,
+   "text": "The Rider owns the record.",
+   "file": "vo/lines/2.2_1.wav",
+   "i0": 1891,
+   "sr": 24000
+  },
+  {
+   "scene": "2.2",
+   "n": 2,
+   "t0": 25.726,
+   "sp": 27.797,
+   "t1": 28.197,
+   "text": "The Workshop owner runs the workshop.",
+   "file": "vo/lines/2.2_2.wav",
+   "i0": 1618,
+   "sr": 24000
+  },
+  {
+   "scene": "2.2",
+   "n": 3,
+   "t0": 28.197,
+   "sp": 29.684,
+   "t1": 30.084,
+   "text": "Staff save each service.",
+   "file": "vo/lines/2.2_3.wav",
+   "i0": 699,
+   "sr": 24000
+  },
+  {
+   "scene": "2.2",
+   "n": 4,
+   "t0": 30.084,
+   "sp": 32.934,
+   "t1": 33.334,
+   "text": "And the Admin approves workshops and checks ownership.",
+   "file": "vo/lines/2.2_4.wav",
+   "i0": 1095,
+   "sr": 24000
+  },
+  {
+   "scene": "3.1",
+   "n": 0,
+   "t0": 33.754,
+   "sp": 37.427,
+   "t1": 37.827,
+   "text": "A Rider finds their bike, then adds the odometer and plate.",
+   "file": "vo/lines/3.1_0.wav",
+   "i0": 2019,
+   "sr": 24000
+  },
+  {
+   "scene": "3.2",
+   "n": 0,
+   "t0": 37.947,
+   "sp": 41.054,
+   "t1": 41.454,
+   "text": "Two quick questions help RevLog tell you what's due.",
+   "file": "vo/lines/3.2_0.wav",
+   "i0": 995,
+   "sr": 24000
+  },
+  {
+   "scene": "3.2",
+   "n": 1,
+   "t0": 41.454,
+   "sp": 42.792,
+   "t1": 43.192,
+   "text": "A short guide follows.",
+   "file": "vo/lines/3.2_1.wav",
+   "i0": 2432,
+   "sr": 24000
+  },
+  {
+   "scene": "3.2",
+   "n": 2,
+   "t0": 43.192,
+   "sp": 45.85,
+   "t1": 46.25,
+   "text": "Then the Rider agrees to how their data is used.",
+   "file": "vo/lines/3.2_2.wav",
+   "i0": 1005,
+   "sr": 24000
+  },
+  {
+   "scene": "3.3",
+   "n": 0,
+   "t0": 46.37,
+   "sp": 48.069,
+   "t1": 48.469,
+   "text": "The bike is now in the Garage.",
+   "file": "vo/lines/3.3_0.wav",
+   "i0": 1593,
+   "sr": 24000
+  },
+  {
+   "scene": "3.3",
+   "n": 1,
+   "t0": 48.469,
+   "sp": 51.897,
+   "t1": 52.297,
+   "text": "Below it: Log service, Verify this bike, and What's due.",
+   "file": "vo/lines/3.3_1.wav",
+   "i0": 2404,
+   "sr": 24000
+  },
+  {
+   "scene": "3.4",
+   "n": 0,
+   "t0": 52.417,
+   "sp": 57.099,
+   "t1": 57.499,
+   "text": "Verify this bike asks for photos of your driving licence and geran.",
+   "file": "vo/lines/3.4_0.wav",
+   "i0": 909,
+   "sr": 24000
+  },
+  {
+   "scene": "3.4",
+   "n": 1,
+   "t0": 57.499,
+   "sp": 59.091,
+   "t1": 61.099,
+   "text": "They prove the bike is yours.",
+   "file": "vo/lines/3.4_1.wav",
+   "i0": 1295,
+   "sr": 24000
+  },
+  {
+   "scene": "3.4",
+   "n": 2,
+   "t0": 61.099,
+   "sp": 66.956,
+   "t1": 67.356,
+   "text": "Document photos are deleted after the check, or kept up to 14 days if checked by hand.",
+   "file": "vo/lines/3.4_2.wav",
+   "i0": 638,
+   "sr": 24000
+  },
+  {
+   "scene": "3.4",
+   "n": 3,
+   "t0": 67.356,
+   "sp": 72.849,
+   "t1": 73.249,
+   "text": "Once the bike is verified, My code becomes available. We'll see the Admin's check later.",
+   "file": "vo/lines/3.4_3.wav",
+   "i0": 784,
+   "sr": 24000
+  },
+  {
+   "scene": "3.5",
+   "n": 0,
+   "t0": 73.369,
+   "sp": 77.482,
+   "t1": 77.882,
+   "text": "What's due lists every item. Tap one to see how far it has left.",
+   "file": "vo/lines/3.5_0.wav",
+   "i0": 1207,
+   "sr": 24000
+  },
+  {
+   "scene": "3.6",
+   "n": 0,
+   "t0": 78.002,
+   "sp": 80.015,
+   "t1": 80.415,
+   "text": "Log service records your own work.",
+   "file": "vo/lines/3.6_0.wav",
+   "i0": 1346,
+   "sr": 24000
+  },
+  {
+   "scene": "3.6",
+   "n": 1,
+   "t0": 80.415,
+   "sp": 84.41,
+   "t1": 84.81,
+   "text": "It appears in History as a Rider entry, with its details.",
+   "file": "vo/lines/3.6_1.wav",
+   "i0": 981,
+   "sr": 24000
+  },
+  {
+   "scene": "3.7",
+   "n": 0,
+   "t0": 84.93,
+   "sp": 87.53,
+   "t1": 87.93,
+   "text": "Fuel tracks fill-ups and kilometres per litre.",
+   "file": "vo/lines/3.7_0.wav",
+   "i0": 1357,
+   "sr": 24000
+  },
+  {
+   "scene": "3.8",
+   "n": 0,
+   "t0": 88.05,
+   "sp": 91.445,
+   "t1": 91.845,
+   "text": "Plus a service schedule, renewal reminders, and spending.",
+   "file": "vo/lines/3.8_0.wav",
+   "i0": 908,
+   "sr": 24000
+  },
+  {
+   "scene": "4.1",
+   "n": 0,
+   "t0": 92.265,
+   "sp": 94.677,
+   "t1": 95.077,
+   "text": "A Workshop owner registers the workshop.",
+   "file": "vo/lines/4.1_0.wav",
+   "i0": 1649,
+   "sr": 24000
+  },
+  {
+   "scene": "4.1",
+   "n": 1,
+   "t0": 95.077,
+   "sp": 98.521,
+   "t1": 98.921,
+   "text": "RevLog checks every workshop before it can search bikes.",
+   "file": "vo/lines/4.1_1.wav",
+   "i0": 850,
+   "sr": 24000
+  },
+  {
+   "scene": "4.2",
+   "n": 0,
+   "t0": 99.041,
+   "sp": 100.346,
+   "t1": 100.746,
+   "text": "The Admin approves it,",
+   "file": "vo/lines/4.2_0.wav",
+   "i0": 1460,
+   "sr": 24000
+  },
+  {
+   "scene": "4.2",
+   "n": 1,
+   "t0": 100.746,
+   "sp": 102.981,
+   "t1": 103.381,
+   "text": "and now the workshop can search by plate.",
+   "file": "vo/lines/4.2_1.wav",
+   "i0": 1436,
+   "sr": 24000
+  },
+  {
+   "scene": "4.3",
+   "n": 0,
+   "t0": 103.501,
+   "sp": 107.254,
+   "t1": 107.654,
+   "text": "Workshop mode has Search, Customers, Packages and Team.",
+   "file": "vo/lines/4.3_0.wav",
+   "i0": 1197,
+   "sr": 24000
+  },
+  {
+   "scene": "4.3",
+   "n": 1,
+   "t0": 107.654,
+   "sp": 111.602,
+   "t1": 112.002,
+   "text": "Packages save the usual items and costs, ready in one tap.",
+   "file": "vo/lines/4.3_1.wav",
+   "i0": 826,
+   "sr": 24000
+  },
+  {
+   "scene": "4.4",
+   "n": 0,
+   "t0": 112.122,
+   "sp": 114.467,
+   "t1": 114.867,
+   "text": "Under Team, the owner adds Branches.",
+   "file": "vo/lines/4.4_0.wav",
+   "i0": 1983,
+   "sr": 24000
+  },
+  {
+   "scene": "4.4",
+   "n": 1,
+   "t0": 114.867,
+   "sp": 116.764,
+   "t1": 117.164,
+   "text": "The Free plan allows one Branch.",
+   "file": "vo/lines/4.4_1.wav",
+   "i0": 2155,
+   "sr": 24000
+  },
+  {
+   "scene": "4.5",
+   "n": 0,
+   "t0": 117.284,
+   "sp": 121.394,
+   "t1": 121.794,
+   "text": "The owner creates an invite code, and a Staff member joins with it.",
+   "file": "vo/lines/4.5_0.wav",
+   "i0": 1059,
+   "sr": 24000
+  },
+  {
+   "scene": "4.5",
+   "n": 1,
+   "t0": 121.794,
+   "sp": 124.506,
+   "t1": 124.906,
+   "text": "The Free plan limits how many staff you can add.",
+   "file": "vo/lines/4.5_1.wav",
+   "i0": 1002,
+   "sr": 24000
+  },
+  {
+   "scene": "5.1",
+   "n": 0,
+   "t0": 125.326,
+   "sp": 128.156,
+   "t1": 128.556,
+   "text": "Now, a workshop visit. Staff search the plate.",
+   "file": "vo/lines/5.1_0.wav",
+   "i0": 1218,
+   "sr": 24000
+  },
+  {
+   "scene": "5.1",
+   "n": 1,
+   "t0": 128.556,
+   "sp": 131.419,
+   "t1": 131.819,
+   "text": "The bike belongs to a Rider: Approval needed.",
+   "file": "vo/lines/5.1_1.wav",
+   "i0": 1255,
+   "sr": 24000
+  },
+  {
+   "scene": "5.2",
+   "n": 0,
+   "t0": 131.939,
+   "sp": 138.4,
+   "t1": 138.8,
+   "text": "The Rider opens My code: a QR and a 6-digit code, valid for ten minutes, used once.",
+   "file": "vo/lines/5.2_0.wav",
+   "i0": 1490,
+   "sr": 24000
+  },
+  {
+   "scene": "5.3",
+   "n": 0,
+   "t0": 138.92,
+   "sp": 139.902,
+   "t1": 142.12,
+   "text": "Staff scan it,",
+   "file": "vo/lines/5.3_0.wav",
+   "i0": 843,
+   "sr": 24000
+  },
+  {
+   "scene": "5.3",
+   "n": 1,
+   "t0": 142.12,
+   "sp": 143.787,
+   "t1": 144.187,
+   "text": "or type the code and tap Done.",
+   "file": "vo/lines/5.3_1.wav",
+   "i0": 1977,
+   "sr": 24000
+  },
+  {
+   "scene": "5.4",
+   "n": 0,
+   "t0": 144.307,
+   "sp": 148.368,
+   "t1": 148.768,
+   "text": "The bike opens, with the Rider's first name and the workshop's record.",
+   "file": "vo/lines/5.4_0.wav",
+   "i0": 1095,
+   "sr": 24000
+  },
+  {
+   "scene": "5.5",
+   "n": 0,
+   "t0": 148.888,
+   "sp": 153.146,
+   "t1": 153.546,
+   "text": "In the Rider's History, the workshop's record appears with the Workshop badge.",
+   "file": "vo/lines/5.5_0.wav",
+   "i0": 716,
+   "sr": 24000
+  },
+  {
+   "scene": "5.5",
+   "n": 1,
+   "t0": 153.546,
+   "sp": 154.947,
+   "t1": 155.347,
+   "text": "The Rider typed nothing.",
+   "file": "vo/lines/5.5_1.wav",
+   "i0": 1298,
+   "sr": 24000
+  },
+  {
+   "scene": "6.1",
+   "n": 0,
+   "t0": 155.767,
+   "sp": 160.618,
+   "t1": 161.018,
+   "text": "A plate not in the system? Staff tap Add this bike, with its brand and model.",
+   "file": "vo/lines/6.1_0.wav",
+   "i0": 1039,
+   "sr": 24000
+  },
+  {
+   "scene": "6.2",
+   "n": 0,
+   "t0": 161.138,
+   "sp": 164.56,
+   "t1": 164.96,
+   "text": "Then a package, the odometer and costs, and Save record.",
+   "file": "vo/lines/6.2_0.wav",
+   "i0": 1660,
+   "sr": 24000
+  },
+  {
+   "scene": "6.3",
+   "n": 0,
+   "t0": 165.08,
+   "sp": 169.196,
+   "t1": 169.596,
+   "text": "The record carries the workshop's stamp, and Staff show the Claim QR.",
+   "file": "vo/lines/6.3_0.wav",
+   "i0": 1191,
+   "sr": 24000
+  },
+  {
+   "scene": "6.4",
+   "n": 0,
+   "t0": 169.716,
+   "sp": 171.613,
+   "t1": 173.516,
+   "text": "The Rider scans the Claim QR,",
+   "file": "vo/lines/6.4_0.wav",
+   "i0": 1634,
+   "sr": 24000
+  },
+  {
+   "scene": "6.4",
+   "n": 1,
+   "t0": 173.516,
+   "sp": 175.108,
+   "t1": 176.716,
+   "text": "and photographs the geran.",
+   "file": "vo/lines/6.4_1.wav",
+   "i0": 1460,
+   "sr": 24000
+  },
+  {
+   "scene": "6.4",
+   "n": 2,
+   "t0": 176.716,
+   "sp": 181.157,
+   "t1": 181.557,
+   "text": "Once ownership is confirmed, the bike and the workshop's records are theirs.",
+   "file": "vo/lines/6.4_2.wav",
+   "i0": 1154,
+   "sr": 24000
+  },
+  {
+   "scene": "7.1",
+   "n": 0,
+   "t0": 181.977,
+   "sp": 186.619,
+   "t1": 187.019,
+   "text": "The Rider sees which workshops have access, and can remove one at any time.",
+   "file": "vo/lines/7.1_0.wav",
+   "i0": 1152,
+   "sr": 24000
+  },
+  {
+   "scene": "7.2",
+   "n": 0,
+   "t0": 187.139,
+   "sp": 188.466,
+   "t1": 188.866,
+   "text": "There are two ways to sell.",
+   "file": "vo/lines/7.2_0.wav",
+   "i0": 1710,
+   "sr": 24000
+  },
+  {
+   "scene": "7.2",
+   "n": 1,
+   "t0": 188.866,
+   "sp": 193.157,
+   "t1": 193.557,
+   "text": "Sell to a RevLog rider: the seller types the buyer's Receive code.",
+   "file": "vo/lines/7.2_1.wav",
+   "i0": 882,
+   "sr": 24000
+  },
+  {
+   "scene": "7.2",
+   "n": 2,
+   "t0": 193.557,
+   "sp": 198.209,
+   "t1": 198.609,
+   "text": "Or Transfer to a buyer: a locked file, opened with a 6-digit code.",
+   "file": "vo/lines/7.2_2.wav",
+   "i0": 1971,
+   "sr": 24000
+  },
+  {
+   "scene": "8.1",
+   "n": 0,
+   "t0": 199.029,
+   "sp": 202.12,
+   "t1": 202.52,
+   "text": "A bike checked by hand waits as not yet verified.",
+   "file": "vo/lines/8.1_0.wav",
+   "i0": 1489,
+   "sr": 24000
+  },
+  {
+   "scene": "8.2",
+   "n": 0,
+   "t0": 202.64,
+   "sp": 206.399,
+   "t1": 206.799,
+   "text": "The Admin opens the case, compares the names, and approves it.",
+   "file": "vo/lines/8.2_0.wav",
+   "i0": 1352,
+   "sr": 24000
+  },
+  {
+   "scene": "8.3",
+   "n": 0,
+   "t0": 206.919,
+   "sp": 210.648,
+   "t1": 212.119,
+   "text": "After approval, My code appears where Verify this bike was.",
+   "file": "vo/lines/8.3_0.wav",
+   "i0": 1119,
+   "sr": 24000
+  },
+  {
+   "scene": "8.4",
+   "n": 0,
+   "t0": 212.239,
+   "sp": 217.921,
+   "t1": 218.321,
+   "text": "The Admin also sets plans and limits: on the Free plan, 30 bikes and one Branch.",
+   "file": "vo/lines/8.4_0.wav",
+   "i0": 1422,
+   "sr": 24000
+  },
+  {
+   "scene": "9.1",
+   "n": 0,
+   "t0": 218.741,
+   "sp": 221.743,
+   "t1": 222.143,
+   "text": "A workshop sees your bike only after you approve it.",
+   "file": "vo/lines/9.1_0.wav",
+   "i0": 2031,
+   "sr": 24000
+  },
+  {
+   "scene": "9.2",
+   "n": 0,
+   "t0": 222.263,
+   "sp": 222.263,
+   "t1": 224.063,
+   "text": "",
+   "file": null,
+   "i0": null,
+   "sr": null
+  },
+  {
+   "scene": "9.3",
+   "n": 0,
+   "t0": 224.183,
+   "sp": 230.04,
+   "t1": 230.44,
+   "text": "Document photos are deleted after the check, or kept up to 14 days if checked by hand.",
+   "file": "vo/lines/9.3_0.wav",
+   "i0": 638,
+   "sr": 24000
+  },
+  {
+   "scene": "10.1",
+   "n": 0,
+   "t0": 230.86,
+   "sp": 236.956,
+   "t1": 237.356,
+   "text": "One record for every bike: owned by the Rider, added to by workshops, checked by the Admin.",
+   "file": "vo/lines/10.1_0.wav",
+   "i0": 940,
+   "sr": 24000
+  },
+  {
+   "scene": "10.1",
+   "n": 1,
+   "t0": 237.356,
+   "sp": 238.114,
+   "t1": 238.514,
+   "text": "RevLog.",
+   "file": "vo/lines/10.1_1.wav",
+   "i0": 581,
+   "sr": 24000
+  }
+ ],
+ "cues": [
+  [
+   0.72,
+   "whoosh"
+  ],
+  [
+   6.901000000000001,
+   "zoom"
+  ],
+  [
+   16.247,
+   "whoosh"
+  ],
+  [
+   17.587,
+   "tap"
+  ],
+  [
+   18.407,
+   "tap"
+  ],
+  [
+   20.433,
+   "tap"
+  ],
+  [
+   21.891,
+   "whoosh"
+  ],
+  [
+   22.011,
+   "whoosh"
+  ],
+  [
+   22.130999999999997,
+   "whoosh"
+  ],
+  [
+   22.250999999999998,
+   "whoosh"
+  ],
+  [
+   33.754,
+   "whoosh"
+  ],
+  [
+   36.054,
+   "zoom"
+  ],
+  [
+   41.154,
+   "whoosh"
+  ],
+  [
+   41.334,
+   "whoosh"
+  ],
+  [
+   41.514,
+   "whoosh"
+  ],
+  [
+   41.694,
+   "whoosh"
+  ],
+  [
+   42.892,
+   "whoosh"
+  ],
+  [
+   43.652,
+   "tap"
+  ],
+  [
+   49.089,
+   "tap"
+  ],
+  [
+   50.068999999999996,
+   "tap"
+  ],
+  [
+   51.509,
+   "tap"
+  ],
+  [
+   55.237,
+   "tap"
+  ],
+  [
+   56.277,
+   "tap"
+  ],
+  [
+   59.499,
+   "shutter"
+  ],
+  [
+   63.099,
+   "shutter"
+  ],
+  [
+   76.32900000000001,
+   "zoom"
+  ],
+  [
+   79.482,
+   "tap"
+  ],
+  [
+   81.89500000000001,
+   "tap"
+  ],
+  [
+   86.99000000000001,
+   "zoom"
+  ],
+  [
+   92.265,
+   "whoosh"
+  ],
+  [
+   92.985,
+   "tap"
+  ],
+  [
+   95.497,
+   "tap"
+  ],
+  [
+   99.421,
+   "tap"
+  ],
+  [
+   101.866,
+   "tap"
+  ],
+  [
+   104.281,
+   "tap"
+  ],
+  [
+   110.994,
+   "tap"
+  ],
+  [
+   112.272,
+   "tap"
+  ],
+  [
+   115.167,
+   "zoom"
+  ],
+  [
+   118.224,
+   "zoom"
+  ],
+  [
+   120.284,
+   "tap"
+  ],
+  [
+   125.326,
+   "whoosh"
+  ],
+  [
+   127.626,
+   "tap"
+  ],
+  [
+   129.856,
+   "tap"
+  ],
+  [
+   131.63899999999998,
+   "whoosh"
+  ],
+  [
+   134.059,
+   "tap"
+  ],
+  [
+   135.829,
+   "zoom"
+  ],
+  [
+   140.72,
+   "tap"
+  ],
+  [
+   142.27,
+   "tap"
+  ],
+  [
+   143.17,
+   "zoom"
+  ],
+  [
+   143.22,
+   "tap"
+  ],
+  [
+   146.447,
+   "tap"
+  ],
+  [
+   147.787,
+   "tap"
+  ],
+  [
+   152.40800000000002,
+   "tap"
+  ],
+  [
+   154.046,
+   "tap"
+  ],
+  [
+   155.767,
+   "whoosh"
+  ],
+  [
+   158.227,
+   "tap"
+  ],
+  [
+   161.288,
+   "tap"
+  ],
+  [
+   163.598,
+   "tap"
+  ],
+  [
+   166.32,
+   "tap"
+  ],
+  [
+   168.12,
+   "tap"
+  ],
+  [
+   172.556,
+   "tap"
+  ],
+  [
+   175.516,
+   "shutter"
+  ],
+  [
+   181.977,
+   "whoosh"
+  ],
+  [
+   183.697,
+   "tap"
+  ],
+  [
+   185.30700000000002,
+   "tap"
+  ],
+  [
+   186.839,
+   "whoosh"
+  ],
+  [
+   186.839,
+   "whoosh"
+  ],
+  [
+   187.039,
+   "whoosh"
+  ],
+  [
+   199.029,
+   "whoosh"
+  ],
+  [
+   201.249,
+   "tap"
+  ],
+  [
+   203.62,
+   "tap"
+  ],
+  [
+   204.9,
+   "zoom"
+  ],
+  [
+   205.85,
+   "tap"
+  ],
+  [
+   207.979,
+   "tap"
+  ],
+  [
+   215.219,
+   "zoom"
+  ],
+  [
+   218.741,
+   "whoosh"
+  ],
+  [
+   219.14100000000002,
+   "zoom"
+  ],
+  [
+   221.041,
+   "zoom"
+  ],
+  [
+   223.88299999999998,
+   "whoosh"
+  ],
+  [
+   230.86,
+   "whoosh"
+  ]
+ ],
+ "used": [
+  "admin-01-workshops-pending.png",
+  "admin-03-workshop-approved.png",
+  "admin-04-pending-owner-now-approved.png",
+  "admin-06-settings.png",
+  "admin-07-ownership-case-list.png",
+  "admin-08-ownership-case.png",
+  "admin-09-approve-confirm.png",
+  "owner-00-register-workshop.png",
+  "owner-01-workshop-home.png",
+  "owner-03-new-package.png",
+  "owner-03-packages.png",
+  "owner-04-add-branch.png",
+  "owner-04-team.png",
+  "owner-05-limit-reached-branch.png",
+  "owner-08-invite-code.png",
+  "pending-01-waiting-for-approval.png",
+  "rider-01-find-bike.png",
+  "rider-02-bike-details.png",
+  "rider-03-verify-bike.png",
+  "rider-04-quick-start.png",
+  "rider-05-guide-1.png",
+  "rider-05-guide-2.png",
+  "rider-05-guide-3.png",
+  "rider-05-guide-4.png",
+  "rider-06-consent.png",
+  "rider-07-garage-bottom.png",
+  "rider-07-garage-top.png",
+  "rider-08-item-detail.png",
+  "rider-08-whats-due-top.png",
+  "rider-09-log-service.png",
+  "rider-10-history.png",
+  "rider-11-record-detail.png",
+  "rider-12-renewals.png",
+  "rider-12-schedule.png",
+  "rider-12-spending.png",
+  "rider-13-fuel-add.png",
+  "rider-13-fuel.png",
+  "rider-19-claim-scan.png",
+  "rider-20-garage-waiting-check.png",
+  "rider-21-garage-verified.png",
+  "rider-22-my-code.png",
+  "rider-24-workshop-access-with-workshop.png",
+  "rider-25-receive-code.png",
+  "rider-26-remove-access-confirm.png",
+  "rider-27-access-removed.png",
+  "staff-01-search-plate.png",
+  "staff-02-not-in-system.png",
+  "staff-03-new-bike.png",
+  "staff-04-add-service-bottom.png",
+  "staff-04-add-service-top.png",
+  "staff-05-saved-record-bike-history.png",
+  "staff-06-claim-qr.png",
+  "staff-09-approval-needed.png",
+  "staff-10-join-workshop.png",
+  "staff-11-joined-workshop-home.png",
+  "staff-12-enter-code.png",
+  "staff-13-bike-opens-after-code.png",
+  "start-01-welcome.png",
+  "start-02-register.png",
+  "start-03-signin.png",
+  "transfer-02-sell-to-revlog-rider.png",
+  "transfer-03-transfer-to-buyer-verified.png",
+  "visit-01-rider-my-code.png",
+  "visit-03-rider-history-workshop-badge.png"
+ ],
+ "chapters": {
+  "Opening": [
+   0.72,
+   15.827
+  ],
+  "Four roles": [
+   16.247,
+   33.334
+  ],
+  "Rider": [
+   33.754,
+   91.845
+  ],
+  "Workshop setup": [
+   92.265,
+   124.906
+  ],
+  "Workshop visit": [
+   125.326,
+   155.347
+  ],
+  "New bike": [
+   155.767,
+   181.557
+  ],
+  "Rider controls": [
+   181.977,
+   198.609
+  ],
+  "Admin": [
+   199.029,
+   218.321
+  ],
+  "Privacy": [
+   218.741,
+   230.44
+  ],
+  "Closing": [
+   230.86,
+   238.514
+  ]
+ }
+}

@@ -1,0 +1,84 @@
+@font-face { font-family: "BC"; src: url("assets/fonts/BarlowCondensed-SemiBold.ttf"); font-weight: 600; }
+@font-face { font-family: "BCB"; src: url("assets/fonts/BarlowCondensed-Bold.ttf"); font-weight: 700; }
+@font-face { font-family: "IN"; src: url("assets/fonts/Inter-Medium.otf"); font-weight: 500; }
+@font-face { font-family: "INS"; src: url("assets/fonts/Inter-SemiBold.otf"); font-weight: 600; }
+@font-face { font-family: "INB"; src: url("assets/fonts/Inter-Bold.otf"); font-weight: 700; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1920px; height: 1080px; overflow: hidden; background: #0D0E10; }
+#root { position: absolute; inset: 0; overflow: hidden; background: #0D0E10;
+  background-image: linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+  background-size: 64px 64px; }
+#gfx { position: absolute; inset: 0; }
+#stage { position: absolute; left: 0; top: 0; width: 1920px; height: 930px; overflow: hidden; }
+/* phone frame: plain dark bezel, rounded; the screenshot sits in a rounded screen mask */
+.frame { position: absolute; background: #1B1C20; border: 2px solid #2E3035; padding: 10px; }
+.screen { position: relative; overflow: hidden; background: #0D0E10; }
+.shotl, .mockl { position: absolute; left: 0; top: 0; width: 585px; height: 1266px; }
+.shotl img { position: absolute; left: 0; top: 0; width: 585px; height: 1266px; }
+.ring { position: absolute; border: 4px solid; border-radius: 14px; }
+.tap { position: absolute; width: 80px; height: 80px; border: 4px solid; border-radius: 50%; }
+.flabel { position: absolute; left: 0; right: 0; top: -46px; margin: 0 auto; width: max-content; font-family: "BC"; font-size: 26px; letter-spacing: 2px;
+  border: 2px solid; border-radius: 8px; padding: 2px 14px; background: #0D0E10; }
+.conn { position: absolute; left: 829px; top: 470px; width: 262px; height: 3px; }
+.conn i { position: absolute; inset: 0; background: repeating-linear-gradient(90deg, #03DAC6 0 14px, transparent 14px 24px); }
+/* chrome */
+.eyebrow { position: absolute; left: 60px; top: 44px; font-family: "BC"; font-size: 30px; letter-spacing: 3px; color: #ECEDEF; }
+.eyebrow b { font-family: "BCB"; color: #9EA3AB; margin-right: 14px; }
+.rolechip { position: absolute; left: 60px; top: 92px; display: flex; align-items: center; gap: 12px; font-family: "INS"; font-size: 24px; border: 2px solid; border-radius: 10px; padding: 6px 16px; background: #17181B; }
+.rolechip i { width: 10px; height: 10px; border-radius: 50%; display: block; }
+.cap { position: absolute; left: 160px; width: 1600px; top: 948px; text-align: center; font-family: "IN"; font-size: 36px; line-height: 1.3; color: #ECEDEF; }
+.cap span { background: #17181B; padding: 6px 18px; border-radius: 10px; }
+.pbar { position: absolute; left: 0; top: 1014px; width: 1920px; height: 60px; }
+.pseg { position: absolute; top: 0; height: 60px; }
+.plab { font-family: "BC"; font-size: 20px; letter-spacing: 1.5px; color: #9EA3AB; text-transform: uppercase; white-space: nowrap; }
+.ptrack { position: absolute; left: 0; right: 0; top: 30px; height: 4px; background: #222428; border-radius: 2px; overflow: hidden; }
+.ptrack i { position: absolute; inset: 0; background: #ECEDEF; display: block; }
+/* chapter 7, closing, title card */
+.wdiv { position: absolute; left: 1140px; top: 110px; width: 2px; height: 780px; background: #2E3035; }
+.whead { position: absolute; top: 40px; width: 600px; text-align: center; font-family: "BCB"; font-size: 40px; color: #ECEDEF; letter-spacing: 1px; }
+.tcard { position: absolute; left: 0; width: 1920px; top: 360px; text-align: center; }
+.tc1 { font-family: "BCB"; font-size: 104px; color: #ECEDEF; letter-spacing: 1px; }
+.tc2 { font-family: "IN"; font-size: 34px; color: #9EA3AB; margin-top: 8px; }
+.crole { position: absolute; width: 300px; text-align: center; font-family: "BC"; font-size: 34px; letter-spacing: 2px; border: 2px solid; border-radius: 10px; padding: 4px 0; background: #17181B; }
+.cline { position: absolute; left: 0; top: 0; }
+.wordmark { position: absolute; left: 0; width: 1920px; top: 330px; text-align: center; font-family: "BCB"; font-size: 180px; color: #ECEDEF; letter-spacing: 2px; }
+.wmsub { position: absolute; left: 0; width: 1920px; top: 560px; text-align: center; font-family: "IN"; font-size: 36px; color: #9EA3AB; }
+/* camera mock-ups (drawn at the screenshot's 585x1266 size, scaled like a screenshot) */
+.cam { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, #2a2c31 0%, #16171a 60%, #0b0c0e 100%); }
+.cam-t { position: absolute; left: 0; right: 0; top: 70px; text-align: center; font-family: "INS"; font-size: 34px; color: #ECEDEF; }
+.cam-s { position: absolute; left: 0; right: 0; top: 122px; text-align: center; font-family: "IN"; font-size: 24px; color: #9EA3AB; }
+.cam-doc { position: absolute; left: 42px; top: 400px; width: 500px; height: 316px; }
+.doc { position: absolute; inset: 0; border-radius: 18px; background: #E9E6DC; color: #1d1d1f; overflow: hidden; box-shadow: 0 12px 30px rgba(0,0,0,.5); }
+.doc.ger { background: #E4E8EC; }
+.doc-h { background: #5d6470; color: #fff; font-family: "INB"; font-size: 22px; letter-spacing: 2px; padding: 14px 20px; }
+.doc-b { display: flex; gap: 22px; padding: 22px; }
+.doc-ph { width: 110px; height: 140px; border-radius: 8px; background: #b9b5a8; }
+.doc-f, .doc-f2 { font-family: "INS"; font-size: 22px; line-height: 1.25; }
+.doc-f2 { padding: 22px; }
+.doc-f div, .doc-f2 div { margin-bottom: 12px; }
+.doc-f span, .doc-f2 span { display: block; font-family: "IN"; font-size: 15px; letter-spacing: 1.5px; color: #5d6470; }
+.doc-wm { position: absolute; right: 18px; bottom: 14px; font-family: "BCB"; font-size: 40px; letter-spacing: 6px; color: #B42318; border: 3px solid #B42318; padding: 0 12px; border-radius: 6px; transform: rotate(-8deg); }
+.brk { position: absolute; left: 22px; top: 380px; width: 540px; height: 356px; }
+.brk.sq { left: 112px; top: 360px; width: 360px; height: 360px; }
+.brk i { position: absolute; width: 56px; height: 56px; border: 0 solid #ECEDEF; }
+.brk .b1 { left: 0; top: 0; border-left-width: 6px; border-top-width: 6px; border-top-left-radius: 14px; }
+.brk .b2 { right: 0; top: 0; border-right-width: 6px; border-top-width: 6px; border-top-right-radius: 14px; }
+.brk .b3 { left: 0; bottom: 0; border-left-width: 6px; border-bottom-width: 6px; border-bottom-left-radius: 14px; }
+.brk .b4 { right: 0; bottom: 0; border-right-width: 6px; border-bottom-width: 6px; border-bottom-right-radius: 14px; }
+.shutter { position: absolute; left: 242px; top: 1080px; width: 100px; height: 100px; border-radius: 50%; background: #ECEDEF; border: 8px solid #6a6f77; }
+.flash { position: absolute; inset: 0; background: #ECEDEF; }
+.chk .cam-doc { top: 360px; }
+.prog { position: absolute; left: 92px; top: 820px; width: 400px; height: 8px; border-radius: 4px; background: #222428; overflow: hidden; }
+.prog i { position: absolute; left: 0; top: 0; width: 140px; height: 8px; border-radius: 4px; background: #03DAC6; display: block; }
+.cam-phone { position: absolute; left: 132px; top: 300px; width: 320px; height: 500px; border-radius: 34px; background: #17181B; border: 6px solid #2E3035; }
+.cp-t { position: absolute; left: 0; right: 0; top: 36px; text-align: center; font-family: "INS"; font-size: 22px; color: #ECEDEF; }
+.cam-phone img { position: absolute; left: 50px; top: 110px; width: 208px; height: 208px; border-radius: 10px; }
+.scanln { position: absolute; left: 120px; top: 380px; width: 344px; height: 4px; background: #03DAC6; }
+.readok { position: absolute; left: 0; right: 0; top: 860px; text-align: center; font-family: "INS"; font-size: 30px; color: #03DAC6; }
+.typeopt { position: absolute; left: 0; right: 0; top: 1060px; text-align: center; font-family: "IN"; font-size: 26px; color: #ECEDEF; text-decoration: underline; text-underline-offset: 6px; }
+.sample { position: absolute; right: 28px; top: 26px; font-family: "INB"; font-size: 24px; letter-spacing: 2px; color: #0D0E10; background: #ECEDEF; border-radius: 8px; padding: 6px 14px; text-transform: uppercase; }
+.crop { position: absolute; left: 0; top: 0; width: 585px; overflow: hidden; }
+.crop img { position: absolute; left: 0; top: 0; width: 585px; height: 1266px; }
+.callout { position: absolute; border: 2px solid; border-radius: 16px; background: #17181B; padding: 6px; box-shadow: 0 14px 40px rgba(0,0,0,.45); }
+.cwin { position: relative; overflow: hidden; border-radius: 10px; }
+.cwin img { position: absolute; }

@@ -1,0 +1,14 @@
+src/
+renders/
+vo/
+music/
+project/assets/shots/
+project/assets/*.wav
+project/.hyperframes/
+video/*.mp4
+sheets/snap*/
+sheets/*.png
+__pycache__/
+*.log
+sheets/
+ocr.json

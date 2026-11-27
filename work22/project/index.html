@@ -1,0 +1,1542 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>@font-face { font-family: "BC"; src: url("assets/fonts/BarlowCondensed-SemiBold.ttf"); font-weight: 600; }
+@font-face { font-family: "BCB"; src: url("assets/fonts/BarlowCondensed-Bold.ttf"); font-weight: 700; }
+@font-face { font-family: "IN"; src: url("assets/fonts/Inter-Medium.otf"); font-weight: 500; }
+@font-face { font-family: "INS"; src: url("assets/fonts/Inter-SemiBold.otf"); font-weight: 600; }
+@font-face { font-family: "INB"; src: url("assets/fonts/Inter-Bold.otf"); font-weight: 700; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1920px; height: 1080px; overflow: hidden; background: #0D0E10; }
+#root { position: absolute; inset: 0; overflow: hidden; background: #0D0E10;
+  background-image: linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+  background-size: 64px 64px; }
+#gfx { position: absolute; inset: 0; }
+#stage { position: absolute; left: 0; top: 0; width: 1920px; height: 930px; overflow: hidden; }
+/* phone frame: plain dark bezel, rounded; the screenshot sits in a rounded screen mask */
+.frame { position: absolute; background: #1B1C20; border: 2px solid #2E3035; padding: 10px; }
+.screen { position: relative; overflow: hidden; background: #0D0E10; }
+.shotl, .mockl { position: absolute; left: 0; top: 0; width: 585px; height: 1266px; }
+.shotl img { position: absolute; left: 0; top: 0; width: 585px; height: 1266px; }
+.ring { position: absolute; border: 4px solid; border-radius: 14px; }
+.tap { position: absolute; width: 80px; height: 80px; border: 4px solid; border-radius: 50%; }
+.flabel { position: absolute; left: 0; right: 0; top: -46px; margin: 0 auto; width: max-content; font-family: "BC"; font-size: 26px; letter-spacing: 2px;
+  border: 2px solid; border-radius: 8px; padding: 2px 14px; background: #0D0E10; }
+.conn { position: absolute; left: 829px; top: 470px; width: 262px; height: 3px; }
+.conn i { position: absolute; inset: 0; background: repeating-linear-gradient(90deg, #03DAC6 0 14px, transparent 14px 24px); }
+/* chrome */
+.eyebrow { position: absolute; left: 60px; top: 44px; font-family: "BC"; font-size: 30px; letter-spacing: 3px; color: #ECEDEF; }
+.eyebrow b { font-family: "BCB"; color: #9EA3AB; margin-right: 14px; }
+.rolechip { position: absolute; left: 60px; top: 92px; display: flex; align-items: center; gap: 12px; font-family: "INS"; font-size: 24px; border: 2px solid; border-radius: 10px; padding: 6px 16px; background: #17181B; }
+.rolechip i { width: 10px; height: 10px; border-radius: 50%; display: block; }
+.cap { position: absolute; left: 160px; width: 1600px; top: 948px; text-align: center; font-family: "IN"; font-size: 36px; line-height: 1.3; color: #ECEDEF; }
+.cap span { background: #17181B; padding: 6px 18px; border-radius: 10px; }
+.pbar { position: absolute; left: 0; top: 1014px; width: 1920px; height: 60px; }
+.pseg { position: absolute; top: 0; height: 60px; }
+.plab { font-family: "BC"; font-size: 20px; letter-spacing: 1.5px; color: #9EA3AB; text-transform: uppercase; white-space: nowrap; }
+.ptrack { position: absolute; left: 0; right: 0; top: 30px; height: 4px; background: #222428; border-radius: 2px; overflow: hidden; }
+.ptrack i { position: absolute; inset: 0; background: #ECEDEF; display: block; }
+/* chapter 7, closing, title card */
+.wdiv { position: absolute; left: 1140px; top: 110px; width: 2px; height: 780px; background: #2E3035; }
+.whead { position: absolute; top: 40px; width: 600px; text-align: center; font-family: "BCB"; font-size: 40px; color: #ECEDEF; letter-spacing: 1px; }
+.tcard { position: absolute; left: 0; width: 1920px; top: 360px; text-align: center; }
+.tc1 { font-family: "BCB"; font-size: 104px; color: #ECEDEF; letter-spacing: 1px; }
+.tc2 { font-family: "IN"; font-size: 34px; color: #9EA3AB; margin-top: 8px; }
+.crole { position: absolute; width: 300px; text-align: center; font-family: "BC"; font-size: 34px; letter-spacing: 2px; border: 2px solid; border-radius: 10px; padding: 4px 0; background: #17181B; }
+.cline { position: absolute; left: 0; top: 0; }
+.wordmark { position: absolute; left: 0; width: 1920px; top: 330px; text-align: center; font-family: "BCB"; font-size: 180px; color: #ECEDEF; letter-spacing: 2px; }
+.wmsub { position: absolute; left: 0; width: 1920px; top: 560px; text-align: center; font-family: "IN"; font-size: 36px; color: #9EA3AB; }
+/* camera mock-ups (drawn at the screenshot's 585x1266 size, scaled like a screenshot) */
+.cam { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, #2a2c31 0%, #16171a 60%, #0b0c0e 100%); }
+.cam-t { position: absolute; left: 0; right: 0; top: 70px; text-align: center; font-family: "INS"; font-size: 34px; color: #ECEDEF; }
+.cam-s { position: absolute; left: 0; right: 0; top: 122px; text-align: center; font-family: "IN"; font-size: 24px; color: #9EA3AB; }
+.cam-doc { position: absolute; left: 42px; top: 400px; width: 500px; height: 316px; }
+.doc { position: absolute; inset: 0; border-radius: 18px; background: #E9E6DC; color: #1d1d1f; overflow: hidden; box-shadow: 0 12px 30px rgba(0,0,0,.5); }
+.doc.ger { background: #E4E8EC; }
+.doc-h { background: #5d6470; color: #fff; font-family: "INB"; font-size: 22px; letter-spacing: 2px; padding: 14px 20px; }
+.doc-b { display: flex; gap: 22px; padding: 22px; }
+.doc-ph { width: 110px; height: 140px; border-radius: 8px; background: #b9b5a8; }
+.doc-f, .doc-f2 { font-family: "INS"; font-size: 22px; line-height: 1.25; }
+.doc-f2 { padding: 22px; }
+.doc-f div, .doc-f2 div { margin-bottom: 12px; }
+.doc-f span, .doc-f2 span { display: block; font-family: "IN"; font-size: 15px; letter-spacing: 1.5px; color: #5d6470; }
+.doc-wm { position: absolute; right: 18px; bottom: 14px; font-family: "BCB"; font-size: 40px; letter-spacing: 6px; color: #B42318; border: 3px solid #B42318; padding: 0 12px; border-radius: 6px; transform: rotate(-8deg); }
+.brk { position: absolute; left: 22px; top: 380px; width: 540px; height: 356px; }
+.brk.sq { left: 112px; top: 360px; width: 360px; height: 360px; }
+.brk i { position: absolute; width: 56px; height: 56px; border: 0 solid #ECEDEF; }
+.brk .b1 { left: 0; top: 0; border-left-width: 6px; border-top-width: 6px; border-top-left-radius: 14px; }
+.brk .b2 { right: 0; top: 0; border-right-width: 6px; border-top-width: 6px; border-top-right-radius: 14px; }
+.brk .b3 { left: 0; bottom: 0; border-left-width: 6px; border-bottom-width: 6px; border-bottom-left-radius: 14px; }
+.brk .b4 { right: 0; bottom: 0; border-right-width: 6px; border-bottom-width: 6px; border-bottom-right-radius: 14px; }
+.shutter { position: absolute; left: 242px; top: 1080px; width: 100px; height: 100px; border-radius: 50%; background: #ECEDEF; border: 8px solid #6a6f77; }
+.flash { position: absolute; inset: 0; background: #ECEDEF; }
+.chk .cam-doc { top: 360px; }
+.prog { position: absolute; left: 92px; top: 820px; width: 400px; height: 8px; border-radius: 4px; background: #222428; overflow: hidden; }
+.prog i { position: absolute; left: 0; top: 0; width: 140px; height: 8px; border-radius: 4px; background: #03DAC6; display: block; }
+.cam-phone { position: absolute; left: 132px; top: 300px; width: 320px; height: 500px; border-radius: 34px; background: #17181B; border: 6px solid #2E3035; }
+.cp-t { position: absolute; left: 0; right: 0; top: 36px; text-align: center; font-family: "INS"; font-size: 22px; color: #ECEDEF; }
+.cam-phone img { position: absolute; left: 50px; top: 110px; width: 208px; height: 208px; border-radius: 10px; }
+.scanln { position: absolute; left: 120px; top: 380px; width: 344px; height: 4px; background: #03DAC6; }
+.readok { position: absolute; left: 0; right: 0; top: 860px; text-align: center; font-family: "INS"; font-size: 30px; color: #03DAC6; }
+.typeopt { position: absolute; left: 0; right: 0; top: 1060px; text-align: center; font-family: "IN"; font-size: 26px; color: #ECEDEF; text-decoration: underline; text-underline-offset: 6px; }
+.sample { position: absolute; right: 28px; top: 26px; font-family: "INB"; font-size: 24px; letter-spacing: 2px; color: #0D0E10; background: #ECEDEF; border-radius: 8px; padding: 6px 14px; text-transform: uppercase; }
+.crop { position: absolute; left: 0; top: 0; width: 585px; overflow: hidden; }
+.crop img { position: absolute; left: 0; top: 0; width: 585px; height: 1266px; }
+.callout { position: absolute; border: 2px solid; border-radius: 16px; background: #17181B; padding: 6px; box-shadow: 0 14px 40px rgba(0,0,0,.45); }
+.cwin { position: relative; overflow: hidden; border-radius: 10px; }
+.cwin img { position: absolute; }
+</style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-width="1920" data-height="1080" data-start="0" data-duration="240.014">
+      <div id="gfx" class="clip" data-start="0" data-duration="240.014" data-track-index="1">
+        <div id="stage">
+        <div id="fr1" class="frame" style="left:760.8px;top:46.0px;width:398.4px;height:834.24px;border-radius:46.0px"><div id="fr1s" class="screen" style="width:374.4px;height:810.24px;border-radius:36.0px">
+        <div id="ly2" class="shotl"><img src="assets/shots/start-01-welcome.png" alt="" width="585" height="1266"></div>
+        <div id="ly3" class="shotl"><img src="assets/shots/start-01-welcome.png" alt="" width="585" height="1266"></div>
+        <div id="ly6" class="shotl"><img src="assets/shots/start-01-welcome.png" alt="" width="585" height="1266"></div>
+        <div id="ly7" class="shotl"><img src="assets/shots/start-01-welcome.png" alt="" width="585" height="1266"></div>
+        </div></div>
+        <div id="co4" class="callout" style="left:1250.0px;top:571.829px;width:616.0px;height:153.143px;border-color:#03DAC6"><div class="cwin" style="width:600.0px;height:137.143px"><img src="assets/shots/start-01-welcome.png" alt="" style="left:-34.286px;top:-971.429px;width:668.571px;height:1446.857px"></div></div>
+        <svg id="cl5" class="cline" width="1920" height="930"><rect x="789.0" y="599.0" width="342.0" height="82.8" rx="8" fill="none" stroke="#03DAC6" stroke-width="2.5"/><line x1="1131.0" y1="640.4" x2="1250.0" y2="648.4" stroke="#03DAC6" stroke-width="2"/></svg>
+        <div id="fr8" class="frame" style="left:760.8px;top:46.0px;width:398.4px;height:834.24px;border-radius:46.0px"><div id="fr8s" class="screen" style="width:374.4px;height:810.24px;border-radius:36.0px">
+        <div id="ly9" class="shotl"><img src="assets/shots/start-02-register.png" alt="" width="585" height="1266"><div id="rg10" class="ring" style="left:28px;top:278px;width:529px;height:243px;border-color:#03DAC6"></div><div id="tp11" class="tap" style="left:252.5px;top:359.5px;border-color:#03DAC6"></div><div id="rg12" class="ring" style="left:28px;top:526px;width:529px;height:344px;border-color:#03DAC6"></div><div id="tp13" class="tap" style="left:252.5px;top:658.0px;border-color:#03DAC6"></div></div>
+        <div id="ly14" class="shotl"><img src="assets/shots/start-03-signin.png" alt="" width="585" height="1266"><div id="rg15" class="ring" style="left:26px;top:880px;width:533px;height:105px;border-color:#03DAC6"></div><div id="tp16" class="tap" style="left:252.5px;top:892.5px;border-color:#03DAC6"></div></div>
+        </div></div>
+        <div id="fr17" class="frame" style="left:189.3px;top:70.0px;width:281.4px;height:581.04px;border-radius:31.625px"><div class="flabel" style="color:#03DAC6;border-color:#03DAC6">RIDER</div><div id="fr17s" class="screen" style="width:257.4px;height:557.04px;border-radius:24.75px">
+        <div id="ly18" class="shotl"><img src="assets/shots/rider-07-garage-top.png" alt="" width="585" height="1266"></div>
+        </div></div>
+        <div id="fr19" class="frame" style="left:609.3px;top:70.0px;width:281.4px;height:581.04px;border-radius:31.625px"><div class="flabel" style="color:#BB86FC;border-color:#BB86FC">WORKSHOP OWNER</div><div id="fr19s" class="screen" style="width:257.4px;height:557.04px;border-radius:24.75px">
+        <div id="ly20" class="shotl"><img src="assets/shots/owner-01-workshop-home.png" alt="" width="585" height="1266"></div>
+        </div></div>
+        <div id="fr21" class="frame" style="left:1029.3px;top:70.0px;width:281.4px;height:581.04px;border-radius:31.625px"><div class="flabel" style="color:#6CB4F0;border-color:#6CB4F0">STAFF</div><div id="fr21s" class="screen" style="width:257.4px;height:557.04px;border-radius:24.75px">
+        <div id="ly22" class="shotl"><img src="assets/shots/staff-05-saved-record-bike-history.png" alt="" width="585" height="1266"></div>
+        </div></div>
+        <div id="fr23" class="frame" style="left:1449.3px;top:70.0px;width:281.4px;height:581.04px;border-radius:31.625px"><div class="flabel" style="color:#D3D6DC;border-color:#D3D6DC">ADMIN</div><div id="fr23s" class="screen" style="width:257.4px;height:557.04px;border-radius:24.75px">
+        <div id="ly24" class="shotl"><img src="assets/shots/admin-01-workshops-pending.png" alt="" width="585" height="1266"></div>
+        </div></div>
+        <div id="fr25" class="frame" style="left:760.8px;top:46.0px;width:398.4px;height:834.24px;border-radius:46.0px"><div id="fr25s" class="screen" style="width:374.4px;height:810.24px;border-radius:36.0px">
+        <div id="ly26" class="shotl"><img src="assets/shots/rider-01-find-bike.png" alt="" width="585" height="1266"></div>
+        <div id="ly27" class="shotl"><img src="assets/shots/rider-02-bike-details.png" alt="" width="585" height="1266"></div>
+        <div id="ly30" class="shotl"><img src="assets/shots/rider-04-quick-start.png" alt="" width="585" height="1266"></div>
+        </div></div>
+        <div id="co28" class="callout" style="left:1250.0px;top:298.367px;width:616.0px;height:335.266px;border-color:#03DAC6"><div class="cwin" style="width:600.0px;height:319.266px"><img src="assets/shots/rider-02-bike-details.png" alt="" style="left:-22.018px;top:-528.44px;width:644.037px;height:1393.761px"></div></div>
+        <svg id="cl29" class="cline" width="1920" height="930"><rect x="782.6" y="362.2" width="354.8" height="191.6" rx="8" fill="none" stroke="#03DAC6" stroke-width="2.5"/><line x1="1137.4" y1="458.0" x2="1250.0" y2="466.0" stroke="#03DAC6" stroke-width="2"/></svg>
+        <div id="fr31" class="frame" style="left:189.3px;top:70.0px;width:281.4px;height:581.04px;border-radius:31.625px"><div id="fr31s" class="screen" style="width:257.4px;height:557.04px;border-radius:24.75px">
+        <div id="ly32" class="shotl"><img src="assets/shots/rider-05-guide-1.png" alt="" width="585" height="1266"></div>
+        </div></div>
+        <div id="fr33" class="frame" style="left:609.3px;top:70.0px;width:281.4px;height:581.04px;border-radius:31.625px"><div id="fr33s" class="screen" style="width:257.4px;height:557.04px;border-radius:24.75px">
+        <div id="ly34" class="shotl"><img src="assets/shots/rider-05-guide-2.png" alt="" width="585" height="1266"></div>
+        </div></div>
+        <div id="fr35" class="frame" style="left:1029.3px;top:70.0px;width:281.4px;height:581.04px;border-radius:31.625px"><div id="fr35s" class="screen" style="width:257.4px;height:557.04px;border-radius:24.75px">
+        <div id="ly36" class="shotl"><img src="assets/shots/rider-05-guide-3.png" alt="" width="585" height="1266"></div>
+        </div></div>
+        <div id="fr37" class="frame" style="left:1449.3px;top:70.0px;width:281.4px;height:581.04px;border-radius:31.625px"><div id="fr37s" class="screen" style="width:257.4px;height:557.04px;border-radius:24.75px">
+        <div id="ly38" class="shotl"><img src="assets/shots/rider-05-guide-4.png" alt="" width="585" height="1266"></div>
+        </div></div>
+        <div id="fr39" class="frame" style="left:760.8px;top:46.0px;width:398.4px;height:834.24px;border-radius:46.0px"><div id="fr39s" class="screen" style="width:374.4px;height:810.24px;border-radius:36.0px">
+        <div id="ly40" class="shotl"><img src="assets/shots/rider-06-consent.png" alt="" width="585" height="1266"><div id="rg41" class="ring" style="left:14px;top:1000px;width:557px;height:90px;border-color:#03DAC6"></div><div id="tp42" class="tap" style="left:252.5px;top:1005.0px;border-color:#03DAC6"></div></div>
+        <div id="ly43" class="shotl"><img src="assets/shots/rider-07-garage-top.png" alt="" width="585" height="1266"></div>
+        <div id="ly44" class="shotl"><img src="assets/shots/rider-07-garage-bottom.png" alt="" width="585" height="1266"><div id="rg45" class="ring" style="left:14px;top:385px;width:557px;height:91px;border-color:#03DAC6"></div><div id="tp46" class="tap" style="left:252.5px;top:390.5px;border-color:#03DAC6"></div><div id="rg47" class="ring" style="left:14px;top:471px;width:557px;height:91px;border-color:#03DAC6"></div><div id="tp48" class="tap" style="left:252.5px;top:476.5px;border-color:#03DAC6"></div><div id="rg49" class="ring" style="left:15px;top:588px;width:183px;height:42px;border-color:#03DAC6"></div><div id="tp50" class="tap" style="left:66.5px;top:569.0px;border-color:#03DAC6"></div></div>
+        <div id="ly51" class="shotl"><div class="crop" style="height:585px"><img src="assets/shots/rider-03-verify-bike.png" alt="" width="585" height="1266"></div><div id="rg52" class="ring" style="left:30px;top:340px;width:525px;height:110px;border-color:#03DAC6"></div><div id="tp53" class="tap" style="left:252.5px;top:355.0px;border-color:#03DAC6"></div><div id="rg54" class="ring" style="left:30px;top:468px;width:525px;height:112px;border-color:#03DAC6"></div><div id="tp55" class="tap" style="left:252.5px;top:484.0px;border-color:#03DAC6"></div></div>
+        <div id="ly56" class="mockl" style="width:585px;height:1266px"><div class="cam"><div class="cam-t">Your driving licence</div><div class="cam-s">Fit the card inside the frame</div><div id="ly56md" class="cam-doc"><div class="doc lic"><div class="doc-h">DRIVING LICENCE</div><div class="doc-b"><div class="doc-ph"></div><div class="doc-f"><div><span>NAME</span>AHMAD BIN TEST</div><div><span>CLASS</span>B2</div><div><span>NO.</span>0000 0000</div></div></div><div class="doc-wm">SAMPLE</div></div></div><div class="brk"><i class="b1"></i><i class="b2"></i><i class="b3"></i><i class="b4"></i></div><div id="ly56msh" class="shutter"></div><div id="ly56mfl" class="flash"></div></div><div class="sample">Sample</div></div>
+        <div id="ly57" class="mockl" style="width:585px;height:1266px"><div class="cam"><div class="cam-t">The bike's geran</div><div class="cam-s">Fit the card inside the frame</div><div id="ly57md" class="cam-doc"><div class="doc ger"><div class="doc-h">VEHICLE REGISTRATION (GERAN)</div><div class="doc-f2"><div><span>PLATE</span>TEST1234</div><div><span>OWNER</span>AHMAD BIN TEST</div><div><span>MAKE / MODEL</span>Yamaha Y15ZR</div></div><div class="doc-wm">SAMPLE</div></div></div><div class="brk"><i class="b1"></i><i class="b2"></i><i class="b3"></i><i class="b4"></i></div><div id="ly57msh" class="shutter"></div><div id="ly57mfl" class="flash"></div></div><div class="sample">Sample</div></div>
+        <div id="ly58" class="mockl" style="width:585px;height:1266px"><div class="cam chk"><div class="cam-t">Checking</div><div class="cam-s">Reading the name and plate</div><div id="ly58md" class="cam-doc"><div class="doc ger"><div class="doc-h">VEHICLE REGISTRATION (GERAN)</div><div class="doc-f2"><div><span>PLATE</span>TEST1234</div><div><span>OWNER</span>AHMAD BIN TEST</div><div><span>MAKE / MODEL</span>Yamaha Y15ZR</div></div><div class="doc-wm">SAMPLE</div></div></div><div class="prog"><i id="ly58mp"></i></div></div><div class="sample">Sample</div></div>
+        <div id="ly59" class="shotl"><img src="assets/shots/rider-08-whats-due-top.png" alt="" width="585" height="1266"></div>
+        <div id="ly60" class="shotl"><img src="assets/shots/rider-08-item-detail.png" alt="" width="585" height="1266"></div>
+        <div id="ly63" class="shotl"><img src="assets/shots/rider-09-log-service.png" alt="" width="585" height="1266"><div id="rg64" class="ring" style="left:14px;top:216px;width:202px;height:91px;border-color:#03DAC6"></div><div id="tp65" class="tap" style="left:75.0px;top:221.5px;border-color:#03DAC6"></div></div>
+        <div id="ly66" class="shotl"><img src="assets/shots/rider-10-history.png" alt="" width="585" height="1266"><div id="rg67" class="ring" style="left:69px;top:671px;width:121px;height:39px;border-color:#03DAC6"></div><div id="tp68" class="tap" style="left:89.5px;top:650.5px;border-color:#03DAC6"></div></div>
+        <div id="ly69" class="shotl"><img src="assets/shots/rider-11-record-detail.png" alt="" width="585" height="1266"></div>
+        <div id="ly70" class="shotl"><img src="assets/shots/rider-13-fuel-add.png" alt="" width="585" height="1266"></div>
+        <div id="ly71" class="shotl"><img src="assets/shots/rider-13-fuel.png" alt="" width="585" height="1266"></div>
+        <div id="ly74" class="shotl"><img src="assets/shots/rider-12-schedule.png" alt="" width="585" height="1266"></div>
+        <div id="ly75" class="shotl"><img src="assets/shots/rider-12-renewals.png" alt="" width="585" height="1266"></div>
+        <div id="ly76" class="shotl"><img src="assets/shots/rider-12-spending.png" alt="" width="585" height="1266"></div>
+        </div></div>
+        <div id="co61" class="callout" style="left:1250.0px;top:97.589px;width:616.0px;height:340.022px;border-color:#03DAC6"><div class="cwin" style="width:600.0px;height:324.022px"><img src="assets/shots/rider-08-item-detail.png" alt="" style="left:-26.816px;top:-189.944px;width:653.631px;height:1414.525px"></div></div>
+        <svg id="cl62" class="cline" width="1920" height="930"><rect x="785.16" y="163.8" width="349.68" height="191.6" rx="8" fill="none" stroke="#03DAC6" stroke-width="2.5"/><line x1="1134.84" y1="259.6" x2="1250.0" y2="267.6" stroke="#03DAC6" stroke-width="2"/></svg>
+        <div id="co72" class="callout" style="left:1250.0px;top:60.0px;width:529.0px;height:394.0px;border-color:#03DAC6"><div class="cwin" style="width:513.0px;height:378.0px"><img src="assets/shots/rider-13-fuel.png" alt="" style="left:-270.0px;top:-342.0px;width:1053.0px;height:2278.8px"></div></div>
+        <svg id="cl73" class="cline" width="1920" height="930"><rect x="865.8" y="176.6" width="188.4" height="140.4" rx="8" fill="none" stroke="#03DAC6" stroke-width="2.5"/><line x1="1054.2" y1="246.8" x2="1250.0" y2="257.0" stroke="#03DAC6" stroke-width="2"/></svg>
+        <div id="fr77" class="frame" style="left:760.8px;top:46.0px;width:398.4px;height:834.24px;border-radius:46.0px"><div id="fr77s" class="screen" style="width:374.4px;height:810.24px;border-radius:36.0px">
+        <div id="ly78" class="shotl"><img src="assets/shots/owner-00-register-workshop.png" alt="" width="585" height="1266"><div id="rg79" class="ring" style="left:45px;top:339px;width:214px;height:43px;border-color:#BB86FC"></div><div id="tp80" class="tap" style="left:112.0px;top:320.5px;border-color:#BB86FC"></div></div>
+        <div id="ly81" class="shotl"><img src="assets/shots/pending-01-waiting-for-approval.png" alt="" width="585" height="1266"><div id="rg82" class="ring" style="left:86px;top:132px;width:267px;height:45px;border-color:#BB86FC"></div><div id="tp83" class="tap" style="left:179.5px;top:114.5px;border-color:#BB86FC"></div></div>
+        <div id="ly84" class="shotl"><img src="assets/shots/admin-01-workshops-pending.png" alt="" width="585" height="1266"><div id="rg85" class="ring" style="left:166px;top:254px;width:384px;height:92px;border-color:#BB86FC"></div><div id="tp86" class="tap" style="left:318.0px;top:260.0px;border-color:#BB86FC"></div></div>
+        <div id="ly87" class="shotl"><img src="assets/shots/admin-03-workshop-approved.png" alt="" width="585" height="1266"></div>
+        <div id="ly88" class="shotl"><img src="assets/shots/admin-04-pending-owner-now-approved.png" alt="" width="585" height="1266"><div id="rg89" class="ring" style="left:14px;top:202px;width:557px;height:91px;border-color:#BB86FC"></div><div id="tp90" class="tap" style="left:252.5px;top:207.5px;border-color:#BB86FC"></div></div>
+        <div id="ly91" class="shotl"><img src="assets/shots/owner-01-workshop-home.png" alt="" width="585" height="1266"><div id="rg92" class="ring" style="left:-10px;top:1180px;width:605px;height:96px;border-color:#BB86FC"></div><div id="tp93" class="tap" style="left:252.5px;top:1188.0px;border-color:#BB86FC"></div></div>
+        <div id="ly94" class="shotl"><img src="assets/shots/owner-03-new-package.png" alt="" width="585" height="1266"></div>
+        <div id="ly95" class="shotl"><img src="assets/shots/owner-03-packages.png" alt="" width="585" height="1266"><div id="rg96" class="ring" style="left:37px;top:228px;width:186px;height:40px;border-color:#BB86FC"></div><div id="tp97" class="tap" style="left:90.0px;top:208.0px;border-color:#BB86FC"></div></div>
+        <div id="ly98" class="shotl"><img src="assets/shots/owner-04-team.png" alt="" width="585" height="1266"><div id="rg99" class="ring" style="left:14px;top:655px;width:557px;height:103px;border-color:#BB86FC"></div><div id="tp100" class="tap" style="left:252.5px;top:666.5px;border-color:#BB86FC"></div></div>
+        <div id="ly101" class="shotl"><img src="assets/shots/owner-04-add-branch.png" alt="" width="585" height="1266"></div>
+        <div id="ly102" class="shotl"><img src="assets/shots/owner-05-limit-reached-branch.png" alt="" width="585" height="1266"></div>
+        <div id="ly105" class="shotl"><img src="assets/shots/owner-08-invite-code.png" alt="" width="585" height="1266"></div>
+        <div id="ly108" class="shotl"><img src="assets/shots/staff-10-join-workshop.png" alt="" width="585" height="1266"><div id="rg109" class="ring" style="left:15px;top:200px;width:256px;height:50px;border-color:#BB86FC"></div><div id="tp110" class="tap" style="left:103.0px;top:185.0px;border-color:#BB86FC"></div></div>
+        <div id="ly111" class="shotl"><img src="assets/shots/staff-11-joined-workshop-home.png" alt="" width="585" height="1266"></div>
+        </div></div>
+        <div id="co103" class="callout" style="left:1250.0px;top:293.042px;width:616.0px;height:384.317px;border-color:#BB86FC"><div class="cwin" style="width:600.0px;height:368.317px"><img src="assets/shots/owner-05-limit-reached-branch.png" alt="" style="left:-47.525px;top:-594.059px;width:695.05px;height:1504.158px"></div></div>
+        <svg id="cl104" class="cline" width="1920" height="930"><rect x="795.4" y="375.0" width="329.2" height="204.4" rx="8" fill="none" stroke="#BB86FC" stroke-width="2.5"/><line x1="1124.6" y1="477.2" x2="1250.0" y2="485.2" stroke="#BB86FC" stroke-width="2"/></svg>
+        <div id="co106" class="callout" style="left:1250.0px;top:293.042px;width:616.0px;height:384.317px;border-color:#BB86FC"><div class="cwin" style="width:600.0px;height:368.317px"><img src="assets/shots/owner-08-invite-code.png" alt="" style="left:-47.525px;top:-594.059px;width:695.05px;height:1504.158px"></div></div>
+        <svg id="cl107" class="cline" width="1920" height="930"><rect x="795.4" y="375.0" width="329.2" height="204.4" rx="8" fill="none" stroke="#BB86FC" stroke-width="2.5"/><line x1="1124.6" y1="477.2" x2="1250.0" y2="485.2" stroke="#BB86FC" stroke-width="2"/></svg>
+        <div id="fr112" class="frame" style="left:458.35px;top:92.0px;width:363.3px;height:758.28px;border-radius:41.688px"><div class="flabel" style="color:#6CB4F0;border-color:#6CB4F0">STAFF</div><div id="fr112s" class="screen" style="width:339.3px;height:734.28px;border-radius:32.625px">
+        <div id="ly113" class="shotl"><img src="assets/shots/staff-01-search-plate.png" alt="" width="585" height="1266"><div id="rg114" class="ring" style="left:14px;top:106px;width:557px;height:97px;border-color:#6CB4F0"></div><div id="tp115" class="tap" style="left:252.5px;top:114.5px;border-color:#6CB4F0"></div></div>
+        <div id="ly116" class="shotl"><img src="assets/shots/staff-09-approval-needed.png" alt="" width="585" height="1266"><div id="rg117" class="ring" style="left:86px;top:326px;width:229px;height:43px;border-color:#6CB4F0"></div><div id="tp118" class="tap" style="left:160.5px;top:307.5px;border-color:#6CB4F0"></div></div>
+        <div id="ly119" class="mockl" style="width:585px;height:1266px"><div class="cam"><div class="cam-t">Scan My code</div><div id="ly119md" class="cam-phone"><div class="cp-t">Rider's My code</div><img src="assets/qr_sample.svg" alt=""></div><div class="brk sq"><i class="b1"></i><i class="b2"></i><i class="b3"></i><i class="b4"></i></div><div id="ly119mln" class="scanln"></div><div id="ly119mok" class="readok">QR read</div><div class="typeopt">or type the 6-digit code</div></div><div class="sample">Sample</div></div>
+        <div id="ly120" class="shotl"><img src="assets/shots/staff-12-enter-code.png" alt="" width="585" height="1266"><div id="rg121" class="ring" style="left:110px;top:472px;width:302px;height:45px;border-color:#6CB4F0"></div><div id="tp122" class="tap" style="left:221.0px;top:454.5px;border-color:#6CB4F0"></div><div id="rg123" class="ring" style="left:109px;top:710px;width:367px;height:92px;border-color:#6CB4F0"></div><div id="tp124" class="tap" style="left:252.5px;top:716.0px;border-color:#6CB4F0"></div></div>
+        <div id="ly125" class="shotl"><img src="assets/shots/staff-13-bike-opens-after-code.png" alt="" width="585" height="1266"><div id="rg126" class="ring" style="left:284px;top:132px;width:147px;height:39px;border-color:#6CB4F0"></div><div id="tp127" class="tap" style="left:317.5px;top:111.5px;border-color:#6CB4F0"></div><div id="rg128" class="ring" style="left:10px;top:245px;width:565px;height:290px;border-color:#6CB4F0"></div><div id="tp129" class="tap" style="left:252.5px;top:350.0px;border-color:#6CB4F0"></div></div>
+        </div></div>
+        <div id="fr130" class="frame" style="left:1098.35px;top:92.0px;width:363.3px;height:758.28px;border-radius:41.688px"><div class="flabel" style="color:#03DAC6;border-color:#03DAC6">RIDER</div><div id="fr130s" class="screen" style="width:339.3px;height:734.28px;border-radius:32.625px">
+        <div id="ly131" class="shotl"><img src="assets/shots/visit-01-rider-my-code.png" alt="" width="585" height="1266"><div id="rg132" class="ring" style="left:94px;top:256px;width:397px;height:397px;border-color:#03DAC6"></div><div id="tp133" class="tap" style="left:252.5px;top:414.5px;border-color:#03DAC6"></div></div>
+        <div id="ly134" class="shotl"><img src="assets/shots/visit-03-rider-history-workshop-badge.png" alt="" width="585" height="1266"><div id="rg135" class="ring" style="left:54px;top:692px;width:144px;height:58px;border-color:#03DAC6"></div><div id="tp136" class="tap" style="left:86.0px;top:681.0px;border-color:#03DAC6"></div></div>
+        <div id="ly137" class="shotl"><img src="assets/shots/visit-03-rider-history-workshop-badge.png" alt="" width="585" height="1266"><div id="rg138" class="ring" style="left:14px;top:535px;width:557px;height:215px;border-color:#03DAC6"></div><div id="tp139" class="tap" style="left:252.5px;top:602.5px;border-color:#03DAC6"></div></div>
+        </div></div>
+        <div id="cn140" class="conn"><i></i></div>
+        <div id="fr141" class="frame" style="left:760.8px;top:46.0px;width:398.4px;height:834.24px;border-radius:46.0px"><div id="fr141s" class="screen" style="width:374.4px;height:810.24px;border-radius:36.0px">
+        <div id="ly142" class="shotl"><img src="assets/shots/staff-02-not-in-system.png" alt="" width="585" height="1266"><div id="rg143" class="ring" style="left:35px;top:415px;width:515px;height:103px;border-color:#6CB4F0"></div><div id="tp144" class="tap" style="left:252.5px;top:426.5px;border-color:#6CB4F0"></div></div>
+        <div id="ly145" class="shotl"><img src="assets/shots/staff-03-new-bike.png" alt="" width="585" height="1266"></div>
+        <div id="ly146" class="shotl"><img src="assets/shots/staff-04-add-service-top.png" alt="" width="585" height="1266"><div id="rg147" class="ring" style="left:73px;top:197px;width:187px;height:40px;border-color:#6CB4F0"></div><div id="tp148" class="tap" style="left:126.5px;top:177.0px;border-color:#6CB4F0"></div></div>
+        <div id="ly149" class="shotl"><img src="assets/shots/staff-04-add-service-bottom.png" alt="" width="585" height="1266"><div id="rg150" class="ring" style="left:14px;top:1166px;width:557px;height:91px;border-color:#6CB4F0"></div><div id="tp151" class="tap" style="left:252.5px;top:1171.5px;border-color:#6CB4F0"></div></div>
+        <div id="ly152" class="shotl"><img src="assets/shots/staff-05-saved-record-bike-history.png" alt="" width="585" height="1266"><div id="rg153" class="ring" style="left:440px;top:402px;width:115px;height:115px;border-color:#6CB4F0"></div><div id="tp154" class="tap" style="left:457.5px;top:419.5px;border-color:#6CB4F0"></div></div>
+        <div id="ly155" class="shotl"><img src="assets/shots/staff-06-claim-qr.png" alt="" width="585" height="1266"><div id="rg156" class="ring" style="left:87px;top:303px;width:212px;height:47px;border-color:#6CB4F0"></div><div id="tp157" class="tap" style="left:153.0px;top:286.5px;border-color:#6CB4F0"></div></div>
+        <div id="ly158" class="shotl"><img src="assets/shots/rider-19-claim-scan.png" alt="" width="585" height="1266"></div>
+        <div id="ly159" class="mockl" style="width:585px;height:1266px"><div class="cam"><div class="cam-t">Scan the workshop's QR</div><div id="ly159md" class="cam-phone"><div class="cp-t">Claim QR · TEST5678</div><img src="assets/qr_sample.svg" alt=""></div><div class="brk sq"><i class="b1"></i><i class="b2"></i><i class="b3"></i><i class="b4"></i></div><div id="ly159mln" class="scanln"></div><div id="ly159mok" class="readok">QR read</div></div><div class="sample">Sample</div></div>
+        <div id="ly160" class="mockl" style="width:585px;height:1266px"><div class="cam"><div class="cam-t">The bike's geran</div><div class="cam-s">Fit the card inside the frame</div><div id="ly160md" class="cam-doc"><div class="doc ger"><div class="doc-h">VEHICLE REGISTRATION (GERAN)</div><div class="doc-f2"><div><span>PLATE</span>TEST5678</div><div><span>OWNER</span>AHMAD BIN TEST</div><div><span>MAKE / MODEL</span>Honda RS150R</div></div><div class="doc-wm">SAMPLE</div></div></div><div class="brk"><i class="b1"></i><i class="b2"></i><i class="b3"></i><i class="b4"></i></div><div id="ly160msh" class="shutter"></div><div id="ly160mfl" class="flash"></div></div><div class="sample">Sample</div></div>
+        <div id="ly161" class="mockl" style="width:585px;height:1266px"><div class="cam chk"><div class="cam-t">Checking</div><div class="cam-s">Reading the name and plate</div><div id="ly161md" class="cam-doc"><div class="doc ger"><div class="doc-h">VEHICLE REGISTRATION (GERAN)</div><div class="doc-f2"><div><span>PLATE</span>TEST5678</div><div><span>OWNER</span>AHMAD BIN TEST</div><div><span>MAKE / MODEL</span>Honda RS150R</div></div><div class="doc-wm">SAMPLE</div></div></div><div class="prog"><i id="ly161mp"></i></div></div><div class="sample">Sample</div></div>
+        </div></div>
+        <div id="fr162" class="frame" style="left:760.8px;top:46.0px;width:398.4px;height:834.24px;border-radius:46.0px"><div id="fr162s" class="screen" style="width:374.4px;height:810.24px;border-radius:36.0px">
+        <div id="ly163" class="shotl"><img src="assets/shots/rider-24-workshop-access-with-workshop.png" alt="" width="585" height="1266"><div id="rg164" class="ring" style="left:87px;top:134px;width:204px;height:43px;border-color:#03DAC6"></div><div id="tp165" class="tap" style="left:149.0px;top:115.5px;border-color:#03DAC6"></div></div>
+        <div id="ly166" class="shotl"><img src="assets/shots/rider-26-remove-access-confirm.png" alt="" width="585" height="1266"><div id="rg167" class="ring" style="left:61px;top:570px;width:248px;height:41px;border-color:#03DAC6"></div><div id="tp168" class="tap" style="left:145.0px;top:550.5px;border-color:#03DAC6"></div></div>
+        <div id="ly169" class="shotl"><img src="assets/shots/rider-27-access-removed.png" alt="" width="585" height="1266"></div>
+        </div></div>
+        <div id="wdiv" class="wdiv"></div>
+        <div id="wh170" class="whead" style="left:310px">1 · Sell to a RevLog rider</div>
+        <div id="fr171" class="frame" style="left:235.9px;top:128.0px;width:328.2px;height:682.32px;border-radius:37.375px"><div class="flabel" style="color:#03DAC6;border-color:#03DAC6">BUYER: RECEIVE CODE</div><div id="fr171s" class="screen" style="width:304.2px;height:658.32px;border-radius:29.25px">
+        <div id="ly172" class="shotl"><img src="assets/shots/rider-25-receive-code.png" alt="" width="585" height="1266"></div>
+        </div></div>
+        <div id="fr173" class="frame" style="left:655.9px;top:128.0px;width:328.2px;height:682.32px;border-radius:37.375px"><div class="flabel" style="color:#03DAC6;border-color:#03DAC6">SELLER</div><div id="fr173s" class="screen" style="width:304.2px;height:658.32px;border-radius:29.25px">
+        <div id="ly174" class="shotl"><img src="assets/shots/transfer-02-sell-to-revlog-rider.png" alt="" width="585" height="1266"></div>
+        </div></div>
+        <div id="wh175" class="whead" style="left:1160px">2 · Transfer to a buyer</div>
+        <div id="fr176" class="frame" style="left:1295.9px;top:128.0px;width:328.2px;height:682.32px;border-radius:37.375px"><div class="flabel" style="color:#03DAC6;border-color:#03DAC6">SELLER: LOCKED FILE</div><div id="fr176s" class="screen" style="width:304.2px;height:658.32px;border-radius:29.25px">
+        <div id="ly177" class="shotl"><img src="assets/shots/transfer-03-transfer-to-buyer-verified.png" alt="" width="585" height="1266"></div>
+        </div></div>
+        <div id="fr178" class="frame" style="left:760.8px;top:46.0px;width:398.4px;height:834.24px;border-radius:46.0px"><div id="fr178s" class="screen" style="width:374.4px;height:810.24px;border-radius:36.0px">
+        <div id="ly179" class="shotl"><img src="assets/shots/rider-20-garage-waiting-check.png" alt="" width="585" height="1266"><div id="rg180" class="ring" style="left:85px;top:922px;width:197px;height:43px;border-color:#03DAC6"></div><div id="tp181" class="tap" style="left:143.5px;top:903.5px;border-color:#03DAC6"></div></div>
+        <div id="ly182" class="shotl"><img src="assets/shots/admin-07-ownership-case-list.png" alt="" width="585" height="1266"><div id="rg183" class="ring" style="left:167px;top:153px;width:136px;height:37px;border-color:#03DAC6"></div><div id="tp184" class="tap" style="left:195.0px;top:131.5px;border-color:#03DAC6"></div></div>
+        <div id="ly185" class="shotl"><img src="assets/shots/admin-08-ownership-case.png" alt="" width="585" height="1266"></div>
+        <div id="ly188" class="shotl"><img src="assets/shots/admin-09-approve-confirm.png" alt="" width="585" height="1266"><div id="rg189" class="ring" style="left:290px;top:692px;width:236px;height:82px;border-color:#03DAC6"></div><div id="tp190" class="tap" style="left:368.0px;top:693.0px;border-color:#03DAC6"></div></div>
+        <div id="ly191" class="shotl"><img src="assets/shots/rider-21-garage-verified.png" alt="" width="585" height="1266"><div id="rg192" class="ring" style="left:14px;top:892px;width:557px;height:93px;border-color:#03DAC6"></div><div id="tp193" class="tap" style="left:252.5px;top:898.5px;border-color:#03DAC6"></div></div>
+        <div id="ly194" class="shotl"><img src="assets/shots/rider-22-my-code.png" alt="" width="585" height="1266"></div>
+        <div id="ly195" class="shotl"><img src="assets/shots/admin-06-settings.png" alt="" width="585" height="1266"></div>
+        </div></div>
+        <div id="co186" class="callout" style="left:1250.0px;top:135.563px;width:616.0px;height:104.073px;border-color:#03DAC6"><div class="cwin" style="width:600.0px;height:88.073px"><img src="assets/shots/admin-08-ownership-case.png" alt="" style="left:-22.018px;top:-165.138px;width:644.037px;height:1393.761px"></div></div>
+        <svg id="cl187" class="cline" width="1920" height="930"><rect x="782.6" y="151.0" width="354.8" height="57.2" rx="8" fill="none" stroke="#03DAC6" stroke-width="2.5"/><line x1="1137.4" y1="179.6" x2="1250.0" y2="187.6" stroke="#03DAC6" stroke-width="2"/></svg>
+        <div id="co196" class="callout" style="left:1250.0px;top:60.0px;width:616.0px;height:391.0px;border-color:#03DAC6"><div class="cwin" style="width:600.0px;height:375.0px"><img src="assets/shots/admin-06-settings.png" alt="" style="left:-255.0px;top:-165.0px;width:877.5px;height:1899.0px"></div></div>
+        <svg id="cl197" class="cline" width="1920" height="930"><rect x="878.6" y="125.4" width="262.0" height="166.0" rx="8" fill="none" stroke="#03DAC6" stroke-width="2.5"/><line x1="1140.6" y1="208.4" x2="1250.0" y2="255.5" stroke="#03DAC6" stroke-width="2"/></svg>
+        <div id="fr198" class="frame" style="left:760.8px;top:46.0px;width:398.4px;height:834.24px;border-radius:46.0px"><div id="fr198s" class="screen" style="width:374.4px;height:810.24px;border-radius:36.0px">
+        <div id="ly199" class="shotl"><img src="assets/shots/rider-06-consent.png" alt="" width="585" height="1266"></div>
+        </div></div>
+        <div id="co200" class="callout" style="left:1250.0px;top:152.348px;width:616.0px;height:239.464px;border-color:#03DAC6"><div class="cwin" style="width:600.0px;height:223.464px"><img src="assets/shots/rider-06-consent.png" alt="" style="left:-26.816px;top:-248.045px;width:653.631px;height:1414.525px"></div></div>
+        <svg id="cl201" class="cline" width="1920" height="930"><rect x="785.16" y="197.08" width="349.68" height="134.0" rx="8" fill="none" stroke="#03DAC6" stroke-width="2.5"/><line x1="1134.84" y1="264.08" x2="1250.0" y2="272.08" stroke="#03DAC6" stroke-width="2"/></svg>
+        <div id="co202" class="callout" style="left:1250.0px;top:288.951px;width:616.0px;height:208.179px;border-color:#03DAC6"><div class="cwin" style="width:600.0px;height:192.179px"><img src="assets/shots/rider-06-consent.png" alt="" style="left:-26.816px;top:-474.86px;width:653.631px;height:1414.525px"></div></div>
+        <svg id="cl203" class="cline" width="1920" height="930"><rect x="785.16" y="327.0" width="349.68" height="116.08" rx="8" fill="none" stroke="#03DAC6" stroke-width="2.5"/><line x1="1134.84" y1="385.04" x2="1250.0" y2="393.04" stroke="#03DAC6" stroke-width="2"/></svg>
+        <div id="cd204" class="tcard"><div class="tc1">Your documents</div><div class="tc2">Licence and geran photos</div></div>
+        <div id="fr205" class="frame" style="left:760.8px;top:46.0px;width:398.4px;height:834.24px;border-radius:46.0px"><div id="fr205s" class="screen" style="width:374.4px;height:810.24px;border-radius:36.0px">
+        <div id="ly206" class="shotl"><img src="assets/shots/staff-09-approval-needed.png" alt="" width="585" height="1266"></div>
+        </div></div>
+        <div id="fr207" class="frame" style="left:801.75px;top:150.0px;width:316.5px;height:657.0px;border-radius:35.938px"><div id="fr207s" class="screen" style="width:292.5px;height:633.0px;border-radius:28.125px">
+        <div id="ly208" class="shotl"><img src="assets/shots/visit-03-rider-history-workshop-badge.png" alt="" width="585" height="1266"></div>
+        </div></div>
+        <svg id="cl210" class="cline" width="1920" height="1080"><line x1="570" y1="286" x2="800" y2="346" stroke="#03DAC6" stroke-width="2"/></svg>
+        <div id="cr209" class="crole" style="left:270px;top:260px;color:#03DAC6;border-color:#03DAC6">RIDER</div>
+        <svg id="cl212" class="cline" width="1920" height="1080"><line x1="1350" y1="286" x2="1120" y2="346" stroke="#BB86FC" stroke-width="2"/></svg>
+        <div id="cr211" class="crole" style="left:1350px;top:260px;color:#BB86FC;border-color:#BB86FC">WORKSHOP OWNER</div>
+        <svg id="cl214" class="cline" width="1920" height="1080"><line x1="570" y1="666" x2="800" y2="606" stroke="#6CB4F0" stroke-width="2"/></svg>
+        <div id="cr213" class="crole" style="left:270px;top:640px;color:#6CB4F0;border-color:#6CB4F0">STAFF</div>
+        <svg id="cl216" class="cline" width="1920" height="1080"><line x1="1350" y1="666" x2="1120" y2="606" stroke="#D3D6DC" stroke-width="2"/></svg>
+        <div id="cr215" class="crole" style="left:1350px;top:640px;color:#D3D6DC;border-color:#D3D6DC">ADMIN</div>
+        <div id="wm217" class="wordmark">RevLog</div><div id="wm217s" class="wmsub">One service record for every bike</div>
+        </div>
+        <div id="ey0" class="eyebrow"><b>01</b>OPENING</div>
+        <div id="ey1" class="eyebrow"><b>02</b>FOUR ROLES</div>
+        <div id="ey2" class="eyebrow"><b>03</b>RIDER</div>
+        <div id="ey3" class="eyebrow"><b>04</b>WORKSHOP SETUP</div>
+        <div id="ey4" class="eyebrow"><b>05</b>WORKSHOP VISIT</div>
+        <div id="ey5" class="eyebrow"><b>06</b>NEW BIKE</div>
+        <div id="ey6" class="eyebrow"><b>07</b>RIDER CONTROLS</div>
+        <div id="ey7" class="eyebrow"><b>08</b>ADMIN</div>
+        <div id="ey8" class="eyebrow"><b>09</b>PRIVACY</div>
+        <div id="ey9" class="eyebrow"><b>10</b>CLOSING</div>
+        <div id="rc218" class="rolechip" style="color:#03DAC6;border-color:#03DAC6"><i style="background:#03DAC6"></i>Rider</div>
+        <div id="rc219" class="rolechip" style="color:#BB86FC;border-color:#BB86FC"><i style="background:#BB86FC"></i>Workshop owner</div>
+        <div id="rc220" class="rolechip" style="color:#D3D6DC;border-color:#D3D6DC"><i style="background:#D3D6DC"></i>Admin</div>
+        <div id="rc221" class="rolechip" style="color:#BB86FC;border-color:#BB86FC"><i style="background:#BB86FC"></i>Workshop owner</div>
+        <div id="rc222" class="rolechip" style="color:#6CB4F0;border-color:#6CB4F0"><i style="background:#6CB4F0"></i>Staff</div>
+        <div id="rc223" class="rolechip" style="color:#03DAC6;border-color:#03DAC6"><i style="background:#03DAC6"></i>Rider</div>
+        <div id="rc224" class="rolechip" style="color:#6CB4F0;border-color:#6CB4F0"><i style="background:#6CB4F0"></i>Staff</div>
+        <div id="rc225" class="rolechip" style="color:#03DAC6;border-color:#03DAC6"><i style="background:#03DAC6"></i>Rider</div>
+        <div id="rc226" class="rolechip" style="color:#6CB4F0;border-color:#6CB4F0"><i style="background:#6CB4F0"></i>Staff</div>
+        <div id="rc227" class="rolechip" style="color:#03DAC6;border-color:#03DAC6"><i style="background:#03DAC6"></i>Rider</div>
+        <div id="rc228" class="rolechip" style="color:#D3D6DC;border-color:#D3D6DC"><i style="background:#D3D6DC"></i>Admin</div>
+        <div id="rc229" class="rolechip" style="color:#03DAC6;border-color:#03DAC6"><i style="background:#03DAC6"></i>Rider</div>
+        <div id="rc230" class="rolechip" style="color:#D3D6DC;border-color:#D3D6DC"><i style="background:#D3D6DC"></i>Admin</div>
+        <div class="pbar"><div class="pseg" style="left:60.0px;width:172.0px"><div class="plab" id="pl0">Opening</div><div class="ptrack"><i id="pf0"></i></div></div><div class="pseg" style="left:240.0px;width:172.0px"><div class="plab" id="pl1">Four roles</div><div class="ptrack"><i id="pf1"></i></div></div><div class="pseg" style="left:420.0px;width:172.0px"><div class="plab" id="pl2">Rider</div><div class="ptrack"><i id="pf2"></i></div></div><div class="pseg" style="left:600.0px;width:172.0px"><div class="plab" id="pl3">Workshop setup</div><div class="ptrack"><i id="pf3"></i></div></div><div class="pseg" style="left:780.0px;width:172.0px"><div class="plab" id="pl4">Workshop visit</div><div class="ptrack"><i id="pf4"></i></div></div><div class="pseg" style="left:960.0px;width:172.0px"><div class="plab" id="pl5">New bike</div><div class="ptrack"><i id="pf5"></i></div></div><div class="pseg" style="left:1140.0px;width:172.0px"><div class="plab" id="pl6">Rider controls</div><div class="ptrack"><i id="pf6"></i></div></div><div class="pseg" style="left:1320.0px;width:172.0px"><div class="plab" id="pl7">Admin</div><div class="ptrack"><i id="pf7"></i></div></div><div class="pseg" style="left:1500.0px;width:172.0px"><div class="plab" id="pl8">Privacy</div><div class="ptrack"><i id="pf8"></i></div></div><div class="pseg" style="left:1680.0px;width:172.0px"><div class="plab" id="pl9">Closing</div><div class="ptrack"><i id="pf9"></i></div></div></div>
+        <div id="cap0" class="cap"><span>Service history is usually scattered across workshops and</span></div>
+        <div id="cap1" class="cap"><span>paper receipts.</span></div>
+        <div id="cap2" class="cap"><span>RevLog keeps one record for every bike.</span></div>
+        <div id="cap3" class="cap"><span>The Rider owns it, and workshops add to it with the</span></div>
+        <div id="cap4" class="cap"><span>Rider&#x27;s approval.</span></div>
+        <div id="cap5" class="cap"><span>A bike with no owner yet can be served too.</span></div>
+        <div id="cap6" class="cap"><span>First, pick one: I ride, or I run a workshop.</span></div>
+        <div id="cap7" class="cap"><span>Then sign in with Google or email.</span></div>
+        <div id="cap8" class="cap"><span>There are four roles.</span></div>
+        <div id="cap9" class="cap"><span>The Rider owns the record.</span></div>
+        <div id="cap10" class="cap"><span>The Workshop owner runs the workshop.</span></div>
+        <div id="cap11" class="cap"><span>Staff save each service.</span></div>
+        <div id="cap12" class="cap"><span>And the Admin approves workshops and checks ownership.</span></div>
+        <div id="cap13" class="cap"><span>A Rider finds their bike, then adds the odometer and plate.</span></div>
+        <div id="cap14" class="cap"><span>Two quick questions help RevLog tell you what&#x27;s due.</span></div>
+        <div id="cap15" class="cap"><span>A short guide follows.</span></div>
+        <div id="cap16" class="cap"><span>Then the Rider agrees to how their data is used.</span></div>
+        <div id="cap17" class="cap"><span>The bike is now in the Garage.</span></div>
+        <div id="cap18" class="cap"><span>Below it: Log service, Verify this bike, and What&#x27;s due.</span></div>
+        <div id="cap19" class="cap"><span>Verify this bike asks for photos of your driving licence and geran.</span></div>
+        <div id="cap20" class="cap"><span>They prove the bike is yours.</span></div>
+        <div id="cap21" class="cap"><span>Document photos are deleted after the check,</span></div>
+        <div id="cap22" class="cap"><span>or kept up to 14 days if checked by hand.</span></div>
+        <div id="cap23" class="cap"><span>Once the bike is verified, My code becomes available.</span></div>
+        <div id="cap24" class="cap"><span>We&#x27;ll see the Admin&#x27;s check later.</span></div>
+        <div id="cap25" class="cap"><span>What&#x27;s due lists every item. Tap one to see how far it has left.</span></div>
+        <div id="cap26" class="cap"><span>Log service records your own work.</span></div>
+        <div id="cap27" class="cap"><span>It appears in History as a Rider entry,</span></div>
+        <div id="cap28" class="cap"><span>with its details.</span></div>
+        <div id="cap29" class="cap"><span>Fuel tracks fill-ups and kilometres per litre.</span></div>
+        <div id="cap30" class="cap"><span>Plus a service schedule, renewal reminders, and spending.</span></div>
+        <div id="cap31" class="cap"><span>A Workshop owner registers the workshop.</span></div>
+        <div id="cap32" class="cap"><span>RevLog checks every workshop before it can search bikes.</span></div>
+        <div id="cap33" class="cap"><span>The Admin approves it,</span></div>
+        <div id="cap34" class="cap"><span>and now the workshop can search by plate.</span></div>
+        <div id="cap35" class="cap"><span>Workshop mode has Search, Customers,</span></div>
+        <div id="cap36" class="cap"><span>Packages and Team.</span></div>
+        <div id="cap37" class="cap"><span>Packages save the usual items and costs,</span></div>
+        <div id="cap38" class="cap"><span>ready in one tap.</span></div>
+        <div id="cap39" class="cap"><span>Under Team, the owner adds Branches.</span></div>
+        <div id="cap40" class="cap"><span>The Free plan allows one Branch.</span></div>
+        <div id="cap41" class="cap"><span>The owner creates an invite code, and a Staff member joins with it.</span></div>
+        <div id="cap42" class="cap"><span>The Free plan limits how many staff you can add.</span></div>
+        <div id="cap43" class="cap"><span>Now, a workshop visit. Staff search the plate.</span></div>
+        <div id="cap44" class="cap"><span>The bike belongs to a Rider: Approval needed.</span></div>
+        <div id="cap45" class="cap"><span>The Rider opens My code: a QR and a 6-digit code,</span></div>
+        <div id="cap46" class="cap"><span>valid for ten minutes, used once.</span></div>
+        <div id="cap47" class="cap"><span>Staff scan it,</span></div>
+        <div id="cap48" class="cap"><span>or type the code and tap Done.</span></div>
+        <div id="cap49" class="cap"><span>The bike opens, with the Rider&#x27;s first name and the</span></div>
+        <div id="cap50" class="cap"><span>workshop&#x27;s record.</span></div>
+        <div id="cap51" class="cap"><span>In the Rider&#x27;s History, the workshop&#x27;s record appears with</span></div>
+        <div id="cap52" class="cap"><span>the Workshop badge.</span></div>
+        <div id="cap53" class="cap"><span>The Rider typed nothing.</span></div>
+        <div id="cap54" class="cap"><span>A plate not in the system? Staff tap Add this bike,</span></div>
+        <div id="cap55" class="cap"><span>with its brand and model.</span></div>
+        <div id="cap56" class="cap"><span>Then a package, the odometer and costs,</span></div>
+        <div id="cap57" class="cap"><span>and Save record.</span></div>
+        <div id="cap58" class="cap"><span>The record carries the workshop&#x27;s stamp,</span></div>
+        <div id="cap59" class="cap"><span>and Staff show the Claim QR.</span></div>
+        <div id="cap60" class="cap"><span>The Rider scans the Claim QR,</span></div>
+        <div id="cap61" class="cap"><span>and photographs the geran.</span></div>
+        <div id="cap62" class="cap"><span>Once ownership is confirmed, the bike and the workshop&#x27;s</span></div>
+        <div id="cap63" class="cap"><span>records are theirs.</span></div>
+        <div id="cap64" class="cap"><span>The Rider sees which workshops have access,</span></div>
+        <div id="cap65" class="cap"><span>and can remove one at any time.</span></div>
+        <div id="cap66" class="cap"><span>There are two ways to sell.</span></div>
+        <div id="cap67" class="cap"><span>Sell to a RevLog rider: the seller types the buyer&#x27;s Receive code.</span></div>
+        <div id="cap68" class="cap"><span>Or Transfer to a buyer: a locked file,</span></div>
+        <div id="cap69" class="cap"><span>opened with a 6-digit code.</span></div>
+        <div id="cap70" class="cap"><span>A bike checked by hand waits as not yet verified.</span></div>
+        <div id="cap71" class="cap"><span>The Admin opens the case, compares the names,</span></div>
+        <div id="cap72" class="cap"><span>and approves it.</span></div>
+        <div id="cap73" class="cap"><span>After approval, My code appears where Verify this bike was.</span></div>
+        <div id="cap74" class="cap"><span>The Admin also sets plans and limits:</span></div>
+        <div id="cap75" class="cap"><span>on the Free plan, 30 bikes and one Branch.</span></div>
+        <div id="cap76" class="cap"><span>A workshop sees your bike only after you approve it.</span></div>
+        <div id="cap77" class="cap"><span>Document photos are deleted after the check,</span></div>
+        <div id="cap78" class="cap"><span>or kept up to 14 days if checked by hand.</span></div>
+        <div id="cap79" class="cap"><span>One record for every bike: owned by the Rider,</span></div>
+        <div id="cap80" class="cap"><span>added to by workshops, checked by the Admin.</span></div>
+        <div id="cap81" class="cap"><span>RevLog.</span></div>
+      </div>
+      <audio id="mix" src="assets/mix.wav" data-start="0" data-duration="240.014" data-track-index="2" data-volume="1"></audio>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      gsap.set("#ly2",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#ly2",{opacity:0});
+      gsap.set("#ly3",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#co4",{opacity:0,x:-24});
+      gsap.set("#cl5",{opacity:0});
+      gsap.set("#ly3",{opacity:0});
+      gsap.set("#ly6",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#ly6",{opacity:0});
+      gsap.set("#ly7",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#ly7",{opacity:0});
+      gsap.set("#fr1",{opacity:0,x:60,y:24,rotation:-4});
+      gsap.set("#ly9",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg10",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp11",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#rg12",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp13",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly9",{opacity:0});
+      gsap.set("#ly14",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg15",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp16",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly14",{opacity:0});
+      gsap.set("#fr8",{opacity:0,x:60,y:24,rotation:-4});
+      gsap.set("#ly18",{scale:0.44,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#fr17",{opacity:0,x:60,y:24,rotation:-4});
+      gsap.set("#ly20",{scale:0.44,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#fr19",{opacity:0,x:60,y:24,rotation:-4});
+      gsap.set("#ly22",{scale:0.44,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#fr21",{opacity:0,x:60,y:24,rotation:-4});
+      gsap.set("#ly24",{scale:0.44,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#fr23",{opacity:0,x:60,y:24,rotation:-4});
+      gsap.set("#ly26",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#ly26",{opacity:0});
+      gsap.set("#ly27",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#co28",{opacity:0,x:-24});
+      gsap.set("#cl29",{opacity:0});
+      gsap.set("#ly27",{opacity:0});
+      gsap.set("#ly30",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#ly30",{opacity:0});
+      gsap.set("#fr25",{opacity:0,x:60,y:24,rotation:-4});
+      gsap.set("#ly32",{scale:0.44,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#fr31",{opacity:0,x:60,y:24,rotation:-4});
+      gsap.set("#ly34",{scale:0.44,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#fr33",{opacity:0,x:60,y:24,rotation:-4});
+      gsap.set("#ly36",{scale:0.44,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#fr35",{opacity:0,x:60,y:24,rotation:-4});
+      gsap.set("#ly38",{scale:0.44,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#fr37",{opacity:0,x:60,y:24,rotation:-4});
+      gsap.set("#ly40",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg41",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp42",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly40",{opacity:0});
+      gsap.set("#ly43",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#ly43",{opacity:0});
+      gsap.set("#ly44",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg45",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp46",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#rg47",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp48",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#rg49",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp50",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly44",{opacity:0});
+      gsap.set("#ly51",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg52",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp53",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#rg54",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp55",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly51",{opacity:0});
+      gsap.set("#ly56md",{scale:0.92,rotation:-3,opacity:0});
+      gsap.set("#ly56mfl",{opacity:0});
+      gsap.set("#ly56",{scale:0.64,transformOrigin:"0px 0px"});
+      gsap.set("#ly56",{opacity:0});
+      gsap.set("#ly57md",{scale:0.92,rotation:-3,opacity:0});
+      gsap.set("#ly57mfl",{opacity:0});
+      gsap.set("#ly57",{scale:0.64,transformOrigin:"0px 0px"});
+      gsap.set("#ly57",{opacity:0});
+      gsap.set("#ly58md",{scale:1});
+      gsap.set("#ly58mp",{x:-160});
+      gsap.set("#ly58",{scale:0.64,transformOrigin:"0px 0px"});
+      gsap.set("#ly58",{opacity:0});
+      gsap.set("#ly59",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#ly59",{opacity:0});
+      gsap.set("#ly60",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#co61",{opacity:0,x:-24});
+      gsap.set("#cl62",{opacity:0});
+      gsap.set("#ly60",{opacity:0});
+      gsap.set("#ly63",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg64",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp65",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly63",{opacity:0});
+      gsap.set("#ly66",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg67",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp68",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly66",{opacity:0});
+      gsap.set("#ly69",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#ly69",{opacity:0});
+      gsap.set("#ly70",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#ly70",{opacity:0});
+      gsap.set("#ly71",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#co72",{opacity:0,x:-24});
+      gsap.set("#cl73",{opacity:0});
+      gsap.set("#ly71",{opacity:0});
+      gsap.set("#ly74",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#ly74",{opacity:0});
+      gsap.set("#ly75",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#ly75",{opacity:0});
+      gsap.set("#ly76",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#ly76",{opacity:0});
+      gsap.set("#fr39",{opacity:0,x:60,y:24,rotation:-4});
+      gsap.set("#ly78",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg79",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp80",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly78",{opacity:0});
+      gsap.set("#ly81",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg82",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp83",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly81",{opacity:0});
+      gsap.set("#ly84",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg85",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp86",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly84",{opacity:0});
+      gsap.set("#ly87",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#ly87",{opacity:0});
+      gsap.set("#ly88",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg89",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp90",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly88",{opacity:0});
+      gsap.set("#ly91",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg92",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp93",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly91",{opacity:0});
+      gsap.set("#ly94",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#ly94",{opacity:0});
+      gsap.set("#ly95",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg96",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp97",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly95",{opacity:0});
+      gsap.set("#ly98",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg99",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp100",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly98",{opacity:0});
+      gsap.set("#ly101",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#ly101",{opacity:0});
+      gsap.set("#ly102",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#co103",{opacity:0,x:-24});
+      gsap.set("#cl104",{opacity:0});
+      gsap.set("#ly102",{opacity:0});
+      gsap.set("#ly105",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#co106",{opacity:0,x:-24});
+      gsap.set("#cl107",{opacity:0});
+      gsap.set("#ly105",{opacity:0});
+      gsap.set("#ly108",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg109",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp110",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly108",{opacity:0});
+      gsap.set("#ly111",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#ly111",{opacity:0});
+      gsap.set("#fr77",{opacity:0,x:60,y:24,rotation:-4});
+      gsap.set("#ly113",{scale:0.58,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg114",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp115",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly113",{opacity:0});
+      gsap.set("#ly116",{scale:0.58,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg117",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp118",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly116",{opacity:0});
+      gsap.set("#ly119md",{rotation:4,scale:0.94,opacity:0});
+      gsap.set("#ly119mln",{y:0,opacity:0});
+      gsap.set("#ly119mok",{opacity:0,y:8});
+      gsap.set("#ly119",{scale:0.58,transformOrigin:"0px 0px"});
+      gsap.set("#ly119",{opacity:0});
+      gsap.set("#ly120",{scale:0.58,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg121",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp122",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#rg123",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp124",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly120",{opacity:0});
+      gsap.set("#ly125",{scale:0.58,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg126",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp127",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#rg128",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp129",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly125",{opacity:0});
+      gsap.set("#fr112",{opacity:0,x:60,y:24,rotation:-4});
+      gsap.set("#ly131",{scale:0.58,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg132",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp133",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly131",{opacity:0});
+      gsap.set("#ly134",{scale:0.58,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg135",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp136",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly134",{opacity:0});
+      gsap.set("#ly137",{scale:0.58,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg138",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp139",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly137",{opacity:0});
+      gsap.set("#fr130",{opacity:0,x:140,y:24,rotation:-4});
+      gsap.set("#cn140",{opacity:0,scaleX:0,transformOrigin:"100% 50%"});
+      gsap.set("#ly142",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg143",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp144",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly142",{opacity:0});
+      gsap.set("#ly145",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#ly145",{opacity:0});
+      gsap.set("#ly146",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg147",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp148",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly146",{opacity:0});
+      gsap.set("#ly149",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg150",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp151",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly149",{opacity:0});
+      gsap.set("#ly152",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg153",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp154",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly152",{opacity:0});
+      gsap.set("#ly155",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg156",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp157",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly155",{opacity:0});
+      gsap.set("#ly158",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#ly158",{opacity:0});
+      gsap.set("#ly159md",{rotation:4,scale:0.94,opacity:0});
+      gsap.set("#ly159mln",{y:0,opacity:0});
+      gsap.set("#ly159mok",{opacity:0,y:8});
+      gsap.set("#ly159",{scale:0.64,transformOrigin:"0px 0px"});
+      gsap.set("#ly159",{opacity:0});
+      gsap.set("#ly160md",{scale:0.92,rotation:-3,opacity:0});
+      gsap.set("#ly160mfl",{opacity:0});
+      gsap.set("#ly160",{scale:0.64,transformOrigin:"0px 0px"});
+      gsap.set("#ly160",{opacity:0});
+      gsap.set("#ly161md",{scale:1});
+      gsap.set("#ly161mp",{x:-160});
+      gsap.set("#ly161",{scale:0.64,transformOrigin:"0px 0px"});
+      gsap.set("#ly161",{opacity:0});
+      gsap.set("#fr141",{opacity:0,x:60,y:24,rotation:-4});
+      gsap.set("#ly163",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg164",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp165",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly163",{opacity:0});
+      gsap.set("#ly166",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg167",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp168",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly166",{opacity:0});
+      gsap.set("#ly169",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#ly169",{opacity:0});
+      gsap.set("#fr162",{opacity:0,x:60,y:24,rotation:-4});
+      gsap.set("#wdiv",{opacity:0});
+      gsap.set("#wh170",{opacity:0,y:10});
+      gsap.set("#ly172",{scale:0.52,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#fr171",{opacity:0,x:60,y:24,rotation:-4});
+      gsap.set("#ly174",{scale:0.52,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#fr173",{opacity:0,x:60,y:24,rotation:-4});
+      gsap.set("#wh175",{opacity:0,y:10});
+      gsap.set("#ly177",{scale:0.52,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#fr176",{opacity:0,x:60,y:24,rotation:-4});
+      gsap.set("#ly179",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg180",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp181",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly179",{opacity:0});
+      gsap.set("#ly182",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg183",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp184",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly182",{opacity:0});
+      gsap.set("#ly185",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#co186",{opacity:0,x:-24});
+      gsap.set("#cl187",{opacity:0});
+      gsap.set("#ly185",{opacity:0});
+      gsap.set("#ly188",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg189",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp190",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly188",{opacity:0});
+      gsap.set("#ly191",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#rg192",{opacity:0,scale:1.06,transformOrigin:"50% 50%"});
+      gsap.set("#tp193",{opacity:0,scale:0.3,transformOrigin:"50% 50%"});
+      gsap.set("#ly191",{opacity:0});
+      gsap.set("#ly194",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#ly194",{opacity:0});
+      gsap.set("#ly195",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#co196",{opacity:0,x:-24});
+      gsap.set("#cl197",{opacity:0});
+      gsap.set("#ly195",{opacity:0});
+      gsap.set("#fr178",{opacity:0,x:60,y:24,rotation:-4});
+      gsap.set("#ly199",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#co200",{opacity:0,x:-24});
+      gsap.set("#cl201",{opacity:0});
+      gsap.set("#co202",{opacity:0,x:-24});
+      gsap.set("#cl203",{opacity:0});
+      gsap.set("#ly199",{opacity:0});
+      gsap.set("#fr198",{opacity:0,x:60,y:24,rotation:-4});
+      gsap.set("#cd204",{opacity:0,y:16});
+      gsap.set("#ly206",{scale:0.64,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#ly206",{opacity:0});
+      gsap.set("#fr205",{opacity:0,x:60,y:24,rotation:-4});
+      gsap.set("#ly208",{scale:0.5,x:0,y:0,transformOrigin:"0px 0px"});
+      gsap.set("#fr207",{opacity:0,x:60,y:24,rotation:-4});
+      gsap.set("#cr209",{opacity:0,y:10});
+      gsap.set("#cl210",{opacity:0});
+      gsap.set("#cr211",{opacity:0,y:10});
+      gsap.set("#cl212",{opacity:0});
+      gsap.set("#cr213",{opacity:0,y:10});
+      gsap.set("#cl214",{opacity:0});
+      gsap.set("#cr215",{opacity:0,y:10});
+      gsap.set("#cl216",{opacity:0});
+      gsap.set("#wm217",{opacity:0,y:14});
+      gsap.set("#wm217s",{opacity:0});
+      gsap.set("#ey0",{opacity:0});
+      gsap.set("#ey1",{opacity:0});
+      gsap.set("#ey2",{opacity:0});
+      gsap.set("#ey3",{opacity:0});
+      gsap.set("#ey4",{opacity:0});
+      gsap.set("#ey5",{opacity:0});
+      gsap.set("#ey6",{opacity:0});
+      gsap.set("#ey7",{opacity:0});
+      gsap.set("#ey8",{opacity:0});
+      gsap.set("#ey9",{opacity:0});
+      gsap.set("#rc218",{opacity:0,x:-12});
+      gsap.set("#rc219",{opacity:0,x:-12});
+      gsap.set("#rc220",{opacity:0,x:-12});
+      gsap.set("#rc221",{opacity:0,x:-12});
+      gsap.set("#rc222",{opacity:0,x:-12});
+      gsap.set("#rc223",{opacity:0,x:-12});
+      gsap.set("#rc224",{opacity:0,x:-12});
+      gsap.set("#rc225",{opacity:0,x:-12});
+      gsap.set("#rc226",{opacity:0,x:-12});
+      gsap.set("#rc227",{opacity:0,x:-12});
+      gsap.set("#rc228",{opacity:0,x:-12});
+      gsap.set("#rc229",{opacity:0,x:-12});
+      gsap.set("#rc230",{opacity:0,x:-12});
+      gsap.set("#pf0",{scaleX:0,transformOrigin:"0% 50%"});
+      gsap.set("#pl0",{opacity:0.45});
+      gsap.set("#pf1",{scaleX:0,transformOrigin:"0% 50%"});
+      gsap.set("#pl1",{opacity:0.45});
+      gsap.set("#pf2",{scaleX:0,transformOrigin:"0% 50%"});
+      gsap.set("#pl2",{opacity:0.45});
+      gsap.set("#pf3",{scaleX:0,transformOrigin:"0% 50%"});
+      gsap.set("#pl3",{opacity:0.45});
+      gsap.set("#pf4",{scaleX:0,transformOrigin:"0% 50%"});
+      gsap.set("#pl4",{opacity:0.45});
+      gsap.set("#pf5",{scaleX:0,transformOrigin:"0% 50%"});
+      gsap.set("#pl5",{opacity:0.45});
+      gsap.set("#pf6",{scaleX:0,transformOrigin:"0% 50%"});
+      gsap.set("#pl6",{opacity:0.45});
+      gsap.set("#pf7",{scaleX:0,transformOrigin:"0% 50%"});
+      gsap.set("#pl7",{opacity:0.45});
+      gsap.set("#pf8",{scaleX:0,transformOrigin:"0% 50%"});
+      gsap.set("#pl8",{opacity:0.45});
+      gsap.set("#pf9",{scaleX:0,transformOrigin:"0% 50%"});
+      gsap.set("#pl9",{opacity:0.45});
+      gsap.set("#cap0",{opacity:0});
+      gsap.set("#cap1",{opacity:0});
+      gsap.set("#cap2",{opacity:0});
+      gsap.set("#cap3",{opacity:0});
+      gsap.set("#cap4",{opacity:0});
+      gsap.set("#cap5",{opacity:0});
+      gsap.set("#cap6",{opacity:0});
+      gsap.set("#cap7",{opacity:0});
+      gsap.set("#cap8",{opacity:0});
+      gsap.set("#cap9",{opacity:0});
+      gsap.set("#cap10",{opacity:0});
+      gsap.set("#cap11",{opacity:0});
+      gsap.set("#cap12",{opacity:0});
+      gsap.set("#cap13",{opacity:0});
+      gsap.set("#cap14",{opacity:0});
+      gsap.set("#cap15",{opacity:0});
+      gsap.set("#cap16",{opacity:0});
+      gsap.set("#cap17",{opacity:0});
+      gsap.set("#cap18",{opacity:0});
+      gsap.set("#cap19",{opacity:0});
+      gsap.set("#cap20",{opacity:0});
+      gsap.set("#cap21",{opacity:0});
+      gsap.set("#cap22",{opacity:0});
+      gsap.set("#cap23",{opacity:0});
+      gsap.set("#cap24",{opacity:0});
+      gsap.set("#cap25",{opacity:0});
+      gsap.set("#cap26",{opacity:0});
+      gsap.set("#cap27",{opacity:0});
+      gsap.set("#cap28",{opacity:0});
+      gsap.set("#cap29",{opacity:0});
+      gsap.set("#cap30",{opacity:0});
+      gsap.set("#cap31",{opacity:0});
+      gsap.set("#cap32",{opacity:0});
+      gsap.set("#cap33",{opacity:0});
+      gsap.set("#cap34",{opacity:0});
+      gsap.set("#cap35",{opacity:0});
+      gsap.set("#cap36",{opacity:0});
+      gsap.set("#cap37",{opacity:0});
+      gsap.set("#cap38",{opacity:0});
+      gsap.set("#cap39",{opacity:0});
+      gsap.set("#cap40",{opacity:0});
+      gsap.set("#cap41",{opacity:0});
+      gsap.set("#cap42",{opacity:0});
+      gsap.set("#cap43",{opacity:0});
+      gsap.set("#cap44",{opacity:0});
+      gsap.set("#cap45",{opacity:0});
+      gsap.set("#cap46",{opacity:0});
+      gsap.set("#cap47",{opacity:0});
+      gsap.set("#cap48",{opacity:0});
+      gsap.set("#cap49",{opacity:0});
+      gsap.set("#cap50",{opacity:0});
+      gsap.set("#cap51",{opacity:0});
+      gsap.set("#cap52",{opacity:0});
+      gsap.set("#cap53",{opacity:0});
+      gsap.set("#cap54",{opacity:0});
+      gsap.set("#cap55",{opacity:0});
+      gsap.set("#cap56",{opacity:0});
+      gsap.set("#cap57",{opacity:0});
+      gsap.set("#cap58",{opacity:0});
+      gsap.set("#cap59",{opacity:0});
+      gsap.set("#cap60",{opacity:0});
+      gsap.set("#cap61",{opacity:0});
+      gsap.set("#cap62",{opacity:0});
+      gsap.set("#cap63",{opacity:0});
+      gsap.set("#cap64",{opacity:0});
+      gsap.set("#cap65",{opacity:0});
+      gsap.set("#cap66",{opacity:0});
+      gsap.set("#cap67",{opacity:0});
+      gsap.set("#cap68",{opacity:0});
+      gsap.set("#cap69",{opacity:0});
+      gsap.set("#cap70",{opacity:0});
+      gsap.set("#cap71",{opacity:0});
+      gsap.set("#cap72",{opacity:0});
+      gsap.set("#cap73",{opacity:0});
+      gsap.set("#cap74",{opacity:0});
+      gsap.set("#cap75",{opacity:0});
+      gsap.set("#cap76",{opacity:0});
+      gsap.set("#cap77",{opacity:0});
+      gsap.set("#cap78",{opacity:0});
+      gsap.set("#cap79",{opacity:0});
+      gsap.set("#cap80",{opacity:0});
+      gsap.set("#cap81",{opacity:0});
+      const tl = gsap.timeline({ paused: true });
+      tl.set("#ly2",{opacity:1},0.27);
+      tl.set("#ly2",{opacity:0},6.091);
+      tl.to("#co4",{opacity:1,x:0,duration:0.35,ease:"power2.out"},6.901);
+      tl.to("#co4",{opacity:0,duration:0.22,ease:"power1.in"},8.502);
+      tl.to("#cl5",{opacity:1,duration:0.3,ease:"power2.out"},6.851);
+      tl.to("#cl5",{opacity:0,duration:0.22,ease:"power1.in"},8.502);
+      tl.to("#ly3",{opacity:1,duration:0.25,ease:"power1.out"},5.791);
+      tl.set("#ly3",{opacity:0},9.002);
+      tl.to("#ly6",{opacity:1,duration:0.25,ease:"power1.out"},8.702);
+      tl.set("#ly6",{opacity:0},13.299);
+      tl.to("#ly7",{opacity:1,duration:0.25,ease:"power1.out"},12.999);
+      tl.to("#fr1",{opacity:1,x:0,y:0,rotation:0,duration:0.5,ease:"power2.out"},0.72);
+      tl.to("#fr1",{opacity:0,x:-50,duration:0.28,ease:"power1.in"},15.947);
+      tl.to("#rg10",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},17.587);
+      tl.to("#rg10",{opacity:0,duration:0.2,ease:"power1.in"},19.523);
+      tl.set("#tp11",{opacity:0.9},17.587);
+      tl.to("#tp11",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},17.587);
+      tl.to("#rg12",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},18.407);
+      tl.to("#rg12",{opacity:0,duration:0.2,ease:"power1.in"},19.523);
+      tl.set("#tp13",{opacity:0.9},18.407);
+      tl.to("#tp13",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},18.407);
+      tl.set("#ly9",{opacity:1},15.797);
+      tl.set("#ly9",{opacity:0},20.023);
+      tl.to("#rg15",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},20.433);
+      tl.to("#rg15",{opacity:0,duration:0.2,ease:"power1.in"},21.821);
+      tl.set("#tp16",{opacity:0.9},20.433);
+      tl.to("#tp16",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},20.433);
+      tl.to("#ly14",{opacity:1,duration:0.25,ease:"power1.out"},19.723);
+      tl.to("#fr8",{opacity:1,x:0,y:0,rotation:0,duration:0.5,ease:"power2.out"},16.247);
+      tl.to("#fr8",{opacity:0,x:-50,duration:0.28,ease:"power1.in"},21.891);
+      tl.to("#fr17",{opacity:1,x:0,y:0,rotation:0,duration:0.5,ease:"power2.out"},21.891);
+      tl.to("#fr17",{opacity:0,x:-50,duration:0.28,ease:"power1.in"},33.454);
+      tl.to("#fr19",{opacity:1,x:0,y:0,rotation:0,duration:0.5,ease:"power2.out"},22.011);
+      tl.to("#fr19",{opacity:0,x:-50,duration:0.28,ease:"power1.in"},33.454);
+      tl.to("#fr21",{opacity:1,x:0,y:0,rotation:0,duration:0.5,ease:"power2.out"},22.131);
+      tl.to("#fr21",{opacity:0,x:-50,duration:0.28,ease:"power1.in"},33.454);
+      tl.to("#fr23",{opacity:1,x:0,y:0,rotation:0,duration:0.5,ease:"power2.out"},22.251);
+      tl.to("#fr23",{opacity:0,x:-50,duration:0.28,ease:"power1.in"},33.454);
+      tl.to("#fr17",{opacity:1,duration:0.3,ease:"power1.inOut"},23.779);
+      tl.to("#fr19",{opacity:0.35,duration:0.3,ease:"power1.inOut"},23.779);
+      tl.to("#fr21",{opacity:0.35,duration:0.3,ease:"power1.inOut"},23.779);
+      tl.to("#fr23",{opacity:0.35,duration:0.3,ease:"power1.inOut"},23.779);
+      tl.to("#fr17",{opacity:0.35,duration:0.3,ease:"power1.inOut"},25.726);
+      tl.to("#fr19",{opacity:1,duration:0.3,ease:"power1.inOut"},25.726);
+      tl.to("#fr21",{opacity:0.35,duration:0.3,ease:"power1.inOut"},25.726);
+      tl.to("#fr23",{opacity:0.35,duration:0.3,ease:"power1.inOut"},25.726);
+      tl.to("#fr17",{opacity:0.35,duration:0.3,ease:"power1.inOut"},28.197);
+      tl.to("#fr19",{opacity:0.35,duration:0.3,ease:"power1.inOut"},28.197);
+      tl.to("#fr21",{opacity:1,duration:0.3,ease:"power1.inOut"},28.197);
+      tl.to("#fr23",{opacity:0.35,duration:0.3,ease:"power1.inOut"},28.197);
+      tl.to("#fr17",{opacity:0.35,duration:0.3,ease:"power1.inOut"},30.084);
+      tl.to("#fr19",{opacity:0.35,duration:0.3,ease:"power1.inOut"},30.084);
+      tl.to("#fr21",{opacity:0.35,duration:0.3,ease:"power1.inOut"},30.084);
+      tl.to("#fr23",{opacity:1,duration:0.3,ease:"power1.inOut"},30.084);
+      tl.set("#ly26",{opacity:1},33.304);
+      tl.set("#ly26",{opacity:0},35.904);
+      tl.to("#co28",{opacity:1,x:0,duration:0.35,ease:"power2.out"},36.054);
+      tl.to("#co28",{opacity:0,duration:0.22,ease:"power1.in"},37.577);
+      tl.to("#cl29",{opacity:1,duration:0.3,ease:"power2.out"},36.004);
+      tl.to("#cl29",{opacity:0,duration:0.22,ease:"power1.in"},37.577);
+      tl.to("#ly27",{opacity:1,duration:0.25,ease:"power1.out"},35.604);
+      tl.set("#ly27",{opacity:0},38.197);
+      tl.to("#ly30",{opacity:1,duration:0.25,ease:"power1.out"},37.897);
+      tl.to("#fr25",{opacity:1,x:0,y:0,rotation:0,duration:0.5,ease:"power2.out"},33.754);
+      tl.to("#fr25",{opacity:0,x:-50,duration:0.28,ease:"power1.in"},41.154);
+      tl.to("#fr31",{opacity:1,x:0,y:0,rotation:0,duration:0.5,ease:"power2.out"},41.154);
+      tl.to("#fr31",{opacity:0,x:-50,duration:0.28,ease:"power1.in"},42.892);
+      tl.to("#fr33",{opacity:1,x:0,y:0,rotation:0,duration:0.5,ease:"power2.out"},41.334);
+      tl.to("#fr33",{opacity:0,x:-50,duration:0.28,ease:"power1.in"},42.892);
+      tl.to("#fr35",{opacity:1,x:0,y:0,rotation:0,duration:0.5,ease:"power2.out"},41.514);
+      tl.to("#fr35",{opacity:0,x:-50,duration:0.28,ease:"power1.in"},42.892);
+      tl.to("#fr37",{opacity:1,x:0,y:0,rotation:0,duration:0.5,ease:"power2.out"},41.694);
+      tl.to("#fr37",{opacity:0,x:-50,duration:0.28,ease:"power1.in"},42.892);
+      tl.to("#rg41",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},43.652);
+      tl.to("#rg41",{opacity:0,duration:0.2,ease:"power1.in"},46.0);
+      tl.set("#tp42",{opacity:0.9},43.652);
+      tl.to("#tp42",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},43.652);
+      tl.set("#ly40",{opacity:1},42.742);
+      tl.set("#ly40",{opacity:0},46.62);
+      tl.to("#ly43",{opacity:1,duration:0.25,ease:"power1.out"},46.32);
+      tl.set("#ly43",{opacity:0},48.719);
+      tl.to("#rg45",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},49.089);
+      tl.to("#rg45",{opacity:0,duration:0.2,ease:"power1.in"},52.047);
+      tl.set("#tp46",{opacity:0.9},49.089);
+      tl.to("#tp46",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},49.089);
+      tl.to("#rg47",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},50.069);
+      tl.to("#rg47",{opacity:0,duration:0.2,ease:"power1.in"},52.047);
+      tl.set("#tp48",{opacity:0.9},50.069);
+      tl.to("#tp48",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},50.069);
+      tl.to("#rg49",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},51.509);
+      tl.to("#rg49",{opacity:0,duration:0.2,ease:"power1.in"},52.047);
+      tl.set("#tp50",{opacity:0.9},51.509);
+      tl.to("#tp50",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},51.509);
+      tl.to("#ly44",{opacity:1,duration:0.25,ease:"power1.out"},48.419);
+      tl.set("#ly44",{opacity:0},52.667);
+      tl.to("#rg52",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},55.237);
+      tl.to("#rg52",{opacity:0,duration:0.2,ease:"power1.in"},57.249);
+      tl.set("#tp53",{opacity:0.9},55.237);
+      tl.to("#tp53",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},55.237);
+      tl.to("#rg54",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},56.277);
+      tl.to("#rg54",{opacity:0,duration:0.2,ease:"power1.in"},57.249);
+      tl.set("#tp55",{opacity:0.9},56.277);
+      tl.to("#tp55",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},56.277);
+      tl.to("#ly51",{opacity:1,duration:0.25,ease:"power1.out"},52.367);
+      tl.set("#ly51",{opacity:0},57.749);
+      tl.to("#ly56md",{scale:1,rotation:0,opacity:1,duration:0.6,ease:"power2.out"},57.649);
+      tl.to("#ly56msh",{scale:0.86,duration:0.12,ease:"power1.in"},59.499);
+      tl.to("#ly56msh",{scale:1,duration:0.2,ease:"power1.out"},59.619);
+      tl.set("#ly56mfl",{opacity:0.5},59.549);
+      tl.to("#ly56mfl",{opacity:0,duration:0.3,ease:"power1.out"},59.579);
+      tl.to("#ly56",{opacity:1,duration:0.25,ease:"power1.out"},57.449);
+      tl.set("#ly56",{opacity:0},61.349);
+      tl.to("#ly57md",{scale:1,rotation:0,opacity:1,duration:0.6,ease:"power2.out"},61.249);
+      tl.to("#ly57msh",{scale:0.86,duration:0.12,ease:"power1.in"},63.099);
+      tl.to("#ly57msh",{scale:1,duration:0.2,ease:"power1.out"},63.219);
+      tl.set("#ly57mfl",{opacity:0.5},63.149);
+      tl.to("#ly57mfl",{opacity:0,duration:0.3,ease:"power1.out"},63.179);
+      tl.to("#ly57",{opacity:1,duration:0.25,ease:"power1.out"},61.049);
+      tl.set("#ly57",{opacity:0},67.606);
+      tl.to("#ly58md",{scale:0.78,y:-40,duration:0.6,ease:"power2.inOut"},67.356);
+      tl.set("#ly58mp",{x:-160},67.856);
+      tl.to("#ly58mp",{x:380,duration:1.2,ease:"power1.inOut"},67.856);
+      tl.set("#ly58mp",{x:-160},69.156);
+      tl.to("#ly58mp",{x:380,duration:1.2,ease:"power1.inOut"},69.156);
+      tl.set("#ly58mp",{x:-160},70.456);
+      tl.to("#ly58mp",{x:380,duration:1.2,ease:"power1.inOut"},70.456);
+      tl.set("#ly58mp",{x:-160},71.756);
+      tl.to("#ly58mp",{x:380,duration:1.2,ease:"power1.inOut"},71.756);
+      tl.to("#ly58",{opacity:1,duration:0.25,ease:"power1.out"},67.306);
+      tl.set("#ly58",{opacity:0},73.619);
+      tl.to("#ly59",{opacity:1,duration:0.25,ease:"power1.out"},73.319);
+      tl.set("#ly59",{opacity:0},75.639);
+      tl.to("#co61",{opacity:1,x:0,duration:0.35,ease:"power2.out"},76.329);
+      tl.to("#co61",{opacity:0,duration:0.22,ease:"power1.in"},77.632);
+      tl.to("#cl62",{opacity:1,duration:0.3,ease:"power2.out"},76.279);
+      tl.to("#cl62",{opacity:0,duration:0.22,ease:"power1.in"},77.632);
+      tl.to("#ly60",{opacity:1,duration:0.25,ease:"power1.out"},75.339);
+      tl.set("#ly60",{opacity:0},78.252);
+      tl.to("#rg64",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},79.482);
+      tl.to("#rg64",{opacity:0,duration:0.2,ease:"power1.in"},80.165);
+      tl.set("#tp65",{opacity:0.9},79.482);
+      tl.to("#tp65",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},79.482);
+      tl.to("#ly63",{opacity:1,duration:0.25,ease:"power1.out"},77.952);
+      tl.set("#ly63",{opacity:0},80.665);
+      tl.to("#rg67",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},81.895);
+      tl.to("#rg67",{opacity:0,duration:0.2,ease:"power1.in"},83.345);
+      tl.set("#tp68",{opacity:0.9},81.895);
+      tl.to("#tp68",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},81.895);
+      tl.to("#ly66",{opacity:1,duration:0.25,ease:"power1.out"},80.365);
+      tl.set("#ly66",{opacity:0},83.845);
+      tl.to("#ly69",{opacity:1,duration:0.25,ease:"power1.out"},83.545);
+      tl.set("#ly69",{opacity:0},85.18);
+      tl.to("#ly70",{opacity:1,duration:0.25,ease:"power1.out"},84.88);
+      tl.set("#ly70",{opacity:0},86.62);
+      tl.to("#co72",{opacity:1,x:0,duration:0.35,ease:"power2.out"},86.99);
+      tl.to("#co72",{opacity:0,duration:0.22,ease:"power1.in"},87.68);
+      tl.to("#cl73",{opacity:1,duration:0.3,ease:"power2.out"},86.94);
+      tl.to("#cl73",{opacity:0,duration:0.22,ease:"power1.in"},87.68);
+      tl.to("#ly71",{opacity:1,duration:0.25,ease:"power1.out"},86.32);
+      tl.set("#ly71",{opacity:0},88.3);
+      tl.to("#ly74",{opacity:1,duration:0.25,ease:"power1.out"},88.0);
+      tl.set("#ly74",{opacity:0},89.82);
+      tl.to("#ly75",{opacity:1,duration:0.25,ease:"power1.out"},89.52);
+      tl.set("#ly75",{opacity:0},91.08);
+      tl.to("#ly76",{opacity:1,duration:0.25,ease:"power1.out"},90.78);
+      tl.to("#fr39",{opacity:1,x:0,y:0,rotation:0,duration:0.5,ease:"power2.out"},42.892);
+      tl.to("#fr39",{opacity:0,x:-50,duration:0.28,ease:"power1.in"},91.965);
+      tl.to("#rg79",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},92.985);
+      tl.to("#rg79",{opacity:0,duration:0.2,ease:"power1.in"},94.827);
+      tl.set("#tp80",{opacity:0.9},92.985);
+      tl.to("#tp80",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},92.985);
+      tl.set("#ly78",{opacity:1},91.815);
+      tl.set("#ly78",{opacity:0},95.327);
+      tl.to("#rg82",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},95.497);
+      tl.to("#rg82",{opacity:0,duration:0.2,ease:"power1.in"},98.671);
+      tl.set("#tp83",{opacity:0.9},95.497);
+      tl.to("#tp83",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},95.497);
+      tl.to("#ly81",{opacity:1,duration:0.25,ease:"power1.out"},95.027);
+      tl.set("#ly81",{opacity:0},99.291);
+      tl.to("#rg85",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},99.421);
+      tl.to("#rg85",{opacity:0,duration:0.2,ease:"power1.in"},99.791);
+      tl.set("#tp86",{opacity:0.9},99.421);
+      tl.to("#tp86",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},99.421);
+      tl.to("#ly84",{opacity:1,duration:0.25,ease:"power1.out"},98.991);
+      tl.set("#ly84",{opacity:0},100.291);
+      tl.to("#ly87",{opacity:1,duration:0.25,ease:"power1.out"},99.991);
+      tl.set("#ly87",{opacity:0},100.996);
+      tl.to("#rg89",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},101.866);
+      tl.to("#rg89",{opacity:0,duration:0.2,ease:"power1.in"},103.131);
+      tl.set("#tp90",{opacity:0.9},101.866);
+      tl.to("#tp90",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},101.866);
+      tl.to("#ly88",{opacity:1,duration:0.25,ease:"power1.out"},100.696);
+      tl.set("#ly88",{opacity:0},103.751);
+      tl.to("#rg92",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},104.281);
+      tl.to("#rg92",{opacity:0,duration:0.2,ease:"power1.in"},107.404);
+      tl.set("#tp93",{opacity:0.9},104.281);
+      tl.to("#tp93",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},104.281);
+      tl.to("#ly91",{opacity:1,duration:0.25,ease:"power1.out"},103.451);
+      tl.set("#ly91",{opacity:0},107.904);
+      tl.to("#ly94",{opacity:1,duration:0.25,ease:"power1.out"},107.604);
+      tl.set("#ly94",{opacity:0},110.544);
+      tl.to("#rg96",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},110.994);
+      tl.to("#rg96",{opacity:0,duration:0.2,ease:"power1.in"},111.752);
+      tl.set("#tp97",{opacity:0.9},110.994);
+      tl.to("#tp97",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},110.994);
+      tl.to("#ly95",{opacity:1,duration:0.25,ease:"power1.out"},110.244);
+      tl.set("#ly95",{opacity:0},112.372);
+      tl.to("#rg99",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},112.272);
+      tl.to("#rg99",{opacity:0,duration:0.2,ease:"power1.in"},113.092);
+      tl.set("#tp100",{opacity:0.9},112.272);
+      tl.to("#tp100",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},112.272);
+      tl.to("#ly98",{opacity:1,duration:0.25,ease:"power1.out"},112.072);
+      tl.set("#ly98",{opacity:0},113.592);
+      tl.to("#ly101",{opacity:1,duration:0.25,ease:"power1.out"},113.292);
+      tl.set("#ly101",{opacity:0},115.117);
+      tl.to("#co103",{opacity:1,x:0,duration:0.35,ease:"power2.out"},115.167);
+      tl.to("#co103",{opacity:0,duration:0.22,ease:"power1.in"},116.914);
+      tl.to("#cl104",{opacity:1,duration:0.3,ease:"power2.out"},115.117);
+      tl.to("#cl104",{opacity:0,duration:0.22,ease:"power1.in"},116.914);
+      tl.to("#ly102",{opacity:1,duration:0.25,ease:"power1.out"},114.817);
+      tl.set("#ly102",{opacity:0},117.534);
+      tl.to("#co106",{opacity:1,x:0,duration:0.35,ease:"power2.out"},118.224);
+      tl.to("#co106",{opacity:0,duration:0.22,ease:"power1.in"},119.554);
+      tl.to("#cl107",{opacity:1,duration:0.3,ease:"power2.out"},118.174);
+      tl.to("#cl107",{opacity:0,duration:0.22,ease:"power1.in"},119.554);
+      tl.to("#ly105",{opacity:1,duration:0.25,ease:"power1.out"},117.234);
+      tl.set("#ly105",{opacity:0},120.054);
+      tl.to("#rg109",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},120.284);
+      tl.to("#rg109",{opacity:0,duration:0.2,ease:"power1.in"},121.544);
+      tl.set("#tp110",{opacity:0.9},120.284);
+      tl.to("#tp110",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},120.284);
+      tl.to("#ly108",{opacity:1,duration:0.25,ease:"power1.out"},119.754);
+      tl.set("#ly108",{opacity:0},122.044);
+      tl.to("#ly111",{opacity:1,duration:0.25,ease:"power1.out"},121.744);
+      tl.to("#fr77",{opacity:1,x:0,y:0,rotation:0,duration:0.5,ease:"power2.out"},92.265);
+      tl.to("#fr77",{opacity:0,x:-50,duration:0.28,ease:"power1.in"},125.026);
+      tl.to("#rg114",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},127.626);
+      tl.to("#rg114",{opacity:0,duration:0.2,ease:"power1.in"},128.306);
+      tl.set("#tp115",{opacity:0.9},127.626);
+      tl.to("#tp115",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},127.626);
+      tl.set("#ly113",{opacity:1},124.876);
+      tl.set("#ly113",{opacity:0},128.806);
+      tl.to("#rg117",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},129.856);
+      tl.to("#rg117",{opacity:0,duration:0.2,ease:"power1.in"},138.55);
+      tl.set("#tp118",{opacity:0.9},129.856);
+      tl.to("#tp118",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},129.856);
+      tl.to("#ly116",{opacity:1,duration:0.25,ease:"power1.out"},128.506);
+      tl.set("#ly116",{opacity:0},139.17);
+      tl.to("#ly119md",{rotation:0,scale:1,opacity:1,duration:0.7,ease:"power2.out"},139.02);
+      tl.set("#ly119mln",{opacity:0.9},139.52);
+      tl.to("#ly119mln",{y:300,duration:1.1,ease:"power1.inOut"},139.52);
+      tl.set("#ly119mln",{opacity:0},140.67);
+      tl.to("#ly119mok",{opacity:1,y:0,duration:0.3,ease:"power2.out"},140.72);
+      tl.to("#ly119",{opacity:1,duration:0.25,ease:"power1.out"},138.87);
+      tl.set("#ly119",{opacity:0},142.37);
+      tl.set("#ly120",{scale:0.798,x:-63.868,y:-32.036},142.12);
+      tl.to("#rg121",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},142.27);
+      tl.to("#rg121",{opacity:0,duration:0.2,ease:"power1.in"},143.937);
+      tl.set("#tp122",{opacity:0.9},142.27);
+      tl.to("#tp122",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},142.27);
+      tl.to("#ly120",{scale:0.798,x:-63.868,y:-235.616,duration:0.7,ease:"power2.inOut"},143.17);
+      tl.to("#rg123",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},143.22);
+      tl.to("#rg123",{opacity:0,duration:0.2,ease:"power1.in"},143.937);
+      tl.set("#tp124",{opacity:0.9},143.22);
+      tl.to("#tp124",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},143.22);
+      tl.to("#ly120",{opacity:1,duration:0.25,ease:"power1.out"},142.07);
+      tl.set("#ly120",{opacity:0},144.557);
+      tl.to("#rg126",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},146.447);
+      tl.to("#rg126",{opacity:0,duration:0.2,ease:"power1.in"},155.097);
+      tl.set("#tp127",{opacity:0.9},146.447);
+      tl.to("#tp127",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},146.447);
+      tl.to("#rg128",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},147.787);
+      tl.to("#rg128",{opacity:0,duration:0.2,ease:"power1.in"},155.097);
+      tl.set("#tp129",{opacity:0.9},147.787);
+      tl.to("#tp129",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},147.787);
+      tl.to("#ly125",{opacity:1,duration:0.25,ease:"power1.out"},144.257);
+      tl.to("#fr112",{opacity:1,x:0,y:0,rotation:0,duration:0.5,ease:"power2.out"},125.326);
+      tl.to("#fr112",{opacity:0,x:-50,duration:0.28,ease:"power1.in"},155.467);
+      tl.to("#fr112",{opacity:1,duration:0.3,ease:"power1.inOut"},128.556);
+      tl.to("#fr112",{opacity:0.55,duration:0.3,ease:"power1.inOut"},131.939);
+      tl.to("#fr112",{opacity:1,duration:0.3,ease:"power1.inOut"},138.92);
+      tl.to("#fr112",{opacity:1,duration:0.3,ease:"power1.inOut"},142.12);
+      tl.to("#fr112",{opacity:1,duration:0.3,ease:"power1.inOut"},144.307);
+      tl.to("#fr112",{opacity:0.55,duration:0.3,ease:"power1.inOut"},148.888);
+      tl.to("#fr112",{opacity:0.55,duration:0.3,ease:"power1.inOut"},153.546);
+      tl.to("#rg132",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},134.059);
+      tl.to("#rg132",{opacity:0,duration:0.2,ease:"power1.in"},148.518);
+      tl.set("#tp133",{opacity:0.9},134.059);
+      tl.to("#tp133",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},134.059);
+      tl.to("#ly131",{scale:0.798,x:-63.868,y:-219.649,duration:0.7,ease:"power2.inOut"},135.829);
+      tl.set("#ly131",{opacity:1},131.489);
+      tl.set("#ly131",{opacity:0},149.138);
+      tl.to("#rg135",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},152.408);
+      tl.to("#rg135",{opacity:0,duration:0.2,ease:"power1.in"},153.296);
+      tl.set("#tp136",{opacity:0.9},152.408);
+      tl.to("#tp136",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},152.408);
+      tl.to("#ly134",{opacity:1,duration:0.25,ease:"power1.out"},148.838);
+      tl.set("#ly134",{opacity:0},153.796);
+      tl.to("#rg138",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},154.046);
+      tl.to("#rg138",{opacity:0,duration:0.2,ease:"power1.in"},155.097);
+      tl.set("#tp139",{opacity:0.9},154.046);
+      tl.to("#tp139",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},154.046);
+      tl.to("#ly137",{opacity:1,duration:0.25,ease:"power1.out"},153.496);
+      tl.to("#fr130",{opacity:1,x:0,y:0,rotation:0,duration:0.5,ease:"power2.out"},131.639);
+      tl.to("#fr130",{opacity:0,x:-50,duration:0.28,ease:"power1.in"},155.467);
+      tl.to("#fr130",{opacity:0.55,duration:0.3,ease:"power1.inOut"},138.92);
+      tl.to("#fr130",{opacity:0.55,duration:0.3,ease:"power1.inOut"},142.12);
+      tl.to("#fr130",{opacity:0.55,duration:0.3,ease:"power1.inOut"},144.307);
+      tl.to("#fr130",{opacity:1,duration:0.3,ease:"power1.inOut"},148.888);
+      tl.to("#fr130",{opacity:1,duration:0.3,ease:"power1.inOut"},153.546);
+      tl.to("#cn140",{opacity:1,scaleX:1,duration:0.6,ease:"power2.out"},132.339);
+      tl.to("#cn140",{opacity:0,duration:0.25,ease:"power1.in"},155.467);
+      tl.to("#rg143",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},158.227);
+      tl.to("#rg143",{opacity:0,duration:0.2,ease:"power1.in"},159.317);
+      tl.set("#tp144",{opacity:0.9},158.227);
+      tl.to("#tp144",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},158.227);
+      tl.set("#ly142",{opacity:1},155.317);
+      tl.set("#ly142",{opacity:0},159.817);
+      tl.to("#ly145",{opacity:1,duration:0.25,ease:"power1.out"},159.517);
+      tl.set("#ly145",{opacity:0},161.388);
+      tl.to("#rg147",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},161.288);
+      tl.to("#rg147",{opacity:0,duration:0.2,ease:"power1.in"},161.928);
+      tl.set("#tp148",{opacity:0.9},161.288);
+      tl.to("#tp148",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},161.288);
+      tl.to("#ly146",{opacity:1,duration:0.25,ease:"power1.out"},161.088);
+      tl.set("#ly146",{opacity:0},162.428);
+      tl.to("#rg150",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},163.598);
+      tl.to("#rg150",{opacity:0,duration:0.2,ease:"power1.in"},164.71);
+      tl.set("#tp151",{opacity:0.9},163.598);
+      tl.to("#tp151",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},163.598);
+      tl.to("#ly149",{opacity:1,duration:0.25,ease:"power1.out"},162.128);
+      tl.set("#ly149",{opacity:0},165.33);
+      tl.to("#rg153",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},166.32);
+      tl.to("#rg153",{opacity:0,duration:0.2,ease:"power1.in"},167.21);
+      tl.set("#tp154",{opacity:0.9},166.32);
+      tl.to("#tp154",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},166.32);
+      tl.to("#ly152",{opacity:1,duration:0.25,ease:"power1.out"},165.03);
+      tl.set("#ly152",{opacity:0},167.71);
+      tl.to("#rg156",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},168.12);
+      tl.to("#rg156",{opacity:0,duration:0.2,ease:"power1.in"},169.346);
+      tl.set("#tp157",{opacity:0.9},168.12);
+      tl.to("#tp157",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},168.12);
+      tl.to("#ly155",{opacity:1,duration:0.25,ease:"power1.out"},167.41);
+      tl.set("#ly155",{opacity:0},169.966);
+      tl.to("#ly158",{opacity:1,duration:0.25,ease:"power1.out"},169.666);
+      tl.set("#ly158",{opacity:0},171.006);
+      tl.to("#ly159md",{rotation:0,scale:1,opacity:1,duration:0.7,ease:"power2.out"},170.856);
+      tl.set("#ly159mln",{opacity:0.9},171.356);
+      tl.to("#ly159mln",{y:300,duration:1.1,ease:"power1.inOut"},171.356);
+      tl.set("#ly159mln",{opacity:0},172.506);
+      tl.to("#ly159mok",{opacity:1,y:0,duration:0.3,ease:"power2.out"},172.556);
+      tl.to("#ly159",{opacity:1,duration:0.25,ease:"power1.out"},170.706);
+      tl.set("#ly159",{opacity:0},173.766);
+      tl.to("#ly160md",{scale:1,rotation:0,opacity:1,duration:0.6,ease:"power2.out"},173.666);
+      tl.to("#ly160msh",{scale:0.86,duration:0.12,ease:"power1.in"},175.516);
+      tl.to("#ly160msh",{scale:1,duration:0.2,ease:"power1.out"},175.636);
+      tl.set("#ly160mfl",{opacity:0.5},175.566);
+      tl.to("#ly160mfl",{opacity:0,duration:0.3,ease:"power1.out"},175.596);
+      tl.to("#ly160",{opacity:1,duration:0.25,ease:"power1.out"},173.466);
+      tl.set("#ly160",{opacity:0},176.966);
+      tl.to("#ly161md",{scale:0.78,y:-40,duration:0.6,ease:"power2.inOut"},176.716);
+      tl.set("#ly161mp",{x:-160},177.216);
+      tl.to("#ly161mp",{x:380,duration:1.2,ease:"power1.inOut"},177.216);
+      tl.set("#ly161mp",{x:-160},178.516);
+      tl.to("#ly161mp",{x:380,duration:1.2,ease:"power1.inOut"},178.516);
+      tl.set("#ly161mp",{x:-160},179.816);
+      tl.to("#ly161mp",{x:380,duration:1.2,ease:"power1.inOut"},179.816);
+      tl.set("#ly161mp",{x:-160},181.116);
+      tl.to("#ly161mp",{x:380,duration:1.2,ease:"power1.inOut"},181.116);
+      tl.to("#ly161",{opacity:1,duration:0.25,ease:"power1.out"},176.666);
+      tl.to("#fr141",{opacity:1,x:0,y:0,rotation:0,duration:0.5,ease:"power2.out"},155.767);
+      tl.to("#fr141",{opacity:0,x:-50,duration:0.28,ease:"power1.in"},181.677);
+      tl.to("#rg164",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},183.697);
+      tl.to("#rg164",{opacity:0,duration:0.2,ease:"power1.in"},184.907);
+      tl.set("#tp165",{opacity:0.9},183.697);
+      tl.to("#tp165",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},183.697);
+      tl.set("#ly163",{opacity:1},181.527);
+      tl.set("#ly163",{opacity:0},185.407);
+      tl.to("#rg167",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},185.307);
+      tl.to("#rg167",{opacity:0,duration:0.2,ease:"power1.in"},185.867);
+      tl.set("#tp168",{opacity:0.9},185.307);
+      tl.to("#tp168",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},185.307);
+      tl.to("#ly166",{opacity:1,duration:0.25,ease:"power1.out"},185.107);
+      tl.set("#ly166",{opacity:0},186.367);
+      tl.to("#ly169",{opacity:1,duration:0.25,ease:"power1.out"},186.067);
+      tl.to("#fr162",{opacity:1,x:0,y:0,rotation:0,duration:0.5,ease:"power2.out"},181.977);
+      tl.to("#fr162",{opacity:0,x:-50,duration:0.28,ease:"power1.in"},186.839);
+      tl.to("#wdiv",{opacity:1,duration:0.4,ease:"power2.out"},187.039);
+      tl.to("#wdiv",{opacity:0,duration:0.25,ease:"power2.out"},198.729);
+      tl.to("#wh170",{opacity:1,y:0,duration:0.4,ease:"power2.out"},187.039);
+      tl.to("#wh170",{opacity:0,duration:0.25,ease:"power2.out"},198.729);
+      tl.to("#fr171",{opacity:1,x:0,y:0,rotation:0,duration:0.5,ease:"power2.out"},186.839);
+      tl.to("#fr171",{opacity:0,x:-50,duration:0.28,ease:"power1.in"},198.729);
+      tl.to("#fr173",{opacity:1,x:0,y:0,rotation:0,duration:0.5,ease:"power2.out"},186.839);
+      tl.to("#fr173",{opacity:0,x:-50,duration:0.28,ease:"power1.in"},198.729);
+      tl.to("#wh170",{opacity:1,duration:0.3,ease:"power1.inOut"},188.866);
+      tl.to("#fr171",{opacity:1,duration:0.3,ease:"power1.inOut"},188.866);
+      tl.to("#fr173",{opacity:1,duration:0.3,ease:"power1.inOut"},188.866);
+      tl.to("#wh170",{opacity:0.35,duration:0.3,ease:"power1.inOut"},193.557);
+      tl.to("#fr171",{opacity:0.35,duration:0.3,ease:"power1.inOut"},193.557);
+      tl.to("#fr173",{opacity:0.35,duration:0.3,ease:"power1.inOut"},193.557);
+      tl.to("#wh175",{opacity:1,y:0,duration:0.4,ease:"power2.out"},187.039);
+      tl.to("#wh175",{opacity:0,duration:0.25,ease:"power2.out"},198.729);
+      tl.to("#fr176",{opacity:1,x:0,y:0,rotation:0,duration:0.5,ease:"power2.out"},187.039);
+      tl.to("#fr176",{opacity:0,x:-50,duration:0.28,ease:"power1.in"},198.729);
+      tl.to("#wh175",{opacity:0.35,duration:0.3,ease:"power1.inOut"},188.866);
+      tl.to("#fr176",{opacity:0.35,duration:0.3,ease:"power1.inOut"},188.866);
+      tl.to("#wh175",{opacity:1,duration:0.3,ease:"power1.inOut"},193.557);
+      tl.to("#fr176",{opacity:1,duration:0.3,ease:"power1.inOut"},193.557);
+      tl.to("#rg180",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},201.249);
+      tl.to("#rg180",{opacity:0,duration:0.2,ease:"power1.in"},202.27);
+      tl.set("#tp181",{opacity:0.9},201.249);
+      tl.to("#tp181",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},201.249);
+      tl.set("#ly179",{opacity:1},198.579);
+      tl.set("#ly179",{opacity:0},202.89);
+      tl.to("#rg183",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},203.62);
+      tl.to("#rg183",{opacity:0,duration:0.2,ease:"power1.in"},204.15);
+      tl.set("#tp184",{opacity:0.9},203.62);
+      tl.to("#tp184",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},203.62);
+      tl.to("#ly182",{opacity:1,duration:0.25,ease:"power1.out"},202.59);
+      tl.set("#ly182",{opacity:0},204.65);
+      tl.to("#co186",{opacity:1,x:0,duration:0.35,ease:"power2.out"},204.9);
+      tl.to("#co186",{opacity:0,duration:0.22,ease:"power1.in"},205.45);
+      tl.to("#cl187",{opacity:1,duration:0.3,ease:"power2.out"},204.85);
+      tl.to("#cl187",{opacity:0,duration:0.22,ease:"power1.in"},205.45);
+      tl.to("#ly185",{opacity:1,duration:0.25,ease:"power1.out"},204.35);
+      tl.set("#ly185",{opacity:0},205.95);
+      tl.to("#rg189",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},205.85);
+      tl.to("#rg189",{opacity:0,duration:0.2,ease:"power1.in"},206.549);
+      tl.set("#tp190",{opacity:0.9},205.85);
+      tl.to("#tp190",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},205.85);
+      tl.to("#ly188",{opacity:1,duration:0.25,ease:"power1.out"},205.65);
+      tl.set("#ly188",{opacity:0},207.169);
+      tl.to("#rg192",{opacity:1,scale:1,duration:0.3,ease:"power2.out"},207.979);
+      tl.to("#rg192",{opacity:0,duration:0.2,ease:"power1.in"},209.889);
+      tl.set("#tp193",{opacity:0.9},207.979);
+      tl.to("#tp193",{scale:1.6,opacity:0,duration:0.55,ease:"power2.out"},207.979);
+      tl.to("#ly191",{opacity:1,duration:0.25,ease:"power1.out"},206.869);
+      tl.set("#ly191",{opacity:0},210.389);
+      tl.to("#ly194",{opacity:1,duration:0.25,ease:"power1.out"},210.089);
+      tl.set("#ly194",{opacity:0},212.489);
+      tl.to("#co196",{opacity:1,x:0,duration:0.35,ease:"power2.out"},215.219);
+      tl.to("#co196",{opacity:0,duration:0.22,ease:"power1.in"},218.071);
+      tl.to("#cl197",{opacity:1,duration:0.3,ease:"power2.out"},215.169);
+      tl.to("#cl197",{opacity:0,duration:0.22,ease:"power1.in"},218.071);
+      tl.to("#ly195",{opacity:1,duration:0.25,ease:"power1.out"},212.189);
+      tl.to("#fr178",{opacity:1,x:0,y:0,rotation:0,duration:0.5,ease:"power2.out"},199.029);
+      tl.to("#fr178",{opacity:0,x:-50,duration:0.28,ease:"power1.in"},218.441);
+      tl.to("#co200",{opacity:1,x:0,duration:0.35,ease:"power2.out"},219.141);
+      tl.to("#co200",{opacity:0,duration:0.22,ease:"power1.in"},220.891);
+      tl.to("#cl201",{opacity:1,duration:0.3,ease:"power2.out"},219.091);
+      tl.to("#cl201",{opacity:0,duration:0.22,ease:"power1.in"},220.891);
+      tl.to("#co202",{opacity:1,x:0,duration:0.35,ease:"power2.out"},221.041);
+      tl.to("#co202",{opacity:0,duration:0.22,ease:"power1.in"},221.893);
+      tl.to("#cl203",{opacity:1,duration:0.3,ease:"power2.out"},220.991);
+      tl.to("#cl203",{opacity:0,duration:0.22,ease:"power1.in"},221.893);
+      tl.set("#ly199",{opacity:1},218.291);
+      tl.to("#fr198",{opacity:1,x:0,y:0,rotation:0,duration:0.5,ease:"power2.out"},218.741);
+      tl.to("#fr198",{opacity:0,x:-50,duration:0.28,ease:"power1.in"},221.963);
+      tl.to("#cd204",{opacity:1,y:0,duration:0.35,ease:"power2.out"},222.363);
+      tl.to("#cd204",{opacity:0,duration:0.25,ease:"power2.out"},223.583);
+      tl.set("#ly206",{opacity:1},223.733);
+      tl.to("#fr205",{opacity:1,x:0,y:0,rotation:0,duration:0.5,ease:"power2.out"},223.883);
+      tl.to("#fr205",{opacity:0,x:-50,duration:0.28,ease:"power1.in"},230.56);
+      tl.to("#fr207",{opacity:1,x:0,y:0,rotation:0,duration:0.5,ease:"power2.out"},230.86);
+      tl.to("#cr209",{opacity:1,y:0,duration:0.4,ease:"power2.out"},231.36);
+      tl.to("#cl210",{opacity:1,duration:0.4,ease:"power2.out"},231.56);
+      tl.to("#cr209",{opacity:0,duration:0.4,ease:"power2.out"},237.156);
+      tl.to("#cl210",{opacity:0,duration:0.4,ease:"power2.out"},237.156);
+      tl.to("#cr211",{opacity:1,y:0,duration:0.4,ease:"power2.out"},231.71);
+      tl.to("#cl212",{opacity:1,duration:0.4,ease:"power2.out"},231.91);
+      tl.to("#cr211",{opacity:0,duration:0.4,ease:"power2.out"},237.156);
+      tl.to("#cl212",{opacity:0,duration:0.4,ease:"power2.out"},237.156);
+      tl.to("#cr213",{opacity:1,y:0,duration:0.4,ease:"power2.out"},232.06);
+      tl.to("#cl214",{opacity:1,duration:0.4,ease:"power2.out"},232.26);
+      tl.to("#cr213",{opacity:0,duration:0.4,ease:"power2.out"},237.156);
+      tl.to("#cl214",{opacity:0,duration:0.4,ease:"power2.out"},237.156);
+      tl.to("#cr215",{opacity:1,y:0,duration:0.4,ease:"power2.out"},232.41);
+      tl.to("#cl216",{opacity:1,duration:0.4,ease:"power2.out"},232.61);
+      tl.to("#cr215",{opacity:0,duration:0.4,ease:"power2.out"},237.156);
+      tl.to("#cl216",{opacity:0,duration:0.4,ease:"power2.out"},237.156);
+      tl.to("#fr207",{opacity:0,scale:0.96,duration:0.5,ease:"power2.out"},237.156);
+      tl.to("#wm217",{opacity:1,y:0,duration:0.6,ease:"power2.out"},237.456);
+      tl.to("#wm217s",{opacity:1,duration:0.5,ease:"power2.out"},237.956);
+      tl.to("#ey0",{opacity:1,duration:0.3,ease:"power2.out"},0.42);
+      tl.to("#ey0",{opacity:0,duration:0.25,ease:"power2.out"},15.577);
+      tl.to("#ey1",{opacity:1,duration:0.3,ease:"power2.out"},15.947);
+      tl.to("#ey1",{opacity:0,duration:0.25,ease:"power2.out"},33.084);
+      tl.to("#ey2",{opacity:1,duration:0.3,ease:"power2.out"},33.454);
+      tl.to("#ey2",{opacity:0,duration:0.25,ease:"power2.out"},91.595);
+      tl.to("#ey3",{opacity:1,duration:0.3,ease:"power2.out"},91.965);
+      tl.to("#ey3",{opacity:0,duration:0.25,ease:"power2.out"},124.656);
+      tl.to("#ey4",{opacity:1,duration:0.3,ease:"power2.out"},125.026);
+      tl.to("#ey4",{opacity:0,duration:0.25,ease:"power2.out"},155.097);
+      tl.to("#ey5",{opacity:1,duration:0.3,ease:"power2.out"},155.467);
+      tl.to("#ey5",{opacity:0,duration:0.25,ease:"power2.out"},181.307);
+      tl.to("#ey6",{opacity:1,duration:0.3,ease:"power2.out"},181.677);
+      tl.to("#ey6",{opacity:0,duration:0.25,ease:"power2.out"},198.359);
+      tl.to("#ey7",{opacity:1,duration:0.3,ease:"power2.out"},198.729);
+      tl.to("#ey7",{opacity:0,duration:0.25,ease:"power2.out"},218.071);
+      tl.to("#ey8",{opacity:1,duration:0.3,ease:"power2.out"},218.441);
+      tl.to("#ey8",{opacity:0,duration:0.25,ease:"power2.out"},230.19);
+      tl.to("#ey9",{opacity:1,duration:0.3,ease:"power2.out"},230.56);
+      tl.to("#ey9",{opacity:0,duration:0.25,ease:"power2.out"},238.264);
+      tl.to("#rc218",{opacity:1,x:0,duration:0.3,ease:"power2.out"},33.554);
+      tl.to("#rc218",{opacity:0,duration:0.25,ease:"power2.out"},91.595);
+      tl.to("#rc219",{opacity:1,x:0,duration:0.3,ease:"power2.out"},92.065);
+      tl.to("#rc219",{opacity:0,duration:0.25,ease:"power2.out"},98.671);
+      tl.to("#rc220",{opacity:1,x:0,duration:0.3,ease:"power2.out"},98.841);
+      tl.to("#rc220",{opacity:0,duration:0.25,ease:"power2.out"},103.131);
+      tl.to("#rc221",{opacity:1,x:0,duration:0.3,ease:"power2.out"},103.301);
+      tl.to("#rc221",{opacity:0,duration:0.25,ease:"power2.out"},124.656);
+      tl.to("#rc222",{opacity:1,x:0,duration:0.3,ease:"power2.out"},125.126);
+      tl.to("#rc222",{opacity:0,duration:0.25,ease:"power2.out"},131.569);
+      tl.to("#rc223",{opacity:1,x:0,duration:0.3,ease:"power2.out"},131.739);
+      tl.to("#rc223",{opacity:0,duration:0.25,ease:"power2.out"},138.55);
+      tl.to("#rc224",{opacity:1,x:0,duration:0.3,ease:"power2.out"},138.72);
+      tl.to("#rc224",{opacity:0,duration:0.25,ease:"power2.out"},148.518);
+      tl.to("#rc225",{opacity:1,x:0,duration:0.3,ease:"power2.out"},148.688);
+      tl.to("#rc225",{opacity:0,duration:0.25,ease:"power2.out"},155.097);
+      tl.to("#rc226",{opacity:1,x:0,duration:0.3,ease:"power2.out"},155.567);
+      tl.to("#rc226",{opacity:0,duration:0.25,ease:"power2.out"},169.346);
+      tl.to("#rc227",{opacity:1,x:0,duration:0.3,ease:"power2.out"},169.516);
+      tl.to("#rc227",{opacity:0,duration:0.25,ease:"power2.out"},202.27);
+      tl.to("#rc228",{opacity:1,x:0,duration:0.3,ease:"power2.out"},202.44);
+      tl.to("#rc228",{opacity:0,duration:0.25,ease:"power2.out"},206.549);
+      tl.to("#rc229",{opacity:1,x:0,duration:0.3,ease:"power2.out"},206.719);
+      tl.to("#rc229",{opacity:0,duration:0.25,ease:"power2.out"},211.869);
+      tl.to("#rc230",{opacity:1,x:0,duration:0.3,ease:"power2.out"},212.039);
+      tl.to("#rc230",{opacity:0,duration:0.25,ease:"power2.out"},218.071);
+      tl.set("#pf0",{scaleX:0},0.72);
+      tl.to("#pf0",{scaleX:1,duration:15.107,ease:"none"},0.72);
+      tl.to("#pl0",{opacity:1,duration:0.25,ease:"power2.out"},0.52);
+      tl.to("#pl0",{opacity:0.45,duration:0.25,ease:"power2.out"},15.827);
+      tl.set("#pf1",{scaleX:0},16.247);
+      tl.to("#pf1",{scaleX:1,duration:17.087,ease:"none"},16.247);
+      tl.to("#pl1",{opacity:1,duration:0.25,ease:"power2.out"},16.047);
+      tl.to("#pl1",{opacity:0.45,duration:0.25,ease:"power2.out"},33.334);
+      tl.set("#pf2",{scaleX:0},33.754);
+      tl.to("#pf2",{scaleX:1,duration:58.091,ease:"none"},33.754);
+      tl.to("#pl2",{opacity:1,duration:0.25,ease:"power2.out"},33.554);
+      tl.to("#pl2",{opacity:0.45,duration:0.25,ease:"power2.out"},91.845);
+      tl.set("#pf3",{scaleX:0},92.265);
+      tl.to("#pf3",{scaleX:1,duration:32.641,ease:"none"},92.265);
+      tl.to("#pl3",{opacity:1,duration:0.25,ease:"power2.out"},92.065);
+      tl.to("#pl3",{opacity:0.45,duration:0.25,ease:"power2.out"},124.906);
+      tl.set("#pf4",{scaleX:0},125.326);
+      tl.to("#pf4",{scaleX:1,duration:30.021,ease:"none"},125.326);
+      tl.to("#pl4",{opacity:1,duration:0.25,ease:"power2.out"},125.126);
+      tl.to("#pl4",{opacity:0.45,duration:0.25,ease:"power2.out"},155.347);
+      tl.set("#pf5",{scaleX:0},155.767);
+      tl.to("#pf5",{scaleX:1,duration:25.79,ease:"none"},155.767);
+      tl.to("#pl5",{opacity:1,duration:0.25,ease:"power2.out"},155.567);
+      tl.to("#pl5",{opacity:0.45,duration:0.25,ease:"power2.out"},181.557);
+      tl.set("#pf6",{scaleX:0},181.977);
+      tl.to("#pf6",{scaleX:1,duration:16.632,ease:"none"},181.977);
+      tl.to("#pl6",{opacity:1,duration:0.25,ease:"power2.out"},181.777);
+      tl.to("#pl6",{opacity:0.45,duration:0.25,ease:"power2.out"},198.609);
+      tl.set("#pf7",{scaleX:0},199.029);
+      tl.to("#pf7",{scaleX:1,duration:19.292,ease:"none"},199.029);
+      tl.to("#pl7",{opacity:1,duration:0.25,ease:"power2.out"},198.829);
+      tl.to("#pl7",{opacity:0.45,duration:0.25,ease:"power2.out"},218.321);
+      tl.set("#pf8",{scaleX:0},218.741);
+      tl.to("#pf8",{scaleX:1,duration:11.699,ease:"none"},218.741);
+      tl.to("#pl8",{opacity:1,duration:0.25,ease:"power2.out"},218.541);
+      tl.to("#pl8",{opacity:0.45,duration:0.25,ease:"power2.out"},230.44);
+      tl.set("#pf9",{scaleX:0},230.86);
+      tl.to("#pf9",{scaleX:1,duration:7.654,ease:"none"},230.86);
+      tl.to("#pl9",{opacity:1,duration:0.25,ease:"power2.out"},230.66);
+      tl.to("#pl9",{opacity:0.45,duration:0.25,ease:"power2.out"},238.514);
+      tl.to("#cap0",{opacity:1,duration:0.12,ease:"none"},0.72);
+      tl.set("#cap0",{opacity:0},4.4);
+      tl.to("#cap1",{opacity:1,duration:0.12,ease:"none"},4.42);
+      tl.set("#cap1",{opacity:0},5.781);
+      tl.to("#cap2",{opacity:1,duration:0.12,ease:"none"},5.841);
+      tl.set("#cap2",{opacity:0},8.692);
+      tl.to("#cap3",{opacity:1,duration:0.12,ease:"none"},8.752);
+      tl.set("#cap3",{opacity:0},11.672);
+      tl.to("#cap4",{opacity:1,duration:0.12,ease:"none"},11.692);
+      tl.set("#cap4",{opacity:0},12.989);
+      tl.to("#cap5",{opacity:1,duration:0.12,ease:"none"},13.049);
+      tl.set("#cap5",{opacity:0},15.767);
+      tl.to("#cap6",{opacity:1,duration:0.12,ease:"none"},16.247);
+      tl.set("#cap6",{opacity:0},19.713);
+      tl.to("#cap7",{opacity:1,duration:0.12,ease:"none"},19.773);
+      tl.set("#cap7",{opacity:0},22.011);
+      tl.to("#cap8",{opacity:1,duration:0.12,ease:"none"},22.191);
+      tl.set("#cap8",{opacity:0},23.719);
+      tl.to("#cap9",{opacity:1,duration:0.12,ease:"none"},23.779);
+      tl.set("#cap9",{opacity:0},25.666);
+      tl.to("#cap10",{opacity:1,duration:0.12,ease:"none"},25.726);
+      tl.set("#cap10",{opacity:0},28.137);
+      tl.to("#cap11",{opacity:1,duration:0.12,ease:"none"},28.197);
+      tl.set("#cap11",{opacity:0},30.024);
+      tl.to("#cap12",{opacity:1,duration:0.12,ease:"none"},30.084);
+      tl.set("#cap12",{opacity:0},33.274);
+      tl.to("#cap13",{opacity:1,duration:0.12,ease:"none"},33.754);
+      tl.set("#cap13",{opacity:0},37.767);
+      tl.to("#cap14",{opacity:1,duration:0.12,ease:"none"},37.947);
+      tl.set("#cap14",{opacity:0},41.394);
+      tl.to("#cap15",{opacity:1,duration:0.12,ease:"none"},41.454);
+      tl.set("#cap15",{opacity:0},43.132);
+      tl.to("#cap16",{opacity:1,duration:0.12,ease:"none"},43.192);
+      tl.set("#cap16",{opacity:0},46.19);
+      tl.to("#cap17",{opacity:1,duration:0.12,ease:"none"},46.37);
+      tl.set("#cap17",{opacity:0},48.409);
+      tl.to("#cap18",{opacity:1,duration:0.12,ease:"none"},48.469);
+      tl.set("#cap18",{opacity:0},52.237);
+      tl.to("#cap19",{opacity:1,duration:0.12,ease:"none"},52.417);
+      tl.set("#cap19",{opacity:0},57.439);
+      tl.to("#cap20",{opacity:1,duration:0.12,ease:"none"},57.499);
+      tl.set("#cap20",{opacity:0},59.471);
+      tl.to("#cap21",{opacity:1,duration:0.12,ease:"none"},61.099);
+      tl.set("#cap21",{opacity:0},63.979);
+      tl.to("#cap22",{opacity:1,duration:0.12,ease:"none"},63.999);
+      tl.set("#cap22",{opacity:0},67.296);
+      tl.to("#cap23",{opacity:1,duration:0.12,ease:"none"},67.356);
+      tl.set("#cap23",{opacity:0},70.996);
+      tl.to("#cap24",{opacity:1,duration:0.12,ease:"none"},71.016);
+      tl.set("#cap24",{opacity:0},73.189);
+      tl.to("#cap25",{opacity:1,duration:0.12,ease:"none"},73.369);
+      tl.set("#cap25",{opacity:0},77.822);
+      tl.to("#cap26",{opacity:1,duration:0.12,ease:"none"},78.002);
+      tl.set("#cap26",{opacity:0},80.355);
+      tl.to("#cap27",{opacity:1,duration:0.12,ease:"none"},80.415);
+      tl.set("#cap27",{opacity:0},83.215);
+      tl.to("#cap28",{opacity:1,duration:0.12,ease:"none"},83.235);
+      tl.set("#cap28",{opacity:0},84.75);
+      tl.to("#cap29",{opacity:1,duration:0.12,ease:"none"},84.93);
+      tl.set("#cap29",{opacity:0},87.87);
+      tl.to("#cap30",{opacity:1,duration:0.12,ease:"none"},88.05);
+      tl.set("#cap30",{opacity:0},91.785);
+      tl.to("#cap31",{opacity:1,duration:0.12,ease:"none"},92.265);
+      tl.set("#cap31",{opacity:0},95.017);
+      tl.to("#cap32",{opacity:1,duration:0.12,ease:"none"},95.077);
+      tl.set("#cap32",{opacity:0},98.861);
+      tl.to("#cap33",{opacity:1,duration:0.12,ease:"none"},99.041);
+      tl.set("#cap33",{opacity:0},100.686);
+      tl.to("#cap34",{opacity:1,duration:0.12,ease:"none"},100.746);
+      tl.set("#cap34",{opacity:0},103.321);
+      tl.to("#cap35",{opacity:1,duration:0.12,ease:"none"},103.501);
+      tl.set("#cap35",{opacity:0},106.001);
+      tl.to("#cap36",{opacity:1,duration:0.12,ease:"none"},106.021);
+      tl.set("#cap36",{opacity:0},107.594);
+      tl.to("#cap37",{opacity:1,duration:0.12,ease:"none"},107.654);
+      tl.set("#cap37",{opacity:0},110.274);
+      tl.to("#cap38",{opacity:1,duration:0.12,ease:"none"},110.294);
+      tl.set("#cap38",{opacity:0},111.942);
+      tl.to("#cap39",{opacity:1,duration:0.12,ease:"none"},112.122);
+      tl.set("#cap39",{opacity:0},114.807);
+      tl.to("#cap40",{opacity:1,duration:0.12,ease:"none"},114.867);
+      tl.set("#cap40",{opacity:0},117.104);
+      tl.to("#cap41",{opacity:1,duration:0.12,ease:"none"},117.284);
+      tl.set("#cap41",{opacity:0},121.734);
+      tl.to("#cap42",{opacity:1,duration:0.12,ease:"none"},121.794);
+      tl.set("#cap42",{opacity:0},124.846);
+      tl.to("#cap43",{opacity:1,duration:0.12,ease:"none"},125.326);
+      tl.set("#cap43",{opacity:0},128.496);
+      tl.to("#cap44",{opacity:1,duration:0.12,ease:"none"},128.556);
+      tl.set("#cap44",{opacity:0},131.759);
+      tl.to("#cap45",{opacity:1,duration:0.12,ease:"none"},131.939);
+      tl.set("#cap45",{opacity:0},135.959);
+      tl.to("#cap46",{opacity:1,duration:0.12,ease:"none"},135.979);
+      tl.set("#cap46",{opacity:0},138.74);
+      tl.to("#cap47",{opacity:1,duration:0.12,ease:"none"},138.92);
+      tl.set("#cap47",{opacity:0},140.282);
+      tl.to("#cap48",{opacity:1,duration:0.12,ease:"none"},142.12);
+      tl.set("#cap48",{opacity:0},144.127);
+      tl.to("#cap49",{opacity:1,duration:0.12,ease:"none"},144.307);
+      tl.set("#cap49",{opacity:0},147.327);
+      tl.to("#cap50",{opacity:1,duration:0.12,ease:"none"},147.347);
+      tl.set("#cap50",{opacity:0},148.708);
+      tl.to("#cap51",{opacity:1,duration:0.12,ease:"none"},148.888);
+      tl.set("#cap51",{opacity:0},152.028);
+      tl.to("#cap52",{opacity:1,duration:0.12,ease:"none"},152.048);
+      tl.set("#cap52",{opacity:0},153.486);
+      tl.to("#cap53",{opacity:1,duration:0.12,ease:"none"},153.546);
+      tl.set("#cap53",{opacity:0},155.287);
+      tl.to("#cap54",{opacity:1,duration:0.12,ease:"none"},155.767);
+      tl.set("#cap54",{opacity:0},158.987);
+      tl.to("#cap55",{opacity:1,duration:0.12,ease:"none"},159.007);
+      tl.set("#cap55",{opacity:0},160.958);
+      tl.to("#cap56",{opacity:1,duration:0.12,ease:"none"},161.138);
+      tl.set("#cap56",{opacity:0},163.318);
+      tl.to("#cap57",{opacity:1,duration:0.12,ease:"none"},163.338);
+      tl.set("#cap57",{opacity:0},164.9);
+      tl.to("#cap58",{opacity:1,duration:0.12,ease:"none"},165.08);
+      tl.set("#cap58",{opacity:0},166.82);
+      tl.to("#cap59",{opacity:1,duration:0.12,ease:"none"},166.84);
+      tl.set("#cap59",{opacity:0},169.536);
+      tl.to("#cap60",{opacity:1,duration:0.12,ease:"none"},169.716);
+      tl.set("#cap60",{opacity:0},171.993);
+      tl.to("#cap61",{opacity:1,duration:0.12,ease:"none"},173.516);
+      tl.set("#cap61",{opacity:0},175.488);
+      tl.to("#cap62",{opacity:1,duration:0.12,ease:"none"},176.716);
+      tl.set("#cap62",{opacity:0},180.096);
+      tl.to("#cap63",{opacity:1,duration:0.12,ease:"none"},180.116);
+      tl.set("#cap63",{opacity:0},181.497);
+      tl.to("#cap64",{opacity:1,duration:0.12,ease:"none"},181.977);
+      tl.set("#cap64",{opacity:0},184.237);
+      tl.to("#cap65",{opacity:1,duration:0.12,ease:"none"},184.257);
+      tl.set("#cap65",{opacity:0},186.959);
+      tl.to("#cap66",{opacity:1,duration:0.12,ease:"none"},187.139);
+      tl.set("#cap66",{opacity:0},188.806);
+      tl.to("#cap67",{opacity:1,duration:0.12,ease:"none"},188.866);
+      tl.set("#cap67",{opacity:0},193.497);
+      tl.to("#cap68",{opacity:1,duration:0.12,ease:"none"},193.557);
+      tl.set("#cap68",{opacity:0},196.677);
+      tl.to("#cap69",{opacity:1,duration:0.12,ease:"none"},196.697);
+      tl.set("#cap69",{opacity:0},198.549);
+      tl.to("#cap70",{opacity:1,duration:0.12,ease:"none"},199.029);
+      tl.set("#cap70",{opacity:0},202.46);
+      tl.to("#cap71",{opacity:1,duration:0.12,ease:"none"},202.64);
+      tl.set("#cap71",{opacity:0},205.64);
+      tl.to("#cap72",{opacity:1,duration:0.12,ease:"none"},205.66);
+      tl.set("#cap72",{opacity:0},206.739);
+      tl.to("#cap73",{opacity:1,duration:0.12,ease:"none"},206.919);
+      tl.set("#cap73",{opacity:0},211.028);
+      tl.to("#cap74",{opacity:1,duration:0.12,ease:"none"},212.239);
+      tl.set("#cap74",{opacity:0},214.359);
+      tl.to("#cap75",{opacity:1,duration:0.12,ease:"none"},214.379);
+      tl.set("#cap75",{opacity:0},218.261);
+      tl.to("#cap76",{opacity:1,duration:0.12,ease:"none"},218.741);
+      tl.set("#cap76",{opacity:0},222.083);
+      tl.to("#cap77",{opacity:1,duration:0.12,ease:"none"},224.183);
+      tl.set("#cap77",{opacity:0},227.063);
+      tl.to("#cap78",{opacity:1,duration:0.12,ease:"none"},227.083);
+      tl.set("#cap78",{opacity:0},230.38);
+      tl.to("#cap79",{opacity:1,duration:0.12,ease:"none"},230.86);
+      tl.set("#cap79",{opacity:0},234.12);
+      tl.to("#cap80",{opacity:1,duration:0.12,ease:"none"},234.14);
+      tl.set("#cap80",{opacity:0},237.296);
+      tl.to("#cap81",{opacity:1,duration:0.12,ease:"none"},237.356);
+      tl.set("#cap81",{opacity:0},238.454);
+      tl.set({}, {}, 240.014);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
